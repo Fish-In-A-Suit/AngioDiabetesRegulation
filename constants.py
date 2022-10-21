@@ -27,7 +27,7 @@ TERMS_DIABETES_POSITIVE_ARRAY = []
 TERMS_DIABETES_NEGATIVE_ARRAY = []
 
 # Terms that are neither positive or negative
-TERMS_GENERAL = [
+TERMS_ANGIOGENESIS_GENERAL = [
     "angiogenesis", "GO:0001525",
     "regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis", "GO:1903587",
     "regulation of sprouting angiogenesis", "GO:1903670",
@@ -46,6 +46,8 @@ TERMS_GENERAL = [
     "angiogenic sprout fusion", "GO:0120077",
     "blood vessel endothelial cell migration", "GO:0043534"
 ]
+
+TERMS_DIABETES_GENERAL = []
 
 # Terms that came up when searching "angiogenesis", but are irrelevant for us
 TERMS_EXCLUDED = [
