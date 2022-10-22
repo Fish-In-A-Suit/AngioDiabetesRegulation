@@ -1,0 +1,181 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-181b-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+2	100	hsa-miR-181a-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+3	100	hsa-miR-181d-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+4	100	hsa-miR-181c-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+5	98	hsa-miR-19a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+6	98	hsa-miR-186-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+7	98	hsa-miR-19b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+8	96	hsa-miR-200c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+9	96	hsa-miR-429	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+10	96	hsa-miR-200b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+11	96	hsa-miR-450a-2-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+12	95	hsa-miR-3121-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+13	93	hsa-miR-1275	3481	IGF2	NM_000612	insulin like growth factor 2
+14	93	hsa-miR-210-3p	3481	IGF2	NM_001291861	insulin like growth factor 2
+15	93	hsa-miR-491-5p	3481	IGF2	NM_001007139	insulin like growth factor 2
+16	93	hsa-miR-664b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+17	93	hsa-miR-203a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+18	91	hsa-miR-1972	3481	IGF2	NM_001291861	insulin like growth factor 2
+19	91	hsa-miR-320d	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+20	91	hsa-miR-27a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+21	91	hsa-miR-27b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+22	91	hsa-miR-320b	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+23	91	hsa-miR-3173-3p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+24	91	hsa-miR-320c	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+25	90	hsa-miR-4662a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+26	90	hsa-miR-29c-3p	2241	FER	NM_001308028	FER tyrosine kinase
+27	90	hsa-miR-29b-3p	2241	FER	NM_001308028	FER tyrosine kinase
+28	90	hsa-miR-29a-3p	2241	FER	NM_001308028	FER tyrosine kinase
+29	89	hsa-miR-548l	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+30	89	hsa-miR-198	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+31	88	hsa-miR-9-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+32	88	hsa-miR-664b-3p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+33	87	hsa-miR-18b-5p	2241	FER	NM_001308028	FER tyrosine kinase
+34	87	hsa-miR-450a-2-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+35	87	hsa-miR-145-5p	9847	C2CD5	NM_001286175	C2 calcium dependent domain containing 5
+36	87	hsa-miR-18a-5p	2241	FER	NM_001308028	FER tyrosine kinase
+37	87	hsa-miR-342-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+38	86	hsa-miR-513c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+39	86	hsa-miR-513a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+40	85	hsa-miR-1297	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+41	85	hsa-miR-625-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+42	85	hsa-miR-627-3p	2241	FER	NM_001308028	FER tyrosine kinase
+43	85	hsa-miR-660-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+44	84	hsa-miR-19a-3p	9847	C2CD5	NM_001286175	C2 calcium dependent domain containing 5
+45	84	hsa-miR-142-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+46	84	hsa-miR-19b-3p	9847	C2CD5	NM_001286175	C2 calcium dependent domain containing 5
+47	83	hsa-miR-103a-3p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+48	83	hsa-miR-107	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+49	83	hsa-miR-3157-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+50	82	hsa-miR-4662a-5p	2241	FER	NM_001308028	FER tyrosine kinase
+51	81	hsa-miR-627-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+52	81	hsa-miR-582-3p	2241	FER	NM_001308031	FER tyrosine kinase
+53	81	hsa-miR-203a-3p	2241	FER	NM_001308031	FER tyrosine kinase
+54	80	hsa-miR-26b-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+55	80	hsa-miR-584-5p	2241	FER	NM_001308031	FER tyrosine kinase
+56	80	hsa-miR-92a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+57	80	hsa-miR-493-5p	2241	FER	NM_001308031	FER tyrosine kinase
+58	80	hsa-miR-1270	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+59	80	hsa-miR-3065-5p	2241	FER	NM_001308031	FER tyrosine kinase
+60	80	hsa-miR-32-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+61	80	hsa-miR-92b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+62	80	hsa-miR-26a-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+63	80	hsa-miR-370-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+64	79	hsa-miR-377-3p	2241	FER	NM_001308028	FER tyrosine kinase
+65	79	hsa-miR-509-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+66	79	hsa-miR-509-3-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+67	79	hsa-miR-6511a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+68	79	hsa-miR-548b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+69	78	hsa-miR-337-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+70	78	hsa-miR-1290	3481	IGF2	NM_001007139	insulin like growth factor 2
+71	77	hsa-miR-25-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+72	77	hsa-miR-363-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+73	77	hsa-miR-367-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+74	76	hsa-miR-450b-5p	2241	FER	NM_001308038	FER tyrosine kinase
+75	76	hsa-miR-148b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+76	76	hsa-miR-148a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+77	76	hsa-miR-152-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+78	75	hsa-miR-142-5p	2241	FER	NM_001308028	FER tyrosine kinase
+79	75	hsa-miR-629-5p	2241	FER	NM_001308031	FER tyrosine kinase
+80	75	hsa-miR-1-3p	9847	C2CD5	NM_001286175	C2 calcium dependent domain containing 5
+81	75	hsa-miR-206	9847	C2CD5	NM_001286175	C2 calcium dependent domain containing 5
+82	74	hsa-miR-155-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+83	74	hsa-miR-3130-5p	2241	FER	NM_001308038	FER tyrosine kinase
+84	74	hsa-miR-182-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+85	73	hsa-miR-545-3p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+86	73	hsa-miR-514a-3p	9847	C2CD5	NM_001286175	C2 calcium dependent domain containing 5
+87	73	hsa-miR-514b-3p	9847	C2CD5	NM_001286175	C2 calcium dependent domain containing 5
+88	73	hsa-miR-134-5p	2241	FER	NM_001308031	FER tyrosine kinase
+89	73	hsa-miR-1910-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+90	73	hsa-miR-105-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+91	73	hsa-miR-190a-5p	2241	FER	NM_001308031	FER tyrosine kinase
+92	72	hsa-miR-10b-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+93	72	hsa-miR-382-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+94	72	hsa-miR-186-5p	2241	FER	NM_001308031	FER tyrosine kinase
+95	72	hsa-miR-10a-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+96	71	hsa-miR-520g-3p	2241	FER	NM_001308031	FER tyrosine kinase
+97	71	hsa-miR-3074-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+98	71	hsa-miR-661	2241	FER	NM_001308031	FER tyrosine kinase
+99	71	hsa-miR-141-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+100	71	hsa-miR-513a-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+101	71	hsa-miR-200a-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+102	71	hsa-miR-105-5p	2241	FER	NM_001308031	FER tyrosine kinase
+103	71	hsa-miR-520h	2241	FER	NM_001308031	FER tyrosine kinase
+104	70	hsa-miR-766-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+105	70	hsa-miR-302a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+106	70	hsa-miR-302b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+107	70	hsa-miR-545-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+108	70	hsa-miR-134-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+109	70	hsa-miR-342-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+110	70	hsa-miR-302d-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+111	70	hsa-miR-9-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+112	70	hsa-miR-96-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+113	70	hsa-miR-302c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+114	69	hsa-miR-514b-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+115	69	hsa-miR-514b-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+116	69	hsa-miR-140-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+117	69	hsa-miR-513c-5p	9847	C2CD5	NM_001286173	C2 calcium dependent domain containing 5
+118	69	hsa-miR-513c-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+119	69	hsa-miR-548f-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+120	68	hsa-miR-550a-5p	2241	FER	NM_001308031	FER tyrosine kinase
+121	68	hsa-miR-939-3p	2241	FER	NM_001308031	FER tyrosine kinase
+122	68	hsa-miR-548a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+123	68	hsa-miR-212-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+124	68	hsa-miR-132-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+125	68	hsa-miR-1271-3p	2241	FER	NM_001308031	FER tyrosine kinase
+126	68	hsa-miR-124-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+127	68	hsa-miR-506-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+128	67	hsa-miR-1-3p	2241	FER	NM_001308031	FER tyrosine kinase
+129	67	hsa-miR-1323	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+130	67	hsa-miR-206	2241	FER	NM_001308031	FER tyrosine kinase
+131	67	hsa-miR-30e-3p	2241	FER	NM_001308031	FER tyrosine kinase
+132	67	hsa-miR-219b-3p	2241	FER	NM_001308031	FER tyrosine kinase
+133	67	hsa-miR-30a-3p	2241	FER	NM_001308031	FER tyrosine kinase
+134	67	hsa-miR-1827	3481	IGF2	NM_000612	insulin like growth factor 2
+135	66	hsa-miR-561-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+136	66	hsa-miR-548o-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+137	66	hsa-miR-495-3p	2241	FER	NM_001308028	FER tyrosine kinase
+138	66	hsa-miR-3144-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+139	66	hsa-miR-5699-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+140	65	hsa-miR-3140-3p	2241	FER	NM_001308038	FER tyrosine kinase
+141	65	hsa-miR-3614-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+142	65	hsa-miR-548e-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+143	65	hsa-miR-1271-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+144	65	hsa-miR-548l	2241	FER	NM_001308031	FER tyrosine kinase
+145	65	hsa-miR-758-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+146	64	hsa-miR-514a-3p	2241	FER	NM_001308031	FER tyrosine kinase
+147	64	hsa-miR-802	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+148	64	hsa-miR-514b-3p	2241	FER	NM_001308031	FER tyrosine kinase
+149	64	hsa-miR-548t-3p	2241	FER	NM_001308031	FER tyrosine kinase
+150	63	hsa-miR-224-5p	2241	FER	NM_001308031	FER tyrosine kinase
+151	63	hsa-miR-372-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+152	63	hsa-miR-513a-5p	2241	FER	NM_001308031	FER tyrosine kinase
+153	63	hsa-miR-373-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+154	63	hsa-miR-520c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+155	63	hsa-miR-106b-5p	2241	FER	NM_001308031	FER tyrosine kinase
+156	63	hsa-miR-20a-5p	2241	FER	NM_001308031	FER tyrosine kinase
+157	62	hsa-miR-126-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+158	62	hsa-miR-3065-3p	2241	FER	NM_001308031	FER tyrosine kinase
+159	62	hsa-miR-544a	3481	IGF2	NM_000612	insulin like growth factor 2
+160	62	hsa-miR-744-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+161	62	hsa-miR-656-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+162	61	hsa-miR-664b-3p	2241	FER	NM_001308031	FER tyrosine kinase
+163	61	hsa-miR-548a-3p	2241	FER	NM_001308031	FER tyrosine kinase
+164	61	hsa-miR-1285-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+165	61	hsa-miR-873-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+166	61	hsa-miR-145-3p	2241	FER	NM_001308031	FER tyrosine kinase
+167	61	hsa-miR-548f-3p	2241	FER	NM_001308031	FER tyrosine kinase
+168	61	hsa-miR-380-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+169	60	hsa-miR-513a-3p	2241	FER	NM_001308028	FER tyrosine kinase
+170	60	hsa-miR-20b-5p	2241	FER	NM_001308031	FER tyrosine kinase
+171	60	hsa-miR-15b-3p	2241	FER	NM_001308031	FER tyrosine kinase
+172	60	hsa-miR-513c-3p	2241	FER	NM_001308028	FER tyrosine kinase
+173	60	hsa-miR-93-5p	2241	FER	NM_001308031	FER tyrosine kinase
+174	60	hsa-miR-106a-5p	2241	FER	NM_001308031	FER tyrosine kinase
+175	60	hsa-miR-17-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+176	60	hsa-miR-1972	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+177	60	hsa-miR-380-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+178	60	hsa-miR-17-5p	2241	FER	NM_001308031	FER tyrosine kinase
+179	60	hsa-miR-519d-3p	2241	FER	NM_001308031	FER tyrosine kinase
+180	60	hsa-miR-615-5p	3481	IGF2	NM_001291861	insulin like growth factor 2

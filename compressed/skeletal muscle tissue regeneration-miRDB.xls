@@ -1,0 +1,800 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-519b-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+2	100	hsa-miR-30a-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+3	100	hsa-miR-519a-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+4	100	hsa-miR-30c-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+5	100	hsa-miR-448	688	KLF5	NM_001730	Kruppel like factor 5
+6	100	hsa-miR-30b-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+7	100	hsa-miR-488-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+8	100	hsa-miR-30d-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+9	100	hsa-miR-30e-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+10	99	hsa-miR-495-3p	928	CD9	NM_001769	CD9 molecule
+11	99	hsa-miR-202-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+12	99	hsa-miR-301a-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+13	99	hsa-miR-153-3p	688	KLF5	NM_001730	Kruppel like factor 5
+14	99	hsa-miR-101-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+15	99	hsa-miR-548an	1605	DAG1	NM_001165928	dystroglycan 1
+16	99	hsa-miR-301b-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+17	99	hsa-miR-130a-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+18	99	hsa-miR-27a-3p	79647	AKIRIN1	NM_024595	akirin 1
+19	99	hsa-miR-130b-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+20	99	hsa-miR-454-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+21	99	hsa-miR-27b-3p	79647	AKIRIN1	NM_024595	akirin 1
+22	98	hsa-miR-29c-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+23	98	hsa-miR-29a-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+24	98	hsa-miR-338-5p	2660	MSTN	NM_005259	myostatin
+25	98	hsa-miR-29b-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+26	98	hsa-miR-145-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+27	97	hsa-miR-183-3p	79647	AKIRIN1	NM_024595	akirin 1
+28	97	hsa-miR-495-3p	3479	IGF1	NM_001111284	insulin like growth factor 1
+29	97	hsa-miR-135b-5p	1605	DAG1	NM_001165928	dystroglycan 1
+30	97	hsa-miR-30a-3p	3479	IGF1	NM_001111284	insulin like growth factor 1
+31	97	hsa-miR-135a-5p	1605	DAG1	NM_001165928	dystroglycan 1
+32	97	hsa-miR-15b-3p	346007	EYS	NM_001142800	eyes shut homolog
+33	97	hsa-miR-30e-3p	3479	IGF1	NM_001111284	insulin like growth factor 1
+34	97	hsa-miR-548l	136319	MTPN	NM_145808	myotrophin
+35	96	hsa-miR-106b-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+36	96	hsa-miR-361-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+37	96	hsa-miR-520c-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+38	96	hsa-miR-548t-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+39	96	hsa-miR-129-5p	3479	IGF1	NM_001111284	insulin like growth factor 1
+40	96	hsa-miR-516b-5p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+41	96	hsa-miR-302c-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+42	96	hsa-miR-627-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+43	96	hsa-miR-20b-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+44	96	hsa-miR-106a-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+45	96	hsa-miR-302a-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+46	96	hsa-miR-93-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+47	96	hsa-miR-101-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+48	96	hsa-miR-548an	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+49	96	hsa-miR-302d-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+50	96	hsa-miR-17-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+51	96	hsa-miR-302b-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+52	96	hsa-miR-20a-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+53	96	hsa-miR-128-3p	79647	AKIRIN1	NM_024595	akirin 1
+54	96	hsa-miR-519d-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+55	95	hsa-miR-532-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+56	95	hsa-miR-372-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+57	95	hsa-miR-548j-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+58	95	hsa-miR-548c-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+59	95	hsa-miR-548b-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+60	95	hsa-miR-548d-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+61	95	hsa-let-7f-5p	55909	BIN3	NM_018688	bridging integrator 3
+62	95	hsa-let-7d-5p	55909	BIN3	NM_018688	bridging integrator 3
+63	95	hsa-miR-181c-5p	79647	AKIRIN1	NM_001136275	akirin 1
+64	95	hsa-miR-548h-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+65	95	hsa-miR-181d-5p	79647	AKIRIN1	NM_001136275	akirin 1
+66	95	hsa-miR-98-5p	55909	BIN3	NM_018688	bridging integrator 3
+67	95	hsa-miR-181a-5p	79647	AKIRIN1	NM_001136275	akirin 1
+68	95	hsa-let-7b-5p	55909	BIN3	NM_018688	bridging integrator 3
+69	95	hsa-let-7g-5p	55909	BIN3	NM_018688	bridging integrator 3
+70	95	hsa-miR-548o-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+71	95	hsa-miR-181b-5p	79647	AKIRIN1	NM_001136275	akirin 1
+72	95	hsa-let-7a-5p	55909	BIN3	NM_018688	bridging integrator 3
+73	95	hsa-miR-548am-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+74	95	hsa-let-7i-5p	55909	BIN3	NM_018688	bridging integrator 3
+75	95	hsa-miR-9-5p	688	KLF5	NM_001286818	Kruppel like factor 5
+76	95	hsa-let-7e-5p	55909	BIN3	NM_018688	bridging integrator 3
+77	95	hsa-let-7c-5p	55909	BIN3	NM_018688	bridging integrator 3
+78	94	hsa-miR-483-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+79	94	hsa-miR-30a-5p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+80	94	hsa-miR-1275	3479	IGF1	NM_001111284	insulin like growth factor 1
+81	94	hsa-miR-142-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+82	94	hsa-miR-211-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+83	94	hsa-miR-373-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+84	94	hsa-miR-30c-5p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+85	94	hsa-miR-802	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+86	94	hsa-miR-338-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+87	94	hsa-miR-30b-5p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+88	94	hsa-miR-188-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+89	94	hsa-miR-204-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+90	94	hsa-miR-30d-5p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+91	94	hsa-miR-605-3p	2146	EZH2	NM_152998	enhancer of zeste 2 polycomb repressive complex 2 subunit
+92	94	hsa-miR-605-3p	975	CD81	NM_004356	CD81 molecule
+93	94	hsa-miR-30e-5p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+94	93	hsa-miR-5699-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+95	93	hsa-miR-1185-1-3p	301	ANXA1	NM_000700	annexin A1
+96	93	hsa-miR-138-5p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+97	93	hsa-miR-18a-3p	688	KLF5	NM_001730	Kruppel like factor 5
+98	93	hsa-miR-1185-2-3p	301	ANXA1	NM_000700	annexin A1
+99	93	hsa-miR-4423-3p	1605	DAG1	NM_001165928	dystroglycan 1
+100	92	hsa-miR-144-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+101	92	hsa-miR-186-5p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+102	92	hsa-miR-19a-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+103	92	hsa-miR-508-3p	2660	MSTN	NM_005259	myostatin
+104	92	hsa-miR-181c-5p	346007	EYS	NM_001142801	eyes shut homolog
+105	92	hsa-miR-181d-5p	346007	EYS	NM_001142801	eyes shut homolog
+106	92	hsa-miR-653-3p	2146	EZH2	NM_152998	enhancer of zeste 2 polycomb repressive complex 2 subunit
+107	92	hsa-miR-181a-5p	346007	EYS	NM_001142801	eyes shut homolog
+108	92	hsa-miR-338-5p	928	CD9	NM_001769	CD9 molecule
+109	92	hsa-miR-486-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+110	92	hsa-miR-3065-3p	136319	MTPN	NM_145808	myotrophin
+111	92	hsa-miR-181b-5p	346007	EYS	NM_001142801	eyes shut homolog
+112	92	hsa-miR-3198	79647	AKIRIN1	NM_001136275	akirin 1
+113	92	hsa-miR-145-5p	688	KLF5	NM_001730	Kruppel like factor 5
+114	92	hsa-miR-19b-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+115	92	hsa-miR-625-5p	5315	PKM	NM_182471	pyruvate kinase M1/2
+116	92	hsa-miR-3140-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+117	91	hsa-miR-515-5p	55909	BIN3	NM_018688	bridging integrator 3
+118	91	hsa-miR-23a-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+119	91	hsa-miR-873-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+120	91	hsa-miR-544a	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+121	91	hsa-miR-2355-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+122	91	hsa-miR-205-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+123	91	hsa-miR-545-5p	79647	AKIRIN1	NM_024595	akirin 1
+124	91	hsa-miR-23b-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+125	91	hsa-miR-32-3p	688	KLF5	NM_001730	Kruppel like factor 5
+126	91	hsa-miR-497-3p	3479	IGF1	NM_001111284	insulin like growth factor 1
+127	91	hsa-miR-942-5p	1605	DAG1	NM_001177640	dystroglycan 1
+128	91	hsa-miR-450b-5p	3479	IGF1	NM_001111284	insulin like growth factor 1
+129	90	hsa-miR-541-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+130	90	hsa-miR-30a-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+131	90	hsa-miR-30a-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+132	90	hsa-miR-144-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+133	90	hsa-miR-22-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+134	90	hsa-miR-18b-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+135	90	hsa-miR-664b-3p	688	KLF5	NM_001730	Kruppel like factor 5
+136	90	hsa-miR-1297	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+137	90	hsa-miR-361-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+138	90	hsa-miR-26a-5p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+139	90	hsa-miR-876-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+140	90	hsa-miR-26b-5p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+141	90	hsa-miR-301a-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+142	90	hsa-miR-497-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+143	90	hsa-miR-30c-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+144	90	hsa-miR-30c-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+145	90	hsa-miR-1303	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+146	90	hsa-miR-3150b-3p	136319	MTPN	NM_145808	myotrophin
+147	90	hsa-miR-30b-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+148	90	hsa-miR-30b-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+149	90	hsa-miR-18a-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+150	90	hsa-miR-548b-3p	346007	EYS	NM_001142801	eyes shut homolog
+151	90	hsa-miR-301b-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+152	90	hsa-miR-30d-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+153	90	hsa-miR-30d-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+154	90	hsa-miR-30e-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+155	90	hsa-miR-30e-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+156	89	hsa-miR-515-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+157	89	hsa-miR-515-5p	2660	MSTN	NM_005259	myostatin
+158	89	hsa-miR-374a-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+159	89	hsa-miR-548j-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+160	89	hsa-miR-548c-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+161	89	hsa-miR-548b-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+162	89	hsa-miR-188-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+163	89	hsa-miR-548d-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+164	89	hsa-miR-150-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+165	89	hsa-miR-548h-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+166	89	hsa-miR-31-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+167	89	hsa-miR-9-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+168	89	hsa-miR-548o-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+169	89	hsa-miR-548an	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+170	89	hsa-miR-548am-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+171	89	hsa-miR-130a-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+172	89	hsa-miR-9-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+173	89	hsa-miR-130b-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+174	89	hsa-miR-454-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+175	88	hsa-miR-186-5p	79647	AKIRIN1	NM_024595	akirin 1
+176	88	hsa-miR-320d	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+177	88	hsa-miR-320d	688	KLF5	NM_001730	Kruppel like factor 5
+178	88	hsa-miR-1-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+179	88	hsa-miR-15b-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+180	88	hsa-miR-211-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+181	88	hsa-miR-16-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+182	88	hsa-miR-320c	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+183	88	hsa-miR-320c	688	KLF5	NM_001730	Kruppel like factor 5
+184	88	hsa-miR-1301-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+185	88	hsa-miR-338-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+186	88	hsa-miR-3614-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+187	88	hsa-miR-548k	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+188	88	hsa-miR-204-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+189	88	hsa-miR-206	3479	IGF1	NM_001111283	insulin like growth factor 1
+190	88	hsa-miR-136-5p	136319	MTPN	NM_145808	myotrophin
+191	88	hsa-miR-15a-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+192	88	hsa-miR-195-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+193	88	hsa-miR-424-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+194	88	hsa-miR-320b	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+195	88	hsa-miR-320b	688	KLF5	NM_001730	Kruppel like factor 5
+196	88	hsa-miR-889-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+197	88	hsa-miR-4423-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+198	87	hsa-miR-370-3p	7480	WNT10B	NM_003394	Wnt family member 10B
+199	87	hsa-miR-548j-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+200	87	hsa-miR-548c-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+201	87	hsa-miR-148a-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+202	87	hsa-miR-548b-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+203	87	hsa-miR-513a-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+204	87	hsa-miR-152-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+205	87	hsa-miR-548d-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+206	87	hsa-miR-548h-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+207	87	hsa-miR-323a-3p	346007	EYS	NM_001142801	eyes shut homolog
+208	87	hsa-miR-665	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+209	87	hsa-miR-548o-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+210	87	hsa-miR-202-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+211	87	hsa-miR-548am-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+212	87	hsa-miR-148b-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+213	87	hsa-miR-513c-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+214	87	hsa-miR-889-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+215	86	hsa-miR-519b-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+216	86	hsa-miR-519a-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+217	86	hsa-miR-3183	3479	IGF1	NM_001111283	insulin like growth factor 1
+218	86	hsa-miR-1275	5315	PKM	NM_182471	pyruvate kinase M1/2
+219	86	hsa-miR-495-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+220	86	hsa-miR-409-3p	79647	AKIRIN1	NM_024595	akirin 1
+221	86	hsa-miR-15b-5p	6895	TARBP2	NM_004178	TARBP2, RISC loading complex RNA binding subunit
+222	86	hsa-miR-497-5p	6895	TARBP2	NM_004178	TARBP2, RISC loading complex RNA binding subunit
+223	86	hsa-miR-337-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+224	86	hsa-miR-1827	3479	IGF1	NM_001111283	insulin like growth factor 1
+225	86	hsa-miR-16-5p	6895	TARBP2	NM_004178	TARBP2, RISC loading complex RNA binding subunit
+226	86	hsa-miR-766-3p	1605	DAG1	NM_001165928	dystroglycan 1
+227	86	hsa-miR-145-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+228	86	hsa-miR-223-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+229	86	hsa-miR-582-5p	975	CD81	NM_004356	CD81 molecule
+230	86	hsa-miR-219a-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+231	86	hsa-miR-15a-5p	6895	TARBP2	NM_004178	TARBP2, RISC loading complex RNA binding subunit
+232	86	hsa-miR-195-5p	6895	TARBP2	NM_004178	TARBP2, RISC loading complex RNA binding subunit
+233	86	hsa-miR-424-5p	6895	TARBP2	NM_004178	TARBP2, RISC loading complex RNA binding subunit
+234	85	hsa-miR-96-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+235	85	hsa-miR-5699-5p	9215	LARGE1	NM_133642	LARGE xylosyl- and glucuronyltransferase 1
+236	85	hsa-miR-520h	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+237	85	hsa-miR-410-3p	346007	EYS	NM_001142801	eyes shut homolog
+238	85	hsa-miR-374a-5p	346007	EYS	NM_001142801	eyes shut homolog
+239	85	hsa-miR-625-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+240	85	hsa-miR-148a-3p	7480	WNT10B	NM_003394	Wnt family member 10B
+241	85	hsa-miR-520g-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+242	85	hsa-miR-190a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+243	85	hsa-miR-152-3p	7480	WNT10B	NM_003394	Wnt family member 10B
+244	85	hsa-miR-181c-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+245	85	hsa-miR-181c-5p	136319	MTPN	NM_145808	myotrophin
+246	85	hsa-miR-655-3p	688	KLF5	NM_001730	Kruppel like factor 5
+247	85	hsa-miR-181d-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+248	85	hsa-miR-181d-5p	136319	MTPN	NM_145808	myotrophin
+249	85	hsa-miR-182-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+250	85	hsa-miR-181a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+251	85	hsa-miR-181a-5p	136319	MTPN	NM_145808	myotrophin
+252	85	hsa-miR-374c-5p	688	KLF5	NM_001730	Kruppel like factor 5
+253	85	hsa-miR-9-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+254	85	hsa-miR-499a-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+255	85	hsa-miR-181b-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+256	85	hsa-miR-181b-5p	136319	MTPN	NM_145808	myotrophin
+257	85	hsa-miR-148b-3p	7480	WNT10B	NM_003394	Wnt family member 10B
+258	85	hsa-miR-769-3p	346007	EYS	NM_001142801	eyes shut homolog
+259	85	hsa-miR-497-3p	4656	MYOG	NM_002479	myogenin
+260	85	hsa-miR-194-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+261	84	hsa-miR-515-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+262	84	hsa-miR-218-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+263	84	hsa-miR-642a-5p	688	KLF5	NM_001730	Kruppel like factor 5
+264	84	hsa-miR-190a-5p	1605	DAG1	NM_001177640	dystroglycan 1
+265	84	hsa-miR-495-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+266	84	hsa-miR-219b-3p	688	KLF5	NM_001730	Kruppel like factor 5
+267	84	hsa-miR-20a-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+268	84	hsa-miR-627-3p	8324	FZD7	NM_003507	frizzled class receptor 7
+269	84	hsa-miR-484	1605	DAG1	NM_001177640	dystroglycan 1
+270	84	hsa-miR-568	79647	AKIRIN1	NM_024595	akirin 1
+271	84	hsa-miR-1179	136319	MTPN	NM_145808	myotrophin
+272	83	hsa-miR-186-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+273	83	hsa-miR-4667-5p	79647	AKIRIN1	NM_024595	akirin 1
+274	83	hsa-miR-1271-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+275	83	hsa-miR-1304-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+276	83	hsa-miR-138-5p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+277	83	hsa-miR-1323	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+278	83	hsa-miR-3130-5p	79647	AKIRIN1	NM_001136275	akirin 1
+279	83	hsa-miR-504-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+280	83	hsa-miR-16-2-3p	9215	LARGE1	NM_133642	LARGE xylosyl- and glucuronyltransferase 1
+281	82	hsa-miR-450a-2-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+282	82	hsa-miR-105-3p	136319	MTPN	NM_145808	myotrophin
+283	82	hsa-miR-320d	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+284	82	hsa-miR-1910-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+285	82	hsa-miR-409-3p	688	KLF5	NM_001730	Kruppel like factor 5
+286	82	hsa-miR-4524a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+287	82	hsa-miR-485-5p	1605	DAG1	NM_001177640	dystroglycan 1
+288	82	hsa-miR-1185-1-3p	346007	EYS	NM_001292009	eyes shut homolog
+289	82	hsa-miR-381-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+290	82	hsa-miR-320c	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+291	82	hsa-miR-3074-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+292	82	hsa-miR-511-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+293	82	hsa-miR-3065-3p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+294	82	hsa-miR-4662a-5p	136319	MTPN	NM_145808	myotrophin
+295	82	hsa-miR-580-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+296	82	hsa-miR-297	346007	EYS	NM_001142801	eyes shut homolog
+297	82	hsa-miR-6511a-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+298	82	hsa-miR-122-5p	5315	PKM	NM_001206799	pyruvate kinase M1/2
+299	82	hsa-miR-1185-2-3p	346007	EYS	NM_001292009	eyes shut homolog
+300	82	hsa-miR-374b-5p	346007	EYS	NM_001142801	eyes shut homolog
+301	82	hsa-miR-320b	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+302	81	hsa-miR-450a-2-3p	301	ANXA1	NM_000700	annexin A1
+303	81	hsa-miR-486-3p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+304	81	hsa-miR-144-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+305	81	hsa-miR-509-5p	2146	EZH2	NM_152998	enhancer of zeste 2 polycomb repressive complex 2 subunit
+306	81	hsa-miR-509-3-5p	2146	EZH2	NM_152998	enhancer of zeste 2 polycomb repressive complex 2 subunit
+307	81	hsa-miR-1297	79647	AKIRIN1	NM_024595	akirin 1
+308	81	hsa-miR-30c-2-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+309	81	hsa-miR-592	3479	IGF1	NM_000618	insulin like growth factor 1
+310	81	hsa-miR-17-3p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+311	81	hsa-miR-3065-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+312	81	hsa-miR-573	55909	BIN3	NM_018688	bridging integrator 3
+313	81	hsa-miR-3143	346007	EYS	NM_001142801	eyes shut homolog
+314	81	hsa-miR-5571-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+315	81	hsa-miR-545-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+316	81	hsa-miR-1301-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+317	81	hsa-miR-548o-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+318	81	hsa-miR-101-3p	1605	DAG1	NM_001177640	dystroglycan 1
+319	81	hsa-miR-637	7476	WNT7A	NM_004625	Wnt family member 7A
+320	81	hsa-miR-223-5p	688	KLF5	NM_001730	Kruppel like factor 5
+321	81	hsa-miR-30c-1-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+322	81	hsa-miR-450b-5p	2660	MSTN	NM_005259	myostatin
+323	81	hsa-miR-548l	346007	EYS	NM_001142801	eyes shut homolog
+324	80	hsa-miR-589-3p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+325	80	hsa-miR-589-3p	975	CD81	NM_004356	CD81 molecule
+326	80	hsa-miR-214-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+327	80	hsa-miR-512-3p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+328	80	hsa-miR-381-3p	688	KLF5	NM_001730	Kruppel like factor 5
+329	80	hsa-miR-761	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+330	79	hsa-miR-450a-1-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+331	79	hsa-miR-664b-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+332	79	hsa-miR-664b-3p	4656	MYOG	NM_002479	myogenin
+333	79	hsa-miR-148a-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+334	79	hsa-miR-30c-2-3p	8324	FZD7	NM_003507	frizzled class receptor 7
+335	79	hsa-miR-152-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+336	79	hsa-let-7f-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+337	79	hsa-miR-182-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+338	79	hsa-miR-98-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+339	79	hsa-miR-432-5p	79647	AKIRIN1	NM_001136275	akirin 1
+340	79	hsa-miR-93-3p	9215	LARGE1	NM_133642	LARGE xylosyl- and glucuronyltransferase 1
+341	79	hsa-miR-874-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+342	79	hsa-miR-330-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+343	79	hsa-let-7b-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+344	79	hsa-let-7g-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+345	79	hsa-miR-3934-5p	2876	GPX1	NM_000581	glutathione peroxidase 1
+346	79	hsa-let-7a-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+347	79	hsa-miR-769-5p	55909	BIN3	NM_018688	bridging integrator 3
+348	79	hsa-miR-148b-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+349	79	hsa-let-7i-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+350	79	hsa-miR-30c-1-3p	8324	FZD7	NM_003507	frizzled class receptor 7
+351	79	hsa-miR-450b-5p	2146	EZH2	NM_152998	enhancer of zeste 2 polycomb repressive complex 2 subunit
+352	79	hsa-miR-636	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+353	79	hsa-let-7e-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+354	79	hsa-let-7c-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+355	78	hsa-miR-374b-3p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+356	78	hsa-miR-449a	2660	MSTN	NM_005259	myostatin
+357	78	hsa-miR-370-3p	4618	MYF6	NM_002469	myogenic factor 6
+358	78	hsa-miR-106b-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+359	78	hsa-miR-520h	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+360	78	hsa-miR-374a-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+361	78	hsa-miR-374a-5p	301	ANXA1	NM_000700	annexin A1
+362	78	hsa-miR-624-5p	136319	MTPN	NM_145808	myotrophin
+363	78	hsa-miR-520g-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+364	78	hsa-miR-449c-5p	2660	MSTN	NM_005259	myostatin
+365	78	hsa-miR-34a-5p	2660	MSTN	NM_005259	myostatin
+366	78	hsa-miR-34b-5p	2660	MSTN	NM_005259	myostatin
+367	78	hsa-miR-939-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+368	78	hsa-miR-153-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+369	78	hsa-let-7d-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+370	78	hsa-miR-34c-5p	2660	MSTN	NM_005259	myostatin
+371	78	hsa-miR-330-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+372	78	hsa-miR-20b-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+373	78	hsa-miR-106a-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+374	78	hsa-miR-93-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+375	78	hsa-miR-2682-5p	2660	MSTN	NM_005259	myostatin
+376	78	hsa-miR-17-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+377	78	hsa-miR-6515-5p	55909	BIN3	NM_018688	bridging integrator 3
+378	78	hsa-miR-20a-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+379	78	hsa-miR-519d-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+380	78	hsa-miR-449b-5p	2660	MSTN	NM_005259	myostatin
+381	78	hsa-miR-195-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+382	77	hsa-miR-1260a	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+383	77	hsa-miR-216a-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+384	77	hsa-miR-510-5p	55909	BIN3	NM_018688	bridging integrator 3
+385	77	hsa-miR-3200-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+386	77	hsa-miR-153-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+387	77	hsa-miR-181c-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+388	77	hsa-miR-211-5p	79647	AKIRIN1	NM_024595	akirin 1
+389	77	hsa-miR-629-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+390	77	hsa-miR-181d-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+391	77	hsa-miR-1260b	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+392	77	hsa-miR-619-5p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+393	77	hsa-miR-181a-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+394	77	hsa-miR-448	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+395	77	hsa-miR-181b-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+396	77	hsa-miR-568	346007	EYS	NM_001142800	eyes shut homolog
+397	77	hsa-miR-204-5p	79647	AKIRIN1	NM_024595	akirin 1
+398	77	hsa-miR-605-3p	79647	AKIRIN1	NM_024595	akirin 1
+399	77	hsa-miR-493-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+400	76	hsa-miR-15b-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+401	76	hsa-miR-1290	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+402	76	hsa-miR-1290	3479	IGF1	NM_001111283	insulin like growth factor 1
+403	76	hsa-miR-497-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+404	76	hsa-miR-323a-3p	8324	FZD7	NM_003507	frizzled class receptor 7
+405	76	hsa-miR-3173-3p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+406	76	hsa-miR-545-5p	136319	MTPN	NM_145808	myotrophin
+407	76	hsa-miR-874-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+408	76	hsa-miR-3614-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+409	76	hsa-miR-16-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+410	76	hsa-miR-28-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+411	76	hsa-miR-24-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+412	76	hsa-miR-32-3p	7480	WNT10B	NM_003394	Wnt family member 10B
+413	76	hsa-miR-145-5p	346007	EYS	NM_001142801	eyes shut homolog
+414	76	hsa-miR-377-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+415	76	hsa-miR-323b-3p	2660	MSTN	NM_005259	myostatin
+416	76	hsa-miR-1323	136319	MTPN	NM_145808	myotrophin
+417	76	hsa-miR-18a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+418	76	hsa-miR-3140-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+419	76	hsa-miR-15a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+420	76	hsa-miR-374b-5p	301	ANXA1	NM_000700	annexin A1
+421	76	hsa-miR-424-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+422	75	hsa-miR-3120-3p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+423	75	hsa-miR-3120-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+424	75	hsa-miR-150-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+425	75	hsa-miR-214-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+426	75	hsa-miR-153-3p	346007	EYS	NM_001142801	eyes shut homolog
+427	75	hsa-miR-655-3p	6665	SOX15	NM_006942	SRY-box 15
+428	75	hsa-miR-374c-5p	6665	SOX15	NM_006942	SRY-box 15
+429	75	hsa-miR-548k	8324	FZD7	NM_003507	frizzled class receptor 7
+430	75	hsa-miR-548o-3p	136319	MTPN	NM_145808	myotrophin
+431	75	hsa-miR-550a-5p	79647	AKIRIN1	NM_001136275	akirin 1
+432	75	hsa-miR-1271-3p	79647	AKIRIN1	NM_001136275	akirin 1
+433	75	hsa-miR-762	5315	PKM	NM_001206796	pyruvate kinase M1/2
+434	75	hsa-miR-505-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+435	74	hsa-miR-532-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+436	74	hsa-miR-664b-5p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+437	74	hsa-miR-32-5p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+438	74	hsa-miR-216a-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+439	74	hsa-miR-664b-3p	2660	MSTN	NM_005259	myostatin
+440	74	hsa-miR-590-5p	136319	MTPN	NM_145808	myotrophin
+441	74	hsa-miR-1297	136319	MTPN	NM_145808	myotrophin
+442	74	hsa-miR-21-5p	136319	MTPN	NM_145808	myotrophin
+443	74	hsa-miR-92b-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+444	74	hsa-miR-142-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+445	74	hsa-miR-33b-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+446	74	hsa-miR-629-5p	136319	MTPN	NM_145808	myotrophin
+447	74	hsa-miR-33a-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+448	74	hsa-miR-568	8324	FZD7	NM_003507	frizzled class receptor 7
+449	74	hsa-miR-582-5p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+450	74	hsa-miR-3140-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+451	74	hsa-miR-92a-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+452	73	hsa-miR-548t-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+453	73	hsa-miR-367-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+454	73	hsa-miR-380-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+455	73	hsa-miR-124-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+456	73	hsa-miR-452-5p	3479	IGF1	NM_000618	insulin like growth factor 1
+457	73	hsa-miR-4446-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+458	73	hsa-miR-26a-5p	79647	AKIRIN1	NM_024595	akirin 1
+459	73	hsa-miR-495-3p	1605	DAG1	NM_001165928	dystroglycan 1
+460	73	hsa-miR-19a-3p	1605	DAG1	NM_001165928	dystroglycan 1
+461	73	hsa-miR-200c-3p	2660	MSTN	NM_005259	myostatin
+462	73	hsa-miR-26b-5p	79647	AKIRIN1	NM_024595	akirin 1
+463	73	hsa-miR-429	2660	MSTN	NM_005259	myostatin
+464	73	hsa-miR-363-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+465	73	hsa-miR-423-5p	101929726	MYMX	NM_001315494	myomixer, myoblast fusion factor
+466	73	hsa-miR-409-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+467	73	hsa-miR-200b-3p	2660	MSTN	NM_005259	myostatin
+468	73	hsa-miR-506-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+469	73	hsa-miR-877-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+470	73	hsa-miR-19b-3p	1605	DAG1	NM_001165928	dystroglycan 1
+471	73	hsa-miR-143-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+472	73	hsa-miR-25-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+473	72	hsa-miR-519b-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+474	72	hsa-miR-519a-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+475	72	hsa-miR-1287-5p	6665	SOX15	NM_006942	SRY-box 15
+476	72	hsa-miR-492	79647	AKIRIN1	NM_024595	akirin 1
+477	72	hsa-miR-410-3p	2660	MSTN	NM_005259	myostatin
+478	72	hsa-miR-514b-5p	136319	MTPN	NM_145808	myotrophin
+479	72	hsa-miR-3151-5p	9215	LARGE1	NM_133642	LARGE xylosyl- and glucuronyltransferase 1
+480	72	hsa-miR-622	136319	MTPN	NM_145808	myotrophin
+481	72	hsa-miR-3913-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+482	72	hsa-miR-3121-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+483	72	hsa-miR-513c-5p	136319	MTPN	NM_145808	myotrophin
+484	72	hsa-miR-4677-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+485	72	hsa-miR-3065-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+486	72	hsa-miR-3065-5p	3479	IGF1	NM_001111284	insulin like growth factor 1
+487	72	hsa-miR-150-3p	2146	EZH2	NM_001203247	enhancer of zeste 2 polycomb repressive complex 2 subunit
+488	72	hsa-miR-1290	2660	MSTN	NM_005259	myostatin
+489	72	hsa-miR-135b-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+490	72	hsa-miR-135a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+491	72	hsa-miR-3909	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+492	72	hsa-miR-32-3p	346007	EYS	NM_001142801	eyes shut homolog
+493	71	hsa-miR-450a-2-3p	9215	LARGE1	NM_133642	LARGE xylosyl- and glucuronyltransferase 1
+494	71	hsa-miR-339-5p	79647	AKIRIN1	NM_001136275	akirin 1
+495	71	hsa-miR-186-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+496	71	hsa-miR-3183	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+497	71	hsa-miR-367-3p	688	KLF5	NM_001730	Kruppel like factor 5
+498	71	hsa-miR-514a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+499	71	hsa-miR-1275	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+500	71	hsa-miR-212-3p	136319	MTPN	NM_145808	myotrophin
+501	71	hsa-miR-433-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+502	71	hsa-miR-200a-5p	2660	MSTN	NM_005259	myostatin
+503	71	hsa-miR-150-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+504	71	hsa-let-7f-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+505	71	hsa-miR-129-5p	346007	EYS	NM_001142801	eyes shut homolog
+506	71	hsa-miR-98-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+507	71	hsa-miR-874-5p	5467	PPARD	NM_001171820	peroxisome proliferator activated receptor delta
+508	71	hsa-miR-107	6895	TARBP2	NM_134324	TARBP2, RISC loading complex RNA binding subunit
+509	71	hsa-let-7b-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+510	71	hsa-let-7g-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+511	71	hsa-miR-103a-3p	6895	TARBP2	NM_134324	TARBP2, RISC loading complex RNA binding subunit
+512	71	hsa-miR-1304-5p	1605	DAG1	NM_001177640	dystroglycan 1
+513	71	hsa-let-7a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+514	71	hsa-miR-188-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+515	71	hsa-let-7i-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+516	71	hsa-miR-132-3p	136319	MTPN	NM_145808	myotrophin
+517	71	hsa-miR-3127-5p	4656	MYOG	NM_002479	myogenin
+518	71	hsa-miR-3154	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+519	71	hsa-miR-4423-5p	136319	MTPN	NM_145808	myotrophin
+520	71	hsa-let-7e-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+521	71	hsa-let-7c-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+522	71	hsa-miR-326	1605	DAG1	NM_001165928	dystroglycan 1
+523	70	hsa-miR-519b-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+524	70	hsa-miR-23a-3p	688	KLF5	NM_001730	Kruppel like factor 5
+525	70	hsa-miR-1915-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+526	70	hsa-miR-519a-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+527	70	hsa-miR-328-3p	8324	FZD7	NM_003507	frizzled class receptor 7
+528	70	hsa-miR-410-3p	928	CD9	NM_001769	CD9 molecule
+529	70	hsa-miR-1266-5p	928	CD9	NM_001769	CD9 molecule
+530	70	hsa-miR-622	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+531	70	hsa-miR-107	7476	WNT7A	NM_004625	Wnt family member 7A
+532	70	hsa-miR-448	2660	MSTN	NM_005259	myostatin
+533	70	hsa-miR-3074-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+534	70	hsa-miR-5001-5p	5315	PKM	NM_001206796	pyruvate kinase M1/2
+535	70	hsa-miR-23b-3p	688	KLF5	NM_001730	Kruppel like factor 5
+536	70	hsa-miR-31-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+537	70	hsa-miR-126-5p	79647	AKIRIN1	NM_024595	akirin 1
+538	70	hsa-miR-103a-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+539	70	hsa-miR-24-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+540	70	hsa-miR-324-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+541	70	hsa-miR-580-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+542	70	hsa-miR-548l	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+543	69	hsa-miR-541-5p	346007	EYS	NM_001142801	eyes shut homolog
+544	69	hsa-miR-221-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+545	69	hsa-miR-449c-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+546	69	hsa-miR-3664-3p	79647	AKIRIN1	NM_024595	akirin 1
+547	69	hsa-miR-34b-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+548	69	hsa-miR-584-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+549	69	hsa-miR-455-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+550	69	hsa-miR-222-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+551	69	hsa-miR-382-5p	79647	AKIRIN1	NM_024595	akirin 1
+552	69	hsa-miR-6515-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+553	69	hsa-miR-125a-5p	1605	DAG1	NM_001165928	dystroglycan 1
+554	69	hsa-miR-761	136319	MTPN	NM_145808	myotrophin
+555	69	hsa-miR-125b-5p	1605	DAG1	NM_001165928	dystroglycan 1
+556	69	hsa-miR-760	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+557	68	hsa-miR-450a-2-3p	3479	IGF1	NM_001111284	insulin like growth factor 1
+558	68	hsa-miR-548e-3p	2660	MSTN	NM_005259	myostatin
+559	68	hsa-miR-155-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+560	68	hsa-miR-18b-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+561	68	hsa-miR-320d	3479	IGF1	NM_001111283	insulin like growth factor 1
+562	68	hsa-miR-361-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+563	68	hsa-miR-1910-3p	346007	EYS	NM_001142801	eyes shut homolog
+564	68	hsa-miR-544a	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+565	68	hsa-miR-19a-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+566	68	hsa-miR-584-5p	301	ANXA1	NM_000700	annexin A1
+567	68	hsa-miR-15b-5p	6442	SGCA	NM_001135697	sarcoglycan alpha
+568	68	hsa-miR-299-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+569	68	hsa-miR-432-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+570	68	hsa-miR-548a-3p	2660	MSTN	NM_005259	myostatin
+571	68	hsa-miR-16-5p	6442	SGCA	NM_001135697	sarcoglycan alpha
+572	68	hsa-miR-576-3p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+573	68	hsa-miR-320c	3479	IGF1	NM_001111283	insulin like growth factor 1
+574	68	hsa-miR-1285-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+575	68	hsa-miR-30a-3p	301	ANXA1	NM_000700	annexin A1
+576	68	hsa-miR-1304-3p	688	KLF5	NM_001730	Kruppel like factor 5
+577	68	hsa-miR-18a-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+578	68	hsa-miR-3605-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+579	68	hsa-miR-30e-3p	301	ANXA1	NM_000700	annexin A1
+580	68	hsa-miR-27b-5p	1605	DAG1	NM_001177640	dystroglycan 1
+581	68	hsa-miR-7-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+582	68	hsa-miR-6511a-5p	346007	EYS	NM_001142801	eyes shut homolog
+583	68	hsa-miR-6511a-3p	79647	AKIRIN1	NM_024595	akirin 1
+584	68	hsa-miR-19b-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+585	68	hsa-miR-185-5p	2876	GPX1	NM_201397	glutathione peroxidase 1
+586	68	hsa-miR-548f-3p	2660	MSTN	NM_005259	myostatin
+587	68	hsa-miR-15a-5p	6442	SGCA	NM_001135697	sarcoglycan alpha
+588	68	hsa-miR-195-5p	6442	SGCA	NM_001135697	sarcoglycan alpha
+589	68	hsa-miR-320b	3479	IGF1	NM_001111283	insulin like growth factor 1
+590	67	hsa-miR-3120-3p	136319	MTPN	NM_145808	myotrophin
+591	67	hsa-miR-1228-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+592	67	hsa-miR-1260a	928	CD9	NM_001769	CD9 molecule
+593	67	hsa-miR-339-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+594	67	hsa-miR-105-5p	3479	IGF1	NM_001111284	insulin like growth factor 1
+595	67	hsa-miR-503-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+596	67	hsa-miR-1260b	928	CD9	NM_001769	CD9 molecule
+597	67	hsa-miR-496	79647	AKIRIN1	NM_024595	akirin 1
+598	67	hsa-miR-543	346007	EYS	NM_001142801	eyes shut homolog
+599	67	hsa-miR-7-5p	101929726	MYMX	NM_001315494	myomixer, myoblast fusion factor
+600	67	hsa-miR-582-5p	1605	DAG1	NM_001177640	dystroglycan 1
+601	67	hsa-miR-656-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+602	67	hsa-miR-3190-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+603	66	hsa-miR-370-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+604	66	hsa-miR-548t-3p	4656	MYOG	NM_002479	myogenin
+605	66	hsa-miR-183-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+606	66	hsa-miR-4713-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+607	66	hsa-miR-548e-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+608	66	hsa-miR-548e-3p	6665	SOX15	NM_006942	SRY-box 15
+609	66	hsa-miR-622	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+610	66	hsa-miR-3121-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+611	66	hsa-miR-452-5p	1605	DAG1	NM_001177640	dystroglycan 1
+612	66	hsa-miR-105-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+613	66	hsa-miR-21-5p	1605	DAG1	NM_001177640	dystroglycan 1
+614	66	hsa-miR-378d	3479	IGF1	NM_000618	insulin like growth factor 1
+615	66	hsa-miR-939-3p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+616	66	hsa-miR-3194-5p	1605	DAG1	NM_001165928	dystroglycan 1
+617	66	hsa-miR-361-5p	3479	IGF1	NM_001111283	insulin like growth factor 1
+618	66	hsa-miR-378a-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+619	66	hsa-miR-140-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+620	66	hsa-miR-378c	3479	IGF1	NM_000618	insulin like growth factor 1
+621	66	hsa-miR-655-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+622	66	hsa-miR-548a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+623	66	hsa-miR-374c-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+624	66	hsa-miR-107	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+625	66	hsa-miR-522-5p	346007	EYS	NM_001142801	eyes shut homolog
+626	66	hsa-miR-448	3479	IGF1	NM_000618	insulin like growth factor 1
+627	66	hsa-miR-3150b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+628	66	hsa-miR-3150b-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+629	66	hsa-miR-5001-5p	1605	DAG1	NM_001177640	dystroglycan 1
+630	66	hsa-miR-627-3p	2660	MSTN	NM_005259	myostatin
+631	66	hsa-miR-103a-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+632	66	hsa-miR-548k	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+633	66	hsa-miR-423-5p	5467	PPARD	NM_001171820	peroxisome proliferator activated receptor delta
+634	66	hsa-miR-548o-3p	688	KLF5	NM_001730	Kruppel like factor 5
+635	66	hsa-miR-4662a-5p	346007	EYS	NM_001142801	eyes shut homolog
+636	66	hsa-miR-568	1605	DAG1	NM_001165928	dystroglycan 1
+637	66	hsa-miR-877-5p	2876	GPX1	NM_000581	glutathione peroxidase 1
+638	66	hsa-miR-1323	688	KLF5	NM_001730	Kruppel like factor 5
+639	66	hsa-miR-762	1605	DAG1	NM_001177640	dystroglycan 1
+640	66	hsa-miR-422a	3479	IGF1	NM_000618	insulin like growth factor 1
+641	66	hsa-miR-219a-1-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+642	66	hsa-miR-548f-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+643	66	hsa-miR-548f-3p	6665	SOX15	NM_006942	SRY-box 15
+644	66	hsa-miR-3154	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+645	66	hsa-miR-16-2-3p	928	CD9	NM_001769	CD9 molecule
+646	66	hsa-miR-519c-5p	346007	EYS	NM_001142801	eyes shut homolog
+647	65	hsa-miR-486-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+648	65	hsa-miR-32-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+649	65	hsa-miR-186-5p	2660	MSTN	NM_005259	myostatin
+650	65	hsa-miR-380-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+651	65	hsa-miR-3121-3p	3479	IGF1	NM_001111283	insulin like growth factor 1
+652	65	hsa-miR-642a-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+653	65	hsa-miR-92b-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+654	65	hsa-miR-339-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+655	65	hsa-miR-140-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+656	65	hsa-miR-497-5p	6442	SGCA	NM_001135697	sarcoglycan alpha
+657	65	hsa-miR-655-3p	346007	EYS	NM_001292009	eyes shut homolog
+658	65	hsa-miR-411-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+659	65	hsa-miR-379-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+660	65	hsa-miR-3192-5p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+661	65	hsa-miR-3192-5p	607	BCL9	NM_004326	BCL9, transcription coactivator
+662	65	hsa-miR-484	2876	GPX1	NM_201397	glutathione peroxidase 1
+663	65	hsa-miR-32-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+664	65	hsa-miR-324-5p	3479	IGF1	NM_000618	insulin like growth factor 1
+665	65	hsa-miR-3140-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+666	65	hsa-miR-92a-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+667	65	hsa-miR-424-5p	6442	SGCA	NM_001135697	sarcoglycan alpha
+668	64	hsa-miR-515-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+669	64	hsa-miR-23a-3p	8324	FZD7	NM_003507	frizzled class receptor 7
+670	64	hsa-miR-374a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+671	64	hsa-let-7d-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+672	64	hsa-miR-219b-3p	346007	EYS	NM_001142801	eyes shut homolog
+673	64	hsa-miR-1827	6895	TARBP2	NM_134324	TARBP2, RISC loading complex RNA binding subunit
+674	64	hsa-miR-23b-3p	8324	FZD7	NM_003507	frizzled class receptor 7
+675	64	hsa-miR-500a-3p	2660	MSTN	NM_005259	myostatin
+676	64	hsa-miR-3934-5p	7480	WNT10B	NM_003394	Wnt family member 10B
+677	64	hsa-miR-382-5p	346007	EYS	NM_001142800	eyes shut homolog
+678	64	hsa-miR-198	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+679	64	hsa-miR-3130-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+680	64	hsa-miR-185-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+681	64	hsa-miR-3127-5p	346007	EYS	NM_001142801	eyes shut homolog
+682	64	hsa-miR-493-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+683	64	hsa-miR-761	7476	WNT7A	NM_004625	Wnt family member 7A
+684	64	hsa-miR-574-5p	1605	DAG1	NM_001165928	dystroglycan 1
+685	63	hsa-miR-450a-1-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+686	63	hsa-miR-502-3p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+687	63	hsa-miR-380-3p	3479	IGF1	NM_000618	insulin like growth factor 1
+688	63	hsa-miR-30b-3p	1605	DAG1	NM_001177640	dystroglycan 1
+689	63	hsa-miR-590-5p	1605	DAG1	NM_001177640	dystroglycan 1
+690	63	hsa-miR-320d	1605	DAG1	NM_001177640	dystroglycan 1
+691	63	hsa-miR-642a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+692	63	hsa-miR-26a-5p	136319	MTPN	NM_145808	myotrophin
+693	63	hsa-miR-495-3p	607	BCL9	NM_004326	BCL9, transcription coactivator
+694	63	hsa-miR-501-3p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+695	63	hsa-miR-142-5p	8324	FZD7	NM_003507	frizzled class receptor 7
+696	63	hsa-miR-142-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+697	63	hsa-miR-17-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+698	63	hsa-miR-26b-5p	136319	MTPN	NM_145808	myotrophin
+699	63	hsa-miR-361-5p	346007	EYS	NM_001142801	eyes shut homolog
+700	63	hsa-miR-363-3p	688	KLF5	NM_001730	Kruppel like factor 5
+701	63	hsa-miR-323a-3p	1605	DAG1	NM_001165928	dystroglycan 1
+702	63	hsa-miR-129-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+703	63	hsa-miR-411-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+704	63	hsa-miR-514a-3p	2660	MSTN	NM_005259	myostatin
+705	63	hsa-miR-653-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+706	63	hsa-miR-129-2-3p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+707	63	hsa-miR-1298-5p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+708	63	hsa-miR-320c	1605	DAG1	NM_001177640	dystroglycan 1
+709	63	hsa-miR-661	1605	DAG1	NM_001177640	dystroglycan 1
+710	63	hsa-miR-20a-3p	346007	EYS	NM_001142800	eyes shut homolog
+711	63	hsa-miR-3138	6442	SGCA	NM_001135697	sarcoglycan alpha
+712	63	hsa-miR-224-5p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+713	63	hsa-miR-379-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+714	63	hsa-miR-324-3p	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+715	63	hsa-miR-6515-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+716	63	hsa-miR-342-3p	79647	AKIRIN1	NM_024595	akirin 1
+717	63	hsa-miR-129-1-3p	9215	LARGE1	NM_004737	LARGE xylosyl- and glucuronyltransferase 1
+718	63	hsa-miR-766-5p	1605	DAG1	NM_001177640	dystroglycan 1
+719	63	hsa-miR-145-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+720	63	hsa-miR-25-3p	688	KLF5	NM_001730	Kruppel like factor 5
+721	63	hsa-miR-767-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+722	63	hsa-miR-194-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+723	63	hsa-miR-320b	1605	DAG1	NM_001177640	dystroglycan 1
+724	63	hsa-miR-514b-3p	2660	MSTN	NM_005259	myostatin
+725	62	hsa-miR-450a-2-3p	7480	WNT10B	NM_003394	Wnt family member 10B
+726	62	hsa-miR-32-5p	688	KLF5	NM_001730	Kruppel like factor 5
+727	62	hsa-miR-548j-5p	975	CD81	NM_004356	CD81 molecule
+728	62	hsa-miR-374a-5p	2660	MSTN	NM_005259	myostatin
+729	62	hsa-miR-659-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+730	62	hsa-miR-548c-5p	975	CD81	NM_004356	CD81 molecule
+731	62	hsa-miR-590-5p	301	ANXA1	NM_000700	annexin A1
+732	62	hsa-miR-382-3p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+733	62	hsa-miR-642a-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+734	62	hsa-miR-495-3p	9215	LARGE1	NM_133642	LARGE xylosyl- and glucuronyltransferase 1
+735	62	hsa-miR-214-3p	136319	MTPN	NM_145808	myotrophin
+736	62	hsa-miR-214-3p	6442	SGCA	NM_001135697	sarcoglycan alpha
+737	62	hsa-miR-21-5p	301	ANXA1	NM_000700	annexin A1
+738	62	hsa-miR-92b-3p	688	KLF5	NM_001730	Kruppel like factor 5
+739	62	hsa-miR-548b-5p	975	CD81	NM_004356	CD81 molecule
+740	62	hsa-miR-200c-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+741	62	hsa-miR-3065-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+742	62	hsa-miR-429	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+743	62	hsa-miR-548d-5p	975	CD81	NM_004356	CD81 molecule
+744	62	hsa-miR-548h-5p	975	CD81	NM_004356	CD81 molecule
+745	62	hsa-miR-5001-5p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+746	62	hsa-miR-548o-5p	975	CD81	NM_004356	CD81 molecule
+747	62	hsa-miR-200b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+748	62	hsa-miR-324-3p	5467	PPARD	NM_177435	peroxisome proliferator activated receptor delta
+749	62	hsa-miR-223-3p	1605	DAG1	NM_001165928	dystroglycan 1
+750	62	hsa-miR-548am-5p	975	CD81	NM_004356	CD81 molecule
+751	62	hsa-miR-762	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+752	62	hsa-miR-625-5p	3479	IGF1	NM_001111284	insulin like growth factor 1
+753	62	hsa-miR-92a-3p	688	KLF5	NM_001730	Kruppel like factor 5
+754	62	hsa-miR-761	6442	SGCA	NM_001135697	sarcoglycan alpha
+755	62	hsa-miR-889-3p	2660	MSTN	NM_005259	myostatin
+756	61	hsa-miR-5699-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+757	61	hsa-miR-942-3p	4618	MYF6	NM_002469	myogenic factor 6
+758	61	hsa-miR-99b-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+759	61	hsa-miR-361-3p	346007	EYS	NM_001142801	eyes shut homolog
+760	61	hsa-miR-4446-3p	7480	WNT10B	NM_003394	Wnt family member 10B
+761	61	hsa-miR-190a-5p	346007	EYS	NM_001142801	eyes shut homolog
+762	61	hsa-miR-3136-5p	58529	MYOZ1	NM_021245	myozenin 1
+763	61	hsa-miR-1910-3p	688	KLF5	NM_001286818	Kruppel like factor 5
+764	61	hsa-miR-802	7048	TGFBR2	NM_001024847	transforming growth factor beta receptor 2
+765	61	hsa-miR-516b-5p	9215	LARGE1	NM_133642	LARGE xylosyl- and glucuronyltransferase 1
+766	61	hsa-miR-548a-3p	6665	SOX15	NM_006942	SRY-box 15
+767	61	hsa-miR-423-5p	2660	MSTN	NM_005259	myostatin
+768	61	hsa-miR-494-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+769	61	hsa-miR-488-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+770	61	hsa-miR-6511a-5p	688	KLF5	NM_001286818	Kruppel like factor 5
+771	61	hsa-miR-100-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+772	61	hsa-miR-99a-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+773	60	hsa-miR-1291	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+774	60	hsa-miR-548j-5p	2660	MSTN	NM_005259	myostatin
+775	60	hsa-miR-548c-5p	2660	MSTN	NM_005259	myostatin
+776	60	hsa-miR-1297	2660	MSTN	NM_005259	myostatin
+777	60	hsa-miR-26a-5p	2660	MSTN	NM_005259	myostatin
+778	60	hsa-miR-3187-3p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+779	60	hsa-miR-548b-5p	2660	MSTN	NM_005259	myostatin
+780	60	hsa-miR-3065-5p	928	CD9	NM_001769	CD9 molecule
+781	60	hsa-miR-26b-5p	2660	MSTN	NM_005259	myostatin
+782	60	hsa-miR-532-5p	825	CAPN3	NM_173090	calpain 3
+783	60	hsa-miR-548d-5p	2660	MSTN	NM_005259	myostatin
+784	60	hsa-miR-29c-3p	1605	DAG1	NM_001165928	dystroglycan 1
+785	60	hsa-miR-548h-5p	2660	MSTN	NM_005259	myostatin
+786	60	hsa-miR-29a-3p	1605	DAG1	NM_001165928	dystroglycan 1
+787	60	hsa-miR-3074-5p	928	CD9	NM_001769	CD9 molecule
+788	60	hsa-miR-126-5p	346007	EYS	NM_001142801	eyes shut homolog
+789	60	hsa-miR-1304-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+790	60	hsa-miR-548o-5p	2660	MSTN	NM_005259	myostatin
+791	60	hsa-miR-876-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+792	60	hsa-miR-548o-3p	6665	SOX15	NM_006942	SRY-box 15
+793	60	hsa-miR-29b-3p	1605	DAG1	NM_001165928	dystroglycan 1
+794	60	hsa-miR-2682-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+795	60	hsa-miR-548am-5p	2660	MSTN	NM_005259	myostatin
+796	60	hsa-miR-323b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+797	60	hsa-miR-1323	6665	SOX15	NM_006942	SRY-box 15
+798	60	hsa-miR-625-5p	5738	PTGFRN	NM_020440	prostaglandin F2 receptor inhibitor
+799	60	hsa-miR-374b-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator

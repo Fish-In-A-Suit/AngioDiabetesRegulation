@@ -1,0 +1,2181 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-449a	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+2	100	hsa-miR-34a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+3	100	hsa-miR-15b-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+4	100	hsa-miR-34c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+5	100	hsa-miR-497-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+6	100	hsa-miR-16-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+7	100	hsa-miR-15a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+8	100	hsa-miR-449b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+9	100	hsa-miR-195-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+10	100	hsa-miR-424-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+11	100	hsa-miR-454-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+12	99	hsa-miR-144-3p	7010	TEK	NM_000459	TEK receptor tyrosine kinase
+13	99	hsa-miR-1297	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+14	99	hsa-miR-1297	144455	E2F7	NM_203394	E2F transcription factor 7
+15	99	hsa-miR-26a-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+16	99	hsa-miR-26a-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+17	99	hsa-miR-200c-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+18	99	hsa-miR-200c-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+19	99	hsa-miR-3065-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+20	99	hsa-miR-26b-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+21	99	hsa-miR-26b-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+22	99	hsa-miR-301a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+23	99	hsa-miR-429	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+24	99	hsa-miR-429	9353	SLIT2	NM_001289135	slit guidance ligand 2
+25	99	hsa-miR-29c-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+26	99	hsa-miR-3143	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+27	99	hsa-miR-29a-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+28	99	hsa-miR-338-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+29	99	hsa-miR-511-3p	1960	EGR3	NM_001199880	early growth response 3
+30	99	hsa-miR-29b-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+31	99	hsa-miR-200b-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+32	99	hsa-miR-200b-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+33	99	hsa-miR-301b-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+34	99	hsa-miR-130a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+35	99	hsa-miR-505-3p	3146	HMGB1	NM_002128	high mobility group box 1
+36	99	hsa-miR-130b-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+37	99	hsa-miR-203a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+38	98	hsa-miR-30a-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+39	98	hsa-miR-873-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+40	98	hsa-miR-1297	4086	SMAD1	NM_001003688	SMAD family member 1
+41	98	hsa-miR-212-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+42	98	hsa-miR-628-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+43	98	hsa-miR-105-5p	7082	TJP1	NM_001301025	tight junction protein 1
+44	98	hsa-miR-3065-5p	998	CDC42	NM_001791	cell division cycle 42
+45	98	hsa-miR-3065-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+46	98	hsa-miR-153-3p	284	ANGPT1	NM_001146	angiopoietin 1
+47	98	hsa-miR-15b-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+48	98	hsa-miR-497-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+49	98	hsa-miR-30c-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+50	98	hsa-miR-16-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+51	98	hsa-miR-30b-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+52	98	hsa-miR-149-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+53	98	hsa-miR-568	4851	NOTCH1	NM_017617	notch 1
+54	98	hsa-miR-30d-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+55	98	hsa-miR-762	94	ACVRL1	NM_001077401	activin A receptor like type 1
+56	98	hsa-miR-30e-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+57	98	hsa-miR-132-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+58	98	hsa-miR-15a-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+59	98	hsa-miR-195-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+60	98	hsa-miR-424-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+61	97	hsa-miR-30a-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+62	97	hsa-miR-576-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+63	97	hsa-miR-548t-3p	22905	EPN2	NM_001102664	epsin 2
+64	97	hsa-miR-144-3p	7082	TJP1	NM_001301026	tight junction protein 1
+65	97	hsa-miR-10a-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+66	97	hsa-miR-1297	4017	LOXL2	NM_002318	lysyl oxidase like 2
+67	97	hsa-miR-449c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+68	97	hsa-miR-26a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+69	97	hsa-miR-34b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+70	97	hsa-miR-19a-3p	79733	E2F8	NM_001256371	E2F transcription factor 8
+71	97	hsa-miR-26b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+72	97	hsa-miR-30c-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+73	97	hsa-miR-665	3791	KDR	NM_002253	kinase insert domain receptor
+74	97	hsa-miR-381-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+75	97	hsa-miR-5001-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+76	97	hsa-miR-30b-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+77	97	hsa-miR-224-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+78	97	hsa-miR-2682-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+79	97	hsa-miR-30d-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+80	97	hsa-miR-19b-3p	79733	E2F8	NM_001256371	E2F transcription factor 8
+81	97	hsa-miR-10b-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+82	97	hsa-miR-128-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+83	97	hsa-miR-30e-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+84	96	hsa-miR-3120-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+85	96	hsa-miR-519b-3p	3716	JAK1	NM_001320923	Janus kinase 1
+86	96	hsa-miR-23a-3p	7082	TJP1	NM_001301025	tight junction protein 1
+87	96	hsa-miR-23a-3p	1960	EGR3	NM_001199880	early growth response 3
+88	96	hsa-miR-519a-3p	3716	JAK1	NM_001320923	Janus kinase 1
+89	96	hsa-miR-410-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+90	96	hsa-miR-26a-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+91	96	hsa-miR-26b-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+92	96	hsa-miR-545-3p	1960	EGR3	NM_001199880	early growth response 3
+93	96	hsa-miR-377-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+94	96	hsa-miR-381-3p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+95	96	hsa-miR-5001-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+96	96	hsa-miR-511-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+97	96	hsa-miR-627-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+98	96	hsa-miR-30a-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+99	96	hsa-miR-23b-3p	1960	EGR3	NM_001199880	early growth response 3
+100	96	hsa-miR-23b-3p	7082	TJP1	NM_001301025	tight junction protein 1
+101	96	hsa-miR-30e-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+102	96	hsa-miR-4662a-5p	22905	EPN2	NM_014964	epsin 2
+103	96	hsa-miR-568	7082	TJP1	NM_001301025	tight junction protein 1
+104	96	hsa-miR-656-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+105	96	hsa-miR-762	339123	JMJD8	NM_001323922	jumonji domain containing 8
+106	96	hsa-miR-767-5p	10365	KLF2	NM_016270	Kruppel like factor 2
+107	96	hsa-miR-660-5p	1012	CDH13	NM_001220488	cadherin 13
+108	96	hsa-miR-942-5p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+109	96	hsa-miR-16-2-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+110	95	hsa-miR-30a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+111	95	hsa-miR-520h	9037	SEMA5A	NM_003966	semaphorin 5A
+112	95	hsa-miR-367-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+113	95	hsa-miR-520g-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+114	95	hsa-miR-124-3p	8829	NRP1	NM_003873	neuropilin 1
+115	95	hsa-miR-1297	8817	FGF18	NM_003862	fibroblast growth factor 18
+116	95	hsa-miR-21-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+117	95	hsa-miR-19a-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+118	95	hsa-miR-19a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+119	95	hsa-miR-200c-3p	3791	KDR	NM_002253	kinase insert domain receptor
+120	95	hsa-miR-429	3791	KDR	NM_002253	kinase insert domain receptor
+121	95	hsa-miR-15b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+122	95	hsa-miR-211-5p	284	ANGPT1	NM_001146	angiopoietin 1
+123	95	hsa-miR-363-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+124	95	hsa-miR-3173-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+125	95	hsa-miR-129-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+126	95	hsa-miR-182-5p	1960	EGR3	NM_001199880	early growth response 3
+127	95	hsa-miR-30c-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+128	95	hsa-miR-545-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+129	95	hsa-miR-874-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+130	95	hsa-miR-16-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+131	95	hsa-miR-216b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+132	95	hsa-miR-30b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+133	95	hsa-miR-200b-3p	3791	KDR	NM_002253	kinase insert domain receptor
+134	95	hsa-miR-506-3p	8829	NRP1	NM_003873	neuropilin 1
+135	95	hsa-miR-568	3716	JAK1	NM_001321855	Janus kinase 1
+136	95	hsa-miR-204-5p	284	ANGPT1	NM_001146	angiopoietin 1
+137	95	hsa-miR-30d-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+138	95	hsa-miR-6515-5p	207	AKT1	NM_001014431	AKT serine/threonine kinase 1
+139	95	hsa-miR-19b-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+140	95	hsa-miR-19b-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+141	95	hsa-miR-656-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+142	95	hsa-miR-30e-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+143	95	hsa-miR-25-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+144	95	hsa-miR-219a-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+145	95	hsa-miR-15a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+146	95	hsa-miR-195-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+147	95	hsa-miR-326	3678	ITGA5	NM_002205	integrin subunit alpha 5
+148	94	hsa-miR-374b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+149	94	hsa-miR-374b-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+150	94	hsa-miR-449a	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+151	94	hsa-miR-32-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+152	94	hsa-miR-1228-3p	7082	TJP1	NM_001301025	tight junction protein 1
+153	94	hsa-miR-301a-5p	8434	RECK	NM_001316347	reversion inducing cysteine rich protein with kazal motifs
+154	94	hsa-miR-329-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+155	94	hsa-miR-367-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+156	94	hsa-miR-155-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+157	94	hsa-miR-539-3p	2246	FGF1	NM_033137	fibroblast growth factor 1
+158	94	hsa-miR-148a-3p	8829	NRP1	NM_003873	neuropilin 1
+159	94	hsa-miR-320d	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+160	94	hsa-miR-34a-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+161	94	hsa-miR-214-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+162	94	hsa-miR-92b-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+163	94	hsa-miR-152-3p	8829	NRP1	NM_003873	neuropilin 1
+164	94	hsa-miR-362-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+165	94	hsa-miR-29c-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+166	94	hsa-miR-34c-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+167	94	hsa-miR-497-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+168	94	hsa-miR-655-3p	6722	SRF	NM_001292001	serum response factor
+169	94	hsa-miR-182-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+170	94	hsa-miR-29a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+171	94	hsa-miR-503-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+172	94	hsa-miR-302c-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+173	94	hsa-miR-374c-5p	6722	SRF	NM_001292001	serum response factor
+174	94	hsa-miR-320c	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+175	94	hsa-miR-20a-3p	1012	CDH13	NM_001220490	cadherin 13
+176	94	hsa-miR-302a-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+177	94	hsa-miR-141-3p	1969	EPHA2	NM_004431	EPH receptor A2
+178	94	hsa-miR-141-3p	29924	EPN1	NM_001130071	epsin 1
+179	94	hsa-miR-200a-3p	1969	EPHA2	NM_004431	EPH receptor A2
+180	94	hsa-miR-200a-3p	29924	EPN1	NM_001130071	epsin 1
+181	94	hsa-miR-365b-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+182	94	hsa-miR-365a-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+183	94	hsa-miR-101-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+184	94	hsa-miR-29b-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+185	94	hsa-miR-302d-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+186	94	hsa-miR-302b-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+187	94	hsa-miR-582-5p	79733	E2F8	NM_001256371	E2F transcription factor 8
+188	94	hsa-miR-320e	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+189	94	hsa-miR-148b-3p	8829	NRP1	NM_003873	neuropilin 1
+190	94	hsa-miR-143-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+191	94	hsa-miR-485-3p	2246	FGF1	NM_033137	fibroblast growth factor 1
+192	94	hsa-miR-25-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+193	94	hsa-miR-92a-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+194	94	hsa-miR-383-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+195	94	hsa-miR-761	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+196	94	hsa-miR-449b-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+197	94	hsa-miR-424-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+198	94	hsa-miR-320b	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+199	93	hsa-miR-3120-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+200	93	hsa-miR-32-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+201	93	hsa-miR-32-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+202	93	hsa-miR-367-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+203	93	hsa-miR-509-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+204	93	hsa-miR-509-3-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+205	93	hsa-miR-542-3p	9270	ITGB1BP1	NM_001319066	integrin subunit beta 1 binding protein 1
+206	93	hsa-miR-1266-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+207	93	hsa-miR-624-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+208	93	hsa-miR-590-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+209	93	hsa-miR-3121-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+210	93	hsa-miR-92b-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+211	93	hsa-miR-92b-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+212	93	hsa-miR-200c-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+213	93	hsa-miR-429	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+214	93	hsa-miR-363-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+215	93	hsa-miR-182-5p	57381	RHOJ	NM_020663	ras homolog family member J
+216	93	hsa-miR-582-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+217	93	hsa-miR-432-5p	84830	ADTRP	NM_001143948	androgen dependent TFPI regulating protein
+218	93	hsa-miR-802	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+219	93	hsa-miR-135b-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+220	93	hsa-miR-1185-1-3p	22905	EPN2	NM_014964	epsin 2
+221	93	hsa-miR-338-5p	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+222	93	hsa-miR-338-5p	10365	KLF2	NM_016270	Kruppel like factor 2
+223	93	hsa-miR-1285-3p	8829	NRP1	NM_003873	neuropilin 1
+224	93	hsa-miR-135a-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+225	93	hsa-miR-24-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+226	93	hsa-miR-548an	8829	NRP1	NM_003873	neuropilin 1
+227	93	hsa-miR-200b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+228	93	hsa-miR-7-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+229	93	hsa-miR-668-3p	9270	ITGB1BP1	NM_001319066	integrin subunit beta 1 binding protein 1
+230	93	hsa-miR-656-3p	1960	EGR3	NM_001199880	early growth response 3
+231	93	hsa-miR-25-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+232	93	hsa-miR-338-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+233	93	hsa-miR-185-5p	998	CDC42	NM_001791	cell division cycle 42
+234	93	hsa-miR-513a-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+235	93	hsa-miR-9-5p	57381	RHOJ	NM_020663	ras homolog family member J
+236	93	hsa-miR-493-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+237	93	hsa-miR-1185-2-3p	22905	EPN2	NM_014964	epsin 2
+238	93	hsa-miR-92a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+239	93	hsa-miR-92a-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+240	92	hsa-miR-519b-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+241	92	hsa-miR-519b-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+242	92	hsa-miR-23a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+243	92	hsa-miR-32-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+244	92	hsa-miR-519a-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+245	92	hsa-miR-519a-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+246	92	hsa-miR-576-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+247	92	hsa-miR-509-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+248	92	hsa-miR-509-3-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+249	92	hsa-miR-873-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+250	92	hsa-miR-148a-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+251	92	hsa-miR-26a-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+252	92	hsa-miR-214-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+253	92	hsa-miR-2355-5p	55742	PARVA	NM_018222	parvin alpha
+254	92	hsa-miR-92b-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+255	92	hsa-miR-1-3p	8829	NRP1	NM_003873	neuropilin 1
+256	92	hsa-miR-26b-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+257	92	hsa-miR-152-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+258	92	hsa-miR-508-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+259	92	hsa-miR-15b-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+260	92	hsa-miR-15b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+261	92	hsa-let-7f-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+262	92	hsa-miR-363-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+263	92	hsa-miR-22-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+264	92	hsa-miR-98-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+265	92	hsa-miR-16-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+266	92	hsa-miR-16-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+267	92	hsa-miR-5001-5p	2022	ENG	NM_000118	endoglin
+268	92	hsa-let-7b-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+269	92	hsa-let-7g-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+270	92	hsa-miR-608	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+271	92	hsa-miR-23b-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+272	92	hsa-miR-548o-3p	22905	EPN2	NM_014964	epsin 2
+273	92	hsa-miR-29b-3p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+274	92	hsa-let-7a-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+275	92	hsa-miR-148b-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+276	92	hsa-miR-656-3p	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+277	92	hsa-miR-1323	22905	EPN2	NM_014964	epsin 2
+278	92	hsa-let-7i-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+279	92	hsa-miR-762	2022	ENG	NM_000118	endoglin
+280	92	hsa-miR-206	8829	NRP1	NM_003873	neuropilin 1
+281	92	hsa-miR-625-5p	5315	PKM	NM_182471	pyruvate kinase M1/2
+282	92	hsa-miR-27a-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+283	92	hsa-miR-92a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+284	92	hsa-miR-15a-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+285	92	hsa-miR-15a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+286	92	hsa-miR-761	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+287	92	hsa-miR-195-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+288	92	hsa-miR-195-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+289	92	hsa-miR-424-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+290	92	hsa-miR-194-5p	55742	PARVA	NM_018222	parvin alpha
+291	92	hsa-let-7e-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+292	92	hsa-let-7c-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+293	92	hsa-miR-203a-3p	1960	EGR3	NM_001199880	early growth response 3
+294	92	hsa-miR-27b-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+295	91	hsa-miR-144-3p	79733	E2F8	NM_001256371	E2F transcription factor 8
+296	91	hsa-miR-186-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+297	91	hsa-miR-367-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+298	91	hsa-miR-509-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+299	91	hsa-miR-548e-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+300	91	hsa-miR-155-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+301	91	hsa-miR-509-3-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+302	91	hsa-miR-495-3p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+303	91	hsa-miR-21-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+304	91	hsa-miR-205-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+305	91	hsa-miR-513a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+306	91	hsa-let-7d-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+307	91	hsa-miR-654-5p	55742	PARVA	NM_018222	parvin alpha
+308	91	hsa-miR-211-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+309	91	hsa-miR-363-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+310	91	hsa-miR-182-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+311	91	hsa-miR-548a-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+312	91	hsa-miR-1827	57674	RNF213	NM_001256071	ring finger protein 213
+313	91	hsa-miR-1185-1-3p	7010	TEK	NM_000459	TEK receptor tyrosine kinase
+314	91	hsa-miR-489-3p	9270	ITGB1BP1	NM_001319066	integrin subunit beta 1 binding protein 1
+315	91	hsa-miR-627-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+316	91	hsa-miR-126-5p	8434	RECK	NM_001316346	reversion inducing cysteine rich protein with kazal motifs
+317	91	hsa-miR-9-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+318	91	hsa-miR-500b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+319	91	hsa-miR-548an	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+320	91	hsa-miR-204-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+321	91	hsa-miR-128-3p	8434	RECK	NM_001316346	reversion inducing cysteine rich protein with kazal motifs
+322	91	hsa-miR-128-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+323	91	hsa-miR-128-3p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+324	91	hsa-miR-1972	9270	ITGB1BP1	NM_001319070	integrin subunit beta 1 binding protein 1
+325	91	hsa-miR-25-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+326	91	hsa-miR-219a-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+327	91	hsa-miR-548f-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+328	91	hsa-miR-3190-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+329	91	hsa-miR-1185-2-3p	7010	TEK	NM_000459	TEK receptor tyrosine kinase
+330	91	hsa-miR-362-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+331	91	hsa-miR-513c-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+332	90	hsa-miR-515-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+333	90	hsa-miR-515-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+334	90	hsa-miR-372-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+335	90	hsa-miR-186-5p	22905	EPN2	NM_001102664	epsin 2
+336	90	hsa-miR-873-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+337	90	hsa-miR-539-3p	1012	CDH13	NM_001220488	cadherin 13
+338	90	hsa-miR-148a-3p	22905	EPN2	NM_001102664	epsin 2
+339	90	hsa-miR-320d	8829	NRP1	NM_003873	neuropilin 1
+340	90	hsa-miR-4677-3p	9270	ITGB1BP1	NM_001319066	integrin subunit beta 1 binding protein 1
+341	90	hsa-miR-152-3p	22905	EPN2	NM_001102664	epsin 2
+342	90	hsa-miR-520c-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+343	90	hsa-miR-29c-3p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+344	90	hsa-miR-373-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+345	90	hsa-miR-497-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+346	90	hsa-miR-497-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+347	90	hsa-miR-129-2-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+348	90	hsa-miR-29a-3p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+349	90	hsa-miR-503-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+350	90	hsa-miR-516b-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+351	90	hsa-miR-522-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+352	90	hsa-miR-320c	8829	NRP1	NM_003873	neuropilin 1
+353	90	hsa-miR-3192-5p	84830	ADTRP	NM_001143948	androgen dependent TFPI regulating protein
+354	90	hsa-miR-138-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+355	90	hsa-miR-129-1-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+356	90	hsa-miR-148b-3p	22905	EPN2	NM_001102664	epsin 2
+357	90	hsa-miR-485-3p	1012	CDH13	NM_001220488	cadherin 13
+358	90	hsa-miR-338-3p	8829	NRP1	NM_003873	neuropilin 1
+359	90	hsa-miR-27a-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+360	90	hsa-miR-27a-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+361	90	hsa-miR-27a-3p	84870	RSPO3	NM_032784	R-spondin 3
+362	90	hsa-miR-9-5p	8829	NRP1	NM_003873	neuropilin 1
+363	90	hsa-miR-9-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+364	90	hsa-miR-3190-3p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+365	90	hsa-miR-424-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+366	90	hsa-miR-320b	8829	NRP1	NM_003873	neuropilin 1
+367	90	hsa-miR-203a-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+368	90	hsa-miR-519c-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+369	90	hsa-miR-27b-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+370	90	hsa-miR-27b-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+371	90	hsa-miR-27b-3p	84870	RSPO3	NM_032784	R-spondin 3
+372	89	hsa-miR-379-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+373	89	hsa-miR-144-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+374	89	hsa-miR-589-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+375	89	hsa-miR-205-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+376	89	hsa-miR-200a-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+377	89	hsa-miR-939-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+378	89	hsa-miR-939-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+379	89	hsa-miR-150-3p	8829	NRP1	NM_003873	neuropilin 1
+380	89	hsa-miR-15b-5p	55742	PARVA	NM_018222	parvin alpha
+381	89	hsa-let-7f-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+382	89	hsa-let-7d-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+383	89	hsa-miR-3143	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+384	89	hsa-miR-455-5p	3791	KDR	NM_002253	kinase insert domain receptor
+385	89	hsa-miR-98-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+386	89	hsa-miR-545-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+387	89	hsa-miR-1827	7057	THBS1	NM_003246	thrombospondin 1
+388	89	hsa-miR-377-3p	1012	CDH13	NM_001220489	cadherin 13
+389	89	hsa-miR-16-5p	55742	PARVA	NM_018222	parvin alpha
+390	89	hsa-miR-489-3p	8434	RECK	NM_001316346	reversion inducing cysteine rich protein with kazal motifs
+391	89	hsa-let-7b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+392	89	hsa-miR-627-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+393	89	hsa-let-7g-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+394	89	hsa-miR-548an	6722	SRF	NM_001292001	serum response factor
+395	89	hsa-let-7a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+396	89	hsa-miR-1179	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+397	89	hsa-let-7i-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+398	89	hsa-miR-3157-5p	22905	EPN2	NM_001102664	epsin 2
+399	89	hsa-miR-27a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+400	89	hsa-miR-3127-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+401	89	hsa-miR-3190-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+402	89	hsa-miR-4787-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+403	89	hsa-miR-15a-5p	55742	PARVA	NM_018222	parvin alpha
+404	89	hsa-miR-195-5p	55742	PARVA	NM_018222	parvin alpha
+405	89	hsa-let-7e-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+406	89	hsa-let-7c-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+407	89	hsa-miR-889-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+408	89	hsa-miR-27b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+409	88	hsa-miR-449a	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+410	88	hsa-miR-449a	1012	CDH13	NM_001220488	cadherin 13
+411	88	hsa-miR-597-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+412	88	hsa-miR-597-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+413	88	hsa-miR-664b-3p	284	ANGPT1	NM_001146	angiopoietin 1
+414	88	hsa-miR-148a-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+415	88	hsa-miR-34a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+416	88	hsa-miR-34a-5p	1012	CDH13	NM_001220488	cadherin 13
+417	88	hsa-miR-3187-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+418	88	hsa-miR-200a-5p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+419	88	hsa-miR-200c-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+420	88	hsa-miR-152-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+421	88	hsa-miR-517c-3p	2185	PTK2B	NM_004103	protein tyrosine kinase 2 beta
+422	88	hsa-miR-429	57608	JCAD	NM_020848	junctional cadherin 5 associated
+423	88	hsa-miR-29c-3p	998	CDC42	NM_001039802	cell division cycle 42
+424	88	hsa-miR-1290	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+425	88	hsa-miR-655-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+426	88	hsa-miR-582-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+427	88	hsa-miR-29a-3p	998	CDC42	NM_001039802	cell division cycle 42
+428	88	hsa-miR-374c-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+429	88	hsa-miR-212-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+430	88	hsa-miR-543	144455	E2F7	NM_203394	E2F transcription factor 7
+431	88	hsa-miR-197-5p	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+432	88	hsa-miR-365b-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+433	88	hsa-miR-365a-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+434	88	hsa-miR-517a-3p	2185	PTK2B	NM_004103	protein tyrosine kinase 2 beta
+435	88	hsa-miR-548o-3p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+436	88	hsa-miR-548an	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+437	88	hsa-miR-3065-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+438	88	hsa-miR-29b-3p	998	CDC42	NM_001039802	cell division cycle 42
+439	88	hsa-miR-200b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+440	88	hsa-miR-222-3p	3791	KDR	NM_002253	kinase insert domain receptor
+441	88	hsa-miR-3152-3p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+442	88	hsa-miR-548b-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+443	88	hsa-miR-1179	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+444	88	hsa-miR-342-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+445	88	hsa-miR-223-5p	1960	EGR3	NM_001199880	early growth response 3
+446	88	hsa-miR-148b-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+447	88	hsa-miR-338-3p	7057	THBS1	NM_003246	thrombospondin 1
+448	88	hsa-miR-369-3p	7082	TJP1	NM_001301025	tight junction protein 1
+449	88	hsa-miR-27a-3p	1948	EFNB2	NM_004093	ephrin B2
+450	88	hsa-miR-27b-3p	1948	EFNB2	NM_004093	ephrin B2
+451	88	hsa-miR-191-5p	7082	TJP1	NM_001301025	tight junction protein 1
+452	87	hsa-miR-515-5p	22905	EPN2	NM_001102664	epsin 2
+453	87	hsa-miR-23a-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+454	87	hsa-miR-491-5p	55742	PARVA	NM_018222	parvin alpha
+455	87	hsa-miR-144-3p	22905	EPN2	NM_014964	epsin 2
+456	87	hsa-miR-590-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+457	87	hsa-miR-148a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+458	87	hsa-miR-148a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+459	87	hsa-miR-1297	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+460	87	hsa-miR-452-5p	51176	LEF1	NM_001130714	lymphoid enhancer binding factor 1
+461	87	hsa-miR-3664-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+462	87	hsa-miR-335-5p	6722	SRF	NM_003131	serum response factor
+463	87	hsa-miR-205-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+464	87	hsa-miR-1-3p	7057	THBS1	NM_003246	thrombospondin 1
+465	87	hsa-miR-660-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+466	87	hsa-miR-152-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+467	87	hsa-miR-152-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+468	87	hsa-miR-361-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+469	87	hsa-miR-708-3p	7082	TJP1	NM_001301025	tight junction protein 1
+470	87	hsa-miR-150-3p	22905	EPN2	NM_014964	epsin 2
+471	87	hsa-miR-150-3p	8503	PIK3R3	NM_001303428	phosphoinositide-3-kinase regulatory subunit 3
+472	87	hsa-miR-4524a-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+473	87	hsa-miR-497-5p	55742	PARVA	NM_018222	parvin alpha
+474	87	hsa-miR-182-5p	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+475	87	hsa-miR-182-5p	7057	THBS1	NM_003246	thrombospondin 1
+476	87	hsa-miR-1185-1-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+477	87	hsa-miR-489-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+478	87	hsa-miR-3150b-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+479	87	hsa-miR-766-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+480	87	hsa-miR-23b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+481	87	hsa-miR-9-3p	22905	EPN2	NM_001102664	epsin 2
+482	87	hsa-miR-9-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+483	87	hsa-miR-499a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+484	87	hsa-miR-548k	4851	NOTCH1	NM_017617	notch 1
+485	87	hsa-miR-500a-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+486	87	hsa-miR-101-3p	22905	EPN2	NM_014964	epsin 2
+487	87	hsa-miR-3934-5p	55742	PARVA	NM_018222	parvin alpha
+488	87	hsa-miR-297	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+489	87	hsa-miR-188-5p	84870	RSPO3	NM_032784	R-spondin 3
+490	87	hsa-miR-135b-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+491	87	hsa-miR-148b-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+492	87	hsa-miR-148b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+493	87	hsa-miR-128-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+494	87	hsa-miR-206	7057	THBS1	NM_003246	thrombospondin 1
+495	87	hsa-miR-27a-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+496	87	hsa-miR-1185-2-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+497	87	hsa-miR-424-5p	55742	PARVA	NM_018222	parvin alpha
+498	87	hsa-miR-454-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+499	87	hsa-miR-4423-3p	6997	TDGF1	NM_003212	teratocarcinoma-derived growth factor 1
+500	87	hsa-miR-27b-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+501	86	hsa-miR-885-5p	55742	PARVA	NM_018222	parvin alpha
+502	86	hsa-miR-1915-3p	6722	SRF	NM_001292001	serum response factor
+503	86	hsa-miR-370-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+504	86	hsa-miR-370-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+505	86	hsa-miR-30a-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+506	86	hsa-miR-96-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+507	86	hsa-miR-450a-1-3p	8817	FGF18	NM_003862	fibroblast growth factor 18
+508	86	hsa-miR-1275	5315	PKM	NM_182471	pyruvate kinase M1/2
+509	86	hsa-miR-31-3p	1012	CDH13	NM_001220488	cadherin 13
+510	86	hsa-miR-124-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+511	86	hsa-miR-3121-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+512	86	hsa-miR-19a-3p	1948	EFNB2	NM_004093	ephrin B2
+513	86	hsa-miR-573	57674	RNF213	NM_020954	ring finger protein 213
+514	86	hsa-miR-15b-5p	84870	RSPO3	NM_032784	R-spondin 3
+515	86	hsa-miR-548t-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+516	86	hsa-miR-1271-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+517	86	hsa-miR-34c-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+518	86	hsa-miR-514a-3p	3716	JAK1	NM_001320923	Janus kinase 1
+519	86	hsa-miR-30c-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+520	86	hsa-miR-432-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+521	86	hsa-miR-212-5p	1960	EGR3	NM_001199880	early growth response 3
+522	86	hsa-miR-16-5p	84870	RSPO3	NM_032784	R-spondin 3
+523	86	hsa-miR-576-3p	1960	EGR3	NM_001199880	early growth response 3
+524	86	hsa-miR-126-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+525	86	hsa-miR-30b-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+526	86	hsa-miR-224-5p	2185	PTK2B	NM_173176	protein tyrosine kinase 2 beta
+527	86	hsa-miR-101-3p	4851	NOTCH1	NM_017617	notch 1
+528	86	hsa-miR-3942-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+529	86	hsa-miR-506-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+530	86	hsa-miR-32-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+531	86	hsa-miR-297	7082	TJP1	NM_175610	tight junction protein 1
+532	86	hsa-miR-30d-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+533	86	hsa-miR-19b-3p	1948	EFNB2	NM_004093	ephrin B2
+534	86	hsa-miR-1323	168667	BMPER	NM_133468	BMP binding endothelial regulator
+535	86	hsa-miR-143-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+536	86	hsa-miR-30e-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+537	86	hsa-miR-369-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+538	86	hsa-miR-125a-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+539	86	hsa-miR-493-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+540	86	hsa-miR-493-5p	1012	CDH13	NM_001220489	cadherin 13
+541	86	hsa-miR-15a-5p	84870	RSPO3	NM_032784	R-spondin 3
+542	86	hsa-miR-449b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+543	86	hsa-miR-561-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+544	86	hsa-miR-125b-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+545	86	hsa-miR-195-5p	84870	RSPO3	NM_032784	R-spondin 3
+546	86	hsa-miR-514b-3p	3716	JAK1	NM_001320923	Janus kinase 1
+547	85	hsa-miR-449a	22905	EPN2	NM_001102664	epsin 2
+548	85	hsa-miR-30a-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+549	85	hsa-miR-548e-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+550	85	hsa-miR-30b-3p	57381	RHOJ	NM_020663	ras homolog family member J
+551	85	hsa-miR-1297	3678	ITGA5	NM_002205	integrin subunit alpha 5
+552	85	hsa-miR-1297	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+553	85	hsa-miR-221-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+554	85	hsa-miR-34a-5p	22905	EPN2	NM_001102664	epsin 2
+555	85	hsa-miR-495-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+556	85	hsa-miR-214-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+557	85	hsa-miR-758-3p	375056	MIA3	NM_001324064	MIA SH3 domain ER export factor 3
+558	85	hsa-miR-513a-3p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+559	85	hsa-miR-19a-3p	22905	EPN2	NM_001102664	epsin 2
+560	85	hsa-miR-17-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+561	85	hsa-miR-4667-5p	7082	TJP1	NM_001301026	tight junction protein 1
+562	85	hsa-miR-29c-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+563	85	hsa-miR-34c-5p	1012	CDH13	NM_001220488	cadherin 13
+564	85	hsa-miR-30c-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+565	85	hsa-miR-29a-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+566	85	hsa-miR-302c-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+567	85	hsa-miR-548a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+568	85	hsa-miR-338-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+569	85	hsa-miR-511-3p	57674	RNF213	NM_020954	ring finger protein 213
+570	85	hsa-miR-608	29924	EPN1	NM_001130072	epsin 1
+571	85	hsa-miR-302a-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+572	85	hsa-miR-30b-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+573	85	hsa-miR-101-3p	7082	TJP1	NM_175610	tight junction protein 1
+574	85	hsa-miR-3942-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+575	85	hsa-miR-29b-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+576	85	hsa-miR-222-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+577	85	hsa-miR-7-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+578	85	hsa-miR-302d-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+579	85	hsa-miR-30d-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+580	85	hsa-miR-302b-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+581	85	hsa-miR-19b-3p	22905	EPN2	NM_001102664	epsin 2
+582	85	hsa-miR-656-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+583	85	hsa-miR-3130-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+584	85	hsa-miR-371a-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+585	85	hsa-miR-30e-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+586	85	hsa-miR-27a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+587	85	hsa-miR-548f-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+588	85	hsa-miR-3154	998	CDC42	NM_044472	cell division cycle 42
+589	85	hsa-miR-505-3p	8817	FGF18	NM_003862	fibroblast growth factor 18
+590	85	hsa-miR-761	94	ACVRL1	NM_001077401	activin A receptor like type 1
+591	85	hsa-miR-449b-5p	1012	CDH13	NM_001220488	cadherin 13
+592	85	hsa-miR-561-5p	9353	SLIT2	NM_004787	slit guidance ligand 2
+593	85	hsa-miR-513c-3p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+594	85	hsa-miR-27b-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+595	84	hsa-miR-372-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+596	84	hsa-miR-5699-5p	3716	JAK1	NM_001321855	Janus kinase 1
+597	84	hsa-miR-450a-1-3p	6997	TDGF1	NM_003212	teratocarcinoma-derived growth factor 1
+598	84	hsa-miR-4713-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+599	84	hsa-miR-374a-3p	9353	SLIT2	NM_004787	slit guidance ligand 2
+600	84	hsa-miR-186-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+601	84	hsa-miR-221-3p	3791	KDR	NM_002253	kinase insert domain receptor
+602	84	hsa-miR-1251-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+603	84	hsa-miR-26a-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+604	84	hsa-miR-495-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+605	84	hsa-miR-627-5p	84870	RSPO3	NM_032784	R-spondin 3
+606	84	hsa-miR-26b-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+607	84	hsa-miR-520c-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+608	84	hsa-miR-153-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+609	84	hsa-miR-556-5p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+610	84	hsa-miR-373-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+611	84	hsa-miR-503-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+612	84	hsa-miR-516b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+613	84	hsa-miR-135b-5p	1948	EFNB2	NM_004093	ephrin B2
+614	84	hsa-miR-107	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+615	84	hsa-miR-1301-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+616	84	hsa-miR-126-5p	84870	RSPO3	NM_032784	R-spondin 3
+617	84	hsa-miR-103a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+618	84	hsa-miR-135a-5p	1948	EFNB2	NM_004093	ephrin B2
+619	84	hsa-miR-24-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+620	84	hsa-miR-24-3p	8829	NRP1	NM_003873	neuropilin 1
+621	84	hsa-miR-484	2246	FGF1	NM_001257206	fibroblast growth factor 1
+622	84	hsa-miR-656-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+623	84	hsa-miR-338-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+624	84	hsa-miR-513a-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+625	83	hsa-miR-23a-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+626	83	hsa-miR-32-5p	4851	NOTCH1	NM_017617	notch 1
+627	83	hsa-miR-96-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+628	83	hsa-miR-3183	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+629	83	hsa-miR-155-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+630	83	hsa-miR-3179	6722	SRF	NM_001292001	serum response factor
+631	83	hsa-miR-148a-3p	1948	EFNB2	NM_004093	ephrin B2
+632	83	hsa-miR-544a	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+633	83	hsa-miR-92b-3p	4851	NOTCH1	NM_017617	notch 1
+634	83	hsa-miR-513a-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+635	83	hsa-miR-152-3p	1948	EFNB2	NM_004093	ephrin B2
+636	83	hsa-let-7f-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+637	83	hsa-let-7d-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+638	83	hsa-miR-181c-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+639	83	hsa-miR-181c-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+640	83	hsa-miR-181d-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+641	83	hsa-miR-181d-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+642	83	hsa-miR-3173-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+643	83	hsa-miR-337-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+644	83	hsa-miR-98-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+645	83	hsa-miR-181a-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+646	83	hsa-miR-181a-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+647	83	hsa-miR-1827	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+648	83	hsa-miR-3691-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+649	83	hsa-miR-330-3p	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+650	83	hsa-miR-20a-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+651	83	hsa-let-7b-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+652	83	hsa-let-7g-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+653	83	hsa-miR-23b-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+654	83	hsa-miR-224-5p	1012	CDH13	NM_001220490	cadherin 13
+655	83	hsa-miR-181b-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+656	83	hsa-miR-181b-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+657	83	hsa-miR-494-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+658	83	hsa-miR-452-3p	1948	EFNB2	NM_004093	ephrin B2
+659	83	hsa-miR-199a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+660	83	hsa-let-7a-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+661	83	hsa-miR-148b-3p	1948	EFNB2	NM_004093	ephrin B2
+662	83	hsa-miR-1323	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+663	83	hsa-let-7i-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+664	83	hsa-miR-128-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+665	83	hsa-miR-145-3p	55742	PARVA	NM_018222	parvin alpha
+666	83	hsa-miR-219a-5p	1948	EFNB2	NM_004093	ephrin B2
+667	83	hsa-miR-3140-3p	1960	EGR3	NM_001199880	early growth response 3
+668	83	hsa-miR-92a-3p	4851	NOTCH1	NM_017617	notch 1
+669	83	hsa-miR-125a-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+670	83	hsa-miR-450b-5p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+671	83	hsa-let-7e-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+672	83	hsa-miR-760	2246	FGF1	NM_001257206	fibroblast growth factor 1
+673	83	hsa-let-7c-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+674	83	hsa-miR-199b-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+675	83	hsa-miR-513c-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+676	82	hsa-miR-133a-3p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+677	82	hsa-miR-450a-2-3p	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+678	82	hsa-miR-23a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+679	82	hsa-miR-23a-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+680	82	hsa-miR-32-5p	10365	KLF2	NM_016270	Kruppel like factor 2
+681	82	hsa-miR-186-5p	8829	NRP1	NM_003873	neuropilin 1
+682	82	hsa-miR-218-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+683	82	hsa-miR-410-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+684	82	hsa-miR-3151-5p	10365	KLF2	NM_016270	Kruppel like factor 2
+685	82	hsa-miR-3664-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+686	82	hsa-miR-92b-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+687	82	hsa-miR-301a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+688	82	hsa-miR-153-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+689	82	hsa-miR-4667-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+690	82	hsa-miR-4667-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+691	82	hsa-miR-133b	2246	FGF1	NM_001257212	fibroblast growth factor 1
+692	82	hsa-miR-548t-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+693	82	hsa-miR-181c-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+694	82	hsa-miR-181d-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+695	82	hsa-miR-181a-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+696	82	hsa-miR-1185-1-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+697	82	hsa-miR-1185-1-3p	8829	NRP1	NM_003873	neuropilin 1
+698	82	hsa-miR-330-3p	7082	TJP1	NM_001301026	tight junction protein 1
+699	82	hsa-miR-1285-3p	1960	EGR3	NM_001199880	early growth response 3
+700	82	hsa-miR-23b-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+701	82	hsa-miR-23b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+702	82	hsa-miR-101-3p	79733	E2F8	NM_001256371	E2F transcription factor 8
+703	82	hsa-miR-24-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+704	82	hsa-miR-3934-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+705	82	hsa-miR-548an	22905	EPN2	NM_001102664	epsin 2
+706	82	hsa-miR-181b-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+707	82	hsa-miR-1304-5p	1012	CDH13	NM_001220488	cadherin 13
+708	82	hsa-miR-548b-3p	22905	EPN2	NM_014964	epsin 2
+709	82	hsa-miR-301b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+710	82	hsa-miR-766-5p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+711	82	hsa-miR-122-5p	5315	PKM	NM_001206799	pyruvate kinase M1/2
+712	82	hsa-miR-767-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+713	82	hsa-miR-369-3p	8817	FGF18	NM_003862	fibroblast growth factor 18
+714	82	hsa-miR-130a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+715	82	hsa-miR-1185-2-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+716	82	hsa-miR-1185-2-3p	8829	NRP1	NM_003873	neuropilin 1
+717	82	hsa-miR-92a-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+718	82	hsa-miR-194-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+719	82	hsa-miR-130b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+720	82	hsa-miR-326	55742	PARVA	NM_018222	parvin alpha
+721	81	hsa-miR-541-5p	1948	EFNB2	NM_004093	ephrin B2
+722	81	hsa-miR-449a	4851	NOTCH1	NM_017617	notch 1
+723	81	hsa-miR-3129-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+724	81	hsa-miR-139-5p	4851	NOTCH1	NM_017617	notch 1
+725	81	hsa-miR-367-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+726	81	hsa-miR-410-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+727	81	hsa-miR-216a-5p	1960	EGR3	NM_001199880	early growth response 3
+728	81	hsa-miR-942-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+729	81	hsa-miR-942-3p	375056	MIA3	NM_001324064	MIA SH3 domain ER export factor 3
+730	81	hsa-miR-18b-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+731	81	hsa-miR-622	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+732	81	hsa-miR-34a-5p	4851	NOTCH1	NM_017617	notch 1
+733	81	hsa-miR-495-3p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+734	81	hsa-miR-513a-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+735	81	hsa-miR-513a-3p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+736	81	hsa-miR-200c-3p	4851	NOTCH1	NM_017617	notch 1
+737	81	hsa-miR-429	4851	NOTCH1	NM_017617	notch 1
+738	81	hsa-miR-34c-5p	4851	NOTCH1	NM_017617	notch 1
+739	81	hsa-miR-497-5p	84870	RSPO3	NM_032784	R-spondin 3
+740	81	hsa-miR-363-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+741	81	hsa-miR-545-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+742	81	hsa-miR-1185-1-3p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+743	81	hsa-miR-576-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+744	81	hsa-miR-487b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+745	81	hsa-miR-543	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+746	81	hsa-miR-9-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+747	81	hsa-miR-18a-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+748	81	hsa-miR-200b-3p	4851	NOTCH1	NM_017617	notch 1
+749	81	hsa-miR-223-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+750	81	hsa-miR-223-5p	1948	EFNB2	NM_004093	ephrin B2
+751	81	hsa-miR-656-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+752	81	hsa-miR-128-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+753	81	hsa-miR-18a-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+754	81	hsa-miR-25-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+755	81	hsa-miR-125a-5p	6722	SRF	NM_001292001	serum response factor
+756	81	hsa-miR-3140-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+757	81	hsa-miR-1185-2-3p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+758	81	hsa-miR-449b-5p	4851	NOTCH1	NM_017617	notch 1
+759	81	hsa-miR-125b-5p	6722	SRF	NM_001292001	serum response factor
+760	81	hsa-miR-424-5p	84870	RSPO3	NM_032784	R-spondin 3
+761	81	hsa-miR-513c-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+762	81	hsa-miR-513c-3p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+763	80	hsa-miR-3120-3p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+764	80	hsa-miR-106b-5p	3716	JAK1	NM_001320923	Janus kinase 1
+765	80	hsa-miR-1291	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+766	80	hsa-miR-3613-5p	79812	MMRN2	NM_024756	multimerin 2
+767	80	hsa-miR-450a-1-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+768	80	hsa-miR-144-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+769	80	hsa-miR-367-3p	4851	NOTCH1	NM_017617	notch 1
+770	80	hsa-miR-410-3p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+771	80	hsa-miR-3144-5p	1960	EGR3	NM_001199880	early growth response 3
+772	80	hsa-miR-18b-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+773	80	hsa-miR-127-5p	8829	NRP1	NM_003873	neuropilin 1
+774	80	hsa-miR-26a-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+775	80	hsa-miR-26a-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+776	80	hsa-miR-409-3p	84870	RSPO3	NM_032784	R-spondin 3
+777	80	hsa-miR-4677-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+778	80	hsa-miR-513a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+779	80	hsa-miR-3171	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+780	80	hsa-miR-19a-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+781	80	hsa-miR-1246	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+782	80	hsa-miR-200c-3p	1948	EFNB2	NM_004093	ephrin B2
+783	80	hsa-miR-3194-5p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+784	80	hsa-miR-3065-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+785	80	hsa-miR-26b-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+786	80	hsa-miR-26b-5p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+787	80	hsa-miR-429	1948	EFNB2	NM_004093	ephrin B2
+788	80	hsa-miR-548t-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+789	80	hsa-miR-181c-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+790	80	hsa-miR-363-3p	4851	NOTCH1	NM_017617	notch 1
+791	80	hsa-miR-655-3p	3791	KDR	NM_002253	kinase insert domain receptor
+792	80	hsa-miR-181d-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+793	80	hsa-miR-5571-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+794	80	hsa-miR-93-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+795	80	hsa-miR-135b-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+796	80	hsa-miR-181a-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+797	80	hsa-miR-1827	1870	E2F2	NM_004091	E2F transcription factor 2
+798	80	hsa-miR-377-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+799	80	hsa-miR-374c-5p	3791	KDR	NM_002253	kinase insert domain receptor
+800	80	hsa-miR-107	2247	FGF2	NM_002006	fibroblast growth factor 2
+801	80	hsa-miR-212-5p	8829	NRP1	NM_003873	neuropilin 1
+802	80	hsa-miR-1185-1-3p	2050	EPHB4	NM_004444	EPH receptor B4
+803	80	hsa-miR-106a-5p	3716	JAK1	NM_001320923	Janus kinase 1
+804	80	hsa-miR-103a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+805	80	hsa-miR-224-5p	57674	RNF213	NM_001256071	ring finger protein 213
+806	80	hsa-miR-135a-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+807	80	hsa-miR-18a-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+808	80	hsa-miR-138-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+809	80	hsa-miR-181b-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+810	80	hsa-miR-3605-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+811	80	hsa-miR-200b-3p	1948	EFNB2	NM_004093	ephrin B2
+812	80	hsa-miR-506-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+813	80	hsa-miR-3152-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+814	80	hsa-miR-221-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+815	80	hsa-miR-32-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+816	80	hsa-miR-297	7057	THBS1	NM_003246	thrombospondin 1
+817	80	hsa-miR-382-5p	8434	RECK	NM_001316347	reversion inducing cysteine rich protein with kazal motifs
+818	80	hsa-miR-377-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+819	80	hsa-miR-6503-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+820	80	hsa-miR-223-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+821	80	hsa-miR-19b-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+822	80	hsa-miR-20a-5p	3716	JAK1	NM_001320923	Janus kinase 1
+823	80	hsa-miR-656-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+824	80	hsa-miR-25-3p	4851	NOTCH1	NM_017617	notch 1
+825	80	hsa-miR-369-3p	284	ANGPT1	NM_001146	angiopoietin 1
+826	80	hsa-miR-671-5p	7057	THBS1	NM_003246	thrombospondin 1
+827	80	hsa-miR-1185-2-3p	2050	EPHB4	NM_004444	EPH receptor B4
+828	80	hsa-miR-513c-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+829	80	hsa-miR-889-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+830	80	hsa-miR-889-3p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+831	79	hsa-miR-532-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+832	79	hsa-miR-410-3p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+833	79	hsa-miR-410-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+834	79	hsa-miR-514b-5p	84830	ADTRP	NM_001143948	androgen dependent TFPI regulating protein
+835	79	hsa-miR-4446-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+836	79	hsa-miR-3136-5p	998	CDC42	NM_001039802	cell division cycle 42
+837	79	hsa-miR-513c-5p	84830	ADTRP	NM_001143948	androgen dependent TFPI regulating protein
+838	79	hsa-miR-1270	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+839	79	hsa-miR-548t-5p	7082	TJP1	NM_001301025	tight junction protein 1
+840	79	hsa-miR-34c-5p	22905	EPN2	NM_001102664	epsin 2
+841	79	hsa-miR-299-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+842	79	hsa-miR-5001-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+843	79	hsa-miR-3928-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+844	79	hsa-miR-92a-1-5p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+845	79	hsa-miR-126-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+846	79	hsa-miR-365b-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+847	79	hsa-miR-365a-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+848	79	hsa-miR-650	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+849	79	hsa-miR-3065-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+850	79	hsa-miR-15b-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+851	79	hsa-miR-297	55742	PARVA	NM_018222	parvin alpha
+852	79	hsa-miR-223-3p	161198	CLEC14A	NM_175060	C-type lectin domain containing 14A
+853	79	hsa-miR-582-5p	84870	RSPO3	NM_032784	R-spondin 3
+854	79	hsa-miR-605-3p	2050	EPHB4	NM_004444	EPH receptor B4
+855	79	hsa-miR-122-5p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+856	79	hsa-miR-136-5p	3791	KDR	NM_002253	kinase insert domain receptor
+857	79	hsa-miR-493-5p	7057	THBS1	NM_003246	thrombospondin 1
+858	79	hsa-miR-449b-5p	22905	EPN2	NM_001102664	epsin 2
+859	79	hsa-miR-450b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+860	79	hsa-miR-889-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+861	78	hsa-miR-23a-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+862	78	hsa-miR-449a	57608	JCAD	NM_020848	junctional cadherin 5 associated
+863	78	hsa-miR-491-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+864	78	hsa-miR-491-5p	79812	MMRN2	NM_024756	multimerin 2
+865	78	hsa-miR-548t-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+866	78	hsa-miR-139-3p	8434	RECK	NM_001316347	reversion inducing cysteine rich protein with kazal motifs
+867	78	hsa-miR-139-5p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+868	78	hsa-miR-509-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+869	78	hsa-miR-548e-3p	221074	SLC39A12	NM_001282734	solute carrier family 39 member 12
+870	78	hsa-miR-514a-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+871	78	hsa-miR-509-3-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+872	78	hsa-miR-589-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+873	78	hsa-miR-642a-5p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+874	78	hsa-miR-34a-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+875	78	hsa-miR-3136-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+876	78	hsa-miR-19a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+877	78	hsa-miR-150-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+878	78	hsa-miR-4667-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+879	78	hsa-miR-642a-3p	284	ANGPT1	NM_001146	angiopoietin 1
+880	78	hsa-miR-140-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+881	78	hsa-miR-142-3p	29924	EPN1	NM_001130071	epsin 1
+882	78	hsa-miR-3173-3p	1960	EGR3	NM_001199880	early growth response 3
+883	78	hsa-miR-337-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+884	78	hsa-miR-129-2-3p	1012	CDH13	NM_001220488	cadherin 13
+885	78	hsa-miR-545-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+886	78	hsa-miR-135b-5p	284	ANGPT1	NM_001146	angiopoietin 1
+887	78	hsa-miR-548a-3p	221074	SLC39A12	NM_001282734	solute carrier family 39 member 12
+888	78	hsa-miR-377-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+889	78	hsa-miR-381-3p	1012	CDH13	NM_001220489	cadherin 13
+890	78	hsa-miR-3691-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+891	78	hsa-miR-5001-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+892	78	hsa-miR-338-5p	284	ANGPT1	NM_001146	angiopoietin 1
+893	78	hsa-miR-20b-5p	3716	JAK1	NM_001320923	Janus kinase 1
+894	78	hsa-miR-23b-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+895	78	hsa-miR-135a-5p	284	ANGPT1	NM_001146	angiopoietin 1
+896	78	hsa-miR-93-5p	3716	JAK1	NM_001320923	Janus kinase 1
+897	78	hsa-miR-548o-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+898	78	hsa-miR-548o-3p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+899	78	hsa-miR-452-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+900	78	hsa-miR-17-5p	3716	JAK1	NM_001320923	Janus kinase 1
+901	78	hsa-miR-6515-5p	8829	NRP1	NM_003873	neuropilin 1
+902	78	hsa-miR-19b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+903	78	hsa-miR-129-1-3p	1012	CDH13	NM_001220488	cadherin 13
+904	78	hsa-miR-582-5p	1948	EFNB2	NM_004093	ephrin B2
+905	78	hsa-miR-656-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+906	78	hsa-miR-1323	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+907	78	hsa-miR-762	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+908	78	hsa-miR-762	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+909	78	hsa-miR-548f-3p	221074	SLC39A12	NM_001282734	solute carrier family 39 member 12
+910	78	hsa-miR-519d-3p	3716	JAK1	NM_001320923	Janus kinase 1
+911	78	hsa-miR-10b-3p	57381	RHOJ	NM_020663	ras homolog family member J
+912	77	hsa-miR-515-5p	161198	CLEC14A	NM_175060	C-type lectin domain containing 14A
+913	77	hsa-miR-885-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+914	77	hsa-miR-576-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+915	77	hsa-miR-491-5p	1960	EGR3	NM_001199880	early growth response 3
+916	77	hsa-miR-183-3p	998	CDC42	NM_001791	cell division cycle 42
+917	77	hsa-miR-106b-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+918	77	hsa-miR-1908-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+919	77	hsa-miR-320d	1960	EGR3	NM_001199880	early growth response 3
+920	77	hsa-miR-361-3p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+921	77	hsa-miR-409-3p	284	ANGPT1	NM_001146	angiopoietin 1
+922	77	hsa-miR-1-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+923	77	hsa-miR-1-3p	84870	RSPO3	NM_032784	R-spondin 3
+924	77	hsa-miR-660-3p	55742	PARVA	NM_018222	parvin alpha
+925	77	hsa-miR-153-3p	79733	E2F8	NM_001256372	E2F transcription factor 8
+926	77	hsa-miR-663a	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+927	77	hsa-miR-151a-3p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+928	77	hsa-miR-5571-5p	84870	RSPO3	NM_032784	R-spondin 3
+929	77	hsa-miR-545-5p	22905	EPN2	NM_014964	epsin 2
+930	77	hsa-miR-302c-3p	3716	JAK1	NM_001321855	Janus kinase 1
+931	77	hsa-miR-548a-3p	7057	THBS1	NM_003246	thrombospondin 1
+932	77	hsa-miR-1827	8817	FGF18	NM_003862	fibroblast growth factor 18
+933	77	hsa-miR-874-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+934	77	hsa-miR-665	6722	SRF	NM_001292001	serum response factor
+935	77	hsa-miR-665	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+936	77	hsa-miR-448	79733	E2F8	NM_001256372	E2F transcription factor 8
+937	77	hsa-miR-320c	1960	EGR3	NM_001199880	early growth response 3
+938	77	hsa-miR-3074-5p	7057	THBS1	NM_003246	thrombospondin 1
+939	77	hsa-miR-338-5p	1012	CDH13	NM_001220489	cadherin 13
+940	77	hsa-miR-338-5p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+941	77	hsa-miR-511-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+942	77	hsa-miR-20b-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+943	77	hsa-miR-106a-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+944	77	hsa-miR-302a-3p	3716	JAK1	NM_001321855	Janus kinase 1
+945	77	hsa-miR-31-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+946	77	hsa-miR-141-3p	8829	NRP1	NM_003873	neuropilin 1
+947	77	hsa-miR-93-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+948	77	hsa-miR-200a-3p	8829	NRP1	NM_003873	neuropilin 1
+949	77	hsa-miR-101-3p	55742	PARVA	NM_018222	parvin alpha
+950	77	hsa-miR-548an	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+951	77	hsa-miR-409-5p	55742	PARVA	NM_018222	parvin alpha
+952	77	hsa-miR-149-5p	6722	SRF	NM_001292001	serum response factor
+953	77	hsa-miR-488-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+954	77	hsa-miR-302d-3p	3716	JAK1	NM_001321855	Janus kinase 1
+955	77	hsa-miR-17-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+956	77	hsa-miR-302b-3p	3716	JAK1	NM_001321855	Janus kinase 1
+957	77	hsa-miR-6503-5p	2050	EPHB4	NM_004444	EPH receptor B4
+958	77	hsa-miR-675-5p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+959	77	hsa-miR-20a-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+960	77	hsa-miR-1323	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+961	77	hsa-miR-371a-5p	284	ANGPT1	NM_001146	angiopoietin 1
+962	77	hsa-miR-3175	57381	RHOJ	NM_020663	ras homolog family member J
+963	77	hsa-miR-206	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+964	77	hsa-miR-206	84870	RSPO3	NM_032784	R-spondin 3
+965	77	hsa-miR-9-5p	2050	EPHB4	NM_004444	EPH receptor B4
+966	77	hsa-miR-548f-3p	7057	THBS1	NM_003246	thrombospondin 1
+967	77	hsa-miR-519d-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+968	77	hsa-miR-636	9353	SLIT2	NM_004787	slit guidance ligand 2
+969	77	hsa-miR-320b	1960	EGR3	NM_001199880	early growth response 3
+970	77	hsa-miR-326	22905	EPN2	NM_014964	epsin 2
+971	76	hsa-miR-515-5p	55742	PARVA	NM_018222	parvin alpha
+972	76	hsa-miR-576-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+973	76	hsa-miR-548t-3p	284	ANGPT1	NM_001146	angiopoietin 1
+974	76	hsa-miR-548t-3p	1012	CDH13	NM_001220488	cadherin 13
+975	76	hsa-miR-520h	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+976	76	hsa-miR-520h	2050	EPHB4	NM_004444	EPH receptor B4
+977	76	hsa-miR-410-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+978	76	hsa-miR-410-3p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+979	76	hsa-miR-1275	55742	PARVA	NM_018222	parvin alpha
+980	76	hsa-miR-589-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+981	76	hsa-miR-520g-3p	2050	EPHB4	NM_004444	EPH receptor B4
+982	76	hsa-miR-520g-3p	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+983	76	hsa-miR-124-3p	284	ANGPT1	NM_001146	angiopoietin 1
+984	76	hsa-miR-124-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+985	76	hsa-miR-3121-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+986	76	hsa-miR-21-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+987	76	hsa-miR-2355-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+988	76	hsa-miR-939-3p	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+989	76	hsa-miR-296-5p	29924	EPN1	NM_001130071	epsin 1
+990	76	hsa-miR-15b-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+991	76	hsa-miR-211-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+992	76	hsa-miR-34c-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+993	76	hsa-miR-497-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+994	76	hsa-miR-629-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+995	76	hsa-miR-655-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+996	76	hsa-miR-671-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+997	76	hsa-miR-374c-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+998	76	hsa-miR-107	84870	RSPO3	NM_032784	R-spondin 3
+999	76	hsa-miR-16-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+1000	76	hsa-miR-381-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1001	76	hsa-miR-30a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1002	76	hsa-miR-3960	1960	EGR3	NM_004430	early growth response 3
+1003	76	hsa-miR-9-3p	8829	NRP1	NM_003873	neuropilin 1
+1004	76	hsa-miR-103a-3p	84870	RSPO3	NM_032784	R-spondin 3
+1005	76	hsa-miR-499a-5p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1006	76	hsa-miR-24-3p	84870	RSPO3	NM_032784	R-spondin 3
+1007	76	hsa-miR-3909	2246	FGF1	NM_033137	fibroblast growth factor 1
+1008	76	hsa-miR-506-3p	284	ANGPT1	NM_001146	angiopoietin 1
+1009	76	hsa-miR-30e-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1010	76	hsa-miR-494-3p	8829	NRP1	NM_003873	neuropilin 1
+1011	76	hsa-miR-204-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1012	76	hsa-miR-637	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+1013	76	hsa-miR-605-3p	161198	CLEC14A	NM_175060	C-type lectin domain containing 14A
+1014	76	hsa-miR-656-3p	1948	EFNB2	NM_004093	ephrin B2
+1015	76	hsa-miR-509-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1016	76	hsa-miR-497-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1017	76	hsa-miR-671-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1018	76	hsa-miR-15a-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+1019	76	hsa-miR-449b-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1020	76	hsa-miR-195-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+1021	76	hsa-miR-424-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+1022	76	hsa-miR-889-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+1023	75	hsa-miR-3120-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1024	75	hsa-miR-486-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1025	75	hsa-miR-32-5p	998	CDC42	NM_001039802	cell division cycle 42
+1026	75	hsa-miR-492	9270	ITGB1BP1	NM_001319070	integrin subunit beta 1 binding protein 1
+1027	75	hsa-miR-374a-3p	998	CDC42	NM_001791	cell division cycle 42
+1028	75	hsa-miR-186-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1029	75	hsa-miR-589-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1030	75	hsa-miR-18b-5p	7057	THBS1	NM_003246	thrombospondin 1
+1031	75	hsa-miR-374a-5p	284	ANGPT1	NM_001146	angiopoietin 1
+1032	75	hsa-miR-659-5p	9270	ITGB1BP1	NM_001319070	integrin subunit beta 1 binding protein 1
+1033	75	hsa-miR-590-5p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+1034	75	hsa-miR-4446-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1035	75	hsa-miR-708-5p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+1036	75	hsa-miR-2355-5p	4851	NOTCH1	NM_017617	notch 1
+1037	75	hsa-miR-433-3p	22905	EPN2	NM_001102664	epsin 2
+1038	75	hsa-miR-433-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1039	75	hsa-miR-92b-3p	998	CDC42	NM_001039802	cell division cycle 42
+1040	75	hsa-miR-1-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1041	75	hsa-miR-15b-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1042	75	hsa-miR-548t-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1043	75	hsa-miR-1271-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1044	75	hsa-miR-455-3p	7082	TJP1	NM_175610	tight junction protein 1
+1045	75	hsa-miR-142-3p	652	BMP4	NM_130850	bone morphogenetic protein 4
+1046	75	hsa-miR-655-3p	998	CDC42	NM_001791	cell division cycle 42
+1047	75	hsa-miR-655-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1048	75	hsa-miR-28-5p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+1049	75	hsa-miR-129-5p	284	ANGPT1	NM_001146	angiopoietin 1
+1050	75	hsa-miR-653-3p	284	ANGPT1	NM_001146	angiopoietin 1
+1051	75	hsa-miR-374c-5p	998	CDC42	NM_001791	cell division cycle 42
+1052	75	hsa-miR-374c-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1053	75	hsa-miR-1278	9723	SEMA3E	NM_012431	semaphorin 3E
+1054	75	hsa-miR-16-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1055	75	hsa-miR-448	9037	SEMA5A	NM_003966	semaphorin 5A
+1056	75	hsa-miR-489-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1057	75	hsa-miR-766-3p	84870	RSPO3	NM_032784	R-spondin 3
+1058	75	hsa-miR-20a-3p	998	CDC42	NM_001791	cell division cycle 42
+1059	75	hsa-miR-543	9037	SEMA5A	NM_003966	semaphorin 5A
+1060	75	hsa-miR-216b-5p	9723	SEMA3E	NM_001178129	semaphorin 3E
+1061	75	hsa-miR-18a-5p	7057	THBS1	NM_003246	thrombospondin 1
+1062	75	hsa-miR-548an	998	CDC42	NM_001039802	cell division cycle 42
+1063	75	hsa-miR-568	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1064	75	hsa-miR-494-3p	1012	CDH13	NM_001220488	cadherin 13
+1065	75	hsa-miR-145-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1066	75	hsa-miR-762	5315	PKM	NM_001206796	pyruvate kinase M1/2
+1067	75	hsa-miR-497-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1068	75	hsa-miR-206	57674	RNF213	NM_001256071	ring finger protein 213
+1069	75	hsa-miR-219a-1-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1070	75	hsa-miR-9-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1071	75	hsa-miR-493-5p	7082	TJP1	NM_001301025	tight junction protein 1
+1072	75	hsa-miR-493-5p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+1073	75	hsa-miR-92a-3p	998	CDC42	NM_001039802	cell division cycle 42
+1074	75	hsa-miR-15a-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1075	75	hsa-miR-195-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1076	75	hsa-miR-548l	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1077	74	hsa-miR-3120-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1078	74	hsa-miR-519b-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1079	74	hsa-miR-664b-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1080	74	hsa-miR-486-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1081	74	hsa-miR-1915-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1082	74	hsa-miR-372-3p	3716	JAK1	NM_001321855	Janus kinase 1
+1083	74	hsa-miR-519a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1084	74	hsa-miR-96-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1085	74	hsa-miR-96-5p	57381	RHOJ	NM_020663	ras homolog family member J
+1086	74	hsa-miR-183-3p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1087	74	hsa-miR-1287-5p	8503	PIK3R3	NM_001303428	phosphoinositide-3-kinase regulatory subunit 3
+1088	74	hsa-miR-329-3p	9353	SLIT2	NM_004787	slit guidance ligand 2
+1089	74	hsa-miR-216a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1090	74	hsa-miR-942-3p	8829	NRP1	NM_003873	neuropilin 1
+1091	74	hsa-miR-514b-5p	55742	PARVA	NM_018222	parvin alpha
+1092	74	hsa-miR-624-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1093	74	hsa-miR-1297	1969	EPHA2	NM_004431	EPH receptor A2
+1094	74	hsa-miR-449c-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1095	74	hsa-miR-449c-5p	4851	NOTCH1	NM_017617	notch 1
+1096	74	hsa-miR-1249-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1097	74	hsa-miR-513c-5p	55742	PARVA	NM_018222	parvin alpha
+1098	74	hsa-miR-34b-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1099	74	hsa-miR-34b-5p	4851	NOTCH1	NM_017617	notch 1
+1100	74	hsa-miR-205-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+1101	74	hsa-miR-205-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+1102	74	hsa-miR-513a-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1103	74	hsa-miR-513a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1104	74	hsa-miR-876-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+1105	74	hsa-miR-3065-5p	284	ANGPT1	NM_001146	angiopoietin 1
+1106	74	hsa-miR-520c-3p	3716	JAK1	NM_001321855	Janus kinase 1
+1107	74	hsa-miR-500b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1108	74	hsa-miR-362-3p	9353	SLIT2	NM_004787	slit guidance ligand 2
+1109	74	hsa-miR-373-3p	3716	JAK1	NM_001321855	Janus kinase 1
+1110	74	hsa-miR-3143	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1111	74	hsa-miR-545-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+1112	74	hsa-miR-516b-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1113	74	hsa-miR-545-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1114	74	hsa-miR-545-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1115	74	hsa-miR-338-5p	6997	TDGF1	NM_003212	teratocarcinoma-derived growth factor 1
+1116	74	hsa-miR-126-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+1117	74	hsa-miR-126-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+1118	74	hsa-miR-101-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1119	74	hsa-miR-2682-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1120	74	hsa-miR-2682-5p	4851	NOTCH1	NM_017617	notch 1
+1121	74	hsa-miR-34a-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+1122	74	hsa-miR-582-5p	8829	NRP1	NM_003873	neuropilin 1
+1123	74	hsa-miR-369-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1124	74	hsa-miR-374b-5p	284	ANGPT1	NM_001146	angiopoietin 1
+1125	74	hsa-miR-125a-3p	3716	JAK1	NM_001321855	Janus kinase 1
+1126	74	hsa-miR-760	9037	SEMA5A	NM_003966	semaphorin 5A
+1127	74	hsa-miR-454-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1128	74	hsa-miR-513c-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1129	74	hsa-miR-513c-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1130	74	hsa-miR-889-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1131	73	hsa-miR-450a-2-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1132	73	hsa-miR-548t-3p	84830	ADTRP	NM_001143948	androgen dependent TFPI regulating protein
+1133	73	hsa-miR-106b-5p	1960	EGR3	NM_001199880	early growth response 3
+1134	73	hsa-miR-329-3p	1960	EGR3	NM_001199880	early growth response 3
+1135	73	hsa-miR-539-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+1136	73	hsa-miR-148a-3p	8503	PIK3R3	NM_001303428	phosphoinositide-3-kinase regulatory subunit 3
+1137	73	hsa-miR-622	652	BMP4	NM_001202	bone morphogenetic protein 4
+1138	73	hsa-miR-214-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1139	73	hsa-miR-2355-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1140	73	hsa-miR-3194-5p	8829	NRP1	NM_003873	neuropilin 1
+1141	73	hsa-miR-3065-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+1142	73	hsa-miR-660-3p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1143	73	hsa-miR-296-5p	6722	SRF	NM_003131	serum response factor
+1144	73	hsa-miR-152-3p	8503	PIK3R3	NM_001303428	phosphoinositide-3-kinase regulatory subunit 3
+1145	73	hsa-miR-1270	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+1146	73	hsa-miR-4524a-3p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1147	73	hsa-miR-362-3p	1960	EGR3	NM_001199880	early growth response 3
+1148	73	hsa-miR-342-5p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+1149	73	hsa-miR-1271-5p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1150	73	hsa-miR-1271-5p	57381	RHOJ	NM_020663	ras homolog family member J
+1151	73	hsa-miR-142-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1152	73	hsa-miR-1290	55742	PARVA	NM_018222	parvin alpha
+1153	73	hsa-miR-411-3p	998	CDC42	NM_044472	cell division cycle 42
+1154	73	hsa-miR-212-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1155	73	hsa-miR-448	998	CDC42	NM_001791	cell division cycle 42
+1156	73	hsa-miR-511-3p	7082	TJP1	NM_175610	tight junction protein 1
+1157	73	hsa-miR-30a-3p	55742	PARVA	NM_018222	parvin alpha
+1158	73	hsa-miR-608	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1159	73	hsa-miR-224-5p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+1160	73	hsa-miR-141-3p	998	CDC42	NM_001039802	cell division cycle 42
+1161	73	hsa-miR-379-3p	998	CDC42	NM_044472	cell division cycle 42
+1162	73	hsa-miR-200a-3p	998	CDC42	NM_001039802	cell division cycle 42
+1163	73	hsa-miR-196b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1164	73	hsa-miR-30e-3p	55742	PARVA	NM_018222	parvin alpha
+1165	73	hsa-miR-488-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1166	73	hsa-miR-197-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1167	73	hsa-miR-197-3p	284	ANGPT1	NM_001146	angiopoietin 1
+1168	73	hsa-miR-20a-5p	1960	EGR3	NM_001199880	early growth response 3
+1169	73	hsa-miR-148b-3p	8503	PIK3R3	NM_001303428	phosphoinositide-3-kinase regulatory subunit 3
+1170	73	hsa-miR-654-3p	1012	CDH13	NM_001220488	cadherin 13
+1171	73	hsa-miR-485-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+1172	73	hsa-miR-219a-5p	1960	EGR3	NM_001199880	early growth response 3
+1173	73	hsa-miR-3140-3p	998	CDC42	NM_001039802	cell division cycle 42
+1174	73	hsa-miR-3140-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1175	73	hsa-miR-196a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1176	73	hsa-miR-504-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1177	73	hsa-miR-450b-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1178	72	hsa-miR-515-5p	79733	E2F8	NM_001256371	E2F transcription factor 8
+1179	72	hsa-miR-519b-3p	2050	EPHB4	NM_004444	EPH receptor B4
+1180	72	hsa-miR-664b-5p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1181	72	hsa-miR-519a-3p	2050	EPHB4	NM_004444	EPH receptor B4
+1182	72	hsa-miR-144-3p	55742	PARVA	NM_018222	parvin alpha
+1183	72	hsa-miR-873-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1184	72	hsa-miR-18b-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1185	72	hsa-miR-664b-3p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1186	72	hsa-miR-3121-3p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1187	72	hsa-miR-3121-3p	240	ALOX5	NM_001256154	arachidonate 5-lipoxygenase
+1188	72	hsa-miR-190a-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1189	72	hsa-miR-629-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1190	72	hsa-miR-615-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1191	72	hsa-miR-1-3p	1948	EFNB2	NM_004093	ephrin B2
+1192	72	hsa-miR-200a-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1193	72	hsa-miR-4524a-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1194	72	hsa-miR-548t-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1195	72	hsa-miR-29c-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1196	72	hsa-miR-211-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1197	72	hsa-miR-4520-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1198	72	hsa-miR-29a-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1199	72	hsa-miR-184	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1200	72	hsa-miR-1278	3716	JAK1	NM_001321855	Janus kinase 1
+1201	72	hsa-miR-874-5p	6722	SRF	NM_001292001	serum response factor
+1202	72	hsa-miR-1185-1-3p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1203	72	hsa-miR-1285-3p	6722	SRF	NM_001292001	serum response factor
+1204	72	hsa-miR-608	10365	KLF2	NM_016270	Kruppel like factor 2
+1205	72	hsa-miR-216b-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1206	72	hsa-miR-31-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1207	72	hsa-miR-650	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1208	72	hsa-miR-18a-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1209	72	hsa-miR-3192-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1210	72	hsa-miR-29b-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1211	72	hsa-miR-7-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1212	72	hsa-miR-382-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1213	72	hsa-miR-204-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1214	72	hsa-miR-3175	2185	PTK2B	NM_173176	protein tyrosine kinase 2 beta
+1215	72	hsa-miR-3175	6722	SRF	NM_001292001	serum response factor
+1216	72	hsa-miR-206	1948	EFNB2	NM_004093	ephrin B2
+1217	72	hsa-miR-27a-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+1218	72	hsa-miR-493-5p	55742	PARVA	NM_018222	parvin alpha
+1219	72	hsa-miR-1185-2-3p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1220	72	hsa-miR-942-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1221	72	hsa-miR-454-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1222	72	hsa-miR-27b-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+1223	71	hsa-miR-486-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+1224	71	hsa-miR-32-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1225	71	hsa-miR-3129-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1226	71	hsa-miR-492	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1227	71	hsa-miR-186-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1228	71	hsa-miR-548j-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1229	71	hsa-miR-548e-3p	7057	THBS1	NM_003246	thrombospondin 1
+1230	71	hsa-miR-589-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1231	71	hsa-miR-548c-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1232	71	hsa-miR-320d	144455	E2F7	NM_203394	E2F transcription factor 7
+1233	71	hsa-miR-1224-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+1234	71	hsa-miR-92b-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1235	71	hsa-miR-548b-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1236	71	hsa-miR-939-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1237	71	hsa-miR-376a-3p	55742	PARVA	NM_018222	parvin alpha
+1238	71	hsa-miR-548d-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1239	71	hsa-miR-376b-3p	55742	PARVA	NM_018222	parvin alpha
+1240	71	hsa-miR-556-5p	375056	MIA3	NM_001324064	MIA SH3 domain ER export factor 3
+1241	71	hsa-miR-548t-5p	4851	NOTCH1	NM_017617	notch 1
+1242	71	hsa-let-7f-5p	7057	THBS1	NM_003246	thrombospondin 1
+1243	71	hsa-miR-211-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1244	71	hsa-miR-548h-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1245	71	hsa-miR-98-5p	7057	THBS1	NM_003246	thrombospondin 1
+1246	71	hsa-miR-448	8829	NRP1	NM_003873	neuropilin 1
+1247	71	hsa-miR-496	6722	SRF	NM_003131	serum response factor
+1248	71	hsa-miR-320c	144455	E2F7	NM_203394	E2F transcription factor 7
+1249	71	hsa-miR-330-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1250	71	hsa-miR-20b-5p	1960	EGR3	NM_001199880	early growth response 3
+1251	71	hsa-let-7g-5p	7057	THBS1	NM_003246	thrombospondin 1
+1252	71	hsa-miR-106a-5p	1960	EGR3	NM_001199880	early growth response 3
+1253	71	hsa-miR-93-5p	1960	EGR3	NM_001199880	early growth response 3
+1254	71	hsa-miR-548o-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1255	71	hsa-miR-3192-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1256	71	hsa-miR-3192-5p	3791	KDR	NM_002253	kinase insert domain receptor
+1257	71	hsa-miR-568	57674	RNF213	NM_020954	ring finger protein 213
+1258	71	hsa-miR-199a-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+1259	71	hsa-let-7a-5p	7057	THBS1	NM_003246	thrombospondin 1
+1260	71	hsa-miR-204-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1261	71	hsa-miR-17-5p	1960	EGR3	NM_001199880	early growth response 3
+1262	71	hsa-miR-202-3p	7057	THBS1	NM_003246	thrombospondin 1
+1263	71	hsa-miR-1179	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1264	71	hsa-miR-548am-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1265	71	hsa-miR-323b-3p	9353	SLIT2	NM_004787	slit guidance ligand 2
+1266	71	hsa-miR-656-3p	284	ANGPT1	NM_001146	angiopoietin 1
+1267	71	hsa-let-7i-5p	7057	THBS1	NM_003246	thrombospondin 1
+1268	71	hsa-miR-324-5p	6722	SRF	NM_003131	serum response factor
+1269	71	hsa-miR-497-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1270	71	hsa-miR-497-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1271	71	hsa-miR-128-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1272	71	hsa-miR-3175	2246	FGF1	NM_033136	fibroblast growth factor 1
+1273	71	hsa-miR-759	3146	HMGB1	NM_001313892	high mobility group box 1
+1274	71	hsa-miR-18a-3p	22905	EPN2	NM_001102664	epsin 2
+1275	71	hsa-miR-513a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1276	71	hsa-miR-3140-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1277	71	hsa-miR-519d-3p	1960	EGR3	NM_001199880	early growth response 3
+1278	71	hsa-miR-92a-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1279	71	hsa-let-7e-5p	7057	THBS1	NM_003246	thrombospondin 1
+1280	71	hsa-miR-760	57381	RHOJ	NM_020663	ras homolog family member J
+1281	71	hsa-miR-320b	144455	E2F7	NM_203394	E2F transcription factor 7
+1282	71	hsa-let-7c-5p	7057	THBS1	NM_003246	thrombospondin 1
+1283	71	hsa-miR-199b-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+1284	70	hsa-miR-301a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1285	70	hsa-miR-374a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1286	70	hsa-miR-339-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1287	70	hsa-miR-367-3p	998	CDC42	NM_001039802	cell division cycle 42
+1288	70	hsa-miR-155-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1289	70	hsa-miR-374a-5p	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+1290	70	hsa-miR-510-5p	1948	EFNB2	NM_004093	ephrin B2
+1291	70	hsa-miR-664b-3p	55742	PARVA	NM_018222	parvin alpha
+1292	70	hsa-miR-193b-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1293	70	hsa-miR-3151-5p	8503	PIK3R3	NM_001303428	phosphoinositide-3-kinase regulatory subunit 3
+1294	70	hsa-miR-622	7057	THBS1	NM_003246	thrombospondin 1
+1295	70	hsa-miR-642a-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1296	70	hsa-miR-150-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1297	70	hsa-miR-495-3p	375056	MIA3	NM_001300867	MIA SH3 domain ER export factor 3
+1298	70	hsa-miR-495-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1299	70	hsa-miR-433-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1300	70	hsa-miR-200c-3p	6722	SRF	NM_001292001	serum response factor
+1301	70	hsa-miR-532-5p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1302	70	hsa-miR-429	6722	SRF	NM_001292001	serum response factor
+1303	70	hsa-miR-1270	7082	TJP1	NM_175610	tight junction protein 1
+1304	70	hsa-miR-342-5p	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+1305	70	hsa-miR-181c-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1306	70	hsa-miR-363-3p	998	CDC42	NM_001039802	cell division cycle 42
+1307	70	hsa-miR-181d-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1308	70	hsa-miR-129-5p	3146	HMGB1	NM_002128	high mobility group box 1
+1309	70	hsa-miR-411-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1310	70	hsa-miR-181a-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1311	70	hsa-miR-296-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1312	70	hsa-miR-381-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1313	70	hsa-miR-5001-5p	5315	PKM	NM_001206796	pyruvate kinase M1/2
+1314	70	hsa-miR-20a-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1315	70	hsa-miR-20a-3p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1316	70	hsa-miR-543	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1317	70	hsa-miR-1285-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1318	70	hsa-miR-31-5p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+1319	70	hsa-miR-9-3p	1960	EGR3	NM_001199880	early growth response 3
+1320	70	hsa-miR-499a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1321	70	hsa-miR-548k	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1322	70	hsa-miR-379-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1323	70	hsa-miR-181b-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1324	70	hsa-miR-200b-3p	6722	SRF	NM_001292001	serum response factor
+1325	70	hsa-miR-568	2247	FGF2	NM_002006	fibroblast growth factor 2
+1326	70	hsa-miR-494-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1327	70	hsa-miR-221-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1328	70	hsa-miR-223-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1329	70	hsa-miR-122-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1330	70	hsa-miR-25-3p	998	CDC42	NM_001039802	cell division cycle 42
+1331	70	hsa-miR-369-3p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1332	70	hsa-miR-10b-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1333	69	hsa-miR-450a-2-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1334	69	hsa-miR-491-5p	10266	RAMP2	NM_005854	receptor activity modifying protein 2
+1335	69	hsa-miR-139-5p	7057	THBS1	NM_003246	thrombospondin 1
+1336	69	hsa-miR-186-5p	1012	CDH13	NM_001220488	cadherin 13
+1337	69	hsa-miR-186-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+1338	69	hsa-miR-216a-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1339	69	hsa-miR-3151-5p	6722	SRF	NM_003131	serum response factor
+1340	69	hsa-miR-382-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1341	69	hsa-miR-1251-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1342	69	hsa-miR-3121-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1343	69	hsa-miR-452-5p	998	CDC42	NM_044472	cell division cycle 42
+1344	69	hsa-miR-642a-5p	6722	SRF	NM_001292001	serum response factor
+1345	69	hsa-miR-150-5p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1346	69	hsa-miR-495-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1347	69	hsa-miR-200a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1348	69	hsa-miR-4524a-3p	1948	EFNB2	NM_004093	ephrin B2
+1349	69	hsa-miR-485-5p	634	CEACAM1	NM_001184816	carcinoembryonic antigen related cell adhesion molecule 1
+1350	69	hsa-miR-655-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+1351	69	hsa-miR-455-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1352	69	hsa-miR-1303	7082	TJP1	NM_175610	tight junction protein 1
+1353	69	hsa-miR-516b-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1354	69	hsa-miR-302c-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1355	69	hsa-miR-93-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1356	69	hsa-miR-619-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1357	69	hsa-miR-619-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1358	69	hsa-miR-374c-5p	10365	KLF2	NM_016270	Kruppel like factor 2
+1359	69	hsa-miR-1278	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1360	69	hsa-miR-302a-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1361	69	hsa-miR-423-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+1362	69	hsa-miR-302d-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1363	69	hsa-miR-302b-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1364	69	hsa-miR-5196-3p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+1365	69	hsa-miR-6511a-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+1366	69	hsa-miR-3175	2050	EPHB4	NM_004444	EPH receptor B4
+1367	69	hsa-miR-3175	168667	BMPER	NM_133468	BMP binding endothelial regulator
+1368	69	hsa-miR-671-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1369	69	hsa-miR-513a-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1370	69	hsa-miR-513a-5p	1948	EFNB2	NM_004093	ephrin B2
+1371	69	hsa-miR-942-5p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1372	69	hsa-miR-450b-5p	998	CDC42	NM_044472	cell division cycle 42
+1373	69	hsa-miR-16-2-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1374	69	hsa-miR-326	2022	ENG	NM_000118	endoglin
+1375	68	hsa-miR-23a-3p	2185	PTK2B	NM_173176	protein tyrosine kinase 2 beta
+1376	68	hsa-miR-532-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1377	68	hsa-miR-486-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1378	68	hsa-miR-106b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1379	68	hsa-miR-154-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1380	68	hsa-miR-450a-1-3p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1381	68	hsa-miR-144-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1382	68	hsa-miR-548j-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1383	68	hsa-miR-218-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1384	68	hsa-miR-3179	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+1385	68	hsa-miR-942-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1386	68	hsa-miR-548c-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1387	68	hsa-miR-30b-3p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+1388	68	hsa-miR-124-3p	22905	EPN2	NM_001102664	epsin 2
+1389	68	hsa-miR-548b-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1390	68	hsa-miR-513a-3p	2185	PTK2B	NM_173176	protein tyrosine kinase 2 beta
+1391	68	hsa-miR-1-3p	2752	GLUL	NM_001033044	glutamate-ammonia ligase
+1392	68	hsa-miR-660-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+1393	68	hsa-miR-548d-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1394	68	hsa-miR-556-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1395	68	hsa-miR-556-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1396	68	hsa-miR-548h-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1397	68	hsa-miR-4520-3p	1960	EGR3	NM_001199880	early growth response 3
+1398	68	hsa-miR-337-3p	22905	EPN2	NM_014964	epsin 2
+1399	68	hsa-miR-582-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1400	68	hsa-miR-503-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1401	68	hsa-miR-802	7082	TJP1	NM_175610	tight junction protein 1
+1402	68	hsa-miR-1827	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1403	68	hsa-miR-23b-3p	2185	PTK2B	NM_173176	protein tyrosine kinase 2 beta
+1404	68	hsa-miR-3960	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1405	68	hsa-miR-126-5p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1406	68	hsa-miR-548o-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1407	68	hsa-miR-423-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1408	68	hsa-miR-196b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+1409	68	hsa-miR-1304-5p	7057	THBS1	NM_003246	thrombospondin 1
+1410	68	hsa-miR-506-3p	22905	EPN2	NM_001102664	epsin 2
+1411	68	hsa-miR-382-5p	375056	MIA3	NM_001324064	MIA SH3 domain ER export factor 3
+1412	68	hsa-miR-766-5p	7057	THBS1	NM_003246	thrombospondin 1
+1413	68	hsa-miR-548am-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1414	68	hsa-miR-20a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1415	68	hsa-miR-1323	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1416	68	hsa-miR-497-3p	22905	EPN2	NM_014964	epsin 2
+1417	68	hsa-miR-206	2752	GLUL	NM_001033044	glutamate-ammonia ligase
+1418	68	hsa-miR-513a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1419	68	hsa-miR-196a-5p	3146	HMGB1	NM_002128	high mobility group box 1
+1420	68	hsa-miR-761	9037	SEMA5A	NM_003966	semaphorin 5A
+1421	68	hsa-miR-450b-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1422	68	hsa-miR-513c-3p	2185	PTK2B	NM_173176	protein tyrosine kinase 2 beta
+1423	68	hsa-miR-326	1870	E2F2	NM_004091	E2F transcription factor 2
+1424	67	hsa-miR-370-3p	3791	KDR	NM_002253	kinase insert domain receptor
+1425	67	hsa-miR-96-5p	1960	EGR3	NM_001199880	early growth response 3
+1426	67	hsa-miR-548t-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1427	67	hsa-miR-548t-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1428	67	hsa-miR-3129-5p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1429	67	hsa-miR-139-5p	998	CDC42	NM_044472	cell division cycle 42
+1430	67	hsa-miR-329-3p	1012	CDH13	NM_001220490	cadherin 13
+1431	67	hsa-miR-186-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1432	67	hsa-miR-3179	9037	SEMA5A	NM_003966	semaphorin 5A
+1433	67	hsa-miR-664b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1434	67	hsa-miR-3121-3p	57381	RHOJ	NM_020663	ras homolog family member J
+1435	67	hsa-miR-642a-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1436	67	hsa-miR-301a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1437	67	hsa-miR-301a-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1438	67	hsa-miR-512-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1439	67	hsa-miR-512-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1440	67	hsa-miR-362-3p	1012	CDH13	NM_001220490	cadherin 13
+1441	67	hsa-miR-548t-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+1442	67	hsa-miR-211-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1443	67	hsa-miR-3143	9037	SEMA5A	NM_003966	semaphorin 5A
+1444	67	hsa-miR-616-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1445	67	hsa-miR-802	3716	JAK1	NM_001321855	Janus kinase 1
+1446	67	hsa-miR-299-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+1447	67	hsa-miR-619-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1448	67	hsa-miR-1298-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1449	67	hsa-miR-3074-5p	8829	NRP1	NM_003873	neuropilin 1
+1450	67	hsa-miR-3928-3p	1960	EGR3	NM_001199880	early growth response 3
+1451	67	hsa-miR-543	1012	CDH13	NM_001220489	cadherin 13
+1452	67	hsa-miR-627-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1453	67	hsa-miR-627-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1454	67	hsa-miR-92a-1-5p	1960	EGR3	NM_001199880	early growth response 3
+1455	67	hsa-miR-608	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1456	67	hsa-miR-31-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+1457	67	hsa-miR-3138	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1458	67	hsa-miR-423-5p	2185	PTK2B	NM_173176	protein tyrosine kinase 2 beta
+1459	67	hsa-miR-500b-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1460	67	hsa-miR-3192-5p	6271	S100A1	NM_006271	S100 calcium binding protein A1
+1461	67	hsa-miR-548an	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1462	67	hsa-miR-301b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1463	67	hsa-miR-301b-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1464	67	hsa-miR-199a-3p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1465	67	hsa-miR-145-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1466	67	hsa-miR-342-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1467	67	hsa-miR-130a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1468	67	hsa-miR-130a-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1469	67	hsa-miR-362-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1470	67	hsa-miR-450b-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1471	67	hsa-miR-450b-5p	375056	MIA3	NM_001324063	MIA SH3 domain ER export factor 3
+1472	67	hsa-miR-130b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1473	67	hsa-miR-130b-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1474	67	hsa-miR-203a-3p	57381	RHOJ	NM_020663	ras homolog family member J
+1475	67	hsa-miR-199b-3p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1476	66	hsa-miR-541-5p	23670	CEMIP2	NM_013390	cell migration inducing hyaluronidase 2
+1477	66	hsa-miR-664b-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+1478	66	hsa-miR-449a	57381	RHOJ	NM_020663	ras homolog family member J
+1479	66	hsa-miR-32-5p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1480	66	hsa-miR-106b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1481	66	hsa-miR-106b-5p	2050	EPHB4	NM_004444	EPH receptor B4
+1482	66	hsa-miR-4713-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1483	66	hsa-miR-548j-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1484	66	hsa-miR-367-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1485	66	hsa-miR-514b-5p	3716	JAK1	NM_001321855	Janus kinase 1
+1486	66	hsa-miR-548c-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1487	66	hsa-miR-449c-5p	6722	SRF	NM_001292001	serum response factor
+1488	66	hsa-miR-4446-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1489	66	hsa-miR-34a-5p	57381	RHOJ	NM_020663	ras homolog family member J
+1490	66	hsa-miR-513c-5p	3716	JAK1	NM_001321855	Janus kinase 1
+1491	66	hsa-miR-34b-5p	6722	SRF	NM_001292001	serum response factor
+1492	66	hsa-miR-92b-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1493	66	hsa-miR-3187-3p	8503	PIK3R3	NM_001303428	phosphoinositide-3-kinase regulatory subunit 3
+1494	66	hsa-miR-3187-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1495	66	hsa-miR-548b-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1496	66	hsa-miR-627-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1497	66	hsa-miR-3171	7422	VEGFA	NM_003376	vascular endothelial growth factor A
+1498	66	hsa-miR-1-3p	55742	PARVA	NM_018222	parvin alpha
+1499	66	hsa-miR-200c-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+1500	66	hsa-miR-429	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+1501	66	hsa-miR-548d-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1502	66	hsa-miR-140-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1503	66	hsa-miR-548h-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1504	66	hsa-miR-1290	375056	MIA3	NM_001324063	MIA SH3 domain ER export factor 3
+1505	66	hsa-miR-497-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1506	66	hsa-miR-363-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1507	66	hsa-miR-3173-3p	2752	GLUL	NM_001033044	glutamate-ammonia ligase
+1508	66	hsa-miR-299-5p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1509	66	hsa-miR-151a-3p	7057	THBS1	NM_003246	thrombospondin 1
+1510	66	hsa-miR-545-3p	3716	JAK1	NM_001320923	Janus kinase 1
+1511	66	hsa-miR-545-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1512	66	hsa-miR-1827	1948	EFNB2	NM_004093	ephrin B2
+1513	66	hsa-miR-3074-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+1514	66	hsa-miR-627-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1515	66	hsa-miR-106a-5p	2050	EPHB4	NM_004444	EPH receptor B4
+1516	66	hsa-miR-106a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1517	66	hsa-miR-608	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+1518	66	hsa-miR-3614-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1519	66	hsa-miR-31-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1520	66	hsa-miR-126-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1521	66	hsa-miR-376c-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+1522	66	hsa-miR-548o-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1523	66	hsa-miR-101-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1524	66	hsa-miR-3934-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+1525	66	hsa-miR-3942-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1526	66	hsa-miR-200b-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+1527	66	hsa-miR-4662a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1528	66	hsa-miR-580-3p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+1529	66	hsa-miR-2682-5p	6722	SRF	NM_001292001	serum response factor
+1530	66	hsa-miR-202-3p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1531	66	hsa-miR-223-3p	8434	RECK	NM_001316348	reversion inducing cysteine rich protein with kazal motifs
+1532	66	hsa-miR-223-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1533	66	hsa-miR-548am-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1534	66	hsa-miR-20a-5p	2050	EPHB4	NM_004444	EPH receptor B4
+1535	66	hsa-miR-20a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1536	66	hsa-miR-656-3p	3791	KDR	NM_002253	kinase insert domain receptor
+1537	66	hsa-miR-198	3791	KDR	NM_002253	kinase insert domain receptor
+1538	66	hsa-miR-25-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1539	66	hsa-miR-671-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1540	66	hsa-miR-506-5p	7057	THBS1	NM_003246	thrombospondin 1
+1541	66	hsa-miR-4787-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1542	66	hsa-miR-92a-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+1543	66	hsa-miR-374b-5p	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+1544	66	hsa-miR-424-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1545	65	hsa-miR-576-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1546	65	hsa-miR-1291	3678	ITGA5	NM_002205	integrin subunit alpha 5
+1547	65	hsa-miR-1287-5p	2022	ENG	NM_001278138	endoglin
+1548	65	hsa-miR-492	1012	CDH13	NM_001220490	cadherin 13
+1549	65	hsa-miR-367-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1550	65	hsa-miR-155-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1551	65	hsa-miR-510-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+1552	65	hsa-miR-664b-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1553	65	hsa-miR-590-5p	2246	FGF1	NM_033137	fibroblast growth factor 1
+1554	65	hsa-miR-124-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1555	65	hsa-miR-544a	10365	KLF2	NM_016270	Kruppel like factor 2
+1556	65	hsa-miR-4677-3p	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+1557	65	hsa-miR-758-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1558	65	hsa-miR-378d	55742	PARVA	NM_018222	parvin alpha
+1559	65	hsa-miR-19a-3p	84870	RSPO3	NM_032784	R-spondin 3
+1560	65	hsa-miR-17-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1561	65	hsa-miR-660-3p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+1562	65	hsa-miR-4524a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1563	65	hsa-miR-378a-3p	55742	PARVA	NM_018222	parvin alpha
+1564	65	hsa-miR-1271-5p	1960	EGR3	NM_001199880	early growth response 3
+1565	65	hsa-miR-33b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1566	65	hsa-miR-378c	55742	PARVA	NM_018222	parvin alpha
+1567	65	hsa-miR-363-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1568	65	hsa-miR-22-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1569	65	hsa-miR-299-5p	6997	TDGF1	NM_003212	teratocarcinoma-derived growth factor 1
+1570	65	hsa-miR-192-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1571	65	hsa-miR-381-3p	79733	E2F8	NM_001256371	E2F transcription factor 8
+1572	65	hsa-miR-448	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+1573	65	hsa-miR-661	1012	CDH13	NM_001220488	cadherin 13
+1574	65	hsa-miR-3074-5p	1012	CDH13	NM_001220489	cadherin 13
+1575	65	hsa-miR-1285-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1576	65	hsa-miR-30a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1577	65	hsa-miR-20b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1578	65	hsa-miR-608	6271	S100A1	NM_006271	S100 calcium binding protein A1
+1579	65	hsa-miR-33a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1580	65	hsa-miR-3138	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+1581	65	hsa-miR-93-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1582	65	hsa-miR-500a-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+1583	65	hsa-miR-548o-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1584	65	hsa-miR-548an	4851	NOTCH1	NM_017617	notch 1
+1585	65	hsa-miR-506-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1586	65	hsa-miR-30e-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1587	65	hsa-miR-3198	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1588	65	hsa-miR-580-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1589	65	hsa-miR-548b-3p	2050	EPHB4	NM_004444	EPH receptor B4
+1590	65	hsa-miR-494-3p	1948	EFNB2	NM_004093	ephrin B2
+1591	65	hsa-miR-215-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1592	65	hsa-miR-488-3p	6722	SRF	NM_001292001	serum response factor
+1593	65	hsa-miR-17-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1594	65	hsa-miR-19b-3p	84870	RSPO3	NM_032784	R-spondin 3
+1595	65	hsa-miR-422a	55742	PARVA	NM_018222	parvin alpha
+1596	65	hsa-miR-759	57674	RNF213	NM_001256071	ring finger protein 213
+1597	65	hsa-miR-25-3p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1598	65	hsa-miR-425-5p	7082	TJP1	NM_175610	tight junction protein 1
+1599	65	hsa-miR-9-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1600	65	hsa-miR-3140-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1601	65	hsa-miR-519d-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1602	65	hsa-miR-760	168667	BMPER	NM_133468	BMP binding endothelial regulator
+1603	65	hsa-miR-889-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1604	64	hsa-miR-515-5p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+1605	64	hsa-miR-541-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1606	64	hsa-miR-1915-3p	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+1607	64	hsa-miR-30a-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1608	64	hsa-miR-96-5p	23210	JMJD6	NM_015167	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+1609	64	hsa-miR-329-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1610	64	hsa-miR-186-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1611	64	hsa-miR-1275	22905	EPN2	NM_014964	epsin 2
+1612	64	hsa-miR-873-5p	1960	EGR3	NM_001199880	early growth response 3
+1613	64	hsa-miR-374a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1614	64	hsa-miR-597-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1615	64	hsa-miR-539-3p	22905	EPN2	NM_014964	epsin 2
+1616	64	hsa-miR-382-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1617	64	hsa-miR-633	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+1618	64	hsa-miR-21-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+1619	64	hsa-miR-19a-3p	7057	THBS1	NM_003246	thrombospondin 1
+1620	64	hsa-miR-3194-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1621	64	hsa-miR-423-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1622	64	hsa-miR-362-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1623	64	hsa-miR-29c-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1624	64	hsa-let-7f-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1625	64	hsa-let-7d-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1626	64	hsa-miR-654-5p	6271	S100A1	NM_006271	S100 calcium binding protein A1
+1627	64	hsa-miR-30c-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1628	64	hsa-miR-455-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1629	64	hsa-miR-98-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1630	64	hsa-miR-29a-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1631	64	hsa-miR-516b-5p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+1632	64	hsa-miR-619-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1633	64	hsa-miR-181a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1634	64	hsa-miR-665	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+1635	64	hsa-miR-448	1960	EGR3	NM_001199880	early growth response 3
+1636	64	hsa-miR-766-3p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1637	64	hsa-let-7b-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1638	64	hsa-let-7b-5p	7057	THBS1	NM_003246	thrombospondin 1
+1639	64	hsa-let-7g-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1640	64	hsa-miR-30b-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1641	64	hsa-miR-181b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1642	64	hsa-miR-409-5p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1643	64	hsa-miR-29b-3p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1644	64	hsa-let-7a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1645	64	hsa-miR-30d-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1646	64	hsa-miR-637	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1647	64	hsa-miR-202-3p	6997	TDGF1	NM_003212	teratocarcinoma-derived growth factor 1
+1648	64	hsa-miR-19b-3p	7057	THBS1	NM_003246	thrombospondin 1
+1649	64	hsa-miR-582-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1650	64	hsa-miR-766-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1651	64	hsa-let-7i-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1652	64	hsa-miR-30e-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1653	64	hsa-miR-485-3p	22905	EPN2	NM_014964	epsin 2
+1654	64	hsa-miR-185-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1655	64	hsa-miR-3127-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1656	64	hsa-miR-3154	2247	FGF2	NM_002006	fibroblast growth factor 2
+1657	64	hsa-miR-561-5p	7082	TJP1	NM_001301025	tight junction protein 1
+1658	64	hsa-miR-450b-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1659	64	hsa-let-7e-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1660	64	hsa-let-7c-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1661	64	hsa-miR-889-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1662	63	hsa-miR-515-5p	998	CDC42	NM_044472	cell division cycle 42
+1663	63	hsa-miR-664b-5p	3791	KDR	NM_002253	kinase insert domain receptor
+1664	63	hsa-miR-1915-3p	2022	ENG	NM_001278138	endoglin
+1665	63	hsa-miR-1915-3p	29924	EPN1	NM_001130072	epsin 1
+1666	63	hsa-miR-370-3p	1012	CDH13	NM_001220488	cadherin 13
+1667	63	hsa-miR-372-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1668	63	hsa-miR-576-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1669	63	hsa-miR-548t-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1670	63	hsa-miR-183-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1671	63	hsa-miR-514a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1672	63	hsa-miR-3918	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+1673	63	hsa-miR-942-3p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+1674	63	hsa-miR-26a-5p	1969	EPHA2	NM_004431	EPH receptor A2
+1675	63	hsa-miR-3130-3p	1948	EFNB2	NM_004093	ephrin B2
+1676	63	hsa-miR-544a	1870	E2F2	NM_004091	E2F transcription factor 2
+1677	63	hsa-miR-544a	161198	CLEC14A	NM_175060	C-type lectin domain containing 14A
+1678	63	hsa-miR-214-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1679	63	hsa-miR-513a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1680	63	hsa-miR-142-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1681	63	hsa-miR-1-3p	998	CDC42	NM_001039802	cell division cycle 42
+1682	63	hsa-miR-200c-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1683	63	hsa-miR-26b-5p	1969	EPHA2	NM_004431	EPH receptor A2
+1684	63	hsa-miR-532-5p	1012	CDH13	NM_001220490	cadherin 13
+1685	63	hsa-miR-188-3p	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+1686	63	hsa-miR-520c-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1687	63	hsa-miR-429	7082	TJP1	NM_001301025	tight junction protein 1
+1688	63	hsa-miR-651-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1689	63	hsa-miR-556-5p	7082	TJP1	NM_175610	tight junction protein 1
+1690	63	hsa-miR-373-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1691	63	hsa-miR-655-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1692	63	hsa-miR-802	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1693	63	hsa-miR-93-3p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1694	63	hsa-miR-619-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1695	63	hsa-miR-374c-5p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1696	63	hsa-miR-5001-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1697	63	hsa-miR-30a-3p	6997	TDGF1	NM_001174136	teratocarcinoma-derived growth factor 1
+1698	63	hsa-miR-30a-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1699	63	hsa-miR-608	9037	SEMA5A	NM_003966	semaphorin 5A
+1700	63	hsa-miR-423-5p	998	CDC42	NM_001039802	cell division cycle 42
+1701	63	hsa-miR-650	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+1702	63	hsa-miR-101-3p	8829	NRP1	NM_003873	neuropilin 1
+1703	63	hsa-miR-3192-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1704	63	hsa-miR-3192-5p	6722	SRF	NM_001292001	serum response factor
+1705	63	hsa-miR-200b-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1706	63	hsa-miR-30e-3p	6997	TDGF1	NM_001174136	teratocarcinoma-derived growth factor 1
+1707	63	hsa-miR-30e-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1708	63	hsa-miR-7-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1709	63	hsa-miR-874-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1710	63	hsa-miR-145-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1711	63	hsa-miR-766-5p	6997	TDGF1	NM_003212	teratocarcinoma-derived growth factor 1
+1712	63	hsa-miR-198	57674	RNF213	NM_001256071	ring finger protein 213
+1713	63	hsa-miR-762	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1714	63	hsa-miR-371a-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1715	63	hsa-miR-759	168667	BMPER	NM_133468	BMP binding endothelial regulator
+1716	63	hsa-miR-206	998	CDC42	NM_001039802	cell division cycle 42
+1717	63	hsa-miR-338-3p	9353	SLIT2	NM_001289135	slit guidance ligand 2
+1718	63	hsa-miR-27a-3p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1719	63	hsa-miR-760	6722	SRF	NM_001292001	serum response factor
+1720	63	hsa-miR-454-3p	1948	EFNB2	NM_004093	ephrin B2
+1721	63	hsa-miR-513c-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1722	63	hsa-miR-574-5p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1723	63	hsa-miR-27b-3p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1724	62	hsa-miR-23a-3p	3716	JAK1	NM_001321855	Janus kinase 1
+1725	62	hsa-miR-486-3p	6722	SRF	NM_001292001	serum response factor
+1726	62	hsa-miR-183-3p	84830	ADTRP	NM_001143948	androgen dependent TFPI regulating protein
+1727	62	hsa-miR-183-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1728	62	hsa-miR-301a-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+1729	62	hsa-miR-509-5p	55742	PARVA	NM_018222	parvin alpha
+1730	62	hsa-miR-1275	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1731	62	hsa-miR-509-3-5p	55742	PARVA	NM_018222	parvin alpha
+1732	62	hsa-miR-625-3p	7082	TJP1	NM_175610	tight junction protein 1
+1733	62	hsa-miR-3180-3p	6722	SRF	NM_001292001	serum response factor
+1734	62	hsa-miR-664b-3p	998	CDC42	NM_001791	cell division cycle 42
+1735	62	hsa-miR-30b-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1736	62	hsa-miR-421	22905	EPN2	NM_001102664	epsin 2
+1737	62	hsa-miR-124-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1738	62	hsa-miR-1224-5p	9353	SLIT2	NM_004787	slit guidance ligand 2
+1739	62	hsa-miR-452-5p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+1740	62	hsa-miR-105-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1741	62	hsa-miR-433-3p	147372	CCBE1	NM_133459	collagen and calcium binding EGF domains 1
+1742	62	hsa-miR-513a-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1743	62	hsa-miR-513a-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1744	62	hsa-miR-513a-3p	7057	THBS1	NM_003246	thrombospondin 1
+1745	62	hsa-miR-1-3p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1746	62	hsa-miR-3194-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1747	62	hsa-miR-3194-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1748	62	hsa-miR-301a-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1749	62	hsa-miR-4524a-3p	23210	JMJD6	NM_001081461	jumonji domain containing 6, arginine demethylase and lysine hydroxylase
+1750	62	hsa-miR-548t-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1751	62	hsa-let-7d-5p	7057	THBS1	NM_003246	thrombospondin 1
+1752	62	hsa-miR-140-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1753	62	hsa-miR-655-3p	57381	RHOJ	NM_020663	ras homolog family member J
+1754	62	hsa-miR-22-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1755	62	hsa-miR-3143	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1756	62	hsa-miR-455-5p	7082	TJP1	NM_175610	tight junction protein 1
+1757	62	hsa-miR-377-3p	6722	SRF	NM_001292001	serum response factor
+1758	62	hsa-miR-374c-5p	57381	RHOJ	NM_020663	ras homolog family member J
+1759	62	hsa-miR-448	284	ANGPT1	NM_001146	angiopoietin 1
+1760	62	hsa-miR-496	2247	FGF2	NM_002006	fibroblast growth factor 2
+1761	62	hsa-miR-330-3p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1762	62	hsa-miR-543	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1763	62	hsa-miR-543	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1764	62	hsa-miR-627-3p	7057	THBS1	NM_003246	thrombospondin 1
+1765	62	hsa-miR-627-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1766	62	hsa-miR-1285-3p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1767	62	hsa-miR-30a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+1768	62	hsa-miR-30a-3p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1769	62	hsa-miR-20b-5p	2050	EPHB4	NM_004444	EPH receptor B4
+1770	62	hsa-miR-20b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1771	62	hsa-miR-106a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1772	62	hsa-miR-608	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1773	62	hsa-miR-608	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1774	62	hsa-miR-23b-3p	3716	JAK1	NM_001321855	Janus kinase 1
+1775	62	hsa-miR-3614-5p	6997	TDGF1	NM_003212	teratocarcinoma-derived growth factor 1
+1776	62	hsa-miR-3138	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1777	62	hsa-miR-3936	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1778	62	hsa-miR-93-5p	2050	EPHB4	NM_004444	EPH receptor B4
+1779	62	hsa-miR-93-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1780	62	hsa-miR-138-5p	2022	ENG	NM_000118	endoglin
+1781	62	hsa-miR-506-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1782	62	hsa-miR-30e-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+1783	62	hsa-miR-30e-3p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1784	62	hsa-miR-149-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1785	62	hsa-miR-580-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1786	62	hsa-miR-301b-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1787	62	hsa-miR-7-5p	55742	PARVA	NM_018222	parvin alpha
+1788	62	hsa-miR-874-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1789	62	hsa-miR-17-5p	2050	EPHB4	NM_004444	EPH receptor B4
+1790	62	hsa-miR-17-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1791	62	hsa-miR-202-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+1792	62	hsa-miR-5196-3p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1793	62	hsa-miR-342-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1794	62	hsa-miR-766-5p	79812	MMRN2	NM_024756	multimerin 2
+1795	62	hsa-miR-206	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1796	62	hsa-miR-767-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1797	62	hsa-miR-625-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1798	62	hsa-miR-130a-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1799	62	hsa-miR-27a-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+1800	62	hsa-miR-519d-3p	2050	EPHB4	NM_004444	EPH receptor B4
+1801	62	hsa-miR-519d-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1802	62	hsa-miR-374b-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1803	62	hsa-miR-125a-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1804	62	hsa-miR-505-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1805	62	hsa-miR-130b-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1806	62	hsa-miR-454-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1807	62	hsa-miR-513c-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1808	62	hsa-miR-513c-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1809	62	hsa-miR-513c-3p	7057	THBS1	NM_003246	thrombospondin 1
+1810	62	hsa-miR-27b-3p	10365	KLF2	NM_016270	Kruppel like factor 2
+1811	61	hsa-miR-23a-3p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+1812	61	hsa-miR-3162-3p	207	AKT1	NM_001014431	AKT serine/threonine kinase 1
+1813	61	hsa-miR-96-5p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+1814	61	hsa-miR-186-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1815	61	hsa-miR-410-3p	8817	FGF18	NM_003862	fibroblast growth factor 18
+1816	61	hsa-miR-155-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+1817	61	hsa-miR-3918	144455	E2F7	NM_203394	E2F transcription factor 7
+1818	61	hsa-miR-589-3p	57674	RNF213	NM_001256071	ring finger protein 213
+1819	61	hsa-miR-30c-2-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1820	61	hsa-miR-221-3p	7057	THBS1	NM_003246	thrombospondin 1
+1821	61	hsa-miR-1224-5p	79733	E2F8	NM_001256372	E2F transcription factor 8
+1822	61	hsa-miR-361-3p	57674	RNF213	NM_020954	ring finger protein 213
+1823	61	hsa-miR-544a	9723	SEMA3E	NM_012431	semaphorin 3E
+1824	61	hsa-miR-513a-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+1825	61	hsa-miR-542-5p	5291	PIK3CB	NM_001256045	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta
+1826	61	hsa-miR-500b-3p	1969	EPHA2	NM_004431	EPH receptor A2
+1827	61	hsa-miR-15b-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1828	61	hsa-miR-1271-5p	2822	GPLD1	NM_001503	glycosylphosphatidylinositol specific phospholipase D1
+1829	61	hsa-miR-211-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1830	61	hsa-miR-373-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1831	61	hsa-miR-1290	7082	TJP1	NM_001301026	tight junction protein 1
+1832	61	hsa-miR-497-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1833	61	hsa-miR-3173-3p	1870	E2F2	NM_004091	E2F transcription factor 2
+1834	61	hsa-miR-182-5p	25960	ADGRA2	NM_032777	adhesion G protein-coupled receptor A2
+1835	61	hsa-miR-3143	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1836	61	hsa-miR-302c-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1837	61	hsa-miR-184	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+1838	61	hsa-miR-212-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1839	61	hsa-miR-16-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1840	61	hsa-miR-665	10365	KLF2	NM_016270	Kruppel like factor 2
+1841	61	hsa-miR-381-3p	1948	EFNB2	NM_004093	ephrin B2
+1842	61	hsa-miR-3150b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1843	61	hsa-miR-496	3146	HMGB1	NM_002128	high mobility group box 1
+1844	61	hsa-miR-5001-5p	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+1845	61	hsa-miR-543	9723	SEMA3E	NM_012431	semaphorin 3E
+1846	61	hsa-miR-627-3p	998	CDC42	NM_001039802	cell division cycle 42
+1847	61	hsa-miR-1285-3p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1848	61	hsa-miR-23b-3p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+1849	61	hsa-miR-302a-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1850	61	hsa-miR-3936	7082	TJP1	NM_175610	tight junction protein 1
+1851	61	hsa-miR-423-5p	6722	SRF	NM_003131	serum response factor
+1852	61	hsa-miR-548o-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1853	61	hsa-miR-3605-5p	998	CDC42	NM_001039802	cell division cycle 42
+1854	61	hsa-miR-222-3p	7057	THBS1	NM_003246	thrombospondin 1
+1855	61	hsa-miR-3198	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1856	61	hsa-miR-494-3p	55742	PARVA	NM_018222	parvin alpha
+1857	61	hsa-miR-32-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1858	61	hsa-miR-204-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1859	61	hsa-miR-204-5p	9723	SEMA3E	NM_012431	semaphorin 3E
+1860	61	hsa-miR-302d-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1861	61	hsa-miR-302b-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1862	61	hsa-miR-6511a-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+1863	61	hsa-miR-766-5p	284	ANGPT1	NM_001146	angiopoietin 1
+1864	61	hsa-miR-605-3p	55742	PARVA	NM_018222	parvin alpha
+1865	61	hsa-miR-656-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1866	61	hsa-miR-762	90993	CREB3L1	NM_052854	cAMP responsive element binding protein 3 like 1
+1867	61	hsa-miR-497-3p	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+1868	61	hsa-miR-625-5p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1869	61	hsa-miR-625-5p	1960	EGR3	NM_001199880	early growth response 3
+1870	61	hsa-miR-3127-5p	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+1871	61	hsa-miR-513a-5p	84870	RSPO3	NM_032784	R-spondin 3
+1872	61	hsa-miR-3154	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1873	61	hsa-miR-15a-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1874	61	hsa-miR-30c-1-3p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1875	61	hsa-miR-195-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1876	61	hsa-miR-450b-5p	84870	RSPO3	NM_032784	R-spondin 3
+1877	61	hsa-miR-424-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1878	61	hsa-miR-194-5p	8829	NRP1	NM_003873	neuropilin 1
+1879	61	hsa-miR-760	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1880	61	hsa-miR-513c-3p	9723	SEMA3E	NM_012431	semaphorin 3E
+1881	61	hsa-miR-326	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1882	61	hsa-miR-326	1960	EGR3	NM_001199880	early growth response 3
+1883	60	hsa-miR-372-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1884	60	hsa-miR-491-5p	1870	E2F2	NM_004091	E2F transcription factor 2
+1885	60	hsa-miR-106b-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1886	60	hsa-miR-374a-3p	8829	NRP1	NM_003873	neuropilin 1
+1887	60	hsa-miR-548j-5p	55742	PARVA	NM_018222	parvin alpha
+1888	60	hsa-miR-502-3p	7082	TJP1	NM_175610	tight junction protein 1
+1889	60	hsa-miR-3918	7082	TJP1	NM_001301026	tight junction protein 1
+1890	60	hsa-miR-374a-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1891	60	hsa-miR-514b-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1892	60	hsa-miR-134-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+1893	60	hsa-miR-548c-5p	55742	PARVA	NM_018222	parvin alpha
+1894	60	hsa-miR-31-3p	284	ANGPT1	NM_001146	angiopoietin 1
+1895	60	hsa-miR-221-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1896	60	hsa-miR-212-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+1897	60	hsa-miR-4446-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1898	60	hsa-miR-495-3p	998	CDC42	NM_044472	cell division cycle 42
+1899	60	hsa-miR-501-3p	7082	TJP1	NM_175610	tight junction protein 1
+1900	60	hsa-miR-513c-5p	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1901	60	hsa-miR-3187-3p	57674	RNF213	NM_020954	ring finger protein 213
+1902	60	hsa-miR-3187-3p	79812	MMRN2	NM_024756	multimerin 2
+1903	60	hsa-miR-744-5p	2050	EPHB4	NM_004444	EPH receptor B4
+1904	60	hsa-miR-548b-5p	55742	PARVA	NM_018222	parvin alpha
+1905	60	hsa-miR-142-5p	144455	E2F7	NM_203394	E2F transcription factor 7
+1906	60	hsa-miR-3171	57674	RNF213	NM_020954	ring finger protein 213
+1907	60	hsa-miR-876-5p	57674	RNF213	NM_001256071	ring finger protein 213
+1908	60	hsa-miR-660-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1909	60	hsa-miR-520c-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1910	60	hsa-miR-500b-3p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+1911	60	hsa-miR-508-3p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1912	60	hsa-miR-548d-5p	55742	PARVA	NM_018222	parvin alpha
+1913	60	hsa-miR-512-3p	51176	LEF1	NM_001130713	lymphoid enhancer binding factor 1
+1914	60	hsa-miR-15b-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1915	60	hsa-miR-548t-5p	652	BMP4	NM_001202	bone morphogenetic protein 4
+1916	60	hsa-miR-181c-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1917	60	hsa-miR-211-5p	84870	RSPO3	NM_032784	R-spondin 3
+1918	60	hsa-miR-548h-5p	55742	PARVA	NM_018222	parvin alpha
+1919	60	hsa-miR-373-3p	8503	PIK3R3	NM_001114172	phosphoinositide-3-kinase regulatory subunit 3
+1920	60	hsa-miR-655-3p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1921	60	hsa-miR-181d-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1922	60	hsa-miR-151a-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1923	60	hsa-miR-582-3p	284	ANGPT1	NM_001146	angiopoietin 1
+1924	60	hsa-miR-503-5p	84870	RSPO3	NM_032784	R-spondin 3
+1925	60	hsa-miR-181a-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1926	60	hsa-miR-374c-5p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1927	60	hsa-miR-107	9037	SEMA5A	NM_003966	semaphorin 5A
+1928	60	hsa-miR-16-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1929	60	hsa-miR-1298-5p	26585	GREM1	NM_013372	gremlin 1, DAN family BMP antagonist
+1930	60	hsa-miR-665	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1931	60	hsa-miR-543	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1932	60	hsa-miR-511-3p	7057	THBS1	NM_003246	thrombospondin 1
+1933	60	hsa-miR-3162-5p	55742	PARVA	NM_018222	parvin alpha
+1934	60	hsa-miR-3138	2752	GLUL	NM_002065	glutamate-ammonia ligase
+1935	60	hsa-miR-103a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1936	60	hsa-miR-548o-5p	55742	PARVA	NM_018222	parvin alpha
+1937	60	hsa-miR-500b-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+1938	60	hsa-miR-500b-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1939	60	hsa-miR-24-3p	8503	PIK3R3	NM_003629	phosphoinositide-3-kinase regulatory subunit 3
+1940	60	hsa-miR-3934-5p	1012	CDH13	NM_001220489	cadherin 13
+1941	60	hsa-miR-3934-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1942	60	hsa-miR-181b-5p	90268	OTULIN	NM_138348	OTU deubiquitinase with linear linkage specificity
+1943	60	hsa-miR-324-3p	144455	E2F7	NM_203394	E2F transcription factor 7
+1944	60	hsa-miR-222-3p	8434	RECK	NM_001316345	reversion inducing cysteine rich protein with kazal motifs
+1945	60	hsa-miR-580-3p	3716	JAK1	NM_001321855	Janus kinase 1
+1946	60	hsa-miR-7-5p	26585	GREM1	NM_001191322	gremlin 1, DAN family BMP antagonist
+1947	60	hsa-miR-204-5p	84870	RSPO3	NM_032784	R-spondin 3
+1948	60	hsa-miR-548am-5p	55742	PARVA	NM_018222	parvin alpha
+1949	60	hsa-miR-223-5p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+1950	60	hsa-miR-628-3p	8829	NRP1	NM_003873	neuropilin 1
+1951	60	hsa-miR-20a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1952	60	hsa-miR-509-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+1953	60	hsa-miR-873-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1954	60	hsa-miR-3175	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1955	60	hsa-miR-206	55742	PARVA	NM_018222	parvin alpha
+1956	60	hsa-miR-132-3p	23670	CEMIP2	NM_001135820	cell migration inducing hyaluronidase 2
+1957	60	hsa-miR-27a-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1958	60	hsa-miR-185-5p	7082	TJP1	NM_001301026	tight junction protein 1
+1959	60	hsa-miR-4423-5p	8829	NRP1	NM_003873	neuropilin 1
+1960	60	hsa-miR-362-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+1961	60	hsa-miR-362-5p	56999	ADAMTS9	NM_001318781	ADAM metallopeptidase with thrombospondin type 1 motif 9
+1962	60	hsa-miR-15a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1963	60	hsa-miR-761	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1964	60	hsa-miR-374b-5p	4017	LOXL2	NM_002318	lysyl oxidase like 2
+1965	60	hsa-miR-195-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1966	60	hsa-miR-450b-5p	7057	THBS1	NM_003246	thrombospondin 1
+1967	60	hsa-miR-203a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1968	60	hsa-miR-4423-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+1969	60	hsa-miR-27b-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+1	99	hsa-miR-32-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+2	99	hsa-miR-491-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+3	99	hsa-miR-124-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+4	99	hsa-miR-92b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+5	99	hsa-miR-299-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+6	99	hsa-miR-627-3p	57556	SEMA6A	NM_020796	semaphorin 6A
+7	99	hsa-miR-506-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+8	99	hsa-miR-7-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+9	99	hsa-miR-656-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+10	99	hsa-miR-27a-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+11	99	hsa-miR-92a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+12	99	hsa-miR-27b-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+13	98	hsa-miR-367-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+14	98	hsa-miR-148a-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+15	98	hsa-miR-152-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+16	98	hsa-miR-363-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+17	98	hsa-miR-381-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+18	98	hsa-miR-148b-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+19	98	hsa-miR-25-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+20	98	hsa-miR-513a-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+21	97	hsa-miR-761	5228	PGF	NM_001207012	placental growth factor
+22	96	hsa-miR-3151-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+23	96	hsa-miR-214-3p	5228	PGF	NM_001207012	placental growth factor
+24	96	hsa-miR-29c-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+25	96	hsa-miR-129-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+26	96	hsa-miR-29a-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+27	96	hsa-miR-29b-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+28	95	hsa-miR-142-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+29	95	hsa-miR-411-3p	3586	IL10	NM_000572	interleukin 10
+30	95	hsa-miR-135b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+31	95	hsa-miR-135a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+32	95	hsa-miR-379-3p	3586	IL10	NM_000572	interleukin 10
+33	95	hsa-miR-128-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+34	94	hsa-miR-655-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+35	94	hsa-miR-374c-5p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+36	94	hsa-miR-145-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+37	93	hsa-miR-218-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+38	93	hsa-miR-3121-3p	3586	IL10	NM_000572	interleukin 10
+39	92	hsa-miR-548t-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+40	92	hsa-miR-144-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+41	92	hsa-miR-107	9314	KLF4	NM_001314052	Kruppel like factor 4
+42	92	hsa-miR-30a-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+43	92	hsa-miR-3138	57556	SEMA6A	NM_001300780	semaphorin 6A
+44	92	hsa-miR-103a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+45	92	hsa-miR-30e-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+46	92	hsa-miR-202-3p	3586	IL10	NM_000572	interleukin 10
+47	91	hsa-miR-548k	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+48	91	hsa-miR-548b-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+49	91	hsa-miR-377-5p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+50	91	hsa-miR-369-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+51	90	hsa-miR-450a-1-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+52	90	hsa-miR-627-3p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+53	90	hsa-miR-141-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+54	90	hsa-miR-200a-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+55	89	hsa-miR-876-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+56	89	hsa-miR-508-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+57	88	hsa-miR-374a-5p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+58	88	hsa-miR-3121-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+59	88	hsa-miR-3121-3p	5228	PGF	NM_001207012	placental growth factor
+60	88	hsa-miR-346	9314	KLF4	NM_001314052	Kruppel like factor 4
+61	88	hsa-miR-433-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+62	88	hsa-miR-129-2-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+63	88	hsa-miR-129-1-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+64	88	hsa-miR-497-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+65	87	hsa-miR-548t-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+66	87	hsa-miR-212-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+67	87	hsa-miR-132-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+68	86	hsa-miR-449a	9314	KLF4	NM_001314052	Kruppel like factor 4
+69	86	hsa-miR-34a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+70	85	hsa-miR-23a-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+71	85	hsa-miR-218-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+72	85	hsa-miR-200c-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+73	85	hsa-miR-429	9314	KLF4	NM_001314052	Kruppel like factor 4
+74	85	hsa-miR-23b-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+75	85	hsa-miR-200b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+76	85	hsa-miR-493-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+77	85	hsa-miR-374b-5p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+78	84	hsa-miR-148a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+79	84	hsa-miR-1297	9314	KLF4	NM_001314052	Kruppel like factor 4
+80	84	hsa-miR-495-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+81	84	hsa-miR-152-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+82	84	hsa-miR-150-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+83	84	hsa-miR-34c-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+84	84	hsa-miR-148b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+85	84	hsa-miR-767-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+86	84	hsa-miR-3140-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+87	84	hsa-miR-449b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+88	83	hsa-miR-1-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+89	83	hsa-miR-580-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+90	83	hsa-miR-762	57556	SEMA6A	NM_001300780	semaphorin 6A
+91	83	hsa-miR-206	9314	KLF4	NM_001314052	Kruppel like factor 4
+92	82	hsa-miR-885-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+93	82	hsa-miR-29c-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+94	82	hsa-miR-1290	57556	SEMA6A	NM_020796	semaphorin 6A
+95	82	hsa-miR-29a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+96	82	hsa-miR-377-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+97	82	hsa-miR-522-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+98	82	hsa-miR-29b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+99	82	hsa-miR-519c-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+100	81	hsa-miR-10a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+101	81	hsa-miR-26a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+102	81	hsa-miR-26b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+103	81	hsa-miR-135b-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+104	81	hsa-miR-135a-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+105	81	hsa-miR-10b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+106	80	hsa-miR-455-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+107	80	hsa-miR-3691-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+108	80	hsa-miR-625-5p	57556	SEMA6A	NM_020796	semaphorin 6A
+109	80	hsa-miR-636	57556	SEMA6A	NM_001300780	semaphorin 6A
+110	80	hsa-miR-203a-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+111	79	hsa-miR-32-5p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+112	79	hsa-miR-374a-3p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+113	79	hsa-miR-367-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+114	79	hsa-miR-92b-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+115	79	hsa-miR-363-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+116	79	hsa-miR-128-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+117	79	hsa-miR-25-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+118	79	hsa-miR-92a-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+119	79	hsa-miR-561-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+120	79	hsa-miR-125a-3p	3586	IL10	NM_000572	interleukin 10
+121	78	hsa-miR-30a-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+122	78	hsa-miR-633	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+123	78	hsa-miR-30c-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+124	78	hsa-miR-20a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+125	78	hsa-miR-30b-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+126	78	hsa-miR-431-5p	5228	PGF	NM_002632	placental growth factor
+127	78	hsa-miR-30d-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+128	78	hsa-miR-30e-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+129	77	hsa-miR-589-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+130	77	hsa-miR-654-5p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+131	77	hsa-miR-489-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+132	77	hsa-miR-135b-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+133	77	hsa-miR-605-3p	5228	PGF	NM_001207012	placental growth factor
+134	77	hsa-miR-561-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+135	77	hsa-miR-203a-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+136	76	hsa-miR-124-3p	5228	PGF	NM_001207012	placental growth factor
+137	76	hsa-let-7f-5p	3586	IL10	NM_000572	interleukin 10
+138	76	hsa-miR-455-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+139	76	hsa-miR-98-5p	3586	IL10	NM_000572	interleukin 10
+140	76	hsa-miR-545-5p	3586	IL10	NM_000572	interleukin 10
+141	76	hsa-miR-1827	57556	SEMA6A	NM_001300780	semaphorin 6A
+142	76	hsa-miR-5001-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+143	76	hsa-let-7b-5p	3586	IL10	NM_000572	interleukin 10
+144	76	hsa-let-7g-5p	3586	IL10	NM_000572	interleukin 10
+145	76	hsa-miR-506-3p	5228	PGF	NM_001207012	placental growth factor
+146	76	hsa-let-7a-5p	3586	IL10	NM_000572	interleukin 10
+147	76	hsa-let-7i-5p	3586	IL10	NM_000572	interleukin 10
+148	76	hsa-let-7e-5p	3586	IL10	NM_000572	interleukin 10
+149	76	hsa-let-7c-5p	3586	IL10	NM_000572	interleukin 10
+150	75	hsa-miR-96-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+151	75	hsa-miR-1271-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+152	75	hsa-miR-27a-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+153	75	hsa-miR-27b-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+154	74	hsa-miR-589-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+155	74	hsa-miR-124-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+156	74	hsa-miR-452-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+157	74	hsa-miR-3187-3p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+158	74	hsa-let-7d-5p	3586	IL10	NM_000572	interleukin 10
+159	74	hsa-miR-506-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+160	73	hsa-miR-146a-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+161	73	hsa-miR-3918	5228	PGF	NM_002632	placental growth factor
+162	73	hsa-miR-589-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+163	73	hsa-miR-146b-5p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+164	73	hsa-miR-661	7423	VEGFB	NM_001243733	vascular endothelial growth factor B
+165	72	hsa-miR-211-5p	57556	SEMA6A	NM_020796	semaphorin 6A
+166	72	hsa-miR-212-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+167	72	hsa-miR-627-3p	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+168	72	hsa-miR-204-5p	57556	SEMA6A	NM_020796	semaphorin 6A
+169	71	hsa-miR-323a-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+170	71	hsa-miR-219a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+171	70	hsa-miR-429	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+172	70	hsa-miR-200b-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+173	70	hsa-miR-3154	9314	KLF4	NM_001314052	Kruppel like factor 4
+174	69	hsa-miR-514b-5p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+175	69	hsa-miR-513c-5p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+176	68	hsa-miR-374a-5p	3586	IL10	NM_000572	interleukin 10
+177	67	hsa-miR-510-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+178	67	hsa-miR-193a-5p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+179	67	hsa-miR-211-5p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+180	67	hsa-miR-107	57556	SEMA6A	NM_020796	semaphorin 6A
+181	67	hsa-miR-103a-3p	57556	SEMA6A	NM_020796	semaphorin 6A
+182	67	hsa-miR-204-5p	6091	ROBO1	NM_001145845	roundabout guidance receptor 1
+183	66	hsa-miR-1275	57556	SEMA6A	NM_020796	semaphorin 6A
+184	66	hsa-miR-642a-5p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+185	66	hsa-miR-93-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+186	66	hsa-miR-3605-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+187	66	hsa-miR-3154	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+188	65	hsa-miR-3121-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+189	64	hsa-miR-380-3p	3586	IL10	NM_000572	interleukin 10
+190	64	hsa-miR-3150b-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+191	63	hsa-miR-519b-3p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+192	63	hsa-miR-519a-3p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+193	63	hsa-miR-335-5p	5228	PGF	NM_001207012	placental growth factor
+194	63	hsa-miR-1270	57556	SEMA6A	NM_001300780	semaphorin 6A
+195	63	hsa-miR-1290	6091	ROBO1	NM_002941	roundabout guidance receptor 1
+196	63	hsa-miR-605-3p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+197	62	hsa-miR-1246	57556	SEMA6A	NM_001300780	semaphorin 6A
+198	62	hsa-miR-766-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+199	62	hsa-miR-15b-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+200	62	hsa-miR-3175	57556	SEMA6A	NM_020796	semaphorin 6A
+201	62	hsa-miR-374b-5p	3586	IL10	NM_000572	interleukin 10
+202	62	hsa-miR-574-5p	5228	PGF	NM_002632	placental growth factor
+203	61	hsa-miR-449c-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+204	61	hsa-miR-642a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+205	61	hsa-miR-4446-3p	57556	SEMA6A	NM_001300780	semaphorin 6A
+206	61	hsa-miR-34b-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+207	61	hsa-miR-2682-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+208	60	hsa-miR-449a	5228	PGF	NM_002632	placental growth factor
+209	60	hsa-miR-34a-5p	5228	PGF	NM_002632	placental growth factor
+210	60	hsa-miR-299-5p	57556	SEMA6A	NM_001300780	semaphorin 6A
+211	60	hsa-miR-138-5p	57556	SEMA6A	NM_001300780	semaphorin 6A

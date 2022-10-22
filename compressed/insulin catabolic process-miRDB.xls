@@ -1,0 +1,47 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	97	hsa-miR-7-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+2	96	hsa-miR-31-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+3	94	hsa-miR-548t-3p	3416	IDE	NM_001165946	insulin degrading enzyme
+4	88	hsa-miR-30a-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+5	88	hsa-miR-30c-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+6	88	hsa-miR-197-5p	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+7	88	hsa-miR-30b-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+8	88	hsa-miR-30d-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+9	88	hsa-miR-30e-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+10	86	hsa-miR-320d	3416	IDE	NM_001322797	insulin degrading enzyme
+11	86	hsa-miR-320c	3416	IDE	NM_001322797	insulin degrading enzyme
+12	86	hsa-miR-320b	3416	IDE	NM_001322797	insulin degrading enzyme
+13	86	hsa-miR-382-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+14	84	hsa-miR-656-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+15	83	hsa-miR-513a-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+16	83	hsa-miR-513c-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+17	82	hsa-miR-3143	3416	IDE	NM_001322797	insulin degrading enzyme
+18	80	hsa-miR-185-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+19	79	hsa-miR-92a-1-5p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+20	78	hsa-miR-508-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+21	76	hsa-miR-520h	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+22	76	hsa-miR-520g-3p	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+23	76	hsa-miR-1290	3416	IDE	NM_001165946	insulin degrading enzyme
+24	76	hsa-miR-3065-3p	3416	IDE	NM_001165946	insulin degrading enzyme
+25	74	hsa-miR-20a-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+26	73	hsa-miR-485-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+27	73	hsa-miR-548t-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+28	73	hsa-miR-374a-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+29	73	hsa-miR-539-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+30	73	hsa-miR-1270	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+31	70	hsa-miR-544a	3416	IDE	NM_001322797	insulin degrading enzyme
+32	70	hsa-miR-532-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+33	69	hsa-miR-485-5p	634	CEACAM1	NM_001184816	carcinoembryonic antigen related cell adhesion molecule 1
+34	68	hsa-miR-3198	3416	IDE	NM_001322797	insulin degrading enzyme
+35	68	hsa-miR-660-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+36	66	hsa-miR-576-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+37	66	hsa-miR-376c-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+38	66	hsa-miR-509-3-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+39	66	hsa-miR-374b-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+40	66	hsa-miR-509-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+41	65	hsa-miR-3138	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+42	64	hsa-miR-452-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+43	61	hsa-miR-3127-5p	634	CEACAM1	NM_001024912	carcinoembryonic antigen related cell adhesion molecule 1
+44	61	hsa-miR-876-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+45	60	hsa-miR-223-5p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1
+46	60	hsa-miR-509-3p	634	CEACAM1	NM_001712	carcinoembryonic antigen related cell adhesion molecule 1

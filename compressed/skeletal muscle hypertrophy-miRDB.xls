@@ -1,0 +1,53 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	99	hsa-miR-608	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+2	97	hsa-miR-96-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+3	97	hsa-miR-1271-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+4	97	hsa-miR-143-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+5	93	hsa-miR-99a-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+6	93	hsa-miR-99b-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+7	93	hsa-miR-100-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+8	92	hsa-miR-3183	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+9	91	hsa-miR-5001-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+10	91	hsa-miR-1185-1-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+11	91	hsa-miR-762	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+12	91	hsa-miR-1185-2-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+13	89	hsa-miR-204-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+14	89	hsa-miR-211-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+15	88	hsa-miR-193a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+16	88	hsa-miR-193b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+17	86	hsa-miR-144-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+18	84	hsa-miR-3121-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+19	83	hsa-miR-148a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+20	83	hsa-miR-148b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+21	83	hsa-miR-152-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+22	83	hsa-miR-548t-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+23	82	hsa-miR-101-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+24	79	hsa-miR-199a-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+25	79	hsa-miR-199b-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+26	79	hsa-miR-3129-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+27	79	hsa-miR-421	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+28	77	hsa-miR-545-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+29	75	hsa-miR-342-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+30	75	hsa-miR-548k	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+31	74	hsa-miR-3140-3p	4653	MYOC	NM_000261	myocilin
+32	73	hsa-miR-3190-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+33	73	hsa-miR-628-5p	4653	MYOC	NM_000261	myocilin
+34	71	hsa-miR-5699-5p	4653	MYOC	NM_000261	myocilin
+35	71	hsa-miR-183-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+36	71	hsa-miR-671-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+37	69	hsa-miR-3175	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+38	69	hsa-miR-149-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+39	69	hsa-miR-24-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+40	68	hsa-miR-139-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+41	68	hsa-miR-203a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+42	65	hsa-miR-3065-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+43	64	hsa-miR-136-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+44	64	hsa-miR-616-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+45	63	hsa-miR-20b-3p	4653	MYOC	NM_000261	myocilin
+46	62	hsa-miR-1-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+47	62	hsa-miR-206	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+48	62	hsa-miR-3934-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+49	61	hsa-miR-939-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+50	61	hsa-miR-30b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+51	61	hsa-miR-136-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+52	60	hsa-miR-185-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5

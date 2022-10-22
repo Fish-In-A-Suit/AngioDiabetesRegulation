@@ -1,0 +1,247 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-23a-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+2	100	hsa-miR-23b-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+3	99	hsa-miR-374b-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+4	99	hsa-miR-381-3p	84676	TRIM63	NM_032588	tripartite motif containing 63
+5	98	hsa-miR-200c-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+6	98	hsa-miR-429	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+7	98	hsa-miR-338-5p	2660	MSTN	NM_005259	myostatin
+8	98	hsa-miR-200b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+9	97	hsa-miR-129-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+10	96	hsa-miR-29c-3p	84676	TRIM63	NM_032588	tripartite motif containing 63
+11	96	hsa-miR-29a-3p	84676	TRIM63	NM_032588	tripartite motif containing 63
+12	96	hsa-miR-516b-5p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+13	96	hsa-miR-29b-3p	84676	TRIM63	NM_032588	tripartite motif containing 63
+14	96	hsa-miR-32-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+15	95	hsa-miR-539-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+16	95	hsa-miR-485-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+17	94	hsa-miR-186-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+18	94	hsa-miR-802	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+19	94	hsa-miR-548an	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+20	93	hsa-miR-30a-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+21	93	hsa-miR-485-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+22	93	hsa-miR-30c-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+23	93	hsa-miR-377-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+24	93	hsa-miR-30b-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+25	93	hsa-miR-30d-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+26	93	hsa-miR-30e-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+27	93	hsa-miR-27a-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+28	93	hsa-miR-27b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+29	92	hsa-miR-548e-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+30	92	hsa-miR-642a-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+31	92	hsa-miR-508-3p	2660	MSTN	NM_005259	myostatin
+32	92	hsa-miR-548a-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+33	92	hsa-miR-130a-3p	3600	IL15	NM_172175	interleukin 15
+34	92	hsa-miR-548f-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+35	91	hsa-miR-144-3p	3600	IL15	NM_000585	interleukin 15
+36	91	hsa-miR-150-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+37	91	hsa-miR-301a-3p	3600	IL15	NM_172175	interleukin 15
+38	91	hsa-miR-500b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+39	91	hsa-miR-301b-3p	3600	IL15	NM_172175	interleukin 15
+40	91	hsa-miR-362-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+41	91	hsa-miR-130b-3p	3600	IL15	NM_172175	interleukin 15
+42	91	hsa-miR-454-3p	3600	IL15	NM_172175	interleukin 15
+43	90	hsa-miR-589-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+44	90	hsa-miR-181c-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+45	90	hsa-miR-181d-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+46	90	hsa-miR-135b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+47	90	hsa-miR-181a-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+48	90	hsa-miR-135a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+49	90	hsa-miR-181b-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+50	89	hsa-miR-515-5p	2660	MSTN	NM_005259	myostatin
+51	89	hsa-miR-211-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+52	89	hsa-miR-138-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+53	89	hsa-miR-204-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+54	89	hsa-miR-3190-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+55	88	hsa-miR-23a-3p	84676	TRIM63	NM_032588	tripartite motif containing 63
+56	88	hsa-miR-942-3p	3600	IL15	NM_172175	interleukin 15
+57	88	hsa-miR-31-3p	3600	IL15	NM_172175	interleukin 15
+58	88	hsa-miR-320d	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+59	88	hsa-miR-374c-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+60	88	hsa-miR-320c	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+61	88	hsa-miR-23b-3p	84676	TRIM63	NM_032588	tripartite motif containing 63
+62	88	hsa-miR-128-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+63	88	hsa-miR-320b	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+64	86	hsa-miR-153-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+65	86	hsa-miR-2355-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+66	85	hsa-miR-218-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+67	85	hsa-miR-148a-3p	3600	IL15	NM_172175	interleukin 15
+68	85	hsa-miR-190a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+69	85	hsa-miR-152-3p	3600	IL15	NM_172175	interleukin 15
+70	85	hsa-miR-342-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+71	85	hsa-miR-655-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+72	85	hsa-miR-7-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+73	85	hsa-miR-145-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+74	85	hsa-miR-148b-3p	3600	IL15	NM_172175	interleukin 15
+75	85	hsa-miR-497-3p	4656	MYOG	NM_002479	myogenin
+76	84	hsa-miR-19a-3p	3600	IL15	NM_172175	interleukin 15
+77	84	hsa-miR-126-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+78	84	hsa-miR-19b-3p	3600	IL15	NM_172175	interleukin 15
+79	84	hsa-miR-767-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+80	84	hsa-miR-493-5p	3600	IL15	NM_000585	interleukin 15
+81	83	hsa-miR-542-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+82	83	hsa-miR-513a-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+83	83	hsa-miR-1323	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+84	83	hsa-miR-497-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+85	83	hsa-miR-513c-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+86	82	hsa-miR-450a-2-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+87	82	hsa-miR-3613-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+88	82	hsa-miR-155-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+89	82	hsa-miR-4524a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+90	82	hsa-miR-24-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+91	82	hsa-miR-219a-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+92	82	hsa-miR-513a-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+93	81	hsa-miR-548o-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+94	81	hsa-miR-450b-5p	2660	MSTN	NM_005259	myostatin
+95	80	hsa-miR-548t-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+96	79	hsa-miR-532-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+97	79	hsa-miR-664b-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+98	79	hsa-miR-664b-3p	4656	MYOG	NM_002479	myogenin
+99	79	hsa-miR-573	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+100	78	hsa-miR-449a	2660	MSTN	NM_005259	myostatin
+101	78	hsa-miR-374a-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+102	78	hsa-miR-374a-5p	3600	IL15	NM_000585	interleukin 15
+103	78	hsa-miR-449c-5p	2660	MSTN	NM_005259	myostatin
+104	78	hsa-miR-34a-5p	2660	MSTN	NM_005259	myostatin
+105	78	hsa-miR-34b-5p	2660	MSTN	NM_005259	myostatin
+106	78	hsa-miR-34c-5p	2660	MSTN	NM_005259	myostatin
+107	78	hsa-miR-2682-5p	2660	MSTN	NM_005259	myostatin
+108	78	hsa-miR-449b-5p	2660	MSTN	NM_005259	myostatin
+109	77	hsa-miR-619-5p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+110	76	hsa-miR-3173-3p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+111	76	hsa-miR-377-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+112	76	hsa-miR-323b-3p	2660	MSTN	NM_005259	myostatin
+113	76	hsa-miR-654-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+114	76	hsa-miR-18a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+115	76	hsa-miR-625-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+116	75	hsa-miR-3120-3p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+117	75	hsa-miR-221-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+118	75	hsa-miR-150-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+119	75	hsa-miR-338-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+120	75	hsa-miR-222-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+121	75	hsa-miR-374b-5p	3600	IL15	NM_000585	interleukin 15
+122	74	hsa-miR-532-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+123	74	hsa-miR-664b-5p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+124	74	hsa-miR-664b-3p	2660	MSTN	NM_005259	myostatin
+125	74	hsa-miR-452-3p	3600	IL15	NM_000585	interleukin 15
+126	74	hsa-miR-3140-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+127	74	hsa-miR-374b-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+128	74	hsa-miR-450b-5p	3600	IL15	NM_000585	interleukin 15
+129	73	hsa-miR-380-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+130	73	hsa-miR-200c-3p	2660	MSTN	NM_005259	myostatin
+131	73	hsa-miR-429	2660	MSTN	NM_005259	myostatin
+132	73	hsa-miR-200b-3p	2660	MSTN	NM_005259	myostatin
+133	73	hsa-miR-494-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+134	73	hsa-miR-582-5p	3600	IL15	NM_000585	interleukin 15
+135	73	hsa-miR-1323	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+136	72	hsa-miR-410-3p	2660	MSTN	NM_005259	myostatin
+137	72	hsa-miR-942-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+138	72	hsa-miR-3913-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+139	72	hsa-miR-3121-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+140	72	hsa-miR-3121-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+141	72	hsa-miR-4677-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+142	72	hsa-miR-1290	2660	MSTN	NM_005259	myostatin
+143	72	hsa-miR-135b-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+144	72	hsa-miR-135a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+145	71	hsa-miR-186-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+146	71	hsa-miR-509-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+147	71	hsa-miR-1275	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+148	71	hsa-miR-509-3-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+149	71	hsa-miR-433-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+150	71	hsa-miR-200a-5p	2660	MSTN	NM_005259	myostatin
+151	71	hsa-miR-3127-5p	4656	MYOG	NM_002479	myogenin
+152	71	hsa-miR-513a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+153	70	hsa-miR-1915-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+154	70	hsa-miR-381-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+155	70	hsa-miR-448	2660	MSTN	NM_005259	myostatin
+156	70	hsa-miR-1301-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+157	70	hsa-miR-24-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+158	70	hsa-miR-324-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+159	70	hsa-miR-636	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+160	69	hsa-miR-124-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+161	69	hsa-miR-33b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+162	69	hsa-miR-33a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+163	69	hsa-miR-506-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+164	69	hsa-miR-223-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+165	69	hsa-miR-605-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+166	69	hsa-miR-760	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+167	68	hsa-miR-548e-3p	2660	MSTN	NM_005259	myostatin
+168	68	hsa-miR-544a	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+169	68	hsa-miR-548a-3p	2660	MSTN	NM_005259	myostatin
+170	68	hsa-miR-576-3p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+171	68	hsa-miR-548o-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+172	68	hsa-miR-3605-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+173	68	hsa-miR-548f-3p	2660	MSTN	NM_005259	myostatin
+174	67	hsa-miR-4713-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+175	67	hsa-miR-339-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+176	67	hsa-miR-214-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+177	67	hsa-miR-202-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+178	67	hsa-miR-3157-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+179	67	hsa-miR-769-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+180	67	hsa-miR-761	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+181	66	hsa-miR-548t-3p	4656	MYOG	NM_002479	myogenin
+182	66	hsa-miR-183-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+183	66	hsa-miR-4713-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+184	66	hsa-miR-548e-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+185	66	hsa-miR-664b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+186	66	hsa-miR-548a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+187	66	hsa-miR-3150b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+188	66	hsa-miR-627-3p	2660	MSTN	NM_005259	myostatin
+189	66	hsa-miR-92a-1-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+190	66	hsa-miR-548f-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+191	65	hsa-miR-186-5p	2660	MSTN	NM_005259	myostatin
+192	65	hsa-miR-218-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+193	65	hsa-miR-452-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+194	65	hsa-miR-92b-5p	89	ACTN3	NM_001104	actinin alpha 3 (gene/pseudogene)
+195	65	hsa-miR-126-5p	3600	IL15	NM_000585	interleukin 15
+196	65	hsa-miR-3192-5p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+197	64	hsa-miR-374a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+198	64	hsa-miR-653-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+199	64	hsa-miR-500a-3p	2660	MSTN	NM_005259	myostatin
+200	64	hsa-miR-487a-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+201	64	hsa-miR-3130-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+202	64	hsa-miR-185-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+203	63	hsa-miR-32-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+204	63	hsa-miR-1287-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+205	63	hsa-miR-320d	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+206	63	hsa-miR-642a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+207	63	hsa-miR-548t-5p	84676	TRIM63	NM_032588	tripartite motif containing 63
+208	63	hsa-miR-129-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+209	63	hsa-miR-514a-3p	2660	MSTN	NM_005259	myostatin
+210	63	hsa-miR-1298-5p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+211	63	hsa-miR-320c	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+212	63	hsa-miR-2116-3p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+213	63	hsa-miR-320b	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+214	63	hsa-miR-514b-3p	2660	MSTN	NM_005259	myostatin
+215	62	hsa-miR-374a-5p	2660	MSTN	NM_005259	myostatin
+216	62	hsa-miR-382-3p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+217	62	hsa-miR-200c-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+218	62	hsa-miR-429	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+219	62	hsa-miR-1258	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+220	62	hsa-miR-200b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+221	62	hsa-miR-889-3p	2660	MSTN	NM_005259	myostatin
+222	61	hsa-miR-633	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+223	61	hsa-miR-15b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+224	61	hsa-miR-497-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+225	61	hsa-miR-16-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+226	61	hsa-miR-423-5p	2660	MSTN	NM_005259	myostatin
+227	61	hsa-miR-15a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+228	61	hsa-miR-195-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+229	61	hsa-miR-424-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+230	60	hsa-miR-1291	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+231	60	hsa-miR-548j-5p	2660	MSTN	NM_005259	myostatin
+232	60	hsa-miR-548c-5p	2660	MSTN	NM_005259	myostatin
+233	60	hsa-miR-1297	2660	MSTN	NM_005259	myostatin
+234	60	hsa-miR-26a-5p	2660	MSTN	NM_005259	myostatin
+235	60	hsa-miR-548b-5p	2660	MSTN	NM_005259	myostatin
+236	60	hsa-miR-26b-5p	2660	MSTN	NM_005259	myostatin
+237	60	hsa-miR-548d-5p	2660	MSTN	NM_005259	myostatin
+238	60	hsa-miR-548h-5p	2660	MSTN	NM_005259	myostatin
+239	60	hsa-miR-22-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+240	60	hsa-miR-1304-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+241	60	hsa-miR-548o-5p	2660	MSTN	NM_005259	myostatin
+242	60	hsa-miR-876-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+243	60	hsa-miR-548am-5p	2660	MSTN	NM_005259	myostatin
+244	60	hsa-miR-323b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+245	60	hsa-miR-660-5p	10891	PPARGC1A	NM_013261	PPARG coactivator 1 alpha
+246	60	hsa-miR-374b-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator

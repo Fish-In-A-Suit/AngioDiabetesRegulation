@@ -1,0 +1,508 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-449a	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+2	100	hsa-miR-34a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+3	100	hsa-miR-15b-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+4	100	hsa-miR-34c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+5	100	hsa-miR-497-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+6	100	hsa-miR-16-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+7	100	hsa-miR-15a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+8	100	hsa-miR-449b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+9	100	hsa-miR-195-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+10	100	hsa-miR-424-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+11	99	hsa-miR-32-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+12	99	hsa-miR-92b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+13	99	hsa-miR-3065-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+14	99	hsa-miR-7-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+15	99	hsa-miR-656-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+16	99	hsa-miR-92a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+17	99	hsa-miR-505-3p	3146	HMGB1	NM_002128	high mobility group box 1
+18	98	hsa-miR-367-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+19	98	hsa-miR-1297	4086	SMAD1	NM_001003688	SMAD family member 1
+20	98	hsa-miR-105-5p	7082	TJP1	NM_001301025	tight junction protein 1
+21	98	hsa-miR-363-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+22	98	hsa-miR-381-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+23	98	hsa-miR-149-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+24	98	hsa-miR-25-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+25	97	hsa-miR-576-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+26	97	hsa-miR-144-3p	7082	TJP1	NM_001301026	tight junction protein 1
+27	97	hsa-miR-449c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+28	97	hsa-miR-26a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+29	97	hsa-miR-34b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+30	97	hsa-miR-26b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+31	97	hsa-miR-2682-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+32	96	hsa-miR-519b-3p	3716	JAK1	NM_001320923	Janus kinase 1
+33	96	hsa-miR-23a-3p	7082	TJP1	NM_001301025	tight junction protein 1
+34	96	hsa-miR-519a-3p	3716	JAK1	NM_001320923	Janus kinase 1
+35	96	hsa-miR-410-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+36	96	hsa-miR-5001-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+37	96	hsa-miR-23b-3p	7082	TJP1	NM_001301025	tight junction protein 1
+38	96	hsa-miR-568	7082	TJP1	NM_001301025	tight junction protein 1
+39	96	hsa-miR-762	339123	JMJD8	NM_001323922	jumonji domain containing 8
+40	95	hsa-miR-30a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+41	95	hsa-miR-15b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+42	95	hsa-miR-411-3p	3586	IL10	NM_000572	interleukin 10
+43	95	hsa-miR-30c-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+44	95	hsa-miR-545-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+45	95	hsa-miR-135b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+46	95	hsa-miR-874-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+47	95	hsa-miR-16-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+48	95	hsa-miR-216b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+49	95	hsa-miR-30b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+50	95	hsa-miR-135a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+51	95	hsa-miR-379-3p	3586	IL10	NM_000572	interleukin 10
+52	95	hsa-miR-568	3716	JAK1	NM_001321855	Janus kinase 1
+53	95	hsa-miR-30d-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+54	95	hsa-miR-30e-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+55	95	hsa-miR-15a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+56	95	hsa-miR-195-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+57	95	hsa-miR-326	3678	ITGA5	NM_002205	integrin subunit alpha 5
+58	94	hsa-miR-374b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+59	94	hsa-miR-1228-3p	7082	TJP1	NM_001301025	tight junction protein 1
+60	94	hsa-miR-539-3p	2246	FGF1	NM_033137	fibroblast growth factor 1
+61	94	hsa-miR-214-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+62	94	hsa-miR-29c-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+63	94	hsa-miR-497-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+64	94	hsa-miR-182-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+65	94	hsa-miR-29a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+66	94	hsa-miR-29b-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+67	94	hsa-miR-485-3p	2246	FGF1	NM_033137	fibroblast growth factor 1
+68	94	hsa-miR-761	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+69	94	hsa-miR-424-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+70	93	hsa-miR-3120-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+71	93	hsa-miR-32-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+72	93	hsa-miR-3121-3p	3586	IL10	NM_000572	interleukin 10
+73	93	hsa-miR-92b-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+74	93	hsa-miR-200c-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+75	93	hsa-miR-429	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+76	93	hsa-miR-582-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+77	93	hsa-miR-135b-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+78	93	hsa-miR-135a-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+79	93	hsa-miR-200b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+80	93	hsa-miR-513a-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+81	93	hsa-miR-493-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+82	93	hsa-miR-92a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+83	92	hsa-miR-23a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+84	92	hsa-miR-576-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+85	92	hsa-miR-873-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+86	92	hsa-miR-15b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+87	92	hsa-miR-107	9314	KLF4	NM_001314052	Kruppel like factor 4
+88	92	hsa-miR-16-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+89	92	hsa-miR-23b-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+90	92	hsa-miR-103a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+91	92	hsa-miR-202-3p	3586	IL10	NM_000572	interleukin 10
+92	92	hsa-miR-625-5p	5315	PKM	NM_182471	pyruvate kinase M1/2
+93	92	hsa-miR-15a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+94	92	hsa-miR-195-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+95	91	hsa-miR-186-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+96	91	hsa-miR-367-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+97	91	hsa-miR-509-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+98	91	hsa-miR-509-3-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+99	91	hsa-miR-363-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+100	91	hsa-miR-627-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+101	91	hsa-miR-500b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+102	91	hsa-miR-128-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+103	91	hsa-miR-25-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+104	91	hsa-miR-3190-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+105	91	hsa-miR-362-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+106	90	hsa-miR-450a-1-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+107	90	hsa-miR-497-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+108	90	hsa-miR-503-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+109	90	hsa-miR-522-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+110	90	hsa-miR-27a-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+111	90	hsa-miR-424-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+112	90	hsa-miR-203a-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+113	90	hsa-miR-519c-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+114	90	hsa-miR-27b-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+115	89	hsa-miR-205-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+116	89	hsa-miR-939-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+117	89	hsa-miR-939-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+118	89	hsa-miR-508-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+119	89	hsa-miR-545-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+120	88	hsa-miR-346	9314	KLF4	NM_001314052	Kruppel like factor 4
+121	88	hsa-miR-3187-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+122	88	hsa-miR-200c-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+123	88	hsa-miR-429	57608	JCAD	NM_020848	junctional cadherin 5 associated
+124	88	hsa-miR-655-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+125	88	hsa-miR-374c-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+126	88	hsa-miR-212-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+127	88	hsa-miR-548o-3p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+128	88	hsa-miR-548an	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+129	88	hsa-miR-200b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+130	88	hsa-miR-497-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+131	88	hsa-miR-369-3p	7082	TJP1	NM_001301025	tight junction protein 1
+132	88	hsa-miR-191-5p	7082	TJP1	NM_001301025	tight junction protein 1
+133	87	hsa-miR-23a-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+134	87	hsa-miR-148a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+135	87	hsa-miR-205-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+136	87	hsa-miR-660-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+137	87	hsa-miR-152-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+138	87	hsa-miR-361-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+139	87	hsa-miR-708-3p	7082	TJP1	NM_001301025	tight junction protein 1
+140	87	hsa-miR-23b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+141	87	hsa-miR-297	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+142	87	hsa-miR-148b-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+143	87	hsa-miR-128-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+144	87	hsa-miR-454-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+145	86	hsa-miR-449a	9314	KLF4	NM_001314052	Kruppel like factor 4
+146	86	hsa-miR-370-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+147	86	hsa-miR-96-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+148	86	hsa-miR-1275	5315	PKM	NM_182471	pyruvate kinase M1/2
+149	86	hsa-miR-3121-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+150	86	hsa-miR-34a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+151	86	hsa-miR-1271-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+152	86	hsa-miR-514a-3p	3716	JAK1	NM_001320923	Janus kinase 1
+153	86	hsa-miR-3942-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+154	86	hsa-miR-297	7082	TJP1	NM_175610	tight junction protein 1
+155	86	hsa-miR-1323	168667	BMPER	NM_133468	BMP binding endothelial regulator
+156	86	hsa-miR-143-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+157	86	hsa-miR-493-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+158	86	hsa-miR-561-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+159	86	hsa-miR-514b-3p	3716	JAK1	NM_001320923	Janus kinase 1
+160	85	hsa-miR-1297	3678	ITGA5	NM_002205	integrin subunit alpha 5
+161	85	hsa-miR-200c-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+162	85	hsa-miR-17-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+163	85	hsa-miR-429	9314	KLF4	NM_001314052	Kruppel like factor 4
+164	85	hsa-miR-4667-5p	7082	TJP1	NM_001301026	tight junction protein 1
+165	85	hsa-miR-338-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+166	85	hsa-miR-101-3p	7082	TJP1	NM_175610	tight junction protein 1
+167	85	hsa-miR-200b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+168	85	hsa-miR-27a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+169	85	hsa-miR-493-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+170	85	hsa-miR-27b-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+171	84	hsa-miR-5699-5p	3716	JAK1	NM_001321855	Janus kinase 1
+172	84	hsa-miR-186-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+173	84	hsa-miR-148a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+174	84	hsa-miR-1297	9314	KLF4	NM_001314052	Kruppel like factor 4
+175	84	hsa-miR-495-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+176	84	hsa-miR-152-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+177	84	hsa-miR-150-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+178	84	hsa-miR-556-5p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+179	84	hsa-miR-34c-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+180	84	hsa-miR-503-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+181	84	hsa-miR-516b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+182	84	hsa-miR-107	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+183	84	hsa-miR-103a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+184	84	hsa-miR-484	2246	FGF1	NM_001257206	fibroblast growth factor 1
+185	84	hsa-miR-148b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+186	84	hsa-miR-338-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+187	84	hsa-miR-767-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+188	84	hsa-miR-449b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+189	83	hsa-miR-1-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+190	83	hsa-miR-3173-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+191	83	hsa-miR-1827	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+192	83	hsa-miR-20a-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+193	83	hsa-miR-494-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+194	83	hsa-miR-206	9314	KLF4	NM_001314052	Kruppel like factor 4
+195	83	hsa-miR-125a-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+196	83	hsa-miR-760	2246	FGF1	NM_001257206	fibroblast growth factor 1
+197	82	hsa-miR-133a-3p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+198	82	hsa-miR-23a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+199	82	hsa-miR-410-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+200	82	hsa-miR-301a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+201	82	hsa-miR-4667-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+202	82	hsa-miR-133b	2246	FGF1	NM_001257212	fibroblast growth factor 1
+203	82	hsa-miR-29c-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+204	82	hsa-miR-29a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+205	82	hsa-miR-330-3p	7082	TJP1	NM_001301026	tight junction protein 1
+206	82	hsa-miR-23b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+207	82	hsa-miR-24-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+208	82	hsa-miR-29b-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+209	82	hsa-miR-301b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+210	82	hsa-miR-122-5p	5315	PKM	NM_001206799	pyruvate kinase M1/2
+211	82	hsa-miR-130a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+212	82	hsa-miR-130b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+213	81	hsa-miR-410-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+214	81	hsa-miR-10a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+215	81	hsa-miR-622	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+216	81	hsa-miR-26a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+217	81	hsa-miR-495-3p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+218	81	hsa-miR-513a-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+219	81	hsa-miR-26b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+220	81	hsa-miR-1185-1-3p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+221	81	hsa-miR-576-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+222	81	hsa-miR-543	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+223	81	hsa-miR-223-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+224	81	hsa-miR-10b-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+225	81	hsa-miR-1185-2-3p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+226	81	hsa-miR-513c-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+227	80	hsa-miR-106b-5p	3716	JAK1	NM_001320923	Janus kinase 1
+228	80	hsa-miR-450a-1-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+229	80	hsa-miR-144-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+230	80	hsa-miR-18b-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+231	80	hsa-miR-26a-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+232	80	hsa-miR-513a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+233	80	hsa-miR-3194-5p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+234	80	hsa-miR-3065-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+235	80	hsa-miR-26b-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+236	80	hsa-miR-548t-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+237	80	hsa-miR-107	2247	FGF2	NM_002006	fibroblast growth factor 2
+238	80	hsa-miR-106a-5p	3716	JAK1	NM_001320923	Janus kinase 1
+239	80	hsa-miR-103a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+240	80	hsa-miR-18a-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+241	80	hsa-miR-138-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+242	80	hsa-miR-3152-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+243	80	hsa-miR-221-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+244	80	hsa-miR-377-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+245	80	hsa-miR-6503-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+246	80	hsa-miR-223-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+247	80	hsa-miR-20a-5p	3716	JAK1	NM_001320923	Janus kinase 1
+248	80	hsa-miR-656-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+249	80	hsa-miR-513c-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+250	80	hsa-miR-889-3p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+251	79	hsa-miR-548t-5p	7082	TJP1	NM_001301025	tight junction protein 1
+252	79	hsa-miR-299-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+253	79	hsa-miR-126-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+254	79	hsa-miR-365b-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+255	79	hsa-miR-365a-3p	2246	FGF1	NM_033136	fibroblast growth factor 1
+256	79	hsa-miR-3065-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+257	79	hsa-miR-125a-3p	3586	IL10	NM_000572	interleukin 10
+258	79	hsa-miR-450b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+259	79	hsa-miR-889-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+260	78	hsa-miR-449a	57608	JCAD	NM_020848	junctional cadherin 5 associated
+261	78	hsa-miR-491-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+262	78	hsa-miR-509-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+263	78	hsa-miR-548e-3p	221074	SLC39A12	NM_001282734	solute carrier family 39 member 12
+264	78	hsa-miR-514a-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+265	78	hsa-miR-509-3-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+266	78	hsa-miR-589-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+267	78	hsa-miR-34a-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+268	78	hsa-miR-3136-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+269	78	hsa-miR-19a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+270	78	hsa-miR-4667-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+271	78	hsa-miR-545-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+272	78	hsa-miR-548a-3p	221074	SLC39A12	NM_001282734	solute carrier family 39 member 12
+273	78	hsa-miR-3691-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+274	78	hsa-miR-20a-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+275	78	hsa-miR-20b-5p	3716	JAK1	NM_001320923	Janus kinase 1
+276	78	hsa-miR-93-5p	3716	JAK1	NM_001320923	Janus kinase 1
+277	78	hsa-miR-17-5p	3716	JAK1	NM_001320923	Janus kinase 1
+278	78	hsa-miR-19b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+279	78	hsa-miR-548f-3p	221074	SLC39A12	NM_001282734	solute carrier family 39 member 12
+280	78	hsa-miR-519d-3p	3716	JAK1	NM_001320923	Janus kinase 1
+281	77	hsa-miR-885-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+282	77	hsa-miR-1-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+283	77	hsa-miR-302c-3p	3716	JAK1	NM_001321855	Janus kinase 1
+284	77	hsa-miR-874-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+285	77	hsa-miR-302a-3p	3716	JAK1	NM_001321855	Janus kinase 1
+286	77	hsa-miR-488-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+287	77	hsa-miR-302d-3p	3716	JAK1	NM_001321855	Janus kinase 1
+288	77	hsa-miR-302b-3p	3716	JAK1	NM_001321855	Janus kinase 1
+289	77	hsa-miR-206	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+290	77	hsa-miR-561-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+291	76	hsa-miR-576-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+292	76	hsa-miR-410-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+293	76	hsa-let-7f-5p	3586	IL10	NM_000572	interleukin 10
+294	76	hsa-miR-34c-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+295	76	hsa-miR-629-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+296	76	hsa-miR-98-5p	3586	IL10	NM_000572	interleukin 10
+297	76	hsa-miR-545-5p	3586	IL10	NM_000572	interleukin 10
+298	76	hsa-let-7b-5p	3586	IL10	NM_000572	interleukin 10
+299	76	hsa-miR-30a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+300	76	hsa-let-7g-5p	3586	IL10	NM_000572	interleukin 10
+301	76	hsa-miR-499a-5p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+302	76	hsa-miR-3909	2246	FGF1	NM_033137	fibroblast growth factor 1
+303	76	hsa-miR-30e-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+304	76	hsa-let-7a-5p	3586	IL10	NM_000572	interleukin 10
+305	76	hsa-let-7i-5p	3586	IL10	NM_000572	interleukin 10
+306	76	hsa-miR-449b-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+307	76	hsa-let-7e-5p	3586	IL10	NM_000572	interleukin 10
+308	76	hsa-let-7c-5p	3586	IL10	NM_000572	interleukin 10
+309	75	hsa-miR-589-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+310	75	hsa-miR-433-3p	7082	TJP1	NM_001301025	tight junction protein 1
+311	75	hsa-miR-548t-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+312	75	hsa-miR-455-3p	7082	TJP1	NM_175610	tight junction protein 1
+313	75	hsa-miR-145-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+314	75	hsa-miR-762	5315	PKM	NM_001206796	pyruvate kinase M1/2
+315	75	hsa-miR-497-3p	7082	TJP1	NM_001301025	tight junction protein 1
+316	75	hsa-miR-493-5p	7082	TJP1	NM_001301025	tight junction protein 1
+317	75	hsa-miR-548l	57608	JCAD	NM_020848	junctional cadherin 5 associated
+318	74	hsa-miR-3120-3p	3146	HMGB1	NM_002128	high mobility group box 1
+319	74	hsa-miR-372-3p	3716	JAK1	NM_001321855	Janus kinase 1
+320	74	hsa-miR-216a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+321	74	hsa-miR-624-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+322	74	hsa-miR-124-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+323	74	hsa-miR-205-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+324	74	hsa-miR-513a-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+325	74	hsa-miR-876-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+326	74	hsa-miR-520c-3p	3716	JAK1	NM_001321855	Janus kinase 1
+327	74	hsa-miR-500b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+328	74	hsa-let-7d-5p	3586	IL10	NM_000572	interleukin 10
+329	74	hsa-miR-373-3p	3716	JAK1	NM_001321855	Janus kinase 1
+330	74	hsa-miR-3143	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+331	74	hsa-miR-545-5p	168667	BMPER	NM_133468	BMP binding endothelial regulator
+332	74	hsa-miR-101-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+333	74	hsa-miR-506-3p	9314	KLF4	NM_001314052	Kruppel like factor 4
+334	74	hsa-miR-125a-3p	3716	JAK1	NM_001321855	Janus kinase 1
+335	74	hsa-miR-513c-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+336	73	hsa-miR-511-3p	7082	TJP1	NM_175610	tight junction protein 1
+337	73	hsa-miR-3140-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+338	73	hsa-miR-504-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+339	72	hsa-miR-664b-3p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+340	72	hsa-miR-1278	3716	JAK1	NM_001321855	Janus kinase 1
+341	72	hsa-miR-212-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+342	72	hsa-miR-382-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+343	72	hsa-miR-27a-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+344	72	hsa-miR-27b-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+345	71	hsa-miR-486-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+346	71	hsa-miR-186-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+347	71	hsa-miR-589-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+348	71	hsa-miR-1224-5p	2246	FGF1	NM_033136	fibroblast growth factor 1
+349	71	hsa-miR-330-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+350	71	hsa-miR-1179	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+351	71	hsa-miR-3175	2246	FGF1	NM_033136	fibroblast growth factor 1
+352	71	hsa-miR-759	3146	HMGB1	NM_001313892	high mobility group box 1
+353	71	hsa-miR-219a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+354	70	hsa-miR-374a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+355	70	hsa-miR-339-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+356	70	hsa-miR-495-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+357	70	hsa-miR-1270	7082	TJP1	NM_175610	tight junction protein 1
+358	70	hsa-miR-129-5p	3146	HMGB1	NM_002128	high mobility group box 1
+359	70	hsa-miR-411-3p	3146	HMGB1	NM_002128	high mobility group box 1
+360	70	hsa-miR-381-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+361	70	hsa-miR-5001-5p	5315	PKM	NM_001206796	pyruvate kinase M1/2
+362	70	hsa-miR-499a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+363	70	hsa-miR-379-3p	3146	HMGB1	NM_002128	high mobility group box 1
+364	70	hsa-miR-568	2247	FGF2	NM_002006	fibroblast growth factor 2
+365	70	hsa-miR-3154	9314	KLF4	NM_001314052	Kruppel like factor 4
+366	69	hsa-miR-186-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+367	69	hsa-miR-382-3p	3146	HMGB1	NM_002128	high mobility group box 1
+368	69	hsa-miR-3121-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+369	69	hsa-miR-495-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+370	69	hsa-miR-1303	7082	TJP1	NM_175610	tight junction protein 1
+371	69	hsa-miR-93-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+372	69	hsa-miR-423-5p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+373	69	hsa-miR-5196-3p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+374	69	hsa-miR-3175	168667	BMPER	NM_133468	BMP binding endothelial regulator
+375	69	hsa-miR-513a-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+376	68	hsa-miR-106b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+377	68	hsa-miR-144-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+378	68	hsa-miR-374a-5p	3586	IL10	NM_000572	interleukin 10
+379	68	hsa-miR-556-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+380	68	hsa-miR-802	7082	TJP1	NM_175610	tight junction protein 1
+381	68	hsa-miR-126-5p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+382	68	hsa-miR-423-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+383	68	hsa-miR-196b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+384	68	hsa-miR-20a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+385	68	hsa-miR-196a-5p	3146	HMGB1	NM_002128	high mobility group box 1
+386	67	hsa-miR-548t-3p	7082	TJP1	NM_001301025	tight junction protein 1
+387	67	hsa-miR-664b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+388	67	hsa-miR-802	3716	JAK1	NM_001321855	Janus kinase 1
+389	67	hsa-miR-299-3p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+390	67	hsa-miR-627-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+391	67	hsa-miR-627-3p	3146	HMGB1	NM_002128	high mobility group box 1
+392	67	hsa-miR-31-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+393	67	hsa-miR-3192-5p	6271	S100A1	NM_006271	S100 calcium binding protein A1
+394	67	hsa-miR-342-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+395	66	hsa-miR-32-5p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+396	66	hsa-miR-106b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+397	66	hsa-miR-367-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+398	66	hsa-miR-514b-5p	3716	JAK1	NM_001321855	Janus kinase 1
+399	66	hsa-miR-513c-5p	3716	JAK1	NM_001321855	Janus kinase 1
+400	66	hsa-miR-92b-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+401	66	hsa-miR-3187-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+402	66	hsa-miR-3171	7422	VEGFA	NM_003376	vascular endothelial growth factor A
+403	66	hsa-miR-140-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+404	66	hsa-miR-363-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+405	66	hsa-miR-545-3p	3716	JAK1	NM_001320923	Janus kinase 1
+406	66	hsa-miR-545-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+407	66	hsa-miR-3074-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+408	66	hsa-miR-106a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+409	66	hsa-miR-31-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+410	66	hsa-miR-3934-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+411	66	hsa-miR-4662a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+412	66	hsa-miR-223-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+413	66	hsa-miR-20a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+414	66	hsa-miR-25-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+415	66	hsa-miR-92a-3p	221074	SLC39A12	NM_001145195	solute carrier family 39 member 12
+416	65	hsa-miR-576-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+417	65	hsa-miR-1291	3678	ITGA5	NM_002205	integrin subunit alpha 5
+418	65	hsa-miR-590-5p	2246	FGF1	NM_033137	fibroblast growth factor 1
+419	65	hsa-miR-33b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+420	65	hsa-miR-20b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+421	65	hsa-miR-608	6271	S100A1	NM_006271	S100 calcium binding protein A1
+422	65	hsa-miR-33a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+423	65	hsa-miR-93-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+424	65	hsa-miR-580-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+425	65	hsa-miR-17-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+426	65	hsa-miR-425-5p	7082	TJP1	NM_175610	tight junction protein 1
+427	65	hsa-miR-519d-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+428	65	hsa-miR-760	168667	BMPER	NM_133468	BMP binding endothelial regulator
+429	64	hsa-miR-515-5p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+430	64	hsa-miR-329-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+431	64	hsa-miR-380-3p	3586	IL10	NM_000572	interleukin 10
+432	64	hsa-miR-21-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+433	64	hsa-miR-423-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+434	64	hsa-miR-362-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+435	64	hsa-miR-654-5p	6271	S100A1	NM_006271	S100 calcium binding protein A1
+436	64	hsa-miR-181a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+437	64	hsa-miR-181b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+438	64	hsa-miR-637	2246	FGF1	NM_001257206	fibroblast growth factor 1
+439	64	hsa-miR-582-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+440	64	hsa-miR-185-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+441	64	hsa-miR-3154	2247	FGF2	NM_002006	fibroblast growth factor 2
+442	64	hsa-miR-561-5p	7082	TJP1	NM_001301025	tight junction protein 1
+443	64	hsa-miR-450b-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+444	63	hsa-miR-576-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+445	63	hsa-miR-548t-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+446	63	hsa-miR-514a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+447	63	hsa-miR-942-3p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+448	63	hsa-miR-214-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+449	63	hsa-miR-513a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+450	63	hsa-miR-142-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+451	63	hsa-miR-200c-3p	7082	TJP1	NM_001301025	tight junction protein 1
+452	63	hsa-miR-429	7082	TJP1	NM_001301025	tight junction protein 1
+453	63	hsa-miR-556-5p	7082	TJP1	NM_175610	tight junction protein 1
+454	63	hsa-miR-200b-3p	7082	TJP1	NM_001301025	tight junction protein 1
+455	63	hsa-miR-759	168667	BMPER	NM_133468	BMP binding endothelial regulator
+456	63	hsa-miR-513c-3p	3146	HMGB1	NM_002128	high mobility group box 1
+457	62	hsa-miR-23a-3p	3716	JAK1	NM_001321855	Janus kinase 1
+458	62	hsa-miR-183-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+459	62	hsa-miR-301a-5p	339123	JMJD8	NM_001323922	jumonji domain containing 8
+460	62	hsa-miR-1275	2246	FGF1	NM_001257206	fibroblast growth factor 1
+461	62	hsa-miR-625-3p	7082	TJP1	NM_175610	tight junction protein 1
+462	62	hsa-miR-3194-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+463	62	hsa-miR-548t-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+464	62	hsa-miR-455-5p	7082	TJP1	NM_175610	tight junction protein 1
+465	62	hsa-miR-496	2247	FGF2	NM_002006	fibroblast growth factor 2
+466	62	hsa-miR-627-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+467	62	hsa-miR-30a-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+468	62	hsa-miR-20b-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+469	62	hsa-miR-106a-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+470	62	hsa-miR-608	57608	JCAD	NM_020848	junctional cadherin 5 associated
+471	62	hsa-miR-23b-3p	3716	JAK1	NM_001321855	Janus kinase 1
+472	62	hsa-miR-3138	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+473	62	hsa-miR-93-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+474	62	hsa-miR-30e-3p	3678	ITGA5	NM_002205	integrin subunit alpha 5
+475	62	hsa-miR-874-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+476	62	hsa-miR-17-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+477	62	hsa-miR-342-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+478	62	hsa-miR-625-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+479	62	hsa-miR-519d-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+480	62	hsa-miR-374b-5p	3586	IL10	NM_000572	interleukin 10
+481	61	hsa-miR-23a-3p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+482	61	hsa-miR-155-5p	4086	SMAD1	NM_001003688	SMAD family member 1
+483	61	hsa-miR-642a-5p	9314	KLF4	NM_001314052	Kruppel like factor 4
+484	61	hsa-miR-1290	7082	TJP1	NM_001301026	tight junction protein 1
+485	61	hsa-miR-3143	2246	FGF1	NM_001257206	fibroblast growth factor 1
+486	61	hsa-miR-3150b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+487	61	hsa-miR-496	3146	HMGB1	NM_002128	high mobility group box 1
+488	61	hsa-miR-1285-3p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+489	61	hsa-miR-23b-3p	2523	FUT1	NM_000148	fucosyltransferase 1 (H blood group)
+490	61	hsa-miR-3936	7082	TJP1	NM_175610	tight junction protein 1
+491	61	hsa-miR-32-3p	7082	TJP1	NM_001301025	tight junction protein 1
+492	61	hsa-miR-760	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+493	61	hsa-miR-326	2246	FGF1	NM_001257206	fibroblast growth factor 1
+494	60	hsa-miR-502-3p	7082	TJP1	NM_175610	tight junction protein 1
+495	60	hsa-miR-3918	7082	TJP1	NM_001301026	tight junction protein 1
+496	60	hsa-miR-134-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+497	60	hsa-miR-501-3p	7082	TJP1	NM_175610	tight junction protein 1
+498	60	hsa-miR-660-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+499	60	hsa-miR-500b-3p	2246	FGF1	NM_001257206	fibroblast growth factor 1
+500	60	hsa-miR-500b-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+501	60	hsa-miR-580-3p	3716	JAK1	NM_001321855	Janus kinase 1
+502	60	hsa-miR-27a-3p	4086	SMAD1	NM_001003688	SMAD family member 1
+503	60	hsa-miR-185-5p	7082	TJP1	NM_001301026	tight junction protein 1
+504	60	hsa-miR-362-5p	2246	FGF1	NM_001257212	fibroblast growth factor 1
+505	60	hsa-miR-761	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+506	60	hsa-miR-203a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+507	60	hsa-miR-27b-3p	4086	SMAD1	NM_001003688	SMAD family member 1

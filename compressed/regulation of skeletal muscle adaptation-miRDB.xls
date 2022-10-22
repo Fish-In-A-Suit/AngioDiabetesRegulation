@@ -1,0 +1,212 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-544a	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+2	99	hsa-miR-361-3p	816	CAMK2B	NM_172079	calcium/calmodulin dependent protein kinase II beta
+3	99	hsa-miR-608	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+4	99	hsa-miR-493-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+5	98	hsa-miR-145-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+6	97	hsa-miR-96-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+7	97	hsa-miR-1271-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+8	97	hsa-miR-143-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+9	96	hsa-miR-548t-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+10	96	hsa-miR-548an	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+11	95	hsa-miR-3918	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+12	94	hsa-miR-3065-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+13	94	hsa-miR-149-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+14	94	hsa-miR-493-5p	9569	GTF2IRD1	NM_005685	GTF2I repeat domain containing 1
+15	93	hsa-miR-99b-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+16	93	hsa-miR-511-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+17	93	hsa-miR-24-3p	816	CAMK2B	NM_001293170	calcium/calmodulin dependent protein kinase II beta
+18	93	hsa-miR-100-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+19	93	hsa-miR-99a-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+20	92	hsa-miR-23a-3p	818	CAMK2G	NM_001320898	calcium/calmodulin dependent protein kinase II gamma
+21	92	hsa-miR-3183	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+22	92	hsa-miR-23b-3p	818	CAMK2G	NM_001320898	calcium/calmodulin dependent protein kinase II gamma
+23	91	hsa-miR-1185-1-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+24	91	hsa-miR-5001-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+25	91	hsa-miR-762	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+26	91	hsa-miR-1185-2-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+27	90	hsa-miR-30a-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+28	90	hsa-miR-589-3p	816	CAMK2B	NM_001293170	calcium/calmodulin dependent protein kinase II beta
+29	90	hsa-miR-495-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+30	90	hsa-miR-30c-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+31	90	hsa-miR-1303	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+32	90	hsa-miR-545-3p	816	CAMK2B	NM_001293170	calcium/calmodulin dependent protein kinase II beta
+33	90	hsa-miR-30b-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+34	90	hsa-miR-30d-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+35	90	hsa-miR-30e-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+36	89	hsa-miR-211-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+37	89	hsa-miR-204-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+38	88	hsa-miR-30a-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+39	88	hsa-miR-1297	7138	TNNT1	NM_001291774	troponin T1, slow skeletal type
+40	88	hsa-miR-193a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+41	88	hsa-miR-939-3p	816	CAMK2B	NM_172079	calcium/calmodulin dependent protein kinase II beta
+42	88	hsa-miR-30c-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+43	88	hsa-miR-30b-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+44	88	hsa-miR-548k	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+45	88	hsa-miR-193b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+46	88	hsa-miR-30d-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+47	88	hsa-miR-30e-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+48	87	hsa-miR-513a-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+49	87	hsa-miR-654-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+50	87	hsa-miR-513c-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+51	86	hsa-miR-144-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+52	86	hsa-miR-26a-5p	7138	TNNT1	NM_001291774	troponin T1, slow skeletal type
+53	86	hsa-miR-26b-5p	7138	TNNT1	NM_001291774	troponin T1, slow skeletal type
+54	86	hsa-miR-496	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+55	85	hsa-miR-96-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+56	85	hsa-miR-548e-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+57	85	hsa-miR-150-5p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+58	85	hsa-miR-628-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+59	85	hsa-miR-376a-3p	488	ATP2A2	NM_001681	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+60	85	hsa-miR-376b-3p	488	ATP2A2	NM_001681	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+61	85	hsa-let-7f-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+62	85	hsa-miR-181c-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+63	85	hsa-miR-181d-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+64	85	hsa-miR-182-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+65	85	hsa-miR-98-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+66	85	hsa-miR-548a-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+67	85	hsa-miR-181a-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+68	85	hsa-let-7b-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+69	85	hsa-let-7g-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+70	85	hsa-miR-499a-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+71	85	hsa-miR-181b-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+72	85	hsa-let-7a-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+73	85	hsa-let-7i-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+74	85	hsa-miR-548f-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+75	85	hsa-miR-194-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+76	85	hsa-let-7e-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+77	85	hsa-let-7c-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+78	84	hsa-miR-3121-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+79	84	hsa-miR-495-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+80	83	hsa-miR-548t-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+81	83	hsa-miR-148a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+82	83	hsa-miR-152-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+83	83	hsa-miR-1271-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+84	83	hsa-miR-148b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+85	82	hsa-miR-633	818	CAMK2G	NM_001222	calcium/calmodulin dependent protein kinase II gamma
+86	82	hsa-miR-3130-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+87	82	hsa-miR-1910-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+88	82	hsa-miR-381-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+89	82	hsa-miR-101-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+90	82	hsa-miR-6511a-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+91	81	hsa-miR-3144-5p	818	CAMK2G	NM_001222	calcium/calmodulin dependent protein kinase II gamma
+92	81	hsa-miR-3121-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+93	81	hsa-miR-17-3p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+94	81	hsa-let-7d-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+95	80	hsa-miR-216a-5p	818	CAMK2G	NM_001320898	calcium/calmodulin dependent protein kinase II gamma
+96	80	hsa-miR-10a-5p	816	CAMK2B	NM_001220	calcium/calmodulin dependent protein kinase II beta
+97	80	hsa-miR-127-5p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+98	80	hsa-miR-589-3p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+99	80	hsa-miR-512-3p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+100	80	hsa-miR-184	816	CAMK2B	NM_001293170	calcium/calmodulin dependent protein kinase II beta
+101	80	hsa-miR-324-5p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+102	80	hsa-miR-10b-5p	816	CAMK2B	NM_001220	calcium/calmodulin dependent protein kinase II beta
+103	80	hsa-miR-338-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+104	79	hsa-miR-3129-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+105	79	hsa-miR-421	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+106	79	hsa-miR-142-3p	488	ATP2A2	NM_001681	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+107	79	hsa-miR-199a-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+108	79	hsa-miR-561-5p	4625	MYH7	NM_000257	myosin heavy chain 7
+109	79	hsa-miR-199b-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+110	78	hsa-miR-374b-3p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+111	78	hsa-miR-29c-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+112	78	hsa-miR-151a-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+113	78	hsa-miR-29a-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+114	78	hsa-miR-29b-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+115	78	hsa-miR-605-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+116	77	hsa-miR-545-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+117	77	hsa-miR-493-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+118	76	hsa-miR-589-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+119	76	hsa-miR-214-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+120	76	hsa-miR-651-5p	816	CAMK2B	NM_001293170	calcium/calmodulin dependent protein kinase II beta
+121	76	hsa-miR-1468-5p	818	CAMK2G	NM_001222	calcium/calmodulin dependent protein kinase II gamma
+122	76	hsa-miR-874-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+123	75	hsa-miR-342-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+124	75	hsa-miR-548k	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+125	75	hsa-miR-550a-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+126	75	hsa-miR-1271-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+127	74	hsa-miR-3120-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+128	74	hsa-miR-32-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+129	74	hsa-miR-105-5p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+130	74	hsa-miR-92b-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+131	74	hsa-miR-142-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+132	74	hsa-miR-93-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+133	74	hsa-miR-486-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+134	74	hsa-miR-452-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+135	74	hsa-miR-92a-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+136	73	hsa-miR-3190-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+137	72	hsa-miR-519b-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+138	72	hsa-miR-519a-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+139	72	hsa-miR-576-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+140	72	hsa-miR-568	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+141	71	hsa-miR-183-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+142	71	hsa-miR-367-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+143	71	hsa-miR-363-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+144	71	hsa-miR-876-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+145	71	hsa-miR-25-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+146	71	hsa-miR-671-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+147	71	hsa-miR-3154	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+148	70	hsa-miR-660-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+149	70	hsa-miR-31-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+150	70	hsa-miR-760	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+151	69	hsa-miR-449c-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+152	69	hsa-miR-544a	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+153	69	hsa-miR-34b-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+154	69	hsa-miR-24-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+155	69	hsa-miR-548an	9569	GTF2IRD1	NM_005685	GTF2I repeat domain containing 1
+156	69	hsa-miR-149-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+157	69	hsa-miR-3175	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+158	69	hsa-miR-761	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+159	69	hsa-miR-561-5p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+160	68	hsa-miR-139-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+161	68	hsa-miR-361-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+162	68	hsa-miR-4524a-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+163	68	hsa-miR-505-5p	816	CAMK2B	NM_001220	calcium/calmodulin dependent protein kinase II beta
+164	68	hsa-miR-203a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+165	65	hsa-miR-3126-5p	818	CAMK2G	NM_001222	calcium/calmodulin dependent protein kinase II gamma
+166	65	hsa-miR-520h	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+167	65	hsa-miR-148a-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+168	65	hsa-miR-520g-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+169	65	hsa-miR-152-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+170	65	hsa-miR-153-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+171	65	hsa-miR-92b-5p	89	ACTN3	NM_001104	actinin alpha 3 (gene/pseudogene)
+172	65	hsa-miR-3065-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+173	65	hsa-miR-148b-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+174	65	hsa-miR-185-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+175	64	hsa-miR-616-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+176	64	hsa-miR-136-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+177	64	hsa-miR-198	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+178	63	hsa-miR-502-3p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+179	63	hsa-miR-501-3p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+180	63	hsa-miR-708-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+181	63	hsa-miR-411-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+182	63	hsa-miR-379-3p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+183	63	hsa-miR-767-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+184	62	hsa-miR-3117-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+185	62	hsa-miR-642a-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+186	62	hsa-miR-1-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+187	62	hsa-miR-3065-5p	5530	PPP3CA	NM_001130691	protein phosphatase 3 catalytic subunit alpha
+188	62	hsa-miR-653-3p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+189	62	hsa-miR-5001-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+190	62	hsa-miR-30a-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+191	62	hsa-miR-1296-5p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+192	62	hsa-miR-3934-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+193	62	hsa-miR-30e-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+194	62	hsa-miR-488-3p	816	CAMK2B	NM_172079	calcium/calmodulin dependent protein kinase II beta
+195	62	hsa-miR-223-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+196	62	hsa-miR-762	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+197	62	hsa-miR-206	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+198	62	hsa-miR-2116-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+199	62	hsa-miR-194-5p	818	CAMK2G	NM_001222	calcium/calmodulin dependent protein kinase II gamma
+200	61	hsa-miR-30b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+201	61	hsa-miR-99b-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+202	61	hsa-miR-939-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+203	61	hsa-miR-608	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2
+204	61	hsa-miR-324-3p	818	CAMK2G	NM_001204492	calcium/calmodulin dependent protein kinase II gamma
+205	61	hsa-miR-100-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+206	61	hsa-miR-136-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+207	61	hsa-miR-99a-5p	5530	PPP3CA	NM_001130692	protein phosphatase 3 catalytic subunit alpha
+208	60	hsa-miR-1224-5p	7134	TNNC1	NM_003280	troponin C1, slow skeletal and cardiac type
+209	60	hsa-miR-2682-5p	5530	PPP3CA	NM_000944	protein phosphatase 3 catalytic subunit alpha
+210	60	hsa-miR-185-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+211	60	hsa-miR-450b-5p	488	ATP2A2	NM_170665	ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 2

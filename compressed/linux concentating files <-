@@ -1,0 +1,10 @@
+linux concentating files <-
+
+VRTILNA TABELA
+CONDITION 4 stolpec - angiogeneza,ime datoteke
+insert pivot table .(vrtilnatabela)
+označič vse podatke, OK
+
+VRSTICA - 
+COLUMNS CONDITION (ANGIO..)
+ROWS (miRNA), + X

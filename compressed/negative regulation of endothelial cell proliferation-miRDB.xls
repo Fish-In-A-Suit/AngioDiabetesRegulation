@@ -1,0 +1,900 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-301a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+2	100	hsa-miR-301b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+3	100	hsa-miR-130a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+4	100	hsa-miR-130b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+5	100	hsa-miR-454-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+6	99	hsa-miR-183-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+7	99	hsa-miR-1-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+8	99	hsa-miR-143-3p	22846	VASH1	NM_014909	vasohibin 1
+9	99	hsa-miR-206	2697	GJA1	NM_000165	gap junction protein alpha 1
+10	98	hsa-miR-1297	23213	SULF1	NM_001128204	sulfatase 1
+11	98	hsa-miR-1-3p	23213	SULF1	NM_001128204	sulfatase 1
+12	98	hsa-miR-3143	7857	SCG2	NM_003469	secretogranin II
+13	98	hsa-miR-101-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+14	98	hsa-miR-206	23213	SULF1	NM_001128204	sulfatase 1
+15	98	hsa-miR-203a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+16	97	hsa-miR-26a-5p	23213	SULF1	NM_001128204	sulfatase 1
+17	97	hsa-miR-21-5p	3592	IL12A	NM_000882	interleukin 12A
+18	97	hsa-miR-21-5p	889	KRIT1	NM_001013406	KRIT1, ankyrin repeat containing
+19	97	hsa-miR-29c-3p	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+20	97	hsa-miR-29a-3p	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+21	97	hsa-miR-448	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+22	97	hsa-miR-29b-3p	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+23	97	hsa-miR-202-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+24	97	hsa-miR-128-3p	4804	NGFR	NM_002507	nerve growth factor receptor
+25	96	hsa-miR-3120-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+26	96	hsa-miR-657	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+27	96	hsa-miR-590-5p	3592	IL12A	NM_000882	interleukin 12A
+28	96	hsa-miR-590-5p	889	KRIT1	NM_001013406	KRIT1, ankyrin repeat containing
+29	96	hsa-miR-495-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+30	96	hsa-miR-1-3p	11235	PDCD10	NM_145859	programmed cell death 10
+31	96	hsa-miR-19a-3p	23213	SULF1	NM_001128204	sulfatase 1
+32	96	hsa-miR-200c-3p	23213	SULF1	NM_001128204	sulfatase 1
+33	96	hsa-miR-26b-5p	23213	SULF1	NM_001128204	sulfatase 1
+34	96	hsa-miR-429	23213	SULF1	NM_001128204	sulfatase 1
+35	96	hsa-miR-107	4763	NF1	NM_000267	neurofibromin 1
+36	96	hsa-miR-20a-3p	4763	NF1	NM_000267	neurofibromin 1
+37	96	hsa-miR-543	7857	SCG2	NM_003469	secretogranin II
+38	96	hsa-miR-103a-3p	4763	NF1	NM_000267	neurofibromin 1
+39	96	hsa-miR-200b-3p	23213	SULF1	NM_001128204	sulfatase 1
+40	96	hsa-miR-34a-3p	7124	TNF	NM_000594	tumor necrosis factor
+41	96	hsa-miR-19b-3p	23213	SULF1	NM_001128204	sulfatase 1
+42	96	hsa-miR-206	11235	PDCD10	NM_145859	programmed cell death 10
+43	95	hsa-miR-1291	22846	VASH1	NM_014909	vasohibin 1
+44	95	hsa-miR-144-3p	4763	NF1	NM_000267	neurofibromin 1
+45	95	hsa-miR-548j-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+46	95	hsa-miR-548c-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+47	95	hsa-miR-335-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+48	95	hsa-miR-548b-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+49	95	hsa-miR-548d-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+50	95	hsa-miR-181c-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+51	95	hsa-miR-548h-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+52	95	hsa-miR-181d-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+53	95	hsa-miR-181a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+54	95	hsa-miR-548o-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+55	95	hsa-miR-181b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+56	95	hsa-miR-548am-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+57	95	hsa-miR-656-3p	28984	RGCC	NM_014059	regulator of cell cycle
+58	95	hsa-miR-128-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+59	95	hsa-miR-128-3p	4763	NF1	NM_000267	neurofibromin 1
+60	95	hsa-miR-9-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+61	95	hsa-miR-493-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+62	95	hsa-miR-450b-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+63	95	hsa-miR-454-3p	23213	SULF1	NM_001128204	sulfatase 1
+64	95	hsa-miR-4423-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+65	94	hsa-miR-205-5p	5797	PTPRM	NM_002845	protein tyrosine phosphatase, receptor type M
+66	94	hsa-miR-513a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+67	94	hsa-miR-19a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+68	94	hsa-miR-301a-3p	23213	SULF1	NM_001128204	sulfatase 1
+69	94	hsa-miR-135b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+70	94	hsa-miR-330-3p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+71	94	hsa-miR-135a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+72	94	hsa-miR-101-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+73	94	hsa-miR-301b-3p	23213	SULF1	NM_001128204	sulfatase 1
+74	94	hsa-miR-19b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+75	94	hsa-miR-605-3p	857	CAV1	NM_001172895	caveolin 1
+76	94	hsa-miR-130a-3p	23213	SULF1	NM_001128204	sulfatase 1
+77	94	hsa-miR-27a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+78	94	hsa-miR-4423-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+79	94	hsa-miR-130b-3p	23213	SULF1	NM_001128204	sulfatase 1
+80	94	hsa-miR-513c-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+81	94	hsa-miR-27b-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+82	93	hsa-miR-30a-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+83	93	hsa-miR-29c-3p	858	CAV2	NM_001206747	caveolin 2
+84	93	hsa-miR-30c-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+85	93	hsa-miR-29a-3p	858	CAV2	NM_001206747	caveolin 2
+86	93	hsa-miR-1827	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+87	93	hsa-miR-665	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+88	93	hsa-miR-338-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+89	93	hsa-miR-30b-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+90	93	hsa-miR-548k	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+91	93	hsa-miR-29b-3p	858	CAV2	NM_001206747	caveolin 2
+92	93	hsa-miR-32-3p	858	CAV2	NM_001206747	caveolin 2
+93	93	hsa-miR-30d-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+94	93	hsa-miR-30e-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+95	93	hsa-miR-369-3p	4763	NF1	NM_000267	neurofibromin 1
+96	93	hsa-miR-493-5p	498	ATP5F1A	NM_001001935	ATP synthase F1 subunit alpha
+97	92	hsa-miR-519b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+98	92	hsa-miR-519a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+99	92	hsa-miR-509-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+100	92	hsa-miR-548e-3p	4763	NF1	NM_001128147	neurofibromin 1
+101	92	hsa-miR-509-3-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+102	92	hsa-miR-374a-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+103	92	hsa-miR-642a-3p	11235	PDCD10	NM_007217	programmed cell death 10
+104	92	hsa-let-7f-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+105	92	hsa-miR-98-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+106	92	hsa-miR-548a-3p	4763	NF1	NM_001128147	neurofibromin 1
+107	92	hsa-miR-1185-1-3p	858	CAV2	NM_001206747	caveolin 2
+108	92	hsa-let-7b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+109	92	hsa-miR-338-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+110	92	hsa-let-7g-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+111	92	hsa-let-7a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+112	92	hsa-let-7i-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+113	92	hsa-miR-136-5p	9255	AIMP1	NM_004757	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+114	92	hsa-miR-548f-3p	4763	NF1	NM_001128147	neurofibromin 1
+115	92	hsa-miR-1185-2-3p	858	CAV2	NM_001206747	caveolin 2
+116	92	hsa-let-7e-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+117	92	hsa-let-7c-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+118	91	hsa-miR-3120-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+119	91	hsa-miR-3120-3p	3593	IL12B	NM_002187	interleukin 12B
+120	91	hsa-miR-370-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+121	91	hsa-miR-144-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+122	91	hsa-miR-664b-3p	858	CAV2	NM_198212	caveolin 2
+123	91	hsa-miR-664b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+124	91	hsa-miR-221-3p	22846	VASH1	NM_014909	vasohibin 1
+125	91	hsa-miR-200c-3p	22846	VASH1	NM_014909	vasohibin 1
+126	91	hsa-miR-429	22846	VASH1	NM_014909	vasohibin 1
+127	91	hsa-miR-642a-3p	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+128	91	hsa-miR-338-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+129	91	hsa-miR-548an	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+130	91	hsa-miR-200b-3p	22846	VASH1	NM_014909	vasohibin 1
+131	91	hsa-miR-222-3p	22846	VASH1	NM_014909	vasohibin 1
+132	91	hsa-miR-488-3p	858	CAV2	NM_001206747	caveolin 2
+133	91	hsa-miR-27a-3p	4804	NGFR	NM_002507	nerve growth factor receptor
+134	91	hsa-miR-203a-3p	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+135	91	hsa-miR-454-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+136	91	hsa-miR-27b-3p	4804	NGFR	NM_002507	nerve growth factor receptor
+137	90	hsa-miR-30a-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+138	90	hsa-miR-144-3p	858	CAV2	NM_001206748	caveolin 2
+139	90	hsa-miR-124-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+140	90	hsa-miR-301a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+141	90	hsa-miR-182-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+142	90	hsa-miR-30c-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+143	90	hsa-miR-338-5p	9255	AIMP1	NM_001142415	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+144	90	hsa-miR-30b-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+145	90	hsa-miR-3942-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+146	90	hsa-miR-506-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+147	90	hsa-miR-301b-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+148	90	hsa-miR-30d-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+149	90	hsa-miR-6503-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+150	90	hsa-miR-1323	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+151	90	hsa-miR-497-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+152	90	hsa-miR-30e-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+153	90	hsa-miR-130a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+154	90	hsa-miR-3140-3p	858	CAV2	NM_198212	caveolin 2
+155	90	hsa-miR-374b-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+156	90	hsa-miR-130b-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+157	89	hsa-miR-450a-1-3p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+158	89	hsa-miR-186-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+159	89	hsa-miR-410-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+160	89	hsa-miR-374a-5p	858	CAV2	NM_198212	caveolin 2
+161	89	hsa-miR-124-3p	857	CAV1	NM_001172895	caveolin 1
+162	89	hsa-miR-876-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+163	89	hsa-let-7d-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+164	89	hsa-miR-142-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+165	89	hsa-miR-182-5p	11061	CNMD	NM_001011705	chondromodulin
+166	89	hsa-miR-1827	7057	THBS1	NM_003246	thrombospondin 1
+167	89	hsa-miR-627-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+168	89	hsa-miR-126-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+169	89	hsa-miR-548k	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+170	89	hsa-miR-506-3p	857	CAV1	NM_001172895	caveolin 1
+171	89	hsa-miR-1323	23213	SULF1	NM_015170	sulfatase 1
+172	89	hsa-miR-130a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+173	89	hsa-miR-374b-5p	858	CAV2	NM_198212	caveolin 2
+174	89	hsa-miR-130b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+175	88	hsa-miR-486-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+176	88	hsa-miR-30a-5p	4763	NF1	NM_000267	neurofibromin 1
+177	88	hsa-miR-597-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+178	88	hsa-miR-628-5p	857	CAV1	NM_001172895	caveolin 1
+179	88	hsa-miR-30c-5p	4763	NF1	NM_000267	neurofibromin 1
+180	88	hsa-miR-30b-5p	4763	NF1	NM_000267	neurofibromin 1
+181	88	hsa-miR-3152-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+182	88	hsa-miR-30d-5p	4763	NF1	NM_000267	neurofibromin 1
+183	88	hsa-miR-656-3p	858	CAV2	NM_001206747	caveolin 2
+184	88	hsa-miR-656-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+185	88	hsa-miR-30e-5p	4763	NF1	NM_000267	neurofibromin 1
+186	88	hsa-miR-338-3p	7057	THBS1	NM_003246	thrombospondin 1
+187	88	hsa-miR-27a-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+188	88	hsa-miR-454-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+189	88	hsa-miR-27b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+190	87	hsa-miR-23a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+191	87	hsa-miR-450a-1-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+192	87	hsa-miR-216a-5p	858	CAV2	NM_198212	caveolin 2
+193	87	hsa-miR-664b-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+194	87	hsa-miR-624-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+195	87	hsa-miR-150-5p	7124	TNF	NM_000594	tumor necrosis factor
+196	87	hsa-miR-331-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+197	87	hsa-miR-627-5p	858	CAV2	NM_198212	caveolin 2
+198	87	hsa-miR-1-3p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+199	87	hsa-miR-1-3p	7057	THBS1	NM_003246	thrombospondin 1
+200	87	hsa-miR-548t-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+201	87	hsa-miR-29c-3p	22846	VASH1	NM_014909	vasohibin 1
+202	87	hsa-miR-182-5p	7057	THBS1	NM_003246	thrombospondin 1
+203	87	hsa-miR-29a-3p	22846	VASH1	NM_014909	vasohibin 1
+204	87	hsa-miR-1185-1-3p	11235	PDCD10	NM_145859	programmed cell death 10
+205	87	hsa-miR-338-5p	858	CAV2	NM_001206747	caveolin 2
+206	87	hsa-miR-23b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+207	87	hsa-miR-126-5p	9255	AIMP1	NM_001142415	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+208	87	hsa-miR-1304-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+209	87	hsa-miR-29b-3p	22846	VASH1	NM_014909	vasohibin 1
+210	87	hsa-miR-188-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+211	87	hsa-miR-605-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+212	87	hsa-miR-223-5p	9255	AIMP1	NM_004757	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+213	87	hsa-miR-206	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+214	87	hsa-miR-206	7057	THBS1	NM_003246	thrombospondin 1
+215	87	hsa-miR-185-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+216	87	hsa-miR-1185-2-3p	11235	PDCD10	NM_145859	programmed cell death 10
+217	86	hsa-miR-23a-3p	3593	IL12B	NM_002187	interleukin 12B
+218	86	hsa-miR-30a-5p	11235	PDCD10	NM_007217	programmed cell death 10
+219	86	hsa-miR-96-5p	857	CAV1	NM_001172895	caveolin 1
+220	86	hsa-miR-410-3p	3592	IL12A	NM_000882	interleukin 12A
+221	86	hsa-miR-155-5p	7857	SCG2	NM_003469	secretogranin II
+222	86	hsa-miR-3121-3p	7124	TNF	NM_000594	tumor necrosis factor
+223	86	hsa-miR-495-3p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+224	86	hsa-miR-378d	23213	SULF1	NM_015170	sulfatase 1
+225	86	hsa-miR-378a-3p	23213	SULF1	NM_015170	sulfatase 1
+226	86	hsa-miR-15b-5p	4763	NF1	NM_000267	neurofibromin 1
+227	86	hsa-miR-1271-5p	857	CAV1	NM_001172895	caveolin 1
+228	86	hsa-miR-181c-5p	7124	TNF	NM_000594	tumor necrosis factor
+229	86	hsa-miR-1290	7498	XDH	NM_000379	xanthine dehydrogenase
+230	86	hsa-miR-378c	23213	SULF1	NM_015170	sulfatase 1
+231	86	hsa-miR-181d-5p	7124	TNF	NM_000594	tumor necrosis factor
+232	86	hsa-miR-323a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+233	86	hsa-miR-182-5p	4763	NF1	NM_000267	neurofibromin 1
+234	86	hsa-miR-30c-5p	11235	PDCD10	NM_007217	programmed cell death 10
+235	86	hsa-miR-181a-5p	7124	TNF	NM_000594	tumor necrosis factor
+236	86	hsa-miR-107	11235	PDCD10	NM_145860	programmed cell death 10
+237	86	hsa-miR-16-5p	4763	NF1	NM_000267	neurofibromin 1
+238	86	hsa-miR-3691-5p	3592	IL12A	NM_000882	interleukin 12A
+239	86	hsa-miR-661	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+240	86	hsa-miR-23b-3p	3593	IL12B	NM_002187	interleukin 12B
+241	86	hsa-miR-30b-5p	11235	PDCD10	NM_007217	programmed cell death 10
+242	86	hsa-miR-103a-3p	11235	PDCD10	NM_145860	programmed cell death 10
+243	86	hsa-miR-548o-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+244	86	hsa-miR-181b-5p	7124	TNF	NM_000594	tumor necrosis factor
+245	86	hsa-miR-20b-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+246	86	hsa-miR-30d-5p	11235	PDCD10	NM_007217	programmed cell death 10
+247	86	hsa-miR-1179	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+248	86	hsa-miR-198	7857	SCG2	NM_003469	secretogranin II
+249	86	hsa-miR-422a	23213	SULF1	NM_015170	sulfatase 1
+250	86	hsa-miR-30e-5p	11235	PDCD10	NM_007217	programmed cell death 10
+251	86	hsa-miR-513a-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+252	86	hsa-miR-15a-5p	4763	NF1	NM_000267	neurofibromin 1
+253	86	hsa-miR-195-5p	4763	NF1	NM_000267	neurofibromin 1
+254	85	hsa-miR-515-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+255	85	hsa-miR-576-5p	4763	NF1	NM_001128147	neurofibromin 1
+256	85	hsa-miR-106b-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+257	85	hsa-miR-144-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+258	85	hsa-miR-520h	2697	GJA1	NM_000165	gap junction protein alpha 1
+259	85	hsa-miR-374a-3p	6678	SPARC	NM_003118	secreted protein acidic and cysteine rich
+260	85	hsa-miR-664b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+261	85	hsa-miR-624-5p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+262	85	hsa-miR-520g-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+263	85	hsa-miR-452-5p	23213	SULF1	NM_001128204	sulfatase 1
+264	85	hsa-miR-105-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+265	85	hsa-miR-495-3p	7857	SCG2	NM_003469	secretogranin II
+266	85	hsa-miR-202-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+267	85	hsa-miR-378d	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+268	85	hsa-miR-378a-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+269	85	hsa-miR-378c	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+270	85	hsa-miR-323a-3p	3593	IL12B	NM_002187	interleukin 12B
+271	85	hsa-miR-338-5p	4763	NF1	NM_000267	neurofibromin 1
+272	85	hsa-miR-1258	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+273	85	hsa-miR-3679-5p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+274	85	hsa-miR-20a-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+275	85	hsa-miR-656-3p	5797	PTPRM	NM_002845	protein tyrosine phosphatase, receptor type M
+276	85	hsa-miR-656-3p	889	KRIT1	NM_001013406	KRIT1, ankyrin repeat containing
+277	85	hsa-miR-371a-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+278	85	hsa-miR-422a	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+279	85	hsa-miR-18a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+280	85	hsa-miR-9-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+281	84	hsa-miR-576-5p	857	CAV1	NM_001172895	caveolin 1
+282	84	hsa-miR-329-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+283	84	hsa-miR-144-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+284	84	hsa-miR-4713-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+285	84	hsa-miR-218-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+286	84	hsa-miR-589-3p	4763	NF1	NM_000267	neurofibromin 1
+287	84	hsa-miR-1224-5p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+288	84	hsa-miR-17-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+289	84	hsa-miR-150-3p	858	CAV2	NM_198212	caveolin 2
+290	84	hsa-miR-362-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+291	84	hsa-let-7f-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+292	84	hsa-miR-98-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+293	84	hsa-miR-135b-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+294	84	hsa-let-7b-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+295	84	hsa-let-7g-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+296	84	hsa-miR-126-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+297	84	hsa-miR-135a-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+298	84	hsa-miR-548an	11235	PDCD10	NM_145859	programmed cell death 10
+299	84	hsa-miR-452-3p	7124	TNF	NM_000594	tumor necrosis factor
+300	84	hsa-let-7a-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+301	84	hsa-miR-3200-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+302	84	hsa-let-7i-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+303	84	hsa-miR-425-5p	11235	PDCD10	NM_007217	programmed cell death 10
+304	84	hsa-miR-369-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+305	84	hsa-miR-27a-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+306	84	hsa-miR-9-5p	11061	CNMD	NM_001011705	chondromodulin
+307	84	hsa-let-7e-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+308	84	hsa-let-7c-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+309	84	hsa-miR-27b-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+310	83	hsa-miR-374b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+311	83	hsa-miR-513a-3p	350	APOH	NM_000042	apolipoprotein H
+312	83	hsa-miR-301a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+313	83	hsa-miR-5571-5p	858	CAV2	NM_198212	caveolin 2
+314	83	hsa-miR-545-3p	857	CAV1	NM_001172895	caveolin 1
+315	83	hsa-miR-545-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+316	83	hsa-miR-619-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+317	83	hsa-miR-3074-5p	4763	NF1	NM_000267	neurofibromin 1
+318	83	hsa-miR-20b-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+319	83	hsa-miR-106a-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+320	83	hsa-miR-93-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+321	83	hsa-miR-301b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+322	83	hsa-miR-32-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+323	83	hsa-miR-17-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+324	83	hsa-miR-3154	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+325	83	hsa-miR-519d-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+326	83	hsa-miR-513c-3p	350	APOH	NM_000042	apolipoprotein H
+327	82	hsa-miR-1915-3p	22846	VASH1	NM_014909	vasohibin 1
+328	82	hsa-miR-5699-5p	858	CAV2	NM_198212	caveolin 2
+329	82	hsa-miR-520h	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+330	82	hsa-miR-3179	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+331	82	hsa-miR-520g-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+332	82	hsa-miR-4446-3p	28984	RGCC	NM_014059	regulator of cell cycle
+333	82	hsa-miR-628-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+334	82	hsa-miR-2355-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+335	82	hsa-miR-202-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+336	82	hsa-miR-497-5p	4763	NF1	NM_000267	neurofibromin 1
+337	82	hsa-miR-30a-3p	857	CAV1	NM_001172897	caveolin 1
+338	82	hsa-miR-548an	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+339	82	hsa-miR-3909	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+340	82	hsa-miR-30e-3p	857	CAV1	NM_001172897	caveolin 1
+341	82	hsa-miR-32-3p	11235	PDCD10	NM_145859	programmed cell death 10
+342	82	hsa-miR-668-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+343	82	hsa-miR-3175	4804	NGFR	NM_002507	nerve growth factor receptor
+344	82	hsa-miR-424-5p	4763	NF1	NM_000267	neurofibromin 1
+345	82	hsa-miR-889-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+346	81	hsa-miR-133a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+347	81	hsa-miR-1306-5p	22846	VASH1	NM_014909	vasohibin 1
+348	81	hsa-miR-144-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+349	81	hsa-miR-18b-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+350	81	hsa-miR-589-3p	858	CAV2	NM_198212	caveolin 2
+351	81	hsa-miR-452-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+352	81	hsa-miR-939-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+353	81	hsa-miR-876-5p	4763	NF1	NM_000267	neurofibromin 1
+354	81	hsa-miR-153-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+355	81	hsa-miR-133b	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+356	81	hsa-miR-655-3p	4763	NF1	NM_000267	neurofibromin 1
+357	81	hsa-miR-3143	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+358	81	hsa-miR-374c-5p	4763	NF1	NM_000267	neurofibromin 1
+359	81	hsa-miR-212-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+360	81	hsa-miR-3928-3p	4763	NF1	NM_000267	neurofibromin 1
+361	81	hsa-miR-548k	5797	PTPRM	NM_002845	protein tyrosine phosphatase, receptor type M
+362	81	hsa-miR-548o-3p	23213	SULF1	NM_015170	sulfatase 1
+363	81	hsa-miR-18a-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+364	81	hsa-miR-452-3p	23213	SULF1	NM_001128204	sulfatase 1
+365	81	hsa-miR-219a-5p	3593	IL12B	NM_002187	interleukin 12B
+366	81	hsa-miR-27a-3p	4763	NF1	NM_000267	neurofibromin 1
+367	81	hsa-miR-27b-3p	4763	NF1	NM_000267	neurofibromin 1
+368	80	hsa-miR-515-5p	23213	SULF1	NM_001128204	sulfatase 1
+369	80	hsa-miR-1185-5p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+370	80	hsa-miR-633	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+371	80	hsa-miR-449c-5p	857	CAV1	NM_001172896	caveolin 1
+372	80	hsa-miR-409-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+373	80	hsa-miR-433-3p	23213	SULF1	NM_015170	sulfatase 1
+374	80	hsa-miR-34b-5p	857	CAV1	NM_001172896	caveolin 1
+375	80	hsa-miR-3187-3p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+376	80	hsa-miR-142-5p	858	CAV2	NM_001206747	caveolin 2
+377	80	hsa-miR-5571-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+378	80	hsa-miR-93-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+379	80	hsa-miR-212-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+380	80	hsa-miR-661	22846	VASH1	NM_014909	vasohibin 1
+381	80	hsa-miR-330-3p	23213	SULF1	NM_001128204	sulfatase 1
+382	80	hsa-miR-1285-3p	857	CAV1	NM_001172897	caveolin 1
+383	80	hsa-miR-126-5p	4763	NF1	NM_000267	neurofibromin 1
+384	80	hsa-miR-32-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+385	80	hsa-miR-297	7057	THBS1	NM_003246	thrombospondin 1
+386	80	hsa-miR-371a-5p	889	KRIT1	NM_001013406	KRIT1, ankyrin repeat containing
+387	80	hsa-miR-671-5p	7057	THBS1	NM_003246	thrombospondin 1
+388	80	hsa-miR-550a-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+389	79	hsa-miR-370-3p	4763	NF1	NM_000267	neurofibromin 1
+390	79	hsa-miR-548t-3p	23213	SULF1	NM_001128204	sulfatase 1
+391	79	hsa-miR-218-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+392	79	hsa-miR-548e-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+393	79	hsa-miR-410-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+394	79	hsa-miR-452-5p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+395	79	hsa-let-7d-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+396	79	hsa-miR-182-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+397	79	hsa-miR-516b-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+398	79	hsa-miR-381-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+399	79	hsa-miR-9-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+400	79	hsa-miR-101-3p	858	CAV2	NM_001233	caveolin 2
+401	79	hsa-miR-3065-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+402	79	hsa-miR-548f-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+403	79	hsa-miR-493-5p	858	CAV2	NM_198212	caveolin 2
+404	79	hsa-miR-493-5p	7057	THBS1	NM_003246	thrombospondin 1
+405	78	hsa-miR-23a-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+406	78	hsa-miR-30c-2-3p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+407	78	hsa-miR-183-5p	93974	ATP5IF1	NM_016311	ATP synthase inhibitory factor subunit 1
+408	78	hsa-miR-548t-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+409	78	hsa-miR-337-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+410	78	hsa-miR-23b-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+411	78	hsa-miR-202-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+412	78	hsa-miR-223-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+413	78	hsa-miR-656-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+414	78	hsa-miR-30c-1-3p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+415	78	hsa-miR-203a-3p	4763	NF1	NM_001128147	neurofibromin 1
+416	77	hsa-miR-374b-3p	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+417	77	hsa-miR-374a-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+418	77	hsa-miR-514b-5p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+419	77	hsa-miR-510-5p	857	CAV1	NM_001172895	caveolin 1
+420	77	hsa-miR-625-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+421	77	hsa-miR-622	9255	AIMP1	NM_004757	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+422	77	hsa-miR-513c-5p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+423	77	hsa-miR-627-5p	23213	SULF1	NM_015170	sulfatase 1
+424	77	hsa-miR-876-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+425	77	hsa-miR-3065-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+426	77	hsa-miR-29c-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+427	77	hsa-miR-1303	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+428	77	hsa-miR-29a-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+429	77	hsa-miR-548a-3p	7057	THBS1	NM_003246	thrombospondin 1
+430	77	hsa-miR-3074-5p	7057	THBS1	NM_003246	thrombospondin 1
+431	77	hsa-miR-511-3p	858	CAV2	NM_198212	caveolin 2
+432	77	hsa-miR-511-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+433	77	hsa-miR-548o-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+434	77	hsa-miR-29b-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+435	77	hsa-miR-494-3p	858	CAV2	NM_198212	caveolin 2
+436	77	hsa-miR-7-5p	11061	CNMD	NM_001011705	chondromodulin
+437	77	hsa-miR-342-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+438	77	hsa-miR-1323	2697	GJA1	NM_000165	gap junction protein alpha 1
+439	77	hsa-miR-548f-3p	7057	THBS1	NM_003246	thrombospondin 1
+440	77	hsa-miR-326	4804	NGFR	NM_002507	nerve growth factor receptor
+441	76	hsa-miR-532-3p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+442	76	hsa-miR-96-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+443	76	hsa-miR-96-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+444	76	hsa-miR-491-5p	4804	NGFR	NM_002507	nerve growth factor receptor
+445	76	hsa-miR-183-3p	23213	SULF1	NM_001128204	sulfatase 1
+446	76	hsa-miR-106b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+447	76	hsa-miR-548e-3p	857	CAV1	NM_001172895	caveolin 1
+448	76	hsa-miR-421	857	CAV1	NM_001172895	caveolin 1
+449	76	hsa-miR-320d	3593	IL12B	NM_002187	interleukin 12B
+450	76	hsa-miR-3065-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+451	76	hsa-miR-15b-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+452	76	hsa-miR-1271-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+453	76	hsa-miR-485-5p	858	CAV2	NM_198212	caveolin 2
+454	76	hsa-miR-497-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+455	76	hsa-miR-323a-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+456	76	hsa-miR-3173-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+457	76	hsa-miR-129-5p	4763	NF1	NM_000267	neurofibromin 1
+458	76	hsa-miR-5571-5p	11235	PDCD10	NM_145860	programmed cell death 10
+459	76	hsa-miR-548a-3p	857	CAV1	NM_001172895	caveolin 1
+460	76	hsa-miR-16-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+461	76	hsa-miR-320c	3593	IL12B	NM_002187	interleukin 12B
+462	76	hsa-miR-511-3p	9255	AIMP1	NM_004757	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+463	76	hsa-miR-627-3p	7124	TNF	NM_000594	tumor necrosis factor
+464	76	hsa-miR-141-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+465	76	hsa-miR-548k	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+466	76	hsa-miR-200a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+467	76	hsa-miR-548o-3p	9255	AIMP1	NM_001142415	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+468	76	hsa-miR-2682-5p	857	CAV1	NM_001172896	caveolin 1
+469	76	hsa-miR-223-3p	93974	ATP5IF1	NM_178191	ATP synthase inhibitory factor subunit 1
+470	76	hsa-miR-20a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+471	76	hsa-miR-656-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+472	76	hsa-miR-371a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+473	76	hsa-miR-338-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+474	76	hsa-miR-548f-3p	857	CAV1	NM_001172895	caveolin 1
+475	76	hsa-miR-15a-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+476	76	hsa-miR-195-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+477	76	hsa-miR-424-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+478	76	hsa-miR-320b	3593	IL12B	NM_002187	interleukin 12B
+479	76	hsa-miR-889-3p	4763	NF1	NM_000267	neurofibromin 1
+480	75	hsa-miR-18b-5p	7057	THBS1	NM_003246	thrombospondin 1
+481	75	hsa-miR-592	6678	SPARC	NM_003118	secreted protein acidic and cysteine rich
+482	75	hsa-miR-301a-3p	7124	TNF	NM_000594	tumor necrosis factor
+483	75	hsa-miR-582-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+484	75	hsa-miR-802	7857	SCG2	NM_003469	secretogranin II
+485	75	hsa-miR-545-5p	858	CAV2	NM_198212	caveolin 2
+486	75	hsa-miR-548a-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+487	75	hsa-miR-107	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+488	75	hsa-miR-381-3p	4763	NF1	NM_000267	neurofibromin 1
+489	75	hsa-miR-448	11061	CNMD	NM_001011705	chondromodulin
+490	75	hsa-miR-338-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+491	75	hsa-miR-92a-1-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+492	75	hsa-miR-103a-3p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+493	75	hsa-miR-18a-5p	7057	THBS1	NM_003246	thrombospondin 1
+494	75	hsa-miR-24-3p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+495	75	hsa-miR-20b-3p	23213	SULF1	NM_015170	sulfatase 1
+496	75	hsa-miR-301b-3p	7124	TNF	NM_000594	tumor necrosis factor
+497	75	hsa-miR-145-5p	858	CAV2	NM_001206747	caveolin 2
+498	75	hsa-miR-582-5p	4763	NF1	NM_001128147	neurofibromin 1
+499	75	hsa-miR-130a-3p	7124	TNF	NM_000594	tumor necrosis factor
+500	75	hsa-miR-513a-5p	4804	NGFR	NM_002507	nerve growth factor receptor
+501	75	hsa-miR-513a-5p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+502	75	hsa-miR-18b-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+503	75	hsa-miR-761	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+504	75	hsa-miR-374b-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+505	75	hsa-miR-130b-3p	7124	TNF	NM_000594	tumor necrosis factor
+506	75	hsa-miR-454-3p	7124	TNF	NM_000594	tumor necrosis factor
+507	74	hsa-miR-374b-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+508	74	hsa-miR-486-3p	22846	VASH1	NM_014909	vasohibin 1
+509	74	hsa-miR-96-5p	4763	NF1	NM_000267	neurofibromin 1
+510	74	hsa-miR-218-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+511	74	hsa-miR-548e-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+512	74	hsa-miR-548e-3p	3593	IL12B	NM_002187	interleukin 12B
+513	74	hsa-miR-374a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+514	74	hsa-miR-105-5p	23213	SULF1	NM_015170	sulfatase 1
+515	74	hsa-miR-1910-3p	857	CAV1	NM_001172897	caveolin 1
+516	74	hsa-miR-2355-5p	22846	VASH1	NM_014909	vasohibin 1
+517	74	hsa-miR-376a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+518	74	hsa-miR-1270	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+519	74	hsa-miR-376b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+520	74	hsa-miR-15b-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+521	74	hsa-miR-548t-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+522	74	hsa-miR-299-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+523	74	hsa-miR-616-3p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+524	74	hsa-miR-545-5p	857	CAV1	NM_001172895	caveolin 1
+525	74	hsa-miR-93-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+526	74	hsa-miR-548a-3p	3593	IL12B	NM_002187	interleukin 12B
+527	74	hsa-miR-548a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+528	74	hsa-miR-1185-1-3p	7498	XDH	NM_000379	xanthine dehydrogenase
+529	74	hsa-miR-1185-1-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+530	74	hsa-miR-16-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+531	74	hsa-miR-5001-5p	4804	NGFR	NM_002507	nerve growth factor receptor
+532	74	hsa-miR-1179	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+533	74	hsa-miR-6511a-5p	857	CAV1	NM_001172897	caveolin 1
+534	74	hsa-miR-9-5p	3592	IL12A	NM_000882	interleukin 12A
+535	74	hsa-miR-548f-3p	3593	IL12B	NM_002187	interleukin 12B
+536	74	hsa-miR-548f-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+537	74	hsa-miR-1185-2-3p	7498	XDH	NM_000379	xanthine dehydrogenase
+538	74	hsa-miR-1185-2-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+539	74	hsa-miR-15a-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+540	74	hsa-miR-374b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+541	74	hsa-miR-195-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+542	73	hsa-miR-374a-5p	4763	NF1	NM_000267	neurofibromin 1
+543	73	hsa-miR-664b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+544	73	hsa-miR-622	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+545	73	hsa-miR-1297	11235	PDCD10	NM_145860	programmed cell death 10
+546	73	hsa-miR-629-3p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+547	73	hsa-miR-629-3p	23213	SULF1	NM_001128204	sulfatase 1
+548	73	hsa-miR-214-3p	22846	VASH1	NM_014909	vasohibin 1
+549	73	hsa-miR-346	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+550	73	hsa-miR-188-3p	22846	VASH1	NM_014909	vasohibin 1
+551	73	hsa-miR-361-5p	6678	SPARC	NM_003118	secreted protein acidic and cysteine rich
+552	73	hsa-miR-142-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+553	73	hsa-miR-493-3p	23213	SULF1	NM_015170	sulfatase 1
+554	73	hsa-miR-655-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+555	73	hsa-miR-3173-3p	6678	SPARC	NM_001309444	secreted protein acidic and cysteine rich
+556	73	hsa-miR-374c-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+557	73	hsa-miR-1185-1-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+558	73	hsa-miR-608	4804	NGFR	NM_002507	nerve growth factor receptor
+559	73	hsa-miR-608	7857	SCG2	NM_003469	secretogranin II
+560	73	hsa-miR-548an	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+561	73	hsa-miR-568	858	CAV2	NM_198212	caveolin 2
+562	73	hsa-miR-197-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+563	73	hsa-miR-769-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+564	73	hsa-miR-1185-2-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+565	73	hsa-miR-761	22846	VASH1	NM_014909	vasohibin 1
+566	72	hsa-miR-1260a	22846	VASH1	NM_014909	vasohibin 1
+567	72	hsa-miR-548e-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+568	72	hsa-miR-873-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+569	72	hsa-miR-374a-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+570	72	hsa-miR-148a-3p	23213	SULF1	NM_001128204	sulfatase 1
+571	72	hsa-miR-3121-3p	240	ALOX5	NM_001256154	arachidonate 5-lipoxygenase
+572	72	hsa-miR-629-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+573	72	hsa-miR-513a-3p	857	CAV1	NM_001172897	caveolin 1
+574	72	hsa-miR-3194-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+575	72	hsa-miR-152-3p	23213	SULF1	NM_001128204	sulfatase 1
+576	72	hsa-miR-4524a-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+577	72	hsa-miR-1271-5p	4763	NF1	NM_000267	neurofibromin 1
+578	72	hsa-miR-629-5p	858	CAV2	NM_198212	caveolin 2
+579	72	hsa-miR-1260b	22846	VASH1	NM_014909	vasohibin 1
+580	72	hsa-miR-548a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+581	72	hsa-miR-330-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+582	72	hsa-miR-20a-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+583	72	hsa-miR-1285-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+584	72	hsa-miR-20b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+585	72	hsa-miR-106a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+586	72	hsa-miR-93-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+587	72	hsa-miR-20b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+588	72	hsa-miR-494-3p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+589	72	hsa-miR-17-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+590	72	hsa-miR-148b-3p	23213	SULF1	NM_001128204	sulfatase 1
+591	72	hsa-miR-219a-5p	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+592	72	hsa-miR-9-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+593	72	hsa-miR-548f-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+594	72	hsa-miR-125a-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+595	72	hsa-miR-519d-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+596	72	hsa-miR-125b-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+597	72	hsa-miR-16-2-3p	858	CAV2	NM_198212	caveolin 2
+598	72	hsa-miR-513c-3p	857	CAV1	NM_001172897	caveolin 1
+599	71	hsa-miR-548t-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+600	71	hsa-miR-548e-3p	7057	THBS1	NM_003246	thrombospondin 1
+601	71	hsa-miR-155-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+602	71	hsa-miR-409-3p	23213	SULF1	NM_001128204	sulfatase 1
+603	71	hsa-miR-939-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+604	71	hsa-let-7f-5p	7057	THBS1	NM_003246	thrombospondin 1
+605	71	hsa-miR-1271-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+606	71	hsa-miR-98-5p	7057	THBS1	NM_003246	thrombospondin 1
+607	71	hsa-let-7g-5p	7057	THBS1	NM_003246	thrombospondin 1
+608	71	hsa-miR-149-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+609	71	hsa-let-7a-5p	7057	THBS1	NM_003246	thrombospondin 1
+610	71	hsa-miR-202-3p	7057	THBS1	NM_003246	thrombospondin 1
+611	71	hsa-miR-668-3p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+612	71	hsa-miR-582-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+613	71	hsa-let-7i-5p	7057	THBS1	NM_003246	thrombospondin 1
+614	71	hsa-miR-145-3p	6678	SPARC	NM_003118	secreted protein acidic and cysteine rich
+615	71	hsa-miR-374b-5p	4763	NF1	NM_000267	neurofibromin 1
+616	71	hsa-let-7e-5p	7057	THBS1	NM_003246	thrombospondin 1
+617	71	hsa-let-7c-5p	7057	THBS1	NM_003246	thrombospondin 1
+618	70	hsa-miR-1306-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+619	70	hsa-miR-519b-3p	4763	NF1	NM_000267	neurofibromin 1
+620	70	hsa-miR-1915-3p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+621	70	hsa-miR-372-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+622	70	hsa-miR-519a-3p	4763	NF1	NM_000267	neurofibromin 1
+623	70	hsa-miR-548j-5p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+624	70	hsa-miR-548e-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+625	70	hsa-miR-22-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+626	70	hsa-miR-548c-5p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+627	70	hsa-miR-421	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+628	70	hsa-miR-622	7057	THBS1	NM_003246	thrombospondin 1
+629	70	hsa-miR-150-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+630	70	hsa-miR-628-5p	9255	AIMP1	NM_004757	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+631	70	hsa-miR-105-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+632	70	hsa-miR-1910-3p	64102	TNMD	NM_022144	tenomodulin
+633	70	hsa-miR-548b-5p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+634	70	hsa-miR-520c-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+635	70	hsa-miR-548d-5p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+636	70	hsa-miR-548t-5p	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+637	70	hsa-miR-548h-5p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+638	70	hsa-miR-373-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+639	70	hsa-miR-129-2-3p	3593	IL12B	NM_002187	interleukin 12B
+640	70	hsa-miR-302c-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+641	70	hsa-miR-548a-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+642	70	hsa-miR-302a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+643	70	hsa-miR-548o-5p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+644	70	hsa-miR-149-5p	22846	VASH1	NM_014909	vasohibin 1
+645	70	hsa-miR-302d-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+646	70	hsa-miR-302b-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+647	70	hsa-miR-377-5p	857	CAV1	NM_001172896	caveolin 1
+648	70	hsa-miR-6511a-5p	64102	TNMD	NM_022144	tenomodulin
+649	70	hsa-miR-129-1-3p	3593	IL12B	NM_002187	interleukin 12B
+650	70	hsa-miR-766-5p	6678	SPARC	NM_001309444	secreted protein acidic and cysteine rich
+651	70	hsa-miR-548am-5p	6772	STAT1	NM_139266	signal transducer and activator of transcription 1
+652	70	hsa-miR-223-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+653	70	hsa-miR-18a-3p	22846	VASH1	NM_014909	vasohibin 1
+654	70	hsa-miR-548f-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+655	70	hsa-miR-125a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+656	70	hsa-miR-125b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+657	70	hsa-miR-326	22846	VASH1	NM_014909	vasohibin 1
+658	70	hsa-miR-326	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+659	69	hsa-miR-519b-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+660	69	hsa-miR-885-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+661	69	hsa-miR-519a-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+662	69	hsa-miR-139-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+663	69	hsa-miR-139-5p	7057	THBS1	NM_003246	thrombospondin 1
+664	69	hsa-miR-3183	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+665	69	hsa-miR-1275	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+666	69	hsa-miR-532-5p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+667	69	hsa-miR-129-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+668	69	hsa-miR-3143	4763	NF1	NM_000267	neurofibromin 1
+669	69	hsa-miR-582-3p	498	ATP5F1A	NM_001001937	ATP synthase F1 subunit alpha
+670	69	hsa-miR-432-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+671	69	hsa-miR-377-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+672	69	hsa-miR-508-5p	93974	ATP5IF1	NM_178191	ATP synthase inhibitory factor subunit 1
+673	69	hsa-miR-605-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+674	69	hsa-miR-1323	9255	AIMP1	NM_001142415	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+675	69	hsa-miR-625-5p	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+676	69	hsa-miR-550a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+677	69	hsa-miR-505-5p	3593	IL12B	NM_002187	interleukin 12B
+678	68	hsa-miR-532-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+679	68	hsa-miR-449a	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+680	68	hsa-miR-548j-5p	858	CAV2	NM_198212	caveolin 2
+681	68	hsa-miR-942-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+682	68	hsa-miR-597-3p	4763	NF1	NM_000267	neurofibromin 1
+683	68	hsa-miR-548c-5p	858	CAV2	NM_198212	caveolin 2
+684	68	hsa-miR-30b-3p	7857	SCG2	NM_003469	secretogranin II
+685	68	hsa-miR-1297	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+686	68	hsa-miR-221-3p	11235	PDCD10	NM_007217	programmed cell death 10
+687	68	hsa-miR-633	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+688	68	hsa-miR-592	7124	TNF	NM_000594	tumor necrosis factor
+689	68	hsa-miR-150-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+690	68	hsa-miR-361-3p	22846	VASH1	NM_014909	vasohibin 1
+691	68	hsa-miR-34a-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+692	68	hsa-miR-433-3p	3592	IL12A	NM_000882	interleukin 12A
+693	68	hsa-miR-548b-5p	858	CAV2	NM_198212	caveolin 2
+694	68	hsa-miR-660-3p	3593	IL12B	NM_002187	interleukin 12B
+695	68	hsa-miR-548d-5p	858	CAV2	NM_198212	caveolin 2
+696	68	hsa-miR-654-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+697	68	hsa-miR-548h-5p	858	CAV2	NM_198212	caveolin 2
+698	68	hsa-miR-34c-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+699	68	hsa-miR-135b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+700	68	hsa-miR-381-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+701	68	hsa-miR-126-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+702	68	hsa-miR-135a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+703	68	hsa-miR-548o-5p	858	CAV2	NM_198212	caveolin 2
+704	68	hsa-miR-1304-5p	7057	THBS1	NM_003246	thrombospondin 1
+705	68	hsa-miR-222-3p	11235	PDCD10	NM_007217	programmed cell death 10
+706	68	hsa-miR-223-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+707	68	hsa-miR-766-5p	7057	THBS1	NM_003246	thrombospondin 1
+708	68	hsa-miR-548am-5p	858	CAV2	NM_198212	caveolin 2
+709	68	hsa-miR-1323	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+710	68	hsa-miR-762	4804	NGFR	NM_002507	nerve growth factor receptor
+711	68	hsa-miR-128-3p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+712	68	hsa-miR-493-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+713	68	hsa-miR-449b-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+714	68	hsa-miR-760	22846	VASH1	NM_014909	vasohibin 1
+715	67	hsa-miR-3120-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+716	67	hsa-miR-3183	3593	IL12B	NM_002187	interleukin 12B
+717	67	hsa-miR-642a-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+718	67	hsa-miR-150-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+719	67	hsa-miR-495-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+720	67	hsa-miR-214-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+721	67	hsa-miR-512-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+722	67	hsa-miR-153-3p	4763	NF1	NM_000267	neurofibromin 1
+723	67	hsa-miR-545-5p	6772	STAT1	NM_007315	signal transducer and activator of transcription 1
+724	67	hsa-miR-516b-5p	7124	TNF	NM_000594	tumor necrosis factor
+725	67	hsa-miR-619-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+726	67	hsa-miR-448	4763	NF1	NM_000267	neurofibromin 1
+727	67	hsa-miR-627-3p	4763	NF1	NM_001128147	neurofibromin 1
+728	67	hsa-miR-608	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+729	67	hsa-miR-5196-3p	93974	ATP5IF1	NM_178191	ATP synthase inhibitory factor subunit 1
+730	67	hsa-miR-656-3p	4763	NF1	NM_000267	neurofibromin 1
+731	67	hsa-miR-504-5p	6678	SPARC	NM_001309444	secreted protein acidic and cysteine rich
+732	66	hsa-miR-3126-5p	857	CAV1	NM_001172896	caveolin 1
+733	66	hsa-miR-374a-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+734	66	hsa-miR-3180-3p	4804	NGFR	NM_002507	nerve growth factor receptor
+735	66	hsa-miR-590-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+736	66	hsa-miR-148a-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+737	66	hsa-miR-642a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+738	66	hsa-miR-708-5p	6678	SPARC	NM_003118	secreted protein acidic and cysteine rich
+739	66	hsa-miR-214-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+740	66	hsa-miR-214-3p	23213	SULF1	NM_001128204	sulfatase 1
+741	66	hsa-miR-21-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+742	66	hsa-miR-19a-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+743	66	hsa-miR-152-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+744	66	hsa-miR-28-5p	6678	SPARC	NM_003118	secreted protein acidic and cysteine rich
+745	66	hsa-miR-151a-3p	7057	THBS1	NM_003246	thrombospondin 1
+746	66	hsa-miR-545-5p	7857	SCG2	NM_003469	secretogranin II
+747	66	hsa-miR-212-5p	4763	NF1	NM_000267	neurofibromin 1
+748	66	hsa-miR-30a-3p	9255	AIMP1	NM_001142415	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+749	66	hsa-miR-1258	4763	NF1	NM_001128147	neurofibromin 1
+750	66	hsa-miR-423-5p	4804	NGFR	NM_002507	nerve growth factor receptor
+751	66	hsa-miR-101-3p	4763	NF1	NM_001128147	neurofibromin 1
+752	66	hsa-miR-30e-3p	9255	AIMP1	NM_001142415	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+753	66	hsa-miR-494-3p	3593	IL12B	NM_002187	interleukin 12B
+754	66	hsa-miR-145-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+755	66	hsa-miR-19b-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+756	66	hsa-miR-148b-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+757	66	hsa-miR-369-3p	23213	SULF1	NM_001128204	sulfatase 1
+758	66	hsa-miR-3140-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+759	66	hsa-miR-506-5p	7057	THBS1	NM_003246	thrombospondin 1
+760	66	hsa-miR-761	2697	GJA1	NM_000165	gap junction protein alpha 1
+761	66	hsa-miR-761	23213	SULF1	NM_001128204	sulfatase 1
+762	66	hsa-miR-374b-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+763	66	hsa-miR-125a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+764	65	hsa-miR-515-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+765	65	hsa-miR-4677-3p	6678	SPARC	NM_001309443	secreted protein acidic and cysteine rich
+766	65	hsa-miR-1-3p	858	CAV2	NM_198212	caveolin 2
+767	65	hsa-miR-660-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+768	65	hsa-miR-4667-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+769	65	hsa-miR-181c-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+770	65	hsa-miR-497-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+771	65	hsa-miR-181d-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+772	65	hsa-miR-22-5p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+773	65	hsa-miR-181a-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+774	65	hsa-miR-874-5p	22846	VASH1	NM_014909	vasohibin 1
+775	65	hsa-miR-874-5p	4804	NGFR	NM_002507	nerve growth factor receptor
+776	65	hsa-miR-338-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+777	65	hsa-miR-548o-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+778	65	hsa-miR-181b-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+779	65	hsa-miR-297	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+780	65	hsa-miR-605-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+781	65	hsa-miR-206	858	CAV2	NM_198212	caveolin 2
+782	65	hsa-miR-185-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+783	65	hsa-miR-3140-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+784	65	hsa-miR-493-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+785	65	hsa-miR-636	2697	GJA1	NM_000165	gap junction protein alpha 1
+786	65	hsa-miR-424-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+787	64	hsa-miR-520h	23213	SULF1	NM_001128204	sulfatase 1
+788	64	hsa-miR-520g-3p	23213	SULF1	NM_001128204	sulfatase 1
+789	64	hsa-miR-633	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+790	64	hsa-miR-1910-3p	22846	VASH1	NM_014909	vasohibin 1
+791	64	hsa-miR-346	858	CAV2	NM_198212	caveolin 2
+792	64	hsa-miR-758-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+793	64	hsa-miR-205-5p	23213	SULF1	NM_001128204	sulfatase 1
+794	64	hsa-miR-19a-3p	7057	THBS1	NM_003246	thrombospondin 1
+795	64	hsa-miR-876-5p	7498	XDH	NM_000379	xanthine dehydrogenase
+796	64	hsa-miR-299-5p	4763	NF1	NM_000267	neurofibromin 1
+797	64	hsa-let-7b-5p	7057	THBS1	NM_003246	thrombospondin 1
+798	64	hsa-miR-6511a-5p	22846	VASH1	NM_014909	vasohibin 1
+799	64	hsa-miR-19b-3p	7057	THBS1	NM_003246	thrombospondin 1
+800	64	hsa-miR-605-3p	7498	XDH	NM_000379	xanthine dehydrogenase
+801	64	hsa-miR-128-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+802	64	hsa-miR-3175	22846	VASH1	NM_014909	vasohibin 1
+803	64	hsa-miR-338-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+804	64	hsa-miR-625-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+805	64	hsa-miR-194-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+806	64	hsa-miR-194-5p	857	CAV1	NM_001172895	caveolin 1
+807	64	hsa-miR-505-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+808	63	hsa-miR-5699-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+809	63	hsa-miR-1291	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+810	63	hsa-miR-542-3p	7498	XDH	NM_000379	xanthine dehydrogenase
+811	63	hsa-miR-624-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+812	63	hsa-miR-592	3593	IL12B	NM_002187	interleukin 12B
+813	63	hsa-miR-150-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+814	63	hsa-miR-3065-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+815	63	hsa-miR-150-3p	3592	IL12A	NM_000882	interleukin 12A
+816	63	hsa-miR-629-5p	857	CAV1	NM_001172896	caveolin 1
+817	63	hsa-miR-629-5p	93974	ATP5IF1	NM_178190	ATP synthase inhibitory factor subunit 1
+818	63	hsa-miR-545-5p	22846	VASH1	NM_014909	vasohibin 1
+819	63	hsa-miR-302c-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+820	63	hsa-miR-545-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+821	63	hsa-miR-1827	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+822	63	hsa-miR-338-5p	28984	RGCC	NM_014059	regulator of cell cycle
+823	63	hsa-miR-302a-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+824	63	hsa-miR-27a-5p	6678	SPARC	NM_003118	secreted protein acidic and cysteine rich
+825	63	hsa-miR-302d-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+826	63	hsa-miR-302b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+827	63	hsa-miR-766-5p	4763	NF1	NM_000267	neurofibromin 1
+828	63	hsa-miR-490-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+829	63	hsa-miR-513a-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+830	63	hsa-miR-761	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+831	62	hsa-miR-548t-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+832	62	hsa-miR-218-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+833	62	hsa-miR-1275	93974	ATP5IF1	NM_178191	ATP synthase inhibitory factor subunit 1
+834	62	hsa-miR-374a-5p	9255	AIMP1	NM_001142415	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+835	62	hsa-miR-30b-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+836	62	hsa-miR-3121-3p	858	CAV2	NM_001206747	caveolin 2
+837	62	hsa-miR-3121-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+838	62	hsa-miR-331-3p	7124	TNF	NM_000594	tumor necrosis factor
+839	62	hsa-miR-513a-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+840	62	hsa-miR-513a-3p	7057	THBS1	NM_003246	thrombospondin 1
+841	62	hsa-miR-19a-3p	4763	NF1	NM_000267	neurofibromin 1
+842	62	hsa-let-7d-5p	7057	THBS1	NM_003246	thrombospondin 1
+843	62	hsa-miR-514a-3p	9255	AIMP1	NM_004757	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+844	62	hsa-miR-1303	4804	NGFR	NM_002507	nerve growth factor receptor
+845	62	hsa-miR-1185-1-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+846	62	hsa-miR-1185-1-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+847	62	hsa-miR-627-3p	7057	THBS1	NM_003246	thrombospondin 1
+848	62	hsa-miR-3936	11061	CNMD	NM_001011705	chondromodulin
+849	62	hsa-miR-650	4804	NGFR	NM_002507	nerve growth factor receptor
+850	62	hsa-miR-652-3p	93974	ATP5IF1	NM_178191	ATP synthase inhibitory factor subunit 1
+851	62	hsa-miR-19b-3p	4763	NF1	NM_000267	neurofibromin 1
+852	62	hsa-miR-873-3p	23213	SULF1	NM_015170	sulfatase 1
+853	62	hsa-miR-338-3p	22846	VASH1	NM_014909	vasohibin 1
+854	62	hsa-miR-513a-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+855	62	hsa-miR-1185-2-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+856	62	hsa-miR-1185-2-3p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+857	62	hsa-miR-513c-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein
+858	62	hsa-miR-513c-3p	7057	THBS1	NM_003246	thrombospondin 1
+859	62	hsa-miR-514b-3p	9255	AIMP1	NM_004757	aminoacyl tRNA synthetase complex interacting multifunctional protein 1
+860	61	hsa-miR-486-3p	4804	NGFR	NM_002507	nerve growth factor receptor
+861	61	hsa-miR-3613-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+862	61	hsa-miR-410-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+863	61	hsa-miR-624-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+864	61	hsa-miR-1297	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+865	61	hsa-miR-221-3p	7057	THBS1	NM_003246	thrombospondin 1
+866	61	hsa-miR-361-3p	7124	TNF	NM_000594	tumor necrosis factor
+867	61	hsa-miR-495-3p	858	CAV2	NM_001206748	caveolin 2
+868	61	hsa-miR-4677-3p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+869	61	hsa-miR-1246	2658	GDF2	NM_016204	growth differentiation factor 2
+870	61	hsa-miR-15b-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+871	61	hsa-miR-211-5p	857	CAV1	NM_001172897	caveolin 1
+872	61	hsa-miR-545-3p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+873	61	hsa-miR-16-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+874	61	hsa-miR-381-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+875	61	hsa-miR-766-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+876	61	hsa-miR-222-3p	7057	THBS1	NM_003246	thrombospondin 1
+877	61	hsa-miR-221-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+878	61	hsa-miR-204-5p	857	CAV1	NM_001172897	caveolin 1
+879	61	hsa-miR-338-3p	857	CAV1	NM_001172895	caveolin 1
+880	61	hsa-miR-10b-3p	889	KRIT1	NM_001013406	KRIT1, ankyrin repeat containing
+881	61	hsa-miR-15a-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+882	61	hsa-miR-195-5p	5797	PTPRM	NM_001105244	protein tyrosine phosphatase, receptor type M
+883	60	hsa-miR-3183	2697	GJA1	NM_000165	gap junction protein alpha 1
+884	60	hsa-miR-380-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+885	60	hsa-miR-26a-5p	11235	PDCD10	NM_145860	programmed cell death 10
+886	60	hsa-miR-331-3p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+887	60	hsa-miR-495-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+888	60	hsa-miR-142-5p	857	CAV1	NM_001172897	caveolin 1
+889	60	hsa-miR-26b-5p	11235	PDCD10	NM_145860	programmed cell death 10
+890	60	hsa-miR-485-5p	84913	ATOH8	NM_032827	atonal bHLH transcription factor 8
+891	60	hsa-miR-545-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+892	60	hsa-miR-511-3p	7057	THBS1	NM_003246	thrombospondin 1
+893	60	hsa-miR-627-3p	857	CAV1	NM_001172897	caveolin 1
+894	60	hsa-miR-376c-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+895	60	hsa-miR-877-5p	889	KRIT1	NM_194455	KRIT1, ankyrin repeat containing
+896	60	hsa-miR-493-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+897	60	hsa-miR-450b-5p	7057	THBS1	NM_003246	thrombospondin 1
+898	60	hsa-miR-889-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+899	60	hsa-miR-4423-3p	55333	SYNJ2BP	NM_018373	synaptojanin 2 binding protein

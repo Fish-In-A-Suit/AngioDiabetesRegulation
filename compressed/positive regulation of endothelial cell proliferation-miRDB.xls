@@ -1,0 +1,2135 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-200c-3p	79805	VASH2	NM_001136474	vasohibin 2
+2	100	hsa-miR-429	79805	VASH2	NM_001136474	vasohibin 2
+3	100	hsa-miR-15b-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+4	100	hsa-miR-497-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+5	100	hsa-miR-16-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+6	100	hsa-miR-448	79805	VASH2	NM_001136474	vasohibin 2
+7	100	hsa-miR-548an	6667	SP1	NM_003109	Sp1 transcription factor
+8	100	hsa-miR-200b-3p	79805	VASH2	NM_001136474	vasohibin 2
+9	100	hsa-miR-15a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+10	100	hsa-miR-195-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+11	100	hsa-miR-424-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+12	99	hsa-miR-144-3p	7010	TEK	NM_000459	TEK receptor tyrosine kinase
+13	99	hsa-miR-124-3p	6667	SP1	NM_003109	Sp1 transcription factor
+14	99	hsa-miR-331-3p	8828	NRP2	NM_003872	neuropilin 2
+15	99	hsa-miR-3065-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+16	99	hsa-miR-548t-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+17	99	hsa-miR-181c-5p	5629	PROX1	NM_002763	prospero homeobox 1
+18	99	hsa-miR-142-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+19	99	hsa-miR-181d-5p	5629	PROX1	NM_002763	prospero homeobox 1
+20	99	hsa-miR-3143	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+21	99	hsa-miR-181a-5p	5629	PROX1	NM_002763	prospero homeobox 1
+22	99	hsa-miR-1185-1-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+23	99	hsa-miR-511-3p	1960	EGR3	NM_001199880	early growth response 3
+24	99	hsa-miR-181b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+25	99	hsa-miR-506-3p	6667	SP1	NM_003109	Sp1 transcription factor
+26	99	hsa-miR-7-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+27	99	hsa-miR-1185-2-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+28	99	hsa-miR-505-3p	3146	HMGB1	NM_002128	high mobility group box 1
+29	99	hsa-miR-203a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+30	98	hsa-miR-513a-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+31	98	hsa-miR-19a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+32	98	hsa-miR-19a-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+33	98	hsa-miR-15b-5p	8862	APLN	NM_017413	apelin
+34	98	hsa-miR-15b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+35	98	hsa-miR-29c-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+36	98	hsa-miR-497-5p	8862	APLN	NM_017413	apelin
+37	98	hsa-miR-3143	7857	SCG2	NM_003469	secretogranin II
+38	98	hsa-miR-5571-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+39	98	hsa-miR-29a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+40	98	hsa-miR-16-5p	8862	APLN	NM_017413	apelin
+41	98	hsa-miR-16-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+42	98	hsa-miR-330-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+43	98	hsa-miR-101-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+44	98	hsa-miR-29b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+45	98	hsa-miR-7-5p	6667	SP1	NM_003109	Sp1 transcription factor
+46	98	hsa-miR-19b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+47	98	hsa-miR-19b-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+48	98	hsa-miR-497-3p	7474	WNT5A	NM_001256105	Wnt family member 5A
+49	98	hsa-miR-15a-5p	8862	APLN	NM_017413	apelin
+50	98	hsa-miR-15a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+51	98	hsa-miR-195-5p	8862	APLN	NM_017413	apelin
+52	98	hsa-miR-195-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+53	98	hsa-miR-424-5p	8862	APLN	NM_017413	apelin
+54	98	hsa-miR-513c-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+55	97	hsa-miR-576-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+56	97	hsa-miR-96-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+57	97	hsa-miR-548t-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+58	97	hsa-miR-106b-5p	79805	VASH2	NM_001136474	vasohibin 2
+59	97	hsa-miR-106b-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+60	97	hsa-miR-3613-5p	2624	GATA2	NM_032638	GATA binding protein 2
+61	97	hsa-miR-124-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+62	97	hsa-miR-544a	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+63	97	hsa-miR-154-3p	23411	SIRT1	NM_001142498	sirtuin 1
+64	97	hsa-miR-4524a-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+65	97	hsa-miR-1271-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+66	97	hsa-miR-1290	3676	ITGA4	NM_001316312	integrin subunit alpha 4
+67	97	hsa-miR-497-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+68	97	hsa-miR-545-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+69	97	hsa-miR-665	3791	KDR	NM_002253	kinase insert domain receptor
+70	97	hsa-miR-381-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+71	97	hsa-miR-448	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+72	97	hsa-miR-92a-1-5p	8828	NRP2	NM_018534	neuropilin 2
+73	97	hsa-miR-506-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+74	97	hsa-miR-487a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+75	97	hsa-miR-20a-5p	79805	VASH2	NM_001136474	vasohibin 2
+76	97	hsa-miR-20a-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+77	97	hsa-miR-3175	187	APLNR	NM_005161	apelin receptor
+78	97	hsa-miR-424-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+79	96	hsa-miR-450a-2-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+80	96	hsa-miR-3120-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+81	96	hsa-miR-23a-3p	1960	EGR3	NM_001199880	early growth response 3
+82	96	hsa-miR-450a-1-3p	650	BMP2	NM_001200	bone morphogenetic protein 2
+83	96	hsa-miR-374a-3p	5629	PROX1	NM_002763	prospero homeobox 1
+84	96	hsa-miR-410-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+85	96	hsa-miR-18b-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+86	96	hsa-miR-1297	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+87	96	hsa-miR-26a-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+88	96	hsa-miR-1910-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+89	96	hsa-miR-26b-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+90	96	hsa-let-7f-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+91	96	hsa-let-7d-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+92	96	hsa-miR-98-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+93	96	hsa-miR-545-3p	1960	EGR3	NM_001199880	early growth response 3
+94	96	hsa-miR-377-3p	3162	HMOX1	NM_002133	heme oxygenase 1
+95	96	hsa-let-7b-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+96	96	hsa-miR-543	7857	SCG2	NM_003469	secretogranin II
+97	96	hsa-miR-627-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+98	96	hsa-miR-20b-5p	79805	VASH2	NM_001136474	vasohibin 2
+99	96	hsa-miR-20b-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+100	96	hsa-let-7g-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+101	96	hsa-miR-106a-5p	79805	VASH2	NM_001136474	vasohibin 2
+102	96	hsa-miR-106a-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+103	96	hsa-miR-23b-3p	1960	EGR3	NM_001199880	early growth response 3
+104	96	hsa-miR-93-5p	79805	VASH2	NM_001136474	vasohibin 2
+105	96	hsa-miR-93-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+106	96	hsa-miR-18a-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+107	96	hsa-let-7a-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+108	96	hsa-miR-17-5p	79805	VASH2	NM_001136474	vasohibin 2
+109	96	hsa-miR-17-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+110	96	hsa-miR-6511a-5p	654	BMP6	NM_001718	bone morphogenetic protein 6
+111	96	hsa-let-7i-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+112	96	hsa-miR-519d-3p	79805	VASH2	NM_001136474	vasohibin 2
+113	96	hsa-miR-519d-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+114	96	hsa-miR-660-5p	1012	CDH13	NM_001220488	cadherin 13
+115	96	hsa-miR-450b-5p	3148	HMGB2	NM_002129	high mobility group box 2
+116	96	hsa-let-7e-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+117	96	hsa-let-7c-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+118	95	hsa-miR-106b-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+119	95	hsa-miR-520h	9037	SEMA5A	NM_003966	semaphorin 5A
+120	95	hsa-miR-374a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+121	95	hsa-miR-218-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+122	95	hsa-miR-589-3p	5629	PROX1	NM_002763	prospero homeobox 1
+123	95	hsa-miR-520g-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+124	95	hsa-miR-124-3p	8829	NRP1	NM_003873	neuropilin 1
+125	95	hsa-miR-3121-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+126	95	hsa-miR-4677-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+127	95	hsa-miR-200c-3p	3791	KDR	NM_002253	kinase insert domain receptor
+128	95	hsa-miR-3065-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+129	95	hsa-miR-429	3791	KDR	NM_002253	kinase insert domain receptor
+130	95	hsa-miR-15b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+131	95	hsa-miR-15b-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+132	95	hsa-miR-181c-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+133	95	hsa-miR-211-5p	23411	SIRT1	NM_001142498	sirtuin 1
+134	95	hsa-miR-497-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+135	95	hsa-miR-181d-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+136	95	hsa-miR-323a-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+137	95	hsa-miR-3173-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+138	95	hsa-miR-182-5p	1960	EGR3	NM_001199880	early growth response 3
+139	95	hsa-miR-299-5p	6667	SP1	NM_003109	Sp1 transcription factor
+140	95	hsa-miR-545-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+141	95	hsa-miR-545-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+142	95	hsa-miR-181a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+143	95	hsa-miR-874-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+144	95	hsa-miR-16-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+145	95	hsa-miR-16-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+146	95	hsa-miR-338-5p	23411	SIRT1	NM_001142498	sirtuin 1
+147	95	hsa-miR-20b-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+148	95	hsa-miR-106a-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+149	95	hsa-miR-141-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+150	95	hsa-miR-93-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+151	95	hsa-miR-200a-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+152	95	hsa-miR-548an	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+153	95	hsa-miR-181b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+154	95	hsa-miR-200b-3p	3791	KDR	NM_002253	kinase insert domain receptor
+155	95	hsa-miR-506-3p	8829	NRP1	NM_003873	neuropilin 1
+156	95	hsa-miR-452-3p	56005	MYDGF	NM_019107	myeloid derived growth factor
+157	95	hsa-miR-204-5p	23411	SIRT1	NM_001142498	sirtuin 1
+158	95	hsa-miR-17-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+159	95	hsa-miR-6515-5p	207	AKT1	NM_001014431	AKT serine/threonine kinase 1
+160	95	hsa-miR-223-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+161	95	hsa-miR-20a-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+162	95	hsa-miR-656-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+163	95	hsa-miR-128-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+164	95	hsa-miR-425-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+165	95	hsa-miR-9-5p	23411	SIRT1	NM_001142498	sirtuin 1
+166	95	hsa-miR-519d-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+167	95	hsa-miR-15a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+168	95	hsa-miR-15a-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+169	95	hsa-miR-195-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+170	95	hsa-miR-195-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+171	95	hsa-miR-424-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+172	95	hsa-miR-548l	2152	F3	NM_001993	coagulation factor III, tissue factor
+173	94	hsa-miR-374b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+174	94	hsa-miR-96-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+175	94	hsa-miR-548t-3p	7474	WNT5A	NM_003392	Wnt family member 5A
+176	94	hsa-miR-410-3p	6667	SP1	NM_003109	Sp1 transcription factor
+177	94	hsa-miR-22-3p	23411	SIRT1	NM_001142498	sirtuin 1
+178	94	hsa-miR-374a-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+179	94	hsa-miR-374a-5p	7474	WNT5A	NM_003392	Wnt family member 5A
+180	94	hsa-miR-589-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+181	94	hsa-miR-664b-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+182	94	hsa-miR-148a-3p	8829	NRP1	NM_003873	neuropilin 1
+183	94	hsa-miR-3121-3p	57521	RPTOR	NM_001163034	regulatory associated protein of MTOR complex 1
+184	94	hsa-miR-17-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+185	94	hsa-miR-152-3p	8829	NRP1	NM_003873	neuropilin 1
+186	94	hsa-miR-361-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+187	94	hsa-miR-29c-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+188	94	hsa-miR-497-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+189	94	hsa-miR-29a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+190	94	hsa-miR-299-3p	8742	TNFSF12	NM_003809	TNF superfamily member 12
+191	94	hsa-miR-381-3p	7474	WNT5A	NM_001256105	Wnt family member 5A
+192	94	hsa-miR-20a-3p	1012	CDH13	NM_001220490	cadherin 13
+193	94	hsa-miR-3192-5p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+194	94	hsa-miR-24-3p	8828	NRP2	NM_003872	neuropilin 2
+195	94	hsa-miR-3605-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+196	94	hsa-miR-29b-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+197	94	hsa-miR-568	8862	APLN	NM_017413	apelin
+198	94	hsa-miR-494-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+199	94	hsa-miR-342-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+200	94	hsa-miR-582-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+201	94	hsa-miR-320e	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+202	94	hsa-miR-148b-3p	8829	NRP1	NM_003873	neuropilin 1
+203	94	hsa-miR-143-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+204	94	hsa-miR-762	8862	APLN	NM_017413	apelin
+205	94	hsa-miR-493-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+206	94	hsa-miR-374b-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+207	94	hsa-miR-636	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+208	94	hsa-miR-424-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+209	94	hsa-miR-889-3p	8742	TNFSF12	NM_003809	TNF superfamily member 12
+210	93	hsa-miR-450a-2-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+211	93	hsa-miR-3120-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+212	93	hsa-miR-30a-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+213	93	hsa-miR-491-5p	3481	IGF2	NM_001007139	insulin like growth factor 2
+214	93	hsa-miR-106b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+215	93	hsa-miR-548j-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+216	93	hsa-miR-218-5p	79805	VASH2	NM_001136474	vasohibin 2
+217	93	hsa-miR-514a-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+218	93	hsa-miR-1275	3481	IGF2	NM_000612	insulin like growth factor 2
+219	93	hsa-miR-22-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+220	93	hsa-miR-548c-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+221	93	hsa-miR-3121-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+222	93	hsa-miR-99b-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+223	93	hsa-miR-628-5p	79805	VASH2	NM_001136474	vasohibin 2
+224	93	hsa-miR-335-5p	2624	GATA2	NM_032638	GATA binding protein 2
+225	93	hsa-miR-214-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+226	93	hsa-miR-214-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+227	93	hsa-miR-210-3p	3481	IGF2	NM_001291861	insulin like growth factor 2
+228	93	hsa-miR-548b-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+229	93	hsa-miR-200c-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+230	93	hsa-miR-429	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+231	93	hsa-miR-548d-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+232	93	hsa-miR-29c-3p	6667	SP1	NM_003109	Sp1 transcription factor
+233	93	hsa-miR-29c-3p	858	CAV2	NM_001206747	caveolin 2
+234	93	hsa-miR-1271-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+235	93	hsa-miR-181c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+236	93	hsa-miR-548h-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+237	93	hsa-miR-181d-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+238	93	hsa-miR-30c-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+239	93	hsa-miR-29a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+240	93	hsa-miR-29a-3p	858	CAV2	NM_001206747	caveolin 2
+241	93	hsa-miR-181a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+242	93	hsa-miR-107	8828	NRP2	NM_018534	neuropilin 2
+243	93	hsa-miR-665	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+244	93	hsa-miR-496	5587	PRKD1	NM_002742	protein kinase D1
+245	93	hsa-miR-424-3p	7060	THBS4	NM_001306213	thrombospondin 4
+246	93	hsa-miR-5001-5p	8862	APLN	NM_017413	apelin
+247	93	hsa-miR-330-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+248	93	hsa-miR-543	23411	SIRT1	NM_001142498	sirtuin 1
+249	93	hsa-miR-1285-3p	8829	NRP1	NM_003873	neuropilin 1
+250	93	hsa-miR-20b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+251	93	hsa-miR-106a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+252	93	hsa-miR-376c-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+253	93	hsa-miR-30b-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+254	93	hsa-miR-103a-3p	8828	NRP2	NM_018534	neuropilin 2
+255	93	hsa-miR-93-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+256	93	hsa-miR-548k	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+257	93	hsa-miR-548o-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+258	93	hsa-miR-548an	8829	NRP1	NM_003873	neuropilin 1
+259	93	hsa-miR-181b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+260	93	hsa-miR-29b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+261	93	hsa-miR-29b-3p	858	CAV2	NM_001206747	caveolin 2
+262	93	hsa-miR-200b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+263	93	hsa-miR-580-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+264	93	hsa-miR-32-3p	858	CAV2	NM_001206747	caveolin 2
+265	93	hsa-miR-30d-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+266	93	hsa-miR-17-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+267	93	hsa-miR-19b-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+268	93	hsa-miR-548am-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+269	93	hsa-miR-20a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+270	93	hsa-miR-100-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+271	93	hsa-miR-656-3p	1960	EGR3	NM_001199880	early growth response 3
+272	93	hsa-miR-30e-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+273	93	hsa-miR-99a-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+274	93	hsa-miR-519d-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+275	93	hsa-miR-761	5629	PROX1	NM_001270616	prospero homeobox 1
+276	93	hsa-miR-761	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+277	93	hsa-miR-374b-5p	7474	WNT5A	NM_003392	Wnt family member 5A
+278	93	hsa-miR-548l	6667	SP1	NM_003109	Sp1 transcription factor
+279	92	hsa-miR-23a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+280	92	hsa-miR-576-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+281	92	hsa-miR-183-3p	7432	VIP	NM_003381	vasoactive intestinal peptide
+282	92	hsa-miR-144-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+283	92	hsa-miR-520h	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+284	92	hsa-miR-548e-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+285	92	hsa-miR-873-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+286	92	hsa-miR-148a-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+287	92	hsa-miR-520g-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+288	92	hsa-miR-1-3p	8829	NRP1	NM_003873	neuropilin 1
+289	92	hsa-miR-19a-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+290	92	hsa-miR-3065-5p	8828	NRP2	NM_018534	neuropilin 2
+291	92	hsa-miR-152-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+292	92	hsa-miR-651-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+293	92	hsa-let-7f-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+294	92	hsa-let-7f-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+295	92	hsa-miR-98-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+296	92	hsa-miR-98-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+297	92	hsa-miR-802	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+298	92	hsa-miR-548a-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+299	92	hsa-miR-377-3p	8828	NRP2	NM_018534	neuropilin 2
+300	92	hsa-miR-1185-1-3p	858	CAV2	NM_001206747	caveolin 2
+301	92	hsa-let-7b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+302	92	hsa-let-7b-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+303	92	hsa-miR-338-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+304	92	hsa-let-7g-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+305	92	hsa-let-7g-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+306	92	hsa-miR-608	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+307	92	hsa-miR-23b-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+308	92	hsa-miR-1258	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+309	92	hsa-miR-376c-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+310	92	hsa-miR-494-3p	8862	APLN	NM_017413	apelin
+311	92	hsa-let-7a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+312	92	hsa-let-7a-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+313	92	hsa-miR-628-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+314	92	hsa-miR-148b-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+315	92	hsa-miR-656-3p	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+316	92	hsa-let-7i-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+317	92	hsa-let-7i-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+318	92	hsa-miR-206	8829	NRP1	NM_003873	neuropilin 1
+319	92	hsa-miR-548f-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+320	92	hsa-miR-493-5p	7474	WNT5A	NM_001256105	Wnt family member 5A
+321	92	hsa-miR-1185-2-3p	858	CAV2	NM_001206747	caveolin 2
+322	92	hsa-let-7e-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+323	92	hsa-let-7e-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+324	92	hsa-let-7c-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+325	92	hsa-let-7c-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+326	92	hsa-miR-203a-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+327	92	hsa-miR-203a-3p	1960	EGR3	NM_001199880	early growth response 3
+328	91	hsa-miR-32-5p	2624	GATA2	NM_001145661	GATA binding protein 2
+329	91	hsa-miR-186-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+330	91	hsa-miR-509-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+331	91	hsa-miR-548e-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+332	91	hsa-miR-155-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+333	91	hsa-miR-509-3-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+334	91	hsa-miR-3918	5335	PLCG1	NM_002660	phospholipase C gamma 1
+335	91	hsa-miR-539-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+336	91	hsa-miR-664b-3p	858	CAV2	NM_198212	caveolin 2
+337	91	hsa-miR-150-5p	6667	SP1	NM_003109	Sp1 transcription factor
+338	91	hsa-miR-629-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+339	91	hsa-miR-495-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+340	91	hsa-miR-495-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+341	91	hsa-miR-92b-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+342	91	hsa-miR-513a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+343	91	hsa-miR-153-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+344	91	hsa-let-7d-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+345	91	hsa-miR-1290	6667	SP1	NM_003109	Sp1 transcription factor
+346	91	hsa-miR-1303	185	AGTR1	NM_000685	angiotensin II receptor type 1
+347	91	hsa-miR-548a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+348	91	hsa-miR-1185-1-3p	7010	TEK	NM_000459	TEK receptor tyrosine kinase
+349	91	hsa-miR-1185-1-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+350	91	hsa-miR-381-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+351	91	hsa-miR-627-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+352	91	hsa-miR-9-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+353	91	hsa-miR-1304-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+354	91	hsa-miR-149-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+355	91	hsa-miR-488-3p	858	CAV2	NM_001206747	caveolin 2
+356	91	hsa-miR-128-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+357	91	hsa-miR-1972	3481	IGF2	NM_001291861	insulin like growth factor 2
+358	91	hsa-miR-485-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+359	91	hsa-miR-369-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+360	91	hsa-miR-548f-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+361	91	hsa-miR-3140-3p	10000	AKT3	NM_181690	AKT serine/threonine kinase 3
+362	91	hsa-miR-493-5p	2152	F3	NM_001993	coagulation factor III, tissue factor
+363	91	hsa-miR-3190-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+364	91	hsa-miR-1185-2-3p	7010	TEK	NM_000459	TEK receptor tyrosine kinase
+365	91	hsa-miR-1185-2-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+366	91	hsa-miR-92a-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+367	91	hsa-miR-513c-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+368	90	hsa-miR-23a-3p	3148	HMGB2	NM_002129	high mobility group box 2
+369	90	hsa-miR-23a-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+370	90	hsa-miR-144-3p	858	CAV2	NM_001206748	caveolin 2
+371	90	hsa-miR-155-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+372	90	hsa-miR-1275	187	APLNR	NM_005161	apelin receptor
+373	90	hsa-miR-539-3p	1012	CDH13	NM_001220488	cadherin 13
+374	90	hsa-miR-539-3p	23411	SIRT1	NM_001142498	sirtuin 1
+375	90	hsa-miR-380-3p	3676	ITGA4	NM_001316312	integrin subunit alpha 4
+376	90	hsa-miR-30b-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+377	90	hsa-miR-124-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+378	90	hsa-miR-320d	8829	NRP1	NM_003873	neuropilin 1
+379	90	hsa-miR-513a-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+380	90	hsa-miR-361-5p	6667	SP1	NM_003109	Sp1 transcription factor
+381	90	hsa-miR-129-5p	7474	WNT5A	NM_001256105	Wnt family member 5A
+382	90	hsa-miR-182-5p	7474	WNT5A	NM_001256105	Wnt family member 5A
+383	90	hsa-miR-1303	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+384	90	hsa-miR-503-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+385	90	hsa-miR-522-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+386	90	hsa-miR-320c	8829	NRP1	NM_003873	neuropilin 1
+387	90	hsa-miR-23b-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+388	90	hsa-miR-23b-3p	3148	HMGB2	NM_002129	high mobility group box 2
+389	90	hsa-miR-324-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+390	90	hsa-miR-506-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+391	90	hsa-miR-4662a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+392	90	hsa-miR-145-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+393	90	hsa-miR-128-3p	6667	SP1	NM_003109	Sp1 transcription factor
+394	90	hsa-miR-3175	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+395	90	hsa-miR-485-3p	23411	SIRT1	NM_001142498	sirtuin 1
+396	90	hsa-miR-485-3p	1012	CDH13	NM_001220488	cadherin 13
+397	90	hsa-miR-338-3p	8829	NRP1	NM_003873	neuropilin 1
+398	90	hsa-miR-27a-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+399	90	hsa-miR-9-5p	8829	NRP1	NM_003873	neuropilin 1
+400	90	hsa-miR-3140-3p	858	CAV2	NM_198212	caveolin 2
+401	90	hsa-miR-3190-3p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+402	90	hsa-miR-450b-5p	1950	EGF	NM_001963	epidermal growth factor
+403	90	hsa-miR-320b	8829	NRP1	NM_003873	neuropilin 1
+404	90	hsa-miR-513c-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+405	90	hsa-miR-519c-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+406	90	hsa-miR-27b-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+407	89	hsa-miR-379-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+408	89	hsa-miR-3126-5p	79805	VASH2	NM_001136474	vasohibin 2
+409	89	hsa-miR-144-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+410	89	hsa-miR-367-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+411	89	hsa-miR-589-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+412	89	hsa-miR-374a-5p	858	CAV2	NM_198212	caveolin 2
+413	89	hsa-miR-148a-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+414	89	hsa-miR-221-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+415	89	hsa-miR-212-3p	23411	SIRT1	NM_001142498	sirtuin 1
+416	89	hsa-miR-205-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+417	89	hsa-miR-939-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+418	89	hsa-miR-876-5p	8828	NRP2	NM_201264	neuropilin 2
+419	89	hsa-miR-152-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+420	89	hsa-miR-150-3p	8829	NRP1	NM_003873	neuropilin 1
+421	89	hsa-miR-29c-3p	23411	SIRT1	NM_001142498	sirtuin 1
+422	89	hsa-let-7f-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+423	89	hsa-let-7d-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+424	89	hsa-let-7d-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+425	89	hsa-miR-142-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+426	89	hsa-miR-363-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+427	89	hsa-miR-455-5p	3791	KDR	NM_002253	kinase insert domain receptor
+428	89	hsa-miR-98-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+429	89	hsa-miR-29a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+430	89	hsa-miR-377-3p	1012	CDH13	NM_001220489	cadherin 13
+431	89	hsa-miR-489-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+432	89	hsa-miR-766-3p	51548	SIRT6	NM_001321064	sirtuin 6
+433	89	hsa-let-7b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+434	89	hsa-let-7g-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+435	89	hsa-miR-138-5p	23411	SIRT1	NM_001142498	sirtuin 1
+436	89	hsa-miR-508-5p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+437	89	hsa-miR-29b-3p	23411	SIRT1	NM_001142498	sirtuin 1
+438	89	hsa-miR-222-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+439	89	hsa-let-7a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+440	89	hsa-miR-148b-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+441	89	hsa-miR-1323	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+442	89	hsa-let-7i-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+443	89	hsa-miR-25-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+444	89	hsa-miR-132-3p	23411	SIRT1	NM_001142498	sirtuin 1
+445	89	hsa-miR-130a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+446	89	hsa-miR-27a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+447	89	hsa-miR-493-5p	6667	SP1	NM_003109	Sp1 transcription factor
+448	89	hsa-miR-374b-5p	858	CAV2	NM_198212	caveolin 2
+449	89	hsa-let-7e-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+450	89	hsa-miR-130b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+451	89	hsa-let-7c-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+452	89	hsa-miR-27b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+453	88	hsa-miR-519b-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+454	88	hsa-miR-449a	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+455	88	hsa-miR-449a	1012	CDH13	NM_001220488	cadherin 13
+456	88	hsa-miR-519a-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+457	88	hsa-miR-597-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+458	88	hsa-miR-148a-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+459	88	hsa-miR-124-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+460	88	hsa-miR-633	650	BMP2	NM_001200	bone morphogenetic protein 2
+461	88	hsa-miR-34a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+462	88	hsa-miR-34a-5p	1012	CDH13	NM_001220488	cadherin 13
+463	88	hsa-miR-200a-5p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+464	88	hsa-miR-200c-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+465	88	hsa-miR-152-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+466	88	hsa-miR-429	57608	JCAD	NM_020848	junctional cadherin 5 associated
+467	88	hsa-miR-15b-5p	8828	NRP2	NM_003872	neuropilin 2
+468	88	hsa-miR-140-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+469	88	hsa-miR-1290	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+470	88	hsa-miR-655-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+471	88	hsa-miR-129-5p	79805	VASH2	NM_001136474	vasohibin 2
+472	88	hsa-miR-135b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+473	88	hsa-miR-374c-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+474	88	hsa-miR-3614-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+475	88	hsa-miR-381-3p	79805	VASH2	NM_001136474	vasohibin 2
+476	88	hsa-miR-330-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+477	88	hsa-miR-135a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+478	88	hsa-miR-365b-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+479	88	hsa-miR-365a-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+480	88	hsa-miR-200b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+481	88	hsa-miR-506-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+482	88	hsa-miR-222-3p	3791	KDR	NM_002253	kinase insert domain receptor
+483	88	hsa-miR-3152-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+484	88	hsa-miR-3152-3p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+485	88	hsa-miR-1179	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+486	88	hsa-miR-342-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+487	88	hsa-miR-223-5p	1960	EGR3	NM_001199880	early growth response 3
+488	88	hsa-miR-148b-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+489	88	hsa-miR-656-3p	858	CAV2	NM_001206747	caveolin 2
+490	88	hsa-miR-27a-3p	8828	NRP2	NM_003872	neuropilin 2
+491	88	hsa-miR-3127-5p	5629	PROX1	NM_002763	prospero homeobox 1
+492	88	hsa-miR-3140-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+493	88	hsa-miR-15a-5p	8828	NRP2	NM_003872	neuropilin 2
+494	88	hsa-miR-454-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+495	88	hsa-miR-889-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+496	88	hsa-miR-889-3p	8862	APLN	NM_017413	apelin
+497	88	hsa-miR-4423-3p	6667	SP1	NM_003109	Sp1 transcription factor
+498	88	hsa-miR-27b-3p	8828	NRP2	NM_003872	neuropilin 2
+499	87	hsa-miR-3120-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+500	87	hsa-miR-23a-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+501	87	hsa-miR-483-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+502	87	hsa-miR-30a-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+503	87	hsa-miR-657	5629	PROX1	NM_001270616	prospero homeobox 1
+504	87	hsa-miR-548t-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+505	87	hsa-miR-106b-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+506	87	hsa-miR-410-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+507	87	hsa-miR-216a-5p	858	CAV2	NM_198212	caveolin 2
+508	87	hsa-miR-22-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+509	87	hsa-miR-624-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+510	87	hsa-miR-624-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+511	87	hsa-miR-421	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+512	87	hsa-miR-148a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+513	87	hsa-miR-331-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+514	87	hsa-miR-627-5p	858	CAV2	NM_198212	caveolin 2
+515	87	hsa-miR-513a-3p	383	ARG1	NM_001244438	arginase 1
+516	87	hsa-miR-660-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+517	87	hsa-miR-152-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+518	87	hsa-miR-361-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+519	87	hsa-miR-150-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+520	87	hsa-miR-342-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+521	87	hsa-miR-548t-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+522	87	hsa-miR-33b-5p	51548	SIRT6	NM_001321064	sirtuin 6
+523	87	hsa-miR-30c-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+524	87	hsa-miR-1185-1-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+525	87	hsa-miR-338-5p	858	CAV2	NM_001206747	caveolin 2
+526	87	hsa-miR-543	7432	VIP	NM_194435	vasoactive intestinal peptide
+527	87	hsa-miR-106a-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+528	87	hsa-miR-33a-5p	51548	SIRT6	NM_001321064	sirtuin 6
+529	87	hsa-miR-23b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+530	87	hsa-miR-30b-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+531	87	hsa-miR-499a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+532	87	hsa-miR-548o-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+533	87	hsa-miR-101-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+534	87	hsa-miR-196b-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+535	87	hsa-miR-297	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+536	87	hsa-miR-7-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+537	87	hsa-miR-135b-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+538	87	hsa-miR-30d-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+539	87	hsa-miR-6503-5p	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+540	87	hsa-miR-582-5p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+541	87	hsa-miR-605-3p	6667	SP1	NM_003109	Sp1 transcription factor
+542	87	hsa-miR-20a-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+543	87	hsa-miR-148b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+544	87	hsa-miR-128-3p	23411	SIRT1	NM_001142498	sirtuin 1
+545	87	hsa-miR-759	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+546	87	hsa-miR-30e-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+547	87	hsa-miR-130a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+548	87	hsa-miR-9-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+549	87	hsa-miR-196a-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+550	87	hsa-miR-1185-2-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+551	87	hsa-miR-513c-3p	383	ARG1	NM_001244438	arginase 1
+552	86	hsa-miR-519b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+553	86	hsa-miR-519a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+554	86	hsa-miR-144-3p	8828	NRP2	NM_018534	neuropilin 2
+555	86	hsa-miR-144-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+556	86	hsa-miR-374a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+557	86	hsa-miR-186-5p	23411	SIRT1	NM_001142498	sirtuin 1
+558	86	hsa-miR-155-5p	7857	SCG2	NM_003469	secretogranin II
+559	86	hsa-miR-589-3p	187	APLNR	NM_005161	apelin receptor
+560	86	hsa-miR-31-3p	1012	CDH13	NM_001220488	cadherin 13
+561	86	hsa-miR-124-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+562	86	hsa-miR-3121-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+563	86	hsa-miR-660-3p	79805	VASH2	NM_001136474	vasohibin 2
+564	86	hsa-miR-34c-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+565	86	hsa-miR-4520-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+566	86	hsa-miR-514a-3p	5587	PRKD1	NM_002742	protein kinase D1
+567	86	hsa-miR-545-3p	8828	NRP2	NM_003872	neuropilin 2
+568	86	hsa-miR-212-5p	1960	EGR3	NM_001199880	early growth response 3
+569	86	hsa-miR-576-3p	1960	EGR3	NM_001199880	early growth response 3
+570	86	hsa-miR-30a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+571	86	hsa-miR-224-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+572	86	hsa-miR-506-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+573	86	hsa-miR-30e-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+574	86	hsa-miR-494-3p	79805	VASH2	NM_001136474	vasohibin 2
+575	86	hsa-miR-198	7857	SCG2	NM_003469	secretogranin II
+576	86	hsa-miR-371a-5p	3148	HMGB2	NM_002129	high mobility group box 2
+577	86	hsa-miR-369-3p	650	BMP2	NM_001200	bone morphogenetic protein 2
+578	86	hsa-miR-369-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+579	86	hsa-miR-27a-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+580	86	hsa-miR-185-5p	284361	EMC10	NM_175063	ER membrane protein complex subunit 10
+581	86	hsa-miR-513a-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+582	86	hsa-miR-493-5p	79805	VASH2	NM_001136474	vasohibin 2
+583	86	hsa-miR-493-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+584	86	hsa-miR-493-5p	1012	CDH13	NM_001220489	cadherin 13
+585	86	hsa-miR-449b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+586	86	hsa-miR-561-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+587	86	hsa-miR-27b-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+588	86	hsa-miR-514b-3p	5587	PRKD1	NM_002742	protein kinase D1
+589	85	hsa-miR-515-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+590	85	hsa-miR-449a	5587	PRKD1	NM_002742	protein kinase D1
+591	85	hsa-miR-301a-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+592	85	hsa-miR-212-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+593	85	hsa-miR-3158-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+594	85	hsa-miR-34a-5p	5587	PRKD1	NM_002742	protein kinase D1
+595	85	hsa-miR-495-3p	7857	SCG2	NM_003469	secretogranin II
+596	85	hsa-miR-1-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+597	85	hsa-miR-17-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+598	85	hsa-miR-660-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+599	85	hsa-miR-301a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+600	85	hsa-miR-361-5p	5629	PROX1	NM_002763	prospero homeobox 1
+601	85	hsa-miR-15b-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+602	85	hsa-miR-34c-5p	1012	CDH13	NM_001220488	cadherin 13
+603	85	hsa-miR-455-5p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+604	85	hsa-miR-432-5p	5155	PDGFB	NM_033016	platelet derived growth factor subunit B
+605	85	hsa-miR-503-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+606	85	hsa-miR-503-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+607	85	hsa-miR-16-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+608	85	hsa-miR-338-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+609	85	hsa-miR-1258	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+610	85	hsa-miR-301b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+611	85	hsa-miR-5196-3p	6667	SP1	NM_003109	Sp1 transcription factor
+612	85	hsa-miR-769-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+613	85	hsa-miR-206	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+614	85	hsa-miR-338-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+615	85	hsa-miR-132-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+616	85	hsa-miR-15a-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+617	85	hsa-miR-449b-5p	1012	CDH13	NM_001220488	cadherin 13
+618	85	hsa-miR-195-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+619	85	hsa-miR-130b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+620	85	hsa-miR-454-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+621	84	hsa-miR-519b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+622	84	hsa-miR-885-5p	7474	WNT5A	NM_003392	Wnt family member 5A
+623	84	hsa-miR-519a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+624	84	hsa-miR-186-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+625	84	hsa-miR-548j-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+626	84	hsa-miR-155-5p	6667	SP1	NM_003109	Sp1 transcription factor
+627	84	hsa-miR-548c-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+628	84	hsa-miR-221-3p	3791	KDR	NM_002253	kinase insert domain receptor
+629	84	hsa-miR-495-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+630	84	hsa-miR-548b-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+631	84	hsa-miR-17-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+632	84	hsa-miR-188-3p	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+633	84	hsa-miR-548d-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+634	84	hsa-miR-150-3p	858	CAV2	NM_198212	caveolin 2
+635	84	hsa-miR-548h-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+636	84	hsa-miR-503-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+637	84	hsa-miR-516b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+638	84	hsa-miR-1298-5p	3357	HTR2B	NM_000867	5-hydroxytryptamine receptor 2B
+639	84	hsa-miR-381-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+640	84	hsa-miR-1301-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+641	84	hsa-miR-1301-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+642	84	hsa-miR-20b-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+643	84	hsa-miR-126-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+644	84	hsa-miR-93-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+645	84	hsa-miR-548o-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+646	84	hsa-miR-24-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+647	84	hsa-miR-24-3p	8829	NRP1	NM_003873	neuropilin 1
+648	84	hsa-miR-149-5p	8828	NRP2	NM_003872	neuropilin 2
+649	84	hsa-miR-145-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+650	84	hsa-miR-17-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+651	84	hsa-miR-548am-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+652	84	hsa-miR-1323	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+653	84	hsa-miR-338-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+654	84	hsa-miR-625-5p	187	APLNR	NM_005161	apelin receptor
+655	84	hsa-miR-519d-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+656	83	hsa-miR-515-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+657	83	hsa-miR-32-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+658	83	hsa-miR-576-5p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+659	83	hsa-miR-576-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+660	83	hsa-miR-576-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+661	83	hsa-miR-183-3p	7474	WNT5A	NM_003392	Wnt family member 5A
+662	83	hsa-miR-3129-5p	6667	SP1	NM_003109	Sp1 transcription factor
+663	83	hsa-miR-22-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+664	83	hsa-miR-942-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+665	83	hsa-miR-597-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+666	83	hsa-miR-148a-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+667	83	hsa-miR-629-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+668	83	hsa-miR-544a	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+669	83	hsa-miR-2355-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+670	83	hsa-miR-92b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+671	83	hsa-miR-301a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+672	83	hsa-miR-152-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+673	83	hsa-miR-642a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+674	83	hsa-let-7f-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+675	83	hsa-let-7d-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+676	83	hsa-miR-140-3p	23411	SIRT1	NM_001142498	sirtuin 1
+677	83	hsa-miR-497-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+678	83	hsa-miR-3173-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+679	83	hsa-miR-5571-5p	858	CAV2	NM_198212	caveolin 2
+680	83	hsa-miR-98-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+681	83	hsa-miR-1827	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+682	83	hsa-miR-16-5p	8828	NRP2	NM_003872	neuropilin 2
+683	83	hsa-miR-661	2624	GATA2	NM_001145661	GATA binding protein 2
+684	83	hsa-let-7b-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+685	83	hsa-let-7g-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+686	83	hsa-miR-3614-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+687	83	hsa-miR-376c-3p	5629	PROX1	NM_002763	prospero homeobox 1
+688	83	hsa-miR-224-5p	1012	CDH13	NM_001220490	cadherin 13
+689	83	hsa-miR-101-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+690	83	hsa-miR-301b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+691	83	hsa-miR-199a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+692	83	hsa-miR-32-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+693	83	hsa-let-7a-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+694	83	hsa-miR-605-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+695	83	hsa-miR-148b-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+696	83	hsa-miR-1323	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+697	83	hsa-let-7i-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+698	83	hsa-miR-143-3p	3357	HTR2B	NM_000867	5-hydroxytryptamine receptor 2B
+699	83	hsa-miR-128-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+700	83	hsa-miR-767-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+701	83	hsa-miR-3140-3p	1960	EGR3	NM_001199880	early growth response 3
+702	83	hsa-miR-493-5p	2624	GATA2	NM_032638	GATA binding protein 2
+703	83	hsa-miR-92a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+704	83	hsa-miR-195-5p	8828	NRP2	NM_003872	neuropilin 2
+705	83	hsa-miR-424-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+706	83	hsa-let-7e-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+707	83	hsa-let-7c-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+708	83	hsa-miR-199b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+709	82	hsa-miR-3622a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+710	82	hsa-miR-519b-3p	79805	VASH2	NM_001136474	vasohibin 2
+711	82	hsa-miR-519b-3p	8828	NRP2	NM_018534	neuropilin 2
+712	82	hsa-miR-23a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+713	82	hsa-miR-519a-3p	79805	VASH2	NM_001136474	vasohibin 2
+714	82	hsa-miR-519a-3p	8828	NRP2	NM_018534	neuropilin 2
+715	82	hsa-miR-5699-5p	858	CAV2	NM_198212	caveolin 2
+716	82	hsa-miR-1291	3162	HMOX1	NM_002133	heme oxygenase 1
+717	82	hsa-miR-329-3p	8828	NRP2	NM_003872	neuropilin 2
+718	82	hsa-miR-520h	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+719	82	hsa-miR-186-5p	8829	NRP1	NM_003873	neuropilin 1
+720	82	hsa-miR-410-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+721	82	hsa-miR-374a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+722	82	hsa-miR-589-3p	79805	VASH2	NM_001136474	vasohibin 2
+723	82	hsa-miR-520g-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+724	82	hsa-miR-124-3p	8862	APLN	NM_017413	apelin
+725	82	hsa-miR-3121-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+726	82	hsa-miR-3664-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+727	82	hsa-miR-3130-3p	5629	PROX1	NM_002763	prospero homeobox 1
+728	82	hsa-miR-4677-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+729	82	hsa-miR-202-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+730	82	hsa-miR-3194-5p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+731	82	hsa-miR-153-3p	79805	VASH2	NM_001136474	vasohibin 2
+732	82	hsa-miR-153-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+733	82	hsa-miR-362-3p	8828	NRP2	NM_003872	neuropilin 2
+734	82	hsa-miR-182-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+735	82	hsa-miR-545-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+736	82	hsa-miR-212-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+737	82	hsa-miR-1185-1-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+738	82	hsa-miR-1185-1-3p	8829	NRP1	NM_003873	neuropilin 1
+739	82	hsa-miR-20a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+740	82	hsa-miR-1285-3p	1960	EGR3	NM_001199880	early growth response 3
+741	82	hsa-miR-23b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+742	82	hsa-miR-9-3p	79805	VASH2	NM_001136474	vasohibin 2
+743	82	hsa-miR-9-3p	4192	MDK	NM_001012333	midkine
+744	82	hsa-miR-101-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+745	82	hsa-miR-3934-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+746	82	hsa-miR-548an	5629	PROX1	NM_001270616	prospero homeobox 1
+747	82	hsa-miR-548an	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+748	82	hsa-miR-1304-5p	1012	CDH13	NM_001220488	cadherin 13
+749	82	hsa-miR-506-3p	8862	APLN	NM_017413	apelin
+750	82	hsa-miR-32-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+751	82	hsa-miR-668-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+752	82	hsa-miR-766-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+753	82	hsa-miR-1185-2-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+754	82	hsa-miR-1185-2-3p	8829	NRP1	NM_003873	neuropilin 1
+755	82	hsa-miR-10b-3p	79805	VASH2	NM_001136474	vasohibin 2
+756	82	hsa-miR-374b-5p	6667	SP1	NM_003109	Sp1 transcription factor
+757	82	hsa-miR-16-2-3p	7474	WNT5A	NM_001256105	Wnt family member 5A
+758	81	hsa-miR-133a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+759	81	hsa-miR-374b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+760	81	hsa-miR-3120-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+761	81	hsa-miR-486-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+762	81	hsa-miR-576-5p	1950	EGF	NM_001963	epidermal growth factor
+763	81	hsa-miR-144-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+764	81	hsa-miR-367-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+765	81	hsa-miR-509-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+766	81	hsa-miR-410-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+767	81	hsa-miR-216a-5p	1960	EGR3	NM_001199880	early growth response 3
+768	81	hsa-miR-1275	8862	APLN	NM_017413	apelin
+769	81	hsa-miR-509-3-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+770	81	hsa-miR-589-3p	858	CAV2	NM_198212	caveolin 2
+771	81	hsa-miR-664b-3p	23411	SIRT1	NM_001142498	sirtuin 1
+772	81	hsa-miR-592	5629	PROX1	NM_001270616	prospero homeobox 1
+773	81	hsa-miR-205-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+774	81	hsa-miR-939-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+775	81	hsa-miR-376a-3p	5587	PRKD1	NM_002742	protein kinase D1
+776	81	hsa-miR-376b-3p	5587	PRKD1	NM_002742	protein kinase D1
+777	81	hsa-miR-133b	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+778	81	hsa-miR-654-5p	57521	RPTOR	NM_001163034	regulatory associated protein of MTOR complex 1
+779	81	hsa-miR-1290	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+780	81	hsa-miR-497-5p	8828	NRP2	NM_003872	neuropilin 2
+781	81	hsa-miR-363-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+782	81	hsa-miR-655-3p	5587	PRKD1	NM_002742	protein kinase D1
+783	81	hsa-miR-802	185	AGTR1	NM_000685	angiotensin II receptor type 1
+784	81	hsa-miR-374c-5p	5587	PRKD1	NM_002742	protein kinase D1
+785	81	hsa-miR-3614-3p	10344	CCL26	NM_006072	C-C motif chemokine ligand 26
+786	81	hsa-miR-1185-1-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+787	81	hsa-miR-576-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+788	81	hsa-miR-487b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+789	81	hsa-miR-330-3p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+790	81	hsa-miR-511-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+791	81	hsa-miR-3162-5p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+792	81	hsa-miR-548k	7474	WNT5A	NM_003392	Wnt family member 5A
+793	81	hsa-miR-548o-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+794	81	hsa-miR-582-5p	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+795	81	hsa-miR-605-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+796	81	hsa-miR-223-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+797	81	hsa-miR-1323	5587	PRKD1	NM_002742	protein kinase D1
+798	81	hsa-miR-654-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+799	81	hsa-miR-497-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+800	81	hsa-miR-128-3p	8828	NRP2	NM_003872	neuropilin 2
+801	81	hsa-miR-25-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+802	81	hsa-miR-3140-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+803	81	hsa-miR-1185-2-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+804	81	hsa-miR-424-5p	8828	NRP2	NM_003872	neuropilin 2
+805	81	hsa-miR-548l	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+806	80	hsa-miR-133a-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+807	80	hsa-miR-133a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+808	80	hsa-miR-450a-2-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+809	80	hsa-miR-519b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+810	80	hsa-miR-23a-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+811	80	hsa-miR-519a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+812	80	hsa-miR-491-5p	4192	MDK	NM_001012333	midkine
+813	80	hsa-miR-183-3p	5629	PROX1	NM_002763	prospero homeobox 1
+814	80	hsa-miR-106b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+815	80	hsa-miR-328-3p	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+816	80	hsa-miR-450a-1-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+817	80	hsa-miR-144-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+818	80	hsa-miR-3144-5p	1960	EGR3	NM_001199880	early growth response 3
+819	80	hsa-miR-873-5p	3162	HMOX1	NM_002133	heme oxygenase 1
+820	80	hsa-miR-127-5p	8829	NRP1	NM_003873	neuropilin 1
+821	80	hsa-miR-624-5p	23411	SIRT1	NM_001142498	sirtuin 1
+822	80	hsa-miR-212-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+823	80	hsa-miR-409-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+824	80	hsa-miR-513a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+825	80	hsa-miR-142-5p	858	CAV2	NM_001206747	caveolin 2
+826	80	hsa-miR-19a-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+827	80	hsa-miR-3065-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+828	80	hsa-miR-651-5p	5629	PROX1	NM_002763	prospero homeobox 1
+829	80	hsa-miR-133b	6667	SP1	NM_003109	Sp1 transcription factor
+830	80	hsa-miR-133b	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+831	80	hsa-miR-548t-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+832	80	hsa-miR-485-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+833	80	hsa-miR-655-3p	3791	KDR	NM_002253	kinase insert domain receptor
+834	80	hsa-miR-653-3p	7432	VIP	NM_194435	vasoactive intestinal peptide
+835	80	hsa-miR-135b-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+836	80	hsa-miR-374c-5p	3791	KDR	NM_002253	kinase insert domain receptor
+837	80	hsa-miR-107	2247	FGF2	NM_002006	fibroblast growth factor 2
+838	80	hsa-miR-212-5p	8829	NRP1	NM_003873	neuropilin 1
+839	80	hsa-miR-448	5629	PROX1	NM_002763	prospero homeobox 1
+840	80	hsa-miR-3150b-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+841	80	hsa-miR-424-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+842	80	hsa-miR-330-3p	79805	VASH2	NM_001136474	vasohibin 2
+843	80	hsa-miR-20b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+844	80	hsa-miR-106a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+845	80	hsa-miR-3162-5p	6667	SP1	NM_003109	Sp1 transcription factor
+846	80	hsa-miR-23b-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+847	80	hsa-miR-103a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+848	80	hsa-miR-135a-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+849	80	hsa-miR-93-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+850	80	hsa-miR-3192-5p	2624	GATA2	NM_032638	GATA binding protein 2
+851	80	hsa-miR-506-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+852	80	hsa-miR-3152-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+853	80	hsa-miR-221-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+854	80	hsa-miR-17-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+855	80	hsa-miR-377-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+856	80	hsa-miR-6503-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+857	80	hsa-miR-19b-3p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+858	80	hsa-miR-20a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+859	80	hsa-miR-656-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+860	80	hsa-miR-324-5p	6667	SP1	NM_003109	Sp1 transcription factor
+861	80	hsa-miR-132-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+862	80	hsa-miR-519d-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+863	80	hsa-miR-513c-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+864	80	hsa-miR-889-3p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+865	79	hsa-miR-133a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+866	79	hsa-miR-3120-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+867	79	hsa-miR-548t-3p	3148	HMGB2	NM_002129	high mobility group box 2
+868	79	hsa-miR-1908-5p	51548	SIRT6	NM_001321064	sirtuin 6
+869	79	hsa-miR-3129-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+870	79	hsa-miR-450a-1-3p	79805	VASH2	NM_001136474	vasohibin 2
+871	79	hsa-miR-548j-5p	5629	PROX1	NM_002763	prospero homeobox 1
+872	79	hsa-miR-548c-5p	5629	PROX1	NM_002763	prospero homeobox 1
+873	79	hsa-miR-421	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+874	79	hsa-miR-124-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+875	79	hsa-miR-3121-3p	79805	VASH2	NM_001136474	vasohibin 2
+876	79	hsa-miR-4446-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+877	79	hsa-miR-1910-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+878	79	hsa-miR-548b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+879	79	hsa-miR-548d-5p	5629	PROX1	NM_002763	prospero homeobox 1
+880	79	hsa-miR-133b	23411	SIRT1	NM_001142498	sirtuin 1
+881	79	hsa-miR-548h-5p	5629	PROX1	NM_002763	prospero homeobox 1
+882	79	hsa-miR-34c-5p	5587	PRKD1	NM_002742	protein kinase D1
+883	79	hsa-miR-663a	51548	SIRT6	NM_001321064	sirtuin 6
+884	79	hsa-miR-299-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+885	79	hsa-miR-219b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+886	79	hsa-miR-1185-1-3p	7432	VIP	NM_003381	vasoactive intestinal peptide
+887	79	hsa-miR-3928-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+888	79	hsa-miR-543	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+889	79	hsa-miR-30a-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+890	79	hsa-miR-126-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+891	79	hsa-miR-9-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+892	79	hsa-miR-5010-5p	187	APLNR	NM_005161	apelin receptor
+893	79	hsa-miR-548o-5p	5629	PROX1	NM_002763	prospero homeobox 1
+894	79	hsa-miR-365b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+895	79	hsa-miR-365a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+896	79	hsa-miR-650	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+897	79	hsa-miR-101-3p	858	CAV2	NM_001233	caveolin 2
+898	79	hsa-miR-3192-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+899	79	hsa-miR-506-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+900	79	hsa-miR-30e-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+901	79	hsa-miR-4662a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+902	79	hsa-miR-199a-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+903	79	hsa-miR-6511a-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+904	79	hsa-miR-6511a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+905	79	hsa-miR-320e	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+906	79	hsa-miR-548am-5p	5629	PROX1	NM_002763	prospero homeobox 1
+907	79	hsa-miR-656-3p	2152	F3	NM_001993	coagulation factor III, tissue factor
+908	79	hsa-miR-143-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+909	79	hsa-miR-497-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+910	79	hsa-miR-136-5p	3791	KDR	NM_002253	kinase insert domain receptor
+911	79	hsa-miR-3154	7472	WNT2	NM_003391	Wnt family member 2
+912	79	hsa-miR-493-5p	858	CAV2	NM_198212	caveolin 2
+913	79	hsa-miR-504-5p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+914	79	hsa-miR-1185-2-3p	7432	VIP	NM_003381	vasoactive intestinal peptide
+915	79	hsa-miR-449b-5p	5587	PRKD1	NM_002742	protein kinase D1
+916	79	hsa-miR-561-5p	6667	SP1	NM_003109	Sp1 transcription factor
+917	79	hsa-miR-450b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+918	79	hsa-miR-548l	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+919	79	hsa-miR-199b-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+920	79	hsa-miR-889-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+921	78	hsa-miR-519b-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+922	78	hsa-miR-23a-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+923	78	hsa-miR-449a	57608	JCAD	NM_020848	junctional cadherin 5 associated
+924	78	hsa-miR-519a-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+925	78	hsa-miR-183-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+926	78	hsa-miR-139-5p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+927	78	hsa-miR-218-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+928	78	hsa-miR-509-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+929	78	hsa-miR-1275	4192	MDK	NM_001012333	midkine
+930	78	hsa-miR-509-3-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+931	78	hsa-miR-589-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+932	78	hsa-miR-380-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+933	78	hsa-miR-221-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+934	78	hsa-miR-34a-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+935	78	hsa-miR-19a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+936	78	hsa-miR-4667-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+937	78	hsa-miR-1290	3481	IGF2	NM_001007139	insulin like growth factor 2
+938	78	hsa-miR-3173-3p	1960	EGR3	NM_001199880	early growth response 3
+939	78	hsa-miR-337-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+940	78	hsa-miR-129-2-3p	1012	CDH13	NM_001220488	cadherin 13
+941	78	hsa-miR-874-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+942	78	hsa-miR-1185-1-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+943	78	hsa-miR-381-3p	1012	CDH13	NM_001220489	cadherin 13
+944	78	hsa-miR-3150b-3p	7474	WNT5A	NM_003392	Wnt family member 5A
+945	78	hsa-miR-5001-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+946	78	hsa-miR-5001-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+947	78	hsa-miR-338-5p	2624	GATA2	NM_032638	GATA binding protein 2
+948	78	hsa-miR-511-3p	8828	NRP2	NM_201266	neuropilin 2
+949	78	hsa-miR-216b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+950	78	hsa-miR-23b-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+951	78	hsa-miR-548o-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+952	78	hsa-miR-548o-3p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+953	78	hsa-miR-1304-5p	3162	HMOX1	NM_002133	heme oxygenase 1
+954	78	hsa-miR-3605-5p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+955	78	hsa-miR-222-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+956	78	hsa-miR-568	1232	CCR3	NM_178328	C-C motif chemokine receptor 3
+957	78	hsa-miR-548b-3p	7472	WNT2	NM_003391	Wnt family member 2
+958	78	hsa-miR-377-5p	6387	CXCL12	NM_199168	C-X-C motif chemokine ligand 12
+959	78	hsa-miR-202-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+960	78	hsa-miR-1179	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+961	78	hsa-miR-6515-5p	8829	NRP1	NM_003873	neuropilin 1
+962	78	hsa-miR-19b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+963	78	hsa-miR-129-1-3p	1012	CDH13	NM_001220488	cadherin 13
+964	78	hsa-miR-1323	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+965	78	hsa-miR-762	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+966	78	hsa-miR-762	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+967	78	hsa-miR-671-5p	284361	EMC10	NM_175063	ER membrane protein complex subunit 10
+968	78	hsa-miR-3140-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+969	78	hsa-miR-3190-3p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+970	78	hsa-miR-1185-2-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+971	78	hsa-miR-660-5p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+972	78	hsa-miR-636	79805	VASH2	NM_001136474	vasohibin 2
+973	77	hsa-miR-519b-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+974	77	hsa-miR-449a	23411	SIRT1	NM_001142498	sirtuin 1
+975	77	hsa-miR-449a	5629	PROX1	NM_001270616	prospero homeobox 1
+976	77	hsa-miR-885-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+977	77	hsa-miR-519a-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+978	77	hsa-miR-491-5p	1960	EGR3	NM_001199880	early growth response 3
+979	77	hsa-miR-1908-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+980	77	hsa-miR-652-5p	5629	PROX1	NM_002763	prospero homeobox 1
+981	77	hsa-miR-625-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+982	77	hsa-miR-320d	1960	EGR3	NM_001199880	early growth response 3
+983	77	hsa-miR-1297	7474	WNT5A	NM_001256105	Wnt family member 5A
+984	77	hsa-miR-34a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+985	77	hsa-miR-34a-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+986	77	hsa-miR-335-5p	6667	SP1	NM_003109	Sp1 transcription factor
+987	77	hsa-miR-335-5p	1232	CCR3	NM_178328	C-C motif chemokine receptor 3
+988	77	hsa-miR-495-3p	5629	PROX1	NM_002763	prospero homeobox 1
+989	77	hsa-miR-1910-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+990	77	hsa-miR-409-3p	2624	GATA2	NM_032638	GATA binding protein 2
+991	77	hsa-miR-1-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+992	77	hsa-miR-876-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+993	77	hsa-miR-150-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+994	77	hsa-miR-211-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+995	77	hsa-miR-33b-5p	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+996	77	hsa-miR-34c-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+997	77	hsa-miR-663a	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+998	77	hsa-miR-655-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+999	77	hsa-miR-3143	650	BMP2	NM_001200	bone morphogenetic protein 2
+1000	77	hsa-miR-337-3p	1950	EGF	NM_001963	epidermal growth factor
+1001	77	hsa-miR-545-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+1002	77	hsa-miR-93-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1003	77	hsa-miR-374c-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1004	77	hsa-miR-1185-1-3p	7472	WNT2	NM_003391	Wnt family member 2
+1005	77	hsa-miR-665	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1006	77	hsa-miR-489-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1007	77	hsa-miR-320c	1960	EGR3	NM_001199880	early growth response 3
+1008	77	hsa-miR-338-5p	1012	CDH13	NM_001220489	cadherin 13
+1009	77	hsa-miR-511-3p	858	CAV2	NM_198212	caveolin 2
+1010	77	hsa-miR-511-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1011	77	hsa-miR-33a-5p	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+1012	77	hsa-miR-3614-5p	2624	GATA2	NM_001145661	GATA binding protein 2
+1013	77	hsa-miR-141-3p	8829	NRP1	NM_003873	neuropilin 1
+1014	77	hsa-miR-200a-3p	8829	NRP1	NM_003873	neuropilin 1
+1015	77	hsa-miR-548o-3p	5587	PRKD1	NM_002742	protein kinase D1
+1016	77	hsa-miR-548an	284361	EMC10	NM_175063	ER membrane protein complex subunit 10
+1017	77	hsa-miR-548an	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+1018	77	hsa-miR-494-3p	858	CAV2	NM_198212	caveolin 2
+1019	77	hsa-miR-488-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+1020	77	hsa-miR-204-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1021	77	hsa-miR-6511a-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1022	77	hsa-miR-582-5p	3148	HMGB2	NM_001130688	high mobility group box 2
+1023	77	hsa-miR-1323	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1024	77	hsa-miR-206	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1025	77	hsa-miR-1185-2-3p	7472	WNT2	NM_003391	Wnt family member 2
+1026	77	hsa-miR-449b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1027	77	hsa-miR-194-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1028	77	hsa-miR-320b	1960	EGR3	NM_001199880	early growth response 3
+1029	77	hsa-miR-326	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1030	76	hsa-miR-3120-3p	2260	FGFR1	NM_001174065	fibroblast growth factor receptor 1
+1031	76	hsa-miR-576-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1032	76	hsa-miR-96-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1033	76	hsa-miR-548t-3p	1012	CDH13	NM_001220488	cadherin 13
+1034	76	hsa-miR-410-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1035	76	hsa-miR-216a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1036	76	hsa-miR-664b-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+1037	76	hsa-miR-664b-3p	8862	APLN	NM_017413	apelin
+1038	76	hsa-miR-124-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1039	76	hsa-miR-221-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1040	76	hsa-miR-183-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1041	76	hsa-miR-2355-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1042	76	hsa-miR-433-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1043	76	hsa-miR-939-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1044	76	hsa-miR-3065-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1045	76	hsa-miR-29c-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1046	76	hsa-miR-1271-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1047	76	hsa-miR-654-5p	51548	SIRT6	NM_001321063	sirtuin 6
+1048	76	hsa-miR-485-5p	858	CAV2	NM_198212	caveolin 2
+1049	76	hsa-miR-211-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1050	76	hsa-miR-34c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1051	76	hsa-miR-34c-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1052	76	hsa-miR-629-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1053	76	hsa-miR-655-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1054	76	hsa-miR-3143	23411	SIRT1	NM_001142498	sirtuin 1
+1055	76	hsa-miR-29a-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1056	76	hsa-miR-1827	1950	EGF	NM_001963	epidermal growth factor
+1057	76	hsa-miR-374c-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1058	76	hsa-miR-576-3p	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+1059	76	hsa-miR-1298-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1060	76	hsa-miR-665	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1061	76	hsa-miR-381-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1062	76	hsa-miR-3928-3p	3148	HMGB2	NM_002129	high mobility group box 2
+1063	76	hsa-miR-1301-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1064	76	hsa-miR-30a-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1065	76	hsa-miR-3960	1960	EGR3	NM_004430	early growth response 3
+1066	76	hsa-miR-9-3p	8829	NRP1	NM_003873	neuropilin 1
+1067	76	hsa-miR-141-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1068	76	hsa-miR-200a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1069	76	hsa-miR-29b-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1070	76	hsa-miR-222-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1071	76	hsa-miR-30e-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1072	76	hsa-miR-494-3p	8829	NRP1	NM_003873	neuropilin 1
+1073	76	hsa-miR-204-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1074	76	hsa-miR-637	284361	EMC10	NM_206538	ER membrane protein complex subunit 10
+1075	76	hsa-miR-637	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+1076	76	hsa-miR-509-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1077	76	hsa-miR-497-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1078	76	hsa-miR-371a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1079	76	hsa-miR-27a-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1080	76	hsa-miR-513a-5p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1081	76	hsa-miR-449b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1082	76	hsa-miR-449b-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1083	76	hsa-miR-760	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+1084	76	hsa-miR-27b-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1085	75	hsa-miR-519b-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1086	75	hsa-miR-519a-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1087	75	hsa-miR-301a-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+1088	75	hsa-miR-186-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1089	75	hsa-miR-495-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1090	75	hsa-miR-21-5p	79805	VASH2	NM_001136474	vasohibin 2
+1091	75	hsa-miR-19a-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1092	75	hsa-miR-500b-3p	9982	FGFBP1	NM_005130	fibroblast growth factor binding protein 1
+1093	75	hsa-miR-485-5p	1950	EGF	NM_001178130	epidermal growth factor
+1094	75	hsa-miR-142-3p	652	BMP4	NM_130850	bone morphogenetic protein 4
+1095	75	hsa-miR-802	7857	SCG2	NM_003469	secretogranin II
+1096	75	hsa-miR-545-5p	858	CAV2	NM_198212	caveolin 2
+1097	75	hsa-miR-377-3p	5587	PRKD1	NM_002742	protein kinase D1
+1098	75	hsa-miR-296-3p	1232	CCR3	NM_178328	C-C motif chemokine receptor 3
+1099	75	hsa-miR-448	9037	SEMA5A	NM_003966	semaphorin 5A
+1100	75	hsa-miR-489-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1101	75	hsa-miR-338-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1102	75	hsa-miR-543	9037	SEMA5A	NM_003966	semaphorin 5A
+1103	75	hsa-miR-548k	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+1104	75	hsa-miR-20b-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1105	75	hsa-miR-20b-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1106	75	hsa-miR-494-3p	1012	CDH13	NM_001220488	cadherin 13
+1107	75	hsa-miR-32-3p	23411	SIRT1	NM_001142498	sirtuin 1
+1108	75	hsa-miR-145-5p	858	CAV2	NM_001206747	caveolin 2
+1109	75	hsa-miR-19b-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1110	75	hsa-miR-143-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1111	75	hsa-miR-219a-1-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1112	75	hsa-miR-513a-5p	2624	GATA2	NM_001145661	GATA binding protein 2
+1113	75	hsa-miR-125a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1114	75	hsa-miR-125a-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1115	75	hsa-miR-493-5p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+1116	75	hsa-miR-548l	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1117	75	hsa-miR-548l	2624	GATA2	NM_032638	GATA binding protein 2
+1118	74	hsa-miR-541-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1119	74	hsa-miR-3120-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1120	74	hsa-miR-664b-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1121	74	hsa-miR-32-5p	51548	SIRT6	NM_001321064	sirtuin 6
+1122	74	hsa-miR-216a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1123	74	hsa-miR-155-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+1124	74	hsa-miR-942-3p	8829	NRP1	NM_003873	neuropilin 1
+1125	74	hsa-miR-624-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1126	74	hsa-miR-622	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1127	74	hsa-miR-124-3p	8828	NRP2	NM_003872	neuropilin 2
+1128	74	hsa-miR-150-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1129	74	hsa-miR-105-5p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+1130	74	hsa-miR-1249-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1131	74	hsa-miR-92b-3p	51548	SIRT6	NM_001321064	sirtuin 6
+1132	74	hsa-miR-513a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1133	74	hsa-miR-513a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1134	74	hsa-miR-513a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1135	74	hsa-miR-142-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1136	74	hsa-miR-1-3p	51157	ZNF580	NM_001163423	zinc finger protein 580
+1137	74	hsa-miR-876-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1138	74	hsa-miR-876-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1139	74	hsa-miR-376a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1140	74	hsa-miR-573	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1141	74	hsa-miR-500b-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1142	74	hsa-miR-376b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1143	74	hsa-miR-548t-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1144	74	hsa-miR-548t-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1145	74	hsa-miR-302c-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1146	74	hsa-miR-545-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+1147	74	hsa-miR-545-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1148	74	hsa-miR-545-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1149	74	hsa-miR-216b-5p	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+1150	74	hsa-miR-302a-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1151	74	hsa-miR-101-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1152	74	hsa-miR-138-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+1153	74	hsa-miR-506-3p	8828	NRP2	NM_003872	neuropilin 2
+1154	74	hsa-miR-3152-3p	79805	VASH2	NM_001136474	vasohibin 2
+1155	74	hsa-miR-580-3p	7474	WNT5A	NM_001256105	Wnt family member 5A
+1156	74	hsa-miR-302d-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1157	74	hsa-miR-302b-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1158	74	hsa-miR-34a-3p	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+1159	74	hsa-miR-223-3p	4192	MDK	NM_001012333	midkine
+1160	74	hsa-miR-582-5p	8829	NRP1	NM_003873	neuropilin 1
+1161	74	hsa-miR-206	51157	ZNF580	NM_001163423	zinc finger protein 580
+1162	74	hsa-miR-493-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1163	74	hsa-miR-92a-3p	51548	SIRT6	NM_001321064	sirtuin 6
+1164	74	hsa-miR-760	9037	SEMA5A	NM_003966	semaphorin 5A
+1165	74	hsa-miR-513c-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1166	74	hsa-miR-513c-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1167	74	hsa-miR-513c-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1168	74	hsa-miR-889-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1169	73	hsa-miR-450a-2-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1170	73	hsa-miR-106b-5p	1960	EGR3	NM_001199880	early growth response 3
+1171	73	hsa-miR-329-3p	1960	EGR3	NM_001199880	early growth response 3
+1172	73	hsa-miR-22-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1173	73	hsa-miR-374a-5p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1174	73	hsa-miR-514b-5p	8742	TNFSF12	NM_003809	TNF superfamily member 12
+1175	73	hsa-miR-664b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1176	73	hsa-miR-193b-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1177	73	hsa-miR-148a-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1178	73	hsa-miR-622	652	BMP4	NM_001202	bone morphogenetic protein 4
+1179	73	hsa-miR-124-3p	5587	PRKD1	NM_002742	protein kinase D1
+1180	73	hsa-miR-124-3p	4192	MDK	NM_001012333	midkine
+1181	73	hsa-miR-633	7474	WNT5A	NM_001256105	Wnt family member 5A
+1182	73	hsa-miR-1224-5p	51548	SIRT6	NM_001321062	sirtuin 6
+1183	73	hsa-miR-3121-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1184	73	hsa-miR-1910-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+1185	73	hsa-miR-214-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1186	73	hsa-miR-513c-5p	8742	TNFSF12	NM_003809	TNF superfamily member 12
+1187	73	hsa-miR-433-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1188	73	hsa-miR-3194-5p	8829	NRP1	NM_003873	neuropilin 1
+1189	73	hsa-miR-152-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1190	73	hsa-miR-1270	650	BMP2	NM_001200	bone morphogenetic protein 2
+1191	73	hsa-miR-362-3p	1960	EGR3	NM_001199880	early growth response 3
+1192	73	hsa-miR-342-5p	3164	NR4A1	NM_001202233	nuclear receptor subfamily 4 group A member 1
+1193	73	hsa-miR-655-3p	2152	F3	NM_001993	coagulation factor III, tissue factor
+1194	73	hsa-miR-653-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1195	73	hsa-miR-337-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+1196	73	hsa-miR-545-5p	8828	NRP2	NM_003872	neuropilin 2
+1197	73	hsa-miR-545-5p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+1198	73	hsa-miR-545-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+1199	73	hsa-miR-374c-5p	2152	F3	NM_001993	coagulation factor III, tissue factor
+1200	73	hsa-miR-448	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1201	73	hsa-miR-3074-5p	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+1202	73	hsa-miR-1296-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1203	73	hsa-miR-608	7857	SCG2	NM_003469	secretogranin II
+1204	73	hsa-miR-608	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1205	73	hsa-miR-224-5p	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+1206	73	hsa-miR-196b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1207	73	hsa-miR-506-3p	5587	PRKD1	NM_002742	protein kinase D1
+1208	73	hsa-miR-506-3p	4192	MDK	NM_001012333	midkine
+1209	73	hsa-miR-149-5p	9982	FGFBP1	NM_005130	fibroblast growth factor binding protein 1
+1210	73	hsa-miR-568	858	CAV2	NM_198212	caveolin 2
+1211	73	hsa-miR-188-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1212	73	hsa-miR-188-5p	8828	NRP2	NM_003872	neuropilin 2
+1213	73	hsa-miR-145-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1214	73	hsa-miR-769-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1215	73	hsa-miR-20a-5p	1960	EGR3	NM_001199880	early growth response 3
+1216	73	hsa-miR-148b-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1217	73	hsa-miR-654-3p	1012	CDH13	NM_001220488	cadherin 13
+1218	73	hsa-miR-143-3p	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1219	73	hsa-miR-128-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1220	73	hsa-miR-219a-5p	1960	EGR3	NM_001199880	early growth response 3
+1221	73	hsa-miR-27a-3p	7432	VIP	NM_194435	vasoactive intestinal peptide
+1222	73	hsa-miR-3140-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1223	73	hsa-miR-196a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1224	73	hsa-miR-3154	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+1225	73	hsa-miR-3190-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+1226	73	hsa-miR-504-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1227	73	hsa-miR-10b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1228	73	hsa-miR-548l	9982	FGFBP1	NM_005130	fibroblast growth factor binding protein 1
+1229	73	hsa-miR-27b-3p	7432	VIP	NM_194435	vasoactive intestinal peptide
+1230	72	hsa-miR-106b-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1231	72	hsa-miR-106b-5p	8828	NRP2	NM_018534	neuropilin 2
+1232	72	hsa-miR-154-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1233	72	hsa-miR-509-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1234	72	hsa-miR-548e-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1235	72	hsa-miR-509-3-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1236	72	hsa-miR-624-5p	7472	WNT2	NM_003391	Wnt family member 2
+1237	72	hsa-miR-205-5p	187	APLNR	NM_005161	apelin receptor
+1238	72	hsa-miR-939-3p	2624	GATA2	NM_032638	GATA binding protein 2
+1239	72	hsa-miR-188-3p	6387	CXCL12	NM_001178134	C-X-C motif chemokine ligand 12
+1240	72	hsa-miR-512-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1241	72	hsa-miR-548t-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1242	72	hsa-miR-211-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1243	72	hsa-miR-629-5p	858	CAV2	NM_198212	caveolin 2
+1244	72	hsa-miR-151a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1245	72	hsa-miR-548a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1246	72	hsa-miR-665	7472	WNT2	NM_003391	Wnt family member 2
+1247	72	hsa-miR-627-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1248	72	hsa-miR-20b-5p	8828	NRP2	NM_018534	neuropilin 2
+1249	72	hsa-miR-106a-5p	8828	NRP2	NM_018534	neuropilin 2
+1250	72	hsa-miR-486-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1251	72	hsa-miR-93-5p	8828	NRP2	NM_018534	neuropilin 2
+1252	72	hsa-miR-548an	8862	APLN	NM_017413	apelin
+1253	72	hsa-miR-196b-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1254	72	hsa-miR-5571-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1255	72	hsa-miR-20b-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1256	72	hsa-miR-548b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1257	72	hsa-miR-382-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1258	72	hsa-miR-204-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1259	72	hsa-miR-17-5p	8828	NRP2	NM_018534	neuropilin 2
+1260	72	hsa-miR-20a-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1261	72	hsa-miR-20a-5p	8828	NRP2	NM_018534	neuropilin 2
+1262	72	hsa-miR-1323	6667	SP1	NM_003109	Sp1 transcription factor
+1263	72	hsa-miR-3157-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1264	72	hsa-miR-9-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1265	72	hsa-miR-548f-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1266	72	hsa-miR-196a-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1267	72	hsa-miR-519d-3p	8828	NRP2	NM_018534	neuropilin 2
+1268	72	hsa-miR-942-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1269	72	hsa-miR-374b-5p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1270	72	hsa-miR-550a-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1271	72	hsa-miR-16-2-3p	858	CAV2	NM_198212	caveolin 2
+1272	72	hsa-miR-505-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1273	72	hsa-miR-454-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1274	71	hsa-miR-32-5p	79805	VASH2	NM_001136474	vasohibin 2
+1275	71	hsa-miR-548t-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1276	71	hsa-miR-186-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1277	71	hsa-miR-548j-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1278	71	hsa-miR-548c-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1279	71	hsa-miR-664b-3p	3357	HTR2B	NM_000867	5-hydroxytryptamine receptor 2B
+1280	71	hsa-miR-590-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1281	71	hsa-miR-642a-5p	3162	HMOX1	NM_002133	heme oxygenase 1
+1282	71	hsa-miR-628-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1283	71	hsa-miR-21-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1284	71	hsa-miR-92b-3p	79805	VASH2	NM_001136474	vasohibin 2
+1285	71	hsa-miR-548b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1286	71	hsa-miR-17-3p	7474	WNT5A	NM_001256105	Wnt family member 5A
+1287	71	hsa-miR-548d-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1288	71	hsa-miR-512-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1289	71	hsa-let-7f-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1290	71	hsa-let-7d-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1291	71	hsa-miR-485-5p	187	APLNR	NM_005161	apelin receptor
+1292	71	hsa-miR-548h-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1293	71	hsa-miR-129-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1294	71	hsa-miR-337-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1295	71	hsa-miR-98-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1296	71	hsa-miR-448	8829	NRP1	NM_003873	neuropilin 1
+1297	71	hsa-miR-330-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1298	71	hsa-let-7b-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1299	71	hsa-miR-20b-5p	1960	EGR3	NM_001199880	early growth response 3
+1300	71	hsa-let-7g-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1301	71	hsa-miR-106a-5p	1960	EGR3	NM_001199880	early growth response 3
+1302	71	hsa-miR-141-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+1303	71	hsa-miR-141-3p	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1304	71	hsa-miR-93-5p	1960	EGR3	NM_001199880	early growth response 3
+1305	71	hsa-miR-548o-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1306	71	hsa-miR-200a-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+1307	71	hsa-miR-200a-3p	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1308	71	hsa-miR-3192-5p	3791	KDR	NM_002253	kinase insert domain receptor
+1309	71	hsa-miR-548an	8828	NRP2	NM_003872	neuropilin 2
+1310	71	hsa-miR-15b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1311	71	hsa-let-7a-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1312	71	hsa-miR-17-5p	1960	EGR3	NM_001199880	early growth response 3
+1313	71	hsa-miR-605-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1314	71	hsa-miR-548am-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1315	71	hsa-let-7i-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1316	71	hsa-miR-128-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1317	71	hsa-miR-759	3146	HMGB1	NM_001313892	high mobility group box 1
+1318	71	hsa-miR-18a-3p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+1319	71	hsa-miR-122-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1320	71	hsa-miR-625-5p	4192	MDK	NM_001012333	midkine
+1321	71	hsa-miR-671-5p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+1322	71	hsa-miR-671-5p	2624	GATA2	NM_032638	GATA binding protein 2
+1323	71	hsa-miR-513a-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1324	71	hsa-miR-513a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1325	71	hsa-miR-504-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1326	71	hsa-miR-519d-3p	1960	EGR3	NM_001199880	early growth response 3
+1327	71	hsa-miR-92a-3p	79805	VASH2	NM_001136474	vasohibin 2
+1328	71	hsa-miR-125b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1329	71	hsa-let-7e-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1330	71	hsa-let-7c-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1331	70	hsa-miR-301a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1332	70	hsa-miR-329-3p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1333	70	hsa-miR-374a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1334	70	hsa-miR-339-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1335	70	hsa-miR-186-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1336	70	hsa-miR-548j-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1337	70	hsa-miR-22-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1338	70	hsa-miR-374a-5p	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+1339	70	hsa-miR-548c-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1340	70	hsa-miR-664b-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1341	70	hsa-miR-421	5629	PROX1	NM_001270616	prospero homeobox 1
+1342	70	hsa-miR-1910-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+1343	70	hsa-miR-548b-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1344	70	hsa-miR-142-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1345	70	hsa-miR-19a-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1346	70	hsa-miR-3065-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1347	70	hsa-miR-548d-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1348	70	hsa-miR-362-3p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1349	70	hsa-miR-4667-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+1350	70	hsa-miR-548t-5p	7474	WNT5A	NM_001256105	Wnt family member 5A
+1351	70	hsa-miR-455-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1352	70	hsa-miR-548h-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1353	70	hsa-miR-129-5p	3146	HMGB1	NM_002128	high mobility group box 1
+1354	70	hsa-miR-411-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1355	70	hsa-miR-545-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1356	70	hsa-miR-135b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1357	70	hsa-miR-299-3p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+1358	70	hsa-miR-1827	7474	WNT5A	NM_003392	Wnt family member 5A
+1359	70	hsa-miR-296-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1360	70	hsa-miR-3150b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1361	70	hsa-miR-338-5p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+1362	70	hsa-miR-1285-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1363	70	hsa-miR-9-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+1364	70	hsa-miR-9-3p	1960	EGR3	NM_001199880	early growth response 3
+1365	70	hsa-miR-224-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1366	70	hsa-miR-499a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1367	70	hsa-miR-135a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1368	70	hsa-miR-379-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1369	70	hsa-miR-548o-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1370	70	hsa-miR-15b-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+1371	70	hsa-miR-568	2247	FGF2	NM_002006	fibroblast growth factor 2
+1372	70	hsa-miR-3152-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1373	70	hsa-miR-221-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1374	70	hsa-miR-488-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1375	70	hsa-miR-6511a-5p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+1376	70	hsa-miR-19b-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1377	70	hsa-miR-3200-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1378	70	hsa-miR-548am-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1379	70	hsa-miR-128-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+1380	70	hsa-miR-185-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1381	70	hsa-miR-125a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1382	70	hsa-miR-125b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1383	69	hsa-miR-374b-3p	2260	FGFR1	NM_001174066	fibroblast growth factor receptor 1
+1384	69	hsa-miR-374b-3p	2624	GATA2	NM_032638	GATA binding protein 2
+1385	69	hsa-miR-450a-2-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1386	69	hsa-miR-885-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1387	69	hsa-miR-372-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1388	69	hsa-miR-1260a	5629	PROX1	NM_002763	prospero homeobox 1
+1389	69	hsa-miR-1291	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+1390	69	hsa-miR-186-5p	1012	CDH13	NM_001220488	cadherin 13
+1391	69	hsa-miR-186-5p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+1392	69	hsa-miR-186-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+1393	69	hsa-miR-367-3p	51548	SIRT6	NM_001321064	sirtuin 6
+1394	69	hsa-miR-382-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1395	69	hsa-miR-3121-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1396	69	hsa-miR-452-5p	8862	APLN	NM_017413	apelin
+1397	69	hsa-miR-150-5p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1398	69	hsa-miR-629-3p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+1399	69	hsa-miR-629-3p	8862	APLN	NM_017413	apelin
+1400	69	hsa-miR-495-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1401	69	hsa-miR-495-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1402	69	hsa-miR-3200-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1403	69	hsa-miR-200a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1404	69	hsa-miR-17-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1405	69	hsa-miR-520c-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1406	69	hsa-miR-508-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1407	69	hsa-miR-181c-5p	7432	VIP	NM_003381	vasoactive intestinal peptide
+1408	69	hsa-miR-211-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1409	69	hsa-miR-373-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1410	69	hsa-miR-363-3p	51548	SIRT6	NM_001321064	sirtuin 6
+1411	69	hsa-miR-181d-5p	7432	VIP	NM_003381	vasoactive intestinal peptide
+1412	69	hsa-miR-1468-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+1413	69	hsa-miR-1260b	5629	PROX1	NM_002763	prospero homeobox 1
+1414	69	hsa-miR-93-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1415	69	hsa-miR-181a-5p	7432	VIP	NM_003381	vasoactive intestinal peptide
+1416	69	hsa-miR-1827	6667	SP1	NM_003109	Sp1 transcription factor
+1417	69	hsa-miR-377-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1418	69	hsa-miR-627-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1419	69	hsa-miR-141-3p	5587	PRKD1	NM_002742	protein kinase D1
+1420	69	hsa-miR-141-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1421	69	hsa-miR-200a-3p	5587	PRKD1	NM_002742	protein kinase D1
+1422	69	hsa-miR-200a-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1423	69	hsa-miR-3192-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1424	69	hsa-miR-24-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1425	69	hsa-miR-181b-5p	7432	VIP	NM_003381	vasoactive intestinal peptide
+1426	69	hsa-miR-484	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+1427	69	hsa-miR-877-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1428	69	hsa-miR-204-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1429	69	hsa-miR-605-3p	4192	MDK	NM_001012333	midkine
+1430	69	hsa-miR-605-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1431	69	hsa-miR-25-3p	51548	SIRT6	NM_001321064	sirtuin 6
+1432	69	hsa-miR-513a-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1433	69	hsa-miR-10b-3p	7472	WNT2	NM_003391	Wnt family member 2
+1434	69	hsa-miR-942-5p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1435	69	hsa-miR-550a-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1436	69	hsa-miR-16-2-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1437	69	hsa-miR-454-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1438	68	hsa-miR-370-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+1439	68	hsa-miR-576-5p	383	ARG1	NM_001244438	arginase 1
+1440	68	hsa-miR-154-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1441	68	hsa-miR-4713-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1442	68	hsa-miR-548j-5p	858	CAV2	NM_198212	caveolin 2
+1443	68	hsa-miR-539-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1444	68	hsa-miR-548c-5p	858	CAV2	NM_198212	caveolin 2
+1445	68	hsa-miR-30b-3p	7857	SCG2	NM_003469	secretogranin II
+1446	68	hsa-miR-633	23411	SIRT1	NM_001142498	sirtuin 1
+1447	68	hsa-miR-150-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1448	68	hsa-miR-1910-3p	3148	HMGB2	NM_002129	high mobility group box 2
+1449	68	hsa-miR-548b-5p	858	CAV2	NM_198212	caveolin 2
+1450	68	hsa-miR-584-5p	7060	THBS4	NM_001306213	thrombospondin 4
+1451	68	hsa-miR-532-5p	8828	NRP2	NM_003872	neuropilin 2
+1452	68	hsa-miR-548d-5p	858	CAV2	NM_198212	caveolin 2
+1453	68	hsa-miR-556-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1454	68	hsa-miR-556-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1455	68	hsa-miR-548h-5p	858	CAV2	NM_198212	caveolin 2
+1456	68	hsa-miR-1290	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1457	68	hsa-miR-4520-3p	1960	EGR3	NM_001199880	early growth response 3
+1458	68	hsa-miR-545-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1459	68	hsa-miR-135b-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1460	68	hsa-miR-1827	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1461	68	hsa-miR-338-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+1462	68	hsa-miR-20b-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1463	68	hsa-miR-106a-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1464	68	hsa-miR-3960	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1465	68	hsa-miR-135a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1466	68	hsa-miR-93-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1467	68	hsa-miR-548o-5p	858	CAV2	NM_198212	caveolin 2
+1468	68	hsa-miR-423-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1469	68	hsa-miR-196b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+1470	68	hsa-miR-27b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1471	68	hsa-miR-32-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1472	68	hsa-miR-297	8828	NRP2	NM_201266	neuropilin 2
+1473	68	hsa-miR-17-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1474	68	hsa-miR-6511a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1475	68	hsa-miR-6511a-5p	3148	HMGB2	NM_002129	high mobility group box 2
+1476	68	hsa-miR-548am-5p	858	CAV2	NM_198212	caveolin 2
+1477	68	hsa-miR-2355-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1478	68	hsa-miR-198	7474	WNT5A	NM_003392	Wnt family member 5A
+1479	68	hsa-miR-485-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1480	68	hsa-miR-513a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1481	68	hsa-miR-196a-5p	3146	HMGB1	NM_002128	high mobility group box 1
+1482	68	hsa-miR-493-5p	8828	NRP2	NM_201266	neuropilin 2
+1483	68	hsa-miR-493-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1484	68	hsa-miR-519d-3p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1485	68	hsa-miR-761	9037	SEMA5A	NM_003966	semaphorin 5A
+1486	68	hsa-miR-450b-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1487	67	hsa-miR-532-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1488	67	hsa-miR-486-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+1489	67	hsa-miR-370-3p	3791	KDR	NM_002253	kinase insert domain receptor
+1490	67	hsa-miR-96-5p	1960	EGR3	NM_001199880	early growth response 3
+1491	67	hsa-miR-1287-5p	3357	HTR2B	NM_000867	5-hydroxytryptamine receptor 2B
+1492	67	hsa-miR-329-3p	1012	CDH13	NM_001220490	cadherin 13
+1493	67	hsa-miR-4713-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1494	67	hsa-miR-548j-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1495	67	hsa-miR-218-5p	383	ARG1	NM_000045	arginase 1
+1496	67	hsa-miR-3179	9037	SEMA5A	NM_003966	semaphorin 5A
+1497	67	hsa-miR-542-3p	8828	NRP2	NM_201266	neuropilin 2
+1498	67	hsa-miR-597-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1499	67	hsa-miR-548c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1500	67	hsa-miR-664b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1501	67	hsa-miR-382-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1502	67	hsa-miR-495-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+1503	67	hsa-miR-1910-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1504	67	hsa-miR-202-5p	7474	WNT5A	NM_003392	Wnt family member 5A
+1505	67	hsa-miR-548b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1506	67	hsa-miR-301a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1507	67	hsa-miR-548d-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1508	67	hsa-miR-362-3p	1012	CDH13	NM_001220490	cadherin 13
+1509	67	hsa-miR-485-5p	284361	EMC10	NM_206538	ER membrane protein complex subunit 10
+1510	67	hsa-miR-548h-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1511	67	hsa-miR-3173-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1512	67	hsa-miR-3143	9037	SEMA5A	NM_003966	semaphorin 5A
+1513	67	hsa-miR-151a-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+1514	67	hsa-miR-616-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1515	67	hsa-miR-1827	3481	IGF2	NM_000612	insulin like growth factor 2
+1516	67	hsa-miR-377-3p	284361	EMC10	NM_206538	ER membrane protein complex subunit 10
+1517	67	hsa-miR-3691-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1518	67	hsa-miR-661	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1519	67	hsa-miR-3074-5p	8829	NRP1	NM_003873	neuropilin 1
+1520	67	hsa-miR-3928-3p	1960	EGR3	NM_001199880	early growth response 3
+1521	67	hsa-miR-1301-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1522	67	hsa-miR-543	1012	CDH13	NM_001220489	cadherin 13
+1523	67	hsa-miR-627-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1524	67	hsa-miR-627-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1525	67	hsa-miR-92a-1-5p	1960	EGR3	NM_001199880	early growth response 3
+1526	67	hsa-miR-224-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1527	67	hsa-miR-141-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1528	67	hsa-miR-548o-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1529	67	hsa-miR-200a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1530	67	hsa-miR-548o-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1531	67	hsa-miR-650	5629	PROX1	NM_001270616	prospero homeobox 1
+1532	67	hsa-miR-548an	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1533	67	hsa-miR-301b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1534	67	hsa-miR-297	5155	PDGFB	NM_033016	platelet derived growth factor subunit B
+1535	67	hsa-miR-145-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1536	67	hsa-miR-637	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+1537	67	hsa-miR-342-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1538	67	hsa-miR-548am-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1539	67	hsa-miR-145-3p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+1540	67	hsa-miR-369-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1541	67	hsa-miR-130a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1542	67	hsa-miR-4423-5p	7432	VIP	NM_194435	vasoactive intestinal peptide
+1543	67	hsa-miR-16-2-3p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+1544	67	hsa-miR-130b-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1545	66	hsa-miR-664b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1546	66	hsa-miR-106b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1547	66	hsa-miR-186-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1548	66	hsa-miR-3144-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+1549	66	hsa-miR-589-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1550	66	hsa-miR-148a-3p	79805	VASH2	NM_001136474	vasohibin 2
+1551	66	hsa-miR-642a-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1552	66	hsa-miR-642a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1553	66	hsa-miR-214-3p	57521	RPTOR	NM_001163034	regulatory associated protein of MTOR complex 1
+1554	66	hsa-miR-3171	7422	VEGFA	NM_003376	vascular endothelial growth factor A
+1555	66	hsa-miR-152-3p	79805	VASH2	NM_001136474	vasohibin 2
+1556	66	hsa-miR-708-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1557	66	hsa-miR-140-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1558	66	hsa-miR-1290	8828	NRP2	NM_201266	neuropilin 2
+1559	66	hsa-miR-653-3p	23411	SIRT1	NM_001142498	sirtuin 1
+1560	66	hsa-miR-802	1950	EGF	NM_001963	epidermal growth factor
+1561	66	hsa-miR-545-5p	7857	SCG2	NM_003469	secretogranin II
+1562	66	hsa-miR-545-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1563	66	hsa-miR-3074-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+1564	66	hsa-miR-627-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1565	66	hsa-miR-106a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1566	66	hsa-miR-31-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1567	66	hsa-miR-141-3p	23411	SIRT1	NM_001142498	sirtuin 1
+1568	66	hsa-miR-200a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+1569	66	hsa-miR-550a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1570	66	hsa-miR-4662a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1571	66	hsa-miR-452-3p	23411	SIRT1	NM_001142498	sirtuin 1
+1572	66	hsa-miR-145-5p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1573	66	hsa-miR-223-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1574	66	hsa-miR-1271-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1575	66	hsa-miR-20a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1576	66	hsa-miR-148b-3p	79805	VASH2	NM_001136474	vasohibin 2
+1577	66	hsa-miR-656-3p	3791	KDR	NM_002253	kinase insert domain receptor
+1578	66	hsa-miR-198	3791	KDR	NM_002253	kinase insert domain receptor
+1579	66	hsa-miR-185-5p	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1580	66	hsa-miR-761	57521	RPTOR	NM_001163034	regulatory associated protein of MTOR complex 1
+1581	66	hsa-miR-374b-5p	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+1582	66	hsa-miR-125b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1583	65	hsa-miR-374b-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1584	65	hsa-miR-657	8828	NRP2	NM_201266	neuropilin 2
+1585	65	hsa-miR-139-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1586	65	hsa-miR-492	1012	CDH13	NM_001220490	cadherin 13
+1587	65	hsa-miR-218-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1588	65	hsa-miR-367-3p	79805	VASH2	NM_001136474	vasohibin 2
+1589	65	hsa-miR-548e-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1590	65	hsa-miR-942-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1591	65	hsa-miR-664b-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1592	65	hsa-miR-320d	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1593	65	hsa-miR-26a-5p	7474	WNT5A	NM_001256105	Wnt family member 5A
+1594	65	hsa-miR-758-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1595	65	hsa-miR-1-3p	858	CAV2	NM_198212	caveolin 2
+1596	65	hsa-miR-3065-5p	3162	HMOX1	NM_002133	heme oxygenase 1
+1597	65	hsa-miR-26b-5p	7474	WNT5A	NM_001256105	Wnt family member 5A
+1598	65	hsa-miR-301a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1599	65	hsa-miR-4524a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1600	65	hsa-miR-642a-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1601	65	hsa-miR-1271-5p	1960	EGR3	NM_001199880	early growth response 3
+1602	65	hsa-miR-33b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1603	65	hsa-miR-363-3p	79805	VASH2	NM_001136474	vasohibin 2
+1604	65	hsa-miR-3143	8828	NRP2	NM_201266	neuropilin 2
+1605	65	hsa-miR-5571-5p	8742	TNFSF12	NM_003809	TNF superfamily member 12
+1606	65	hsa-miR-802	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1607	65	hsa-miR-548a-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1608	65	hsa-miR-107	8862	APLN	NM_017413	apelin
+1609	65	hsa-miR-522-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1610	65	hsa-miR-448	7010	TEK	NM_001290077	TEK receptor tyrosine kinase
+1611	65	hsa-miR-320c	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1612	65	hsa-miR-661	1012	CDH13	NM_001220488	cadherin 13
+1613	65	hsa-miR-3074-5p	1012	CDH13	NM_001220489	cadherin 13
+1614	65	hsa-miR-30a-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1615	65	hsa-miR-30a-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1616	65	hsa-miR-20b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1617	65	hsa-miR-33a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1618	65	hsa-miR-103a-3p	8862	APLN	NM_017413	apelin
+1619	65	hsa-miR-93-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1620	65	hsa-miR-3065-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+1621	65	hsa-miR-30e-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1622	65	hsa-miR-30e-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1623	65	hsa-miR-580-3p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1624	65	hsa-miR-494-3p	23411	SIRT1	NM_001142498	sirtuin 1
+1625	65	hsa-miR-301b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1626	65	hsa-miR-17-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1627	65	hsa-miR-206	858	CAV2	NM_198212	caveolin 2
+1628	65	hsa-miR-25-3p	79805	VASH2	NM_001136474	vasohibin 2
+1629	65	hsa-miR-767-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1630	65	hsa-miR-625-5p	8862	APLN	NM_017413	apelin
+1631	65	hsa-miR-130a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1632	65	hsa-miR-548f-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1633	65	hsa-miR-519d-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1634	65	hsa-miR-374b-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1635	65	hsa-miR-760	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1636	65	hsa-miR-320b	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1637	65	hsa-miR-130b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1638	65	hsa-miR-454-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1639	65	hsa-miR-519c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1640	64	hsa-miR-32-5p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1641	64	hsa-miR-30a-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1642	64	hsa-miR-5699-5p	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+1643	64	hsa-miR-1260a	6667	SP1	NM_003109	Sp1 transcription factor
+1644	64	hsa-miR-548t-3p	7472	WNT2	NM_003391	Wnt family member 2
+1645	64	hsa-miR-1291	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1646	64	hsa-miR-329-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1647	64	hsa-miR-520h	654	BMP6	NM_001718	bone morphogenetic protein 6
+1648	64	hsa-miR-186-5p	100506013	APELA	NM_001297550	apelin receptor early endogenous ligand
+1649	64	hsa-miR-548j-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1650	64	hsa-miR-1275	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+1651	64	hsa-miR-3918	5629	PROX1	NM_002763	prospero homeobox 1
+1652	64	hsa-miR-873-5p	1960	EGR3	NM_001199880	early growth response 3
+1653	64	hsa-miR-374a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1654	64	hsa-miR-548c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1655	64	hsa-miR-30b-3p	8862	APLN	NM_017413	apelin
+1656	64	hsa-miR-590-5p	79805	VASH2	NM_001136474	vasohibin 2
+1657	64	hsa-miR-520g-3p	654	BMP6	NM_001718	bone morphogenetic protein 6
+1658	64	hsa-miR-382-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1659	64	hsa-miR-633	207	AKT1	NM_005163	AKT serine/threonine kinase 1
+1660	64	hsa-miR-633	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1661	64	hsa-miR-183-5p	8828	NRP2	NM_003872	neuropilin 2
+1662	64	hsa-miR-346	858	CAV2	NM_198212	caveolin 2
+1663	64	hsa-miR-92b-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1664	64	hsa-miR-548b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1665	64	hsa-miR-200c-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1666	64	hsa-miR-3194-5p	3162	HMOX1	NM_002133	heme oxygenase 1
+1667	64	hsa-miR-376a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1668	64	hsa-miR-301a-3p	8828	NRP2	NM_018534	neuropilin 2
+1669	64	hsa-miR-301a-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1670	64	hsa-miR-429	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1671	64	hsa-miR-548d-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1672	64	hsa-miR-376b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1673	64	hsa-miR-651-5p	187	APLNR	NM_005161	apelin receptor
+1674	64	hsa-miR-362-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1675	64	hsa-let-7f-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1676	64	hsa-let-7d-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1677	64	hsa-miR-548h-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1678	64	hsa-miR-323a-3p	7474	WNT5A	NM_001256105	Wnt family member 5A
+1679	64	hsa-miR-30c-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1680	64	hsa-miR-653-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1681	64	hsa-miR-98-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1682	64	hsa-miR-1260b	6667	SP1	NM_003109	Sp1 transcription factor
+1683	64	hsa-miR-616-3p	2475	MTOR	NM_004958	mechanistic target of rapamycin kinase
+1684	64	hsa-miR-302c-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1685	64	hsa-miR-135b-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1686	64	hsa-miR-299-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1687	64	hsa-miR-181a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1688	64	hsa-miR-665	3164	NR4A1	NM_002135	nuclear receptor subfamily 4 group A member 1
+1689	64	hsa-miR-448	1960	EGR3	NM_001199880	early growth response 3
+1690	64	hsa-let-7b-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1691	64	hsa-let-7g-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1692	64	hsa-miR-302a-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1693	64	hsa-miR-30b-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1694	64	hsa-miR-135a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1695	64	hsa-miR-548o-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1696	64	hsa-miR-101-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1697	64	hsa-miR-181b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1698	64	hsa-miR-1304-5p	8862	APLN	NM_017413	apelin
+1699	64	hsa-miR-200b-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1700	64	hsa-miR-301b-3p	8828	NRP2	NM_018534	neuropilin 2
+1701	64	hsa-miR-301b-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1702	64	hsa-let-7a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1703	64	hsa-miR-302d-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1704	64	hsa-miR-30d-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1705	64	hsa-miR-302b-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1706	64	hsa-miR-582-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1707	64	hsa-miR-766-5p	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+1708	64	hsa-miR-548am-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1709	64	hsa-let-7i-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1710	64	hsa-miR-3157-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1711	64	hsa-miR-873-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1712	64	hsa-miR-30e-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1713	64	hsa-miR-338-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1714	64	hsa-miR-369-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1715	64	hsa-miR-130a-3p	8828	NRP2	NM_018534	neuropilin 2
+1716	64	hsa-miR-130a-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1717	64	hsa-miR-185-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+1718	64	hsa-miR-3154	8862	APLN	NM_017413	apelin
+1719	64	hsa-miR-3154	2247	FGF2	NM_002006	fibroblast growth factor 2
+1720	64	hsa-miR-4423-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1721	64	hsa-miR-92a-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1722	64	hsa-miR-450b-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1723	64	hsa-let-7e-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1724	64	hsa-miR-760	6667	SP1	NM_003109	Sp1 transcription factor
+1725	64	hsa-miR-130b-3p	8828	NRP2	NM_018534	neuropilin 2
+1726	64	hsa-miR-130b-3p	2152	F3	NM_001178096	coagulation factor III, tissue factor
+1727	64	hsa-let-7c-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1728	64	hsa-miR-454-3p	8828	NRP2	NM_018534	neuropilin 2
+1729	63	hsa-miR-519b-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1730	63	hsa-miR-664b-5p	3791	KDR	NM_002253	kinase insert domain receptor
+1731	63	hsa-miR-449a	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1732	63	hsa-miR-1915-3p	51157	ZNF580	NM_016202	zinc finger protein 580
+1733	63	hsa-miR-370-3p	1012	CDH13	NM_001220488	cadherin 13
+1734	63	hsa-miR-30a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1735	63	hsa-miR-30a-5p	8828	NRP2	NM_018534	neuropilin 2
+1736	63	hsa-miR-519a-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1737	63	hsa-miR-183-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1738	63	hsa-miR-34b-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1739	63	hsa-miR-218-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1740	63	hsa-miR-514a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1741	63	hsa-miR-155-5p	3091	HIF1A	NM_001243084	hypoxia inducible factor 1 subunit alpha
+1742	63	hsa-miR-514b-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1743	63	hsa-miR-320d	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+1744	63	hsa-miR-449c-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1745	63	hsa-miR-452-5p	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1746	63	hsa-miR-34a-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1747	63	hsa-miR-495-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1748	63	hsa-miR-214-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1749	63	hsa-miR-513c-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1750	63	hsa-miR-34b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1751	63	hsa-miR-513a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1752	63	hsa-miR-142-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1753	63	hsa-miR-142-5p	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1754	63	hsa-miR-573	6667	SP1	NM_003109	Sp1 transcription factor
+1755	63	hsa-miR-532-5p	1012	CDH13	NM_001220490	cadherin 13
+1756	63	hsa-miR-153-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1757	63	hsa-miR-153-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1758	63	hsa-miR-651-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1759	63	hsa-miR-30c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1760	63	hsa-miR-30c-5p	8828	NRP2	NM_018534	neuropilin 2
+1761	63	hsa-miR-129-2-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1762	63	hsa-miR-802	51548	SIRT6	NM_001321062	sirtuin 6
+1763	63	hsa-miR-545-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1764	63	hsa-miR-135b-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1765	63	hsa-miR-619-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1766	63	hsa-miR-320c	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+1767	63	hsa-miR-3074-5p	650	BMP2	NM_001200	bone morphogenetic protein 2
+1768	63	hsa-miR-608	9037	SEMA5A	NM_003966	semaphorin 5A
+1769	63	hsa-miR-126-5p	5587	PRKD1	NM_002742	protein kinase D1
+1770	63	hsa-miR-30b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1771	63	hsa-miR-30b-5p	8828	NRP2	NM_018534	neuropilin 2
+1772	63	hsa-miR-9-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1773	63	hsa-miR-135a-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1774	63	hsa-miR-423-5p	51162	EGFL7	NM_201446	EGF like domain multiple 7
+1775	63	hsa-miR-500b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1776	63	hsa-miR-101-3p	8829	NRP1	NM_003873	neuropilin 1
+1777	63	hsa-miR-15b-3p	5587	PRKD1	NM_002742	protein kinase D1
+1778	63	hsa-miR-7-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1779	63	hsa-miR-874-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1780	63	hsa-miR-145-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1781	63	hsa-miR-2682-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1782	63	hsa-miR-30d-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1783	63	hsa-miR-30d-5p	8828	NRP2	NM_018534	neuropilin 2
+1784	63	hsa-miR-129-1-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1785	63	hsa-miR-198	1950	EGF	NM_001963	epidermal growth factor
+1786	63	hsa-miR-30e-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1787	63	hsa-miR-30e-5p	8828	NRP2	NM_018534	neuropilin 2
+1788	63	hsa-miR-767-5p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1789	63	hsa-miR-490-5p	2260	FGFR1	NM_001174066	fibroblast growth factor receptor 1
+1790	63	hsa-miR-185-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1791	63	hsa-miR-493-5p	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1792	63	hsa-miR-362-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1793	63	hsa-miR-383-5p	7472	WNT2	NM_003391	Wnt family member 2
+1794	63	hsa-miR-561-5p	8828	NRP2	NM_003872	neuropilin 2
+1795	63	hsa-miR-320b	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+1796	63	hsa-miR-513c-3p	3146	HMGB1	NM_002128	high mobility group box 1
+1797	63	hsa-miR-574-5p	1232	CCR3	NM_178328	C-C motif chemokine receptor 3
+1798	63	hsa-miR-326	7474	WNT5A	NM_003392	Wnt family member 5A
+1799	62	hsa-miR-372-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1800	62	hsa-miR-183-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1801	62	hsa-miR-1291	51157	ZNF580	NM_016202	zinc finger protein 580
+1802	62	hsa-miR-520h	2152	F3	NM_001993	coagulation factor III, tissue factor
+1803	62	hsa-miR-4713-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1804	62	hsa-miR-548e-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1805	62	hsa-miR-374a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1806	62	hsa-miR-622	3091	HIF1A	NM_181054	hypoxia inducible factor 1 subunit alpha
+1807	62	hsa-miR-520g-3p	2152	F3	NM_001993	coagulation factor III, tissue factor
+1808	62	hsa-miR-30c-2-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1809	62	hsa-miR-1251-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1810	62	hsa-miR-3121-3p	858	CAV2	NM_001206747	caveolin 2
+1811	62	hsa-miR-105-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1812	62	hsa-miR-544a	3481	IGF2	NM_000612	insulin like growth factor 2
+1813	62	hsa-miR-744-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+1814	62	hsa-miR-3194-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1815	62	hsa-miR-4524a-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1816	62	hsa-miR-548t-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1817	62	hsa-miR-29c-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1818	62	hsa-miR-29c-3p	79805	VASH2	NM_001136474	vasohibin 2
+1819	62	hsa-miR-181c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1820	62	hsa-miR-373-3p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1821	62	hsa-miR-181d-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1822	62	hsa-miR-455-5p	405	ARNT	NM_001197325	aryl hydrocarbon receptor nuclear translocator
+1823	62	hsa-miR-653-3p	187	APLNR	NM_005161	apelin receptor
+1824	62	hsa-miR-337-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1825	62	hsa-miR-29a-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1826	62	hsa-miR-29a-3p	79805	VASH2	NM_001136474	vasohibin 2
+1827	62	hsa-miR-548a-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1828	62	hsa-miR-181a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1829	62	hsa-miR-1827	79805	VASH2	NM_001136474	vasohibin 2
+1830	62	hsa-miR-496	2247	FGF2	NM_002006	fibroblast growth factor 2
+1831	62	hsa-miR-330-3p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1832	62	hsa-miR-543	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1833	62	hsa-miR-627-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1834	62	hsa-miR-608	57608	JCAD	NM_020848	junctional cadherin 5 associated
+1835	62	hsa-miR-3138	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1836	62	hsa-miR-3936	6667	SP1	NM_003109	Sp1 transcription factor
+1837	62	hsa-miR-181b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1838	62	hsa-miR-29b-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1839	62	hsa-miR-29b-3p	79805	VASH2	NM_001136474	vasohibin 2
+1840	62	hsa-miR-149-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1841	62	hsa-miR-580-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1842	62	hsa-miR-874-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1843	62	hsa-miR-1179	7432	VIP	NM_194435	vasoactive intestinal peptide
+1844	62	hsa-miR-342-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+1845	62	hsa-miR-582-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1846	62	hsa-miR-605-3p	2260	FGFR1	NM_001174065	fibroblast growth factor receptor 1
+1847	62	hsa-miR-654-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1848	62	hsa-miR-371a-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1849	62	hsa-miR-759	79805	VASH2	NM_001136474	vasohibin 2
+1850	62	hsa-miR-625-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1851	62	hsa-miR-27a-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1852	62	hsa-miR-513a-5p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1853	62	hsa-miR-548f-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1854	62	hsa-miR-2116-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1855	62	hsa-miR-383-5p	6667	SP1	NM_003109	Sp1 transcription factor
+1856	62	hsa-miR-374b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1857	62	hsa-miR-374b-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1858	62	hsa-miR-30c-1-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1859	62	hsa-miR-450b-5p	7474	WNT5A	NM_003392	Wnt family member 5A
+1860	62	hsa-miR-27b-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1861	61	hsa-miR-483-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1862	61	hsa-miR-3162-3p	207	AKT1	NM_001014431	AKT serine/threonine kinase 1
+1863	61	hsa-miR-5699-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1864	61	hsa-miR-301a-5p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1865	61	hsa-miR-450a-1-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1866	61	hsa-miR-367-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1867	61	hsa-miR-155-5p	7474	WNT5A	NM_003392	Wnt family member 5A
+1868	61	hsa-miR-514b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1869	61	hsa-miR-127-5p	3148	HMGB2	NM_001130688	high mobility group box 2
+1870	61	hsa-miR-380-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+1871	61	hsa-miR-1185-5p	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+1872	61	hsa-miR-633	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1873	61	hsa-miR-452-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+1874	61	hsa-miR-105-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1875	61	hsa-miR-495-3p	858	CAV2	NM_001206748	caveolin 2
+1876	61	hsa-miR-513c-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1877	61	hsa-miR-1246	2658	GDF2	NM_016204	growth differentiation factor 2
+1878	61	hsa-miR-1246	8828	NRP2	NM_201266	neuropilin 2
+1879	61	hsa-miR-708-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+1880	61	hsa-miR-15b-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1881	61	hsa-miR-548t-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1882	61	hsa-let-7f-5p	79805	VASH2	NM_001136474	vasohibin 2
+1883	61	hsa-miR-497-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1884	61	hsa-miR-363-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1885	61	hsa-miR-98-5p	79805	VASH2	NM_001136474	vasohibin 2
+1886	61	hsa-miR-616-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1887	61	hsa-miR-212-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1888	61	hsa-miR-16-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1889	61	hsa-miR-3150b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1890	61	hsa-miR-496	3146	HMGB1	NM_002128	high mobility group box 1
+1891	61	hsa-miR-766-3p	7046	TGFBR1	NM_001130916	transforming growth factor beta receptor 1
+1892	61	hsa-let-7b-5p	79805	VASH2	NM_001136474	vasohibin 2
+1893	61	hsa-miR-511-3p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+1894	61	hsa-let-7g-5p	79805	VASH2	NM_001136474	vasohibin 2
+1895	61	hsa-miR-1296-5p	405	ARNT	NM_001286036	aryl hydrocarbon receptor nuclear translocator
+1896	61	hsa-miR-1247-3p	6776	STAT5A	NM_001288718	signal transducer and activator of transcription 5A
+1897	61	hsa-miR-548o-3p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1898	61	hsa-miR-3679-5p	6356	CCL11	NM_002986	C-C motif chemokine ligand 11
+1899	61	hsa-miR-3909	5335	PLCG1	NM_002660	phospholipase C gamma 1
+1900	61	hsa-miR-3605-5p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1901	61	hsa-miR-484	8862	APLN	NM_017413	apelin
+1902	61	hsa-let-7a-5p	79805	VASH2	NM_001136474	vasohibin 2
+1903	61	hsa-miR-7-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1904	61	hsa-miR-223-3p	6667	SP1	NM_003109	Sp1 transcription factor
+1905	61	hsa-miR-769-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1906	61	hsa-miR-2355-3p	2624	GATA2	NM_001145661	GATA binding protein 2
+1907	61	hsa-miR-656-3p	4893	NRAS	NM_002524	NRAS proto-oncogene, GTPase
+1908	61	hsa-miR-656-3p	7010	TEK	NM_001290078	TEK receptor tyrosine kinase
+1909	61	hsa-let-7i-5p	79805	VASH2	NM_001136474	vasohibin 2
+1910	61	hsa-miR-497-3p	187	APLNR	NM_005161	apelin receptor
+1911	61	hsa-miR-18a-3p	2624	GATA2	NM_032638	GATA binding protein 2
+1912	61	hsa-miR-25-3p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1913	61	hsa-miR-625-5p	1960	EGR3	NM_001199880	early growth response 3
+1914	61	hsa-miR-3154	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1915	61	hsa-miR-2116-3p	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+1916	61	hsa-miR-15a-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1917	61	hsa-miR-561-5p	55109	AGGF1	NM_018046	angiogenic factor with G-patch and FHA domains 1
+1918	61	hsa-miR-195-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1919	61	hsa-miR-450b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1920	61	hsa-miR-424-5p	2277	VEGFD	NM_004469	vascular endothelial growth factor D
+1921	61	hsa-miR-194-5p	23411	SIRT1	NM_001142498	sirtuin 1
+1922	61	hsa-miR-194-5p	8829	NRP1	NM_003873	neuropilin 1
+1923	61	hsa-let-7e-5p	79805	VASH2	NM_001136474	vasohibin 2
+1924	61	hsa-miR-760	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1925	61	hsa-let-7c-5p	79805	VASH2	NM_001136474	vasohibin 2
+1926	61	hsa-miR-326	1960	EGR3	NM_001199880	early growth response 3
+1927	60	hsa-miR-576-5p	7474	WNT5A	NM_003392	Wnt family member 5A
+1928	60	hsa-miR-106b-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1929	60	hsa-miR-329-3p	7472	WNT2	NM_003391	Wnt family member 2
+1930	60	hsa-miR-144-3p	253260	RICTOR	NM_001285440	RPTOR independent companion of MTOR complex 2
+1931	60	hsa-miR-374a-3p	8829	NRP1	NM_003873	neuropilin 1
+1932	60	hsa-miR-410-3p	185	AGTR1	NM_000685	angiotensin II receptor type 1
+1933	60	hsa-miR-374a-5p	8828	NRP2	NM_201266	neuropilin 2
+1934	60	hsa-miR-134-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+1935	60	hsa-miR-3117-3p	405	ARNT	NM_001286036	aryl hydrocarbon receptor nuclear translocator
+1936	60	hsa-miR-539-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1937	60	hsa-miR-3121-3p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1938	60	hsa-miR-3664-3p	6387	CXCL12	NM_001277990	C-X-C motif chemokine ligand 12
+1939	60	hsa-miR-361-3p	7472	WNT2	NM_003391	Wnt family member 2
+1940	60	hsa-miR-4446-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1941	60	hsa-miR-615-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+1942	60	hsa-miR-744-5p	51548	SIRT6	NM_001321064	sirtuin 6
+1943	60	hsa-miR-660-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+1944	60	hsa-miR-362-3p	7472	WNT2	NM_003391	Wnt family member 2
+1945	60	hsa-miR-15b-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1946	60	hsa-miR-548t-5p	652	BMP4	NM_001202	bone morphogenetic protein 4
+1947	60	hsa-miR-1290	8862	APLN	NM_017413	apelin
+1948	60	hsa-miR-1303	1232	CCR3	NM_178328	C-C motif chemokine receptor 3
+1949	60	hsa-miR-151a-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1950	60	hsa-miR-503-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1951	60	hsa-miR-545-3p	5155	PDGFB	NM_002608	platelet derived growth factor subunit B
+1952	60	hsa-miR-107	9037	SEMA5A	NM_003966	semaphorin 5A
+1953	60	hsa-miR-16-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1954	60	hsa-miR-3150b-3p	8828	NRP2	NM_018534	neuropilin 2
+1955	60	hsa-miR-3150b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1956	60	hsa-miR-30a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1957	60	hsa-miR-103a-3p	9037	SEMA5A	NM_003966	semaphorin 5A
+1958	60	hsa-miR-224-5p	10344	CCL26	NM_006072	C-C motif chemokine ligand 26
+1959	60	hsa-miR-499a-5p	3148	HMGB2	NM_001130688	high mobility group box 2
+1960	60	hsa-miR-3934-5p	1012	CDH13	NM_001220489	cadherin 13
+1961	60	hsa-miR-3934-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1962	60	hsa-miR-3942-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1963	60	hsa-miR-3909	3690	ITGB3	NM_000212	integrin subunit beta 3
+1964	60	hsa-miR-1304-5p	253260	RICTOR	NM_001285439	RPTOR independent companion of MTOR complex 2
+1965	60	hsa-miR-30e-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1966	60	hsa-miR-766-5p	6387	CXCL12	NM_000609	C-X-C motif chemokine ligand 12
+1967	60	hsa-miR-628-3p	8829	NRP1	NM_003873	neuropilin 1
+1968	60	hsa-miR-20a-5p	9037	SEMA5A	NM_003966	semaphorin 5A
+1969	60	hsa-miR-371a-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+1970	60	hsa-miR-3175	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1971	60	hsa-miR-485-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+1972	60	hsa-miR-369-3p	79805	VASH2	NM_001136474	vasohibin 2
+1973	60	hsa-miR-4423-5p	8829	NRP1	NM_003873	neuropilin 1
+1974	60	hsa-miR-942-5p	5293	PIK3CD	NM_005026	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
+1975	60	hsa-miR-15a-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1976	60	hsa-miR-761	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+1977	60	hsa-miR-374b-5p	8828	NRP2	NM_201266	neuropilin 2
+1978	60	hsa-miR-195-5p	441478	NRARP	NM_001004354	NOTCH regulated ankyrin repeat protein
+1979	60	hsa-miR-203a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+1	97	hsa-miR-761	5228	PGF	NM_001207012	placental growth factor
+2	96	hsa-miR-410-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+3	96	hsa-miR-214-3p	5228	PGF	NM_001207012	placental growth factor
+4	95	hsa-miR-1275	5578	PRKCA	NM_002737	protein kinase C alpha
+5	95	hsa-miR-124-3p	10016	PDCD6	NM_001267559	programmed cell death 6
+6	95	hsa-miR-15b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+7	95	hsa-miR-411-3p	3586	IL10	NM_000572	interleukin 10
+8	95	hsa-miR-16-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+9	95	hsa-miR-92a-1-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+10	95	hsa-miR-379-3p	3586	IL10	NM_000572	interleukin 10
+11	95	hsa-miR-506-3p	10016	PDCD6	NM_001267559	programmed cell death 6
+12	95	hsa-miR-128-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+13	95	hsa-miR-15a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+14	95	hsa-miR-195-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+15	94	hsa-miR-374b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+16	94	hsa-miR-29c-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+17	94	hsa-miR-497-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+18	94	hsa-miR-655-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+19	94	hsa-miR-29a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+20	94	hsa-miR-374c-5p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+21	94	hsa-miR-29b-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+22	94	hsa-miR-424-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+23	93	hsa-miR-3121-3p	3586	IL10	NM_000572	interleukin 10
+24	93	hsa-miR-200c-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+25	93	hsa-miR-429	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+26	93	hsa-miR-200b-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+27	92	hsa-miR-576-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+28	92	hsa-miR-202-3p	3586	IL10	NM_000572	interleukin 10
+29	91	hsa-miR-150-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+30	91	hsa-miR-183-5p	10016	PDCD6	NM_001267559	programmed cell death 6
+31	91	hsa-miR-211-5p	10016	PDCD6	NM_001267557	programmed cell death 6
+32	91	hsa-miR-766-3p	79031	PDCL3	NM_024065	phosducin like 3
+33	91	hsa-miR-204-5p	10016	PDCD6	NM_001267557	programmed cell death 6
+34	91	hsa-miR-369-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+35	90	hsa-miR-532-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+36	90	hsa-miR-627-3p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+37	90	hsa-miR-494-3p	79031	PDCL3	NM_024065	phosducin like 3
+38	89	hsa-miR-652-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+39	89	hsa-miR-205-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+40	89	hsa-miR-939-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+41	89	hsa-miR-3150b-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+42	88	hsa-miR-374a-5p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+43	88	hsa-miR-3121-3p	5228	PGF	NM_001207012	placental growth factor
+44	88	hsa-miR-655-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+45	88	hsa-miR-374c-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+46	88	hsa-miR-2116-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+47	87	hsa-miR-361-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+48	87	hsa-miR-297	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+49	86	hsa-miR-126-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+50	85	hsa-miR-374b-5p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+51	84	hsa-miR-186-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+52	84	hsa-miR-503-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+53	84	hsa-miR-516b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+54	84	hsa-miR-500b-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+55	84	hsa-miR-362-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+56	80	hsa-miR-455-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+57	80	hsa-miR-30a-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+58	80	hsa-miR-30e-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+59	80	hsa-miR-3152-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+60	79	hsa-miR-374a-3p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+61	79	hsa-miR-299-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+62	79	hsa-miR-9-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+63	79	hsa-miR-125a-3p	3586	IL10	NM_000572	interleukin 10
+64	79	hsa-miR-889-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+65	78	hsa-miR-129-5p	10016	PDCD6	NM_001267557	programmed cell death 6
+66	78	hsa-miR-431-5p	5228	PGF	NM_002632	placental growth factor
+67	77	hsa-miR-589-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+68	77	hsa-miR-1-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+69	77	hsa-miR-654-5p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+70	77	hsa-miR-605-3p	5228	PGF	NM_001207012	placental growth factor
+71	77	hsa-miR-206	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+72	76	hsa-miR-124-3p	5228	PGF	NM_001207012	placental growth factor
+73	76	hsa-let-7f-5p	3586	IL10	NM_000572	interleukin 10
+74	76	hsa-miR-98-5p	3586	IL10	NM_000572	interleukin 10
+75	76	hsa-miR-545-5p	3586	IL10	NM_000572	interleukin 10
+76	76	hsa-let-7b-5p	3586	IL10	NM_000572	interleukin 10
+77	76	hsa-let-7g-5p	3586	IL10	NM_000572	interleukin 10
+78	76	hsa-miR-548k	5578	PRKCA	NM_002737	protein kinase C alpha
+79	76	hsa-miR-506-3p	5228	PGF	NM_001207012	placental growth factor
+80	76	hsa-let-7a-5p	3586	IL10	NM_000572	interleukin 10
+81	76	hsa-let-7i-5p	3586	IL10	NM_000572	interleukin 10
+82	76	hsa-let-7e-5p	3586	IL10	NM_000572	interleukin 10
+83	76	hsa-let-7c-5p	3586	IL10	NM_000572	interleukin 10
+84	75	hsa-miR-4713-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+85	75	hsa-miR-497-3p	79031	PDCL3	NM_024065	phosducin like 3
+86	75	hsa-miR-27a-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+87	75	hsa-miR-27b-3p	7424	VEGFC	NM_005429	vascular endothelial growth factor C
+88	74	hsa-let-7d-5p	3586	IL10	NM_000572	interleukin 10
+89	74	hsa-miR-766-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+90	73	hsa-miR-3918	5228	PGF	NM_002632	placental growth factor
+91	73	hsa-miR-661	7423	VEGFB	NM_001243733	vascular endothelial growth factor B
+92	72	hsa-miR-877-5p	79031	PDCL3	NM_024065	phosducin like 3
+93	71	hsa-miR-27a-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+94	71	hsa-miR-504-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+95	70	hsa-miR-374a-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+96	70	hsa-miR-339-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+97	70	hsa-miR-30b-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+98	70	hsa-miR-429	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+99	70	hsa-miR-4667-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+100	70	hsa-miR-200b-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+101	70	hsa-miR-326	5578	PRKCA	NM_002737	protein kinase C alpha
+102	69	hsa-miR-495-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+103	69	hsa-miR-205-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+104	68	hsa-miR-374a-5p	3586	IL10	NM_000572	interleukin 10
+105	68	hsa-miR-30c-2-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+106	68	hsa-miR-545-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+107	68	hsa-miR-30c-1-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+108	68	hsa-miR-450b-5p	10016	PDCD6	NM_001267557	programmed cell death 6
+109	67	hsa-miR-193a-5p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+110	67	hsa-miR-3691-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+111	67	hsa-miR-627-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+112	66	hsa-miR-106b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+113	66	hsa-miR-642a-5p	7423	VEGFB	NM_003377	vascular endothelial growth factor B
+114	66	hsa-miR-3171	7422	VEGFA	NM_003376	vascular endothelial growth factor A
+115	66	hsa-miR-106a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+116	66	hsa-miR-34a-3p	10016	PDCD6	NM_001267556	programmed cell death 6
+117	66	hsa-miR-20a-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+118	66	hsa-miR-3154	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+119	65	hsa-miR-1260a	5578	PRKCA	NM_002737	protein kinase C alpha
+120	65	hsa-miR-186-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+121	65	hsa-miR-495-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+122	65	hsa-miR-22-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+123	65	hsa-miR-1260b	5578	PRKCA	NM_002737	protein kinase C alpha
+124	65	hsa-miR-20b-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+125	65	hsa-miR-93-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+126	65	hsa-miR-17-5p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+127	65	hsa-miR-519d-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+128	64	hsa-miR-329-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+129	64	hsa-miR-380-3p	3586	IL10	NM_000572	interleukin 10
+130	64	hsa-miR-362-3p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+131	64	hsa-miR-3150b-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+132	64	hsa-miR-1285-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+133	64	hsa-miR-1972	5578	PRKCA	NM_002737	protein kinase C alpha
+134	64	hsa-miR-185-5p	7422	VEGFA	NM_001171629	vascular endothelial growth factor A
+135	63	hsa-miR-519b-3p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+136	63	hsa-miR-519a-3p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+137	63	hsa-miR-335-5p	5228	PGF	NM_001207012	placental growth factor
+138	63	hsa-miR-605-3p	2324	FLT4	NM_002020	fms related tyrosine kinase 4
+139	62	hsa-miR-1185-1-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+140	62	hsa-miR-766-3p	2324	FLT4	NM_182925	fms related tyrosine kinase 4
+141	62	hsa-miR-874-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+142	62	hsa-miR-342-3p	7422	VEGFA	NM_001171627	vascular endothelial growth factor A
+143	62	hsa-miR-1185-2-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+144	62	hsa-miR-374b-5p	3586	IL10	NM_000572	interleukin 10
+145	62	hsa-miR-574-5p	5228	PGF	NM_002632	placental growth factor
+146	61	hsa-miR-576-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+147	61	hsa-miR-409-3p	5578	PRKCA	NM_002737	protein kinase C alpha
+148	61	hsa-miR-183-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+149	61	hsa-miR-3065-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+150	61	hsa-miR-5010-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+151	61	hsa-miR-637	5578	PRKCA	NM_002737	protein kinase C alpha
+152	61	hsa-miR-625-5p	5578	PRKCA	NM_002737	protein kinase C alpha
+153	60	hsa-miR-449a	5228	PGF	NM_002632	placental growth factor
+154	60	hsa-miR-34a-5p	5228	PGF	NM_002632	placental growth factor
+155	60	hsa-miR-3175	5578	PRKCA	NM_002737	protein kinase C alpha

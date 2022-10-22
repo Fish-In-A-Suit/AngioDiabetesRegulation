@@ -1,0 +1,617 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-15b-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+2	100	hsa-miR-497-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+3	100	hsa-miR-16-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+4	100	hsa-miR-548an	6667	SP1	NM_003109	Sp1 transcription factor
+5	100	hsa-miR-15a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+6	100	hsa-miR-195-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+7	100	hsa-miR-424-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+8	99	hsa-miR-124-3p	6667	SP1	NM_003109	Sp1 transcription factor
+9	99	hsa-miR-183-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+10	99	hsa-miR-3065-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+11	99	hsa-miR-506-3p	6667	SP1	NM_003109	Sp1 transcription factor
+12	99	hsa-miR-505-3p	3146	HMGB1	NM_002128	high mobility group box 1
+13	98	hsa-miR-513a-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+14	98	hsa-miR-15b-5p	8862	APLN	NM_017413	apelin
+15	98	hsa-miR-15b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+16	98	hsa-miR-29c-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+17	98	hsa-miR-497-5p	8862	APLN	NM_017413	apelin
+18	98	hsa-miR-29a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+19	98	hsa-miR-16-5p	8862	APLN	NM_017413	apelin
+20	98	hsa-miR-16-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+21	98	hsa-miR-29b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+22	98	hsa-miR-7-5p	6667	SP1	NM_003109	Sp1 transcription factor
+23	98	hsa-miR-15a-5p	8862	APLN	NM_017413	apelin
+24	98	hsa-miR-15a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+25	98	hsa-miR-195-5p	8862	APLN	NM_017413	apelin
+26	98	hsa-miR-195-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+27	98	hsa-miR-424-5p	8862	APLN	NM_017413	apelin
+28	98	hsa-miR-203a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+29	98	hsa-miR-513c-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+30	97	hsa-miR-576-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+31	97	hsa-miR-106b-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+32	97	hsa-miR-1290	3676	ITGA4	NM_001316312	integrin subunit alpha 4
+33	97	hsa-miR-497-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+34	97	hsa-miR-545-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+35	97	hsa-miR-448	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+36	97	hsa-miR-202-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+37	97	hsa-miR-20a-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+38	97	hsa-miR-424-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+39	96	hsa-miR-450a-2-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+40	96	hsa-miR-657	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+41	96	hsa-miR-1297	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+42	96	hsa-miR-26a-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+43	96	hsa-miR-26b-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+44	96	hsa-miR-20b-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+45	96	hsa-miR-106a-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+46	96	hsa-miR-93-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+47	96	hsa-miR-17-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+48	96	hsa-miR-519d-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+49	95	hsa-miR-548j-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+50	95	hsa-miR-548c-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+51	95	hsa-miR-335-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+52	95	hsa-miR-548b-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+53	95	hsa-miR-548d-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+54	95	hsa-miR-15b-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+55	95	hsa-miR-548h-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+56	95	hsa-miR-497-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+57	95	hsa-miR-299-5p	6667	SP1	NM_003109	Sp1 transcription factor
+58	95	hsa-miR-545-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+59	95	hsa-miR-874-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+60	95	hsa-miR-16-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+61	95	hsa-miR-548o-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+62	95	hsa-miR-548am-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+63	95	hsa-miR-9-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+64	95	hsa-miR-493-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+65	95	hsa-miR-15a-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+66	95	hsa-miR-195-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+67	95	hsa-miR-450b-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+68	95	hsa-miR-424-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+69	94	hsa-miR-410-3p	6667	SP1	NM_003109	Sp1 transcription factor
+70	94	hsa-miR-664b-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+71	94	hsa-miR-513a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+72	94	hsa-miR-17-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+73	94	hsa-miR-135b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+74	94	hsa-miR-135a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+75	94	hsa-miR-3605-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+76	94	hsa-miR-568	8862	APLN	NM_017413	apelin
+77	94	hsa-miR-762	8862	APLN	NM_017413	apelin
+78	94	hsa-miR-27a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+79	94	hsa-miR-4423-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+80	94	hsa-miR-513c-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+81	94	hsa-miR-27b-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+82	93	hsa-miR-450a-2-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+83	93	hsa-miR-491-5p	3481	IGF2	NM_001007139	insulin like growth factor 2
+84	93	hsa-miR-1275	3481	IGF2	NM_000612	insulin like growth factor 2
+85	93	hsa-miR-22-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+86	93	hsa-miR-214-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+87	93	hsa-miR-210-3p	3481	IGF2	NM_001291861	insulin like growth factor 2
+88	93	hsa-miR-29c-3p	6667	SP1	NM_003109	Sp1 transcription factor
+89	93	hsa-miR-181c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+90	93	hsa-miR-181d-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+91	93	hsa-miR-29a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+92	93	hsa-miR-181a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+93	93	hsa-miR-1827	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+94	93	hsa-miR-5001-5p	8862	APLN	NM_017413	apelin
+95	93	hsa-miR-330-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+96	93	hsa-miR-338-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+97	93	hsa-miR-181b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+98	93	hsa-miR-29b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+99	93	hsa-miR-761	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+100	93	hsa-miR-548l	6667	SP1	NM_003109	Sp1 transcription factor
+101	92	hsa-miR-23a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+102	92	hsa-miR-374a-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+103	92	hsa-miR-338-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+104	92	hsa-miR-23b-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+105	92	hsa-miR-494-3p	8862	APLN	NM_017413	apelin
+106	91	hsa-miR-370-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+107	91	hsa-miR-509-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+108	91	hsa-miR-509-3-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+109	91	hsa-miR-3918	5335	PLCG1	NM_002660	phospholipase C gamma 1
+110	91	hsa-miR-150-5p	6667	SP1	NM_003109	Sp1 transcription factor
+111	91	hsa-miR-495-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+112	91	hsa-miR-642a-3p	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+113	91	hsa-miR-1290	6667	SP1	NM_003109	Sp1 transcription factor
+114	91	hsa-miR-627-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+115	91	hsa-miR-9-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+116	91	hsa-miR-149-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+117	91	hsa-miR-128-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+118	91	hsa-miR-1972	3481	IGF2	NM_001291861	insulin like growth factor 2
+119	91	hsa-miR-369-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+120	91	hsa-miR-3140-3p	10000	AKT3	NM_181690	AKT serine/threonine kinase 3
+121	91	hsa-miR-3190-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+122	91	hsa-miR-454-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+123	90	hsa-miR-380-3p	3676	ITGA4	NM_001316312	integrin subunit alpha 4
+124	90	hsa-miR-301a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+125	90	hsa-miR-361-5p	6667	SP1	NM_003109	Sp1 transcription factor
+126	90	hsa-miR-182-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+127	90	hsa-miR-503-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+128	90	hsa-miR-522-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+129	90	hsa-miR-4662a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+130	90	hsa-miR-301b-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+131	90	hsa-miR-128-3p	6667	SP1	NM_003109	Sp1 transcription factor
+132	90	hsa-miR-130a-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+133	90	hsa-miR-27a-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+134	90	hsa-miR-374b-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+135	90	hsa-miR-130b-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+136	90	hsa-miR-519c-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+137	90	hsa-miR-27b-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+138	89	hsa-miR-410-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+139	89	hsa-miR-876-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+140	89	hsa-miR-766-3p	51548	SIRT6	NM_001321064	sirtuin 6
+141	89	hsa-miR-548k	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+142	89	hsa-miR-493-5p	6667	SP1	NM_003109	Sp1 transcription factor
+143	88	hsa-miR-124-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+144	88	hsa-miR-3614-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+145	88	hsa-miR-506-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+146	88	hsa-miR-889-3p	8862	APLN	NM_017413	apelin
+147	88	hsa-miR-4423-3p	6667	SP1	NM_003109	Sp1 transcription factor
+148	87	hsa-miR-23a-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+149	87	hsa-miR-450a-1-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+150	87	hsa-miR-664b-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+151	87	hsa-miR-1-3p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+152	87	hsa-miR-660-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+153	87	hsa-miR-342-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+154	87	hsa-miR-548t-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+155	87	hsa-miR-33b-5p	51548	SIRT6	NM_001321064	sirtuin 6
+156	87	hsa-miR-33a-5p	51548	SIRT6	NM_001321064	sirtuin 6
+157	87	hsa-miR-23b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+158	87	hsa-miR-101-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+159	87	hsa-miR-1304-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+160	87	hsa-miR-7-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+161	87	hsa-miR-188-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+162	87	hsa-miR-605-3p	6667	SP1	NM_003109	Sp1 transcription factor
+163	87	hsa-miR-605-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+164	87	hsa-miR-759	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+165	87	hsa-miR-206	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+166	87	hsa-miR-9-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+167	86	hsa-miR-374a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+168	86	hsa-miR-30a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+169	86	hsa-miR-30e-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+170	86	hsa-miR-20b-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+171	86	hsa-miR-513a-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+172	86	hsa-miR-493-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+173	86	hsa-miR-561-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+174	85	hsa-miR-106b-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+175	85	hsa-miR-3158-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+176	85	hsa-miR-378d	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+177	85	hsa-miR-17-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+178	85	hsa-miR-660-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+179	85	hsa-miR-378a-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+180	85	hsa-miR-378c	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+181	85	hsa-miR-503-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+182	85	hsa-miR-338-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+183	85	hsa-miR-5196-3p	6667	SP1	NM_003109	Sp1 transcription factor
+184	85	hsa-miR-769-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+185	85	hsa-miR-20a-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+186	85	hsa-miR-422a	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+187	85	hsa-miR-18a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+188	84	hsa-miR-144-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+189	84	hsa-miR-155-5p	6667	SP1	NM_003109	Sp1 transcription factor
+190	84	hsa-miR-495-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+191	84	hsa-let-7f-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+192	84	hsa-miR-98-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+193	84	hsa-miR-135b-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+194	84	hsa-let-7b-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+195	84	hsa-let-7g-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+196	84	hsa-miR-135a-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+197	84	hsa-let-7a-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+198	84	hsa-miR-145-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+199	84	hsa-miR-3200-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+200	84	hsa-let-7i-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+201	84	hsa-miR-338-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+202	84	hsa-let-7e-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+203	84	hsa-let-7c-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+204	83	hsa-miR-576-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+205	83	hsa-miR-3129-5p	6667	SP1	NM_003109	Sp1 transcription factor
+206	83	hsa-miR-148a-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+207	83	hsa-miR-152-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+208	83	hsa-miR-619-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+209	83	hsa-miR-1827	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+210	83	hsa-miR-20b-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+211	83	hsa-miR-106a-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+212	83	hsa-miR-93-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+213	83	hsa-miR-199a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+214	83	hsa-miR-17-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+215	83	hsa-miR-605-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+216	83	hsa-miR-148b-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+217	83	hsa-miR-767-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+218	83	hsa-miR-3154	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+219	83	hsa-miR-519d-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+220	83	hsa-miR-199b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+221	82	hsa-miR-3622a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+222	82	hsa-miR-410-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+223	82	hsa-miR-374a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+224	82	hsa-miR-124-3p	8862	APLN	NM_017413	apelin
+225	82	hsa-miR-628-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+226	82	hsa-miR-2355-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+227	82	hsa-miR-212-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+228	82	hsa-miR-9-3p	4192	MDK	NM_001012333	midkine
+229	82	hsa-miR-3909	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+230	82	hsa-miR-506-3p	8862	APLN	NM_017413	apelin
+231	82	hsa-miR-766-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+232	82	hsa-miR-374b-5p	6667	SP1	NM_003109	Sp1 transcription factor
+233	82	hsa-miR-889-3p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+234	81	hsa-miR-410-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+235	81	hsa-miR-1275	8862	APLN	NM_017413	apelin
+236	81	hsa-miR-18b-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+237	81	hsa-miR-153-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+238	81	hsa-miR-3143	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+239	81	hsa-miR-1185-1-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+240	81	hsa-miR-576-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+241	81	hsa-miR-18a-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+242	81	hsa-miR-1185-2-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+243	81	hsa-miR-548l	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+244	80	hsa-miR-133a-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+245	80	hsa-miR-133a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+246	80	hsa-miR-519b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+247	80	hsa-miR-519a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+248	80	hsa-miR-491-5p	4192	MDK	NM_001012333	midkine
+249	80	hsa-miR-106b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+250	80	hsa-miR-450a-1-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+251	80	hsa-miR-144-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+252	80	hsa-miR-133b	6667	SP1	NM_003109	Sp1 transcription factor
+253	80	hsa-miR-133b	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+254	80	hsa-miR-548t-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+255	80	hsa-miR-93-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+256	80	hsa-miR-107	2247	FGF2	NM_002006	fibroblast growth factor 2
+257	80	hsa-miR-424-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+258	80	hsa-miR-20b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+259	80	hsa-miR-106a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+260	80	hsa-miR-3162-5p	6667	SP1	NM_003109	Sp1 transcription factor
+261	80	hsa-miR-103a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+262	80	hsa-miR-93-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+263	80	hsa-miR-221-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+264	80	hsa-miR-17-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+265	80	hsa-miR-6503-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+266	80	hsa-miR-20a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+267	80	hsa-miR-656-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+268	80	hsa-miR-324-5p	6667	SP1	NM_003109	Sp1 transcription factor
+269	80	hsa-miR-519d-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+270	80	hsa-miR-550a-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+271	80	hsa-miR-889-3p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+272	79	hsa-miR-1908-5p	51548	SIRT6	NM_001321064	sirtuin 6
+273	79	hsa-miR-218-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+274	79	hsa-let-7d-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+275	79	hsa-miR-663a	51548	SIRT6	NM_001321064	sirtuin 6
+276	79	hsa-miR-126-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+277	79	hsa-miR-365b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+278	79	hsa-miR-365a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+279	79	hsa-miR-3065-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+280	79	hsa-miR-4662a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+281	79	hsa-miR-6511a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+282	79	hsa-miR-320e	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+283	79	hsa-miR-561-5p	6667	SP1	NM_003109	Sp1 transcription factor
+284	79	hsa-miR-450b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+285	78	hsa-miR-23a-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+286	78	hsa-miR-218-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+287	78	hsa-miR-1275	4192	MDK	NM_001012333	midkine
+288	78	hsa-miR-589-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+289	78	hsa-miR-221-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+290	78	hsa-miR-19a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+291	78	hsa-miR-4667-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+292	78	hsa-miR-548t-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+293	78	hsa-miR-1290	3481	IGF2	NM_001007139	insulin like growth factor 2
+294	78	hsa-miR-874-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+295	78	hsa-miR-1185-1-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+296	78	hsa-miR-5001-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+297	78	hsa-miR-23b-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+298	78	hsa-miR-222-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+299	78	hsa-miR-19b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+300	78	hsa-miR-656-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+301	78	hsa-miR-762	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+302	78	hsa-miR-1185-2-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+303	77	hsa-miR-885-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+304	77	hsa-miR-335-5p	6667	SP1	NM_003109	Sp1 transcription factor
+305	77	hsa-miR-3065-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+306	77	hsa-miR-29c-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+307	77	hsa-miR-1303	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+308	77	hsa-miR-29a-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+309	77	hsa-miR-93-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+310	77	hsa-miR-511-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+311	77	hsa-miR-29b-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+312	77	hsa-miR-488-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+313	77	hsa-miR-326	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+314	76	hsa-miR-3120-3p	2260	FGFR1	NM_001174065	fibroblast growth factor receptor 1
+315	76	hsa-miR-96-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+316	76	hsa-miR-106b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+317	76	hsa-miR-410-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+318	76	hsa-miR-664b-3p	8862	APLN	NM_017413	apelin
+319	76	hsa-miR-433-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+320	76	hsa-miR-654-5p	51548	SIRT6	NM_001321063	sirtuin 6
+321	76	hsa-miR-629-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+322	76	hsa-miR-323a-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+323	76	hsa-miR-3173-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+324	76	hsa-miR-1298-5p	6667	SP1	NM_003109	Sp1 transcription factor
+325	76	hsa-miR-665	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+326	76	hsa-miR-20a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+327	76	hsa-miR-656-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+328	76	hsa-miR-338-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+329	75	hsa-miR-495-3p	6667	SP1	NM_003109	Sp1 transcription factor
+330	75	hsa-miR-548a-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+331	75	hsa-miR-18b-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+332	75	hsa-miR-761	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+333	74	hsa-miR-374b-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+334	74	hsa-miR-3120-3p	3146	HMGB1	NM_002128	high mobility group box 1
+335	74	hsa-miR-32-5p	51548	SIRT6	NM_001321064	sirtuin 6
+336	74	hsa-miR-548e-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+337	74	hsa-miR-216a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+338	74	hsa-miR-155-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+339	74	hsa-miR-374a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+340	74	hsa-miR-624-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+341	74	hsa-miR-622	3676	ITGA4	NM_000885	integrin subunit alpha 4
+342	74	hsa-miR-92b-3p	51548	SIRT6	NM_001321064	sirtuin 6
+343	74	hsa-miR-876-5p	6667	SP1	NM_003109	Sp1 transcription factor
+344	74	hsa-miR-876-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+345	74	hsa-miR-1270	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+346	74	hsa-miR-93-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+347	74	hsa-miR-1179	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+348	74	hsa-miR-223-3p	4192	MDK	NM_001012333	midkine
+349	74	hsa-miR-548f-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+350	74	hsa-miR-92a-3p	51548	SIRT6	NM_001321064	sirtuin 6
+351	74	hsa-miR-374b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+352	73	hsa-miR-22-3p	6667	SP1	NM_003109	Sp1 transcription factor
+353	73	hsa-miR-124-3p	4192	MDK	NM_001012333	midkine
+354	73	hsa-miR-1224-5p	51548	SIRT6	NM_001321062	sirtuin 6
+355	73	hsa-miR-1910-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+356	73	hsa-miR-346	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+357	73	hsa-miR-433-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+358	73	hsa-miR-653-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+359	73	hsa-miR-1185-1-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+360	73	hsa-miR-506-3p	4192	MDK	NM_001012333	midkine
+361	73	hsa-miR-145-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+362	73	hsa-miR-504-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+363	73	hsa-miR-1185-2-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+364	73	hsa-miR-10b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+365	72	hsa-miR-154-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+366	72	hsa-miR-509-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+367	72	hsa-miR-509-3-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+368	72	hsa-miR-374a-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+369	72	hsa-miR-512-3p	6667	SP1	NM_003109	Sp1 transcription factor
+370	72	hsa-miR-151a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+371	72	hsa-miR-330-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+372	72	hsa-miR-1285-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+373	72	hsa-miR-20b-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+374	72	hsa-miR-106a-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+375	72	hsa-miR-93-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+376	72	hsa-miR-548an	8862	APLN	NM_017413	apelin
+377	72	hsa-miR-548b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+378	72	hsa-miR-382-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+379	72	hsa-miR-17-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+380	72	hsa-miR-1323	6667	SP1	NM_003109	Sp1 transcription factor
+381	72	hsa-miR-3157-5p	6667	SP1	NM_003109	Sp1 transcription factor
+382	72	hsa-miR-219a-5p	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+383	72	hsa-miR-519d-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+384	72	hsa-miR-505-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+385	71	hsa-miR-186-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+386	71	hsa-miR-512-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+387	71	hsa-miR-1271-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+388	71	hsa-miR-337-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+389	71	hsa-miR-141-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+390	71	hsa-miR-200a-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+391	71	hsa-miR-15b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+392	71	hsa-miR-149-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+393	71	hsa-miR-759	3146	HMGB1	NM_001313892	high mobility group box 1
+394	71	hsa-miR-122-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+395	71	hsa-miR-625-5p	4192	MDK	NM_001012333	midkine
+396	71	hsa-miR-504-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+397	70	hsa-miR-1915-3p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+398	70	hsa-miR-372-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+399	70	hsa-miR-186-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+400	70	hsa-miR-548j-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+401	70	hsa-miR-548c-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+402	70	hsa-miR-421	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+403	70	hsa-miR-105-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+404	70	hsa-miR-548b-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+405	70	hsa-miR-3065-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+406	70	hsa-miR-520c-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+407	70	hsa-miR-548d-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+408	70	hsa-miR-4667-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+409	70	hsa-miR-548t-5p	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+410	70	hsa-miR-548h-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+411	70	hsa-miR-373-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+412	70	hsa-miR-129-5p	3146	HMGB1	NM_002128	high mobility group box 1
+413	70	hsa-miR-411-3p	3146	HMGB1	NM_002128	high mobility group box 1
+414	70	hsa-miR-302c-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+415	70	hsa-miR-135b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+416	70	hsa-miR-302a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+417	70	hsa-miR-9-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+418	70	hsa-miR-499a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+419	70	hsa-miR-135a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+420	70	hsa-miR-379-3p	3146	HMGB1	NM_002128	high mobility group box 1
+421	70	hsa-miR-548o-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+422	70	hsa-miR-568	2247	FGF2	NM_002006	fibroblast growth factor 2
+423	70	hsa-miR-3152-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+424	70	hsa-miR-488-3p	6667	SP1	NM_003109	Sp1 transcription factor
+425	70	hsa-miR-302d-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+426	70	hsa-miR-302b-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+427	70	hsa-miR-3200-3p	6667	SP1	NM_003109	Sp1 transcription factor
+428	70	hsa-miR-548am-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+429	69	hsa-miR-374b-3p	2260	FGFR1	NM_001174066	fibroblast growth factor receptor 1
+430	69	hsa-miR-519b-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+431	69	hsa-miR-519a-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+432	69	hsa-miR-139-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+433	69	hsa-miR-186-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+434	69	hsa-miR-367-3p	51548	SIRT6	NM_001321064	sirtuin 6
+435	69	hsa-miR-382-3p	3146	HMGB1	NM_002128	high mobility group box 1
+436	69	hsa-miR-3121-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+437	69	hsa-miR-452-5p	8862	APLN	NM_017413	apelin
+438	69	hsa-miR-629-3p	8862	APLN	NM_017413	apelin
+439	69	hsa-miR-3200-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+440	69	hsa-miR-17-3p	6667	SP1	NM_003109	Sp1 transcription factor
+441	69	hsa-miR-508-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+442	69	hsa-miR-363-3p	51548	SIRT6	NM_001321064	sirtuin 6
+443	69	hsa-miR-129-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+444	69	hsa-miR-93-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+445	69	hsa-miR-1827	6667	SP1	NM_003109	Sp1 transcription factor
+446	69	hsa-miR-377-3p	6667	SP1	NM_003109	Sp1 transcription factor
+447	69	hsa-miR-3192-5p	6667	SP1	NM_003109	Sp1 transcription factor
+448	69	hsa-miR-24-3p	6667	SP1	NM_003109	Sp1 transcription factor
+449	69	hsa-miR-605-3p	4192	MDK	NM_001012333	midkine
+450	69	hsa-miR-25-3p	51548	SIRT6	NM_001321064	sirtuin 6
+451	68	hsa-miR-633	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+452	68	hsa-miR-654-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+453	68	hsa-miR-545-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+454	68	hsa-miR-126-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+455	68	hsa-miR-423-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+456	68	hsa-miR-196b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+457	68	hsa-miR-32-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+458	68	hsa-miR-6511a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+459	68	hsa-miR-223-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+460	68	hsa-miR-196a-5p	3146	HMGB1	NM_002128	high mobility group box 1
+461	67	hsa-miR-3120-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+462	67	hsa-miR-486-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+463	67	hsa-miR-4713-5p	6667	SP1	NM_003109	Sp1 transcription factor
+464	67	hsa-miR-664b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+465	67	hsa-miR-1910-3p	6667	SP1	NM_003109	Sp1 transcription factor
+466	67	hsa-miR-214-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+467	67	hsa-miR-3173-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+468	67	hsa-miR-1827	3481	IGF2	NM_000612	insulin like growth factor 2
+469	67	hsa-miR-627-3p	3146	HMGB1	NM_002128	high mobility group box 1
+470	67	hsa-miR-548o-3p	6667	SP1	NM_003109	Sp1 transcription factor
+471	67	hsa-miR-548an	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+472	67	hsa-miR-637	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+473	66	hsa-miR-374a-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+474	66	hsa-miR-186-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+475	66	hsa-miR-3144-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+476	66	hsa-miR-590-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+477	66	hsa-miR-148a-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+478	66	hsa-miR-642a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+479	66	hsa-miR-21-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+480	66	hsa-miR-19a-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+481	66	hsa-miR-152-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+482	66	hsa-miR-708-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+483	66	hsa-miR-140-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+484	66	hsa-miR-3074-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+485	66	hsa-miR-550a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+486	66	hsa-miR-4662a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+487	66	hsa-miR-223-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+488	66	hsa-miR-19b-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+489	66	hsa-miR-1271-3p	6667	SP1	NM_003109	Sp1 transcription factor
+490	66	hsa-miR-148b-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+491	66	hsa-miR-3140-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+492	66	hsa-miR-374b-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+493	66	hsa-miR-125a-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+494	65	hsa-miR-548e-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+495	65	hsa-miR-320d	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+496	65	hsa-miR-4667-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+497	65	hsa-miR-181c-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+498	65	hsa-miR-33b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+499	65	hsa-miR-181d-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+500	65	hsa-miR-548a-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+501	65	hsa-miR-181a-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+502	65	hsa-miR-107	8862	APLN	NM_017413	apelin
+503	65	hsa-miR-522-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+504	65	hsa-miR-320c	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+505	65	hsa-miR-338-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+506	65	hsa-miR-33a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+507	65	hsa-miR-103a-3p	8862	APLN	NM_017413	apelin
+508	65	hsa-miR-181b-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+509	65	hsa-miR-297	2321	FLT1	NM_001160030	fms related tyrosine kinase 1
+510	65	hsa-miR-605-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+511	65	hsa-miR-625-5p	8862	APLN	NM_017413	apelin
+512	65	hsa-miR-548f-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+513	65	hsa-miR-493-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+514	65	hsa-miR-320b	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+515	65	hsa-miR-519c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+516	64	hsa-miR-30a-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+517	64	hsa-miR-1260a	6667	SP1	NM_003109	Sp1 transcription factor
+518	64	hsa-miR-548j-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+519	64	hsa-miR-548c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+520	64	hsa-miR-30b-3p	8862	APLN	NM_017413	apelin
+521	64	hsa-miR-758-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+522	64	hsa-miR-548b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+523	64	hsa-miR-200c-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+524	64	hsa-miR-429	5335	PLCG1	NM_002660	phospholipase C gamma 1
+525	64	hsa-miR-548d-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+526	64	hsa-miR-548h-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+527	64	hsa-miR-30c-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+528	64	hsa-miR-653-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+529	64	hsa-miR-1260b	6667	SP1	NM_003109	Sp1 transcription factor
+530	64	hsa-miR-135b-5p	6667	SP1	NM_003109	Sp1 transcription factor
+531	64	hsa-miR-181a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+532	64	hsa-miR-30b-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+533	64	hsa-miR-135a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+534	64	hsa-miR-548o-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+535	64	hsa-miR-181b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+536	64	hsa-miR-1304-5p	8862	APLN	NM_017413	apelin
+537	64	hsa-miR-200b-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+538	64	hsa-miR-30d-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+539	64	hsa-miR-582-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+540	64	hsa-miR-548am-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+541	64	hsa-miR-3157-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+542	64	hsa-miR-30e-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+543	64	hsa-miR-625-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+544	64	hsa-miR-3154	8862	APLN	NM_017413	apelin
+545	64	hsa-miR-3154	2247	FGF2	NM_002006	fibroblast growth factor 2
+546	64	hsa-miR-194-5p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+547	64	hsa-miR-760	6667	SP1	NM_003109	Sp1 transcription factor
+548	64	hsa-miR-505-5p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+549	63	hsa-miR-519b-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+550	63	hsa-miR-449a	5335	PLCG1	NM_002660	phospholipase C gamma 1
+551	63	hsa-miR-519a-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+552	63	hsa-miR-5699-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+553	63	hsa-miR-1291	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+554	63	hsa-miR-514a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+555	63	hsa-miR-34a-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+556	63	hsa-miR-214-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+557	63	hsa-miR-513a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+558	63	hsa-miR-573	6667	SP1	NM_003109	Sp1 transcription factor
+559	63	hsa-miR-802	51548	SIRT6	NM_001321062	sirtuin 6
+560	63	hsa-miR-1827	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+561	63	hsa-miR-490-5p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+562	63	hsa-miR-490-5p	2260	FGFR1	NM_001174066	fibroblast growth factor receptor 1
+563	63	hsa-miR-513a-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+564	63	hsa-miR-761	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+565	63	hsa-miR-513c-3p	3146	HMGB1	NM_002128	high mobility group box 1
+566	62	hsa-miR-548t-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+567	62	hsa-miR-183-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+568	62	hsa-miR-218-5p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+569	62	hsa-miR-30c-2-3p	6667	SP1	NM_003109	Sp1 transcription factor
+570	62	hsa-miR-3121-3p	2321	FLT1	NM_002019	fms related tyrosine kinase 1
+571	62	hsa-miR-544a	3481	IGF2	NM_000612	insulin like growth factor 2
+572	62	hsa-miR-744-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+573	62	hsa-miR-3194-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+574	62	hsa-miR-548t-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+575	62	hsa-miR-337-3p	6667	SP1	NM_003109	Sp1 transcription factor
+576	62	hsa-miR-1185-1-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+577	62	hsa-miR-496	2247	FGF2	NM_002006	fibroblast growth factor 2
+578	62	hsa-miR-627-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+579	62	hsa-miR-3138	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+580	62	hsa-miR-3936	6667	SP1	NM_003109	Sp1 transcription factor
+581	62	hsa-miR-605-3p	2260	FGFR1	NM_001174065	fibroblast growth factor receptor 1
+582	62	hsa-miR-654-3p	6667	SP1	NM_003109	Sp1 transcription factor
+583	62	hsa-miR-625-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+584	62	hsa-miR-1185-2-3p	2321	FLT1	NM_001159920	fms related tyrosine kinase 1
+585	62	hsa-miR-383-5p	6667	SP1	NM_003109	Sp1 transcription factor
+586	62	hsa-miR-30c-1-3p	6667	SP1	NM_003109	Sp1 transcription factor
+587	61	hsa-miR-3613-5p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+588	61	hsa-miR-410-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+589	61	hsa-miR-380-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+590	61	hsa-miR-624-5p	6347	CCL2	NM_002982	C-C motif chemokine ligand 2
+591	61	hsa-miR-1297	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+592	61	hsa-miR-452-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+593	61	hsa-miR-105-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+594	61	hsa-miR-708-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+595	61	hsa-miR-548t-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+596	61	hsa-miR-381-3p	4208	MEF2C	NM_001308002	myocyte enhancer factor 2C
+597	61	hsa-miR-3150b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+598	61	hsa-miR-496	3146	HMGB1	NM_002128	high mobility group box 1
+599	61	hsa-miR-3909	5335	PLCG1	NM_002660	phospholipase C gamma 1
+600	61	hsa-miR-484	8862	APLN	NM_017413	apelin
+601	61	hsa-miR-223-3p	6667	SP1	NM_003109	Sp1 transcription factor
+602	61	hsa-miR-760	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+603	60	hsa-miR-134-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+604	60	hsa-miR-539-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+605	60	hsa-miR-380-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C
+606	60	hsa-miR-495-3p	1285	COL4A3	NM_000091	collagen type IV alpha 3 chain
+607	60	hsa-miR-615-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+608	60	hsa-miR-744-5p	51548	SIRT6	NM_001321064	sirtuin 6
+609	60	hsa-miR-660-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+610	60	hsa-miR-1290	8862	APLN	NM_017413	apelin
+611	60	hsa-miR-545-5p	5468	PPARG	NM_005037	peroxisome proliferator activated receptor gamma
+612	60	hsa-miR-3150b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+613	60	hsa-miR-485-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+614	60	hsa-miR-761	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+615	60	hsa-miR-203a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+616	60	hsa-miR-889-3p	4208	MEF2C	NM_001193350	myocyte enhancer factor 2C

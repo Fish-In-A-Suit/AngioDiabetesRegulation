@@ -1,0 +1,424 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-15b-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+2	100	hsa-miR-497-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+3	100	hsa-miR-16-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+4	100	hsa-miR-548an	6667	SP1	NM_003109	Sp1 transcription factor
+5	100	hsa-miR-15a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+6	100	hsa-miR-195-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+7	100	hsa-miR-424-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+8	99	hsa-miR-124-3p	6667	SP1	NM_003109	Sp1 transcription factor
+9	99	hsa-miR-3065-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+10	99	hsa-miR-506-3p	6667	SP1	NM_003109	Sp1 transcription factor
+11	99	hsa-miR-505-3p	3146	HMGB1	NM_002128	high mobility group box 1
+12	98	hsa-miR-513a-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+13	98	hsa-miR-15b-5p	8862	APLN	NM_017413	apelin
+14	98	hsa-miR-15b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+15	98	hsa-miR-29c-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+16	98	hsa-miR-497-5p	8862	APLN	NM_017413	apelin
+17	98	hsa-miR-29a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+18	98	hsa-miR-16-5p	8862	APLN	NM_017413	apelin
+19	98	hsa-miR-16-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+20	98	hsa-miR-29b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+21	98	hsa-miR-7-5p	6667	SP1	NM_003109	Sp1 transcription factor
+22	98	hsa-miR-15a-5p	8862	APLN	NM_017413	apelin
+23	98	hsa-miR-15a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+24	98	hsa-miR-195-5p	8862	APLN	NM_017413	apelin
+25	98	hsa-miR-195-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+26	98	hsa-miR-424-5p	8862	APLN	NM_017413	apelin
+27	98	hsa-miR-513c-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+28	97	hsa-miR-576-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+29	97	hsa-miR-106b-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+30	97	hsa-miR-1290	3676	ITGA4	NM_001316312	integrin subunit alpha 4
+31	97	hsa-miR-497-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+32	97	hsa-miR-545-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+33	97	hsa-miR-20a-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+34	97	hsa-miR-424-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+35	96	hsa-miR-450a-2-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+36	96	hsa-miR-1297	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+37	96	hsa-miR-26a-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+38	96	hsa-miR-26b-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+39	96	hsa-miR-20b-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+40	96	hsa-miR-106a-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+41	96	hsa-miR-93-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+42	96	hsa-miR-17-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+43	96	hsa-miR-519d-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+44	95	hsa-miR-15b-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+45	95	hsa-miR-497-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+46	95	hsa-miR-299-5p	6667	SP1	NM_003109	Sp1 transcription factor
+47	95	hsa-miR-545-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+48	95	hsa-miR-874-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+49	95	hsa-miR-16-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+50	95	hsa-miR-15a-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+51	95	hsa-miR-195-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+52	95	hsa-miR-424-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+53	94	hsa-miR-410-3p	6667	SP1	NM_003109	Sp1 transcription factor
+54	94	hsa-miR-664b-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+55	94	hsa-miR-17-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+56	94	hsa-miR-3605-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+57	94	hsa-miR-568	8862	APLN	NM_017413	apelin
+58	94	hsa-miR-762	8862	APLN	NM_017413	apelin
+59	93	hsa-miR-450a-2-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+60	93	hsa-miR-491-5p	3481	IGF2	NM_001007139	insulin like growth factor 2
+61	93	hsa-miR-1275	3481	IGF2	NM_000612	insulin like growth factor 2
+62	93	hsa-miR-22-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+63	93	hsa-miR-214-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+64	93	hsa-miR-210-3p	3481	IGF2	NM_001291861	insulin like growth factor 2
+65	93	hsa-miR-29c-3p	6667	SP1	NM_003109	Sp1 transcription factor
+66	93	hsa-miR-181c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+67	93	hsa-miR-181d-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+68	93	hsa-miR-29a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+69	93	hsa-miR-181a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+70	93	hsa-miR-5001-5p	8862	APLN	NM_017413	apelin
+71	93	hsa-miR-330-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+72	93	hsa-miR-181b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+73	93	hsa-miR-29b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+74	93	hsa-miR-761	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+75	93	hsa-miR-548l	6667	SP1	NM_003109	Sp1 transcription factor
+76	92	hsa-miR-23a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+77	92	hsa-miR-23b-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+78	92	hsa-miR-494-3p	8862	APLN	NM_017413	apelin
+79	91	hsa-miR-509-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+80	91	hsa-miR-509-3-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+81	91	hsa-miR-3918	5335	PLCG1	NM_002660	phospholipase C gamma 1
+82	91	hsa-miR-150-5p	6667	SP1	NM_003109	Sp1 transcription factor
+83	91	hsa-miR-495-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+84	91	hsa-miR-1290	6667	SP1	NM_003109	Sp1 transcription factor
+85	91	hsa-miR-627-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+86	91	hsa-miR-9-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+87	91	hsa-miR-149-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+88	91	hsa-miR-128-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+89	91	hsa-miR-1972	3481	IGF2	NM_001291861	insulin like growth factor 2
+90	91	hsa-miR-369-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+91	91	hsa-miR-3140-3p	10000	AKT3	NM_181690	AKT serine/threonine kinase 3
+92	91	hsa-miR-3190-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+93	90	hsa-miR-380-3p	3676	ITGA4	NM_001316312	integrin subunit alpha 4
+94	90	hsa-miR-361-5p	6667	SP1	NM_003109	Sp1 transcription factor
+95	90	hsa-miR-503-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+96	90	hsa-miR-522-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+97	90	hsa-miR-4662a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+98	90	hsa-miR-128-3p	6667	SP1	NM_003109	Sp1 transcription factor
+99	90	hsa-miR-27a-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+100	90	hsa-miR-519c-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+101	90	hsa-miR-27b-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+102	89	hsa-miR-766-3p	51548	SIRT6	NM_001321064	sirtuin 6
+103	89	hsa-miR-493-5p	6667	SP1	NM_003109	Sp1 transcription factor
+104	88	hsa-miR-124-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+105	88	hsa-miR-3614-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+106	88	hsa-miR-506-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+107	88	hsa-miR-889-3p	8862	APLN	NM_017413	apelin
+108	88	hsa-miR-4423-3p	6667	SP1	NM_003109	Sp1 transcription factor
+109	87	hsa-miR-23a-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+110	87	hsa-miR-660-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+111	87	hsa-miR-342-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+112	87	hsa-miR-33b-5p	51548	SIRT6	NM_001321064	sirtuin 6
+113	87	hsa-miR-33a-5p	51548	SIRT6	NM_001321064	sirtuin 6
+114	87	hsa-miR-23b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+115	87	hsa-miR-101-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+116	87	hsa-miR-7-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+117	87	hsa-miR-605-3p	6667	SP1	NM_003109	Sp1 transcription factor
+118	87	hsa-miR-759	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+119	87	hsa-miR-9-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+120	86	hsa-miR-374a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+121	86	hsa-miR-30a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+122	86	hsa-miR-30e-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+123	86	hsa-miR-513a-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+124	86	hsa-miR-493-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+125	86	hsa-miR-561-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+126	85	hsa-miR-3158-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+127	85	hsa-miR-17-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+128	85	hsa-miR-660-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+129	85	hsa-miR-503-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+130	85	hsa-miR-338-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+131	85	hsa-miR-5196-3p	6667	SP1	NM_003109	Sp1 transcription factor
+132	85	hsa-miR-769-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+133	84	hsa-miR-155-5p	6667	SP1	NM_003109	Sp1 transcription factor
+134	84	hsa-miR-495-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+135	84	hsa-miR-145-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+136	84	hsa-miR-338-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+137	83	hsa-miR-576-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+138	83	hsa-miR-3129-5p	6667	SP1	NM_003109	Sp1 transcription factor
+139	83	hsa-miR-148a-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+140	83	hsa-miR-152-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+141	83	hsa-miR-1827	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+142	83	hsa-miR-199a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+143	83	hsa-miR-605-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+144	83	hsa-miR-148b-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+145	83	hsa-miR-767-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+146	83	hsa-miR-199b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+147	82	hsa-miR-3622a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+148	82	hsa-miR-410-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+149	82	hsa-miR-374a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+150	82	hsa-miR-124-3p	8862	APLN	NM_017413	apelin
+151	82	hsa-miR-212-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+152	82	hsa-miR-9-3p	4192	MDK	NM_001012333	midkine
+153	82	hsa-miR-506-3p	8862	APLN	NM_017413	apelin
+154	82	hsa-miR-766-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+155	82	hsa-miR-374b-5p	6667	SP1	NM_003109	Sp1 transcription factor
+156	81	hsa-miR-410-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+157	81	hsa-miR-1275	8862	APLN	NM_017413	apelin
+158	81	hsa-miR-1185-1-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+159	81	hsa-miR-576-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+160	81	hsa-miR-1185-2-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+161	81	hsa-miR-548l	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+162	80	hsa-miR-133a-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+163	80	hsa-miR-133a-3p	6667	SP1	NM_003109	Sp1 transcription factor
+164	80	hsa-miR-519b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+165	80	hsa-miR-519a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+166	80	hsa-miR-491-5p	4192	MDK	NM_001012333	midkine
+167	80	hsa-miR-106b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+168	80	hsa-miR-450a-1-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+169	80	hsa-miR-144-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+170	80	hsa-miR-133b	6667	SP1	NM_003109	Sp1 transcription factor
+171	80	hsa-miR-133b	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+172	80	hsa-miR-548t-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+173	80	hsa-miR-107	2247	FGF2	NM_002006	fibroblast growth factor 2
+174	80	hsa-miR-424-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+175	80	hsa-miR-20b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+176	80	hsa-miR-106a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+177	80	hsa-miR-3162-5p	6667	SP1	NM_003109	Sp1 transcription factor
+178	80	hsa-miR-103a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+179	80	hsa-miR-93-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+180	80	hsa-miR-221-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+181	80	hsa-miR-17-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+182	80	hsa-miR-6503-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+183	80	hsa-miR-20a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+184	80	hsa-miR-656-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+185	80	hsa-miR-324-5p	6667	SP1	NM_003109	Sp1 transcription factor
+186	80	hsa-miR-519d-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+187	80	hsa-miR-889-3p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+188	79	hsa-miR-1908-5p	51548	SIRT6	NM_001321064	sirtuin 6
+189	79	hsa-miR-663a	51548	SIRT6	NM_001321064	sirtuin 6
+190	79	hsa-miR-126-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+191	79	hsa-miR-365b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+192	79	hsa-miR-365a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+193	79	hsa-miR-4662a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+194	79	hsa-miR-6511a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+195	79	hsa-miR-320e	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+196	79	hsa-miR-561-5p	6667	SP1	NM_003109	Sp1 transcription factor
+197	79	hsa-miR-450b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+198	78	hsa-miR-218-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+199	78	hsa-miR-1275	4192	MDK	NM_001012333	midkine
+200	78	hsa-miR-589-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+201	78	hsa-miR-221-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+202	78	hsa-miR-19a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+203	78	hsa-miR-4667-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+204	78	hsa-miR-1290	3481	IGF2	NM_001007139	insulin like growth factor 2
+205	78	hsa-miR-874-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+206	78	hsa-miR-1185-1-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+207	78	hsa-miR-5001-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+208	78	hsa-miR-222-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+209	78	hsa-miR-19b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+210	78	hsa-miR-762	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+211	78	hsa-miR-1185-2-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+212	77	hsa-miR-885-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+213	77	hsa-miR-335-5p	6667	SP1	NM_003109	Sp1 transcription factor
+214	77	hsa-miR-93-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+215	77	hsa-miR-511-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+216	77	hsa-miR-488-3p	3146	HMGB1	NM_001313892	high mobility group box 1
+217	77	hsa-miR-326	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+218	76	hsa-miR-3120-3p	2260	FGFR1	NM_001174065	fibroblast growth factor receptor 1
+219	76	hsa-miR-410-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+220	76	hsa-miR-664b-3p	8862	APLN	NM_017413	apelin
+221	76	hsa-miR-433-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+222	76	hsa-miR-654-5p	51548	SIRT6	NM_001321063	sirtuin 6
+223	76	hsa-miR-629-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+224	76	hsa-miR-1298-5p	6667	SP1	NM_003109	Sp1 transcription factor
+225	76	hsa-miR-665	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+226	75	hsa-miR-495-3p	6667	SP1	NM_003109	Sp1 transcription factor
+227	74	hsa-miR-3120-3p	3146	HMGB1	NM_002128	high mobility group box 1
+228	74	hsa-miR-32-5p	51548	SIRT6	NM_001321064	sirtuin 6
+229	74	hsa-miR-216a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+230	74	hsa-miR-155-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+231	74	hsa-miR-624-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+232	74	hsa-miR-622	3676	ITGA4	NM_000885	integrin subunit alpha 4
+233	74	hsa-miR-92b-3p	51548	SIRT6	NM_001321064	sirtuin 6
+234	74	hsa-miR-876-5p	6667	SP1	NM_003109	Sp1 transcription factor
+235	74	hsa-miR-876-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+236	74	hsa-miR-223-3p	4192	MDK	NM_001012333	midkine
+237	74	hsa-miR-92a-3p	51548	SIRT6	NM_001321064	sirtuin 6
+238	73	hsa-miR-22-3p	6667	SP1	NM_003109	Sp1 transcription factor
+239	73	hsa-miR-124-3p	4192	MDK	NM_001012333	midkine
+240	73	hsa-miR-1224-5p	51548	SIRT6	NM_001321062	sirtuin 6
+241	73	hsa-miR-1910-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+242	73	hsa-miR-433-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+243	73	hsa-miR-653-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+244	73	hsa-miR-506-3p	4192	MDK	NM_001012333	midkine
+245	73	hsa-miR-145-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+246	73	hsa-miR-504-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+247	73	hsa-miR-10b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+248	72	hsa-miR-154-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+249	72	hsa-miR-509-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+250	72	hsa-miR-509-3-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+251	72	hsa-miR-512-3p	6667	SP1	NM_003109	Sp1 transcription factor
+252	72	hsa-miR-151a-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+253	72	hsa-miR-548an	8862	APLN	NM_017413	apelin
+254	72	hsa-miR-548b-3p	6667	SP1	NM_003109	Sp1 transcription factor
+255	72	hsa-miR-382-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+256	72	hsa-miR-1323	6667	SP1	NM_003109	Sp1 transcription factor
+257	72	hsa-miR-3157-5p	6667	SP1	NM_003109	Sp1 transcription factor
+258	72	hsa-miR-505-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+259	71	hsa-miR-186-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+260	71	hsa-miR-512-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+261	71	hsa-miR-337-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+262	71	hsa-miR-141-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+263	71	hsa-miR-200a-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+264	71	hsa-miR-15b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+265	71	hsa-miR-759	3146	HMGB1	NM_001313892	high mobility group box 1
+266	71	hsa-miR-122-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+267	71	hsa-miR-625-5p	4192	MDK	NM_001012333	midkine
+268	71	hsa-miR-504-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+269	70	hsa-miR-186-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+270	70	hsa-miR-548j-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+271	70	hsa-miR-548c-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+272	70	hsa-miR-548b-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+273	70	hsa-miR-3065-5p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+274	70	hsa-miR-548d-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+275	70	hsa-miR-4667-5p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+276	70	hsa-miR-548h-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+277	70	hsa-miR-129-5p	3146	HMGB1	NM_002128	high mobility group box 1
+278	70	hsa-miR-411-3p	3146	HMGB1	NM_002128	high mobility group box 1
+279	70	hsa-miR-135b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+280	70	hsa-miR-9-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+281	70	hsa-miR-499a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+282	70	hsa-miR-135a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+283	70	hsa-miR-379-3p	3146	HMGB1	NM_002128	high mobility group box 1
+284	70	hsa-miR-548o-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+285	70	hsa-miR-568	2247	FGF2	NM_002006	fibroblast growth factor 2
+286	70	hsa-miR-3152-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+287	70	hsa-miR-488-3p	6667	SP1	NM_003109	Sp1 transcription factor
+288	70	hsa-miR-3200-3p	6667	SP1	NM_003109	Sp1 transcription factor
+289	70	hsa-miR-548am-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+290	69	hsa-miR-374b-3p	2260	FGFR1	NM_001174066	fibroblast growth factor receptor 1
+291	69	hsa-miR-186-5p	3146	HMGB1	NM_001313892	high mobility group box 1
+292	69	hsa-miR-367-3p	51548	SIRT6	NM_001321064	sirtuin 6
+293	69	hsa-miR-382-3p	3146	HMGB1	NM_002128	high mobility group box 1
+294	69	hsa-miR-3121-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+295	69	hsa-miR-452-5p	8862	APLN	NM_017413	apelin
+296	69	hsa-miR-629-3p	8862	APLN	NM_017413	apelin
+297	69	hsa-miR-3200-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+298	69	hsa-miR-17-3p	6667	SP1	NM_003109	Sp1 transcription factor
+299	69	hsa-miR-508-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+300	69	hsa-miR-363-3p	51548	SIRT6	NM_001321064	sirtuin 6
+301	69	hsa-miR-93-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+302	69	hsa-miR-1827	6667	SP1	NM_003109	Sp1 transcription factor
+303	69	hsa-miR-377-3p	6667	SP1	NM_003109	Sp1 transcription factor
+304	69	hsa-miR-3192-5p	6667	SP1	NM_003109	Sp1 transcription factor
+305	69	hsa-miR-24-3p	6667	SP1	NM_003109	Sp1 transcription factor
+306	69	hsa-miR-605-3p	4192	MDK	NM_001012333	midkine
+307	69	hsa-miR-25-3p	51548	SIRT6	NM_001321064	sirtuin 6
+308	68	hsa-miR-545-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+309	68	hsa-miR-423-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+310	68	hsa-miR-196b-5p	3146	HMGB1	NM_002128	high mobility group box 1
+311	68	hsa-miR-32-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+312	68	hsa-miR-6511a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+313	68	hsa-miR-196a-5p	3146	HMGB1	NM_002128	high mobility group box 1
+314	67	hsa-miR-486-3p	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+315	67	hsa-miR-4713-5p	6667	SP1	NM_003109	Sp1 transcription factor
+316	67	hsa-miR-664b-3p	3146	HMGB1	NM_002128	high mobility group box 1
+317	67	hsa-miR-1910-3p	6667	SP1	NM_003109	Sp1 transcription factor
+318	67	hsa-miR-3173-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+319	67	hsa-miR-1827	3481	IGF2	NM_000612	insulin like growth factor 2
+320	67	hsa-miR-627-3p	3146	HMGB1	NM_002128	high mobility group box 1
+321	67	hsa-miR-548o-3p	6667	SP1	NM_003109	Sp1 transcription factor
+322	67	hsa-miR-548an	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+323	67	hsa-miR-637	2260	FGFR1	NM_023110	fibroblast growth factor receptor 1
+324	66	hsa-miR-186-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+325	66	hsa-miR-3144-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+326	66	hsa-miR-642a-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+327	66	hsa-miR-708-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+328	66	hsa-miR-140-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+329	66	hsa-miR-3074-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+330	66	hsa-miR-550a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+331	66	hsa-miR-4662a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+332	66	hsa-miR-223-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+333	66	hsa-miR-1271-3p	6667	SP1	NM_003109	Sp1 transcription factor
+334	65	hsa-miR-548e-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+335	65	hsa-miR-320d	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+336	65	hsa-miR-33b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+337	65	hsa-miR-548a-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+338	65	hsa-miR-107	8862	APLN	NM_017413	apelin
+339	65	hsa-miR-522-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+340	65	hsa-miR-320c	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+341	65	hsa-miR-33a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+342	65	hsa-miR-103a-3p	8862	APLN	NM_017413	apelin
+343	65	hsa-miR-625-5p	8862	APLN	NM_017413	apelin
+344	65	hsa-miR-548f-3p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+345	65	hsa-miR-320b	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+346	65	hsa-miR-519c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+347	64	hsa-miR-30a-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+348	64	hsa-miR-1260a	6667	SP1	NM_003109	Sp1 transcription factor
+349	64	hsa-miR-548j-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+350	64	hsa-miR-548c-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+351	64	hsa-miR-30b-3p	8862	APLN	NM_017413	apelin
+352	64	hsa-miR-548b-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+353	64	hsa-miR-200c-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+354	64	hsa-miR-429	5335	PLCG1	NM_002660	phospholipase C gamma 1
+355	64	hsa-miR-548d-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+356	64	hsa-miR-548h-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+357	64	hsa-miR-30c-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+358	64	hsa-miR-653-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+359	64	hsa-miR-1260b	6667	SP1	NM_003109	Sp1 transcription factor
+360	64	hsa-miR-135b-5p	6667	SP1	NM_003109	Sp1 transcription factor
+361	64	hsa-miR-181a-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+362	64	hsa-miR-30b-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+363	64	hsa-miR-135a-5p	6667	SP1	NM_003109	Sp1 transcription factor
+364	64	hsa-miR-548o-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+365	64	hsa-miR-181b-5p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+366	64	hsa-miR-1304-5p	8862	APLN	NM_017413	apelin
+367	64	hsa-miR-200b-3p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+368	64	hsa-miR-30d-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+369	64	hsa-miR-582-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+370	64	hsa-miR-548am-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+371	64	hsa-miR-3157-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+372	64	hsa-miR-30e-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+373	64	hsa-miR-3154	8862	APLN	NM_017413	apelin
+374	64	hsa-miR-3154	2247	FGF2	NM_002006	fibroblast growth factor 2
+375	64	hsa-miR-760	6667	SP1	NM_003109	Sp1 transcription factor
+376	63	hsa-miR-519b-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+377	63	hsa-miR-449a	5335	PLCG1	NM_002660	phospholipase C gamma 1
+378	63	hsa-miR-519a-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+379	63	hsa-miR-514a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+380	63	hsa-miR-34a-5p	5335	PLCG1	NM_002660	phospholipase C gamma 1
+381	63	hsa-miR-214-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+382	63	hsa-miR-513a-3p	3146	HMGB1	NM_002128	high mobility group box 1
+383	63	hsa-miR-573	6667	SP1	NM_003109	Sp1 transcription factor
+384	63	hsa-miR-802	51548	SIRT6	NM_001321062	sirtuin 6
+385	63	hsa-miR-490-5p	2260	FGFR1	NM_001174066	fibroblast growth factor receptor 1
+386	63	hsa-miR-513c-3p	3146	HMGB1	NM_002128	high mobility group box 1
+387	62	hsa-miR-183-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+388	62	hsa-miR-30c-2-3p	6667	SP1	NM_003109	Sp1 transcription factor
+389	62	hsa-miR-544a	3481	IGF2	NM_000612	insulin like growth factor 2
+390	62	hsa-miR-744-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+391	62	hsa-miR-3194-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+392	62	hsa-miR-548t-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+393	62	hsa-miR-337-3p	6667	SP1	NM_003109	Sp1 transcription factor
+394	62	hsa-miR-496	2247	FGF2	NM_002006	fibroblast growth factor 2
+395	62	hsa-miR-627-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+396	62	hsa-miR-3138	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+397	62	hsa-miR-3936	6667	SP1	NM_003109	Sp1 transcription factor
+398	62	hsa-miR-605-3p	2260	FGFR1	NM_001174065	fibroblast growth factor receptor 1
+399	62	hsa-miR-654-3p	6667	SP1	NM_003109	Sp1 transcription factor
+400	62	hsa-miR-625-5p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+401	62	hsa-miR-383-5p	6667	SP1	NM_003109	Sp1 transcription factor
+402	62	hsa-miR-30c-1-3p	6667	SP1	NM_003109	Sp1 transcription factor
+403	61	hsa-miR-380-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+404	61	hsa-miR-452-5p	6868	ADAM17	NM_003183	ADAM metallopeptidase domain 17
+405	61	hsa-miR-105-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+406	61	hsa-miR-708-3p	3676	ITGA4	NM_000885	integrin subunit alpha 4
+407	61	hsa-miR-548t-5p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+408	61	hsa-miR-3150b-3p	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+409	61	hsa-miR-496	3146	HMGB1	NM_002128	high mobility group box 1
+410	61	hsa-miR-3909	5335	PLCG1	NM_002660	phospholipase C gamma 1
+411	61	hsa-miR-484	8862	APLN	NM_017413	apelin
+412	61	hsa-miR-223-3p	6667	SP1	NM_003109	Sp1 transcription factor
+413	61	hsa-miR-760	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+414	60	hsa-miR-134-5p	2693	GHSR	NM_198407	growth hormone secretagogue receptor
+415	60	hsa-miR-539-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+416	60	hsa-miR-615-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+417	60	hsa-miR-744-5p	51548	SIRT6	NM_001321064	sirtuin 6
+418	60	hsa-miR-660-3p	5170	PDPK1	NM_001261816	3-phosphoinositide dependent protein kinase 1
+419	60	hsa-miR-1290	8862	APLN	NM_017413	apelin
+420	60	hsa-miR-3150b-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+421	60	hsa-miR-485-3p	10000	AKT3	NM_005465	AKT serine/threonine kinase 3
+422	60	hsa-miR-761	5170	PDPK1	NM_031268	3-phosphoinositide dependent protein kinase 1
+423	60	hsa-miR-203a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2

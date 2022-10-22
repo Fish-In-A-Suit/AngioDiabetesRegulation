@@ -1,0 +1,416 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-15b-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+2	100	hsa-miR-497-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+3	100	hsa-miR-16-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+4	100	hsa-miR-15a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+5	100	hsa-miR-195-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+6	100	hsa-miR-424-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+7	99	hsa-miR-448	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+8	99	hsa-miR-27a-3p	79647	AKIRIN1	NM_024595	akirin 1
+9	99	hsa-miR-27b-3p	79647	AKIRIN1	NM_024595	akirin 1
+10	98	hsa-miR-153-3p	284	ANGPT1	NM_001146	angiopoietin 1
+11	98	hsa-miR-338-5p	2660	MSTN	NM_005259	myostatin
+12	97	hsa-miR-576-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+13	97	hsa-miR-183-3p	79647	AKIRIN1	NM_024595	akirin 1
+14	97	hsa-miR-299-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+15	96	hsa-miR-516b-5p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+16	96	hsa-miR-128-3p	79647	AKIRIN1	NM_024595	akirin 1
+17	95	hsa-miR-30a-5p	6495	SIX1	NM_005982	SIX homeobox 1
+18	95	hsa-miR-181c-5p	79647	AKIRIN1	NM_001136275	akirin 1
+19	95	hsa-miR-211-5p	284	ANGPT1	NM_001146	angiopoietin 1
+20	95	hsa-miR-181d-5p	79647	AKIRIN1	NM_001136275	akirin 1
+21	95	hsa-miR-30c-5p	6495	SIX1	NM_005982	SIX homeobox 1
+22	95	hsa-miR-545-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+23	95	hsa-miR-181a-5p	79647	AKIRIN1	NM_001136275	akirin 1
+24	95	hsa-miR-30b-5p	6495	SIX1	NM_005982	SIX homeobox 1
+25	95	hsa-miR-181b-5p	79647	AKIRIN1	NM_001136275	akirin 1
+26	95	hsa-miR-204-5p	284	ANGPT1	NM_001146	angiopoietin 1
+27	95	hsa-miR-30d-5p	6495	SIX1	NM_005982	SIX homeobox 1
+28	95	hsa-miR-582-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+29	95	hsa-miR-30e-5p	6495	SIX1	NM_005982	SIX homeobox 1
+30	94	hsa-miR-802	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+31	93	hsa-miR-337-3p	3717	JAK2	NM_001322194	Janus kinase 2
+32	93	hsa-miR-138-5p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+33	93	hsa-miR-3065-3p	147912	SIX5	NM_175875	SIX homeobox 5
+34	93	hsa-miR-185-5p	6495	SIX1	NM_005982	SIX homeobox 1
+35	92	hsa-miR-23a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+36	92	hsa-miR-380-3p	3717	JAK2	NM_001322194	Janus kinase 2
+37	92	hsa-miR-190a-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+38	92	hsa-miR-508-3p	2660	MSTN	NM_005259	myostatin
+39	92	hsa-miR-5571-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+40	92	hsa-miR-23b-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+41	92	hsa-miR-3198	79647	AKIRIN1	NM_001136275	akirin 1
+42	92	hsa-miR-568	3717	JAK2	NM_001322194	Janus kinase 2
+43	92	hsa-miR-219a-1-3p	3717	JAK2	NM_001322194	Janus kinase 2
+44	91	hsa-miR-30a-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+45	91	hsa-miR-509-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+46	91	hsa-miR-216a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+47	91	hsa-miR-509-3-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+48	91	hsa-miR-873-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+49	91	hsa-miR-205-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+50	91	hsa-miR-211-5p	3717	JAK2	NM_001322194	Janus kinase 2
+51	91	hsa-miR-30c-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+52	91	hsa-miR-545-5p	79647	AKIRIN1	NM_024595	akirin 1
+53	91	hsa-miR-381-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+54	91	hsa-miR-30b-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+55	91	hsa-miR-204-5p	3717	JAK2	NM_001322194	Janus kinase 2
+56	91	hsa-miR-30d-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+57	91	hsa-miR-30e-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+58	91	hsa-miR-3190-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+59	90	hsa-miR-541-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+60	90	hsa-miR-32-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+61	90	hsa-miR-361-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+62	90	hsa-miR-92b-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+63	90	hsa-miR-33b-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+64	90	hsa-miR-503-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+65	90	hsa-miR-802	6495	SIX1	NM_005982	SIX homeobox 1
+66	90	hsa-miR-545-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+67	90	hsa-miR-33a-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+68	90	hsa-miR-27a-3p	6495	SIX1	NM_005982	SIX homeobox 1
+69	90	hsa-miR-9-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+70	90	hsa-miR-92a-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+71	90	hsa-miR-27b-3p	6495	SIX1	NM_005982	SIX homeobox 1
+72	89	hsa-miR-515-5p	2660	MSTN	NM_005259	myostatin
+73	89	hsa-miR-153-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+74	89	hsa-miR-338-5p	6495	SIX1	NM_005982	SIX homeobox 1
+75	89	hsa-miR-543	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+76	89	hsa-miR-548an	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+77	89	hsa-miR-4423-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+78	88	hsa-miR-186-5p	79647	AKIRIN1	NM_024595	akirin 1
+79	88	hsa-miR-664b-3p	284	ANGPT1	NM_001146	angiopoietin 1
+80	88	hsa-miR-320d	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+81	88	hsa-miR-150-3p	6495	SIX1	NM_005982	SIX homeobox 1
+82	88	hsa-miR-320c	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+83	88	hsa-miR-320b	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+84	88	hsa-miR-889-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+85	87	hsa-miR-367-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+86	87	hsa-miR-363-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+87	87	hsa-miR-202-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+88	87	hsa-miR-25-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+89	87	hsa-miR-9-5p	147912	SIX5	NM_175875	SIX homeobox 5
+90	86	hsa-miR-409-3p	79647	AKIRIN1	NM_024595	akirin 1
+91	86	hsa-miR-197-3p	3717	JAK2	NM_001322194	Janus kinase 2
+92	86	hsa-miR-223-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+93	86	hsa-miR-383-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+94	85	hsa-miR-520h	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+95	85	hsa-miR-520g-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+96	85	hsa-miR-190a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+97	85	hsa-miR-17-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+98	85	hsa-miR-181c-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+99	85	hsa-miR-181d-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+100	85	hsa-miR-181a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+101	85	hsa-miR-338-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+102	85	hsa-miR-181b-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+103	85	hsa-miR-497-3p	4656	MYOG	NM_002479	myogenin
+104	85	hsa-miR-4423-3p	6495	SIX1	NM_005982	SIX homeobox 1
+105	84	hsa-miR-495-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+106	84	hsa-miR-200c-3p	6495	SIX1	NM_005982	SIX homeobox 1
+107	84	hsa-miR-3194-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+108	84	hsa-miR-429	6495	SIX1	NM_005982	SIX homeobox 1
+109	84	hsa-miR-200b-3p	6495	SIX1	NM_005982	SIX homeobox 1
+110	84	hsa-miR-568	79647	AKIRIN1	NM_024595	akirin 1
+111	84	hsa-miR-338-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+112	83	hsa-miR-186-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+113	83	hsa-miR-651-5p	147912	SIX5	NM_175875	SIX homeobox 5
+114	83	hsa-miR-4667-5p	79647	AKIRIN1	NM_024595	akirin 1
+115	83	hsa-miR-455-3p	2047	EPHB1	NM_004441	EPH receptor B1
+116	83	hsa-miR-219b-3p	2047	EPHB1	NM_004441	EPH receptor B1
+117	83	hsa-miR-489-3p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+118	83	hsa-miR-1179	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+119	83	hsa-miR-1323	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+120	83	hsa-miR-3130-5p	79647	AKIRIN1	NM_001136275	akirin 1
+121	83	hsa-miR-561-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+122	82	hsa-miR-450a-2-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+123	82	hsa-miR-410-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+124	82	hsa-miR-4524a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+125	82	hsa-miR-135b-5p	3717	JAK2	NM_001322194	Janus kinase 2
+126	82	hsa-miR-511-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+127	82	hsa-miR-135a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+128	82	hsa-miR-3065-3p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+129	82	hsa-miR-580-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+130	82	hsa-miR-450b-5p	2047	EPHB1	NM_004441	EPH receptor B1
+131	81	hsa-miR-486-3p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+132	81	hsa-miR-144-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+133	81	hsa-miR-216a-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+134	81	hsa-miR-1297	79647	AKIRIN1	NM_024595	akirin 1
+135	81	hsa-miR-1-3p	2047	EPHB1	NM_004441	EPH receptor B1
+136	81	hsa-miR-3065-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+137	81	hsa-miR-411-3p	94104	PAXBP1	NM_013329	PAX3 and PAX7 binding protein 1
+138	81	hsa-miR-5571-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+139	81	hsa-miR-545-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+140	81	hsa-miR-576-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+141	81	hsa-miR-379-3p	94104	PAXBP1	NM_013329	PAX3 and PAX7 binding protein 1
+142	81	hsa-miR-548o-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+143	81	hsa-miR-34a-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+144	81	hsa-miR-206	2047	EPHB1	NM_004441	EPH receptor B1
+145	81	hsa-miR-450b-5p	2660	MSTN	NM_005259	myostatin
+146	80	hsa-miR-450a-1-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+147	80	hsa-miR-144-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+148	80	hsa-miR-214-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+149	80	hsa-miR-107	2247	FGF2	NM_002006	fibroblast growth factor 2
+150	80	hsa-miR-103a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+151	80	hsa-miR-369-3p	284	ANGPT1	NM_001146	angiopoietin 1
+152	80	hsa-miR-761	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+153	79	hsa-miR-664b-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+154	79	hsa-miR-664b-3p	4656	MYOG	NM_002479	myogenin
+155	79	hsa-miR-708-3p	6495	SIX1	NM_005982	SIX homeobox 1
+156	79	hsa-miR-29c-3p	147912	SIX5	NM_175875	SIX homeobox 5
+157	79	hsa-miR-182-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+158	79	hsa-miR-29a-3p	147912	SIX5	NM_175875	SIX homeobox 5
+159	79	hsa-miR-432-5p	79647	AKIRIN1	NM_001136275	akirin 1
+160	79	hsa-miR-661	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+161	79	hsa-miR-126-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+162	79	hsa-miR-29b-3p	147912	SIX5	NM_175875	SIX homeobox 5
+163	78	hsa-miR-3120-3p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+164	78	hsa-miR-449a	2660	MSTN	NM_005259	myostatin
+165	78	hsa-miR-155-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+166	78	hsa-miR-449c-5p	2660	MSTN	NM_005259	myostatin
+167	78	hsa-miR-34a-5p	2660	MSTN	NM_005259	myostatin
+168	78	hsa-miR-34b-5p	2660	MSTN	NM_005259	myostatin
+169	78	hsa-miR-642a-3p	284	ANGPT1	NM_001146	angiopoietin 1
+170	78	hsa-miR-34c-5p	2660	MSTN	NM_005259	myostatin
+171	78	hsa-miR-151a-3p	6495	SIX1	NM_005982	SIX homeobox 1
+172	78	hsa-miR-616-3p	2047	EPHB1	NM_004441	EPH receptor B1
+173	78	hsa-miR-135b-5p	284	ANGPT1	NM_001146	angiopoietin 1
+174	78	hsa-miR-330-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+175	78	hsa-miR-338-5p	284	ANGPT1	NM_001146	angiopoietin 1
+176	78	hsa-miR-135a-5p	284	ANGPT1	NM_001146	angiopoietin 1
+177	78	hsa-miR-2682-5p	2660	MSTN	NM_005259	myostatin
+178	78	hsa-miR-449b-5p	2660	MSTN	NM_005259	myostatin
+179	78	hsa-miR-195-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+180	77	hsa-miR-409-3p	284	ANGPT1	NM_001146	angiopoietin 1
+181	77	hsa-miR-3200-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+182	77	hsa-miR-211-5p	79647	AKIRIN1	NM_024595	akirin 1
+183	77	hsa-miR-211-5p	6495	SIX1	NM_005982	SIX homeobox 1
+184	77	hsa-miR-619-5p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+185	77	hsa-miR-224-5p	84466	MEGF10	NM_001308121	multiple EGF like domains 10
+186	77	hsa-miR-204-5p	79647	AKIRIN1	NM_024595	akirin 1
+187	77	hsa-miR-204-5p	6495	SIX1	NM_005982	SIX homeobox 1
+188	77	hsa-miR-605-3p	79647	AKIRIN1	NM_024595	akirin 1
+189	77	hsa-miR-371a-5p	284	ANGPT1	NM_001146	angiopoietin 1
+190	76	hsa-miR-548t-3p	284	ANGPT1	NM_001146	angiopoietin 1
+191	76	hsa-miR-124-3p	284	ANGPT1	NM_001146	angiopoietin 1
+192	76	hsa-miR-15b-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+193	76	hsa-miR-211-5p	2047	EPHB1	NM_004441	EPH receptor B1
+194	76	hsa-miR-1290	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+195	76	hsa-miR-497-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+196	76	hsa-miR-3173-3p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+197	76	hsa-miR-16-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+198	76	hsa-miR-136-3p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+199	76	hsa-miR-506-3p	284	ANGPT1	NM_001146	angiopoietin 1
+200	76	hsa-miR-32-3p	6495	SIX1	NM_005982	SIX homeobox 1
+201	76	hsa-miR-204-5p	2047	EPHB1	NM_004441	EPH receptor B1
+202	76	hsa-miR-377-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+203	76	hsa-miR-323b-3p	2660	MSTN	NM_005259	myostatin
+204	76	hsa-miR-18a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+205	76	hsa-miR-136-5p	84466	MEGF10	NM_001308121	multiple EGF like domains 10
+206	76	hsa-miR-15a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+207	76	hsa-miR-424-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+208	75	hsa-miR-3120-3p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+209	75	hsa-miR-374a-5p	284	ANGPT1	NM_001146	angiopoietin 1
+210	75	hsa-miR-150-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+211	75	hsa-miR-105-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+212	75	hsa-miR-129-5p	284	ANGPT1	NM_001146	angiopoietin 1
+213	75	hsa-miR-653-3p	284	ANGPT1	NM_001146	angiopoietin 1
+214	75	hsa-miR-448	6495	SIX1	NM_005982	SIX homeobox 1
+215	75	hsa-miR-3074-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+216	75	hsa-miR-650	147912	SIX5	NM_175875	SIX homeobox 5
+217	75	hsa-miR-550a-5p	79647	AKIRIN1	NM_001136275	akirin 1
+218	75	hsa-miR-1271-3p	79647	AKIRIN1	NM_001136275	akirin 1
+219	75	hsa-miR-425-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+220	75	hsa-miR-16-2-3p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+221	75	hsa-miR-505-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+222	74	hsa-miR-532-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+223	74	hsa-miR-664b-5p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+224	74	hsa-miR-216a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+225	74	hsa-miR-664b-3p	2660	MSTN	NM_005259	myostatin
+226	74	hsa-miR-3065-5p	284	ANGPT1	NM_001146	angiopoietin 1
+227	74	hsa-miR-101-3p	3717	JAK2	NM_001322194	Janus kinase 2
+228	74	hsa-miR-3140-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+229	74	hsa-miR-374b-5p	284	ANGPT1	NM_001146	angiopoietin 1
+230	73	hsa-miR-410-3p	6495	SIX1	NM_005982	SIX homeobox 1
+231	73	hsa-miR-380-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+232	73	hsa-miR-642a-5p	2047	EPHB1	NM_004441	EPH receptor B1
+233	73	hsa-miR-26a-5p	79647	AKIRIN1	NM_024595	akirin 1
+234	73	hsa-miR-142-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+235	73	hsa-miR-200c-3p	2660	MSTN	NM_005259	myostatin
+236	73	hsa-miR-26b-5p	79647	AKIRIN1	NM_024595	akirin 1
+237	73	hsa-miR-429	2660	MSTN	NM_005259	myostatin
+238	73	hsa-miR-409-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+239	73	hsa-miR-200b-3p	2660	MSTN	NM_005259	myostatin
+240	73	hsa-miR-877-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+241	73	hsa-miR-197-3p	284	ANGPT1	NM_001146	angiopoietin 1
+242	72	hsa-miR-492	79647	AKIRIN1	NM_024595	akirin 1
+243	72	hsa-miR-410-3p	2660	MSTN	NM_005259	myostatin
+244	72	hsa-miR-3913-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+245	72	hsa-miR-3121-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+246	72	hsa-miR-4677-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+247	72	hsa-miR-1290	2660	MSTN	NM_005259	myostatin
+248	72	hsa-miR-182-5p	2047	EPHB1	NM_004441	EPH receptor B1
+249	72	hsa-miR-135b-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+250	72	hsa-miR-381-3p	3717	JAK2	NM_001322194	Janus kinase 2
+251	72	hsa-miR-135a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+252	72	hsa-miR-187-3p	84466	MEGF10	NM_001308119	multiple EGF like domains 10
+253	71	hsa-miR-339-5p	79647	AKIRIN1	NM_001136275	akirin 1
+254	71	hsa-miR-186-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+255	71	hsa-miR-186-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+256	71	hsa-miR-514a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+257	71	hsa-miR-1275	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+258	71	hsa-miR-3121-3p	3717	JAK2	NM_001322194	Janus kinase 2
+259	71	hsa-miR-433-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+260	71	hsa-miR-200a-5p	2660	MSTN	NM_005259	myostatin
+261	71	hsa-let-7f-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+262	71	hsa-miR-98-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+263	71	hsa-miR-545-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+264	71	hsa-miR-874-5p	5467	PPARD	NM_001171820	peroxisome proliferator activated receptor delta
+265	71	hsa-let-7b-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+266	71	hsa-let-7g-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+267	71	hsa-miR-3614-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+268	71	hsa-let-7a-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+269	71	hsa-miR-188-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+270	71	hsa-miR-6511a-3p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+271	71	hsa-miR-656-3p	284	ANGPT1	NM_001146	angiopoietin 1
+272	71	hsa-let-7i-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+273	71	hsa-miR-3127-5p	4656	MYOG	NM_002479	myogenin
+274	71	hsa-let-7e-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+275	71	hsa-let-7c-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+276	70	hsa-miR-1915-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+277	70	hsa-miR-576-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+278	70	hsa-miR-633	147912	SIX5	NM_175875	SIX homeobox 5
+279	70	hsa-miR-448	2660	MSTN	NM_005259	myostatin
+280	70	hsa-miR-766-3p	2047	EPHB1	NM_004441	EPH receptor B1
+281	70	hsa-miR-126-5p	79647	AKIRIN1	NM_024595	akirin 1
+282	70	hsa-miR-499a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+283	70	hsa-miR-24-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+284	70	hsa-miR-324-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+285	70	hsa-miR-568	2247	FGF2	NM_002006	fibroblast growth factor 2
+286	70	hsa-miR-513a-5p	6495	SIX1	NM_005982	SIX homeobox 1
+287	69	hsa-miR-221-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+288	69	hsa-miR-3121-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+289	69	hsa-miR-3664-3p	79647	AKIRIN1	NM_024595	akirin 1
+290	69	hsa-miR-629-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+291	69	hsa-miR-222-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+292	69	hsa-miR-382-5p	79647	AKIRIN1	NM_024595	akirin 1
+293	69	hsa-miR-760	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+294	68	hsa-miR-548e-3p	2660	MSTN	NM_005259	myostatin
+295	68	hsa-miR-155-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+296	68	hsa-miR-449c-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+297	68	hsa-miR-495-3p	6495	SIX1	NM_005982	SIX homeobox 1
+298	68	hsa-miR-544a	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+299	68	hsa-miR-433-3p	3717	JAK2	NM_001322194	Janus kinase 2
+300	68	hsa-miR-34b-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+301	68	hsa-miR-3065-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+302	68	hsa-miR-181c-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+303	68	hsa-miR-181d-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+304	68	hsa-miR-299-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+305	68	hsa-miR-299-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+306	68	hsa-miR-548a-3p	2660	MSTN	NM_005259	myostatin
+307	68	hsa-miR-181a-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+308	68	hsa-miR-576-3p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+309	68	hsa-miR-181b-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+310	68	hsa-miR-3605-5p	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+311	68	hsa-miR-6511a-3p	79647	AKIRIN1	NM_024595	akirin 1
+312	68	hsa-miR-582-5p	3717	JAK2	NM_001322194	Janus kinase 2
+313	68	hsa-miR-548f-3p	2660	MSTN	NM_005259	myostatin
+314	68	hsa-miR-3140-3p	6495	SIX1	NM_005982	SIX homeobox 1
+315	67	hsa-miR-339-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+316	67	hsa-miR-374a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+317	67	hsa-miR-516b-5p	2047	EPHB1	NM_004441	EPH receptor B1
+318	67	hsa-miR-496	79647	AKIRIN1	NM_024595	akirin 1
+319	67	hsa-miR-3190-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+320	67	hsa-miR-374b-5p	3717	JAK2	NM_001322194	Janus kinase 2
+321	66	hsa-miR-548t-3p	4656	MYOG	NM_002479	myogenin
+322	66	hsa-miR-183-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+323	66	hsa-miR-4713-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+324	66	hsa-miR-652-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+325	66	hsa-miR-548e-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+326	66	hsa-miR-3121-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+327	66	hsa-miR-548a-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+328	66	hsa-miR-107	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+329	66	hsa-miR-3150b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+330	66	hsa-miR-627-3p	2660	MSTN	NM_005259	myostatin
+331	66	hsa-miR-103a-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+332	66	hsa-miR-423-5p	5467	PPARD	NM_001171820	peroxisome proliferator activated receptor delta
+333	66	hsa-miR-4662a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+334	66	hsa-miR-223-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+335	66	hsa-miR-548f-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+336	66	hsa-miR-3154	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+337	65	hsa-miR-186-5p	2660	MSTN	NM_005259	myostatin
+338	65	hsa-miR-1266-5p	2047	EPHB1	NM_004441	EPH receptor B1
+339	65	hsa-miR-339-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+340	65	hsa-miR-876-5p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+341	65	hsa-miR-140-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+342	65	hsa-miR-3192-5p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+343	65	hsa-miR-32-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+344	65	hsa-miR-3140-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+345	64	hsa-miR-515-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+346	64	hsa-miR-410-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+347	64	hsa-miR-374a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+348	64	hsa-miR-624-5p	147912	SIX5	NM_175875	SIX homeobox 5
+349	64	hsa-miR-361-3p	147912	SIX5	NM_175875	SIX homeobox 5
+350	64	hsa-let-7d-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+351	64	hsa-miR-1298-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+352	64	hsa-miR-543	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+353	64	hsa-miR-126-5p	2047	EPHB1	NM_004441	EPH receptor B1
+354	64	hsa-miR-500a-3p	2660	MSTN	NM_005259	myostatin
+355	64	hsa-miR-582-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+356	64	hsa-miR-3130-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+357	64	hsa-miR-185-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+358	64	hsa-miR-3154	2247	FGF2	NM_002006	fibroblast growth factor 2
+359	63	hsa-miR-450a-1-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+360	63	hsa-miR-450a-1-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+361	63	hsa-miR-514a-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+362	63	hsa-miR-664b-3p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+363	63	hsa-miR-642a-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+364	63	hsa-miR-409-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+365	63	hsa-miR-129-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+366	63	hsa-miR-514a-3p	2660	MSTN	NM_005259	myostatin
+367	63	hsa-miR-653-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+368	63	hsa-miR-1298-5p	8837	CFLAR	NM_001202518	CASP8 and FADD like apoptosis regulator
+369	63	hsa-miR-6515-5p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+370	63	hsa-miR-342-3p	79647	AKIRIN1	NM_024595	akirin 1
+371	63	hsa-miR-514b-3p	2660	MSTN	NM_005259	myostatin
+372	62	hsa-miR-183-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+373	62	hsa-miR-374a-5p	2660	MSTN	NM_005259	myostatin
+374	62	hsa-miR-382-3p	8837	CFLAR	NM_001127184	CASP8 and FADD like apoptosis regulator
+375	62	hsa-miR-200c-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+376	62	hsa-miR-429	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+377	62	hsa-miR-548t-5p	2247	FGF2	NM_002006	fibroblast growth factor 2
+378	62	hsa-miR-448	284	ANGPT1	NM_001146	angiopoietin 1
+379	62	hsa-miR-496	2247	FGF2	NM_002006	fibroblast growth factor 2
+380	62	hsa-miR-5001-5p	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+381	62	hsa-miR-627-3p	2247	FGF2	NM_002006	fibroblast growth factor 2
+382	62	hsa-miR-138-5p	84466	MEGF10	NM_001308121	multiple EGF like domains 10
+383	62	hsa-miR-508-5p	6495	SIX1	NM_005982	SIX homeobox 1
+384	62	hsa-miR-200b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+385	62	hsa-miR-324-3p	5467	PPARD	NM_177435	peroxisome proliferator activated receptor delta
+386	62	hsa-miR-762	5467	PPARD	NM_001171818	peroxisome proliferator activated receptor delta
+387	62	hsa-miR-889-3p	2660	MSTN	NM_005259	myostatin
+388	61	hsa-miR-545-3p	2047	EPHB1	NM_004441	EPH receptor B1
+389	61	hsa-miR-423-5p	2660	MSTN	NM_005259	myostatin
+390	61	hsa-miR-5571-3p	84466	MEGF10	NM_001256545	multiple EGF like domains 10
+391	61	hsa-miR-494-3p	3836	KPNA1	NM_002264	karyopherin subunit alpha 1
+392	61	hsa-miR-2682-5p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+393	61	hsa-miR-766-5p	284	ANGPT1	NM_001146	angiopoietin 1
+394	61	hsa-miR-505-5p	6495	SIX1	NM_005982	SIX homeobox 1
+395	60	hsa-miR-1291	8837	CFLAR	NM_001308043	CASP8 and FADD like apoptosis regulator
+396	60	hsa-miR-548j-5p	2660	MSTN	NM_005259	myostatin
+397	60	hsa-miR-548c-5p	2660	MSTN	NM_005259	myostatin
+398	60	hsa-miR-31-3p	284	ANGPT1	NM_001146	angiopoietin 1
+399	60	hsa-miR-1297	2660	MSTN	NM_005259	myostatin
+400	60	hsa-miR-26a-5p	2660	MSTN	NM_005259	myostatin
+401	60	hsa-miR-548b-5p	2660	MSTN	NM_005259	myostatin
+402	60	hsa-miR-26b-5p	2660	MSTN	NM_005259	myostatin
+403	60	hsa-miR-548d-5p	2660	MSTN	NM_005259	myostatin
+404	60	hsa-miR-548h-5p	2660	MSTN	NM_005259	myostatin
+405	60	hsa-miR-582-3p	284	ANGPT1	NM_001146	angiopoietin 1
+406	60	hsa-miR-129-2-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+407	60	hsa-miR-92a-1-5p	2047	EPHB1	NM_004441	EPH receptor B1
+408	60	hsa-miR-1304-3p	8837	CFLAR	NM_001202519	CASP8 and FADD like apoptosis regulator
+409	60	hsa-miR-548o-5p	2660	MSTN	NM_005259	myostatin
+410	60	hsa-miR-876-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+411	60	hsa-miR-129-1-3p	94104	PAXBP1	NM_016631	PAX3 and PAX7 binding protein 1
+412	60	hsa-miR-548am-5p	2660	MSTN	NM_005259	myostatin
+413	60	hsa-miR-323b-3p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+414	60	hsa-miR-374b-5p	8837	CFLAR	NM_001202517	CASP8 and FADD like apoptosis regulator
+415	60	hsa-miR-203a-3p	2247	FGF2	NM_002006	fibroblast growth factor 2

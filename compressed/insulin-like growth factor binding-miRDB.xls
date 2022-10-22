@@ -1,0 +1,650 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-19a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+2	100	hsa-miR-19b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+3	99	hsa-miR-32-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+4	99	hsa-miR-92b-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+5	99	hsa-miR-142-5p	3685	ITGAV	NM_002210	integrin subunit alpha V
+6	99	hsa-miR-1290	94031	HTRA3	NM_001297559	HtrA serine peptidase 3
+7	99	hsa-miR-338-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+8	99	hsa-miR-608	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+9	99	hsa-miR-101-3p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+10	99	hsa-miR-92a-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+11	98	hsa-miR-3129-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+12	98	hsa-miR-144-3p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+13	98	hsa-miR-367-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+14	98	hsa-miR-548e-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+15	98	hsa-miR-363-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+16	98	hsa-miR-548a-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+17	98	hsa-miR-141-3p	3655	ITGA6	NM_001316306	integrin subunit alpha 6
+18	98	hsa-miR-200a-3p	3655	ITGA6	NM_001316306	integrin subunit alpha 6
+19	98	hsa-miR-548an	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+20	98	hsa-miR-199a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+21	98	hsa-miR-25-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+22	98	hsa-miR-548f-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+23	98	hsa-miR-199b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+24	97	hsa-miR-374a-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+25	97	hsa-miR-182-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+26	97	hsa-miR-223-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+27	97	hsa-miR-143-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+28	96	hsa-miR-30a-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+29	96	hsa-miR-576-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+30	96	hsa-miR-548t-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+31	96	hsa-let-7f-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+32	96	hsa-miR-30c-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+33	96	hsa-miR-98-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+34	96	hsa-miR-381-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+35	96	hsa-let-7b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+36	96	hsa-let-7g-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+37	96	hsa-miR-30b-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+38	96	hsa-let-7a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+39	96	hsa-miR-30d-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+40	96	hsa-let-7i-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+41	96	hsa-miR-30e-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+42	96	hsa-miR-374b-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+43	96	hsa-let-7e-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+44	96	hsa-let-7c-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+45	95	hsa-miR-186-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+46	95	hsa-miR-374a-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+47	95	hsa-miR-19a-3p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+48	95	hsa-let-7d-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+49	95	hsa-miR-142-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+50	95	hsa-miR-19b-3p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+51	94	hsa-miR-32-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+52	94	hsa-miR-367-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+53	94	hsa-miR-148a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+54	94	hsa-miR-92b-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+55	94	hsa-miR-152-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+56	94	hsa-miR-15b-5p	3643	INSR	NM_000208	insulin receptor
+57	94	hsa-miR-548t-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+58	94	hsa-miR-363-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+59	94	hsa-miR-455-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+60	94	hsa-miR-330-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+61	94	hsa-miR-338-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+62	94	hsa-miR-148b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+63	94	hsa-miR-25-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+64	94	hsa-miR-92a-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+65	94	hsa-miR-374b-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+66	93	hsa-miR-548j-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+67	93	hsa-miR-548c-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+68	93	hsa-miR-1297	3655	ITGA6	NM_000210	integrin subunit alpha 6
+69	93	hsa-miR-212-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+70	93	hsa-miR-361-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+71	93	hsa-miR-548b-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+72	93	hsa-miR-548d-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+73	93	hsa-miR-548h-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+74	93	hsa-miR-497-5p	3643	INSR	NM_000208	insulin receptor
+75	93	hsa-miR-548o-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+76	93	hsa-miR-548am-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+77	93	hsa-miR-132-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+78	92	hsa-miR-3183	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+79	92	hsa-miR-380-3p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+80	92	hsa-miR-221-3p	3491	CCN1	NM_001554	cellular communication network factor 1
+81	92	hsa-miR-214-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+82	92	hsa-miR-19a-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+83	92	hsa-miR-3065-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+84	92	hsa-let-7f-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+85	92	hsa-miR-22-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+86	92	hsa-miR-98-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+87	92	hsa-let-7b-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+88	92	hsa-let-7g-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+89	92	hsa-miR-222-3p	3491	CCN1	NM_001554	cellular communication network factor 1
+90	92	hsa-let-7a-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+91	92	hsa-miR-197-3p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+92	92	hsa-miR-19b-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+93	92	hsa-let-7i-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+94	92	hsa-miR-761	4036	LRP2	NM_004525	LDL receptor related protein 2
+95	92	hsa-let-7e-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+96	92	hsa-let-7c-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+97	91	hsa-miR-372-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+98	91	hsa-miR-361-3p	8839	CCN5	NM_001323369	cellular communication network factor 5
+99	91	hsa-miR-105-5p	3655	ITGA6	NM_001316306	integrin subunit alpha 6
+100	91	hsa-miR-495-3p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+101	91	hsa-miR-520c-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+102	91	hsa-let-7d-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+103	91	hsa-miR-181c-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+104	91	hsa-miR-373-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+105	91	hsa-miR-181d-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+106	91	hsa-miR-302c-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+107	91	hsa-miR-181a-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+108	91	hsa-miR-16-5p	3643	INSR	NM_000208	insulin receptor
+109	91	hsa-miR-3150b-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+110	91	hsa-miR-5001-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+111	91	hsa-miR-302a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+112	91	hsa-miR-9-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+113	91	hsa-miR-1304-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+114	91	hsa-miR-101-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+115	91	hsa-miR-181b-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+116	91	hsa-miR-452-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+117	91	hsa-miR-302d-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+118	91	hsa-miR-302b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+119	91	hsa-let-7i-5p	3643	INSR	NM_000208	insulin receptor
+120	91	hsa-miR-762	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+121	91	hsa-miR-15a-5p	3643	INSR	NM_000208	insulin receptor
+122	91	hsa-miR-195-5p	3643	INSR	NM_000208	insulin receptor
+123	90	hsa-miR-509-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+124	90	hsa-miR-502-3p	4856	CCN3	NM_002514	cellular communication network factor 3
+125	90	hsa-miR-509-3-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+126	90	hsa-miR-501-3p	4856	CCN3	NM_002514	cellular communication network factor 3
+127	90	hsa-miR-485-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+128	90	hsa-miR-582-3p	203100	HTRA4	NM_153692	HtrA serine peptidase 4
+129	90	hsa-miR-3150b-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+130	90	hsa-miR-1301-3p	94031	HTRA3	NM_001297559	HtrA serine peptidase 3
+131	90	hsa-miR-30a-3p	4856	CCN3	NM_002514	cellular communication network factor 3
+132	90	hsa-miR-548k	3685	ITGAV	NM_001144999	integrin subunit alpha V
+133	90	hsa-miR-30e-3p	4856	CCN3	NM_002514	cellular communication network factor 3
+134	90	hsa-miR-297	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+135	90	hsa-miR-9-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+136	90	hsa-miR-424-5p	3643	INSR	NM_000208	insulin receptor
+137	89	hsa-miR-589-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+138	89	hsa-miR-211-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+139	89	hsa-miR-211-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+140	89	hsa-miR-1301-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+141	89	hsa-miR-204-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+142	89	hsa-miR-204-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+143	89	hsa-miR-323b-3p	3491	CCN1	NM_001554	cellular communication network factor 1
+144	88	hsa-miR-519b-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+145	88	hsa-miR-519a-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+146	88	hsa-miR-193a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+147	88	hsa-miR-26a-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+148	88	hsa-miR-26b-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+149	88	hsa-let-7f-5p	3643	INSR	NM_000208	insulin receptor
+150	88	hsa-let-7d-5p	3643	INSR	NM_000208	insulin receptor
+151	88	hsa-miR-411-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+152	88	hsa-miR-5571-5p	3685	ITGAV	NM_002210	integrin subunit alpha V
+153	88	hsa-miR-98-5p	3643	INSR	NM_000208	insulin receptor
+154	88	hsa-let-7b-5p	3643	INSR	NM_000208	insulin receptor
+155	88	hsa-let-7g-5p	3643	INSR	NM_000208	insulin receptor
+156	88	hsa-miR-379-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+157	88	hsa-miR-193b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+158	88	hsa-let-7a-5p	3643	INSR	NM_000208	insulin receptor
+159	88	hsa-miR-223-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+160	88	hsa-let-7e-5p	3643	INSR	NM_000208	insulin receptor
+161	88	hsa-let-7c-5p	3643	INSR	NM_000208	insulin receptor
+162	87	hsa-miR-30a-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+163	87	hsa-miR-96-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+164	87	hsa-miR-139-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+165	87	hsa-miR-3187-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+166	87	hsa-miR-30c-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+167	87	hsa-miR-582-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+168	87	hsa-miR-30b-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+169	87	hsa-miR-20b-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+170	87	hsa-miR-30d-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+171	87	hsa-miR-1179	3655	ITGA6	NM_000210	integrin subunit alpha 6
+172	87	hsa-miR-30e-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+173	87	hsa-miR-9-5p	3691	ITGB4	NM_000213	integrin subunit beta 4
+174	87	hsa-miR-454-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+175	86	hsa-miR-18b-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+176	86	hsa-miR-211-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+177	86	hsa-miR-381-3p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+178	86	hsa-miR-18a-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+179	86	hsa-miR-548an	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+180	86	hsa-miR-204-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+181	86	hsa-miR-27a-3p	3643	INSR	NM_000208	insulin receptor
+182	86	hsa-miR-27a-3p	8840	CCN4	NM_001204869	cellular communication network factor 4
+183	86	hsa-miR-27b-3p	3643	INSR	NM_000208	insulin receptor
+184	86	hsa-miR-27b-3p	8840	CCN4	NM_001204869	cellular communication network factor 4
+185	85	hsa-miR-576-5p	3655	ITGA6	NM_001316306	integrin subunit alpha 6
+186	85	hsa-miR-492	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+187	85	hsa-miR-1910-3p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+188	85	hsa-miR-15b-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+189	85	hsa-miR-1271-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+190	85	hsa-miR-182-5p	8840	CCN4	NM_001204869	cellular communication network factor 4
+191	85	hsa-miR-16-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+192	85	hsa-miR-448	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+193	85	hsa-miR-330-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+194	85	hsa-miR-511-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+195	85	hsa-miR-627-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+196	85	hsa-miR-1304-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+197	85	hsa-miR-34a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+198	85	hsa-miR-6511a-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+199	85	hsa-miR-371a-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+200	85	hsa-miR-9-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+201	85	hsa-miR-15a-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+202	85	hsa-miR-195-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+203	84	hsa-miR-515-5p	3491	CCN1	NM_001554	cellular communication network factor 1
+204	84	hsa-miR-450a-2-3p	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+205	84	hsa-miR-1275	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+206	84	hsa-miR-3121-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+207	84	hsa-miR-200a-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+208	84	hsa-miR-381-3p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+209	84	hsa-miR-3928-3p	3643	INSR	NM_000208	insulin receptor
+210	84	hsa-miR-324-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+211	84	hsa-miR-9-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+212	84	hsa-miR-16-2-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+213	83	hsa-miR-146a-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+214	83	hsa-miR-548t-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+215	83	hsa-miR-873-5p	8839	CCN5	NM_001323370	cellular communication network factor 5
+216	83	hsa-miR-148a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+217	83	hsa-miR-152-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+218	83	hsa-miR-146b-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+219	83	hsa-miR-31-5p	5654	HTRA1	NM_002775	HtrA serine peptidase 1
+220	83	hsa-miR-3198	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+221	83	hsa-miR-494-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+222	83	hsa-miR-582-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+223	83	hsa-miR-148b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+224	82	hsa-miR-30a-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+225	82	hsa-miR-3200-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+226	82	hsa-miR-513a-3p	4856	CCN3	NM_002514	cellular communication network factor 3
+227	82	hsa-miR-3065-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+228	82	hsa-miR-301a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+229	82	hsa-miR-15b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+230	82	hsa-miR-15b-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+231	82	hsa-miR-181c-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+232	82	hsa-miR-497-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+233	82	hsa-miR-655-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+234	82	hsa-miR-181d-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+235	82	hsa-miR-30c-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+236	82	hsa-miR-181a-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+237	82	hsa-miR-374c-5p	3685	ITGAV	NM_002210	integrin subunit alpha V
+238	82	hsa-miR-1278	4036	LRP2	NM_004525	LDL receptor related protein 2
+239	82	hsa-miR-16-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+240	82	hsa-miR-16-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+241	82	hsa-miR-30b-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+242	82	hsa-miR-3679-5p	203100	HTRA4	NM_153692	HtrA serine peptidase 4
+243	82	hsa-miR-181b-5p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+244	82	hsa-miR-301b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+245	82	hsa-miR-30d-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+246	82	hsa-miR-30e-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+247	82	hsa-miR-130a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+248	82	hsa-miR-15a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+249	82	hsa-miR-15a-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+250	82	hsa-miR-195-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+251	82	hsa-miR-195-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+252	82	hsa-miR-424-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+253	82	hsa-miR-194-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+254	82	hsa-miR-130b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+255	82	hsa-miR-513c-3p	4856	CCN3	NM_002514	cellular communication network factor 3
+256	81	hsa-miR-5699-5p	3643	INSR	NM_001079817	insulin receptor
+257	81	hsa-miR-548t-3p	3490	IGFBP7	NM_001553	insulin like growth factor binding protein 7
+258	81	hsa-miR-3129-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+259	81	hsa-miR-22-3p	3491	CCN1	NM_001554	cellular communication network factor 1
+260	81	hsa-miR-629-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+261	81	hsa-miR-544a	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+262	81	hsa-miR-433-3p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+263	81	hsa-miR-200c-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+264	81	hsa-miR-3065-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+265	81	hsa-miR-429	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+266	81	hsa-miR-342-5p	3691	ITGB4	NM_001005619	integrin subunit beta 4
+267	81	hsa-miR-497-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+268	81	hsa-miR-302c-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+269	81	hsa-miR-3074-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+270	81	hsa-miR-302a-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+271	81	hsa-miR-3138	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+272	81	hsa-miR-200b-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+273	81	hsa-miR-199a-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+274	81	hsa-miR-302d-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+275	81	hsa-miR-302b-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+276	81	hsa-miR-759	3643	INSR	NM_000208	insulin receptor
+277	81	hsa-miR-145-3p	5654	HTRA1	NM_002775	HtrA serine peptidase 1
+278	81	hsa-miR-125a-3p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+279	81	hsa-miR-424-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+280	81	hsa-miR-199b-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+281	80	hsa-miR-30a-5p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+282	80	hsa-miR-548t-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+283	80	hsa-miR-409-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+284	80	hsa-miR-1246	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+285	80	hsa-miR-30c-5p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+286	80	hsa-miR-616-3p	8840	CCN4	NM_001204869	cellular communication network factor 4
+287	80	hsa-miR-93-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+288	80	hsa-miR-1258	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+289	80	hsa-miR-30b-5p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+290	80	hsa-miR-548k	4036	LRP2	NM_004525	LDL receptor related protein 2
+291	80	hsa-miR-365b-3p	3490	IGFBP7	NM_001253835	insulin like growth factor binding protein 7
+292	80	hsa-miR-365a-3p	3490	IGFBP7	NM_001253835	insulin like growth factor binding protein 7
+293	80	hsa-miR-3934-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+294	80	hsa-miR-3605-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+295	80	hsa-miR-145-5p	3491	CCN1	NM_001554	cellular communication network factor 1
+296	80	hsa-miR-30d-5p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+297	80	hsa-miR-202-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+298	80	hsa-miR-128-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+299	80	hsa-miR-30e-5p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+300	80	hsa-miR-636	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+301	79	hsa-miR-539-3p	3491	CCN1	NM_001554	cellular communication network factor 1
+302	79	hsa-miR-758-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+303	79	hsa-miR-1290	3685	ITGAV	NM_002210	integrin subunit alpha V
+304	79	hsa-miR-497-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+305	79	hsa-miR-129-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+306	79	hsa-miR-582-3p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+307	79	hsa-miR-377-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+308	79	hsa-miR-107	4036	LRP2	NM_004525	LDL receptor related protein 2
+309	79	hsa-miR-103a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+310	79	hsa-miR-224-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+311	79	hsa-miR-3192-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+312	79	hsa-miR-143-3p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+313	79	hsa-miR-485-3p	3491	CCN1	NM_001554	cellular communication network factor 1
+314	79	hsa-miR-424-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+315	78	hsa-miR-146a-5p	8840	CCN4	NM_080838	cellular communication network factor 4
+316	78	hsa-miR-372-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+317	78	hsa-miR-154-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+318	78	hsa-miR-186-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+319	78	hsa-miR-597-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+320	78	hsa-miR-335-5p	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+321	78	hsa-miR-3187-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+322	78	hsa-miR-520c-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+323	78	hsa-miR-146b-5p	8840	CCN4	NM_080838	cellular communication network factor 4
+324	78	hsa-miR-373-3p	3691	ITGB4	NM_000213	integrin subunit beta 4
+325	78	hsa-miR-1303	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+326	78	hsa-miR-192-5p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+327	78	hsa-miR-508-5p	8839	CCN5	NM_001323369	cellular communication network factor 5
+328	78	hsa-miR-215-5p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+329	78	hsa-miR-143-3p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+330	78	hsa-miR-3140-3p	3490	IGFBP7	NM_001553	insulin like growth factor binding protein 7
+331	78	hsa-miR-493-5p	1490	CCN2	NM_001901	cellular communication network factor 2
+332	78	hsa-miR-10b-3p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+333	77	hsa-miR-106b-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+334	77	hsa-miR-3183	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+335	77	hsa-miR-509-5p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+336	77	hsa-miR-509-3-5p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+337	77	hsa-miR-514b-5p	3685	ITGAV	NM_002210	integrin subunit alpha V
+338	77	hsa-miR-1185-5p	203100	HTRA4	NM_153692	HtrA serine peptidase 4
+339	77	hsa-miR-361-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+340	77	hsa-miR-513c-5p	3685	ITGAV	NM_002210	integrin subunit alpha V
+341	77	hsa-miR-3173-3p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+342	77	hsa-miR-299-3p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+343	77	hsa-miR-20b-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+344	77	hsa-miR-106a-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+345	77	hsa-miR-93-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+346	77	hsa-miR-548an	3655	ITGA6	NM_000210	integrin subunit alpha 6
+347	77	hsa-miR-32-3p	3643	INSR	NM_000208	insulin receptor
+348	77	hsa-miR-17-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+349	77	hsa-miR-20a-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+350	77	hsa-miR-519d-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+351	76	hsa-miR-3120-3p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+352	76	hsa-miR-410-3p	11082	ESM1	NM_001135604	endothelial cell specific molecule 1
+353	76	hsa-miR-221-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+354	76	hsa-miR-876-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+355	76	hsa-miR-576-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+356	76	hsa-miR-522-5p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+357	76	hsa-miR-224-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+358	76	hsa-miR-141-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+359	76	hsa-miR-200a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+360	76	hsa-miR-550a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+361	76	hsa-miR-222-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+362	76	hsa-miR-494-3p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+363	76	hsa-miR-582-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+364	76	hsa-miR-582-5p	3655	ITGA6	NM_001316306	integrin subunit alpha 6
+365	76	hsa-miR-1271-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+366	76	hsa-miR-143-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+367	76	hsa-miR-506-5p	8839	CCN5	NM_001323369	cellular communication network factor 5
+368	76	hsa-miR-450b-5p	3643	INSR	NM_000208	insulin receptor
+369	76	hsa-miR-519c-5p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+370	75	hsa-miR-144-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+371	75	hsa-miR-449c-5p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+372	75	hsa-miR-34b-5p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+373	75	hsa-miR-205-5p	3643	INSR	NM_000208	insulin receptor
+374	75	hsa-miR-513a-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+375	75	hsa-miR-15b-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+376	75	hsa-miR-342-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+377	75	hsa-miR-497-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+378	75	hsa-miR-16-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+379	75	hsa-miR-31-5p	3490	IGFBP7	NM_001553	insulin like growth factor binding protein 7
+380	75	hsa-miR-1304-5p	3643	INSR	NM_000208	insulin receptor
+381	75	hsa-miR-877-5p	8839	CCN5	NM_001323370	cellular communication network factor 5
+382	75	hsa-miR-27b-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+383	75	hsa-miR-128-3p	3643	INSR	NM_000208	insulin receptor
+384	75	hsa-miR-625-5p	94031	HTRA3	NM_001297559	HtrA serine peptidase 3
+385	75	hsa-miR-15a-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+386	75	hsa-miR-195-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+387	75	hsa-miR-424-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+388	75	hsa-miR-513c-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+389	74	hsa-miR-519b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+390	74	hsa-miR-519a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+391	74	hsa-miR-3613-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+392	74	hsa-miR-589-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+393	74	hsa-miR-124-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+394	74	hsa-miR-150-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+395	74	hsa-miR-205-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+396	74	hsa-miR-376a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+397	74	hsa-miR-376b-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+398	74	hsa-miR-211-5p	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+399	74	hsa-miR-1290	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+400	74	hsa-miR-616-3p	203100	HTRA4	NM_153692	HtrA serine peptidase 4
+401	74	hsa-miR-302c-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+402	74	hsa-miR-302a-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+403	74	hsa-miR-126-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+404	74	hsa-miR-506-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+405	74	hsa-miR-204-5p	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+406	74	hsa-miR-302d-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+407	74	hsa-miR-302b-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+408	73	hsa-miR-449a	8839	CCN5	NM_001323369	cellular communication network factor 5
+409	73	hsa-miR-372-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+410	73	hsa-miR-379-5p	3643	INSR	NM_000208	insulin receptor
+411	73	hsa-miR-421	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+412	73	hsa-miR-3121-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+413	73	hsa-miR-34a-5p	8839	CCN5	NM_001323369	cellular communication network factor 5
+414	73	hsa-miR-433-3p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+415	73	hsa-miR-3065-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+416	73	hsa-miR-520c-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+417	73	hsa-miR-34c-5p	8839	CCN5	NM_001323369	cellular communication network factor 5
+418	73	hsa-miR-373-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+419	73	hsa-miR-302c-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+420	73	hsa-miR-302a-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+421	73	hsa-miR-302d-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+422	73	hsa-miR-302b-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+423	73	hsa-miR-323b-3p	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+424	73	hsa-miR-513a-5p	3643	INSR	NM_000208	insulin receptor
+425	73	hsa-miR-449b-5p	8839	CCN5	NM_001323369	cellular communication network factor 5
+426	73	hsa-miR-450b-5p	3685	ITGAV	NM_001144999	integrin subunit alpha V
+427	72	hsa-miR-144-3p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+428	72	hsa-miR-548j-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+429	72	hsa-miR-3144-5p	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+430	72	hsa-miR-548c-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+431	72	hsa-miR-548b-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+432	72	hsa-miR-296-5p	3691	ITGB4	NM_001005619	integrin subunit beta 4
+433	72	hsa-miR-548d-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+434	72	hsa-miR-548h-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+435	72	hsa-miR-548o-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+436	72	hsa-miR-548am-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+437	72	hsa-miR-942-5p	3487	IGFBP4	NM_001552	insulin like growth factor binding protein 4
+438	72	hsa-miR-636	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+439	72	hsa-miR-16-2-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+440	71	hsa-miR-515-5p	203100	HTRA4	NM_153692	HtrA serine peptidase 4
+441	71	hsa-miR-548t-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+442	71	hsa-miR-183-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+443	71	hsa-miR-589-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+444	71	hsa-miR-3130-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+445	71	hsa-miR-19a-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+446	71	hsa-miR-484	94031	HTRA3	NM_001297559	HtrA serine peptidase 3
+447	71	hsa-miR-568	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+448	71	hsa-miR-145-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+449	71	hsa-miR-19b-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+450	71	hsa-miR-1261	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+451	70	hsa-miR-3126-5p	5654	HTRA1	NM_002775	HtrA serine peptidase 1
+452	70	hsa-miR-410-3p	3490	IGFBP7	NM_001553	insulin like growth factor binding protein 7
+453	70	hsa-miR-625-3p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+454	70	hsa-miR-615-5p	94031	HTRA3	NM_001297559	HtrA serine peptidase 3
+455	70	hsa-miR-3065-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+456	70	hsa-miR-153-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+457	70	hsa-miR-548t-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+458	70	hsa-miR-409-5p	3691	ITGB4	NM_000213	integrin subunit beta 4
+459	70	hsa-miR-32-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+460	70	hsa-miR-769-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+461	70	hsa-miR-185-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+462	70	hsa-miR-203a-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+463	69	hsa-miR-372-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+464	69	hsa-miR-520c-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+465	69	hsa-miR-373-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+466	69	hsa-miR-503-5p	3643	INSR	NM_000208	insulin receptor
+467	69	hsa-miR-3928-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+468	69	hsa-miR-379-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+469	69	hsa-miR-500a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+470	69	hsa-miR-24-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+471	69	hsa-miR-149-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+472	69	hsa-miR-2682-5p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+473	69	hsa-miR-3175	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+474	69	hsa-miR-450b-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+475	68	hsa-miR-515-5p	8840	CCN4	NM_080838	cellular communication network factor 4
+476	68	hsa-miR-139-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+477	68	hsa-miR-4713-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+478	68	hsa-miR-597-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+479	68	hsa-miR-1224-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+480	68	hsa-miR-495-3p	5654	HTRA1	NM_002775	HtrA serine peptidase 1
+481	68	hsa-miR-1304-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+482	68	hsa-miR-6511a-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+483	68	hsa-miR-9-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+484	68	hsa-miR-203a-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+485	67	hsa-miR-532-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+486	67	hsa-miR-548j-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+487	67	hsa-miR-410-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+488	67	hsa-miR-548c-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+489	67	hsa-miR-378d	4036	LRP2	NM_004525	LDL receptor related protein 2
+490	67	hsa-miR-548b-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+491	67	hsa-miR-376a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+492	67	hsa-miR-548d-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+493	67	hsa-miR-376b-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+494	67	hsa-miR-378a-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+495	67	hsa-miR-548t-5p	3643	INSR	NM_000208	insulin receptor
+496	67	hsa-miR-548h-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+497	67	hsa-miR-378c	4036	LRP2	NM_004525	LDL receptor related protein 2
+498	67	hsa-miR-3173-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+499	67	hsa-miR-3691-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+500	67	hsa-miR-543	3491	CCN1	NM_001554	cellular communication network factor 1
+501	67	hsa-miR-548o-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+502	67	hsa-miR-24-3p	94031	HTRA3	NM_053044	HtrA serine peptidase 3
+503	67	hsa-miR-488-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+504	67	hsa-miR-548am-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+505	67	hsa-miR-422a	4036	LRP2	NM_004525	LDL receptor related protein 2
+506	67	hsa-miR-625-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+507	67	hsa-miR-369-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+508	67	hsa-miR-4423-3p	3487	IGFBP4	NM_001552	insulin like growth factor binding protein 4
+509	67	hsa-miR-326	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+510	66	hsa-miR-664b-5p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+511	66	hsa-miR-449a	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+512	66	hsa-miR-96-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+513	66	hsa-miR-548e-3p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+514	66	hsa-miR-374a-5p	3490	IGFBP7	NM_001553	insulin like growth factor binding protein 7
+515	66	hsa-miR-3121-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+516	66	hsa-miR-34a-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+517	66	hsa-miR-200c-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+518	66	hsa-miR-429	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+519	66	hsa-miR-4524a-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+520	66	hsa-miR-432-5p	81621	KAZALD1	NM_001319303	Kazal type serine peptidase inhibitor domain 1
+521	66	hsa-miR-548a-3p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+522	66	hsa-miR-496	3685	ITGAV	NM_001145000	integrin subunit alpha V
+523	66	hsa-miR-200b-3p	11082	ESM1	NM_007036	endothelial cell specific molecule 1
+524	66	hsa-miR-668-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+525	66	hsa-miR-145-3p	8840	CCN4	NM_001204869	cellular communication network factor 4
+526	66	hsa-miR-548f-3p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+527	66	hsa-miR-374b-5p	3490	IGFBP7	NM_001553	insulin like growth factor binding protein 7
+528	66	hsa-miR-326	3487	IGFBP4	NM_001552	insulin like growth factor binding protein 4
+529	65	hsa-miR-548t-3p	3643	INSR	NM_000208	insulin receptor
+530	65	hsa-miR-134-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+531	65	hsa-miR-1297	1490	CCN2	NM_001901	cellular communication network factor 2
+532	65	hsa-miR-452-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+533	65	hsa-miR-1246	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+534	65	hsa-miR-642a-3p	3690	ITGB3	NM_000212	integrin subunit beta 3
+535	65	hsa-miR-432-5p	3643	INSR	NM_001079817	insulin receptor
+536	65	hsa-miR-545-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+537	65	hsa-miR-545-3p	8840	CCN4	NM_001204869	cellular communication network factor 4
+538	65	hsa-miR-5001-5p	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+539	65	hsa-miR-3198	3490	IGFBP7	NM_001253835	insulin like growth factor binding protein 7
+540	65	hsa-miR-762	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+541	65	hsa-miR-185-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+542	65	hsa-miR-561-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+543	65	hsa-miR-548l	3685	ITGAV	NM_001144999	integrin subunit alpha V
+544	64	hsa-miR-328-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+545	64	hsa-miR-514b-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+546	64	hsa-miR-589-3p	3691	ITGB4	NM_001005619	integrin subunit beta 4
+547	64	hsa-miR-124-3p	81621	KAZALD1	NM_001319303	Kazal type serine peptidase inhibitor domain 1
+548	64	hsa-miR-3130-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+549	64	hsa-miR-513c-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+550	64	hsa-miR-361-5p	8840	CCN4	NM_080838	cellular communication network factor 4
+551	64	hsa-miR-181c-5p	3491	CCN1	NM_001554	cellular communication network factor 1
+552	64	hsa-miR-181d-5p	3491	CCN1	NM_001554	cellular communication network factor 1
+553	64	hsa-miR-653-3p	3491	CCN1	NM_001554	cellular communication network factor 1
+554	64	hsa-miR-181a-5p	3491	CCN1	NM_001554	cellular communication network factor 1
+555	64	hsa-miR-136-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+556	64	hsa-miR-181b-5p	3491	CCN1	NM_001554	cellular communication network factor 1
+557	64	hsa-miR-506-3p	81621	KAZALD1	NM_001319303	Kazal type serine peptidase inhibitor domain 1
+558	64	hsa-miR-3175	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+559	64	hsa-miR-548l	4036	LRP2	NM_004525	LDL receptor related protein 2
+560	64	hsa-miR-130b-3p	4856	CCN3	NM_002514	cellular communication network factor 3
+561	63	hsa-miR-520h	4036	LRP2	NM_004525	LDL receptor related protein 2
+562	63	hsa-miR-18b-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+563	63	hsa-miR-589-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+564	63	hsa-miR-520g-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+565	63	hsa-miR-320d	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+566	63	hsa-miR-331-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+567	63	hsa-miR-323a-3p	5654	HTRA1	NM_002775	HtrA serine peptidase 1
+568	63	hsa-miR-1303	3685	ITGAV	NM_001145000	integrin subunit alpha V
+569	63	hsa-miR-377-3p	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+570	63	hsa-miR-1185-1-3p	3655	ITGA6	NM_001316306	integrin subunit alpha 6
+571	63	hsa-miR-665	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+572	63	hsa-miR-320c	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+573	63	hsa-miR-338-5p	3484	IGFBP1	NM_000596	insulin like growth factor binding protein 1
+574	63	hsa-miR-543	1490	CCN2	NM_001901	cellular communication network factor 2
+575	63	hsa-miR-141-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+576	63	hsa-miR-200a-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+577	63	hsa-miR-18a-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+578	63	hsa-miR-1323	3685	ITGAV	NM_002210	integrin subunit alpha V
+579	63	hsa-miR-1185-2-3p	3655	ITGA6	NM_001316306	integrin subunit alpha 6
+580	63	hsa-miR-320b	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+581	63	hsa-miR-505-5p	81621	KAZALD1	NM_001319303	Kazal type serine peptidase inhibitor domain 1
+582	62	hsa-miR-139-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+583	62	hsa-miR-329-3p	3643	INSR	NM_001079817	insulin receptor
+584	62	hsa-miR-1224-5p	3643	INSR	NM_000208	insulin receptor
+585	62	hsa-miR-628-5p	5654	HTRA1	NM_002775	HtrA serine peptidase 1
+586	62	hsa-miR-4677-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+587	62	hsa-miR-1-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+588	62	hsa-miR-362-3p	3643	INSR	NM_001079817	insulin receptor
+589	62	hsa-miR-1271-5p	3655	ITGA6	NM_000210	integrin subunit alpha 6
+590	62	hsa-miR-5571-5p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+591	62	hsa-miR-432-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+592	62	hsa-miR-208b-3p	3643	INSR	NM_000208	insulin receptor
+593	62	hsa-miR-1298-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+594	62	hsa-miR-511-3p	5654	HTRA1	NM_002775	HtrA serine peptidase 1
+595	62	hsa-miR-3934-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+596	62	hsa-miR-135b-3p	8840	CCN4	NM_001204869	cellular communication network factor 4
+597	62	hsa-miR-145-5p	4036	LRP2	NM_004525	LDL receptor related protein 2
+598	62	hsa-miR-654-3p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+599	62	hsa-miR-128-3p	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+600	62	hsa-miR-206	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+601	62	hsa-miR-185-5p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+602	62	hsa-miR-506-5p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+603	62	hsa-miR-450b-5p	3655	ITGA6	NM_001079818	integrin subunit alpha 6
+604	61	hsa-miR-30b-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+605	61	hsa-miR-105-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+606	61	hsa-miR-513c-5p	8840	CCN4	NM_001204869	cellular communication network factor 4
+607	61	hsa-miR-939-3p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+608	61	hsa-miR-296-5p	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+609	61	hsa-miR-361-5p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+610	61	hsa-miR-34c-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+611	61	hsa-miR-486-5p	8840	CCN4	NM_080838	cellular communication network factor 4
+612	61	hsa-miR-548o-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+613	61	hsa-miR-452-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+614	61	hsa-miR-874-3p	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+615	61	hsa-miR-34a-3p	3643	INSR	NM_000208	insulin receptor
+616	61	hsa-miR-6511a-3p	3685	ITGAV	NM_001145000	integrin subunit alpha V
+617	61	hsa-miR-675-5p	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+618	61	hsa-miR-766-5p	3685	ITGAV	NM_002210	integrin subunit alpha V
+619	61	hsa-miR-136-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5
+620	61	hsa-miR-1908-3p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+621	61	hsa-miR-660-5p	8840	CCN4	NM_080838	cellular communication network factor 4
+622	61	hsa-miR-449b-5p	3486	IGFBP3	NM_000598	insulin like growth factor binding protein 3
+623	61	hsa-miR-548l	347252	IGFBPL1	NM_001007563	insulin like growth factor binding protein like 1
+624	60	hsa-miR-450a-2-3p	3643	INSR	NM_000208	insulin receptor
+625	60	hsa-miR-23a-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+626	60	hsa-miR-379-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+627	60	hsa-miR-450a-1-3p	94031	HTRA3	NM_001297559	HtrA serine peptidase 3
+628	60	hsa-miR-144-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+629	60	hsa-miR-520h	3685	ITGAV	NM_002210	integrin subunit alpha V
+630	60	hsa-miR-548j-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+631	60	hsa-miR-548c-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+632	60	hsa-miR-520g-3p	3685	ITGAV	NM_002210	integrin subunit alpha V
+633	60	hsa-miR-202-5p	8840	CCN4	NM_080838	cellular communication network factor 4
+634	60	hsa-miR-548b-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+635	60	hsa-miR-548d-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+636	60	hsa-miR-548h-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+637	60	hsa-miR-411-3p	1490	CCN2	NM_001901	cellular communication network factor 2
+638	60	hsa-miR-381-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+639	60	hsa-miR-381-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+640	60	hsa-miR-661	81621	KAZALD1	NM_030929	Kazal type serine peptidase inhibitor domain 1
+641	60	hsa-miR-511-3p	4036	LRP2	NM_004525	LDL receptor related protein 2
+642	60	hsa-miR-23b-3p	8840	CCN4	NM_080838	cellular communication network factor 4
+643	60	hsa-miR-548o-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+644	60	hsa-miR-101-3p	3482	IGF2R	NM_000876	insulin like growth factor 2 receptor
+645	60	hsa-miR-3909	3690	ITGB3	NM_000212	integrin subunit beta 3
+646	60	hsa-miR-548am-5p	4856	CCN3	NM_002514	cellular communication network factor 3
+647	60	hsa-miR-656-3p	51232	CRIM1	NM_016441	cysteine rich transmembrane BMP regulator 1
+648	60	hsa-miR-371a-5p	3690	ITGB3	NM_000212	integrin subunit beta 3
+649	60	hsa-miR-185-5p	3488	IGFBP5	NM_000599	insulin like growth factor binding protein 5

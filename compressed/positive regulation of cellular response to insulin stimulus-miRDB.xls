@@ -1,0 +1,526 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-186-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+2	100	hsa-miR-548an	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+3	99	hsa-miR-324-3p	10580	SORBS1	NM_001034954	sorbin and SH3 domain containing 1
+4	98	hsa-miR-543	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+5	97	hsa-miR-23a-3p	27131	SNX5	NM_001282454	sorting nexin 5
+6	97	hsa-miR-23a-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+7	97	hsa-miR-124-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+8	97	hsa-miR-3065-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+9	97	hsa-miR-154-3p	23411	SIRT1	NM_001142498	sirtuin 1
+10	97	hsa-miR-22-5p	4976	OPA1	NM_015560	OPA1, mitochondrial dynamin like GTPase
+11	97	hsa-miR-3143	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+12	97	hsa-miR-330-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+13	97	hsa-miR-23b-3p	27131	SNX5	NM_001282454	sorting nexin 5
+14	97	hsa-miR-23b-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+15	97	hsa-miR-506-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+16	97	hsa-miR-487a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+17	97	hsa-miR-660-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+18	96	hsa-miR-450a-2-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+19	96	hsa-miR-3065-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+20	96	hsa-miR-762	2771	GNAI2	NM_001166425	G protein subunit alpha i2
+21	96	hsa-miR-128-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+22	95	hsa-miR-421	9971	NR1H4	NM_001206992	nuclear receptor subfamily 1 group H member 4
+23	95	hsa-miR-495-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+24	95	hsa-miR-214-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+25	95	hsa-miR-181c-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+26	95	hsa-miR-211-5p	23411	SIRT1	NM_001142498	sirtuin 1
+27	95	hsa-miR-655-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+28	95	hsa-miR-181d-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+29	95	hsa-miR-181a-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+30	95	hsa-miR-374c-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+31	95	hsa-miR-5001-5p	4641	MYO1C	NM_001080779	myosin IC
+32	95	hsa-miR-5001-5p	2771	GNAI2	NM_001166425	G protein subunit alpha i2
+33	95	hsa-miR-338-5p	23411	SIRT1	NM_001142498	sirtuin 1
+34	95	hsa-miR-181b-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+35	95	hsa-miR-7-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+36	95	hsa-miR-204-5p	23411	SIRT1	NM_001142498	sirtuin 1
+37	95	hsa-miR-762	4641	MYO1C	NM_001080779	myosin IC
+38	95	hsa-miR-9-5p	23411	SIRT1	NM_001142498	sirtuin 1
+39	95	hsa-miR-761	3667	IRS1	NM_005544	insulin receptor substrate 1
+40	95	hsa-miR-194-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+41	94	hsa-miR-3120-3p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+42	94	hsa-miR-519b-3p	27131	SNX5	NM_001282454	sorting nexin 5
+43	94	hsa-miR-30a-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+44	94	hsa-miR-519a-3p	27131	SNX5	NM_001282454	sorting nexin 5
+45	94	hsa-miR-22-3p	23411	SIRT1	NM_001142498	sirtuin 1
+46	94	hsa-miR-212-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+47	94	hsa-miR-153-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+48	94	hsa-miR-30c-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+49	94	hsa-miR-30b-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+50	94	hsa-miR-30d-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+51	94	hsa-miR-30e-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+52	94	hsa-miR-132-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+53	94	hsa-miR-203a-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+54	93	hsa-miR-491-5p	3481	IGF2	NM_001007139	insulin like growth factor 2
+55	93	hsa-miR-183-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+56	93	hsa-miR-514a-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+57	93	hsa-miR-1275	3481	IGF2	NM_000612	insulin like growth factor 2
+58	93	hsa-miR-210-3p	3481	IGF2	NM_001291861	insulin like growth factor 2
+59	93	hsa-miR-545-3p	51094	ADIPOR1	NM_001290629	adiponectin receptor 1
+60	93	hsa-miR-381-3p	10580	SORBS1	NM_001034954	sorbin and SH3 domain containing 1
+61	93	hsa-miR-543	23411	SIRT1	NM_001142498	sirtuin 1
+62	93	hsa-miR-627-3p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+63	92	hsa-miR-30c-2-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+64	92	hsa-miR-9-3p	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+65	92	hsa-miR-128-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+66	92	hsa-miR-30c-1-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+67	91	hsa-miR-450a-2-3p	151176	ERFE	NM_001291832	erythroferrone
+68	91	hsa-miR-548e-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+69	91	hsa-miR-183-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+70	91	hsa-miR-7-5p	80318	GKAP1	NM_001135953	G kinase anchoring protein 1
+71	91	hsa-miR-1972	3481	IGF2	NM_001291861	insulin like growth factor 2
+72	91	hsa-miR-27a-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+73	91	hsa-miR-548f-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+74	91	hsa-miR-27b-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+75	90	hsa-miR-486-3p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+76	90	hsa-miR-30a-5p	2771	GNAI2	NM_001282619	G protein subunit alpha i2
+77	90	hsa-miR-539-3p	23411	SIRT1	NM_001142498	sirtuin 1
+78	90	hsa-miR-148a-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+79	90	hsa-miR-205-5p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+80	90	hsa-miR-152-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+81	90	hsa-miR-30c-5p	2771	GNAI2	NM_001282619	G protein subunit alpha i2
+82	90	hsa-miR-548a-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+83	90	hsa-miR-30b-5p	2771	GNAI2	NM_001282619	G protein subunit alpha i2
+84	90	hsa-miR-1304-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+85	90	hsa-miR-4662a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+86	90	hsa-miR-30d-5p	2771	GNAI2	NM_001282619	G protein subunit alpha i2
+87	90	hsa-miR-6511a-5p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+88	90	hsa-miR-148b-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+89	90	hsa-miR-30e-5p	2771	GNAI2	NM_001282619	G protein subunit alpha i2
+90	90	hsa-miR-485-3p	23411	SIRT1	NM_001142498	sirtuin 1
+91	90	hsa-miR-454-3p	27131	SNX5	NM_001282454	sorting nexin 5
+92	89	hsa-miR-576-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+93	89	hsa-miR-96-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+94	89	hsa-miR-212-3p	23411	SIRT1	NM_001142498	sirtuin 1
+95	89	hsa-miR-301a-3p	27131	SNX5	NM_001282454	sorting nexin 5
+96	89	hsa-miR-29c-3p	23411	SIRT1	NM_001142498	sirtuin 1
+97	89	hsa-miR-654-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+98	89	hsa-miR-29a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+99	89	hsa-miR-381-3p	4976	OPA1	NM_015560	OPA1, mitochondrial dynamin like GTPase
+100	89	hsa-miR-3162-5p	80318	GKAP1	NM_001135953	G kinase anchoring protein 1
+101	89	hsa-miR-548an	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+102	89	hsa-miR-138-5p	23411	SIRT1	NM_001142498	sirtuin 1
+103	89	hsa-miR-29b-3p	23411	SIRT1	NM_001142498	sirtuin 1
+104	89	hsa-miR-431-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+105	89	hsa-miR-301b-3p	27131	SNX5	NM_001282454	sorting nexin 5
+106	89	hsa-miR-342-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+107	89	hsa-miR-497-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+108	89	hsa-miR-132-3p	23411	SIRT1	NM_001142498	sirtuin 1
+109	89	hsa-miR-130a-3p	27131	SNX5	NM_001282454	sorting nexin 5
+110	89	hsa-miR-185-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+111	89	hsa-miR-130b-3p	27131	SNX5	NM_001282454	sorting nexin 5
+112	88	hsa-miR-181c-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+113	88	hsa-miR-3136-5p	80318	GKAP1	NM_025211	G kinase anchoring protein 1
+114	88	hsa-miR-548t-5p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+115	88	hsa-miR-135b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+116	88	hsa-miR-135b-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+117	88	hsa-miR-448	6653	SORL1	NM_003105	sortilin related receptor 1
+118	88	hsa-miR-608	51043	ZBTB7B	NM_001256455	zinc finger and BTB domain containing 7B
+119	88	hsa-miR-135a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+120	88	hsa-miR-135a-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+121	88	hsa-miR-202-3p	27131	SNX5	NM_001282454	sorting nexin 5
+122	88	hsa-miR-223-3p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+123	88	hsa-miR-654-3p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+124	87	hsa-miR-30a-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+125	87	hsa-miR-30a-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+126	87	hsa-miR-548e-3p	80318	GKAP1	NM_001135953	G kinase anchoring protein 1
+127	87	hsa-miR-1910-3p	4641	MYO1C	NM_001080779	myosin IC
+128	87	hsa-miR-342-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+129	87	hsa-miR-323a-3p	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+130	87	hsa-miR-30c-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+131	87	hsa-miR-30c-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+132	87	hsa-miR-548a-3p	80318	GKAP1	NM_001135953	G kinase anchoring protein 1
+133	87	hsa-miR-30b-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+134	87	hsa-miR-30b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+135	87	hsa-miR-3065-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+136	87	hsa-miR-30d-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+137	87	hsa-miR-30d-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+138	87	hsa-miR-6511a-5p	4641	MYO1C	NM_001080779	myosin IC
+139	87	hsa-miR-128-3p	23411	SIRT1	NM_001142498	sirtuin 1
+140	87	hsa-miR-30e-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+141	87	hsa-miR-30e-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+142	87	hsa-miR-548f-3p	80318	GKAP1	NM_001135953	G kinase anchoring protein 1
+143	87	hsa-miR-203a-3p	4976	OPA1	NM_130834	OPA1, mitochondrial dynamin like GTPase
+144	86	hsa-miR-186-5p	23411	SIRT1	NM_001142498	sirtuin 1
+145	86	hsa-miR-1271-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+146	86	hsa-miR-142-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+147	86	hsa-miR-654-3p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+148	86	hsa-miR-9-5p	4641	MYO1C	NM_001080779	myosin IC
+149	86	hsa-miR-942-5p	3952	LEP	NM_000230	leptin
+150	86	hsa-miR-561-5p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+151	85	hsa-miR-96-5p	5058	PAK1	NM_001128620	p21 (RAC1) activated kinase 1
+152	85	hsa-miR-218-5p	2771	GNAI2	NM_001166425	G protein subunit alpha i2
+153	85	hsa-miR-320d	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+154	85	hsa-miR-183-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+155	85	hsa-miR-214-3p	151176	ERFE	NM_001291832	erythroferrone
+156	85	hsa-miR-660-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+157	85	hsa-miR-320c	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+158	85	hsa-miR-3928-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+159	85	hsa-miR-138-5p	2771	GNAI2	NM_001166425	G protein subunit alpha i2
+160	85	hsa-miR-297	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+161	85	hsa-miR-1323	3667	IRS1	NM_005544	insulin receptor substrate 1
+162	85	hsa-miR-761	151176	ERFE	NM_001291832	erythroferrone
+163	85	hsa-miR-320b	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+164	84	hsa-miR-3120-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+165	84	hsa-miR-548t-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+166	84	hsa-miR-218-5p	10580	SORBS1	NM_001034954	sorbin and SH3 domain containing 1
+167	84	hsa-miR-624-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+168	84	hsa-miR-124-3p	4641	MYO1C	NM_001080779	myosin IC
+169	84	hsa-miR-544a	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+170	84	hsa-miR-3065-5p	4976	OPA1	NM_130834	OPA1, mitochondrial dynamin like GTPase
+171	84	hsa-miR-141-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+172	84	hsa-miR-200a-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+173	84	hsa-miR-506-3p	4641	MYO1C	NM_001080779	myosin IC
+174	84	hsa-miR-873-3p	10580	SORBS1	NM_001034954	sorbin and SH3 domain containing 1
+175	84	hsa-miR-128-3p	4976	OPA1	NM_130834	OPA1, mitochondrial dynamin like GTPase
+176	84	hsa-miR-550a-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+177	84	hsa-miR-203a-3p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+178	83	hsa-miR-105-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+179	83	hsa-miR-1910-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+180	83	hsa-miR-140-3p	23411	SIRT1	NM_001142498	sirtuin 1
+181	83	hsa-miR-377-3p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+182	83	hsa-miR-330-3p	4641	MYO1C	NM_001080779	myosin IC
+183	83	hsa-miR-376c-3p	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+184	83	hsa-miR-141-3p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+185	83	hsa-miR-200a-3p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+186	83	hsa-miR-484	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+187	83	hsa-miR-452-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+188	83	hsa-miR-493-5p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+189	83	hsa-miR-561-5p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+190	82	hsa-miR-519b-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+191	82	hsa-miR-519a-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+192	82	hsa-miR-106b-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+193	82	hsa-miR-3171	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+194	82	hsa-miR-338-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+195	82	hsa-miR-106a-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+196	82	hsa-miR-486-5p	151176	ERFE	NM_001291832	erythroferrone
+197	82	hsa-miR-548o-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+198	82	hsa-miR-508-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+199	82	hsa-miR-20a-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+200	82	hsa-miR-497-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+201	81	hsa-miR-216a-5p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+202	81	hsa-miR-216a-5p	51094	ADIPOR1	NM_001290629	adiponectin receptor 1
+203	81	hsa-miR-664b-3p	10580	SORBS1	NM_001034954	sorbin and SH3 domain containing 1
+204	81	hsa-miR-664b-3p	23411	SIRT1	NM_001142498	sirtuin 1
+205	81	hsa-miR-382-3p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+206	81	hsa-miR-1271-5p	5058	PAK1	NM_001128620	p21 (RAC1) activated kinase 1
+207	81	hsa-miR-181c-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+208	81	hsa-miR-181d-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+209	81	hsa-miR-181a-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+210	81	hsa-miR-181b-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+211	81	hsa-miR-345-5p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+212	81	hsa-miR-32-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+213	81	hsa-miR-766-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+214	80	hsa-miR-664b-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+215	80	hsa-miR-624-5p	23411	SIRT1	NM_001142498	sirtuin 1
+216	80	hsa-miR-4662a-5p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+217	80	hsa-miR-145-5p	5058	PAK1	NM_001128620	p21 (RAC1) activated kinase 1
+218	80	hsa-miR-1179	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+219	80	hsa-miR-769-3p	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+220	80	hsa-miR-1261	3667	IRS1	NM_005544	insulin receptor substrate 1
+221	80	hsa-miR-636	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+222	79	hsa-miR-133a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+223	79	hsa-miR-186-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+224	79	hsa-miR-625-3p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+225	79	hsa-miR-664b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+226	79	hsa-miR-133b	23411	SIRT1	NM_001142498	sirtuin 1
+227	79	hsa-miR-29c-3p	3952	LEP	NM_000230	leptin
+228	79	hsa-miR-323a-3p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+229	79	hsa-miR-1303	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+230	79	hsa-miR-29a-3p	3952	LEP	NM_000230	leptin
+231	79	hsa-miR-516b-5p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+232	79	hsa-miR-302c-3p	27131	SNX5	NM_001282454	sorting nexin 5
+233	79	hsa-miR-545-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+234	79	hsa-miR-302a-3p	27131	SNX5	NM_001282454	sorting nexin 5
+235	79	hsa-miR-29b-3p	3952	LEP	NM_000230	leptin
+236	79	hsa-miR-874-3p	3952	LEP	NM_000230	leptin
+237	79	hsa-miR-302d-3p	27131	SNX5	NM_001282454	sorting nexin 5
+238	79	hsa-miR-302b-3p	27131	SNX5	NM_001282454	sorting nexin 5
+239	79	hsa-miR-6511a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+240	78	hsa-miR-139-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+241	78	hsa-miR-144-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+242	78	hsa-miR-3117-3p	10580	SORBS1	NM_001034955	sorbin and SH3 domain containing 1
+243	78	hsa-miR-361-3p	51043	ZBTB7B	NM_001256455	zinc finger and BTB domain containing 7B
+244	78	hsa-miR-1246	6653	SORL1	NM_003105	sortilin related receptor 1
+245	78	hsa-miR-1290	3481	IGF2	NM_001007139	insulin like growth factor 2
+246	78	hsa-miR-3928-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+247	78	hsa-miR-488-3p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+248	77	hsa-miR-374b-3p	80318	GKAP1	NM_025211	G kinase anchoring protein 1
+249	77	hsa-miR-449a	23411	SIRT1	NM_001142498	sirtuin 1
+250	77	hsa-miR-520h	6653	SORL1	NM_003105	sortilin related receptor 1
+251	77	hsa-miR-410-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+252	77	hsa-miR-514b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+253	77	hsa-miR-520g-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+254	77	hsa-miR-34a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+255	77	hsa-miR-214-3p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+256	77	hsa-miR-346	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+257	77	hsa-miR-513c-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+258	77	hsa-miR-2355-5p	51094	ADIPOR1	NM_001290629	adiponectin receptor 1
+259	77	hsa-miR-135b-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+260	77	hsa-miR-20b-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+261	77	hsa-miR-216b-5p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+262	77	hsa-miR-135a-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+263	77	hsa-miR-93-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+264	77	hsa-miR-138-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+265	77	hsa-miR-145-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+266	77	hsa-miR-17-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+267	77	hsa-miR-582-5p	9971	NR1H4	NM_001206992	nuclear receptor subfamily 1 group H member 4
+268	77	hsa-miR-519d-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+269	77	hsa-miR-761	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+270	76	hsa-miR-380-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+271	76	hsa-miR-34c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+272	76	hsa-miR-3143	23411	SIRT1	NM_001142498	sirtuin 1
+273	76	hsa-miR-661	2771	GNAI2	NM_001166425	G protein subunit alpha i2
+274	76	hsa-miR-449b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+275	75	hsa-miR-942-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+276	75	hsa-miR-15b-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+277	75	hsa-miR-497-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+278	75	hsa-miR-629-5p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+279	75	hsa-miR-16-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+280	75	hsa-miR-224-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+281	75	hsa-miR-32-3p	23411	SIRT1	NM_001142498	sirtuin 1
+282	75	hsa-miR-342-3p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+283	75	hsa-miR-10b-3p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+284	75	hsa-miR-15a-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+285	75	hsa-miR-195-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+286	75	hsa-miR-195-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+287	75	hsa-miR-424-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+288	74	hsa-miR-216a-5p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+289	74	hsa-miR-155-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+290	74	hsa-miR-495-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+291	74	hsa-miR-548t-5p	23411	SIRT1	NM_001142498	sirtuin 1
+292	74	hsa-miR-548t-5p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+293	74	hsa-miR-1290	6653	SORL1	NM_003105	sortilin related receptor 1
+294	74	hsa-miR-511-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+295	73	hsa-miR-548j-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+296	73	hsa-miR-548c-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+297	73	hsa-miR-361-3p	4641	MYO1C	NM_001080950	myosin IC
+298	73	hsa-miR-1910-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+299	73	hsa-miR-548b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+300	73	hsa-miR-548d-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+301	73	hsa-miR-548t-5p	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+302	73	hsa-miR-548h-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+303	73	hsa-miR-33b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+304	73	hsa-miR-337-3p	4641	MYO1C	NM_001080950	myosin IC
+305	73	hsa-miR-3162-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+306	73	hsa-miR-33a-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+307	73	hsa-miR-548o-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+308	73	hsa-miR-548am-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+309	73	hsa-miR-27a-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+310	73	hsa-miR-3190-3p	9971	NR1H4	NM_001206992	nuclear receptor subfamily 1 group H member 4
+311	73	hsa-miR-561-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+312	73	hsa-miR-27b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+313	72	hsa-miR-372-3p	27131	SNX5	NM_001282454	sorting nexin 5
+314	72	hsa-miR-5699-5p	51043	ZBTB7B	NM_001256455	zinc finger and BTB domain containing 7B
+315	72	hsa-miR-589-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+316	72	hsa-miR-520c-3p	27131	SNX5	NM_001282454	sorting nexin 5
+317	72	hsa-miR-708-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+318	72	hsa-miR-485-5p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+319	72	hsa-miR-373-3p	27131	SNX5	NM_001282454	sorting nexin 5
+320	72	hsa-miR-5571-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+321	72	hsa-miR-1298-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+322	72	hsa-miR-486-5p	23411	SIRT1	NM_001142498	sirtuin 1
+323	72	hsa-miR-9-5p	3952	LEP	NM_000230	leptin
+324	72	hsa-miR-561-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+325	71	hsa-miR-126-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+326	71	hsa-miR-514a-5p	51094	ADIPOR1	NM_001290629	adiponectin receptor 1
+327	71	hsa-miR-127-5p	27131	SNX5	NM_014426	sorting nexin 5
+328	71	hsa-miR-3913-5p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+329	71	hsa-miR-544a	6653	SORL1	NM_003105	sortilin related receptor 1
+330	71	hsa-miR-15b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+331	71	hsa-miR-411-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+332	71	hsa-miR-16-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+333	71	hsa-miR-141-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+334	71	hsa-miR-379-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+335	71	hsa-miR-200a-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+336	71	hsa-miR-7-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+337	71	hsa-miR-15a-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+338	70	hsa-miR-520h	3667	IRS1	NM_005544	insulin receptor substrate 1
+339	70	hsa-miR-520g-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+340	70	hsa-miR-214-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+341	70	hsa-miR-4677-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+342	70	hsa-miR-129-5p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+343	70	hsa-miR-3150b-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+344	70	hsa-miR-330-3p	79746	ECHDC3	NM_024693	enoyl-CoA hydratase domain containing 3
+345	70	hsa-miR-126-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+346	70	hsa-miR-9-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+347	70	hsa-miR-200a-3p	3952	LEP	NM_000230	leptin
+348	70	hsa-miR-568	10580	SORBS1	NM_001034954	sorbin and SH3 domain containing 1
+349	70	hsa-miR-135b-3p	27131	SNX5	NM_014426	sorting nexin 5
+350	70	hsa-miR-16-2-3p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+351	69	hsa-miR-449a	4641	MYO1C	NM_001080779	myosin IC
+352	69	hsa-miR-657	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+353	69	hsa-miR-491-5p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+354	69	hsa-miR-1260a	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+355	69	hsa-miR-328-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+356	69	hsa-miR-30b-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+357	69	hsa-miR-34a-5p	4641	MYO1C	NM_001080779	myosin IC
+358	69	hsa-miR-3187-3p	5058	PAK1	NM_001128620	p21 (RAC1) activated kinase 1
+359	69	hsa-miR-513a-3p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+360	69	hsa-miR-532-5p	3952	LEP	NM_000230	leptin
+361	69	hsa-miR-129-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+362	69	hsa-miR-1260b	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+363	69	hsa-miR-576-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+364	69	hsa-miR-3614-5p	51094	ADIPOR1	NM_001290553	adiponectin receptor 1
+365	69	hsa-miR-3942-5p	27131	SNX5	NM_014426	sorting nexin 5
+366	69	hsa-miR-5571-3p	2771	GNAI2	NM_001166425	G protein subunit alpha i2
+367	69	hsa-miR-494-3p	5058	PAK1	NM_001128620	p21 (RAC1) activated kinase 1
+368	69	hsa-miR-513c-3p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+369	68	hsa-miR-23a-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+370	68	hsa-miR-885-5p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+371	68	hsa-miR-96-5p	4641	MYO1C	NM_001080779	myosin IC
+372	68	hsa-miR-148a-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+373	68	hsa-miR-633	23411	SIRT1	NM_001142498	sirtuin 1
+374	68	hsa-miR-3200-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+375	68	hsa-miR-758-3p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+376	68	hsa-miR-152-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+377	68	hsa-miR-1270	3952	LEP	NM_000230	leptin
+378	68	hsa-miR-182-5p	4641	MYO1C	NM_001080779	myosin IC
+379	68	hsa-miR-455-5p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+380	68	hsa-miR-23b-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+381	68	hsa-miR-3614-5p	2771	GNAI2	NM_001282619	G protein subunit alpha i2
+382	68	hsa-miR-126-5p	51043	ZBTB7B	NM_001256455	zinc finger and BTB domain containing 7B
+383	68	hsa-miR-499a-5p	4641	MYO1C	NM_001080950	myosin IC
+384	68	hsa-miR-3679-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+385	68	hsa-miR-550a-5p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+386	68	hsa-miR-4662a-5p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+387	68	hsa-miR-1271-3p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+388	68	hsa-miR-148b-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+389	67	hsa-miR-520h	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+390	67	hsa-miR-548j-5p	23411	SIRT1	NM_001142498	sirtuin 1
+391	67	hsa-miR-548c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+392	67	hsa-miR-148a-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+393	67	hsa-miR-520g-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+394	67	hsa-miR-1297	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+395	67	hsa-miR-208a-3p	4641	MYO1C	NM_001080950	myosin IC
+396	67	hsa-miR-3158-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+397	67	hsa-miR-548b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+398	67	hsa-miR-152-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+399	67	hsa-miR-548d-5p	23411	SIRT1	NM_001142498	sirtuin 1
+400	67	hsa-miR-1270	6653	SORL1	NM_003105	sortilin related receptor 1
+401	67	hsa-miR-654-5p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+402	67	hsa-miR-548h-5p	23411	SIRT1	NM_001142498	sirtuin 1
+403	67	hsa-miR-655-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+404	67	hsa-miR-1827	3481	IGF2	NM_000612	insulin like growth factor 2
+405	67	hsa-miR-374c-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+406	67	hsa-miR-208b-3p	4641	MYO1C	NM_001080950	myosin IC
+407	67	hsa-miR-548o-5p	23411	SIRT1	NM_001142498	sirtuin 1
+408	67	hsa-miR-423-5p	2771	GNAI2	NM_001282619	G protein subunit alpha i2
+409	67	hsa-miR-3605-5p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+410	67	hsa-miR-548am-5p	23411	SIRT1	NM_001142498	sirtuin 1
+411	67	hsa-miR-148b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+412	67	hsa-miR-656-3p	4976	OPA1	NM_130834	OPA1, mitochondrial dynamin like GTPase
+413	66	hsa-miR-146a-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+414	66	hsa-miR-449a	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+415	66	hsa-miR-3129-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+416	66	hsa-miR-339-5p	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+417	66	hsa-miR-3144-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+418	66	hsa-miR-1297	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+419	66	hsa-miR-495-3p	4976	OPA1	NM_130834	OPA1, mitochondrial dynamin like GTPase
+420	66	hsa-miR-4677-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+421	66	hsa-miR-142-5p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+422	66	hsa-miR-146b-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+423	66	hsa-miR-493-3p	27131	SNX5	NM_001282454	sorting nexin 5
+424	66	hsa-miR-653-3p	23411	SIRT1	NM_001142498	sirtuin 1
+425	66	hsa-miR-141-3p	23411	SIRT1	NM_001142498	sirtuin 1
+426	66	hsa-miR-200a-3p	23411	SIRT1	NM_001142498	sirtuin 1
+427	66	hsa-miR-452-3p	23411	SIRT1	NM_001142498	sirtuin 1
+428	66	hsa-miR-199a-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+429	66	hsa-miR-135b-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+430	66	hsa-miR-199b-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+431	65	hsa-miR-1306-5p	3952	LEP	NM_000230	leptin
+432	65	hsa-miR-339-5p	4641	MYO1C	NM_001080950	myosin IC
+433	65	hsa-miR-589-3p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+434	65	hsa-miR-331-3p	3952	LEP	NM_000230	leptin
+435	65	hsa-miR-3171	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+436	65	hsa-miR-3065-5p	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+437	65	hsa-miR-497-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+438	65	hsa-miR-182-5p	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+439	65	hsa-miR-212-5p	3952	LEP	NM_000230	leptin
+440	65	hsa-miR-365a-5p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+441	65	hsa-miR-3679-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+442	65	hsa-miR-3605-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+443	65	hsa-miR-494-3p	23411	SIRT1	NM_001142498	sirtuin 1
+444	65	hsa-miR-497-3p	27131	SNX5	NM_001282454	sorting nexin 5
+445	65	hsa-miR-365b-5p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+446	65	hsa-miR-424-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+447	64	hsa-miR-1275	2771	GNAI2	NM_001282620	G protein subunit alpha i2
+448	64	hsa-miR-142-5p	4641	MYO1C	NM_001080779	myosin IC
+449	64	hsa-miR-342-5p	51043	ZBTB7B	NM_001256455	zinc finger and BTB domain containing 7B
+450	64	hsa-miR-330-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+451	64	hsa-miR-627-3p	27131	SNX5	NM_001282454	sorting nexin 5
+452	64	hsa-miR-1258	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+453	64	hsa-miR-224-5p	79746	ECHDC3	NM_024693	enoyl-CoA hydratase domain containing 3
+454	64	hsa-miR-101-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+455	64	hsa-miR-10b-3p	9971	NR1H4	NM_001206992	nuclear receptor subfamily 1 group H member 4
+456	64	hsa-miR-4423-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+457	63	hsa-miR-30a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+458	63	hsa-miR-34b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+459	63	hsa-miR-3179	51043	ZBTB7B	NM_001256455	zinc finger and BTB domain containing 7B
+460	63	hsa-miR-374a-5p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+461	63	hsa-miR-628-5p	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+462	63	hsa-miR-26a-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+463	63	hsa-miR-495-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+464	63	hsa-miR-296-5p	51043	ZBTB7B	NM_001252406	zinc finger and BTB domain containing 7B
+465	63	hsa-miR-1271-5p	4641	MYO1C	NM_001080779	myosin IC
+466	63	hsa-miR-33b-5p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+467	63	hsa-miR-30c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+468	63	hsa-miR-33a-5p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+469	63	hsa-miR-30b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+470	63	hsa-miR-30d-5p	23411	SIRT1	NM_001142498	sirtuin 1
+471	63	hsa-miR-668-3p	3952	LEP	NM_000230	leptin
+472	63	hsa-miR-30e-5p	23411	SIRT1	NM_001142498	sirtuin 1
+473	63	hsa-miR-2116-3p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+474	63	hsa-miR-132-5p	5590	PRKCZ	NM_001033582	protein kinase C zeta
+475	63	hsa-miR-203a-3p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+476	62	hsa-miR-5699-5p	3952	LEP	NM_000230	leptin
+477	62	hsa-miR-154-5p	114882	OSBPL8	NM_001319652	oxysterol binding protein like 8
+478	62	hsa-miR-1910-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+479	62	hsa-miR-544a	3481	IGF2	NM_000612	insulin like growth factor 2
+480	62	hsa-miR-744-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+481	62	hsa-miR-181c-5p	23411	SIRT1	NM_001142498	sirtuin 1
+482	62	hsa-miR-181d-5p	23411	SIRT1	NM_001142498	sirtuin 1
+483	62	hsa-miR-181a-5p	23411	SIRT1	NM_001142498	sirtuin 1
+484	62	hsa-miR-576-3p	4976	OPA1	NM_130835	OPA1, mitochondrial dynamin like GTPase
+485	62	hsa-miR-141-3p	3952	LEP	NM_000230	leptin
+486	62	hsa-miR-101-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+487	62	hsa-miR-3065-3p	79746	ECHDC3	NM_024693	enoyl-CoA hydratase domain containing 3
+488	62	hsa-miR-181b-5p	23411	SIRT1	NM_001142498	sirtuin 1
+489	62	hsa-miR-6511a-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+490	61	hsa-miR-186-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+491	61	hsa-miR-509-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+492	61	hsa-miR-1275	10580	SORBS1	NM_001034957	sorbin and SH3 domain containing 1
+493	61	hsa-miR-1275	51043	ZBTB7B	NM_001256455	zinc finger and BTB domain containing 7B
+494	61	hsa-miR-509-3-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+495	61	hsa-miR-380-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+496	61	hsa-miR-421	114882	OSBPL8	NM_001003712	oxysterol binding protein like 8
+497	61	hsa-miR-622	10580	SORBS1	NM_006434	sorbin and SH3 domain containing 1
+498	61	hsa-miR-124-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+499	61	hsa-miR-1185-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+500	61	hsa-miR-221-3p	51094	ADIPOR1	NM_001290629	adiponectin receptor 1
+501	61	hsa-miR-485-5p	4976	OPA1	NM_130834	OPA1, mitochondrial dynamin like GTPase
+502	61	hsa-miR-142-3p	114882	OSBPL8	NM_001319655	oxysterol binding protein like 8
+503	61	hsa-miR-802	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+504	61	hsa-miR-619-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+505	61	hsa-miR-665	6653	SORL1	NM_003105	sortilin related receptor 1
+506	61	hsa-miR-423-5p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+507	61	hsa-miR-506-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+508	61	hsa-miR-222-3p	51094	ADIPOR1	NM_001290629	adiponectin receptor 1
+509	61	hsa-miR-656-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+510	61	hsa-miR-194-5p	23411	SIRT1	NM_001142498	sirtuin 1
+511	60	hsa-miR-449a	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+512	60	hsa-miR-449c-5p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+513	60	hsa-miR-3121-3p	114882	OSBPL8	NM_001319653	oxysterol binding protein like 8
+514	60	hsa-miR-34a-5p	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+515	60	hsa-miR-34b-5p	5058	PAK1	NM_002576	p21 (RAC1) activated kinase 1
+516	60	hsa-miR-615-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+517	60	hsa-miR-153-3p	80318	GKAP1	NM_001135953	G kinase anchoring protein 1
+518	60	hsa-miR-548t-5p	64710	NUCKS1	NM_022731	nuclear casein kinase and cyclin dependent kinase substrate 1
+519	60	hsa-miR-766-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+520	60	hsa-miR-221-5p	5590	PRKCZ	NM_001242874	protein kinase C zeta
+521	60	hsa-miR-671-5p	3952	LEP	NM_000230	leptin
+522	60	hsa-miR-513a-5p	6653	SORL1	NM_003105	sortilin related receptor 1
+523	60	hsa-miR-449b-5p	6714	SRC	NM_005417	SRC proto-oncogene, non-receptor tyrosine kinase
+524	60	hsa-miR-550a-3p	6653	SORL1	NM_003105	sortilin related receptor 1
+525	60	hsa-miR-505-5p	4641	MYO1C	NM_001080779	myosin IC

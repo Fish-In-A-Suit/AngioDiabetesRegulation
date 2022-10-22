@@ -1,0 +1,102 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	97	hsa-miR-182-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+2	96	hsa-let-7f-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+3	96	hsa-miR-98-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+4	96	hsa-let-7b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+5	96	hsa-let-7g-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+6	96	hsa-let-7a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+7	96	hsa-let-7i-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+8	96	hsa-let-7e-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+9	96	hsa-let-7c-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+10	95	hsa-let-7d-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+11	94	hsa-miR-15b-5p	3643	INSR	NM_000208	insulin receptor
+12	94	hsa-miR-548t-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+13	93	hsa-miR-497-5p	3643	INSR	NM_000208	insulin receptor
+14	91	hsa-miR-16-5p	3643	INSR	NM_000208	insulin receptor
+15	91	hsa-let-7i-5p	3643	INSR	NM_000208	insulin receptor
+16	91	hsa-miR-15a-5p	3643	INSR	NM_000208	insulin receptor
+17	91	hsa-miR-195-5p	3643	INSR	NM_000208	insulin receptor
+18	90	hsa-miR-509-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+19	90	hsa-miR-509-3-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+20	90	hsa-miR-3150b-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+21	90	hsa-miR-424-5p	3643	INSR	NM_000208	insulin receptor
+22	88	hsa-let-7f-5p	3643	INSR	NM_000208	insulin receptor
+23	88	hsa-let-7d-5p	3643	INSR	NM_000208	insulin receptor
+24	88	hsa-miR-411-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+25	88	hsa-miR-98-5p	3643	INSR	NM_000208	insulin receptor
+26	88	hsa-let-7b-5p	3643	INSR	NM_000208	insulin receptor
+27	88	hsa-let-7g-5p	3643	INSR	NM_000208	insulin receptor
+28	88	hsa-miR-379-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+29	88	hsa-let-7a-5p	3643	INSR	NM_000208	insulin receptor
+30	88	hsa-miR-223-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+31	88	hsa-let-7e-5p	3643	INSR	NM_000208	insulin receptor
+32	88	hsa-let-7c-5p	3643	INSR	NM_000208	insulin receptor
+33	87	hsa-miR-96-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+34	86	hsa-miR-548an	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+35	86	hsa-miR-27a-3p	3643	INSR	NM_000208	insulin receptor
+36	86	hsa-miR-27b-3p	3643	INSR	NM_000208	insulin receptor
+37	85	hsa-miR-492	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+38	85	hsa-miR-1271-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+39	85	hsa-miR-448	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+40	85	hsa-miR-330-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+41	85	hsa-miR-627-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+42	84	hsa-miR-1275	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+43	84	hsa-miR-3928-3p	3643	INSR	NM_000208	insulin receptor
+44	84	hsa-miR-324-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+45	83	hsa-miR-494-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+46	82	hsa-miR-15b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+47	82	hsa-miR-16-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+48	82	hsa-miR-15a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+49	82	hsa-miR-195-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+50	82	hsa-miR-194-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+51	81	hsa-miR-5699-5p	3643	INSR	NM_001079817	insulin receptor
+52	81	hsa-miR-759	3643	INSR	NM_000208	insulin receptor
+53	80	hsa-miR-3934-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+54	80	hsa-miR-202-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+55	79	hsa-miR-497-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+56	79	hsa-miR-424-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+57	78	hsa-miR-186-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+58	78	hsa-miR-3187-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+59	77	hsa-miR-3183	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+60	77	hsa-miR-361-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+61	77	hsa-miR-32-3p	3643	INSR	NM_000208	insulin receptor
+62	76	hsa-miR-141-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+63	76	hsa-miR-200a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+64	76	hsa-miR-550a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+65	76	hsa-miR-1271-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+66	76	hsa-miR-450b-5p	3643	INSR	NM_000208	insulin receptor
+67	75	hsa-miR-205-5p	3643	INSR	NM_000208	insulin receptor
+68	75	hsa-miR-1304-5p	3643	INSR	NM_000208	insulin receptor
+69	75	hsa-miR-128-3p	3643	INSR	NM_000208	insulin receptor
+70	74	hsa-miR-376a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+71	74	hsa-miR-376b-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+72	73	hsa-miR-379-5p	3643	INSR	NM_000208	insulin receptor
+73	73	hsa-miR-513a-5p	3643	INSR	NM_000208	insulin receptor
+74	71	hsa-miR-548t-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+75	71	hsa-miR-145-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+76	70	hsa-miR-153-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+77	69	hsa-miR-503-5p	3643	INSR	NM_000208	insulin receptor
+78	68	hsa-miR-597-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+79	67	hsa-miR-548t-5p	3643	INSR	NM_000208	insulin receptor
+80	67	hsa-miR-625-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+81	66	hsa-miR-3121-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+82	65	hsa-miR-548t-3p	3643	INSR	NM_000208	insulin receptor
+83	65	hsa-miR-432-5p	3643	INSR	NM_001079817	insulin receptor
+84	65	hsa-miR-185-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+85	64	hsa-miR-328-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+86	64	hsa-miR-3130-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+87	64	hsa-miR-3175	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+88	63	hsa-miR-320d	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+89	63	hsa-miR-320c	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+90	63	hsa-miR-320b	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+91	62	hsa-miR-139-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+92	62	hsa-miR-329-3p	3643	INSR	NM_001079817	insulin receptor
+93	62	hsa-miR-1224-5p	3643	INSR	NM_000208	insulin receptor
+94	62	hsa-miR-362-3p	3643	INSR	NM_001079817	insulin receptor
+95	62	hsa-miR-432-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+96	62	hsa-miR-208b-3p	3643	INSR	NM_000208	insulin receptor
+97	61	hsa-miR-105-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+98	61	hsa-miR-34a-3p	3643	INSR	NM_000208	insulin receptor
+99	60	hsa-miR-450a-2-3p	3643	INSR	NM_000208	insulin receptor
+100	60	hsa-miR-379-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+101	60	hsa-miR-381-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor

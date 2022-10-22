@@ -1,0 +1,349 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	98	hsa-miR-186-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+2	98	hsa-miR-19a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+3	98	hsa-miR-19b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+4	97	hsa-miR-3065-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+5	97	hsa-miR-182-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+6	96	hsa-miR-1297	5580	PRKCD	NM_001316327	protein kinase C delta
+7	96	hsa-miR-26a-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+8	96	hsa-miR-200c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+9	96	hsa-miR-26b-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+10	96	hsa-miR-429	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+11	96	hsa-let-7f-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+12	96	hsa-miR-98-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+13	96	hsa-let-7b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+14	96	hsa-let-7g-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+15	96	hsa-miR-200b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+16	96	hsa-let-7a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+17	96	hsa-let-7i-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+18	96	hsa-let-7e-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+19	96	hsa-let-7c-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+20	95	hsa-miR-3121-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+21	95	hsa-miR-153-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+22	95	hsa-let-7d-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+23	94	hsa-miR-4713-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+24	94	hsa-miR-15b-5p	3643	INSR	NM_000208	insulin receptor
+25	94	hsa-miR-548t-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+26	94	hsa-miR-141-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+27	94	hsa-miR-200a-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+28	94	hsa-miR-297	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+29	93	hsa-miR-548e-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+30	93	hsa-miR-514a-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+31	93	hsa-miR-664b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+32	93	hsa-miR-181c-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+33	93	hsa-miR-497-5p	3643	INSR	NM_000208	insulin receptor
+34	93	hsa-miR-181d-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+35	93	hsa-miR-337-3p	3717	JAK2	NM_001322194	Janus kinase 2
+36	93	hsa-miR-548a-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+37	93	hsa-miR-181a-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+38	93	hsa-miR-181b-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+39	93	hsa-miR-548f-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+40	93	hsa-miR-203a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+41	92	hsa-miR-380-3p	3717	JAK2	NM_001322194	Janus kinase 2
+42	92	hsa-miR-455-3p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+43	92	hsa-miR-129-5p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+44	92	hsa-miR-568	3717	JAK2	NM_001322194	Janus kinase 2
+45	92	hsa-miR-219a-1-3p	3717	JAK2	NM_001322194	Janus kinase 2
+46	92	hsa-miR-493-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+47	91	hsa-miR-216a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+48	91	hsa-miR-320d	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+49	91	hsa-miR-211-5p	3717	JAK2	NM_001322194	Janus kinase 2
+50	91	hsa-miR-16-5p	3643	INSR	NM_000208	insulin receptor
+51	91	hsa-miR-320c	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+52	91	hsa-miR-204-5p	3717	JAK2	NM_001322194	Janus kinase 2
+53	91	hsa-let-7i-5p	3643	INSR	NM_000208	insulin receptor
+54	91	hsa-miR-27a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+55	91	hsa-miR-15a-5p	3643	INSR	NM_000208	insulin receptor
+56	91	hsa-miR-195-5p	3643	INSR	NM_000208	insulin receptor
+57	91	hsa-miR-320b	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+58	91	hsa-miR-27b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+59	90	hsa-miR-96-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+60	90	hsa-miR-509-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+61	90	hsa-miR-509-3-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+62	90	hsa-miR-148a-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+63	90	hsa-miR-221-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+64	90	hsa-miR-152-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+65	90	hsa-miR-182-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+66	90	hsa-miR-3150b-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+67	90	hsa-miR-486-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+68	90	hsa-miR-1304-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+69	90	hsa-miR-222-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+70	90	hsa-miR-148b-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+71	90	hsa-miR-424-5p	3643	INSR	NM_000208	insulin receptor
+72	89	hsa-miR-3614-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+73	89	hsa-miR-548an	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+74	89	hsa-miR-198	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+75	89	hsa-miR-27a-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+76	89	hsa-miR-513a-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+77	89	hsa-miR-548l	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+78	89	hsa-miR-27b-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+79	88	hsa-miR-106b-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+80	88	hsa-miR-15b-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+81	88	hsa-let-7f-5p	3643	INSR	NM_000208	insulin receptor
+82	88	hsa-let-7d-5p	3643	INSR	NM_000208	insulin receptor
+83	88	hsa-miR-1271-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+84	88	hsa-miR-4520-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+85	88	hsa-miR-411-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+86	88	hsa-miR-98-5p	3643	INSR	NM_000208	insulin receptor
+87	88	hsa-miR-16-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+88	88	hsa-let-7b-5p	3643	INSR	NM_000208	insulin receptor
+89	88	hsa-miR-20b-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+90	88	hsa-let-7g-5p	3643	INSR	NM_000208	insulin receptor
+91	88	hsa-miR-106a-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+92	88	hsa-miR-9-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+93	88	hsa-miR-93-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+94	88	hsa-miR-379-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+95	88	hsa-let-7a-5p	3643	INSR	NM_000208	insulin receptor
+96	88	hsa-miR-17-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+97	88	hsa-miR-223-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+98	88	hsa-miR-20a-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+99	88	hsa-miR-519d-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+100	88	hsa-miR-15a-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+101	88	hsa-miR-195-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+102	88	hsa-let-7e-5p	3643	INSR	NM_000208	insulin receptor
+103	88	hsa-let-7c-5p	3643	INSR	NM_000208	insulin receptor
+104	87	hsa-miR-450a-2-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+105	87	hsa-miR-96-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+106	87	hsa-miR-448	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+107	86	hsa-miR-124-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+108	86	hsa-miR-513a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+109	86	hsa-miR-29c-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+110	86	hsa-miR-29a-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+111	86	hsa-miR-545-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+112	86	hsa-miR-548an	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+113	86	hsa-miR-548an	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+114	86	hsa-miR-29b-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+115	86	hsa-miR-506-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+116	86	hsa-miR-197-3p	3717	JAK2	NM_001322194	Janus kinase 2
+117	86	hsa-miR-27a-3p	3643	INSR	NM_000208	insulin receptor
+118	86	hsa-miR-513c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+119	86	hsa-miR-27b-3p	3643	INSR	NM_000208	insulin receptor
+120	85	hsa-miR-492	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+121	85	hsa-miR-329-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+122	85	hsa-miR-664b-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+123	85	hsa-miR-362-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+124	85	hsa-miR-1271-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+125	85	hsa-miR-448	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+126	85	hsa-miR-330-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+127	85	hsa-miR-627-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+128	84	hsa-miR-3120-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+129	84	hsa-miR-548t-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+130	84	hsa-miR-1275	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+131	84	hsa-miR-142-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+132	84	hsa-miR-153-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+133	84	hsa-miR-448	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+134	84	hsa-miR-3928-3p	3643	INSR	NM_000208	insulin receptor
+135	84	hsa-miR-126-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+136	84	hsa-miR-3942-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+137	84	hsa-miR-324-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+138	83	hsa-miR-542-3p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+139	83	hsa-miR-150-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+140	83	hsa-miR-105-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+141	83	hsa-miR-497-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+142	83	hsa-miR-494-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+143	83	hsa-miR-3157-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+144	83	hsa-miR-424-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+145	82	hsa-miR-96-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+146	82	hsa-miR-939-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+147	82	hsa-miR-15b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+148	82	hsa-miR-182-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+149	82	hsa-miR-135b-5p	3717	JAK2	NM_001322194	Janus kinase 2
+150	82	hsa-miR-16-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+151	82	hsa-miR-9-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+152	82	hsa-miR-135a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+153	82	hsa-miR-15a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+154	82	hsa-miR-195-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+155	82	hsa-miR-194-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+156	81	hsa-miR-5699-5p	3643	INSR	NM_001079817	insulin receptor
+157	81	hsa-miR-629-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+158	81	hsa-miR-627-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+159	81	hsa-miR-605-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+160	81	hsa-miR-759	3643	INSR	NM_000208	insulin receptor
+161	80	hsa-miR-32-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+162	80	hsa-miR-370-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+163	80	hsa-miR-642a-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+164	80	hsa-miR-92b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+165	80	hsa-miR-3065-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+166	80	hsa-miR-1270	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+167	80	hsa-miR-1271-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+168	80	hsa-miR-3934-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+169	80	hsa-miR-202-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+170	80	hsa-miR-769-3p	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+171	80	hsa-miR-92a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+172	79	hsa-miR-509-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+173	79	hsa-miR-509-3-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+174	79	hsa-miR-497-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+175	79	hsa-miR-330-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+176	79	hsa-miR-548b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+177	79	hsa-miR-223-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+178	79	hsa-miR-424-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+179	78	hsa-miR-186-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+180	78	hsa-miR-212-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+181	78	hsa-miR-433-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+182	78	hsa-miR-3187-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+183	78	hsa-miR-337-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+184	78	hsa-miR-3928-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+185	78	hsa-miR-128-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+186	78	hsa-miR-132-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+187	77	hsa-miR-519b-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+188	77	hsa-miR-519a-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+189	77	hsa-miR-3183	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+190	77	hsa-miR-367-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+191	77	hsa-miR-361-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+192	77	hsa-miR-363-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+193	77	hsa-miR-138-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+194	77	hsa-miR-32-3p	3643	INSR	NM_000208	insulin receptor
+195	77	hsa-miR-25-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+196	76	hsa-miR-148a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+197	76	hsa-miR-152-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+198	76	hsa-miR-219b-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+199	76	hsa-miR-141-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+200	76	hsa-miR-200a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+201	76	hsa-miR-550a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+202	76	hsa-miR-1271-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+203	76	hsa-miR-148b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+204	76	hsa-miR-450b-5p	3643	INSR	NM_000208	insulin receptor
+205	75	hsa-miR-205-5p	3643	INSR	NM_000208	insulin receptor
+206	75	hsa-miR-224-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+207	75	hsa-miR-1304-5p	3643	INSR	NM_000208	insulin receptor
+208	75	hsa-miR-128-3p	3643	INSR	NM_000208	insulin receptor
+209	74	hsa-miR-520h	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+210	74	hsa-miR-520g-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+211	74	hsa-miR-376a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+212	74	hsa-miR-376b-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+213	74	hsa-miR-182-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+214	74	hsa-miR-101-3p	3717	JAK2	NM_001322194	Janus kinase 2
+215	73	hsa-miR-379-5p	3643	INSR	NM_000208	insulin receptor
+216	73	hsa-miR-218-5p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+217	73	hsa-miR-105-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+218	73	hsa-miR-3162-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+219	73	hsa-miR-185-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+220	73	hsa-miR-513a-5p	3643	INSR	NM_000208	insulin receptor
+221	73	hsa-miR-561-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+222	72	hsa-miR-34b-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+223	72	hsa-miR-10a-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+224	72	hsa-miR-590-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+225	72	hsa-miR-382-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+226	72	hsa-miR-21-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+227	72	hsa-miR-5571-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+228	72	hsa-miR-381-3p	3717	JAK2	NM_001322194	Janus kinase 2
+229	72	hsa-miR-10b-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+230	72	hsa-miR-767-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+231	71	hsa-miR-548t-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+232	71	hsa-miR-3121-3p	3717	JAK2	NM_001322194	Janus kinase 2
+233	71	hsa-miR-3074-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+234	71	hsa-miR-145-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+235	71	hsa-miR-513a-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+236	70	hsa-miR-96-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+237	70	hsa-miR-374a-3p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+238	70	hsa-miR-134-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+239	70	hsa-miR-153-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+240	70	hsa-miR-342-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+241	70	hsa-miR-545-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+242	70	hsa-miR-302c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+243	70	hsa-miR-302a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+244	70	hsa-miR-126-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+245	70	hsa-miR-302d-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+246	70	hsa-miR-302b-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+247	69	hsa-miR-1260a	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+248	69	hsa-miR-374a-5p	5580	PRKCD	NM_212539	protein kinase C delta
+249	69	hsa-miR-514b-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+250	69	hsa-miR-513c-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+251	69	hsa-miR-140-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+252	69	hsa-miR-655-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+253	69	hsa-miR-503-5p	3643	INSR	NM_000208	insulin receptor
+254	69	hsa-miR-1260b	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+255	69	hsa-miR-374c-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+256	69	hsa-miR-107	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+257	69	hsa-miR-103a-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+258	69	hsa-miR-548f-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+259	69	hsa-miR-374b-5p	5580	PRKCD	NM_212539	protein kinase C delta
+260	68	hsa-miR-23a-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+261	68	hsa-miR-597-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+262	68	hsa-miR-124-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+263	68	hsa-miR-212-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+264	68	hsa-miR-433-3p	3717	JAK2	NM_001322194	Janus kinase 2
+265	68	hsa-miR-3200-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+266	68	hsa-miR-629-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+267	68	hsa-miR-548a-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+268	68	hsa-miR-1185-1-3p	5580	PRKCD	NM_001316327	protein kinase C delta
+269	68	hsa-miR-23b-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+270	68	hsa-miR-506-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+271	68	hsa-miR-582-5p	3717	JAK2	NM_001322194	Janus kinase 2
+272	68	hsa-miR-132-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+273	68	hsa-miR-1185-2-3p	5580	PRKCD	NM_001316327	protein kinase C delta
+274	67	hsa-miR-374a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+275	67	hsa-miR-548t-5p	3643	INSR	NM_000208	insulin receptor
+276	67	hsa-miR-655-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+277	67	hsa-miR-374c-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+278	67	hsa-miR-297	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+279	67	hsa-miR-1323	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+280	67	hsa-miR-625-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+281	67	hsa-miR-374b-5p	3717	JAK2	NM_001322194	Janus kinase 2
+282	66	hsa-miR-5699-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+283	66	hsa-miR-3121-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+284	66	hsa-miR-548o-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+285	66	hsa-miR-548o-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+286	66	hsa-miR-1323	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+287	66	hsa-miR-561-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+288	65	hsa-miR-548t-3p	3643	INSR	NM_000208	insulin receptor
+289	65	hsa-miR-548e-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+290	65	hsa-miR-3144-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+291	65	hsa-miR-127-5p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+292	65	hsa-miR-758-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+293	65	hsa-miR-1271-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+294	65	hsa-miR-432-5p	3643	INSR	NM_001079817	insulin receptor
+295	65	hsa-miR-503-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+296	65	hsa-miR-3614-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+297	65	hsa-miR-766-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+298	65	hsa-miR-185-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+299	64	hsa-miR-328-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+300	64	hsa-miR-3664-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+301	64	hsa-miR-3130-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+302	64	hsa-miR-544a	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+303	64	hsa-miR-15b-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+304	64	hsa-miR-497-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+305	64	hsa-miR-802	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+306	64	hsa-miR-16-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+307	64	hsa-miR-3175	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+308	64	hsa-miR-15a-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+309	64	hsa-miR-195-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+310	64	hsa-miR-424-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+311	63	hsa-miR-372-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+312	63	hsa-miR-320d	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+313	63	hsa-miR-628-5p	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+314	63	hsa-miR-520c-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+315	63	hsa-miR-373-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+316	63	hsa-miR-320c	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+317	63	hsa-miR-504-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+318	63	hsa-miR-132-5p	5590	PRKCZ	NM_001033582	protein kinase C zeta
+319	63	hsa-miR-320b	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+320	62	hsa-miR-664b-5p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+321	62	hsa-miR-139-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+322	62	hsa-miR-329-3p	3643	INSR	NM_001079817	insulin receptor
+323	62	hsa-miR-1224-5p	3643	INSR	NM_000208	insulin receptor
+324	62	hsa-miR-362-3p	3643	INSR	NM_001079817	insulin receptor
+325	62	hsa-miR-432-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+326	62	hsa-miR-545-3p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+327	62	hsa-miR-208b-3p	3643	INSR	NM_000208	insulin receptor
+328	62	hsa-miR-126-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+329	62	hsa-miR-656-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+330	61	hsa-miR-509-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+331	61	hsa-miR-410-3p	5580	PRKCD	NM_212539	protein kinase C delta
+332	61	hsa-miR-509-3-5p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+333	61	hsa-miR-873-5p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+334	61	hsa-miR-124-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+335	61	hsa-miR-105-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+336	61	hsa-miR-105-5p	2885	GRB2	NM_002086	growth factor receptor bound protein 2
+337	61	hsa-miR-1285-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+338	61	hsa-miR-506-3p	5781	PTPN11	NM_002834	protein tyrosine phosphatase, non-receptor type 11
+339	61	hsa-miR-34a-3p	3643	INSR	NM_000208	insulin receptor
+340	60	hsa-miR-450a-2-3p	3643	INSR	NM_000208	insulin receptor
+341	60	hsa-miR-449a	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+342	60	hsa-miR-379-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+343	60	hsa-miR-380-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+344	60	hsa-miR-34a-5p	5781	PTPN11	NM_080601	protein tyrosine phosphatase, non-receptor type 11
+345	60	hsa-miR-17-3p	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha
+346	60	hsa-miR-381-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+347	60	hsa-miR-221-5p	5590	PRKCZ	NM_001242874	protein kinase C zeta
+348	60	hsa-miR-1972	5290	PIK3CA	NM_006218	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha

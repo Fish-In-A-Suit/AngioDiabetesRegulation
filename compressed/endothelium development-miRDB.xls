@@ -1,0 +1,2444 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-449a	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+2	100	hsa-miR-34a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+3	100	hsa-miR-34c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+4	100	hsa-miR-449b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+5	99	hsa-miR-374a-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+6	99	hsa-miR-589-3p	4089	SMAD4	NM_005359	SMAD family member 4
+7	99	hsa-miR-3065-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+8	99	hsa-miR-548t-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+9	99	hsa-miR-181c-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+10	99	hsa-miR-181c-5p	5629	PROX1	NM_002763	prospero homeobox 1
+11	99	hsa-miR-181c-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+12	99	hsa-miR-181d-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+13	99	hsa-miR-181d-5p	5629	PROX1	NM_002763	prospero homeobox 1
+14	99	hsa-miR-181d-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+15	99	hsa-miR-545-3p	5962	RDX	NM_001260494	radixin
+16	99	hsa-miR-181a-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+17	99	hsa-miR-181a-5p	5629	PROX1	NM_002763	prospero homeobox 1
+18	99	hsa-miR-181a-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+19	99	hsa-miR-9-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+20	99	hsa-miR-101-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+21	99	hsa-miR-181b-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+22	99	hsa-miR-181b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+23	99	hsa-miR-181b-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+24	99	hsa-miR-374b-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+25	99	hsa-miR-203a-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+26	98	hsa-miR-519b-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+27	98	hsa-miR-3162-3p	1499	CTNNB1	NM_001904	catenin beta 1
+28	98	hsa-miR-449a	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+29	98	hsa-miR-519a-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+30	98	hsa-miR-183-3p	1499	CTNNB1	NM_001904	catenin beta 1
+31	98	hsa-miR-548e-3p	4089	SMAD4	NM_005359	SMAD family member 4
+32	98	hsa-miR-105-5p	7082	TJP1	NM_001301025	tight junction protein 1
+33	98	hsa-miR-34a-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+34	98	hsa-miR-2355-5p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+35	98	hsa-miR-19a-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+36	98	hsa-miR-19a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+37	98	hsa-miR-200c-3p	4478	MSN	NM_002444	moesin
+38	98	hsa-miR-429	4478	MSN	NM_002444	moesin
+39	98	hsa-miR-140-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+40	98	hsa-miR-34c-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+41	98	hsa-miR-548a-3p	4089	SMAD4	NM_005359	SMAD family member 4
+42	98	hsa-miR-377-3p	182	JAG1	NM_000214	jagged 1
+43	98	hsa-miR-330-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+44	98	hsa-miR-499a-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+45	98	hsa-miR-200b-3p	4478	MSN	NM_002444	moesin
+46	98	hsa-miR-149-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+47	98	hsa-miR-568	4851	NOTCH1	NM_017617	notch 1
+48	98	hsa-miR-19b-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+49	98	hsa-miR-19b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+50	98	hsa-miR-762	94	ACVRL1	NM_001077401	activin A receptor like type 1
+51	98	hsa-miR-9-5p	11167	FSTL1	NM_007085	follistatin like 1
+52	98	hsa-miR-548f-3p	4089	SMAD4	NM_005359	SMAD family member 4
+53	98	hsa-miR-449b-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+54	97	hsa-miR-885-5p	1499	CTNNB1	NM_001904	catenin beta 1
+55	97	hsa-miR-139-5p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+56	97	hsa-miR-144-3p	7082	TJP1	NM_001301026	tight junction protein 1
+57	97	hsa-miR-548j-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+58	97	hsa-miR-548e-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+59	97	hsa-miR-548c-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+60	97	hsa-miR-590-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+61	97	hsa-miR-193a-3p	51735	RAPGEF6	NM_001164390	Rap guanine nucleotide exchange factor 6
+62	97	hsa-miR-449c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+63	97	hsa-miR-544a	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+64	97	hsa-miR-21-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+65	97	hsa-miR-34b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+66	97	hsa-miR-548b-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+67	97	hsa-miR-200a-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+68	97	hsa-miR-548d-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+69	97	hsa-miR-15b-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+70	97	hsa-miR-548h-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+71	97	hsa-miR-497-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+72	97	hsa-miR-548a-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+73	97	hsa-miR-16-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+74	97	hsa-miR-5001-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+75	97	hsa-miR-338-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+76	97	hsa-miR-627-3p	5764	PTN	NM_001321386	pleiotrophin
+77	97	hsa-miR-548o-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+78	97	hsa-miR-193b-3p	51735	RAPGEF6	NM_001164390	Rap guanine nucleotide exchange factor 6
+79	97	hsa-miR-2682-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+80	97	hsa-miR-548am-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+81	97	hsa-miR-548f-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+82	97	hsa-miR-3140-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+83	97	hsa-miR-15a-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+84	97	hsa-miR-195-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+85	97	hsa-miR-424-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+86	96	hsa-miR-23a-3p	7082	TJP1	NM_001301025	tight junction protein 1
+87	96	hsa-miR-374a-3p	5629	PROX1	NM_002763	prospero homeobox 1
+88	96	hsa-miR-548j-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+89	96	hsa-miR-548e-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+90	96	hsa-miR-548c-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+91	96	hsa-miR-1297	182	JAG1	NM_000214	jagged 1
+92	96	hsa-miR-495-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+93	96	hsa-miR-495-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+94	96	hsa-miR-548b-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+95	96	hsa-miR-361-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+96	96	hsa-miR-548d-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+97	96	hsa-miR-548h-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+98	96	hsa-miR-3143	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+99	96	hsa-miR-582-3p	387	RHOA	NM_001313945	ras homolog family member A
+100	96	hsa-miR-548a-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+101	96	hsa-miR-23b-3p	7082	TJP1	NM_001301025	tight junction protein 1
+102	96	hsa-miR-548o-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+103	96	hsa-miR-101-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+104	96	hsa-miR-568	7082	TJP1	NM_001301025	tight junction protein 1
+105	96	hsa-miR-548am-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+106	96	hsa-miR-548f-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+107	95	hsa-miR-515-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+108	95	hsa-miR-23a-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+109	95	hsa-miR-96-5p	4478	MSN	NM_002444	moesin
+110	95	hsa-miR-374a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+111	95	hsa-miR-3183	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+112	95	hsa-miR-410-3p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+113	95	hsa-miR-18b-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+114	95	hsa-miR-589-3p	5629	PROX1	NM_002763	prospero homeobox 1
+115	95	hsa-miR-124-3p	8829	NRP1	NM_003873	neuropilin 1
+116	95	hsa-miR-26a-5p	182	JAG1	NM_000214	jagged 1
+117	95	hsa-miR-19a-3p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+118	95	hsa-miR-19a-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+119	95	hsa-miR-3065-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+120	95	hsa-miR-26b-5p	182	JAG1	NM_000214	jagged 1
+121	95	hsa-miR-154-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+122	95	hsa-miR-3173-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+123	95	hsa-miR-545-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+124	95	hsa-miR-107	93	ACVR2B	NM_001106	activin A receptor type 2B
+125	95	hsa-miR-381-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+126	95	hsa-miR-23b-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+127	95	hsa-miR-103a-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+128	95	hsa-miR-18a-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+129	95	hsa-miR-101-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+130	95	hsa-miR-506-3p	8829	NRP1	NM_003873	neuropilin 1
+131	95	hsa-miR-7-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+132	95	hsa-miR-487a-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+133	95	hsa-miR-19b-3p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+134	95	hsa-miR-19b-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+135	95	hsa-miR-654-3p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+136	95	hsa-miR-454-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+137	94	hsa-miR-3120-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+138	94	hsa-miR-372-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+139	94	hsa-miR-30a-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+140	94	hsa-miR-1228-3p	7082	TJP1	NM_001301025	tight junction protein 1
+141	94	hsa-miR-106b-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+142	94	hsa-miR-144-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+143	94	hsa-miR-374a-3p	387	RHOA	NM_001313945	ras homolog family member A
+144	94	hsa-miR-148a-3p	8829	NRP1	NM_003873	neuropilin 1
+145	94	hsa-miR-105-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+146	94	hsa-miR-495-3p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+147	94	hsa-miR-183-5p	7430	EZR	NM_001111077	ezrin
+148	94	hsa-miR-183-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+149	94	hsa-miR-214-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+150	94	hsa-miR-152-3p	8829	NRP1	NM_003873	neuropilin 1
+151	94	hsa-miR-361-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+152	94	hsa-miR-361-5p	387	RHOA	NM_001313945	ras homolog family member A
+153	94	hsa-miR-520c-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+154	94	hsa-miR-1271-5p	4478	MSN	NM_002444	moesin
+155	94	hsa-miR-373-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+156	94	hsa-miR-30c-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+157	94	hsa-miR-302c-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+158	94	hsa-miR-302a-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+159	94	hsa-miR-30b-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+160	94	hsa-miR-141-3p	182	JAG1	NM_000214	jagged 1
+161	94	hsa-miR-200a-3p	182	JAG1	NM_000214	jagged 1
+162	94	hsa-miR-3942-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+163	94	hsa-miR-494-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+164	94	hsa-miR-302d-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+165	94	hsa-miR-30d-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+166	94	hsa-miR-302b-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+167	94	hsa-miR-20a-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+168	94	hsa-miR-148b-3p	8829	NRP1	NM_003873	neuropilin 1
+169	94	hsa-miR-3175	4478	MSN	NM_002444	moesin
+170	94	hsa-miR-30e-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+171	94	hsa-miR-625-5p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+172	94	hsa-miR-761	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+173	94	hsa-miR-548l	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+174	93	hsa-miR-30a-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+175	93	hsa-miR-491-5p	4478	MSN	NM_002444	moesin
+176	93	hsa-miR-106b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+177	93	hsa-miR-1275	5962	RDX	NM_001260492	radixin
+178	93	hsa-miR-539-3p	182	JAG1	NM_000214	jagged 1
+179	93	hsa-miR-449c-5p	5962	RDX	NM_002906	radixin
+180	93	hsa-miR-214-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+181	93	hsa-miR-34b-5p	5962	RDX	NM_002906	radixin
+182	93	hsa-miR-205-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+183	93	hsa-miR-205-5p	7430	EZR	NM_001111077	ezrin
+184	93	hsa-miR-17-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+185	93	hsa-miR-301a-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+186	93	hsa-miR-15b-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+187	93	hsa-miR-548t-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+188	93	hsa-miR-29c-3p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+189	93	hsa-miR-211-5p	7430	EZR	NM_003379	ezrin
+190	93	hsa-miR-497-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+191	93	hsa-miR-30c-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+192	93	hsa-miR-29a-3p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+193	93	hsa-miR-545-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+194	93	hsa-miR-1827	10630	PDPN	NM_006474	podoplanin
+195	93	hsa-miR-16-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+196	93	hsa-miR-511-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+197	93	hsa-miR-1285-3p	3209	HOXA13	NM_000522	homeobox A13
+198	93	hsa-miR-1285-3p	8829	NRP1	NM_003873	neuropilin 1
+199	93	hsa-miR-20b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+200	93	hsa-miR-20b-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+201	93	hsa-miR-106a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+202	93	hsa-miR-106a-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+203	93	hsa-miR-3614-5p	5962	RDX	NM_001260493	radixin
+204	93	hsa-miR-30b-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+205	93	hsa-miR-9-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+206	93	hsa-miR-93-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+207	93	hsa-miR-93-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+208	93	hsa-miR-876-3p	1365	CLDN3	NM_001306	claudin 3
+209	93	hsa-miR-548an	8829	NRP1	NM_003873	neuropilin 1
+210	93	hsa-miR-29b-3p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+211	93	hsa-miR-301b-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+212	93	hsa-miR-204-5p	7430	EZR	NM_003379	ezrin
+213	93	hsa-miR-2682-5p	5962	RDX	NM_002906	radixin
+214	93	hsa-miR-30d-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+215	93	hsa-miR-17-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+216	93	hsa-miR-17-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+217	93	hsa-miR-342-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+218	93	hsa-miR-20a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+219	93	hsa-miR-148b-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+220	93	hsa-miR-30e-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+221	93	hsa-miR-130a-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+222	93	hsa-miR-493-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+223	93	hsa-miR-519d-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+224	93	hsa-miR-519d-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+225	93	hsa-miR-15a-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+226	93	hsa-miR-761	5629	PROX1	NM_001270616	prospero homeobox 1
+227	93	hsa-miR-195-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+228	93	hsa-miR-636	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+229	93	hsa-miR-424-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+230	93	hsa-miR-130b-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+231	92	hsa-miR-133a-3p	4478	MSN	NM_002444	moesin
+232	92	hsa-miR-3120-3p	1499	CTNNB1	NM_001904	catenin beta 1
+233	92	hsa-miR-548t-3p	182	JAG1	NM_000214	jagged 1
+234	92	hsa-miR-106b-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+235	92	hsa-miR-186-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+236	92	hsa-miR-186-5p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+237	92	hsa-miR-514b-5p	4089	SMAD4	NM_005359	SMAD family member 4
+238	92	hsa-miR-1297	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+239	92	hsa-miR-449c-5p	153562	MARVELD2	NM_001244734	MARVEL domain containing 2
+240	92	hsa-miR-105-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+241	92	hsa-miR-544a	4089	SMAD4	NM_005359	SMAD family member 4
+242	92	hsa-miR-513c-5p	4089	SMAD4	NM_005359	SMAD family member 4
+243	92	hsa-miR-34b-5p	153562	MARVELD2	NM_001244734	MARVEL domain containing 2
+244	92	hsa-miR-758-3p	3084	NRG1	NM_013958	neuregulin 1
+245	92	hsa-miR-1-3p	8829	NRP1	NM_003873	neuropilin 1
+246	92	hsa-miR-200c-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+247	92	hsa-miR-429	25932	CLIC4	NM_013943	chloride intracellular channel 4
+248	92	hsa-miR-651-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+249	92	hsa-miR-133b	4478	MSN	NM_002444	moesin
+250	92	hsa-miR-15b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+251	92	hsa-miR-182-5p	4478	MSN	NM_002444	moesin
+252	92	hsa-miR-545-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+253	92	hsa-miR-16-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+254	92	hsa-miR-381-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+255	92	hsa-miR-448	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+256	92	hsa-miR-5001-5p	2022	ENG	NM_000118	endoglin
+257	92	hsa-miR-126-5p	3209	HOXA13	NM_000522	homeobox A13
+258	92	hsa-miR-1258	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+259	92	hsa-miR-376c-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+260	92	hsa-miR-548k	55273	TMEM100	NM_001099640	transmembrane protein 100
+261	92	hsa-miR-548an	64321	SOX17	NM_022454	SRY-box 17
+262	92	hsa-miR-200b-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+263	92	hsa-miR-149-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+264	92	hsa-miR-2682-5p	153562	MARVELD2	NM_001244734	MARVEL domain containing 2
+265	92	hsa-miR-582-5p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+266	92	hsa-miR-509-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+267	92	hsa-miR-1323	5861	RAB1A	NM_015543	RAB1A, member RAS oncogene family
+268	92	hsa-miR-762	2022	ENG	NM_000118	endoglin
+269	92	hsa-miR-128-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+270	92	hsa-miR-206	8829	NRP1	NM_003873	neuropilin 1
+271	92	hsa-miR-9-5p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+272	92	hsa-miR-15a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+273	92	hsa-miR-195-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+274	92	hsa-miR-548l	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+275	92	hsa-miR-203a-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+276	91	hsa-miR-515-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+277	91	hsa-miR-23a-3p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+278	91	hsa-miR-30a-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+279	91	hsa-miR-3126-5p	11167	FSTL1	NM_007085	follistatin like 1
+280	91	hsa-miR-144-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+281	91	hsa-miR-548e-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+282	91	hsa-miR-539-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+283	91	hsa-miR-148a-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+284	91	hsa-miR-3121-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+285	91	hsa-miR-21-5p	182	JAG1	NM_000214	jagged 1
+286	91	hsa-miR-19a-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+287	91	hsa-miR-152-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+288	91	hsa-miR-29c-3p	11167	FSTL1	NM_007085	follistatin like 1
+289	91	hsa-miR-29c-3p	169044	COL22A1	NM_152888	collagen type XXII alpha 1 chain
+290	91	hsa-miR-30c-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+291	91	hsa-miR-582-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+292	91	hsa-miR-29a-3p	11167	FSTL1	NM_007085	follistatin like 1
+293	91	hsa-miR-29a-3p	169044	COL22A1	NM_152888	collagen type XXII alpha 1 chain
+294	91	hsa-miR-545-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+295	91	hsa-miR-548a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+296	91	hsa-miR-212-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+297	91	hsa-miR-448	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+298	91	hsa-miR-3074-5p	51735	RAPGEF6	NM_001164390	Rap guanine nucleotide exchange factor 6
+299	91	hsa-miR-23b-3p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+300	91	hsa-miR-30b-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+301	91	hsa-miR-500b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+302	91	hsa-miR-548an	5138	PDE2A	NM_001143839	phosphodiesterase 2A
+303	91	hsa-miR-29b-3p	11167	FSTL1	NM_007085	follistatin like 1
+304	91	hsa-miR-29b-3p	169044	COL22A1	NM_152888	collagen type XXII alpha 1 chain
+305	91	hsa-miR-30d-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+306	91	hsa-miR-223-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+307	91	hsa-miR-19b-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+308	91	hsa-miR-323b-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+309	91	hsa-miR-30e-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+310	91	hsa-miR-485-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+311	91	hsa-miR-485-3p	182	JAG1	NM_000214	jagged 1
+312	91	hsa-miR-369-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+313	91	hsa-miR-185-5p	387	RHOA	NM_001313947	ras homolog family member A
+314	91	hsa-miR-548f-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+315	91	hsa-miR-362-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+316	91	hsa-miR-194-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+317	90	hsa-miR-3162-3p	4855	NOTCH4	NM_004557	notch 4
+318	90	hsa-miR-548t-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+319	90	hsa-miR-139-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+320	90	hsa-miR-509-5p	1499	CTNNB1	NM_001904	catenin beta 1
+321	90	hsa-miR-22-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+322	90	hsa-miR-509-3-5p	1499	CTNNB1	NM_001904	catenin beta 1
+323	90	hsa-miR-514b-5p	4233	MET	NM_001324402	MET proto-oncogene, receptor tyrosine kinase
+324	90	hsa-miR-589-3p	4233	MET	NM_001324402	MET proto-oncogene, receptor tyrosine kinase
+325	90	hsa-miR-124-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+326	90	hsa-miR-124-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+327	90	hsa-miR-124-3p	8985	PLOD3	NM_001084	procollagen-lysine,2-oxoglutarate 5-dioxygenase 3
+328	90	hsa-miR-320d	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+329	90	hsa-miR-320d	8829	NRP1	NM_003873	neuropilin 1
+330	90	hsa-miR-212-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+331	90	hsa-miR-346	5962	RDX	NM_002906	radixin
+332	90	hsa-miR-513c-5p	4233	MET	NM_001324402	MET proto-oncogene, receptor tyrosine kinase
+333	90	hsa-miR-153-3p	182	JAG1	NM_000214	jagged 1
+334	90	hsa-miR-497-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+335	90	hsa-miR-497-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+336	90	hsa-miR-655-3p	3084	NRG1	NM_001322205	neuregulin 1
+337	90	hsa-miR-299-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+338	90	hsa-miR-374c-5p	3084	NRG1	NM_001322205	neuregulin 1
+339	90	hsa-miR-489-3p	182	JAG1	NM_000214	jagged 1
+340	90	hsa-miR-320c	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+341	90	hsa-miR-320c	8829	NRP1	NM_003873	neuropilin 1
+342	90	hsa-miR-20b-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+343	90	hsa-miR-106a-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+344	90	hsa-miR-216b-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+345	90	hsa-miR-585-3p	947	CD34	NM_001025109	CD34 molecule
+346	90	hsa-miR-93-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+347	90	hsa-miR-3942-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+348	90	hsa-miR-506-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+349	90	hsa-miR-506-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+350	90	hsa-miR-506-3p	8985	PLOD3	NM_001084	procollagen-lysine,2-oxoglutarate 5-dioxygenase 3
+351	90	hsa-miR-17-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+352	90	hsa-miR-6503-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+353	90	hsa-miR-20a-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+354	90	hsa-miR-1323	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+355	90	hsa-miR-497-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+356	90	hsa-miR-338-3p	8829	NRP1	NM_003873	neuropilin 1
+357	90	hsa-miR-132-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+358	90	hsa-miR-27a-3p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+359	90	hsa-miR-9-5p	8829	NRP1	NM_003873	neuropilin 1
+360	90	hsa-miR-519d-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+361	90	hsa-miR-424-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+362	90	hsa-miR-16-2-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+363	90	hsa-miR-320b	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+364	90	hsa-miR-320b	8829	NRP1	NM_003873	neuropilin 1
+365	90	hsa-miR-548l	4089	SMAD4	NM_005359	SMAD family member 4
+366	90	hsa-miR-27b-3p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+367	89	hsa-miR-486-3p	5138	PDE2A	NM_002599	phosphodiesterase 2A
+368	89	hsa-miR-144-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+369	89	hsa-miR-374a-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+370	89	hsa-miR-124-3p	182	JAG1	NM_000214	jagged 1
+371	89	hsa-miR-205-5p	4089	SMAD4	NM_005359	SMAD family member 4
+372	89	hsa-miR-150-3p	8829	NRP1	NM_003873	neuropilin 1
+373	89	hsa-miR-676-3p	5962	RDX	NM_001260494	radixin
+374	89	hsa-let-7f-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+375	89	hsa-let-7d-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+376	89	hsa-miR-182-5p	11061	CNMD	NM_001011705	chondromodulin
+377	89	hsa-miR-129-2-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+378	89	hsa-miR-98-5p	5962	RDX	NM_002906	radixin
+379	89	hsa-miR-98-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+380	89	hsa-miR-302c-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+381	89	hsa-miR-381-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+382	89	hsa-miR-20a-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+383	89	hsa-let-7b-5p	5962	RDX	NM_002906	radixin
+384	89	hsa-let-7b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+385	89	hsa-let-7g-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+386	89	hsa-miR-302a-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+387	89	hsa-miR-126-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+388	89	hsa-miR-5010-5p	5962	RDX	NM_001260492	radixin
+389	89	hsa-miR-101-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+390	89	hsa-miR-3065-3p	91663	MYADM	NM_001020818	myeloid associated differentiation marker
+391	89	hsa-miR-506-3p	182	JAG1	NM_000214	jagged 1
+392	89	hsa-let-7a-5p	5962	RDX	NM_002906	radixin
+393	89	hsa-let-7a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+394	89	hsa-miR-302d-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+395	89	hsa-miR-302b-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+396	89	hsa-miR-129-1-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+397	89	hsa-let-7i-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+398	89	hsa-miR-1972	80781	COL18A1	NM_130445	collagen type XVIII alpha 1 chain
+399	89	hsa-miR-219a-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+400	89	hsa-miR-450b-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+401	89	hsa-let-7e-5p	5962	RDX	NM_002906	radixin
+402	89	hsa-let-7e-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+403	89	hsa-let-7c-5p	5962	RDX	NM_002906	radixin
+404	89	hsa-let-7c-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+405	88	hsa-miR-374b-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+406	88	hsa-miR-3162-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+407	88	hsa-miR-486-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+408	88	hsa-miR-449a	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+409	88	hsa-miR-652-5p	3516	RBPJ	NM_015874	recombination signal binding protein for immunoglobulin kappa J region
+410	88	hsa-miR-3179	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+411	88	hsa-miR-589-3p	1499	CTNNB1	NM_001904	catenin beta 1
+412	88	hsa-miR-539-3p	3084	NRG1	NM_001160007	neuregulin 1
+413	88	hsa-miR-548c-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+414	88	hsa-miR-421	64321	SOX17	NM_022454	SRY-box 17
+415	88	hsa-miR-590-5p	182	JAG1	NM_000214	jagged 1
+416	88	hsa-miR-34a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+417	88	hsa-miR-26a-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+418	88	hsa-miR-495-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+419	88	hsa-miR-346	93	ACVR2B	NM_001106	activin A receptor type 2B
+420	88	hsa-miR-548b-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+421	88	hsa-miR-26b-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+422	88	hsa-miR-548d-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+423	88	hsa-miR-651-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+424	88	hsa-miR-15b-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+425	88	hsa-miR-548t-5p	1499	CTNNB1	NM_001904	catenin beta 1
+426	88	hsa-miR-548t-5p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+427	88	hsa-miR-548h-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+428	88	hsa-miR-5187-5p	7477	WNT7B	NM_058238	Wnt family member 7B
+429	88	hsa-miR-3143	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+430	88	hsa-miR-212-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+431	88	hsa-miR-16-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+432	88	hsa-miR-330-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+433	88	hsa-miR-486-5p	3516	RBPJ	NM_015874	recombination signal binding protein for immunoglobulin kappa J region
+434	88	hsa-miR-548k	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+435	88	hsa-miR-548o-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+436	88	hsa-miR-548o-3p	5861	RAB1A	NM_015543	RAB1A, member RAS oncogene family
+437	88	hsa-miR-101-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+438	88	hsa-miR-548an	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+439	88	hsa-miR-196b-5p	5962	RDX	NM_002906	radixin
+440	88	hsa-miR-548am-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+441	88	hsa-miR-656-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+442	88	hsa-miR-485-3p	3084	NRG1	NM_001160007	neuregulin 1
+443	88	hsa-miR-369-3p	7082	TJP1	NM_001301025	tight junction protein 1
+444	88	hsa-miR-27a-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+445	88	hsa-miR-3127-5p	5629	PROX1	NM_002763	prospero homeobox 1
+446	88	hsa-miR-513a-5p	4089	SMAD4	NM_005359	SMAD family member 4
+447	88	hsa-miR-3140-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+448	88	hsa-miR-196a-5p	5962	RDX	NM_002906	radixin
+449	88	hsa-miR-15a-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+450	88	hsa-miR-195-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+451	88	hsa-miR-450b-5p	4478	MSN	NM_002444	moesin
+452	88	hsa-miR-424-5p	7476	WNT7A	NM_004625	Wnt family member 7A
+453	88	hsa-miR-27b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+454	88	hsa-miR-191-5p	7082	TJP1	NM_001301025	tight junction protein 1
+455	87	hsa-miR-449a	182	JAG1	NM_000214	jagged 1
+456	87	hsa-miR-657	5629	PROX1	NM_001270616	prospero homeobox 1
+457	87	hsa-miR-139-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+458	87	hsa-miR-548j-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+459	87	hsa-miR-410-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+460	87	hsa-miR-410-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+461	87	hsa-miR-22-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+462	87	hsa-miR-22-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+463	87	hsa-miR-421	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+464	87	hsa-miR-3121-3p	5138	PDE2A	NM_001143839	phosphodiesterase 2A
+465	87	hsa-miR-34a-5p	182	JAG1	NM_000214	jagged 1
+466	87	hsa-miR-495-3p	4233	MET	NM_001324402	MET proto-oncogene, receptor tyrosine kinase
+467	87	hsa-miR-142-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+468	87	hsa-miR-19a-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+469	87	hsa-miR-708-3p	7082	TJP1	NM_001301025	tight junction protein 1
+470	87	hsa-miR-4524a-3p	4478	MSN	NM_002444	moesin
+471	87	hsa-let-7f-5p	5962	RDX	NM_002906	radixin
+472	87	hsa-miR-654-5p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+473	87	hsa-miR-34c-5p	182	JAG1	NM_000214	jagged 1
+474	87	hsa-miR-1185-1-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+475	87	hsa-miR-381-3p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+476	87	hsa-miR-3150b-3p	387	RHOA	NM_001313945	ras homolog family member A
+477	87	hsa-miR-1301-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+478	87	hsa-miR-543	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+479	87	hsa-let-7g-5p	5962	RDX	NM_002906	radixin
+480	87	hsa-miR-126-5p	3084	NRG1	NM_001322205	neuregulin 1
+481	87	hsa-miR-548k	4851	NOTCH1	NM_017617	notch 1
+482	87	hsa-miR-568	3084	NRG1	NM_013958	neuregulin 1
+483	87	hsa-miR-494-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+484	87	hsa-miR-19b-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+485	87	hsa-let-7i-5p	5962	RDX	NM_002906	radixin
+486	87	hsa-miR-128-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+487	87	hsa-miR-128-3p	182	JAG1	NM_000214	jagged 1
+488	87	hsa-miR-130a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+489	87	hsa-miR-185-5p	2702	GJA5	NM_005266	gap junction protein alpha 5
+490	87	hsa-miR-3154	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+491	87	hsa-miR-1185-2-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+492	87	hsa-miR-449b-5p	182	JAG1	NM_000214	jagged 1
+493	87	hsa-miR-454-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+494	87	hsa-miR-889-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+495	86	hsa-miR-519b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+496	86	hsa-miR-23a-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+497	86	hsa-miR-519a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+498	86	hsa-miR-548j-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+499	86	hsa-miR-548e-3p	7430	EZR	NM_003379	ezrin
+500	86	hsa-miR-873-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+501	86	hsa-miR-374a-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+502	86	hsa-miR-510-5p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+503	86	hsa-miR-548c-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+504	86	hsa-miR-124-3p	91663	MYADM	NM_001020818	myeloid associated differentiation marker
+505	86	hsa-miR-193a-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+506	86	hsa-miR-495-3p	7430	EZR	NM_003379	ezrin
+507	86	hsa-miR-183-5p	3084	NRG1	NM_001322205	neuregulin 1
+508	86	hsa-miR-548b-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+509	86	hsa-miR-301a-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+510	86	hsa-miR-548d-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+511	86	hsa-miR-548h-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+512	86	hsa-miR-34c-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+513	86	hsa-miR-4520-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+514	86	hsa-miR-22-5p	3516	RBPJ	NM_015874	recombination signal binding protein for immunoglobulin kappa J region
+515	86	hsa-miR-503-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+516	86	hsa-miR-135b-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+517	86	hsa-miR-548a-3p	7430	EZR	NM_003379	ezrin
+518	86	hsa-miR-619-5p	7477	WNT7B	NM_058238	Wnt family member 7B
+519	86	hsa-miR-107	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+520	86	hsa-miR-1185-1-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+521	86	hsa-miR-23b-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+522	86	hsa-miR-103a-3p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+523	86	hsa-miR-135a-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+524	86	hsa-miR-548o-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+525	86	hsa-miR-876-3p	5962	RDX	NM_002906	radixin
+526	86	hsa-miR-548o-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+527	86	hsa-miR-101-3p	4851	NOTCH1	NM_017617	notch 1
+528	86	hsa-miR-193b-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+529	86	hsa-miR-548an	4089	SMAD4	NM_005359	SMAD family member 4
+530	86	hsa-miR-506-3p	91663	MYADM	NM_001020818	myeloid associated differentiation marker
+531	86	hsa-miR-4662a-5p	4478	MSN	NM_002444	moesin
+532	86	hsa-miR-301b-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+533	86	hsa-miR-297	7082	TJP1	NM_175610	tight junction protein 1
+534	86	hsa-miR-202-3p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+535	86	hsa-miR-548am-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+536	86	hsa-miR-2355-3p	5962	RDX	NM_001260494	radixin
+537	86	hsa-miR-130a-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+538	86	hsa-miR-513a-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+539	86	hsa-miR-548f-3p	7430	EZR	NM_003379	ezrin
+540	86	hsa-miR-1185-2-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+541	86	hsa-miR-449b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+542	86	hsa-miR-374b-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+543	86	hsa-miR-130b-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+544	86	hsa-miR-454-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+545	85	hsa-miR-515-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+546	85	hsa-miR-106b-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+547	85	hsa-miR-3129-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+548	85	hsa-miR-155-5p	2702	GJA5	NM_181703	gap junction protein alpha 5
+549	85	hsa-miR-127-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+550	85	hsa-miR-664b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+551	85	hsa-miR-633	4089	SMAD4	NM_005359	SMAD family member 4
+552	85	hsa-miR-150-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+553	85	hsa-miR-214-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+554	85	hsa-miR-202-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+555	85	hsa-miR-200c-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+556	85	hsa-miR-301a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+557	85	hsa-miR-361-5p	5629	PROX1	NM_002763	prospero homeobox 1
+558	85	hsa-miR-429	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+559	85	hsa-miR-4667-5p	7082	TJP1	NM_001301026	tight junction protein 1
+560	85	hsa-miR-181c-5p	4855	NOTCH4	NM_004557	notch 4
+561	85	hsa-miR-181d-5p	4855	NOTCH4	NM_004557	notch 4
+562	85	hsa-miR-129-5p	4089	SMAD4	NM_005359	SMAD family member 4
+563	85	hsa-miR-545-3p	1499	CTNNB1	NM_001904	catenin beta 1
+564	85	hsa-miR-181a-5p	4855	NOTCH4	NM_004557	notch 4
+565	85	hsa-miR-3074-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+566	85	hsa-miR-766-3p	3209	HOXA13	NM_000522	homeobox A13
+567	85	hsa-miR-330-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+568	85	hsa-miR-330-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+569	85	hsa-miR-20b-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+570	85	hsa-miR-106a-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+571	85	hsa-miR-93-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+572	85	hsa-miR-548k	4478	MSN	NM_002444	moesin
+573	85	hsa-miR-101-3p	7082	TJP1	NM_175610	tight junction protein 1
+574	85	hsa-miR-181b-5p	4855	NOTCH4	NM_004557	notch 4
+575	85	hsa-miR-200b-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+576	85	hsa-miR-452-3p	3084	NRG1	NM_001160002	neuregulin 1
+577	85	hsa-miR-301b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+578	85	hsa-miR-199a-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+579	85	hsa-miR-17-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+580	85	hsa-miR-342-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+581	85	hsa-miR-20a-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+582	85	hsa-miR-3130-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+583	85	hsa-miR-497-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+584	85	hsa-miR-369-3p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+585	85	hsa-miR-27a-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+586	85	hsa-miR-493-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+587	85	hsa-miR-519d-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+588	85	hsa-miR-761	94	ACVRL1	NM_001077401	activin A receptor like type 1
+589	85	hsa-miR-548l	55273	TMEM100	NM_001099640	transmembrane protein 100
+590	85	hsa-miR-130b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+591	85	hsa-miR-199b-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+592	85	hsa-miR-454-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+593	85	hsa-miR-27b-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+594	84	hsa-miR-515-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+595	84	hsa-miR-519b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+596	84	hsa-miR-532-3p	55273	TMEM100	NM_018286	transmembrane protein 100
+597	84	hsa-miR-370-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+598	84	hsa-miR-372-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+599	84	hsa-miR-30a-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+600	84	hsa-miR-519a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+601	84	hsa-miR-450a-1-3p	5764	PTN	NM_001321386	pleiotrophin
+602	84	hsa-miR-1275	11167	FSTL1	NM_007085	follistatin like 1
+603	84	hsa-miR-622	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+604	84	hsa-miR-124-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+605	84	hsa-miR-642a-5p	2702	GJA5	NM_005266	gap junction protein alpha 5
+606	84	hsa-miR-629-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+607	84	hsa-miR-142-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+608	84	hsa-miR-1-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+609	84	hsa-miR-520c-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+610	84	hsa-miR-15b-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+611	84	hsa-let-7d-5p	5962	RDX	NM_002906	radixin
+612	84	hsa-miR-211-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+613	84	hsa-miR-373-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+614	84	hsa-miR-514a-3p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+615	84	hsa-miR-30c-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+616	84	hsa-miR-302c-3p	5962	RDX	NM_001260494	radixin
+617	84	hsa-miR-107	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+618	84	hsa-miR-16-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+619	84	hsa-miR-381-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+620	84	hsa-miR-5001-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+621	84	hsa-miR-1301-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+622	84	hsa-miR-302a-3p	5962	RDX	NM_001260494	radixin
+623	84	hsa-miR-30b-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+624	84	hsa-miR-103a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+625	84	hsa-miR-224-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+626	84	hsa-miR-650	55273	TMEM100	NM_018286	transmembrane protein 100
+627	84	hsa-miR-3192-5p	3084	NRG1	NM_001322206	neuregulin 1
+628	84	hsa-miR-24-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+629	84	hsa-miR-24-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+630	84	hsa-miR-24-3p	8829	NRP1	NM_003873	neuropilin 1
+631	84	hsa-miR-431-5p	947	CD34	NM_001773	CD34 molecule
+632	84	hsa-miR-324-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+633	84	hsa-miR-506-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+634	84	hsa-miR-204-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+635	84	hsa-miR-302d-3p	5962	RDX	NM_001260494	radixin
+636	84	hsa-miR-30d-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+637	84	hsa-miR-302b-3p	5962	RDX	NM_001260494	radixin
+638	84	hsa-miR-320e	3516	RBPJ	NM_015874	recombination signal binding protein for immunoglobulin kappa J region
+639	84	hsa-miR-762	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+640	84	hsa-miR-30e-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+641	84	hsa-miR-206	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+642	84	hsa-miR-369-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+643	84	hsa-miR-27a-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+644	84	hsa-miR-27a-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+645	84	hsa-miR-9-5p	11061	CNMD	NM_001011705	chondromodulin
+646	84	hsa-miR-3140-3p	3084	NRG1	NM_013959	neuregulin 1
+647	84	hsa-miR-15a-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+648	84	hsa-miR-195-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+649	84	hsa-miR-194-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+650	84	hsa-miR-27b-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+651	84	hsa-miR-27b-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+652	84	hsa-miR-514b-3p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+653	83	hsa-miR-374b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+654	83	hsa-miR-32-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+655	83	hsa-miR-32-5p	4851	NOTCH1	NM_017617	notch 1
+656	83	hsa-miR-1228-3p	3084	NRG1	NM_013958	neuregulin 1
+657	83	hsa-miR-106b-5p	4089	SMAD4	NM_005359	SMAD family member 4
+658	83	hsa-miR-301a-5p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+659	83	hsa-miR-410-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+660	83	hsa-miR-942-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+661	83	hsa-miR-589-3p	5962	RDX	NM_001260492	radixin
+662	83	hsa-miR-624-5p	1499	CTNNB1	NM_001904	catenin beta 1
+663	83	hsa-miR-382-3p	3209	HOXA13	NM_000522	homeobox A13
+664	83	hsa-miR-629-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+665	83	hsa-miR-495-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+666	83	hsa-miR-214-3p	1499	CTNNB1	NM_001904	catenin beta 1
+667	83	hsa-miR-214-3p	8721	EDF1	NM_001281297	endothelial differentiation related factor 1
+668	83	hsa-miR-92b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+669	83	hsa-miR-92b-3p	4851	NOTCH1	NM_017617	notch 1
+670	83	hsa-miR-4677-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+671	83	hsa-miR-200c-3p	5962	RDX	NM_002906	radixin
+672	83	hsa-miR-3065-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+673	83	hsa-miR-517c-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+674	83	hsa-miR-429	5962	RDX	NM_002906	radixin
+675	83	hsa-miR-642a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+676	83	hsa-miR-548t-5p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+677	83	hsa-miR-655-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+678	83	hsa-miR-3143	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+679	83	hsa-miR-299-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+680	83	hsa-miR-299-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+681	83	hsa-miR-374c-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+682	83	hsa-miR-330-3p	1499	CTNNB1	NM_001904	catenin beta 1
+683	83	hsa-miR-338-5p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+684	83	hsa-miR-20b-5p	4089	SMAD4	NM_005359	SMAD family member 4
+685	83	hsa-miR-106a-5p	4089	SMAD4	NM_005359	SMAD family member 4
+686	83	hsa-miR-1258	25932	CLIC4	NM_013943	chloride intracellular channel 4
+687	83	hsa-miR-376c-3p	5629	PROX1	NM_002763	prospero homeobox 1
+688	83	hsa-miR-93-5p	4089	SMAD4	NM_005359	SMAD family member 4
+689	83	hsa-miR-517a-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+690	83	hsa-miR-138-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+691	83	hsa-miR-200b-3p	5962	RDX	NM_002906	radixin
+692	83	hsa-miR-17-5p	4089	SMAD4	NM_005359	SMAD family member 4
+693	83	hsa-miR-6503-5p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+694	83	hsa-miR-20a-5p	4089	SMAD4	NM_005359	SMAD family member 4
+695	83	hsa-miR-25-3p	3084	NRG1	NM_001322206	neuregulin 1
+696	83	hsa-miR-519d-3p	4089	SMAD4	NM_005359	SMAD family member 4
+697	83	hsa-miR-92a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+698	83	hsa-miR-92a-3p	4851	NOTCH1	NM_017617	notch 1
+699	83	hsa-miR-761	1499	CTNNB1	NM_001904	catenin beta 1
+700	83	hsa-miR-761	8721	EDF1	NM_001281297	endothelial differentiation related factor 1
+701	82	hsa-miR-541-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+702	82	hsa-miR-486-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+703	82	hsa-miR-32-5p	3084	NRG1	NM_001322206	neuregulin 1
+704	82	hsa-miR-657	1499	CTNNB1	NM_001904	catenin beta 1
+705	82	hsa-miR-548t-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+706	82	hsa-miR-301a-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+707	82	hsa-miR-144-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+708	82	hsa-miR-186-5p	8829	NRP1	NM_003873	neuropilin 1
+709	82	hsa-miR-155-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+710	82	hsa-miR-155-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+711	82	hsa-miR-374a-5p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+712	82	hsa-miR-624-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+713	82	hsa-miR-421	5962	RDX	NM_001260494	radixin
+714	82	hsa-miR-221-3p	5962	RDX	NM_001260492	radixin
+715	82	hsa-miR-335-5p	2702	GJA5	NM_181703	gap junction protein alpha 5
+716	82	hsa-miR-3130-3p	5629	PROX1	NM_002763	prospero homeobox 1
+717	82	hsa-miR-92b-3p	3084	NRG1	NM_001322206	neuregulin 1
+718	82	hsa-miR-4677-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+719	82	hsa-miR-758-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+720	82	hsa-miR-142-5p	387	RHOA	NM_001313945	ras homolog family member A
+721	82	hsa-miR-200c-3p	11167	FSTL1	NM_007085	follistatin like 1
+722	82	hsa-miR-301a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+723	82	hsa-miR-429	11167	FSTL1	NM_007085	follistatin like 1
+724	82	hsa-miR-651-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+725	82	hsa-miR-4524a-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+726	82	hsa-miR-548t-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+727	82	hsa-miR-1185-1-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+728	82	hsa-miR-1185-1-3p	8829	NRP1	NM_003873	neuropilin 1
+729	82	hsa-miR-330-3p	7082	TJP1	NM_001301026	tight junction protein 1
+730	82	hsa-miR-20a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+731	82	hsa-miR-126-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+732	82	hsa-miR-500b-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+733	82	hsa-miR-101-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+734	82	hsa-miR-24-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+735	82	hsa-miR-3934-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+736	82	hsa-miR-548an	5629	PROX1	NM_001270616	prospero homeobox 1
+737	82	hsa-miR-138-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+738	82	hsa-miR-200b-3p	11167	FSTL1	NM_007085	follistatin like 1
+739	82	hsa-miR-222-3p	5962	RDX	NM_001260492	radixin
+740	82	hsa-miR-301b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+741	82	hsa-miR-582-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+742	82	hsa-miR-130a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+743	82	hsa-miR-185-5p	5962	RDX	NM_001260492	radixin
+744	82	hsa-miR-1185-2-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+745	82	hsa-miR-1185-2-3p	8829	NRP1	NM_003873	neuropilin 1
+746	82	hsa-miR-92a-3p	3084	NRG1	NM_001322206	neuregulin 1
+747	82	hsa-miR-362-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+748	82	hsa-miR-130b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+749	81	hsa-miR-374b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+750	81	hsa-miR-3120-3p	10630	PDPN	NM_006474	podoplanin
+751	81	hsa-miR-486-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+752	81	hsa-miR-449a	4089	SMAD4	NM_005359	SMAD family member 4
+753	81	hsa-miR-449a	4851	NOTCH1	NM_017617	notch 1
+754	81	hsa-miR-139-5p	4851	NOTCH1	NM_017617	notch 1
+755	81	hsa-miR-186-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+756	81	hsa-miR-367-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+757	81	hsa-miR-509-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+758	81	hsa-miR-410-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+759	81	hsa-miR-509-3-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+760	81	hsa-miR-942-3p	3084	NRG1	NM_001160007	neuregulin 1
+761	81	hsa-miR-589-3p	7430	EZR	NM_003379	ezrin
+762	81	hsa-miR-592	5629	PROX1	NM_001270616	prospero homeobox 1
+763	81	hsa-miR-3121-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+764	81	hsa-miR-34a-5p	4851	NOTCH1	NM_017617	notch 1
+765	81	hsa-miR-205-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+766	81	hsa-miR-876-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+767	81	hsa-miR-200c-3p	4851	NOTCH1	NM_017617	notch 1
+768	81	hsa-miR-3065-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+769	81	hsa-miR-296-5p	50848	F11R	NM_016946	F11 receptor
+770	81	hsa-miR-429	4851	NOTCH1	NM_017617	notch 1
+771	81	hsa-miR-4524a-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+772	81	hsa-miR-140-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+773	81	hsa-miR-34c-5p	4851	NOTCH1	NM_017617	notch 1
+774	81	hsa-miR-363-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+775	81	hsa-miR-655-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+776	81	hsa-miR-302c-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+777	81	hsa-miR-374c-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+778	81	hsa-miR-627-3p	50848	F11R	NM_016946	F11 receptor
+779	81	hsa-miR-302a-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+780	81	hsa-miR-9-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+781	81	hsa-miR-500a-3p	3084	NRG1	NM_001322206	neuregulin 1
+782	81	hsa-miR-548an	5962	RDX	NM_001260492	radixin
+783	81	hsa-miR-409-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+784	81	hsa-miR-200b-3p	4851	NOTCH1	NM_017617	notch 1
+785	81	hsa-miR-452-3p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+786	81	hsa-miR-877-5p	5962	RDX	NM_001260493	radixin
+787	81	hsa-miR-302d-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+788	81	hsa-miR-637	7476	WNT7A	NM_004625	Wnt family member 7A
+789	81	hsa-miR-302b-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+790	81	hsa-miR-654-3p	5962	RDX	NM_002906	radixin
+791	81	hsa-miR-18a-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+792	81	hsa-miR-122-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+793	81	hsa-miR-25-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+794	81	hsa-miR-27a-3p	4089	SMAD4	NM_005359	SMAD family member 4
+795	81	hsa-miR-449b-5p	4851	NOTCH1	NM_017617	notch 1
+796	81	hsa-miR-374b-5p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+797	81	hsa-miR-203a-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+798	81	hsa-miR-203a-3p	10630	PDPN	NM_006474	podoplanin
+799	81	hsa-miR-27b-3p	4089	SMAD4	NM_005359	SMAD family member 4
+800	80	hsa-miR-133a-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+801	80	hsa-miR-1915-3p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+802	80	hsa-miR-372-3p	5962	RDX	NM_001260494	radixin
+803	80	hsa-miR-183-3p	5629	PROX1	NM_002763	prospero homeobox 1
+804	80	hsa-miR-367-3p	3084	NRG1	NM_001322206	neuregulin 1
+805	80	hsa-miR-367-3p	4851	NOTCH1	NM_017617	notch 1
+806	80	hsa-miR-873-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+807	80	hsa-miR-514b-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+808	80	hsa-miR-127-5p	8829	NRP1	NM_003873	neuropilin 1
+809	80	hsa-miR-1297	169044	COL22A1	NM_152888	collagen type XXII alpha 1 chain
+810	80	hsa-miR-221-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+811	80	hsa-miR-592	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+812	80	hsa-miR-449c-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+813	80	hsa-miR-452-5p	4089	SMAD4	NM_005359	SMAD family member 4
+814	80	hsa-miR-628-5p	182	JAG1	NM_000214	jagged 1
+815	80	hsa-miR-409-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+816	80	hsa-miR-513c-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+817	80	hsa-miR-34b-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+818	80	hsa-miR-205-5p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+819	80	hsa-miR-205-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+820	80	hsa-miR-200c-3p	3084	NRG1	NM_001322206	neuregulin 1
+821	80	hsa-miR-361-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+822	80	hsa-miR-520c-3p	5962	RDX	NM_001260494	radixin
+823	80	hsa-miR-500b-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+824	80	hsa-miR-429	3084	NRG1	NM_001322206	neuregulin 1
+825	80	hsa-miR-651-5p	5629	PROX1	NM_002763	prospero homeobox 1
+826	80	hsa-miR-133b	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+827	80	hsa-miR-142-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+828	80	hsa-miR-373-3p	5962	RDX	NM_001260494	radixin
+829	80	hsa-miR-497-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+830	80	hsa-miR-363-3p	3084	NRG1	NM_001322206	neuregulin 1
+831	80	hsa-miR-363-3p	4851	NOTCH1	NM_017617	notch 1
+832	80	hsa-miR-3143	3084	NRG1	NM_001322205	neuregulin 1
+833	80	hsa-miR-212-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+834	80	hsa-miR-212-5p	8829	NRP1	NM_003873	neuropilin 1
+835	80	hsa-miR-448	5629	PROX1	NM_002763	prospero homeobox 1
+836	80	hsa-miR-216b-5p	5962	RDX	NM_001260494	radixin
+837	80	hsa-miR-5010-5p	7477	WNT7B	NM_058238	Wnt family member 7B
+838	80	hsa-miR-24-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+839	80	hsa-miR-138-5p	947	CD34	NM_001025109	CD34 molecule
+840	80	hsa-miR-3605-5p	387	RHOA	NM_001313945	ras homolog family member A
+841	80	hsa-miR-200b-3p	3084	NRG1	NM_001322206	neuregulin 1
+842	80	hsa-miR-222-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+843	80	hsa-miR-25-3p	4851	NOTCH1	NM_017617	notch 1
+844	80	hsa-miR-625-5p	3084	NRG1	NM_001159996	neuregulin 1
+845	80	hsa-miR-424-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+846	79	hsa-miR-515-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+847	79	hsa-miR-3120-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+848	79	hsa-miR-146a-5p	182	JAG1	NM_000214	jagged 1
+849	79	hsa-miR-96-5p	7430	EZR	NM_001111077	ezrin
+850	79	hsa-miR-548t-3p	55273	TMEM100	NM_018286	transmembrane protein 100
+851	79	hsa-miR-144-3p	387	RHOA	NM_001313947	ras homolog family member A
+852	79	hsa-miR-4713-5p	4089	SMAD4	NM_005359	SMAD family member 4
+853	79	hsa-miR-548j-5p	5629	PROX1	NM_002763	prospero homeobox 1
+854	79	hsa-miR-652-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+855	79	hsa-miR-411-5p	3209	HOXA13	NM_000522	homeobox A13
+856	79	hsa-miR-548c-5p	5629	PROX1	NM_002763	prospero homeobox 1
+857	79	hsa-miR-664b-3p	54538	ROBO4	NM_019055	roundabout guidance receptor 4
+858	79	hsa-miR-3913-5p	64321	SOX17	NM_022454	SRY-box 17
+859	79	hsa-miR-4446-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+860	79	hsa-miR-708-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+861	79	hsa-miR-190a-5p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+862	79	hsa-miR-548b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+863	79	hsa-miR-876-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+864	79	hsa-miR-548d-5p	5629	PROX1	NM_002763	prospero homeobox 1
+865	79	hsa-miR-154-3p	387	RHOA	NM_001313945	ras homolog family member A
+866	79	hsa-miR-651-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+867	79	hsa-miR-146b-5p	182	JAG1	NM_000214	jagged 1
+868	79	hsa-miR-548t-5p	7082	TJP1	NM_001301025	tight junction protein 1
+869	79	hsa-miR-29c-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+870	79	hsa-miR-548h-5p	5629	PROX1	NM_002763	prospero homeobox 1
+871	79	hsa-miR-655-3p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+872	79	hsa-miR-28-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+873	79	hsa-miR-3173-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+874	79	hsa-miR-29a-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+875	79	hsa-miR-219b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+876	79	hsa-miR-192-5p	4478	MSN	NM_002444	moesin
+877	79	hsa-miR-374c-5p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+878	79	hsa-miR-381-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+879	79	hsa-miR-1285-3p	3383	ICAM1	NM_000201	intercellular adhesion molecule 1
+880	79	hsa-miR-30a-3p	55273	TMEM100	NM_018286	transmembrane protein 100
+881	79	hsa-miR-3614-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+882	79	hsa-miR-141-3p	64321	SOX17	NM_022454	SRY-box 17
+883	79	hsa-miR-548o-5p	5629	PROX1	NM_002763	prospero homeobox 1
+884	79	hsa-miR-200a-3p	64321	SOX17	NM_022454	SRY-box 17
+885	79	hsa-miR-650	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+886	79	hsa-miR-3934-5p	2876	GPX1	NM_000581	glutathione peroxidase 1
+887	79	hsa-miR-29b-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+888	79	hsa-miR-30e-3p	55273	TMEM100	NM_018286	transmembrane protein 100
+889	79	hsa-miR-215-5p	4478	MSN	NM_002444	moesin
+890	79	hsa-miR-32-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+891	79	hsa-miR-487a-3p	387	RHOA	NM_001313945	ras homolog family member A
+892	79	hsa-miR-548am-5p	5629	PROX1	NM_002763	prospero homeobox 1
+893	79	hsa-miR-656-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+894	79	hsa-miR-497-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+895	79	hsa-miR-27a-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+896	79	hsa-miR-185-5p	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+897	79	hsa-miR-493-5p	5962	RDX	NM_002906	radixin
+898	79	hsa-miR-942-5p	54538	ROBO4	NM_019055	roundabout guidance receptor 4
+899	79	hsa-miR-27b-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+900	79	hsa-miR-326	7477	WNT7B	NM_058238	Wnt family member 7B
+901	78	hsa-miR-450a-2-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+902	78	hsa-miR-23a-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+903	78	hsa-miR-576-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+904	78	hsa-miR-5699-5p	4089	SMAD4	NM_005359	SMAD family member 4
+905	78	hsa-miR-548t-3p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+906	78	hsa-miR-329-3p	64321	SOX17	NM_022454	SRY-box 17
+907	78	hsa-miR-144-3p	5861	RAB1A	NM_015543	RAB1A, member RAS oncogene family
+908	78	hsa-miR-186-5p	3084	NRG1	NM_001322205	neuregulin 1
+909	78	hsa-miR-1275	3084	NRG1	NM_001159996	neuregulin 1
+910	78	hsa-miR-1275	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+911	78	hsa-miR-124-3p	4089	SMAD4	NM_005359	SMAD family member 4
+912	78	hsa-miR-1297	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+913	78	hsa-miR-3121-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+914	78	hsa-miR-3121-3p	7430	EZR	NM_001111077	ezrin
+915	78	hsa-miR-346	51735	RAPGEF6	NM_001164389	Rap guanine nucleotide exchange factor 6
+916	78	hsa-miR-2355-5p	4089	SMAD4	NM_005359	SMAD family member 4
+917	78	hsa-miR-376a-3p	7430	EZR	NM_001111077	ezrin
+918	78	hsa-miR-376b-3p	7430	EZR	NM_001111077	ezrin
+919	78	hsa-miR-362-3p	64321	SOX17	NM_022454	SRY-box 17
+920	78	hsa-miR-655-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+921	78	hsa-miR-323a-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+922	78	hsa-miR-545-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+923	78	hsa-miR-302c-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+924	78	hsa-miR-619-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+925	78	hsa-miR-374c-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+926	78	hsa-miR-3150b-3p	8721	EDF1	NM_001281299	endothelial differentiation related factor 1
+927	78	hsa-miR-5001-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+928	78	hsa-miR-216b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+929	78	hsa-miR-23b-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+930	78	hsa-miR-302a-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+931	78	hsa-miR-101-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+932	78	hsa-miR-548an	1499	CTNNB1	NM_001098210	catenin beta 1
+933	78	hsa-miR-548an	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+934	78	hsa-miR-506-3p	4089	SMAD4	NM_005359	SMAD family member 4
+935	78	hsa-miR-302d-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+936	78	hsa-miR-302b-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+937	78	hsa-miR-6515-5p	8829	NRP1	NM_003873	neuropilin 1
+938	78	hsa-miR-1323	182	JAG1	NM_000214	jagged 1
+939	78	hsa-miR-762	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+940	78	hsa-miR-3130-5p	7477	WNT7B	NM_058238	Wnt family member 7B
+941	78	hsa-miR-27a-3p	3209	HOXA13	NM_000522	homeobox A13
+942	78	hsa-miR-27a-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+943	78	hsa-miR-513a-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+944	78	hsa-miR-9-5p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+945	78	hsa-miR-3140-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+946	78	hsa-miR-27b-3p	3209	HOXA13	NM_000522	homeobox A13
+947	78	hsa-miR-27b-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+948	77	hsa-miR-449a	5629	PROX1	NM_001270616	prospero homeobox 1
+949	77	hsa-miR-32-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+950	77	hsa-miR-548t-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+951	77	hsa-miR-450a-1-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+952	77	hsa-miR-652-5p	5629	PROX1	NM_002763	prospero homeobox 1
+953	77	hsa-miR-410-3p	7430	EZR	NM_001111077	ezrin
+954	77	hsa-miR-22-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+955	77	hsa-miR-374a-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+956	77	hsa-miR-134-5p	80781	COL18A1	NM_130445	collagen type XVIII alpha 1 chain
+957	77	hsa-miR-1297	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+958	77	hsa-miR-452-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+959	77	hsa-miR-628-5p	5764	PTN	NM_001321386	pleiotrophin
+960	77	hsa-miR-34a-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+961	77	hsa-miR-495-3p	5629	PROX1	NM_002763	prospero homeobox 1
+962	77	hsa-miR-183-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+963	77	hsa-miR-92b-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+964	77	hsa-miR-1-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+965	77	hsa-miR-19a-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+966	77	hsa-miR-200c-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+967	77	hsa-miR-301a-3p	4089	SMAD4	NM_005359	SMAD family member 4
+968	77	hsa-miR-429	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+969	77	hsa-miR-1270	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+970	77	hsa-miR-153-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+971	77	hsa-miR-150-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+972	77	hsa-miR-342-5p	5962	RDX	NM_001260492	radixin
+973	77	hsa-let-7f-5p	4478	MSN	NM_002444	moesin
+974	77	hsa-let-7d-5p	4478	MSN	NM_002444	moesin
+975	77	hsa-miR-485-5p	7477	WNT7B	NM_058238	Wnt family member 7B
+976	77	hsa-miR-5187-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+977	77	hsa-miR-34c-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+978	77	hsa-miR-655-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+979	77	hsa-miR-182-5p	91663	MYADM	NM_001020818	myeloid associated differentiation marker
+980	77	hsa-miR-411-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+981	77	hsa-miR-98-5p	4478	MSN	NM_002444	moesin
+982	77	hsa-miR-374c-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+983	77	hsa-miR-665	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+984	77	hsa-let-7b-5p	4478	MSN	NM_002444	moesin
+985	77	hsa-let-7g-5p	4478	MSN	NM_002444	moesin
+986	77	hsa-miR-141-3p	8829	NRP1	NM_003873	neuropilin 1
+987	77	hsa-miR-379-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+988	77	hsa-miR-1304-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+989	77	hsa-miR-200a-3p	8829	NRP1	NM_003873	neuropilin 1
+990	77	hsa-miR-548o-3p	182	JAG1	NM_000214	jagged 1
+991	77	hsa-miR-3605-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+992	77	hsa-miR-200b-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+993	77	hsa-miR-301b-3p	4089	SMAD4	NM_005359	SMAD family member 4
+994	77	hsa-let-7a-5p	4478	MSN	NM_002444	moesin
+995	77	hsa-miR-7-5p	11061	CNMD	NM_001011705	chondromodulin
+996	77	hsa-miR-382-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+997	77	hsa-miR-5196-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+998	77	hsa-miR-19b-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+999	77	hsa-let-7i-5p	4478	MSN	NM_002444	moesin
+1000	77	hsa-miR-206	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1001	77	hsa-miR-1972	50848	F11R	NM_016946	F11 receptor
+1002	77	hsa-miR-130a-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1003	77	hsa-miR-671-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1004	77	hsa-miR-92a-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1005	77	hsa-miR-449b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1006	77	hsa-let-7e-5p	4478	MSN	NM_002444	moesin
+1007	77	hsa-miR-130b-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1008	77	hsa-let-7c-5p	4478	MSN	NM_002444	moesin
+1009	77	hsa-miR-454-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1010	76	hsa-miR-483-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1011	76	hsa-miR-486-3p	80781	COL18A1	NM_030582	collagen type XVIII alpha 1 chain
+1012	76	hsa-miR-3613-5p	50848	F11R	NM_016946	F11 receptor
+1013	76	hsa-miR-548j-5p	3084	NRG1	NM_001322205	neuregulin 1
+1014	76	hsa-miR-216a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1015	76	hsa-miR-589-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1016	76	hsa-miR-589-3p	51735	RAPGEF6	NM_001164390	Rap guanine nucleotide exchange factor 6
+1017	76	hsa-miR-548c-5p	3084	NRG1	NM_001322205	neuregulin 1
+1018	76	hsa-miR-124-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1019	76	hsa-miR-1297	4089	SMAD4	NM_005359	SMAD family member 4
+1020	76	hsa-miR-1297	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1021	76	hsa-miR-361-3p	3084	NRG1	NM_001322205	neuregulin 1
+1022	76	hsa-miR-34a-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1023	76	hsa-miR-26a-5p	169044	COL22A1	NM_152888	collagen type XXII alpha 1 chain
+1024	76	hsa-miR-2355-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1025	76	hsa-miR-548b-5p	3084	NRG1	NM_001322205	neuregulin 1
+1026	76	hsa-miR-939-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1027	76	hsa-miR-3194-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1028	76	hsa-miR-376a-3p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1029	76	hsa-miR-26b-5p	169044	COL22A1	NM_152888	collagen type XXII alpha 1 chain
+1030	76	hsa-miR-548d-5p	3084	NRG1	NM_001322205	neuregulin 1
+1031	76	hsa-miR-376b-3p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1032	76	hsa-miR-15b-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1033	76	hsa-miR-548h-5p	3084	NRG1	NM_001322205	neuregulin 1
+1034	76	hsa-miR-497-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1035	76	hsa-miR-655-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1036	76	hsa-miR-182-5p	5962	RDX	NM_002906	radixin
+1037	76	hsa-miR-93-3p	182	JAG1	NM_000214	jagged 1
+1038	76	hsa-miR-374c-5p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1039	76	hsa-miR-16-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1040	76	hsa-miR-665	4615	MYD88	NM_002468	MYD88, innate immune signal transduction adaptor
+1041	76	hsa-miR-448	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1042	76	hsa-miR-1301-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1043	76	hsa-miR-9-3p	8829	NRP1	NM_003873	neuropilin 1
+1044	76	hsa-miR-548k	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1045	76	hsa-miR-548o-5p	3084	NRG1	NM_001322205	neuregulin 1
+1046	76	hsa-miR-598-3p	182	JAG1	NM_000214	jagged 1
+1047	76	hsa-miR-3942-5p	3084	NRG1	NM_001160007	neuregulin 1
+1048	76	hsa-miR-506-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1049	76	hsa-miR-568	7430	EZR	NM_001111077	ezrin
+1050	76	hsa-miR-494-3p	8829	NRP1	NM_003873	neuropilin 1
+1051	76	hsa-miR-548am-5p	3084	NRG1	NM_001322205	neuregulin 1
+1052	76	hsa-miR-497-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1053	76	hsa-miR-128-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1054	76	hsa-miR-18a-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1055	76	hsa-miR-27a-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1056	76	hsa-miR-185-5p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1057	76	hsa-miR-10b-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1058	76	hsa-miR-15a-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1059	76	hsa-miR-449b-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1060	76	hsa-miR-195-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1061	76	hsa-miR-424-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1062	76	hsa-miR-548l	1499	CTNNB1	NM_001904	catenin beta 1
+1063	76	hsa-miR-27b-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1064	75	hsa-miR-30a-5p	3209	HOXA13	NM_000522	homeobox A13
+1065	75	hsa-miR-96-5p	8985	PLOD3	NM_001084	procollagen-lysine,2-oxoglutarate 5-dioxygenase 3
+1066	75	hsa-miR-589-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1067	75	hsa-miR-3151-5p	4478	MSN	NM_002444	moesin
+1068	75	hsa-miR-124-3p	50848	F11R	NM_016946	F11 receptor
+1069	75	hsa-miR-3121-3p	153562	MARVELD2	NM_001038603	MARVEL domain containing 2
+1070	75	hsa-miR-495-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1071	75	hsa-miR-1910-3p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1072	75	hsa-miR-214-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+1073	75	hsa-miR-2355-5p	4851	NOTCH1	NM_017617	notch 1
+1074	75	hsa-miR-433-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1075	75	hsa-miR-3187-3p	387	RHOA	NM_001313947	ras homolog family member A
+1076	75	hsa-miR-19a-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1077	75	hsa-miR-154-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1078	75	hsa-miR-150-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1079	75	hsa-miR-455-3p	7082	TJP1	NM_175610	tight junction protein 1
+1080	75	hsa-miR-142-3p	652	BMP4	NM_130850	bone morphogenetic protein 4
+1081	75	hsa-miR-182-5p	8985	PLOD3	NM_001084	procollagen-lysine,2-oxoglutarate 5-dioxygenase 3
+1082	75	hsa-miR-514a-3p	182	JAG1	NM_000214	jagged 1
+1083	75	hsa-miR-30c-5p	3209	HOXA13	NM_000522	homeobox A13
+1084	75	hsa-miR-448	11061	CNMD	NM_001011705	chondromodulin
+1085	75	hsa-miR-3074-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1086	75	hsa-miR-330-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1087	75	hsa-miR-511-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1088	75	hsa-miR-30b-5p	3209	HOXA13	NM_000522	homeobox A13
+1089	75	hsa-miR-499a-5p	2702	GJA5	NM_005266	gap junction protein alpha 5
+1090	75	hsa-miR-3942-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1091	75	hsa-miR-196b-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1092	75	hsa-miR-20b-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1093	75	hsa-miR-4662a-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1094	75	hsa-miR-874-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1095	75	hsa-miR-487a-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1096	75	hsa-miR-30d-5p	3209	HOXA13	NM_000522	homeobox A13
+1097	75	hsa-miR-6511a-5p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1098	75	hsa-miR-223-3p	3383	ICAM1	NM_000201	intercellular adhesion molecule 1
+1099	75	hsa-miR-19b-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1100	75	hsa-miR-582-5p	5764	PTN	NM_001321386	pleiotrophin
+1101	75	hsa-miR-497-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1102	75	hsa-miR-30e-5p	3209	HOXA13	NM_000522	homeobox A13
+1103	75	hsa-miR-3127-5p	4615	MYD88	NM_001172566	MYD88, innate immune signal transduction adaptor
+1104	75	hsa-miR-125a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1105	75	hsa-miR-125a-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1106	75	hsa-miR-196a-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1107	75	hsa-miR-493-5p	7082	TJP1	NM_001301025	tight junction protein 1
+1108	75	hsa-miR-942-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1109	75	hsa-miR-374b-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1110	75	hsa-miR-514b-3p	182	JAG1	NM_000214	jagged 1
+1111	74	hsa-miR-3120-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1112	74	hsa-miR-519b-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1113	74	hsa-miR-532-3p	80274	SCUBE1	NM_173050	signal peptide, CUB domain and EGF like domain containing 1
+1114	74	hsa-miR-532-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1115	74	hsa-miR-486-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1116	74	hsa-miR-372-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1117	74	hsa-miR-519a-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1118	74	hsa-miR-3126-5p	7477	WNT7B	NM_058238	Wnt family member 7B
+1119	74	hsa-miR-1275	7477	WNT7B	NM_058238	Wnt family member 7B
+1120	74	hsa-miR-3179	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1121	74	hsa-miR-942-3p	8829	NRP1	NM_003873	neuropilin 1
+1122	74	hsa-miR-625-3p	5764	PTN	NM_001321386	pleiotrophin
+1123	74	hsa-miR-539-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1124	74	hsa-miR-1266-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1125	74	hsa-miR-449c-5p	4851	NOTCH1	NM_017617	notch 1
+1126	74	hsa-miR-495-3p	182	JAG1	NM_000214	jagged 1
+1127	74	hsa-miR-34b-5p	4851	NOTCH1	NM_017617	notch 1
+1128	74	hsa-miR-3187-3p	3084	NRG1	NM_001322206	neuregulin 1
+1129	74	hsa-miR-513a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1130	74	hsa-miR-513a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1131	74	hsa-miR-200c-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1132	74	hsa-miR-520c-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1133	74	hsa-miR-429	93	ACVR2B	NM_001106	activin A receptor type 2B
+1134	74	hsa-miR-508-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1135	74	hsa-miR-548t-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1136	74	hsa-miR-29c-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1137	74	hsa-miR-1271-5p	7430	EZR	NM_001111077	ezrin
+1138	74	hsa-miR-373-3p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1139	74	hsa-miR-655-3p	54345	SOX18	NM_018419	SRY-box 18
+1140	74	hsa-miR-299-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1141	74	hsa-miR-29a-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1142	74	hsa-miR-545-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1143	74	hsa-miR-93-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1144	74	hsa-miR-1827	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1145	74	hsa-miR-374c-5p	54345	SOX18	NM_018419	SRY-box 18
+1146	74	hsa-miR-1185-1-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1147	74	hsa-miR-126-5p	4615	MYD88	NM_002468	MYD88, innate immune signal transduction adaptor
+1148	74	hsa-miR-548k	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1149	74	hsa-miR-29b-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1150	74	hsa-miR-200b-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1151	74	hsa-miR-221-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1152	74	hsa-miR-2682-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1153	74	hsa-miR-2682-5p	4851	NOTCH1	NM_017617	notch 1
+1154	74	hsa-miR-582-5p	8829	NRP1	NM_003873	neuropilin 1
+1155	74	hsa-miR-198	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1156	74	hsa-miR-371a-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1157	74	hsa-miR-485-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1158	74	hsa-miR-219a-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1159	74	hsa-miR-493-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1160	74	hsa-miR-1185-2-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1161	74	hsa-miR-636	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1162	74	hsa-miR-513c-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1163	74	hsa-miR-513c-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1164	73	hsa-miR-885-5p	7430	EZR	NM_001111077	ezrin
+1165	73	hsa-miR-372-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1166	73	hsa-miR-1260a	93	ACVR2B	NM_001106	activin A receptor type 2B
+1167	73	hsa-miR-139-5p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+1168	73	hsa-miR-548j-5p	947	CD34	NM_001773	CD34 molecule
+1169	73	hsa-miR-548e-3p	3084	NRG1	NM_001322205	neuregulin 1
+1170	73	hsa-miR-539-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1171	73	hsa-miR-548c-5p	947	CD34	NM_001773	CD34 molecule
+1172	73	hsa-miR-421	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1173	73	hsa-miR-622	652	BMP4	NM_001202	bone morphogenetic protein 4
+1174	73	hsa-miR-622	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1175	73	hsa-miR-30c-2-3p	10630	PDPN	NM_006474	podoplanin
+1176	73	hsa-miR-3121-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1177	73	hsa-miR-26a-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1178	73	hsa-miR-548b-5p	947	CD34	NM_001773	CD34 molecule
+1179	73	hsa-miR-627-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1180	73	hsa-miR-939-3p	80274	SCUBE1	NM_173050	signal peptide, CUB domain and EGF like domain containing 1
+1181	73	hsa-miR-3194-5p	8829	NRP1	NM_003873	neuropilin 1
+1182	73	hsa-miR-3065-5p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1183	73	hsa-miR-3065-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1184	73	hsa-miR-26b-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1185	73	hsa-miR-296-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1186	73	hsa-miR-520c-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1187	73	hsa-miR-548d-5p	947	CD34	NM_001773	CD34 molecule
+1188	73	hsa-miR-1271-5p	8985	PLOD3	NM_001084	procollagen-lysine,2-oxoglutarate 5-dioxygenase 3
+1189	73	hsa-miR-548h-5p	947	CD34	NM_001773	CD34 molecule
+1190	73	hsa-miR-373-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1191	73	hsa-miR-655-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1192	73	hsa-miR-129-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1193	73	hsa-miR-432-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1194	73	hsa-miR-1260b	93	ACVR2B	NM_001106	activin A receptor type 2B
+1195	73	hsa-miR-548a-3p	3084	NRG1	NM_001322205	neuregulin 1
+1196	73	hsa-miR-1827	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1197	73	hsa-miR-374c-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1198	73	hsa-miR-489-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1199	73	hsa-miR-3074-5p	10630	PDPN	NM_001006624	podoplanin
+1200	73	hsa-miR-338-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1201	73	hsa-miR-511-3p	7082	TJP1	NM_175610	tight junction protein 1
+1202	73	hsa-miR-627-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1203	73	hsa-miR-608	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1204	73	hsa-miR-126-5p	182	JAG1	NM_000214	jagged 1
+1205	73	hsa-miR-548k	947	CD34	NM_001773	CD34 molecule
+1206	73	hsa-miR-548o-5p	947	CD34	NM_001773	CD34 molecule
+1207	73	hsa-miR-548an	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1208	73	hsa-miR-365a-5p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1209	73	hsa-miR-196b-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1210	73	hsa-miR-145-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1211	73	hsa-miR-548am-5p	947	CD34	NM_001773	CD34 molecule
+1212	73	hsa-miR-128-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1213	73	hsa-miR-3175	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1214	73	hsa-miR-18a-3p	80781	COL18A1	NM_030582	collagen type XVIII alpha 1 chain
+1215	73	hsa-miR-18a-3p	11167	FSTL1	NM_007085	follistatin like 1
+1216	73	hsa-miR-122-5p	64321	SOX17	NM_022454	SRY-box 17
+1217	73	hsa-miR-485-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1218	73	hsa-miR-365b-5p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1219	73	hsa-miR-548f-3p	3084	NRG1	NM_001322205	neuregulin 1
+1220	73	hsa-miR-196a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1221	73	hsa-miR-493-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1222	73	hsa-miR-506-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1223	73	hsa-miR-10b-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1224	73	hsa-miR-30c-1-3p	10630	PDPN	NM_006474	podoplanin
+1225	73	hsa-miR-16-2-3p	3084	NRG1	NM_013959	neuregulin 1
+1226	73	hsa-miR-548l	947	CD34	NM_001773	CD34 molecule
+1227	72	hsa-miR-96-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1228	72	hsa-miR-548t-3p	387	RHOA	NM_001313947	ras homolog family member A
+1229	72	hsa-miR-379-5p	5138	PDE2A	NM_002599	phosphodiesterase 2A
+1230	72	hsa-miR-374a-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1231	72	hsa-miR-186-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1232	72	hsa-miR-367-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1233	72	hsa-miR-380-3p	55273	TMEM100	NM_001099640	transmembrane protein 100
+1234	72	hsa-miR-664b-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1235	72	hsa-miR-1266-5p	10630	PDPN	NM_001006624	podoplanin
+1236	72	hsa-miR-624-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+1237	72	hsa-miR-421	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1238	72	hsa-miR-148a-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1239	72	hsa-miR-152-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1240	72	hsa-miR-181c-5p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1241	72	hsa-miR-363-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1242	72	hsa-miR-181d-5p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1243	72	hsa-miR-3173-3p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+1244	72	hsa-miR-181a-5p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1245	72	hsa-miR-377-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1246	72	hsa-miR-381-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1247	72	hsa-miR-496	1499	CTNNB1	NM_001904	catenin beta 1
+1248	72	hsa-miR-3928-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1249	72	hsa-miR-1301-3p	387	RHOA	NM_001313947	ras homolog family member A
+1250	72	hsa-miR-338-5p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1251	72	hsa-miR-511-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1252	72	hsa-miR-141-3p	1499	CTNNB1	NM_001904	catenin beta 1
+1253	72	hsa-miR-200a-3p	1499	CTNNB1	NM_001904	catenin beta 1
+1254	72	hsa-miR-3192-5p	4478	MSN	NM_002444	moesin
+1255	72	hsa-miR-548an	8985	PLOD3	NM_001084	procollagen-lysine,2-oxoglutarate 5-dioxygenase 3
+1256	72	hsa-miR-181b-5p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1257	72	hsa-miR-5571-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1258	72	hsa-miR-7-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1259	72	hsa-miR-874-3p	80781	COL18A1	NM_130445	collagen type XVIII alpha 1 chain
+1260	72	hsa-miR-769-5p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1261	72	hsa-miR-148b-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1262	72	hsa-miR-769-3p	1499	CTNNB1	NM_001098210	catenin beta 1
+1263	72	hsa-miR-497-3p	3084	NRG1	NM_001160002	neuregulin 1
+1264	72	hsa-miR-873-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1265	72	hsa-miR-25-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1266	72	hsa-miR-27a-3p	10630	PDPN	NM_001006624	podoplanin
+1267	72	hsa-miR-450b-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1268	72	hsa-miR-194-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1269	72	hsa-miR-550a-3p	5629	PROX1	NM_002763	prospero homeobox 1
+1270	72	hsa-miR-203a-3p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1271	72	hsa-miR-27b-3p	10630	PDPN	NM_001006624	podoplanin
+1272	71	hsa-miR-449a	93	ACVR2B	NM_001106	activin A receptor type 2B
+1273	71	hsa-miR-32-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1274	71	hsa-miR-548t-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1275	71	hsa-miR-548j-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1276	71	hsa-miR-155-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1277	71	hsa-miR-514b-5p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1278	71	hsa-miR-539-3p	387	RHOA	NM_001313945	ras homolog family member A
+1279	71	hsa-miR-539-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1280	71	hsa-miR-548c-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1281	71	hsa-miR-664b-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1282	71	hsa-miR-590-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1283	71	hsa-miR-628-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1284	71	hsa-miR-34a-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1285	71	hsa-miR-21-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1286	71	hsa-miR-513c-5p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1287	71	hsa-miR-92b-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1288	71	hsa-miR-548b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1289	71	hsa-miR-548d-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1290	71	hsa-miR-548t-5p	4851	NOTCH1	NM_017617	notch 1
+1291	71	hsa-miR-654-5p	4855	NOTCH4	NM_004557	notch 4
+1292	71	hsa-miR-548h-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1293	71	hsa-miR-34c-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1294	71	hsa-miR-1290	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1295	71	hsa-miR-493-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1296	71	hsa-miR-129-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1297	71	hsa-miR-514a-3p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1298	71	hsa-miR-665	4233	MET	NM_001324402	MET proto-oncogene, receptor tyrosine kinase
+1299	71	hsa-miR-448	182	JAG1	NM_000214	jagged 1
+1300	71	hsa-miR-448	8829	NRP1	NM_003873	neuropilin 1
+1301	71	hsa-miR-3074-5p	4233	MET	NM_001324402	MET proto-oncogene, receptor tyrosine kinase
+1302	71	hsa-miR-511-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1303	71	hsa-miR-608	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1304	71	hsa-miR-548o-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1305	71	hsa-miR-423-5p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1306	71	hsa-miR-550a-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1307	71	hsa-miR-1179	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1308	71	hsa-miR-582-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1309	71	hsa-miR-1271-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1310	71	hsa-miR-605-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1311	71	hsa-miR-548am-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1312	71	hsa-miR-3175	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1313	71	hsa-miR-485-3p	387	RHOA	NM_001313945	ras homolog family member A
+1314	71	hsa-miR-485-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1315	71	hsa-miR-767-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1316	71	hsa-miR-92a-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1317	71	hsa-miR-125b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1318	71	hsa-miR-450b-5p	182	JAG1	NM_000214	jagged 1
+1319	71	hsa-miR-6720-3p	387	RHOA	NM_001313947	ras homolog family member A
+1320	71	hsa-miR-514b-3p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1321	70	hsa-miR-3120-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1322	70	hsa-miR-3120-3p	5962	RDX	NM_001260494	radixin
+1323	70	hsa-miR-548j-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1324	70	hsa-miR-367-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1325	70	hsa-miR-509-5p	3084	NRG1	NM_001322205	neuregulin 1
+1326	70	hsa-miR-155-5p	5764	PTN	NM_001321386	pleiotrophin
+1327	70	hsa-miR-3179	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1328	70	hsa-miR-509-3-5p	3084	NRG1	NM_001322205	neuregulin 1
+1329	70	hsa-miR-548c-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1330	70	hsa-miR-1266-5p	80781	COL18A1	NM_030582	collagen type XVIII alpha 1 chain
+1331	70	hsa-miR-421	5629	PROX1	NM_001270616	prospero homeobox 1
+1332	70	hsa-miR-124-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1333	70	hsa-miR-26a-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1334	70	hsa-miR-495-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1335	70	hsa-miR-1910-3p	64102	TNMD	NM_022144	tenomodulin
+1336	70	hsa-miR-548b-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1337	70	hsa-miR-142-5p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1338	70	hsa-miR-19a-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1339	70	hsa-miR-26b-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1340	70	hsa-miR-548d-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1341	70	hsa-miR-1270	169044	COL22A1	NM_152888	collagen type XXII alpha 1 chain
+1342	70	hsa-miR-1270	7082	TJP1	NM_175610	tight junction protein 1
+1343	70	hsa-miR-512-3p	5962	RDX	NM_001260493	radixin
+1344	70	hsa-miR-4667-5p	7430	EZR	NM_003379	ezrin
+1345	70	hsa-miR-548h-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1346	70	hsa-miR-34c-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1347	70	hsa-miR-363-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1348	70	hsa-miR-1303	93	ACVR2B	NM_001106	activin A receptor type 2B
+1349	70	hsa-miR-129-2-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1350	70	hsa-miR-107	7476	WNT7A	NM_004625	Wnt family member 7A
+1351	70	hsa-miR-1185-1-3p	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+1352	70	hsa-miR-522-5p	387	RHOA	NM_001313947	ras homolog family member A
+1353	70	hsa-miR-381-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1354	70	hsa-miR-3150b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1355	70	hsa-miR-1285-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1356	70	hsa-miR-9-3p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1357	70	hsa-miR-103a-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+1358	70	hsa-miR-224-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1359	70	hsa-miR-548k	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1360	70	hsa-miR-548o-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1361	70	hsa-miR-548an	3084	NRG1	NM_001322206	neuregulin 1
+1362	70	hsa-miR-3065-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1363	70	hsa-miR-15b-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1364	70	hsa-miR-3909	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1365	70	hsa-miR-506-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1366	70	hsa-miR-506-3p	50848	F11R	NM_016946	F11 receptor
+1367	70	hsa-miR-221-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1368	70	hsa-miR-32-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1369	70	hsa-miR-7-5p	54345	SOX18	NM_018419	SRY-box 18
+1370	70	hsa-miR-6511a-5p	64102	TNMD	NM_022144	tenomodulin
+1371	70	hsa-miR-6511a-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1372	70	hsa-miR-668-3p	5962	RDX	NM_001260494	radixin
+1373	70	hsa-miR-19b-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1374	70	hsa-miR-129-1-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1375	70	hsa-miR-582-5p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+1376	70	hsa-miR-548am-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1377	70	hsa-miR-656-3p	5962	RDX	NM_002906	radixin
+1378	70	hsa-miR-371a-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1379	70	hsa-miR-25-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1380	70	hsa-miR-513a-5p	83605	CCM2	NM_001029835	CCM2 scaffold protein
+1381	70	hsa-miR-1185-2-3p	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+1382	70	hsa-miR-449b-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1383	70	hsa-miR-889-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1384	70	hsa-miR-519c-5p	387	RHOA	NM_001313947	ras homolog family member A
+1385	69	hsa-miR-450a-2-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1386	69	hsa-miR-1260a	5629	PROX1	NM_002763	prospero homeobox 1
+1387	69	hsa-miR-3183	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1388	69	hsa-miR-873-5p	51735	RAPGEF6	NM_001164390	Rap guanine nucleotide exchange factor 6
+1389	69	hsa-miR-320d	1499	CTNNB1	NM_001904	catenin beta 1
+1390	69	hsa-miR-3158-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1391	69	hsa-miR-495-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1392	69	hsa-miR-495-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1393	69	hsa-miR-1910-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1394	69	hsa-miR-544a	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1395	69	hsa-miR-4677-3p	182	JAG1	NM_000214	jagged 1
+1396	69	hsa-miR-485-5p	4478	MSN	NM_002444	moesin
+1397	69	hsa-miR-211-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1398	69	hsa-miR-655-3p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1399	69	hsa-miR-1303	7082	TJP1	NM_175610	tight junction protein 1
+1400	69	hsa-miR-1260b	5629	PROX1	NM_002763	prospero homeobox 1
+1401	69	hsa-miR-545-5p	153562	MARVELD2	NM_001244734	MARVEL domain containing 2
+1402	69	hsa-miR-516b-5p	2701	GJA4	NM_002060	gap junction protein alpha 4
+1403	69	hsa-miR-93-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1404	69	hsa-miR-619-5p	50848	F11R	NM_016946	F11 receptor
+1405	69	hsa-miR-377-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1406	69	hsa-miR-377-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1407	69	hsa-miR-374c-5p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1408	69	hsa-miR-1185-1-3p	5138	PDE2A	NM_002599	phosphodiesterase 2A
+1409	69	hsa-miR-665	64321	SOX17	NM_022454	SRY-box 17
+1410	69	hsa-miR-320c	1499	CTNNB1	NM_001904	catenin beta 1
+1411	69	hsa-miR-20a-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1412	69	hsa-miR-627-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1413	69	hsa-miR-138-5p	10630	PDPN	NM_006474	podoplanin
+1414	69	hsa-miR-324-3p	3084	NRG1	NM_001322206	neuregulin 1
+1415	69	hsa-miR-580-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1416	69	hsa-miR-494-3p	50848	F11R	NM_016946	F11 receptor
+1417	69	hsa-miR-877-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1418	69	hsa-miR-32-3p	5962	RDX	NM_001260494	radixin
+1419	69	hsa-miR-204-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1420	69	hsa-miR-202-3p	5962	RDX	NM_002906	radixin
+1421	69	hsa-miR-6511a-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1422	69	hsa-miR-769-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1423	69	hsa-miR-654-3p	153562	MARVELD2	NM_001244734	MARVEL domain containing 2
+1424	69	hsa-miR-671-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1425	69	hsa-miR-9-5p	387	RHOA	NM_001313943	ras homolog family member A
+1426	69	hsa-miR-1185-2-3p	5138	PDE2A	NM_002599	phosphodiesterase 2A
+1427	69	hsa-miR-320b	1499	CTNNB1	NM_001904	catenin beta 1
+1428	69	hsa-miR-326	2022	ENG	NM_000118	endoglin
+1429	68	hsa-miR-374b-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1430	68	hsa-miR-1287-5p	3084	NRG1	NM_001322206	neuregulin 1
+1431	68	hsa-miR-144-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1432	68	hsa-miR-520h	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1433	68	hsa-miR-186-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+1434	68	hsa-miR-942-3p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1435	68	hsa-miR-539-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1436	68	hsa-miR-664b-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1437	68	hsa-miR-520g-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1438	68	hsa-miR-592	93	ACVR2B	NM_001106	activin A receptor type 2B
+1439	68	hsa-miR-544a	3084	NRG1	NM_001160002	neuregulin 1
+1440	68	hsa-miR-2355-5p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1441	68	hsa-miR-433-3p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1442	68	hsa-miR-142-5p	3084	NRG1	NM_001322206	neuregulin 1
+1443	68	hsa-miR-660-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1444	68	hsa-miR-660-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1445	68	hsa-miR-642a-3p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1446	68	hsa-miR-129-5p	182	JAG1	NM_000214	jagged 1
+1447	68	hsa-miR-455-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1448	68	hsa-miR-299-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1449	68	hsa-miR-299-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1450	68	hsa-miR-802	7082	TJP1	NM_175610	tight junction protein 1
+1451	68	hsa-miR-516b-5p	51735	RAPGEF6	NM_001164390	Rap guanine nucleotide exchange factor 6
+1452	68	hsa-miR-545-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1453	68	hsa-miR-1827	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1454	68	hsa-miR-212-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1455	68	hsa-miR-381-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1456	68	hsa-miR-5001-5p	80274	SCUBE1	NM_173050	signal peptide, CUB domain and EGF like domain containing 1
+1457	68	hsa-miR-20a-3p	11167	FSTL1	NM_007085	follistatin like 1
+1458	68	hsa-miR-20a-3p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1459	68	hsa-miR-1301-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1460	68	hsa-miR-3936	4478	MSN	NM_002444	moesin
+1461	68	hsa-miR-24-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1462	68	hsa-miR-548an	182	JAG1	NM_000214	jagged 1
+1463	68	hsa-miR-508-5p	182	JAG1	NM_000214	jagged 1
+1464	68	hsa-miR-431-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1465	68	hsa-miR-27b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1466	68	hsa-miR-32-3p	3084	NRG1	NM_001322206	neuregulin 1
+1467	68	hsa-miR-488-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1468	68	hsa-miR-2355-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1469	68	hsa-miR-2355-3p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1470	68	hsa-miR-762	80274	SCUBE1	NM_173050	signal peptide, CUB domain and EGF like domain containing 1
+1471	68	hsa-miR-485-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1472	68	hsa-miR-490-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1473	68	hsa-miR-185-5p	2876	GPX1	NM_201397	glutathione peroxidase 1
+1474	68	hsa-miR-513a-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1475	68	hsa-miR-125a-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1476	67	hsa-miR-548t-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1477	67	hsa-miR-3613-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1478	67	hsa-miR-186-5p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1479	67	hsa-miR-548e-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1480	67	hsa-miR-410-3p	3084	NRG1	NM_001322206	neuregulin 1
+1481	67	hsa-miR-22-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1482	67	hsa-miR-3918	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1483	67	hsa-miR-221-3p	3084	NRG1	NM_001322206	neuregulin 1
+1484	67	hsa-miR-221-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1485	67	hsa-miR-99b-3p	5144	PDE4D	NM_006203	phosphodiesterase 4D
+1486	67	hsa-miR-629-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1487	67	hsa-miR-495-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1488	67	hsa-miR-3187-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1489	67	hsa-miR-3065-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1490	67	hsa-miR-99a-3p	5144	PDE4D	NM_006203	phosphodiesterase 4D
+1491	67	hsa-miR-3173-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1492	67	hsa-miR-411-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1493	67	hsa-miR-802	11167	FSTL1	NM_007085	follistatin like 1
+1494	67	hsa-miR-548a-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1495	67	hsa-miR-212-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1496	67	hsa-miR-3074-5p	8829	NRP1	NM_003873	neuropilin 1
+1497	67	hsa-miR-20a-3p	3516	RBPJ	NM_015874	recombination signal binding protein for immunoglobulin kappa J region
+1498	67	hsa-miR-31-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1499	67	hsa-miR-499a-5p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1500	67	hsa-miR-141-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1501	67	hsa-miR-379-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1502	67	hsa-miR-200a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1503	67	hsa-miR-365b-3p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+1504	67	hsa-miR-365a-3p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+1505	67	hsa-miR-650	5629	PROX1	NM_001270616	prospero homeobox 1
+1506	67	hsa-miR-222-3p	3084	NRG1	NM_001322206	neuregulin 1
+1507	67	hsa-miR-222-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1508	67	hsa-miR-874-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1509	67	hsa-miR-1179	5962	RDX	NM_001260493	radixin
+1510	67	hsa-miR-656-3p	7476	WNT7A	NM_004625	Wnt family member 7A
+1511	67	hsa-miR-1972	1499	CTNNB1	NM_001098209	catenin beta 1
+1512	67	hsa-miR-369-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1513	67	hsa-miR-548f-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1514	67	hsa-miR-125a-3p	3084	NRG1	NM_001322205	neuregulin 1
+1515	66	hsa-miR-3120-3p	3084	NRG1	NM_001159996	neuregulin 1
+1516	66	hsa-miR-664b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1517	66	hsa-miR-30a-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1518	66	hsa-miR-30a-5p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+1519	66	hsa-miR-576-5p	2702	GJA5	NM_005266	gap junction protein alpha 5
+1520	66	hsa-miR-106b-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1521	66	hsa-miR-374a-3p	3084	NRG1	NM_001322206	neuregulin 1
+1522	66	hsa-miR-548j-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1523	66	hsa-miR-548e-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1524	66	hsa-miR-873-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1525	66	hsa-miR-589-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1526	66	hsa-miR-548c-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1527	66	hsa-miR-1266-5p	5138	PDE2A	NM_002599	phosphodiesterase 2A
+1528	66	hsa-miR-208a-3p	2702	GJA5	NM_005266	gap junction protein alpha 5
+1529	66	hsa-miR-26a-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1530	66	hsa-miR-544a	11167	FSTL1	NM_007085	follistatin like 1
+1531	66	hsa-miR-346	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1532	66	hsa-miR-548b-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1533	66	hsa-miR-939-3p	5138	PDE2A	NM_001143839	phosphodiesterase 2A
+1534	66	hsa-miR-26b-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1535	66	hsa-miR-548d-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1536	66	hsa-miR-642a-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1537	66	hsa-miR-642a-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1538	66	hsa-miR-140-3p	182	JAG1	NM_000214	jagged 1
+1539	66	hsa-miR-548h-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1540	66	hsa-miR-655-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1541	66	hsa-miR-30c-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1542	66	hsa-miR-30c-5p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+1543	66	hsa-miR-374c-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1544	66	hsa-miR-212-5p	4615	MYD88	NM_001172566	MYD88, innate immune signal transduction adaptor
+1545	66	hsa-miR-208b-3p	2702	GJA5	NM_005266	gap junction protein alpha 5
+1546	66	hsa-miR-5001-5p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1547	66	hsa-miR-338-5p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1548	66	hsa-miR-627-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1549	66	hsa-miR-627-3p	7477	WNT7B	NM_058238	Wnt family member 7B
+1550	66	hsa-miR-608	7477	WNT7B	NM_058238	Wnt family member 7B
+1551	66	hsa-miR-608	10630	PDPN	NM_006474	podoplanin
+1552	66	hsa-miR-31-5p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1553	66	hsa-miR-30b-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1554	66	hsa-miR-30b-5p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+1555	66	hsa-miR-548o-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1556	66	hsa-miR-423-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1557	66	hsa-miR-3942-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1558	66	hsa-miR-877-5p	2876	GPX1	NM_000581	glutathione peroxidase 1
+1559	66	hsa-miR-30d-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1560	66	hsa-miR-30d-5p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+1561	66	hsa-miR-202-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1562	66	hsa-miR-223-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1563	66	hsa-miR-766-5p	947	CD34	NM_001773	CD34 molecule
+1564	66	hsa-miR-548am-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1565	66	hsa-miR-30e-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1566	66	hsa-miR-30e-5p	4615	MYD88	NM_001172569	MYD88, innate immune signal transduction adaptor
+1567	66	hsa-miR-369-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1568	66	hsa-miR-548f-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1569	66	hsa-miR-493-5p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1570	66	hsa-miR-125b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1571	65	hsa-miR-32-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1572	65	hsa-miR-576-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1573	65	hsa-miR-1287-5p	2022	ENG	NM_001278138	endoglin
+1574	65	hsa-miR-218-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1575	65	hsa-miR-367-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1576	65	hsa-miR-411-5p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1577	65	hsa-miR-597-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1578	65	hsa-miR-664b-3p	182	JAG1	NM_000214	jagged 1
+1579	65	hsa-miR-421	4089	SMAD4	NM_005359	SMAD family member 4
+1580	65	hsa-miR-708-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1581	65	hsa-miR-21-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1582	65	hsa-miR-92b-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1583	65	hsa-miR-378d	11167	FSTL1	NM_007085	follistatin like 1
+1584	65	hsa-miR-1246	5962	RDX	NM_002906	radixin
+1585	65	hsa-miR-876-5p	50848	F11R	NM_016946	F11 receptor
+1586	65	hsa-miR-660-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1587	65	hsa-miR-188-3p	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1588	65	hsa-miR-301a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1589	65	hsa-miR-378a-3p	11167	FSTL1	NM_007085	follistatin like 1
+1590	65	hsa-miR-642a-3p	3084	NRG1	NM_001322206	neuregulin 1
+1591	65	hsa-miR-1271-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1592	65	hsa-miR-378c	11167	FSTL1	NM_007085	follistatin like 1
+1593	65	hsa-miR-363-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1594	65	hsa-miR-323a-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1595	65	hsa-miR-323a-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1596	65	hsa-miR-3173-3p	50848	F11R	NM_016946	F11 receptor
+1597	65	hsa-miR-182-5p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1598	65	hsa-miR-1303	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1599	65	hsa-miR-545-5p	5962	RDX	NM_001260492	radixin
+1600	65	hsa-miR-1298-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1601	65	hsa-miR-3691-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1602	65	hsa-miR-766-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1603	65	hsa-miR-543	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1604	65	hsa-miR-627-3p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+1605	65	hsa-miR-31-5p	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+1606	65	hsa-miR-548an	4851	NOTCH1	NM_017617	notch 1
+1607	65	hsa-miR-3942-5p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1608	65	hsa-miR-484	2876	GPX1	NM_201397	glutathione peroxidase 1
+1609	65	hsa-miR-494-3p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+1610	65	hsa-miR-301b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1611	65	hsa-miR-5196-3p	3084	NRG1	NM_001322206	neuregulin 1
+1612	65	hsa-miR-34a-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1613	65	hsa-miR-422a	11167	FSTL1	NM_007085	follistatin like 1
+1614	65	hsa-miR-25-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1615	65	hsa-miR-425-5p	7082	TJP1	NM_175610	tight junction protein 1
+1616	65	hsa-miR-130a-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1617	65	hsa-miR-92a-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1618	65	hsa-miR-450b-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1619	65	hsa-miR-130b-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1620	65	hsa-miR-203a-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1621	65	hsa-miR-454-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1622	64	hsa-miR-1291	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1623	64	hsa-miR-139-5p	3209	HOXA13	NM_000522	homeobox A13
+1624	64	hsa-miR-3183	2702	GJA5	NM_005266	gap junction protein alpha 5
+1625	64	hsa-miR-155-5p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1626	64	hsa-miR-3918	5629	PROX1	NM_002763	prospero homeobox 1
+1627	64	hsa-miR-542-3p	64321	SOX17	NM_022454	SRY-box 17
+1628	64	hsa-miR-597-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1629	64	hsa-miR-539-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1630	64	hsa-miR-380-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1631	64	hsa-miR-1266-5p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1632	64	hsa-miR-193b-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1633	64	hsa-miR-26a-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1634	64	hsa-miR-214-3p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1635	64	hsa-miR-1-3p	11167	FSTL1	NM_007085	follistatin like 1
+1636	64	hsa-miR-17-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1637	64	hsa-miR-376a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1638	64	hsa-miR-26b-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1639	64	hsa-miR-188-3p	50848	F11R	NM_016946	F11 receptor
+1640	64	hsa-miR-423-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+1641	64	hsa-miR-376b-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1642	64	hsa-miR-548t-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+1643	64	hsa-miR-140-3p	11167	FSTL1	NM_007085	follistatin like 1
+1644	64	hsa-miR-140-3p	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+1645	64	hsa-miR-182-5p	4233	MET	NM_001324402	MET proto-oncogene, receptor tyrosine kinase
+1646	64	hsa-miR-411-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1647	64	hsa-miR-653-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1648	64	hsa-miR-337-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1649	64	hsa-miR-299-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1650	64	hsa-miR-548a-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1651	64	hsa-miR-874-5p	3383	ICAM1	NM_000201	intercellular adhesion molecule 1
+1652	64	hsa-miR-3614-5p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1653	64	hsa-miR-126-5p	55273	TMEM100	NM_001099640	transmembrane protein 100
+1654	64	hsa-miR-376c-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1655	64	hsa-miR-141-3p	51735	RAPGEF6	NM_001164389	Rap guanine nucleotide exchange factor 6
+1656	64	hsa-miR-379-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1657	64	hsa-miR-200a-3p	51735	RAPGEF6	NM_001164389	Rap guanine nucleotide exchange factor 6
+1658	64	hsa-miR-500a-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1659	64	hsa-miR-149-5p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1660	64	hsa-miR-494-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1661	64	hsa-miR-766-5p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1662	64	hsa-miR-323b-3p	387	RHOA	NM_001313947	ras homolog family member A
+1663	64	hsa-miR-762	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1664	64	hsa-miR-873-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1665	64	hsa-miR-128-3p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1666	64	hsa-miR-206	11167	FSTL1	NM_007085	follistatin like 1
+1667	64	hsa-miR-485-3p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1668	64	hsa-miR-369-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1669	64	hsa-miR-548f-3p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1670	64	hsa-miR-3140-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1671	64	hsa-miR-4423-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1672	64	hsa-miR-761	7476	WNT7A	NM_004625	Wnt family member 7A
+1673	64	hsa-miR-561-5p	7082	TJP1	NM_001301025	tight junction protein 1
+1674	64	hsa-miR-450b-5p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1675	64	hsa-miR-889-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1676	63	hsa-miR-23a-3p	55897	MESP1	NM_018670	mesoderm posterior bHLH transcription factor 1
+1677	63	hsa-miR-1915-3p	2022	ENG	NM_001278138	endoglin
+1678	63	hsa-miR-1915-3p	8721	EDF1	NM_001281297	endothelial differentiation related factor 1
+1679	63	hsa-miR-1273c	5962	RDX	NM_001260493	radixin
+1680	63	hsa-miR-183-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1681	63	hsa-miR-144-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1682	63	hsa-miR-539-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1683	63	hsa-miR-664b-3p	3084	NRG1	NM_001160002	neuregulin 1
+1684	63	hsa-miR-30b-3p	10630	PDPN	NM_006474	podoplanin
+1685	63	hsa-miR-1297	5908	RAP1B	NM_001251921	RAP1B, member of RAS oncogene family
+1686	63	hsa-miR-449c-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1687	63	hsa-miR-642a-5p	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+1688	63	hsa-miR-150-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1689	63	hsa-miR-335-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1690	63	hsa-miR-190a-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1691	63	hsa-miR-1910-3p	91663	MYADM	NM_001290189	myeloid associated differentiation marker
+1692	63	hsa-miR-34b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1693	63	hsa-miR-3200-5p	7852	CXCR4	NM_001008540	C-X-C motif chemokine receptor 4
+1694	63	hsa-miR-513a-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1695	63	hsa-miR-142-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1696	63	hsa-miR-3171	5962	RDX	NM_001260494	radixin
+1697	63	hsa-miR-200c-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1698	63	hsa-miR-200c-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1699	63	hsa-miR-3065-5p	3084	NRG1	NM_001160002	neuregulin 1
+1700	63	hsa-miR-3065-5p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1701	63	hsa-miR-660-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1702	63	hsa-miR-429	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1703	63	hsa-miR-429	7082	TJP1	NM_001301025	tight junction protein 1
+1704	63	hsa-miR-153-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1705	63	hsa-miR-153-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1706	63	hsa-miR-556-5p	7082	TJP1	NM_175610	tight junction protein 1
+1707	63	hsa-miR-1290	4089	SMAD4	NM_005359	SMAD family member 4
+1708	63	hsa-miR-629-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1709	63	hsa-miR-3143	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1710	63	hsa-miR-129-2-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1711	63	hsa-miR-302c-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1712	63	hsa-miR-93-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1713	63	hsa-miR-619-5p	3084	NRG1	NM_001160002	neuregulin 1
+1714	63	hsa-miR-338-5p	3084	NRG1	NM_001322205	neuregulin 1
+1715	63	hsa-miR-23b-3p	55897	MESP1	NM_018670	mesoderm posterior bHLH transcription factor 1
+1716	63	hsa-miR-302a-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1717	63	hsa-miR-9-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1718	63	hsa-miR-876-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1719	63	hsa-miR-423-5p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1720	63	hsa-miR-500b-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1721	63	hsa-miR-101-3p	8829	NRP1	NM_003873	neuropilin 1
+1722	63	hsa-miR-3942-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1723	63	hsa-miR-15b-3p	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1724	63	hsa-miR-200b-3p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1725	63	hsa-miR-200b-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1726	63	hsa-miR-568	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1727	63	hsa-miR-874-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1728	63	hsa-miR-197-3p	5962	RDX	NM_001260492	radixin
+1729	63	hsa-miR-302d-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1730	63	hsa-miR-2682-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1731	63	hsa-miR-302b-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1732	63	hsa-miR-129-1-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1733	63	hsa-miR-320e	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+1734	63	hsa-miR-223-5p	4301	AFDN	NM_001291964	afadin, adherens junction formation factor
+1735	63	hsa-miR-656-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1736	63	hsa-miR-1972	54538	ROBO4	NM_019055	roundabout guidance receptor 4
+1737	63	hsa-miR-485-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1738	63	hsa-miR-185-5p	4855	NOTCH4	NM_004557	notch 4
+1739	63	hsa-miR-513a-5p	5962	RDX	NM_001260494	radixin
+1740	63	hsa-miR-362-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1741	63	hsa-miR-761	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1742	63	hsa-miR-548l	4615	MYD88	NM_002468	MYD88, innate immune signal transduction adaptor
+1743	63	hsa-miR-513c-3p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1744	62	hsa-miR-450a-2-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1745	62	hsa-miR-3120-3p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1746	62	hsa-miR-144-3p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1747	62	hsa-miR-4713-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1748	62	hsa-miR-548j-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1749	62	hsa-miR-548j-5p	54345	SOX18	NM_018419	SRY-box 18
+1750	62	hsa-miR-410-3p	182	JAG1	NM_000214	jagged 1
+1751	62	hsa-miR-374a-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1752	62	hsa-miR-597-3p	3084	NRG1	NM_001322206	neuregulin 1
+1753	62	hsa-miR-625-3p	7082	TJP1	NM_175610	tight junction protein 1
+1754	62	hsa-miR-539-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1755	62	hsa-miR-548c-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1756	62	hsa-miR-548c-5p	54345	SOX18	NM_018419	SRY-box 18
+1757	62	hsa-miR-124-3p	3084	NRG1	NM_001322206	neuregulin 1
+1758	62	hsa-miR-212-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1759	62	hsa-miR-1251-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1760	62	hsa-miR-449c-5p	182	JAG1	NM_000214	jagged 1
+1761	62	hsa-miR-495-3p	5962	RDX	NM_001260494	radixin
+1762	62	hsa-miR-409-3p	5962	RDX	NM_001260494	radixin
+1763	62	hsa-miR-409-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1764	62	hsa-miR-34b-5p	182	JAG1	NM_000214	jagged 1
+1765	62	hsa-miR-548b-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1766	62	hsa-miR-548b-5p	54345	SOX18	NM_018419	SRY-box 18
+1767	62	hsa-miR-548b-5p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1768	62	hsa-miR-361-5p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1769	62	hsa-miR-548d-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1770	62	hsa-miR-548d-5p	54345	SOX18	NM_018419	SRY-box 18
+1771	62	hsa-miR-548d-5p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1772	62	hsa-miR-4524a-3p	387	RHOA	NM_001313945	ras homolog family member A
+1773	62	hsa-miR-4667-5p	51735	RAPGEF6	NM_001164387	Rap guanine nucleotide exchange factor 6
+1774	62	hsa-miR-548h-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1775	62	hsa-miR-548h-5p	54345	SOX18	NM_018419	SRY-box 18
+1776	62	hsa-miR-455-5p	7082	TJP1	NM_175610	tight junction protein 1
+1777	62	hsa-miR-129-2-3p	3084	NRG1	NM_001160008	neuregulin 1
+1778	62	hsa-miR-302c-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1779	62	hsa-miR-93-3p	2889	RAPGEF1	NM_198679	Rap guanine nucleotide exchange factor 1
+1780	62	hsa-miR-377-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1781	62	hsa-miR-1185-1-3p	3084	NRG1	NM_001159996	neuregulin 1
+1782	62	hsa-miR-1185-1-3p	7430	EZR	NM_003379	ezrin
+1783	62	hsa-miR-381-3p	3084	NRG1	NM_001322205	neuregulin 1
+1784	62	hsa-miR-3691-5p	4089	SMAD4	NM_005359	SMAD family member 4
+1785	62	hsa-miR-1285-3p	182	JAG1	NM_000214	jagged 1
+1786	62	hsa-miR-302a-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1787	62	hsa-miR-1258	3516	RBPJ	NM_015874	recombination signal binding protein for immunoglobulin kappa J region
+1788	62	hsa-miR-3936	11061	CNMD	NM_001011705	chondromodulin
+1789	62	hsa-miR-1304-3p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1790	62	hsa-miR-548o-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1791	62	hsa-miR-548o-5p	54345	SOX18	NM_018419	SRY-box 18
+1792	62	hsa-miR-138-5p	2022	ENG	NM_000118	endoglin
+1793	62	hsa-miR-3065-3p	7477	WNT7B	NM_058238	Wnt family member 7B
+1794	62	hsa-miR-196b-5p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+1795	62	hsa-miR-506-3p	3084	NRG1	NM_001322206	neuregulin 1
+1796	62	hsa-miR-149-5p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1797	62	hsa-miR-494-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1798	62	hsa-miR-452-3p	3209	HOXA13	NM_000522	homeobox A13
+1799	62	hsa-miR-302d-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1800	62	hsa-miR-302b-3p	5175	PECAM1	NM_000442	platelet and endothelial cell adhesion molecule 1
+1801	62	hsa-miR-1179	947	CD34	NM_001773	CD34 molecule
+1802	62	hsa-miR-129-1-3p	3084	NRG1	NM_001160008	neuregulin 1
+1803	62	hsa-miR-582-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1804	62	hsa-miR-548am-5p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1805	62	hsa-miR-548am-5p	54345	SOX18	NM_018419	SRY-box 18
+1806	62	hsa-miR-223-5p	57493	HEG1	NM_020733	heart development protein with EGF like domains 1
+1807	62	hsa-miR-628-3p	11167	FSTL1	NM_007085	follistatin like 1
+1808	62	hsa-miR-1972	7430	EZR	NM_001111077	ezrin
+1809	62	hsa-miR-132-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1810	62	hsa-miR-513a-5p	54567	DLL4	NM_019074	delta like canonical Notch ligand 4
+1811	62	hsa-miR-196a-5p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+1812	62	hsa-miR-2116-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1813	62	hsa-miR-1185-2-3p	3084	NRG1	NM_001159996	neuregulin 1
+1814	62	hsa-miR-1185-2-3p	7430	EZR	NM_003379	ezrin
+1815	62	hsa-miR-660-5p	5962	RDX	NM_001260494	radixin
+1816	62	hsa-miR-374b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1817	62	hsa-miR-450b-5p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1818	62	hsa-miR-505-5p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1819	61	hsa-miR-483-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1820	61	hsa-miR-1291	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1821	61	hsa-miR-186-5p	182	JAG1	NM_000214	jagged 1
+1822	61	hsa-miR-155-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1823	61	hsa-miR-514b-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1824	61	hsa-miR-539-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1825	61	hsa-miR-622	55273	TMEM100	NM_001099640	transmembrane protein 100
+1826	61	hsa-miR-633	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1827	61	hsa-miR-513c-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1828	61	hsa-miR-1-3p	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1829	61	hsa-miR-584-5p	182	JAG1	NM_000214	jagged 1
+1830	61	hsa-miR-584-5p	3516	RBPJ	NM_015874	recombination signal binding protein for immunoglobulin kappa J region
+1831	61	hsa-miR-296-5p	7477	WNT7B	NM_058238	Wnt family member 7B
+1832	61	hsa-miR-4524a-3p	7477	WNT7B	NM_058238	Wnt family member 7B
+1833	61	hsa-miR-29c-3p	50848	F11R	NM_016946	F11 receptor
+1834	61	hsa-miR-654-5p	4301	AFDN	NM_001040000	afadin, adherens junction formation factor
+1835	61	hsa-miR-485-5p	3084	NRG1	NM_001160008	neuregulin 1
+1836	61	hsa-miR-140-3p	2947	GSTM3	NM_000849	glutathione S-transferase mu 3
+1837	61	hsa-miR-140-3p	387	RHOA	NM_001313945	ras homolog family member A
+1838	61	hsa-miR-1290	7082	TJP1	NM_001301026	tight junction protein 1
+1839	61	hsa-miR-323a-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1840	61	hsa-miR-582-3p	5962	RDX	NM_001260494	radixin
+1841	61	hsa-miR-29a-3p	50848	F11R	NM_016946	F11 receptor
+1842	61	hsa-miR-616-3p	5629	PROX1	NM_001270616	prospero homeobox 1
+1843	61	hsa-miR-107	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1844	61	hsa-miR-1185-1-3p	1499	CTNNB1	NM_001098210	catenin beta 1
+1845	61	hsa-miR-576-3p	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1846	61	hsa-miR-489-3p	4478	MSN	NM_002444	moesin
+1847	61	hsa-miR-3074-5p	1306	COL15A1	NM_001855	collagen type XV alpha 1 chain
+1848	61	hsa-miR-766-3p	4478	MSN	NM_002444	moesin
+1849	61	hsa-miR-216b-5p	50848	F11R	NM_016946	F11 receptor
+1850	61	hsa-miR-9-3p	1901	S1PR1	NM_001320730	sphingosine-1-phosphate receptor 1
+1851	61	hsa-miR-103a-3p	5144	PDE4D	NM_001104631	phosphodiesterase 4D
+1852	61	hsa-miR-3936	7082	TJP1	NM_175610	tight junction protein 1
+1853	61	hsa-miR-500a-3p	25932	CLIC4	NM_013943	chloride intracellular channel 4
+1854	61	hsa-miR-3192-5p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1855	61	hsa-miR-3192-5p	387	RHOA	NM_001313945	ras homolog family member A
+1856	61	hsa-miR-548an	9693	RAPGEF2	NM_014247	Rap guanine nucleotide exchange factor 2
+1857	61	hsa-miR-29b-3p	50848	F11R	NM_016946	F11 receptor
+1858	61	hsa-miR-32-3p	7082	TJP1	NM_001301025	tight junction protein 1
+1859	61	hsa-miR-7-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1860	61	hsa-miR-769-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1861	61	hsa-miR-582-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1862	61	hsa-miR-206	5908	RAP1B	NM_001010942	RAP1B, member of RAS oncogene family
+1863	61	hsa-miR-485-3p	5908	RAP1B	NM_001251922	RAP1B, member of RAS oncogene family
+1864	61	hsa-miR-369-3p	2150	F2RL1	NM_005242	F2R like trypsin receptor 1
+1865	61	hsa-miR-3154	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1866	61	hsa-miR-2116-3p	23135	KDM6B	NM_001080424	lysine demethylase 6B
+1867	61	hsa-miR-1185-2-3p	1499	CTNNB1	NM_001098210	catenin beta 1
+1868	61	hsa-miR-450b-5p	5629	PROX1	NM_002763	prospero homeobox 1
+1869	61	hsa-miR-194-5p	8829	NRP1	NM_003873	neuropilin 1
+1870	60	hsa-miR-374a-3p	8829	NRP1	NM_003873	neuropilin 1
+1871	60	hsa-miR-3183	80274	SCUBE1	NM_173050	signal peptide, CUB domain and EGF like domain containing 1
+1872	60	hsa-miR-410-3p	5962	RDX	NM_001260494	radixin
+1873	60	hsa-miR-502-3p	7082	TJP1	NM_175610	tight junction protein 1
+1874	60	hsa-miR-3918	7082	TJP1	NM_001301026	tight junction protein 1
+1875	60	hsa-miR-374a-5p	3516	RBPJ	NM_203283	recombination signal binding protein for immunoglobulin kappa J region
+1876	60	hsa-miR-3180-3p	64321	SOX17	NM_022454	SRY-box 17
+1877	60	hsa-miR-590-5p	51735	RAPGEF6	NM_001164386	Rap guanine nucleotide exchange factor 6
+1878	60	hsa-miR-124-3p	5138	PDE2A	NM_001143839	phosphodiesterase 2A
+1879	60	hsa-miR-30c-2-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1880	60	hsa-miR-331-3p	81876	RAB1B	NM_030981	RAB1B, member RAS oncogene family
+1881	60	hsa-miR-495-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1882	60	hsa-miR-501-3p	7082	TJP1	NM_175610	tight junction protein 1
+1883	60	hsa-miR-142-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1884	60	hsa-miR-1-3p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+1885	60	hsa-miR-19a-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1886	60	hsa-miR-3065-5p	93	ACVR2B	NM_001106	activin A receptor type 2B
+1887	60	hsa-miR-508-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1888	60	hsa-miR-548t-5p	652	BMP4	NM_001202	bone morphogenetic protein 4
+1889	60	hsa-miR-514a-3p	8721	EDF1	NM_001281299	endothelial differentiation related factor 1
+1890	60	hsa-miR-455-5p	5802	PTPRS	NM_002850	protein tyrosine phosphatase, receptor type S
+1891	60	hsa-miR-1303	5912	RAP2B	NM_002886	RAP2B, member of RAS oncogene family
+1892	60	hsa-miR-151a-3p	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1893	60	hsa-miR-503-5p	5629	PROX1	NM_001270616	prospero homeobox 1
+1894	60	hsa-miR-93-3p	3516	RBPJ	NM_005349	recombination signal binding protein for immunoglobulin kappa J region
+1895	60	hsa-miR-299-3p	3383	ICAM1	NM_000201	intercellular adhesion molecule 1
+1896	60	hsa-miR-1185-1-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1897	60	hsa-miR-665	2702	GJA5	NM_005266	gap junction protein alpha 5
+1898	60	hsa-miR-381-3p	11167	FSTL1	NM_007085	follistatin like 1
+1899	60	hsa-miR-1301-3p	5861	RAB1A	NM_004161	RAB1A, member RAS oncogene family
+1900	60	hsa-miR-30a-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1901	60	hsa-miR-106a-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1902	60	hsa-miR-31-5p	5962	RDX	NM_002906	radixin
+1903	60	hsa-miR-376c-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1904	60	hsa-miR-376c-3p	7026	NR2F2	NM_001145155	nuclear receptor subfamily 2 group F member 2
+1905	60	hsa-miR-548an	93	ACVR2B	NM_001106	activin A receptor type 2B
+1906	60	hsa-miR-3942-5p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1907	60	hsa-miR-506-3p	5138	PDE2A	NM_001143839	phosphodiesterase 2A
+1908	60	hsa-miR-30e-3p	659	BMPR2	NM_001204	bone morphogenetic protein receptor type 2
+1909	60	hsa-miR-17-5p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1910	60	hsa-miR-19b-3p	4089	SMAD4	NM_005359	SMAD family member 4
+1911	60	hsa-miR-628-3p	8829	NRP1	NM_003873	neuropilin 1
+1912	60	hsa-miR-873-3p	94	ACVRL1	NM_001077401	activin A receptor like type 1
+1913	60	hsa-miR-3175	26051	PPP1R16B	NM_001172735	protein phosphatase 1 regulatory subunit 16B
+1914	60	hsa-miR-625-5p	5144	PDE4D	NM_001197222	phosphodiesterase 4D
+1915	60	hsa-miR-185-5p	7082	TJP1	NM_001301026	tight junction protein 1
+1916	60	hsa-miR-3140-3p	5962	RDX	NM_001260494	radixin
+1917	60	hsa-miR-4423-5p	8829	NRP1	NM_003873	neuropilin 1
+1918	60	hsa-miR-1185-2-3p	4233	MET	NM_000245	MET proto-oncogene, receptor tyrosine kinase
+1919	60	hsa-miR-30c-1-3p	7716	VEZF1	NM_007146	vascular endothelial zinc finger 1
+1920	60	hsa-miR-760	5138	PDE2A	NM_002599	phosphodiesterase 2A
+1921	60	hsa-miR-514b-3p	8721	EDF1	NM_001281299	endothelial differentiation related factor 1
+1	100	hsa-miR-15a-5p	2194	FASN	NM_004104	fatty acid synthase
+2	100	hsa-miR-101-3p	6781	STC1	NM_003155	stanniocalcin 1
+3	100	hsa-let-7a-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+4	100	hsa-let-7i-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+5	100	hsa-let-7e-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+6	100	hsa-miR-301a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+7	100	hsa-miR-301b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+8	100	hsa-let-7g-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+9	100	hsa-miR-16-5p	2194	FASN	NM_004104	fatty acid synthase
+10	100	hsa-miR-424-5p	2194	FASN	NM_004104	fatty acid synthase
+11	100	hsa-let-7b-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+12	100	hsa-miR-195-5p	2194	FASN	NM_004104	fatty acid synthase
+13	100	hsa-miR-202-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+14	100	hsa-miR-15b-5p	2194	FASN	NM_004104	fatty acid synthase
+15	100	hsa-miR-98-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+16	100	hsa-miR-130a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+17	100	hsa-let-7f-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+18	100	hsa-let-7d-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+19	100	hsa-let-7c-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+20	100	hsa-miR-130b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+21	100	hsa-miR-454-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+22	100	hsa-miR-497-5p	2194	FASN	NM_004104	fatty acid synthase
+23	99	hsa-miR-206	2697	GJA1	NM_000165	gap junction protein alpha 1
+24	99	hsa-miR-301b-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+25	99	hsa-miR-125a-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+26	99	hsa-miR-1-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+27	99	hsa-miR-625-5p	3215	HOXB5	NM_002147	homeobox B5
+28	99	hsa-miR-130a-3p	90	ACVR1	NM_001105	activin A receptor type 1
+29	99	hsa-miR-454-3p	90	ACVR1	NM_001105	activin A receptor type 1
+30	99	hsa-miR-130a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+31	99	hsa-miR-365a-3p	90	ACVR1	NM_001105	activin A receptor type 1
+32	99	hsa-miR-301b-3p	90	ACVR1	NM_001105	activin A receptor type 1
+33	99	hsa-miR-301a-3p	90	ACVR1	NM_001105	activin A receptor type 1
+34	99	hsa-miR-454-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+35	99	hsa-miR-153-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+36	99	hsa-miR-130b-3p	90	ACVR1	NM_001105	activin A receptor type 1
+37	99	hsa-miR-130b-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+38	99	hsa-miR-125b-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+39	99	hsa-miR-301a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+40	99	hsa-miR-365b-3p	90	ACVR1	NM_001105	activin A receptor type 1
+41	98	hsa-miR-27b-3p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+42	98	hsa-miR-513a-5p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+43	98	hsa-miR-27a-3p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+44	98	hsa-miR-548an	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+45	98	hsa-miR-410-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+46	98	hsa-miR-145-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+47	97	hsa-miR-9-3p	6781	STC1	NM_003155	stanniocalcin 1
+48	97	hsa-miR-448	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+49	97	hsa-miR-9-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+50	97	hsa-miR-665	3791	KDR	NM_002253	kinase insert domain receptor
+51	97	hsa-miR-183-5p	6781	STC1	NM_003155	stanniocalcin 1
+52	96	hsa-miR-105-5p	90627	STARD13	NM_001243474	StAR related lipid transfer domain containing 13
+53	96	hsa-miR-19b-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+54	96	hsa-miR-429	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+55	96	hsa-miR-23b-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+56	96	hsa-miR-19a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+57	96	hsa-miR-208a-3p	6781	STC1	NM_003155	stanniocalcin 1
+58	96	hsa-miR-208b-3p	6781	STC1	NM_003155	stanniocalcin 1
+59	96	hsa-miR-200b-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+60	96	hsa-miR-23a-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+61	96	hsa-miR-142-5p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+62	96	hsa-miR-548l	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+63	96	hsa-miR-499a-5p	6781	STC1	NM_003155	stanniocalcin 1
+64	96	hsa-miR-144-3p	6781	STC1	NM_003155	stanniocalcin 1
+65	96	hsa-miR-615-5p	6781	STC1	NM_003155	stanniocalcin 1
+66	96	hsa-miR-200c-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+67	95	hsa-miR-1297	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+68	95	hsa-miR-30d-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+69	95	hsa-miR-429	3791	KDR	NM_002253	kinase insert domain receptor
+70	95	hsa-miR-29a-3p	9076	CLDN1	NM_021101	claudin 1
+71	95	hsa-miR-101-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+72	95	hsa-miR-4423-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+73	95	hsa-miR-29c-3p	9076	CLDN1	NM_021101	claudin 1
+74	95	hsa-miR-200c-3p	3791	KDR	NM_002253	kinase insert domain receptor
+75	95	hsa-miR-200b-3p	3791	KDR	NM_002253	kinase insert domain receptor
+76	95	hsa-miR-126-5p	3215	HOXB5	NM_002147	homeobox B5
+77	95	hsa-miR-29b-3p	9076	CLDN1	NM_021101	claudin 1
+78	95	hsa-miR-30b-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+79	95	hsa-miR-30c-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+80	95	hsa-miR-30a-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+81	95	hsa-miR-636	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+82	95	hsa-miR-30e-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+83	94	hsa-miR-101-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+84	94	hsa-miR-1185-1-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+85	94	hsa-miR-665	3215	HOXB5	NM_002147	homeobox B5
+86	94	hsa-miR-19a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+87	94	hsa-miR-1185-2-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+88	94	hsa-miR-26a-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+89	94	hsa-miR-19b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+90	94	hsa-miR-550a-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+91	94	hsa-miR-26b-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+92	93	hsa-miR-106b-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+93	93	hsa-miR-20a-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+94	93	hsa-miR-152-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+95	93	hsa-miR-148b-3p	90	ACVR1	NM_001105	activin A receptor type 1
+96	93	hsa-miR-152-3p	90	ACVR1	NM_001105	activin A receptor type 1
+97	93	hsa-miR-148a-3p	90	ACVR1	NM_001105	activin A receptor type 1
+98	93	hsa-miR-148b-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+99	93	hsa-miR-148a-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+100	93	hsa-miR-1915-3p	6781	STC1	NM_003155	stanniocalcin 1
+101	93	hsa-miR-223-3p	388	RHOB	NM_004040	ras homolog family member B
+102	92	hsa-miR-19b-3p	388	RHOB	NM_004040	ras homolog family member B
+103	92	hsa-miR-193a-5p	90	ACVR1	NM_001111067	activin A receptor type 1
+104	92	hsa-miR-625-5p	6781	STC1	NM_003155	stanniocalcin 1
+105	92	hsa-miR-93-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+106	92	hsa-miR-629-3p	7075	TIE1	NM_001253357	tyrosine kinase with immunoglobulin like and EGF like domains 1
+107	92	hsa-miR-19a-3p	388	RHOB	NM_004040	ras homolog family member B
+108	92	hsa-miR-548t-3p	1460	CSNK2B	NM_001282385	casein kinase 2 beta
+109	92	hsa-miR-106a-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+110	92	hsa-miR-17-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+111	92	hsa-miR-519b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+112	92	hsa-miR-519a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+113	92	hsa-miR-519d-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+114	92	hsa-miR-20b-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+115	91	hsa-miR-30b-5p	388	RHOB	NM_004040	ras homolog family member B
+116	91	hsa-miR-30a-5p	388	RHOB	NM_004040	ras homolog family member B
+117	91	hsa-miR-181d-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+118	91	hsa-miR-1228-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+119	91	hsa-miR-519a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+120	91	hsa-miR-519b-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+121	91	hsa-miR-181a-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+122	91	hsa-miR-30c-5p	388	RHOB	NM_004040	ras homolog family member B
+123	91	hsa-miR-181c-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+124	91	hsa-miR-181b-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+125	91	hsa-miR-30d-5p	388	RHOB	NM_004040	ras homolog family member B
+126	91	hsa-miR-656-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+127	91	hsa-miR-30e-5p	388	RHOB	NM_004040	ras homolog family member B
+128	91	hsa-miR-664b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+129	90	hsa-miR-30b-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+130	90	hsa-miR-149-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+131	90	hsa-miR-130b-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+132	90	hsa-miR-506-3p	9414	TJP2	NM_001170414	tight junction protein 2
+133	90	hsa-miR-1290	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+134	90	hsa-miR-145-5p	23462	HEY1	NM_012258	hes related family bHLH transcription factor with YRPW motif 1
+135	90	hsa-miR-124-3p	9414	TJP2	NM_001170414	tight junction protein 2
+136	90	hsa-miR-30d-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+137	90	hsa-miR-30e-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+138	90	hsa-miR-30a-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+139	90	hsa-miR-30c-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+140	90	hsa-miR-144-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+141	89	hsa-miR-30a-5p	90	ACVR1	NM_001105	activin A receptor type 1
+142	89	hsa-miR-30c-5p	90	ACVR1	NM_001105	activin A receptor type 1
+143	89	hsa-miR-30e-5p	90	ACVR1	NM_001105	activin A receptor type 1
+144	89	hsa-miR-30d-5p	90	ACVR1	NM_001105	activin A receptor type 1
+145	89	hsa-miR-5010-5p	6781	STC1	NM_003155	stanniocalcin 1
+146	89	hsa-miR-628-5p	90	ACVR1	NM_001105	activin A receptor type 1
+147	89	hsa-miR-30b-5p	90	ACVR1	NM_001105	activin A receptor type 1
+148	89	hsa-miR-186-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+149	89	hsa-miR-455-5p	3791	KDR	NM_002253	kinase insert domain receptor
+150	89	hsa-miR-299-5p	23462	HEY1	NM_012258	hes related family bHLH transcription factor with YRPW motif 1
+151	88	hsa-miR-141-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+152	88	hsa-miR-29b-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+153	88	hsa-miR-454-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+154	88	hsa-miR-29a-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+155	88	hsa-miR-29c-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+156	88	hsa-miR-1972	90	ACVR1	NM_001105	activin A receptor type 1
+157	88	hsa-miR-200a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+158	88	hsa-miR-222-3p	3791	KDR	NM_002253	kinase insert domain receptor
+159	88	hsa-miR-212-5p	10411	RAPGEF3	NM_001098531	Rap guanine nucleotide exchange factor 3
+160	87	hsa-miR-1260b	1460	CSNK2B	NM_001320	casein kinase 2 beta
+161	87	hsa-miR-301a-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+162	87	hsa-miR-548d-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+163	87	hsa-miR-23a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+164	87	hsa-miR-664b-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+165	87	hsa-miR-582-5p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+166	87	hsa-miR-544a	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+167	87	hsa-miR-130a-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+168	87	hsa-miR-185-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+169	87	hsa-miR-1260a	1460	CSNK2B	NM_001320	casein kinase 2 beta
+170	87	hsa-miR-548b-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+171	87	hsa-miR-301b-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+172	87	hsa-miR-3175	6781	STC1	NM_003155	stanniocalcin 1
+173	87	hsa-miR-23b-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+174	86	hsa-miR-501-3p	23462	HEY1	NM_001040708	hes related family bHLH transcription factor with YRPW motif 1
+175	86	hsa-miR-519b-3p	90	ACVR1	NM_001111067	activin A receptor type 1
+176	86	hsa-miR-105-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+177	86	hsa-miR-502-3p	23462	HEY1	NM_001040708	hes related family bHLH transcription factor with YRPW motif 1
+178	86	hsa-miR-19a-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+179	86	hsa-miR-515-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+180	86	hsa-miR-24-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+181	86	hsa-miR-323a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+182	86	hsa-miR-519a-3p	90	ACVR1	NM_001111067	activin A receptor type 1
+183	86	hsa-miR-19b-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+184	85	hsa-miR-1266-5p	90627	STARD13	NM_001243466	StAR related lipid transfer domain containing 13
+185	85	hsa-miR-520h	2697	GJA1	NM_000165	gap junction protein alpha 1
+186	85	hsa-miR-133a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+187	85	hsa-miR-125a-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+188	85	hsa-miR-144-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+189	85	hsa-miR-16-2-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+190	85	hsa-miR-23b-3p	3215	HOXB5	NM_002147	homeobox B5
+191	85	hsa-miR-125b-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+192	85	hsa-miR-105-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+193	85	hsa-miR-520g-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+194	85	hsa-miR-10b-3p	6781	STC1	NM_003155	stanniocalcin 1
+195	85	hsa-miR-133b	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+196	85	hsa-miR-23a-3p	3215	HOXB5	NM_002147	homeobox B5
+197	84	hsa-miR-24-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+198	84	hsa-miR-548am-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+199	84	hsa-miR-450b-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+200	84	hsa-miR-345-5p	9414	TJP2	NM_001170414	tight junction protein 2
+201	84	hsa-miR-548o-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+202	84	hsa-miR-218-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+203	84	hsa-miR-221-3p	3791	KDR	NM_002253	kinase insert domain receptor
+204	84	hsa-miR-548c-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+205	84	hsa-miR-186-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+206	84	hsa-miR-548h-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+207	84	hsa-miR-548j-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+208	83	hsa-miR-6511a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+209	83	hsa-miR-140-3p	3215	HOXB5	NM_002147	homeobox B5
+210	83	hsa-miR-493-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+211	83	hsa-miR-545-5p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+212	83	hsa-miR-142-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+213	83	hsa-miR-509-3-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+214	83	hsa-miR-450b-5p	90	ACVR1	NM_001105	activin A receptor type 1
+215	83	hsa-miR-423-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+216	83	hsa-miR-448	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+217	83	hsa-miR-509-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+218	82	hsa-miR-542-3p	6781	STC1	NM_003155	stanniocalcin 1
+219	82	hsa-miR-543	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+220	82	hsa-miR-186-5p	23462	HEY1	NM_001282851	hes related family bHLH transcription factor with YRPW motif 1
+221	82	hsa-miR-31-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+222	82	hsa-miR-6515-5p	6781	STC1	NM_003155	stanniocalcin 1
+223	81	hsa-miR-452-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+224	81	hsa-miR-548k	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+225	81	hsa-miR-769-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+226	81	hsa-miR-543	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+227	81	hsa-miR-3152-3p	9076	CLDN1	NM_021101	claudin 1
+228	81	hsa-miR-1297	9414	TJP2	NM_004817	tight junction protein 2
+229	81	hsa-miR-142-5p	6781	STC1	NM_003155	stanniocalcin 1
+230	81	hsa-miR-605-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+231	80	hsa-miR-144-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+232	80	hsa-miR-655-3p	3791	KDR	NM_002253	kinase insert domain receptor
+233	80	hsa-miR-22-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+234	80	hsa-miR-568	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+235	80	hsa-miR-1304-5p	23462	HEY1	NM_012258	hes related family bHLH transcription factor with YRPW motif 1
+236	80	hsa-miR-1827	6781	STC1	NM_003155	stanniocalcin 1
+237	80	hsa-miR-136-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+238	80	hsa-miR-664b-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+239	80	hsa-miR-374c-5p	3791	KDR	NM_002253	kinase insert domain receptor
+240	80	hsa-miR-183-5p	388	RHOB	NM_004040	ras homolog family member B
+241	80	hsa-miR-1304-3p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+242	80	hsa-miR-101-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+243	79	hsa-miR-548e-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+244	79	hsa-miR-656-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+245	79	hsa-miR-381-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+246	79	hsa-miR-3942-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+247	79	hsa-miR-337-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+248	79	hsa-miR-182-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+249	79	hsa-miR-548f-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+250	79	hsa-miR-624-5p	388	RHOB	NM_004040	ras homolog family member B
+251	79	hsa-miR-136-5p	3791	KDR	NM_002253	kinase insert domain receptor
+252	78	hsa-miR-223-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+253	78	hsa-miR-491-5p	6781	STC1	NM_003155	stanniocalcin 1
+254	78	hsa-miR-361-3p	9076	CLDN1	NM_021101	claudin 1
+255	78	hsa-miR-182-5p	90	ACVR1	NM_001105	activin A receptor type 1
+256	78	hsa-miR-515-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+257	78	hsa-miR-3121-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+258	78	hsa-miR-433-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+259	78	hsa-miR-497-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+260	78	hsa-miR-548b-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+261	77	hsa-miR-320c	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+262	77	hsa-miR-342-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+263	77	hsa-miR-576-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+264	77	hsa-miR-548o-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+265	77	hsa-miR-513a-3p	2194	FASN	NM_004104	fatty acid synthase
+266	77	hsa-miR-637	3215	HOXB5	NM_002147	homeobox B5
+267	77	hsa-miR-320d	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+268	77	hsa-miR-548an	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+269	77	hsa-miR-1323	2697	GJA1	NM_000165	gap junction protein alpha 1
+270	77	hsa-miR-3143	23462	HEY1	NM_001282851	hes related family bHLH transcription factor with YRPW motif 1
+271	77	hsa-miR-320b	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+272	77	hsa-miR-377-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+273	77	hsa-miR-3140-3p	9414	TJP2	NM_001170414	tight junction protein 2
+274	77	hsa-miR-513c-3p	2194	FASN	NM_004104	fatty acid synthase
+275	77	hsa-miR-338-3p	90	ACVR1	NM_001105	activin A receptor type 1
+276	77	hsa-miR-22-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+277	76	hsa-miR-323a-3p	90	ACVR1	NM_001105	activin A receptor type 1
+278	76	hsa-miR-495-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+279	76	hsa-miR-495-3p	23462	HEY1	NM_001282851	hes related family bHLH transcription factor with YRPW motif 1
+280	76	hsa-let-7f-5p	9076	CLDN1	NM_021101	claudin 1
+281	76	hsa-miR-1290	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+282	76	hsa-miR-18a-3p	388	RHOB	NM_004040	ras homolog family member B
+283	76	hsa-miR-338-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+284	75	hsa-miR-320d	23462	HEY1	NM_001282851	hes related family bHLH transcription factor with YRPW motif 1
+285	75	hsa-miR-582-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+286	75	hsa-miR-320c	23462	HEY1	NM_001282851	hes related family bHLH transcription factor with YRPW motif 1
+287	75	hsa-miR-668-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+288	75	hsa-miR-320b	23462	HEY1	NM_001282851	hes related family bHLH transcription factor with YRPW motif 1
+289	75	hsa-miR-454-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+290	75	hsa-miR-450a-2-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+291	75	hsa-miR-3173-3p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+292	74	hsa-miR-654-5p	6781	STC1	NM_003155	stanniocalcin 1
+293	74	hsa-miR-3143	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+294	74	hsa-miR-320b	6781	STC1	NM_003155	stanniocalcin 1
+295	74	hsa-miR-1306-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+296	74	hsa-miR-548t-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+297	74	hsa-miR-548a-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+298	74	hsa-miR-320d	6781	STC1	NM_003155	stanniocalcin 1
+299	74	hsa-miR-320c	6781	STC1	NM_003155	stanniocalcin 1
+300	73	hsa-miR-144-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+301	73	hsa-miR-379-3p	388	RHOB	NM_004040	ras homolog family member B
+302	73	hsa-miR-30a-5p	6781	STC1	NM_003155	stanniocalcin 1
+303	73	hsa-miR-323a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+304	73	hsa-miR-30e-5p	6781	STC1	NM_003155	stanniocalcin 1
+305	73	hsa-miR-1275	7075	TIE1	NM_001253357	tyrosine kinase with immunoglobulin like and EGF like domains 1
+306	73	hsa-miR-26b-5p	9414	TJP2	NM_004817	tight junction protein 2
+307	73	hsa-miR-380-3p	388	RHOB	NM_004040	ras homolog family member B
+308	73	hsa-miR-30b-5p	6781	STC1	NM_003155	stanniocalcin 1
+309	73	hsa-miR-30d-5p	6781	STC1	NM_003155	stanniocalcin 1
+310	73	hsa-miR-3171	90627	STARD13	NM_001243474	StAR related lipid transfer domain containing 13
+311	73	hsa-miR-608	2194	FASN	NM_004104	fatty acid synthase
+312	73	hsa-miR-30c-5p	6781	STC1	NM_003155	stanniocalcin 1
+313	73	hsa-miR-1303	9076	CLDN1	NM_021101	claudin 1
+314	73	hsa-miR-188-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+315	73	hsa-miR-411-3p	388	RHOB	NM_004040	ras homolog family member B
+316	73	hsa-miR-1297	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+317	73	hsa-miR-26a-5p	9414	TJP2	NM_004817	tight junction protein 2
+318	72	hsa-miR-517a-3p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+319	72	hsa-miR-1297	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+320	72	hsa-miR-3121-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+321	72	hsa-miR-203a-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+322	72	hsa-miR-125a-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+323	72	hsa-miR-4713-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+324	72	hsa-miR-369-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+325	72	hsa-miR-125b-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+326	72	hsa-miR-517c-3p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+327	72	hsa-miR-493-3p	9076	CLDN1	NM_021101	claudin 1
+328	72	hsa-miR-1827	7075	TIE1	NM_001253357	tyrosine kinase with immunoglobulin like and EGF like domains 1
+329	72	hsa-miR-330-3p	388	RHOB	NM_004040	ras homolog family member B
+330	72	hsa-miR-374c-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+331	72	hsa-miR-655-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+332	72	hsa-miR-545-5p	90	ACVR1	NM_001105	activin A receptor type 1
+333	71	hsa-miR-129-2-3p	23462	HEY1	NM_001040708	hes related family bHLH transcription factor with YRPW motif 1
+334	71	hsa-miR-129-1-3p	23462	HEY1	NM_001040708	hes related family bHLH transcription factor with YRPW motif 1
+335	71	hsa-miR-642a-5p	9076	CLDN1	NM_021101	claudin 1
+336	71	hsa-miR-374b-5p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+337	71	hsa-miR-92a-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+338	71	hsa-miR-32-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+339	71	hsa-miR-1185-2-3p	9076	CLDN1	NM_021101	claudin 1
+340	71	hsa-miR-506-5p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+341	71	hsa-miR-126-5p	6781	STC1	NM_003155	stanniocalcin 1
+342	71	hsa-miR-3192-5p	3791	KDR	NM_002253	kinase insert domain receptor
+343	71	hsa-miR-582-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+344	71	hsa-miR-17-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+345	71	hsa-miR-92b-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+346	71	hsa-miR-374a-5p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+347	71	hsa-miR-1185-1-3p	9076	CLDN1	NM_021101	claudin 1
+348	70	hsa-miR-9-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+349	70	hsa-miR-939-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+350	70	hsa-miR-619-5p	23462	HEY1	NM_001040708	hes related family bHLH transcription factor with YRPW motif 1
+351	70	hsa-miR-1306-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+352	70	hsa-miR-501-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+353	70	hsa-miR-502-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+354	70	hsa-miR-3913-5p	3215	HOXB5	NM_002147	homeobox B5
+355	69	hsa-miR-377-5p	388	RHOB	NM_004040	ras homolog family member B
+356	69	hsa-miR-378a-3p	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3
+357	69	hsa-miR-548e-3p	388	RHOB	NM_004040	ras homolog family member B
+358	69	hsa-miR-185-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+359	69	hsa-miR-548f-3p	388	RHOB	NM_004040	ras homolog family member B
+360	69	hsa-miR-200c-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+361	69	hsa-miR-548a-3p	388	RHOB	NM_004040	ras homolog family member B
+362	69	hsa-miR-7-5p	10411	RAPGEF3	NM_001098532	Rap guanine nucleotide exchange factor 3
+363	69	hsa-miR-1275	3215	HOXB5	NM_002147	homeobox B5
+364	69	hsa-miR-212-5p	388	RHOB	NM_004040	ras homolog family member B
+365	69	hsa-miR-378c	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3
+366	69	hsa-miR-1185-1-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+367	69	hsa-miR-629-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+368	69	hsa-miR-19a-3p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+369	69	hsa-miR-582-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+370	69	hsa-miR-200b-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+371	69	hsa-miR-422a	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3
+372	69	hsa-miR-429	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+373	69	hsa-miR-378d	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3
+374	69	hsa-miR-1185-2-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+375	69	hsa-miR-19b-3p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+376	68	hsa-miR-25-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+377	68	hsa-miR-3614-3p	388	RHOB	NM_004040	ras homolog family member B
+378	68	hsa-miR-301a-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+379	68	hsa-miR-320e	9414	TJP2	NM_004817	tight junction protein 2
+380	68	hsa-miR-25-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+381	68	hsa-miR-126-5p	10411	RAPGEF3	NM_001098532	Rap guanine nucleotide exchange factor 3
+382	68	hsa-miR-92a-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+383	68	hsa-miR-1261	9076	CLDN1	NM_021101	claudin 1
+384	68	hsa-miR-211-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+385	68	hsa-miR-204-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+386	68	hsa-miR-32-5p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+387	68	hsa-miR-363-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+388	68	hsa-miR-301b-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+389	68	hsa-miR-4524a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+390	68	hsa-miR-92b-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+391	68	hsa-miR-367-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+392	68	hsa-miR-545-5p	2194	FASN	NM_004104	fatty acid synthase
+393	68	hsa-miR-130a-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+394	68	hsa-miR-130b-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+395	67	hsa-miR-370-3p	3791	KDR	NM_002253	kinase insert domain receptor
+396	67	hsa-let-7e-5p	9076	CLDN1	NM_021101	claudin 1
+397	67	hsa-let-7c-5p	9076	CLDN1	NM_021101	claudin 1
+398	67	hsa-miR-363-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+399	67	hsa-miR-10b-3p	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3
+400	67	hsa-miR-367-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+401	67	hsa-let-7d-5p	9076	CLDN1	NM_021101	claudin 1
+402	67	hsa-miR-98-5p	9076	CLDN1	NM_021101	claudin 1
+403	67	hsa-miR-410-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+404	67	hsa-miR-3154	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+405	67	hsa-miR-154-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+406	67	hsa-let-7a-5p	9076	CLDN1	NM_021101	claudin 1
+407	67	hsa-miR-93-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+408	67	hsa-let-7i-5p	9076	CLDN1	NM_021101	claudin 1
+409	67	hsa-miR-659-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+410	67	hsa-miR-495-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+411	67	hsa-let-7g-5p	9076	CLDN1	NM_021101	claudin 1
+412	67	hsa-miR-487a-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+413	67	hsa-let-7b-5p	9076	CLDN1	NM_021101	claudin 1
+414	66	hsa-miR-122-5p	90	ACVR1	NM_001105	activin A receptor type 1
+415	66	hsa-miR-548l	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+416	66	hsa-miR-330-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+417	66	hsa-miR-23a-3p	9414	TJP2	NM_004817	tight junction protein 2
+418	66	hsa-miR-1287-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+419	66	hsa-miR-224-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+420	66	hsa-miR-548an	6781	STC1	NM_003155	stanniocalcin 1
+421	66	hsa-miR-214-3p	2697	GJA1	NM_000165	gap junction protein alpha 1
+422	66	hsa-miR-761	2697	GJA1	NM_000165	gap junction protein alpha 1
+423	66	hsa-miR-23b-3p	9414	TJP2	NM_004817	tight junction protein 2
+424	66	hsa-miR-212-5p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+425	66	hsa-miR-133b	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+426	66	hsa-miR-656-3p	3791	KDR	NM_002253	kinase insert domain receptor
+427	66	hsa-miR-133a-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+428	66	hsa-miR-198	3791	KDR	NM_002253	kinase insert domain receptor
+429	66	hsa-miR-1290	6781	STC1	NM_003155	stanniocalcin 1
+430	66	hsa-miR-128-3p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+431	65	hsa-miR-107	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+432	65	hsa-miR-3074-5p	90627	STARD13	NM_001243474	StAR related lipid transfer domain containing 13
+433	65	hsa-miR-515-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+434	65	hsa-miR-506-3p	9076	CLDN1	NM_021101	claudin 1
+435	65	hsa-miR-636	2697	GJA1	NM_000165	gap junction protein alpha 1
+436	65	hsa-miR-124-3p	9076	CLDN1	NM_021101	claudin 1
+437	65	hsa-miR-450b-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+438	65	hsa-miR-410-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+439	65	hsa-miR-103a-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+440	64	hsa-miR-513a-5p	10411	RAPGEF3	NM_001098531	Rap guanine nucleotide exchange factor 3
+441	64	hsa-miR-33b-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+442	64	hsa-miR-30e-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+443	64	hsa-miR-15a-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+444	64	hsa-miR-195-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+445	64	hsa-miR-15b-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+446	64	hsa-miR-497-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+447	64	hsa-miR-16-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+448	64	hsa-miR-190a-5p	6781	STC1	NM_003155	stanniocalcin 1
+449	64	hsa-miR-150-5p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+450	64	hsa-miR-15b-3p	2194	FASN	NM_004104	fatty acid synthase
+451	64	hsa-miR-766-5p	6781	STC1	NM_003155	stanniocalcin 1
+452	64	hsa-miR-3936	6781	STC1	NM_003155	stanniocalcin 1
+453	64	hsa-miR-496	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+454	64	hsa-miR-942-3p	6781	STC1	NM_003155	stanniocalcin 1
+455	64	hsa-miR-5010-5p	9076	CLDN1	NM_021101	claudin 1
+456	64	hsa-miR-30a-3p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+457	64	hsa-miR-1323	6781	STC1	NM_003155	stanniocalcin 1
+458	64	hsa-miR-424-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+459	64	hsa-miR-32-3p	1460	CSNK2B	NM_001320	casein kinase 2 beta
+460	64	hsa-miR-33a-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+461	63	hsa-miR-889-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+462	63	hsa-miR-629-5p	9414	TJP2	NM_004817	tight junction protein 2
+463	63	hsa-miR-664b-5p	3791	KDR	NM_002253	kinase insert domain receptor
+464	63	hsa-miR-194-5p	9076	CLDN1	NM_021101	claudin 1
+465	63	hsa-miR-876-5p	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+466	63	hsa-miR-887-3p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+467	63	hsa-miR-5001-5p	6781	STC1	NM_003155	stanniocalcin 1
+468	63	hsa-miR-496	9076	CLDN1	NM_021101	claudin 1
+469	63	hsa-miR-1275	6781	STC1	NM_003155	stanniocalcin 1
+470	63	hsa-miR-5010-5p	3215	HOXB5	NM_002147	homeobox B5
+471	63	hsa-miR-762	6781	STC1	NM_003155	stanniocalcin 1
+472	63	hsa-miR-452-3p	23462	HEY1	NM_001282851	hes related family bHLH transcription factor with YRPW motif 1
+473	62	hsa-miR-495-3p	2194	FASN	NM_004104	fatty acid synthase
+474	62	hsa-miR-17-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+475	62	hsa-miR-1260b	3215	HOXB5	NM_002147	homeobox B5
+476	62	hsa-miR-320d	10411	RAPGEF3	NM_001098532	Rap guanine nucleotide exchange factor 3
+477	62	hsa-miR-3143	6781	STC1	NM_003155	stanniocalcin 1
+478	62	hsa-miR-26b-5p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+479	62	hsa-miR-320b	10411	RAPGEF3	NM_001098532	Rap guanine nucleotide exchange factor 3
+480	62	hsa-miR-548l	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+481	62	hsa-miR-183-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+482	62	hsa-miR-320c	10411	RAPGEF3	NM_001098532	Rap guanine nucleotide exchange factor 3
+483	62	hsa-miR-1246	90627	STARD13	NM_001243474	StAR related lipid transfer domain containing 13
+484	62	hsa-miR-22-3p	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3
+485	62	hsa-miR-186-5p	388	RHOB	NM_004040	ras homolog family member B
+486	62	hsa-miR-576-3p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+487	62	hsa-miR-3143	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+488	62	hsa-miR-1260a	3215	HOXB5	NM_002147	homeobox B5
+489	62	hsa-miR-379-5p	9076	CLDN1	NM_021101	claudin 1
+490	62	hsa-miR-29a-3p	6781	STC1	NM_003155	stanniocalcin 1
+491	62	hsa-miR-26a-5p	26084	ARHGEF26	NM_001251963	Rho guanine nucleotide exchange factor 26
+492	62	hsa-miR-29c-3p	6781	STC1	NM_003155	stanniocalcin 1
+493	62	hsa-miR-29b-3p	6781	STC1	NM_003155	stanniocalcin 1
+494	61	hsa-miR-664b-3p	90627	STARD13	NM_001243466	StAR related lipid transfer domain containing 13
+495	61	hsa-miR-4662a-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+496	61	hsa-miR-26b-5p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+497	61	hsa-miR-519b-3p	6781	STC1	NM_003155	stanniocalcin 1
+498	61	hsa-miR-26a-5p	5906	RAP1A	NM_002884	RAP1A, member of RAS oncogene family
+499	61	hsa-miR-3154	6781	STC1	NM_003155	stanniocalcin 1
+500	61	hsa-miR-183-3p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+501	61	hsa-miR-221-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+502	61	hsa-miR-519a-3p	6781	STC1	NM_003155	stanniocalcin 1
+503	61	hsa-miR-508-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+504	60	hsa-miR-3183	2697	GJA1	NM_000165	gap junction protein alpha 1
+505	60	hsa-miR-101-3p	90627	STARD13	NM_052851	StAR related lipid transfer domain containing 13
+506	60	hsa-miR-218-5p	9414	TJP2	NM_004817	tight junction protein 2
+507	60	hsa-miR-519a-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+508	60	hsa-miR-506-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+509	60	hsa-miR-185-5p	3215	HOXB5	NM_002147	homeobox B5
+510	60	hsa-miR-493-5p	2697	GJA1	NM_000165	gap junction protein alpha 1
+511	60	hsa-miR-532-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+512	60	hsa-miR-144-3p	90627	STARD13	NM_178006	StAR related lipid transfer domain containing 13
+513	60	hsa-miR-139-5p	57826	RAP2C	NM_001271186	RAP2C, member of RAS oncogene family
+514	60	hsa-miR-299-5p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+515	60	hsa-miR-615-5p	2194	FASN	NM_004104	fatty acid synthase
+516	60	hsa-miR-124-3p	5906	RAP1A	NM_001010935	RAP1A, member of RAS oncogene family
+517	60	hsa-miR-92b-3p	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3
+518	60	hsa-miR-504-5p	6781	STC1	NM_003155	stanniocalcin 1
+519	60	hsa-miR-455-3p	9414	TJP2	NM_004817	tight junction protein 2
+520	60	hsa-miR-519b-3p	23493	HEY2	NM_012259	hes related family bHLH transcription factor with YRPW motif 2
+521	60	hsa-miR-1261	26084	ARHGEF26	NM_015595	Rho guanine nucleotide exchange factor 26
+522	60	hsa-miR-92a-3p	10411	RAPGEF3	NM_006105	Rap guanine nucleotide exchange factor 3

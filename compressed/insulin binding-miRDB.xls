@@ -1,0 +1,208 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	97	hsa-miR-7-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+2	97	hsa-miR-182-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+3	96	hsa-let-7c-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+4	96	hsa-let-7a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+5	96	hsa-miR-31-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+6	96	hsa-let-7g-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+7	96	hsa-let-7b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+8	96	hsa-let-7i-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+9	96	hsa-miR-98-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+10	96	hsa-let-7e-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+11	96	hsa-let-7f-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+12	95	hsa-let-7d-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+13	94	hsa-miR-4713-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+14	94	hsa-miR-15b-5p	3643	INSR	NM_000208	insulin receptor
+15	94	hsa-miR-297	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+16	94	hsa-miR-548t-3p	3416	IDE	NM_001165946	insulin degrading enzyme
+17	94	hsa-miR-548t-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+18	93	hsa-miR-497-5p	3643	INSR	NM_000208	insulin receptor
+19	93	hsa-miR-548e-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+20	93	hsa-miR-548a-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+21	93	hsa-miR-548f-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+22	92	hsa-miR-129-5p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+23	92	hsa-miR-455-3p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+24	92	hsa-miR-493-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+25	91	hsa-miR-15a-5p	3643	INSR	NM_000208	insulin receptor
+26	91	hsa-miR-3121-3p	9854	C2CD2L	NM_014807	C2CD2 like
+27	91	hsa-miR-16-5p	3643	INSR	NM_000208	insulin receptor
+28	91	hsa-miR-195-5p	3643	INSR	NM_000208	insulin receptor
+29	91	hsa-let-7i-5p	3643	INSR	NM_000208	insulin receptor
+30	90	hsa-miR-424-5p	3643	INSR	NM_000208	insulin receptor
+31	90	hsa-miR-486-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+32	90	hsa-miR-221-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+33	90	hsa-miR-222-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+34	90	hsa-miR-509-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+35	90	hsa-miR-3150b-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+36	90	hsa-miR-509-3-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+37	89	hsa-miR-3614-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+38	88	hsa-miR-16-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+39	88	hsa-miR-15a-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+40	88	hsa-miR-15b-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+41	88	hsa-let-7c-5p	3643	INSR	NM_000208	insulin receptor
+42	88	hsa-let-7f-5p	3643	INSR	NM_000208	insulin receptor
+43	88	hsa-let-7d-5p	3643	INSR	NM_000208	insulin receptor
+44	88	hsa-miR-98-5p	3643	INSR	NM_000208	insulin receptor
+45	88	hsa-miR-30a-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+46	88	hsa-miR-30c-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+47	88	hsa-miR-411-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+48	88	hsa-let-7e-5p	3643	INSR	NM_000208	insulin receptor
+49	88	hsa-miR-379-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+50	88	hsa-let-7b-5p	3643	INSR	NM_000208	insulin receptor
+51	88	hsa-miR-30b-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+52	88	hsa-miR-17-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+53	88	hsa-miR-223-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+54	88	hsa-miR-106b-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+55	88	hsa-miR-93-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+56	88	hsa-miR-519d-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+57	88	hsa-miR-30d-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+58	88	hsa-miR-20a-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+59	88	hsa-miR-106a-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+60	88	hsa-let-7g-5p	3643	INSR	NM_000208	insulin receptor
+61	88	hsa-miR-20b-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+62	88	hsa-miR-30e-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+63	88	hsa-miR-195-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+64	88	hsa-let-7a-5p	3643	INSR	NM_000208	insulin receptor
+65	87	hsa-miR-96-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+66	86	hsa-miR-320c	3416	IDE	NM_001322797	insulin degrading enzyme
+67	86	hsa-miR-29c-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+68	86	hsa-miR-320b	3416	IDE	NM_001322797	insulin degrading enzyme
+69	86	hsa-miR-27a-3p	3643	INSR	NM_000208	insulin receptor
+70	86	hsa-miR-29b-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+71	86	hsa-miR-548an	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+72	86	hsa-miR-29a-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+73	86	hsa-miR-545-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+74	86	hsa-miR-27b-3p	3643	INSR	NM_000208	insulin receptor
+75	86	hsa-miR-3179	9854	C2CD2L	NM_014807	C2CD2 like
+76	86	hsa-miR-320d	3416	IDE	NM_001322797	insulin degrading enzyme
+77	86	hsa-miR-382-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+78	85	hsa-miR-448	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+79	85	hsa-miR-664b-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+80	85	hsa-miR-627-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+81	85	hsa-miR-330-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+82	85	hsa-miR-1271-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+83	85	hsa-miR-492	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+84	84	hsa-miR-3928-3p	3643	INSR	NM_000208	insulin receptor
+85	84	hsa-miR-153-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+86	84	hsa-miR-448	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+87	84	hsa-miR-324-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+88	84	hsa-miR-491-5p	9854	C2CD2L	NM_014807	C2CD2 like
+89	84	hsa-miR-1275	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+90	83	hsa-miR-497-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+91	83	hsa-miR-494-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+92	83	hsa-miR-150-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+93	83	hsa-miR-542-3p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+94	83	hsa-miR-424-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+95	82	hsa-miR-194-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+96	82	hsa-miR-195-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+97	82	hsa-miR-15a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+98	82	hsa-miR-16-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+99	82	hsa-miR-96-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+100	82	hsa-miR-15b-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+101	82	hsa-miR-182-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+102	82	hsa-miR-939-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+103	82	hsa-miR-3143	3416	IDE	NM_001322797	insulin degrading enzyme
+104	82	hsa-miR-9-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+105	81	hsa-miR-759	3643	INSR	NM_000208	insulin receptor
+106	81	hsa-miR-605-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+107	81	hsa-miR-629-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+108	81	hsa-miR-5699-5p	3643	INSR	NM_001079817	insulin receptor
+109	80	hsa-miR-202-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+110	80	hsa-miR-1271-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+111	80	hsa-miR-3065-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+112	80	hsa-miR-185-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+113	80	hsa-miR-3934-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+114	79	hsa-miR-497-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+115	79	hsa-miR-424-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+116	79	hsa-miR-330-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+117	78	hsa-miR-508-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+118	78	hsa-miR-186-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+119	78	hsa-miR-132-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+120	78	hsa-miR-1297	9854	C2CD2L	NM_001290474	C2CD2 like
+121	78	hsa-miR-128-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+122	78	hsa-miR-212-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+123	78	hsa-miR-26b-5p	9854	C2CD2L	NM_001290474	C2CD2 like
+124	78	hsa-miR-3187-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+125	78	hsa-miR-26a-5p	9854	C2CD2L	NM_001290474	C2CD2 like
+126	77	hsa-miR-361-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+127	77	hsa-miR-519b-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+128	77	hsa-miR-519a-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+129	77	hsa-miR-32-3p	3643	INSR	NM_000208	insulin receptor
+130	77	hsa-miR-3183	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+131	76	hsa-miR-200a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+132	76	hsa-miR-3065-3p	3416	IDE	NM_001165946	insulin degrading enzyme
+133	76	hsa-miR-141-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+134	76	hsa-miR-219b-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+135	76	hsa-miR-550a-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+136	76	hsa-miR-450b-5p	3643	INSR	NM_000208	insulin receptor
+137	76	hsa-miR-1290	3416	IDE	NM_001165946	insulin degrading enzyme
+138	76	hsa-miR-1271-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+139	75	hsa-miR-1304-5p	3643	INSR	NM_000208	insulin receptor
+140	75	hsa-miR-205-5p	3643	INSR	NM_000208	insulin receptor
+141	75	hsa-miR-128-3p	3643	INSR	NM_000208	insulin receptor
+142	75	hsa-miR-3154	9854	C2CD2L	NM_014807	C2CD2 like
+143	74	hsa-miR-520h	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+144	74	hsa-miR-20a-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+145	74	hsa-miR-376b-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+146	74	hsa-miR-376a-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+147	74	hsa-miR-520g-3p	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+148	73	hsa-miR-548t-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+149	73	hsa-miR-513a-5p	3643	INSR	NM_000208	insulin receptor
+150	73	hsa-miR-218-5p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+151	73	hsa-miR-379-5p	3643	INSR	NM_000208	insulin receptor
+152	73	hsa-miR-374a-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+153	73	hsa-miR-4667-5p	9854	C2CD2L	NM_001290474	C2CD2 like
+154	72	hsa-miR-590-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+155	72	hsa-miR-767-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+156	72	hsa-miR-21-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+157	71	hsa-miR-548t-3p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+158	71	hsa-miR-145-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+159	70	hsa-miR-374a-3p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+160	70	hsa-miR-532-5p	3416	IDE	NM_001165946	insulin degrading enzyme
+161	70	hsa-miR-544a	3416	IDE	NM_001322797	insulin degrading enzyme
+162	70	hsa-miR-153-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+163	69	hsa-miR-103a-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+164	69	hsa-miR-503-5p	3643	INSR	NM_000208	insulin receptor
+165	69	hsa-miR-107	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+166	69	hsa-miR-374c-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+167	69	hsa-miR-655-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+168	68	hsa-miR-3198	3416	IDE	NM_001322797	insulin degrading enzyme
+169	68	hsa-miR-597-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+170	67	hsa-miR-548t-5p	3643	INSR	NM_000208	insulin receptor
+171	67	hsa-miR-625-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+172	66	hsa-miR-576-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+173	66	hsa-miR-374b-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+174	66	hsa-miR-3121-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+175	66	hsa-miR-509-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+176	66	hsa-miR-150-5p	9854	C2CD2L	NM_014807	C2CD2 like
+177	66	hsa-miR-509-3-5p	3416	IDE	NM_001322797	insulin degrading enzyme
+178	65	hsa-miR-503-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+179	65	hsa-miR-432-5p	3643	INSR	NM_001079817	insulin receptor
+180	65	hsa-miR-766-3p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+181	65	hsa-miR-185-5p	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+182	65	hsa-miR-127-5p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+183	65	hsa-miR-548t-3p	3643	INSR	NM_000208	insulin receptor
+184	64	hsa-miR-328-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+185	64	hsa-miR-3130-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+186	64	hsa-miR-452-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+187	64	hsa-miR-3175	3480	IGF1R	NM_001291858	insulin like growth factor 1 receptor
+188	64	hsa-miR-544a	5295	PIK3R1	NM_181523	phosphoinositide-3-kinase regulatory subunit 1
+189	63	hsa-miR-320b	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+190	63	hsa-miR-504-5p	5295	PIK3R1	NM_001242466	phosphoinositide-3-kinase regulatory subunit 1
+191	63	hsa-miR-320c	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+192	63	hsa-miR-3936	9854	C2CD2L	NM_014807	C2CD2 like
+193	63	hsa-miR-320d	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+194	62	hsa-miR-362-3p	3643	INSR	NM_001079817	insulin receptor
+195	62	hsa-miR-664b-5p	5295	PIK3R1	NM_181504	phosphoinositide-3-kinase regulatory subunit 1
+196	62	hsa-miR-452-3p	9854	C2CD2L	NM_014807	C2CD2 like
+197	62	hsa-miR-432-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+198	62	hsa-miR-329-3p	3643	INSR	NM_001079817	insulin receptor
+199	62	hsa-miR-1224-5p	3643	INSR	NM_000208	insulin receptor
+200	62	hsa-miR-208b-3p	3643	INSR	NM_000208	insulin receptor
+201	62	hsa-miR-139-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+202	61	hsa-miR-105-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+203	61	hsa-miR-34a-3p	3643	INSR	NM_000208	insulin receptor
+204	61	hsa-miR-876-3p	3416	IDE	NM_001322797	insulin degrading enzyme
+205	60	hsa-miR-450a-2-3p	3643	INSR	NM_000208	insulin receptor
+206	60	hsa-miR-379-5p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor
+207	60	hsa-miR-381-3p	3480	IGF1R	NM_000875	insulin like growth factor 1 receptor

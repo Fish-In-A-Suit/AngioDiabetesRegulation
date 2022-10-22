@@ -1,0 +1,208 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	100	hsa-miR-449a	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+2	100	hsa-miR-34a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+3	100	hsa-miR-34c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+4	100	hsa-miR-449b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+5	98	hsa-miR-1297	4534	MTM1	NM_000252	myotubularin 1
+6	98	hsa-miR-200c-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+7	98	hsa-miR-429	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+8	98	hsa-miR-338-5p	2660	MSTN	NM_005259	myostatin
+9	98	hsa-miR-200b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+10	98	hsa-miR-149-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+11	97	hsa-miR-30a-5p	7093	TLL2	NM_012465	tolloid like 2
+12	97	hsa-miR-124-3p	4534	MTM1	NM_000252	myotubularin 1
+13	97	hsa-miR-449c-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+14	97	hsa-miR-26a-5p	4534	MTM1	NM_000252	myotubularin 1
+15	97	hsa-miR-34b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+16	97	hsa-miR-26b-5p	4534	MTM1	NM_000252	myotubularin 1
+17	97	hsa-miR-129-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+18	97	hsa-miR-30c-5p	7093	TLL2	NM_012465	tolloid like 2
+19	97	hsa-miR-30b-5p	7093	TLL2	NM_012465	tolloid like 2
+20	97	hsa-miR-506-3p	4534	MTM1	NM_000252	myotubularin 1
+21	97	hsa-miR-32-3p	4534	MTM1	NM_000252	myotubularin 1
+22	97	hsa-miR-2682-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+23	97	hsa-miR-30d-5p	7093	TLL2	NM_012465	tolloid like 2
+24	97	hsa-miR-30e-5p	7093	TLL2	NM_012465	tolloid like 2
+25	96	hsa-miR-450a-2-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+26	95	hsa-miR-513a-3p	4534	MTM1	NM_000252	myotubularin 1
+27	95	hsa-miR-513c-3p	4534	MTM1	NM_000252	myotubularin 1
+28	94	hsa-miR-186-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+29	94	hsa-miR-214-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+30	94	hsa-miR-365b-3p	7093	TLL2	NM_012465	tolloid like 2
+31	94	hsa-miR-365a-3p	7093	TLL2	NM_012465	tolloid like 2
+32	94	hsa-miR-761	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+33	93	hsa-miR-491-5p	3481	IGF2	NM_001007139	insulin like growth factor 2
+34	93	hsa-miR-1275	3481	IGF2	NM_000612	insulin like growth factor 2
+35	93	hsa-miR-210-3p	3481	IGF2	NM_001291861	insulin like growth factor 2
+36	93	hsa-miR-377-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+37	93	hsa-miR-27a-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+38	93	hsa-miR-493-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+39	93	hsa-miR-27b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+40	92	hsa-miR-548e-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+41	92	hsa-miR-508-3p	2660	MSTN	NM_005259	myostatin
+42	92	hsa-miR-15b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+43	92	hsa-miR-548a-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+44	92	hsa-miR-16-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+45	92	hsa-miR-548f-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+46	92	hsa-miR-15a-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+47	92	hsa-miR-195-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+48	91	hsa-miR-500b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+49	91	hsa-miR-500b-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+50	91	hsa-miR-1972	3481	IGF2	NM_001291861	insulin like growth factor 2
+51	91	hsa-miR-362-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+52	91	hsa-miR-362-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+53	91	hsa-miR-550a-3p	4534	MTM1	NM_000252	myotubularin 1
+54	90	hsa-miR-5699-5p	4534	MTM1	NM_000252	myotubularin 1
+55	90	hsa-miR-181c-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+56	90	hsa-miR-497-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+57	90	hsa-miR-181d-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+58	90	hsa-miR-135b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+59	90	hsa-miR-181a-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+60	90	hsa-miR-135a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+61	90	hsa-miR-181b-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+62	90	hsa-miR-4662a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+63	90	hsa-miR-369-3p	7093	TLL2	NM_012465	tolloid like 2
+64	90	hsa-miR-424-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+65	89	hsa-miR-515-5p	2660	MSTN	NM_005259	myostatin
+66	89	hsa-miR-605-3p	4534	MTM1	NM_000252	myotubularin 1
+67	89	hsa-miR-3190-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+68	88	hsa-miR-374c-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+69	88	hsa-miR-212-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+70	88	hsa-miR-548an	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+71	88	hsa-miR-128-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+72	87	hsa-miR-342-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+73	87	hsa-miR-454-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+74	86	hsa-miR-153-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+75	86	hsa-miR-2355-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+76	85	hsa-miR-660-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+77	85	hsa-miR-655-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+78	85	hsa-miR-7-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+79	85	hsa-miR-145-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+80	84	hsa-miR-107	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+81	84	hsa-miR-103a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+82	84	hsa-miR-877-5p	7093	TLL2	NM_012465	tolloid like 2
+83	84	hsa-miR-767-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+84	83	hsa-miR-542-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+85	83	hsa-miR-539-3p	4534	MTM1	NM_000252	myotubularin 1
+86	83	hsa-miR-513a-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+87	83	hsa-miR-485-3p	4534	MTM1	NM_000252	myotubularin 1
+88	83	hsa-miR-513c-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+89	82	hsa-miR-155-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+90	82	hsa-miR-301a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+91	82	hsa-miR-24-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+92	82	hsa-miR-24-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+93	82	hsa-miR-301b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+94	82	hsa-miR-130a-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+95	82	hsa-miR-130b-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+96	81	hsa-miR-450b-5p	2660	MSTN	NM_005259	myostatin
+97	80	hsa-miR-214-3p	4534	MTM1	NM_000252	myotubularin 1
+98	79	hsa-miR-650	4534	MTM1	NM_000252	myotubularin 1
+99	79	hsa-miR-6511a-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+100	78	hsa-miR-449a	2660	MSTN	NM_005259	myostatin
+101	78	hsa-miR-449c-5p	2660	MSTN	NM_005259	myostatin
+102	78	hsa-miR-34a-5p	2660	MSTN	NM_005259	myostatin
+103	78	hsa-miR-34b-5p	2660	MSTN	NM_005259	myostatin
+104	78	hsa-miR-34c-5p	2660	MSTN	NM_005259	myostatin
+105	78	hsa-miR-1290	3481	IGF2	NM_001007139	insulin like growth factor 2
+106	78	hsa-miR-545-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+107	78	hsa-miR-2682-5p	2660	MSTN	NM_005259	myostatin
+108	78	hsa-miR-761	4534	MTM1	NM_000252	myotubularin 1
+109	78	hsa-miR-449b-5p	2660	MSTN	NM_005259	myostatin
+110	77	hsa-miR-203a-3p	7093	TLL2	NM_012465	tolloid like 2
+111	76	hsa-miR-548t-3p	4534	MTM1	NM_000252	myotubularin 1
+112	76	hsa-miR-323b-3p	2660	MSTN	NM_005259	myostatin
+113	76	hsa-miR-625-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+114	76	hsa-miR-450b-5p	7093	TLL2	NM_012465	tolloid like 2
+115	75	hsa-miR-589-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+116	74	hsa-miR-155-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+117	74	hsa-miR-514b-5p	4534	MTM1	NM_000252	myotubularin 1
+118	74	hsa-miR-664b-3p	2660	MSTN	NM_005259	myostatin
+119	74	hsa-miR-513c-5p	4534	MTM1	NM_000252	myotubularin 1
+120	73	hsa-miR-1910-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+121	73	hsa-miR-200c-3p	2660	MSTN	NM_005259	myostatin
+122	73	hsa-miR-429	2660	MSTN	NM_005259	myostatin
+123	73	hsa-miR-200b-3p	2660	MSTN	NM_005259	myostatin
+124	73	hsa-miR-223-3p	4534	MTM1	NM_000252	myotubularin 1
+125	72	hsa-miR-410-3p	2660	MSTN	NM_005259	myostatin
+126	72	hsa-miR-3121-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+127	72	hsa-miR-1290	2660	MSTN	NM_005259	myostatin
+128	72	hsa-miR-655-3p	4534	MTM1	NM_000252	myotubularin 1
+129	72	hsa-miR-374c-5p	4534	MTM1	NM_000252	myotubularin 1
+130	71	hsa-miR-433-3p	7093	TLL2	NM_012465	tolloid like 2
+131	71	hsa-miR-3187-3p	7093	TLL2	NM_012465	tolloid like 2
+132	71	hsa-miR-200a-5p	2660	MSTN	NM_005259	myostatin
+133	71	hsa-miR-200c-3p	7093	TLL2	NM_012465	tolloid like 2
+134	71	hsa-miR-429	7093	TLL2	NM_012465	tolloid like 2
+135	71	hsa-miR-141-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+136	71	hsa-miR-200a-3p	3481	IGF2	NM_001007139	insulin like growth factor 2
+137	71	hsa-miR-200b-3p	7093	TLL2	NM_012465	tolloid like 2
+138	71	hsa-miR-1179	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+139	71	hsa-miR-513a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+140	70	hsa-miR-495-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+141	70	hsa-miR-381-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+142	70	hsa-miR-381-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+143	70	hsa-miR-448	2660	MSTN	NM_005259	myostatin
+144	70	hsa-miR-1301-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+145	70	hsa-miR-9-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+146	69	hsa-miR-124-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+147	69	hsa-miR-33b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+148	69	hsa-miR-33a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+149	69	hsa-miR-9-3p	7093	TLL2	NM_012465	tolloid like 2
+150	69	hsa-miR-506-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+151	69	hsa-miR-223-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+152	68	hsa-miR-548e-3p	2660	MSTN	NM_005259	myostatin
+153	68	hsa-miR-548a-3p	2660	MSTN	NM_005259	myostatin
+154	68	hsa-miR-548f-3p	2660	MSTN	NM_005259	myostatin
+155	67	hsa-miR-202-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+156	67	hsa-miR-1827	3481	IGF2	NM_000612	insulin like growth factor 2
+157	67	hsa-miR-582-5p	7093	TLL2	NM_012465	tolloid like 2
+158	67	hsa-miR-3157-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+159	67	hsa-miR-769-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+160	66	hsa-miR-3144-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+161	66	hsa-miR-664b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+162	66	hsa-miR-627-3p	2660	MSTN	NM_005259	myostatin
+163	66	hsa-miR-942-5p	7093	TLL2	NM_012465	tolloid like 2
+164	65	hsa-miR-576-5p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+165	65	hsa-miR-186-5p	2660	MSTN	NM_005259	myostatin
+166	65	hsa-miR-218-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+167	65	hsa-miR-92b-5p	89	ACTN3	NM_001104	actinin alpha 3 (gene/pseudogene)
+168	65	hsa-miR-126-5p	7093	TLL2	NM_012465	tolloid like 2
+169	64	hsa-miR-18b-5p	7093	TLL2	NM_012465	tolloid like 2
+170	64	hsa-miR-423-3p	28514	DLL1	NM_005618	delta like canonical Notch ligand 1
+171	64	hsa-miR-653-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+172	64	hsa-miR-500a-3p	2660	MSTN	NM_005259	myostatin
+173	64	hsa-miR-18a-5p	7093	TLL2	NM_012465	tolloid like 2
+174	64	hsa-miR-487a-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+175	63	hsa-miR-32-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+176	63	hsa-miR-379-5p	4534	MTM1	NM_000252	myotubularin 1
+177	63	hsa-miR-1287-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+178	63	hsa-miR-514a-3p	2660	MSTN	NM_005259	myostatin
+179	63	hsa-miR-93-3p	7093	TLL2	NM_012465	tolloid like 2
+180	63	hsa-miR-514b-3p	2660	MSTN	NM_005259	myostatin
+181	62	hsa-miR-374a-5p	2660	MSTN	NM_005259	myostatin
+182	62	hsa-miR-544a	3481	IGF2	NM_000612	insulin like growth factor 2
+183	62	hsa-miR-744-5p	3481	IGF2	NM_000612	insulin like growth factor 2
+184	62	hsa-miR-889-3p	2660	MSTN	NM_005259	myostatin
+185	61	hsa-miR-380-3p	3481	IGF2	NM_000612	insulin like growth factor 2
+186	61	hsa-miR-409-3p	4534	MTM1	NM_000252	myotubularin 1
+187	61	hsa-miR-15b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+188	61	hsa-miR-497-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+189	61	hsa-miR-16-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+190	61	hsa-miR-423-5p	2660	MSTN	NM_005259	myostatin
+191	61	hsa-miR-3154	4534	MTM1	NM_000252	myotubularin 1
+192	61	hsa-miR-15a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+193	61	hsa-miR-195-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+194	61	hsa-miR-424-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+195	60	hsa-miR-548j-5p	2660	MSTN	NM_005259	myostatin
+196	60	hsa-miR-548c-5p	2660	MSTN	NM_005259	myostatin
+197	60	hsa-miR-1297	2660	MSTN	NM_005259	myostatin
+198	60	hsa-miR-26a-5p	2660	MSTN	NM_005259	myostatin
+199	60	hsa-miR-615-5p	3481	IGF2	NM_001291861	insulin like growth factor 2
+200	60	hsa-miR-548b-5p	2660	MSTN	NM_005259	myostatin
+201	60	hsa-miR-939-3p	7093	TLL2	NM_012465	tolloid like 2
+202	60	hsa-miR-26b-5p	2660	MSTN	NM_005259	myostatin
+203	60	hsa-miR-548d-5p	2660	MSTN	NM_005259	myostatin
+204	60	hsa-miR-548h-5p	2660	MSTN	NM_005259	myostatin
+205	60	hsa-miR-548o-5p	2660	MSTN	NM_005259	myostatin
+206	60	hsa-miR-548am-5p	2660	MSTN	NM_005259	myostatin
+207	60	hsa-miR-3140-3p	4534	MTM1	NM_000252	myotubularin 1

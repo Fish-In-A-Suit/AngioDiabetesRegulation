@@ -1,0 +1,293 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	98	hsa-miR-664b-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+2	98	hsa-miR-148a-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+3	98	hsa-miR-152-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+4	98	hsa-miR-182-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+5	98	hsa-miR-448	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+6	98	hsa-miR-145-5p	4644	MYO5A	NM_000259	myosin VA
+7	98	hsa-miR-148b-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+8	98	hsa-miR-10b-3p	5867	RAB4A	NM_001271998	RAB4A, member RAS oncogene family
+9	97	hsa-miR-211-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+10	97	hsa-miR-204-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+11	95	hsa-miR-409-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+12	95	hsa-miR-545-3p	4035	LRP1	NM_002332	LDL receptor related protein 1
+13	95	hsa-miR-101-3p	5867	RAB4A	NM_001271998	RAB4A, member RAS oncogene family
+14	94	hsa-miR-32-5p	4644	MYO5A	NM_000259	myosin VA
+15	94	hsa-miR-367-3p	4644	MYO5A	NM_000259	myosin VA
+16	94	hsa-miR-374a-5p	4644	MYO5A	NM_000259	myosin VA
+17	94	hsa-miR-92b-3p	4644	MYO5A	NM_000259	myosin VA
+18	94	hsa-miR-497-5p	4644	MYO5A	NM_000259	myosin VA
+19	94	hsa-miR-363-3p	4644	MYO5A	NM_000259	myosin VA
+20	94	hsa-miR-655-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+21	94	hsa-miR-374c-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+22	94	hsa-miR-143-3p	4644	MYO5A	NM_000259	myosin VA
+23	94	hsa-miR-30e-5p	4644	MYO5A	NM_000259	myosin VA
+24	94	hsa-miR-25-3p	4644	MYO5A	NM_000259	myosin VA
+25	94	hsa-miR-92a-3p	4644	MYO5A	NM_000259	myosin VA
+26	94	hsa-miR-374b-5p	4644	MYO5A	NM_000259	myosin VA
+27	94	hsa-miR-424-5p	4644	MYO5A	NM_000259	myosin VA
+28	93	hsa-miR-3613-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+29	93	hsa-miR-150-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+30	93	hsa-miR-15b-5p	4644	MYO5A	NM_000259	myosin VA
+31	93	hsa-miR-411-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+32	93	hsa-miR-16-5p	4644	MYO5A	NM_000259	myosin VA
+33	93	hsa-miR-381-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+34	93	hsa-miR-141-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+35	93	hsa-miR-379-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+36	93	hsa-miR-200a-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+37	93	hsa-miR-15a-5p	4644	MYO5A	NM_000259	myosin VA
+38	93	hsa-miR-195-5p	4644	MYO5A	NM_000259	myosin VA
+39	92	hsa-miR-30a-5p	4644	MYO5A	NM_000259	myosin VA
+40	92	hsa-miR-205-5p	4035	LRP1	NM_002332	LDL receptor related protein 1
+41	92	hsa-miR-30c-5p	4644	MYO5A	NM_000259	myosin VA
+42	92	hsa-miR-30b-5p	4644	MYO5A	NM_000259	myosin VA
+43	92	hsa-miR-30d-5p	4644	MYO5A	NM_000259	myosin VA
+44	92	hsa-miR-6515-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+45	91	hsa-miR-378d	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+46	91	hsa-miR-378a-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+47	91	hsa-miR-378c	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+48	91	hsa-miR-550a-5p	55667	DENND4C	NM_017925	DENN domain containing 4C
+49	91	hsa-miR-1271-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+50	91	hsa-miR-422a	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+51	90	hsa-miR-124-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+52	90	hsa-miR-629-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+53	90	hsa-miR-214-3p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+54	90	hsa-miR-506-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+55	90	hsa-miR-203a-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+56	90	hsa-miR-454-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+57	90	hsa-miR-454-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+58	89	hsa-miR-30a-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+59	89	hsa-miR-96-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+60	89	hsa-miR-508-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+61	89	hsa-miR-642a-3p	4644	MYO5A	NM_000259	myosin VA
+62	89	hsa-miR-30c-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+63	89	hsa-miR-30b-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+64	89	hsa-miR-30d-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+65	89	hsa-miR-30e-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+66	88	hsa-miR-190a-5p	4644	MYO5A	NM_000259	myosin VA
+67	88	hsa-miR-301a-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+68	88	hsa-miR-301a-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+69	88	hsa-miR-301b-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+70	88	hsa-miR-301b-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+71	88	hsa-miR-2355-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+72	88	hsa-miR-130a-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+73	88	hsa-miR-130a-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+74	88	hsa-miR-18b-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+75	88	hsa-miR-761	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+76	88	hsa-miR-548l	4644	MYO5A	NM_000259	myosin VA
+77	88	hsa-miR-130b-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+78	88	hsa-miR-130b-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+79	87	hsa-miR-142-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+80	87	hsa-miR-760	4644	MYO5A	NM_000259	myosin VA
+81	86	hsa-miR-106b-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+82	86	hsa-miR-676-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+83	86	hsa-miR-1271-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+84	86	hsa-miR-20b-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+85	86	hsa-miR-106a-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+86	86	hsa-miR-31-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+87	86	hsa-miR-93-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+88	86	hsa-miR-17-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+89	86	hsa-miR-20a-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+90	86	hsa-miR-519d-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+91	85	hsa-miR-624-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+92	85	hsa-miR-200c-3p	4035	LRP1	NM_002332	LDL receptor related protein 1
+93	85	hsa-miR-429	4035	LRP1	NM_002332	LDL receptor related protein 1
+94	85	hsa-miR-93-3p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+95	85	hsa-miR-200b-3p	4035	LRP1	NM_002332	LDL receptor related protein 1
+96	85	hsa-miR-4662a-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+97	85	hsa-miR-493-5p	55667	DENND4C	NM_017925	DENN domain containing 4C
+98	84	hsa-miR-106b-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+99	84	hsa-miR-30a-3p	4644	MYO5A	NM_000259	myosin VA
+100	84	hsa-miR-106a-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+101	84	hsa-miR-101-3p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+102	84	hsa-miR-30e-3p	4644	MYO5A	NM_000259	myosin VA
+103	84	hsa-miR-20a-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+104	84	hsa-miR-671-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+105	84	hsa-miR-2116-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+106	83	hsa-miR-548e-3p	4644	MYO5A	NM_000259	myosin VA
+107	83	hsa-miR-4520-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+108	83	hsa-miR-548a-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+109	83	hsa-miR-548a-3p	4644	MYO5A	NM_000259	myosin VA
+110	83	hsa-miR-5001-5p	4035	LRP1	NM_002332	LDL receptor related protein 1
+111	83	hsa-miR-762	4035	LRP1	NM_002332	LDL receptor related protein 1
+112	83	hsa-miR-548f-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+113	83	hsa-miR-548f-3p	4644	MYO5A	NM_000259	myosin VA
+114	82	hsa-miR-30a-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+115	82	hsa-miR-3183	4644	MYO5A	NM_000259	myosin VA
+116	82	hsa-miR-30b-3p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+117	82	hsa-miR-622	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+118	82	hsa-miR-30c-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+119	82	hsa-miR-30b-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+120	82	hsa-miR-30d-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+121	82	hsa-miR-30e-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+122	81	hsa-miR-548e-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+123	81	hsa-miR-381-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+124	81	hsa-miR-1301-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+125	80	hsa-miR-520h	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+126	80	hsa-miR-520g-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+127	80	hsa-miR-433-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+128	80	hsa-miR-338-5p	4035	LRP1	NM_002332	LDL receptor related protein 1
+129	80	hsa-miR-656-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+130	80	hsa-miR-369-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+131	80	hsa-miR-493-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+132	79	hsa-miR-142-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+133	79	hsa-miR-508-3p	4644	MYO5A	NM_000259	myosin VA
+134	79	hsa-miR-153-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+135	79	hsa-miR-20b-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+136	79	hsa-miR-93-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+137	79	hsa-miR-17-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+138	79	hsa-miR-766-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+139	79	hsa-miR-519d-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+140	78	hsa-miR-519b-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+141	78	hsa-miR-519a-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+142	78	hsa-miR-4713-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+143	78	hsa-miR-148a-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+144	78	hsa-miR-214-3p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+145	78	hsa-miR-152-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+146	78	hsa-miR-15b-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+147	78	hsa-miR-16-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+148	78	hsa-miR-3152-3p	5867	RAB4A	NM_001271998	RAB4A, member RAS oncogene family
+149	78	hsa-miR-148b-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+150	78	hsa-miR-15a-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+151	78	hsa-miR-761	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+152	78	hsa-miR-195-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+153	77	hsa-miR-541-5p	4644	MYO5A	NM_000259	myosin VA
+154	77	hsa-miR-1185-1-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+155	77	hsa-miR-221-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+156	77	hsa-miR-487a-3p	5867	RAB4A	NM_001271998	RAB4A, member RAS oncogene family
+157	77	hsa-miR-582-5p	55667	DENND4C	NM_017925	DENN domain containing 4C
+158	77	hsa-miR-1185-2-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+159	76	hsa-miR-486-3p	4035	LRP1	NM_002332	LDL receptor related protein 1
+160	76	hsa-miR-1915-3p	4644	MYO5A	NM_000259	myosin VA
+161	76	hsa-miR-361-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+162	76	hsa-miR-874-3p	5872	RAB13	NM_001272038	RAB13, member RAS oncogene family
+163	76	hsa-miR-219a-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+164	76	hsa-miR-625-5p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+165	75	hsa-miR-664b-5p	4644	MYO5A	NM_001142495	myosin VA
+166	75	hsa-miR-374a-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+167	75	hsa-miR-150-5p	4644	MYO5A	NM_000259	myosin VA
+168	75	hsa-miR-3187-3p	4035	LRP1	NM_002332	LDL receptor related protein 1
+169	75	hsa-miR-497-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+170	75	hsa-miR-655-3p	4644	MYO5A	NM_000259	myosin VA
+171	75	hsa-miR-374c-5p	4644	MYO5A	NM_000259	myosin VA
+172	75	hsa-miR-107	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+173	75	hsa-miR-424-3p	4035	LRP1	NM_002332	LDL receptor related protein 1
+174	75	hsa-miR-103a-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+175	75	hsa-miR-3065-3p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+176	75	hsa-miR-374b-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+177	75	hsa-miR-424-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+178	75	hsa-miR-194-5p	55667	DENND4C	NM_017925	DENN domain containing 4C
+179	74	hsa-miR-1275	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+180	74	hsa-miR-708-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+181	74	hsa-miR-3065-5p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+182	74	hsa-miR-28-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+183	74	hsa-miR-545-5p	4644	MYO5A	NM_000259	myosin VA
+184	74	hsa-miR-545-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+185	74	hsa-miR-338-5p	4644	MYO5A	NM_000259	myosin VA
+186	73	hsa-miR-15b-3p	4644	MYO5A	NM_000259	myosin VA
+187	73	hsa-miR-874-3p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+188	73	hsa-miR-185-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+189	72	hsa-miR-802	4644	MYO5A	NM_000259	myosin VA
+190	72	hsa-miR-3909	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+191	71	hsa-miR-30b-3p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+192	71	hsa-miR-449c-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+193	71	hsa-miR-409-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+194	71	hsa-miR-34b-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+195	71	hsa-miR-19a-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+196	71	hsa-miR-154-3p	5867	RAB4A	NM_001271998	RAB4A, member RAS oncogene family
+197	71	hsa-miR-129-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+198	71	hsa-miR-499a-5p	55667	DENND4C	NM_017925	DENN domain containing 4C
+199	71	hsa-miR-19b-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+200	71	hsa-miR-369-3p	4644	MYO5A	NM_000259	myosin VA
+201	70	hsa-miR-576-5p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+202	70	hsa-miR-183-3p	4644	MYO5A	NM_000259	myosin VA
+203	70	hsa-miR-106b-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+204	70	hsa-miR-873-5p	5872	RAB13	NM_001272038	RAB13, member RAS oncogene family
+205	70	hsa-miR-30c-2-3p	4644	MYO5A	NM_000259	myosin VA
+206	70	hsa-miR-708-3p	4644	MYO5A	NM_000259	myosin VA
+207	70	hsa-let-7f-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+208	70	hsa-let-7d-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+209	70	hsa-miR-1303	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+210	70	hsa-miR-98-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+211	70	hsa-miR-1827	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+212	70	hsa-let-7b-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+213	70	hsa-let-7g-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+214	70	hsa-let-7a-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+215	70	hsa-miR-20a-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+216	70	hsa-let-7i-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+217	70	hsa-miR-30c-1-3p	4644	MYO5A	NM_000259	myosin VA
+218	70	hsa-let-7e-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+219	70	hsa-let-7c-5p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+220	69	hsa-miR-1297	55667	DENND4C	NM_017925	DENN domain containing 4C
+221	69	hsa-miR-1251-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+222	69	hsa-miR-4446-3p	4644	MYO5A	NM_000259	myosin VA
+223	69	hsa-miR-22-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+224	69	hsa-miR-661	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+225	69	hsa-miR-126-5p	4035	LRP1	NM_002332	LDL receptor related protein 1
+226	69	hsa-miR-2682-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+227	69	hsa-miR-3140-3p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+228	69	hsa-miR-450b-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+229	68	hsa-miR-15b-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+230	68	hsa-miR-29c-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+231	68	hsa-miR-29a-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+232	68	hsa-miR-16-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+233	68	hsa-miR-20a-3p	5867	RAB4A	NM_001271998	RAB4A, member RAS oncogene family
+234	68	hsa-miR-508-5p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+235	68	hsa-miR-29b-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+236	68	hsa-miR-15a-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+237	68	hsa-miR-195-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+238	67	hsa-miR-3126-5p	376267	RAB15	NM_001308154	RAB15, member RAS oncogene family
+239	67	hsa-miR-186-5p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+240	67	hsa-miR-500b-3p	4644	MYO5A	NM_000259	myosin VA
+241	67	hsa-miR-497-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+242	67	hsa-miR-10b-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+243	67	hsa-miR-424-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+244	66	hsa-miR-188-3p	4644	MYO5A	NM_000259	myosin VA
+245	66	hsa-miR-1827	55667	DENND4C	NM_017925	DENN domain containing 4C
+246	66	hsa-miR-20a-3p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+247	66	hsa-miR-3192-5p	4644	MYO5A	NM_000259	myosin VA
+248	66	hsa-miR-3154	4644	MYO5A	NM_000259	myosin VA
+249	66	hsa-miR-505-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+250	65	hsa-miR-512-3p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+251	65	hsa-miR-503-5p	4644	MYO5A	NM_000259	myosin VA
+252	65	hsa-miR-548an	55667	DENND4C	NM_017925	DENN domain containing 4C
+253	65	hsa-miR-637	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+254	65	hsa-miR-762	376267	RAB15	NM_001308154	RAB15, member RAS oncogene family
+255	64	hsa-miR-657	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+256	64	hsa-miR-576-5p	4644	MYO5A	NM_000259	myosin VA
+257	64	hsa-miR-642a-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+258	64	hsa-miR-766-3p	376267	RAB15	NM_198686	RAB15, member RAS oncogene family
+259	64	hsa-miR-766-3p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+260	63	hsa-miR-3918	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+261	63	hsa-miR-758-3p	4644	MYO5A	NM_000259	myosin VA
+262	63	hsa-miR-503-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+263	63	hsa-miR-543	55667	DENND4C	NM_017925	DENN domain containing 4C
+264	63	hsa-miR-628-3p	5872	RAB13	NM_002870	RAB13, member RAS oncogene family
+265	63	hsa-miR-3157-5p	5867	RAB4A	NM_001271998	RAB4A, member RAS oncogene family
+266	62	hsa-miR-30a-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+267	62	hsa-miR-30c-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+268	62	hsa-miR-874-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+269	62	hsa-miR-3691-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+270	62	hsa-miR-3074-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+271	62	hsa-miR-5001-5p	376267	RAB15	NM_001308154	RAB15, member RAS oncogene family
+272	62	hsa-miR-20b-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+273	62	hsa-miR-106a-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+274	62	hsa-miR-30b-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+275	62	hsa-miR-93-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+276	62	hsa-miR-3192-5p	4035	LRP1	NM_002332	LDL receptor related protein 1
+277	62	hsa-miR-3934-5p	53916	RAB4B	NM_016154	RAB4B, member RAS oncogene family
+278	62	hsa-miR-30d-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+279	62	hsa-miR-17-5p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+280	62	hsa-miR-323b-3p	201475	RAB12	NM_001025300	RAB12, member RAS oncogene family
+281	62	hsa-miR-30e-5p	10890	RAB10	NM_016131	RAB10, member RAS oncogene family
+282	62	hsa-miR-519d-3p	6517	SLC2A4	NM_001042	solute carrier family 2 member 4
+283	61	hsa-miR-144-3p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+284	61	hsa-miR-380-3p	4644	MYO5A	NM_000259	myosin VA
+285	61	hsa-miR-188-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+286	61	hsa-miR-129-5p	4644	MYO5A	NM_000259	myosin VA
+287	61	hsa-miR-212-5p	4035	LRP1	NM_002332	LDL receptor related protein 1
+288	61	hsa-miR-338-5p	5867	RAB4A	NM_004578	RAB4A, member RAS oncogene family
+289	61	hsa-miR-582-5p	4644	MYO5A	NM_000259	myosin VA
+290	61	hsa-miR-16-2-3p	55667	DENND4C	NM_017925	DENN domain containing 4C
+291	60	hsa-miR-369-3p	4035	LRP1	NM_002332	LDL receptor related protein 1
+292	60	hsa-miR-3154	55667	DENND4C	NM_017925	DENN domain containing 4C

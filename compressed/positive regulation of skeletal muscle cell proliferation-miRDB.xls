@@ -1,0 +1,26 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	93	hsa-miR-337-3p	3717	JAK2	NM_001322194	Janus kinase 2
+2	92	hsa-miR-219a-1-3p	3717	JAK2	NM_001322194	Janus kinase 2
+3	92	hsa-miR-380-3p	3717	JAK2	NM_001322194	Janus kinase 2
+4	92	hsa-miR-568	3717	JAK2	NM_001322194	Janus kinase 2
+5	92	hsa-miR-671-3p	6469	SHH	NM_000193	sonic hedgehog signaling molecule
+6	91	hsa-miR-216a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+7	91	hsa-miR-204-5p	3717	JAK2	NM_001322194	Janus kinase 2
+8	91	hsa-miR-211-5p	3717	JAK2	NM_001322194	Janus kinase 2
+9	86	hsa-miR-197-3p	3717	JAK2	NM_001322194	Janus kinase 2
+10	84	hsa-miR-3121-3p	6469	SHH	NM_000193	sonic hedgehog signaling molecule
+11	82	hsa-miR-135b-5p	3717	JAK2	NM_001322194	Janus kinase 2
+12	82	hsa-miR-135a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+13	75	hsa-miR-766-5p	6469	SHH	NM_000193	sonic hedgehog signaling molecule
+14	74	hsa-miR-101-3p	3717	JAK2	NM_001322194	Janus kinase 2
+15	72	hsa-miR-381-3p	3717	JAK2	NM_001322194	Janus kinase 2
+16	71	hsa-miR-1908-5p	6469	SHH	NM_000193	sonic hedgehog signaling molecule
+17	71	hsa-miR-663a	6469	SHH	NM_000193	sonic hedgehog signaling molecule
+18	71	hsa-miR-3121-3p	3717	JAK2	NM_001322194	Janus kinase 2
+19	68	hsa-miR-433-3p	3717	JAK2	NM_001322194	Janus kinase 2
+20	68	hsa-miR-582-5p	3717	JAK2	NM_001322194	Janus kinase 2
+21	67	hsa-miR-374a-5p	3717	JAK2	NM_001322194	Janus kinase 2
+22	67	hsa-miR-374b-5p	3717	JAK2	NM_001322194	Janus kinase 2
+23	66	hsa-miR-493-3p	6469	SHH	NM_000193	sonic hedgehog signaling molecule
+24	63	hsa-miR-582-5p	6469	SHH	NM_000193	sonic hedgehog signaling molecule
+25	62	hsa-miR-203a-3p	6469	SHH	NM_000193	sonic hedgehog signaling molecule

@@ -1,0 +1,66 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	98	hsa-miR-338-5p	2660	MSTN	NM_005259	myostatin
+2	97	hsa-miR-30a-5p	7093	TLL2	NM_012465	tolloid like 2
+3	97	hsa-miR-30c-5p	7093	TLL2	NM_012465	tolloid like 2
+4	97	hsa-miR-30e-5p	7093	TLL2	NM_012465	tolloid like 2
+5	97	hsa-miR-30d-5p	7093	TLL2	NM_012465	tolloid like 2
+6	97	hsa-miR-30b-5p	7093	TLL2	NM_012465	tolloid like 2
+7	94	hsa-miR-365b-3p	7093	TLL2	NM_012465	tolloid like 2
+8	94	hsa-miR-365a-3p	7093	TLL2	NM_012465	tolloid like 2
+9	92	hsa-miR-508-3p	2660	MSTN	NM_005259	myostatin
+10	90	hsa-miR-369-3p	7093	TLL2	NM_012465	tolloid like 2
+11	89	hsa-miR-515-5p	2660	MSTN	NM_005259	myostatin
+12	84	hsa-miR-877-5p	7093	TLL2	NM_012465	tolloid like 2
+13	81	hsa-miR-450b-5p	2660	MSTN	NM_005259	myostatin
+14	78	hsa-miR-2682-5p	2660	MSTN	NM_005259	myostatin
+15	78	hsa-miR-449b-5p	2660	MSTN	NM_005259	myostatin
+16	78	hsa-miR-34c-5p	2660	MSTN	NM_005259	myostatin
+17	78	hsa-miR-449a	2660	MSTN	NM_005259	myostatin
+18	78	hsa-miR-449c-5p	2660	MSTN	NM_005259	myostatin
+19	78	hsa-miR-34a-5p	2660	MSTN	NM_005259	myostatin
+20	78	hsa-miR-34b-5p	2660	MSTN	NM_005259	myostatin
+21	77	hsa-miR-203a-3p	7093	TLL2	NM_012465	tolloid like 2
+22	76	hsa-miR-323b-3p	2660	MSTN	NM_005259	myostatin
+23	76	hsa-miR-450b-5p	7093	TLL2	NM_012465	tolloid like 2
+24	74	hsa-miR-664b-3p	2660	MSTN	NM_005259	myostatin
+25	73	hsa-miR-200b-3p	2660	MSTN	NM_005259	myostatin
+26	73	hsa-miR-200c-3p	2660	MSTN	NM_005259	myostatin
+27	73	hsa-miR-429	2660	MSTN	NM_005259	myostatin
+28	72	hsa-miR-410-3p	2660	MSTN	NM_005259	myostatin
+29	72	hsa-miR-1290	2660	MSTN	NM_005259	myostatin
+30	71	hsa-miR-200a-5p	2660	MSTN	NM_005259	myostatin
+31	71	hsa-miR-200b-3p	7093	TLL2	NM_012465	tolloid like 2
+32	71	hsa-miR-433-3p	7093	TLL2	NM_012465	tolloid like 2
+33	71	hsa-miR-3187-3p	7093	TLL2	NM_012465	tolloid like 2
+34	71	hsa-miR-429	7093	TLL2	NM_012465	tolloid like 2
+35	71	hsa-miR-200c-3p	7093	TLL2	NM_012465	tolloid like 2
+36	70	hsa-miR-448	2660	MSTN	NM_005259	myostatin
+37	69	hsa-miR-9-3p	7093	TLL2	NM_012465	tolloid like 2
+38	68	hsa-miR-548e-3p	2660	MSTN	NM_005259	myostatin
+39	68	hsa-miR-548f-3p	2660	MSTN	NM_005259	myostatin
+40	68	hsa-miR-548a-3p	2660	MSTN	NM_005259	myostatin
+41	67	hsa-miR-582-5p	7093	TLL2	NM_012465	tolloid like 2
+42	66	hsa-miR-627-3p	2660	MSTN	NM_005259	myostatin
+43	66	hsa-miR-942-5p	7093	TLL2	NM_012465	tolloid like 2
+44	65	hsa-miR-126-5p	7093	TLL2	NM_012465	tolloid like 2
+45	65	hsa-miR-186-5p	2660	MSTN	NM_005259	myostatin
+46	64	hsa-miR-500a-3p	2660	MSTN	NM_005259	myostatin
+47	64	hsa-miR-18a-5p	7093	TLL2	NM_012465	tolloid like 2
+48	64	hsa-miR-18b-5p	7093	TLL2	NM_012465	tolloid like 2
+49	63	hsa-miR-93-3p	7093	TLL2	NM_012465	tolloid like 2
+50	63	hsa-miR-514b-3p	2660	MSTN	NM_005259	myostatin
+51	63	hsa-miR-514a-3p	2660	MSTN	NM_005259	myostatin
+52	62	hsa-miR-889-3p	2660	MSTN	NM_005259	myostatin
+53	62	hsa-miR-374a-5p	2660	MSTN	NM_005259	myostatin
+54	61	hsa-miR-423-5p	2660	MSTN	NM_005259	myostatin
+55	60	hsa-miR-548j-5p	2660	MSTN	NM_005259	myostatin
+56	60	hsa-miR-548o-5p	2660	MSTN	NM_005259	myostatin
+57	60	hsa-miR-548am-5p	2660	MSTN	NM_005259	myostatin
+58	60	hsa-miR-548c-5p	2660	MSTN	NM_005259	myostatin
+59	60	hsa-miR-1297	2660	MSTN	NM_005259	myostatin
+60	60	hsa-miR-26a-5p	2660	MSTN	NM_005259	myostatin
+61	60	hsa-miR-548h-5p	2660	MSTN	NM_005259	myostatin
+62	60	hsa-miR-548d-5p	2660	MSTN	NM_005259	myostatin
+63	60	hsa-miR-26b-5p	2660	MSTN	NM_005259	myostatin
+64	60	hsa-miR-939-3p	7093	TLL2	NM_012465	tolloid like 2
+65	60	hsa-miR-548b-5p	2660	MSTN	NM_005259	myostatin

@@ -1,0 +1,813 @@
+Target Rank	Target Score	miRNA Name	Gene ID	Gene Symbol	Transcript Accession	Gene Description
+1	99	hsa-miR-30a-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+2	99	hsa-miR-548b-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+3	99	hsa-miR-19a-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+4	99	hsa-miR-301a-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+5	99	hsa-miR-548d-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+6	99	hsa-miR-30c-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+7	99	hsa-miR-627-3p	5588	PRKCQ	NM_001282645	protein kinase C theta
+8	99	hsa-miR-30b-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+9	99	hsa-miR-301b-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+10	99	hsa-miR-30d-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+11	99	hsa-miR-19b-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+12	99	hsa-miR-30e-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+13	99	hsa-miR-130a-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+14	99	hsa-miR-130b-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+15	99	hsa-miR-454-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+16	98	hsa-miR-3120-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+17	98	hsa-miR-548j-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+18	98	hsa-miR-548c-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+19	98	hsa-miR-200c-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+20	98	hsa-miR-429	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+21	98	hsa-miR-548h-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+22	98	hsa-miR-338-5p	2660	MSTN	NM_005259	myostatin
+23	98	hsa-miR-548o-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+24	98	hsa-miR-200b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+25	98	hsa-miR-548am-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+26	97	hsa-miR-495-3p	3553	IL1B	NM_000576	interleukin 1 beta
+27	97	hsa-miR-129-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+28	97	hsa-miR-141-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+29	97	hsa-miR-200a-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+30	97	hsa-miR-7-5p	5579	PRKCB	NM_002738	protein kinase C beta
+31	97	hsa-miR-660-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+32	97	hsa-miR-16-2-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+33	96	hsa-miR-30a-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+34	96	hsa-miR-186-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+35	96	hsa-miR-1297	5580	PRKCD	NM_001316327	protein kinase C delta
+36	96	hsa-miR-26a-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+37	96	hsa-miR-331-3p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+38	96	hsa-miR-26b-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+39	96	hsa-miR-30c-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+40	96	hsa-miR-1827	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+41	96	hsa-miR-30b-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+42	96	hsa-miR-484	5791	PTPRE	NM_001316677	protein tyrosine phosphatase, receptor type E
+43	96	hsa-miR-30d-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+44	96	hsa-miR-1179	5579	PRKCB	NM_212535	protein kinase C beta
+45	96	hsa-miR-128-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+46	96	hsa-miR-30e-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+47	95	hsa-miR-30a-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+48	95	hsa-miR-548e-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+49	95	hsa-miR-124-3p	5970	RELA	NM_001145138	RELA proto-oncogene, NF-kB subunit
+50	95	hsa-miR-221-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+51	95	hsa-miR-495-3p	5791	PTPRE	NM_006504	protein tyrosine phosphatase, receptor type E
+52	95	hsa-miR-214-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+53	95	hsa-miR-142-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+54	95	hsa-miR-211-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+55	95	hsa-miR-30c-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+56	95	hsa-miR-548a-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+57	95	hsa-miR-30b-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+58	95	hsa-miR-506-3p	5970	RELA	NM_001145138	RELA proto-oncogene, NF-kB subunit
+59	95	hsa-miR-222-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+60	95	hsa-miR-7-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+61	95	hsa-miR-204-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+62	95	hsa-miR-30d-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+63	95	hsa-miR-30e-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+64	95	hsa-miR-548f-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+65	95	hsa-miR-761	3667	IRS1	NM_005544	insulin receptor substrate 1
+66	94	hsa-miR-186-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+67	94	hsa-miR-664b-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+68	94	hsa-miR-3065-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+69	94	hsa-miR-7-5p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+70	93	hsa-miR-519b-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+71	93	hsa-miR-23a-3p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+72	93	hsa-miR-519a-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+73	93	hsa-miR-320d	4690	NCK1	NM_001190796	NCK adaptor protein 1
+74	93	hsa-miR-1297	5588	PRKCQ	NM_001242413	protein kinase C theta
+75	93	hsa-miR-660-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+76	93	hsa-miR-154-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+77	93	hsa-miR-15b-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+78	93	hsa-miR-181c-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+79	93	hsa-miR-655-3p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+80	93	hsa-miR-181d-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+81	93	hsa-miR-503-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+82	93	hsa-miR-181a-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+83	93	hsa-miR-377-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+84	93	hsa-miR-374c-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+85	93	hsa-miR-16-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+86	93	hsa-miR-320c	4690	NCK1	NM_001190796	NCK adaptor protein 1
+87	93	hsa-miR-23b-3p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+88	93	hsa-miR-101-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+89	93	hsa-miR-181b-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+90	93	hsa-miR-487a-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+91	93	hsa-miR-27a-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+92	93	hsa-miR-15a-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+93	93	hsa-miR-195-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+94	93	hsa-miR-320b	4690	NCK1	NM_001190796	NCK adaptor protein 1
+95	93	hsa-miR-27b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+96	92	hsa-miR-548e-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+97	92	hsa-miR-26a-5p	5588	PRKCQ	NM_001242413	protein kinase C theta
+98	92	hsa-miR-26b-5p	5588	PRKCQ	NM_001242413	protein kinase C theta
+99	92	hsa-miR-508-3p	2660	MSTN	NM_005259	myostatin
+100	92	hsa-miR-497-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+101	92	hsa-miR-22-5p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+102	92	hsa-miR-545-3p	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+103	92	hsa-miR-548a-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+104	92	hsa-miR-24-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+105	92	hsa-miR-766-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+106	92	hsa-miR-548f-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+107	92	hsa-miR-424-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+108	92	hsa-miR-194-5p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+109	92	hsa-miR-326	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+110	91	hsa-miR-873-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+111	91	hsa-miR-29c-3p	375704	ENHO	NM_198573	energy homeostasis associated
+112	91	hsa-miR-29a-3p	375704	ENHO	NM_198573	energy homeostasis associated
+113	91	hsa-miR-448	5791	PTPRE	NM_001316677	protein tyrosine phosphatase, receptor type E
+114	91	hsa-miR-500b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+115	91	hsa-miR-29b-3p	375704	ENHO	NM_198573	energy homeostasis associated
+116	91	hsa-miR-3157-5p	5791	PTPRE	NM_001323355	protein tyrosine phosphatase, receptor type E
+117	91	hsa-miR-122-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+118	91	hsa-miR-362-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+119	90	hsa-miR-450a-2-3p	5579	PRKCB	NM_002738	protein kinase C beta
+120	90	hsa-miR-3120-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+121	90	hsa-miR-1306-5p	5970	RELA	NM_001145138	RELA proto-oncogene, NF-kB subunit
+122	90	hsa-miR-410-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+123	90	hsa-miR-148a-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+124	90	hsa-miR-1249-3p	2888	GRB14	NM_004490	growth factor receptor bound protein 14
+125	90	hsa-miR-152-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+126	90	hsa-miR-181c-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+127	90	hsa-miR-181d-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+128	90	hsa-miR-545-5p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+129	90	hsa-miR-302c-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+130	90	hsa-miR-135b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+131	90	hsa-miR-181a-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+132	90	hsa-miR-302a-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+133	90	hsa-miR-135a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+134	90	hsa-miR-138-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+135	90	hsa-miR-181b-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+136	90	hsa-miR-302d-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+137	90	hsa-miR-302b-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+138	90	hsa-miR-582-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+139	90	hsa-miR-148b-3p	5590	PRKCZ	NM_001033581	protein kinase C zeta
+140	90	hsa-miR-125a-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+141	90	hsa-miR-125b-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+142	90	hsa-miR-326	5579	PRKCB	NM_002738	protein kinase C beta
+143	89	hsa-miR-515-5p	2660	MSTN	NM_005259	myostatin
+144	89	hsa-miR-30a-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+145	89	hsa-miR-96-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+146	89	hsa-miR-1291	3553	IL1B	NM_000576	interleukin 1 beta
+147	89	hsa-miR-514a-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+148	89	hsa-miR-664b-3p	5579	PRKCB	NM_212535	protein kinase C beta
+149	89	hsa-miR-1-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+150	89	hsa-miR-19a-3p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+151	89	hsa-miR-654-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+152	89	hsa-miR-3143	2888	GRB14	NM_001303422	growth factor receptor bound protein 14
+153	89	hsa-miR-30c-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+154	89	hsa-miR-653-3p	5791	PTPRE	NM_001316676	protein tyrosine phosphatase, receptor type E
+155	89	hsa-miR-448	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+156	89	hsa-miR-30b-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+157	89	hsa-miR-30d-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+158	89	hsa-miR-19b-3p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+159	89	hsa-miR-30e-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+160	89	hsa-miR-206	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+161	89	hsa-miR-3190-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+162	89	hsa-miR-760	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+163	89	hsa-miR-548l	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+164	88	hsa-miR-374b-3p	5791	PTPRE	NM_001316676	protein tyrosine phosphatase, receptor type E
+165	88	hsa-miR-519b-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+166	88	hsa-miR-372-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+167	88	hsa-miR-519a-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+168	88	hsa-miR-144-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+169	88	hsa-miR-3183	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+170	88	hsa-miR-181c-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+171	88	hsa-miR-19a-3p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+172	88	hsa-miR-520c-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+173	88	hsa-miR-373-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+174	88	hsa-miR-455-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+175	88	hsa-miR-374c-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+176	88	hsa-miR-381-3p	5791	PTPRE	NM_006504	protein tyrosine phosphatase, receptor type E
+177	88	hsa-miR-661	7248	TSC1	NM_000368	TSC complex subunit 1
+178	88	hsa-miR-19b-3p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+179	88	hsa-miR-128-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+180	88	hsa-miR-27a-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+181	88	hsa-miR-125a-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+182	88	hsa-miR-27b-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+183	87	hsa-miR-30a-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+184	87	hsa-miR-374a-5p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+185	87	hsa-miR-589-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+186	87	hsa-miR-202-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+187	87	hsa-miR-19a-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+188	87	hsa-miR-30c-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+189	87	hsa-miR-432-5p	5579	PRKCB	NM_002738	protein kinase C beta
+190	87	hsa-miR-93-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+191	87	hsa-miR-30a-3p	493829	TRIM72	NM_001008274	tripartite motif containing 72
+192	87	hsa-miR-3614-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+193	87	hsa-miR-30b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+194	87	hsa-miR-30e-3p	493829	TRIM72	NM_001008274	tripartite motif containing 72
+195	87	hsa-miR-145-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+196	87	hsa-miR-30d-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+197	87	hsa-miR-19b-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+198	87	hsa-miR-30e-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+199	87	hsa-miR-132-3p	51763	INPP5K	NM_001135642	inositol polyphosphate-5-phosphatase K
+200	87	hsa-miR-383-5p	5791	PTPRE	NM_001316676	protein tyrosine phosphatase, receptor type E
+201	86	hsa-miR-449a	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+202	86	hsa-miR-576-5p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+203	86	hsa-miR-155-5p	5970	RELA	NM_001145138	RELA proto-oncogene, NF-kB subunit
+204	86	hsa-miR-539-3p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+205	86	hsa-miR-193a-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+206	86	hsa-miR-34a-5p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+207	86	hsa-miR-495-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+208	86	hsa-miR-153-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+209	86	hsa-miR-1271-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+210	86	hsa-miR-181c-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+211	86	hsa-miR-181c-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+212	86	hsa-miR-181d-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+213	86	hsa-miR-323a-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+214	86	hsa-miR-802	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+215	86	hsa-miR-181a-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+216	86	hsa-miR-181a-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+217	86	hsa-miR-193b-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+218	86	hsa-miR-3192-5p	51763	INPP5K	NM_016532	inositol polyphosphate-5-phosphatase K
+219	86	hsa-miR-181b-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+220	86	hsa-miR-181b-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+221	86	hsa-miR-135b-3p	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+222	86	hsa-miR-2355-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+223	86	hsa-miR-485-3p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+224	86	hsa-miR-374b-5p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+225	85	hsa-miR-34b-3p	5791	PTPRE	NM_001316677	protein tyrosine phosphatase, receptor type E
+226	85	hsa-miR-664b-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+227	85	hsa-miR-320d	7248	TSC1	NM_000368	TSC complex subunit 1
+228	85	hsa-miR-331-3p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+229	85	hsa-miR-183-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+230	85	hsa-miR-301a-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+231	85	hsa-miR-4524a-3p	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+232	85	hsa-miR-655-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+233	85	hsa-miR-181d-5p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+234	85	hsa-miR-320c	7248	TSC1	NM_000368	TSC complex subunit 1
+235	85	hsa-miR-5001-5p	2931	GSK3A	NM_019884	glycogen synthase kinase 3 alpha
+236	85	hsa-miR-3928-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+237	85	hsa-miR-1301-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+238	85	hsa-miR-548an	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+239	85	hsa-miR-138-5p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+240	85	hsa-miR-301b-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+241	85	hsa-miR-7-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+242	85	hsa-miR-145-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+243	85	hsa-miR-1323	3667	IRS1	NM_005544	insulin receptor substrate 1
+244	85	hsa-miR-762	2931	GSK3A	NM_019884	glycogen synthase kinase 3 alpha
+245	85	hsa-miR-130a-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+246	85	hsa-miR-27a-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+247	85	hsa-miR-125b-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+248	85	hsa-miR-636	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+249	85	hsa-miR-320b	7248	TSC1	NM_000368	TSC complex subunit 1
+250	85	hsa-miR-130b-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+251	85	hsa-miR-454-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+252	85	hsa-miR-27b-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+253	84	hsa-miR-509-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+254	84	hsa-miR-155-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+255	84	hsa-miR-509-3-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+256	84	hsa-miR-214-3p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+257	84	hsa-miR-433-3p	5579	PRKCB	NM_002738	protein kinase C beta
+258	84	hsa-miR-20a-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+259	84	hsa-miR-627-3p	2888	GRB14	NM_001303422	growth factor receptor bound protein 14
+260	84	hsa-miR-3942-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+261	84	hsa-miR-582-5p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+262	84	hsa-miR-656-3p	5791	PTPRE	NM_006504	protein tyrosine phosphatase, receptor type E
+263	84	hsa-miR-767-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+264	84	hsa-miR-550a-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+265	84	hsa-miR-203a-3p	5579	PRKCB	NM_002738	protein kinase C beta
+266	84	hsa-miR-326	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+267	83	hsa-miR-657	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+268	83	hsa-miR-1228-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+269	83	hsa-miR-218-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+270	83	hsa-miR-3144-5p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+271	83	hsa-miR-3179	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+272	83	hsa-miR-542-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+273	83	hsa-miR-124-3p	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+274	83	hsa-miR-212-3p	51763	INPP5K	NM_001135642	inositol polyphosphate-5-phosphatase K
+275	83	hsa-miR-3913-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+276	83	hsa-miR-3664-3p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+277	83	hsa-miR-3200-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+278	83	hsa-miR-4677-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+279	83	hsa-miR-513a-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+280	83	hsa-miR-3065-5p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+281	83	hsa-miR-211-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+282	83	hsa-miR-30a-3p	3553	IL1B	NM_000576	interleukin 1 beta
+283	83	hsa-miR-506-3p	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+284	83	hsa-miR-30e-3p	3553	IL1B	NM_000576	interleukin 1 beta
+285	83	hsa-miR-204-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+286	83	hsa-miR-3175	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+287	83	hsa-miR-369-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+288	83	hsa-miR-513c-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+289	82	hsa-miR-374b-3p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+290	82	hsa-miR-30a-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+291	82	hsa-miR-576-5p	2887	GRB10	NM_001001555	growth factor receptor bound protein 10
+292	82	hsa-miR-1228-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+293	82	hsa-miR-328-3p	375704	ENHO	NM_198573	energy homeostasis associated
+294	82	hsa-miR-514a-5p	5579	PRKCB	NM_002738	protein kinase C beta
+295	82	hsa-miR-155-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+296	82	hsa-miR-148a-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+297	82	hsa-miR-1297	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+298	82	hsa-miR-152-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+299	82	hsa-miR-548t-5p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+300	82	hsa-miR-34c-5p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+301	82	hsa-miR-30c-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+302	82	hsa-miR-489-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+303	82	hsa-miR-338-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+304	82	hsa-miR-31-5p	5579	PRKCB	NM_002738	protein kinase C beta
+305	82	hsa-miR-30b-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+306	82	hsa-miR-548o-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+307	82	hsa-miR-650	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+308	82	hsa-miR-24-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+309	82	hsa-miR-30d-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+310	82	hsa-miR-769-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+311	82	hsa-miR-148b-3p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+312	82	hsa-miR-30e-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+313	82	hsa-miR-27a-3p	5579	PRKCB	NM_002738	protein kinase C beta
+314	82	hsa-miR-449b-5p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+315	82	hsa-miR-27b-3p	5579	PRKCB	NM_002738	protein kinase C beta
+316	81	hsa-miR-32-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+317	81	hsa-miR-1287-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+318	81	hsa-miR-155-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+319	81	hsa-miR-589-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+320	81	hsa-miR-3180-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+321	81	hsa-miR-124-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+322	81	hsa-miR-92b-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+323	81	hsa-miR-4677-3p	5588	PRKCQ	NM_001282645	protein kinase C theta
+324	81	hsa-miR-211-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+325	81	hsa-miR-107	7248	TSC1	NM_001162426	TSC complex subunit 1
+326	81	hsa-miR-338-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+327	81	hsa-miR-103a-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+328	81	hsa-miR-506-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+329	81	hsa-miR-149-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+330	81	hsa-miR-32-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+331	81	hsa-miR-204-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+332	81	hsa-miR-18a-3p	2931	GSK3A	NM_019884	glycogen synthase kinase 3 alpha
+333	81	hsa-miR-92a-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+334	81	hsa-miR-450b-5p	2660	MSTN	NM_005259	myostatin
+335	80	hsa-miR-30a-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+336	80	hsa-miR-642a-5p	5580	PRKCD	NM_001316327	protein kinase C delta
+337	80	hsa-miR-3200-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+338	80	hsa-miR-4667-5p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+339	80	hsa-miR-15b-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+340	80	hsa-miR-30c-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+341	80	hsa-miR-16-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+342	80	hsa-miR-661	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+343	80	hsa-miR-608	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+344	80	hsa-miR-30b-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+345	80	hsa-miR-197-3p	5579	PRKCB	NM_002738	protein kinase C beta
+346	80	hsa-miR-30d-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+347	80	hsa-miR-30e-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+348	80	hsa-miR-219a-1-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+349	80	hsa-miR-15a-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+350	80	hsa-miR-1261	3667	IRS1	NM_005544	insulin receptor substrate 1
+351	80	hsa-miR-195-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+352	79	hsa-miR-374b-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+353	79	hsa-miR-532-3p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+354	79	hsa-miR-139-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+355	79	hsa-miR-186-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+356	79	hsa-miR-374a-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+357	79	hsa-miR-514b-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+358	79	hsa-miR-664b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+359	79	hsa-miR-513c-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+360	79	hsa-miR-508-3p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+361	79	hsa-miR-1270	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+362	79	hsa-miR-33b-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+363	79	hsa-miR-129-5p	5579	PRKCB	NM_002738	protein kinase C beta
+364	79	hsa-miR-545-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+365	79	hsa-miR-545-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+366	79	hsa-miR-511-3p	4690	NCK1	NM_001291999	NCK adaptor protein 1
+367	79	hsa-miR-33a-5p	5562	PRKAA1	NM_006251	protein kinase AMP-activated catalytic subunit alpha 1
+368	79	hsa-miR-9-3p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+369	79	hsa-miR-548k	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+370	79	hsa-miR-637	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+371	79	hsa-miR-223-3p	5579	PRKCB	NM_002738	protein kinase C beta
+372	78	hsa-miR-450a-2-3p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+373	78	hsa-miR-450a-2-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+374	78	hsa-miR-449a	2660	MSTN	NM_005259	myostatin
+375	78	hsa-miR-372-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+376	78	hsa-miR-450a-1-3p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+377	78	hsa-miR-144-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+378	78	hsa-miR-449c-5p	2660	MSTN	NM_005259	myostatin
+379	78	hsa-miR-34a-5p	2660	MSTN	NM_005259	myostatin
+380	78	hsa-miR-34b-5p	2660	MSTN	NM_005259	myostatin
+381	78	hsa-miR-200c-3p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+382	78	hsa-miR-429	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+383	78	hsa-miR-33b-5p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+384	78	hsa-miR-34c-5p	2660	MSTN	NM_005259	myostatin
+385	78	hsa-miR-497-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+386	78	hsa-miR-93-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+387	78	hsa-miR-543	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+388	78	hsa-miR-33a-5p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+389	78	hsa-miR-31-5p	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+390	78	hsa-miR-499a-5p	4690	NCK1	NM_001291999	NCK adaptor protein 1
+391	78	hsa-miR-200b-3p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+392	78	hsa-miR-27b-5p	3553	IL1B	NM_000576	interleukin 1 beta
+393	78	hsa-miR-2682-5p	2660	MSTN	NM_005259	myostatin
+394	78	hsa-miR-449b-5p	2660	MSTN	NM_005259	myostatin
+395	78	hsa-miR-424-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+396	77	hsa-miR-1915-3p	5588	PRKCQ	NM_001282645	protein kinase C theta
+397	77	hsa-miR-32-5p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+398	77	hsa-miR-5699-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+399	77	hsa-miR-411-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+400	77	hsa-miR-514b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+401	77	hsa-miR-589-3p	5791	PTPRE	NM_006504	protein tyrosine phosphatase, receptor type E
+402	77	hsa-miR-513c-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+403	77	hsa-miR-92b-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+404	77	hsa-let-7f-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+405	77	hsa-let-7d-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+406	77	hsa-miR-4520-3p	197	AHSG	NM_001622	alpha 2-HS glycoprotein
+407	77	hsa-miR-98-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+408	77	hsa-miR-3150b-3p	2886	GRB7	NM_005310	growth factor receptor bound protein 7
+409	77	hsa-let-7b-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+410	77	hsa-let-7g-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+411	77	hsa-miR-1296-5p	375704	ENHO	NM_198573	energy homeostasis associated
+412	77	hsa-miR-15b-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+413	77	hsa-miR-27b-5p	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+414	77	hsa-let-7a-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+415	77	hsa-miR-145-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+416	77	hsa-let-7i-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+417	77	hsa-miR-92a-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+418	77	hsa-miR-761	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+419	77	hsa-let-7e-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+420	77	hsa-let-7c-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+421	77	hsa-miR-326	51763	INPP5K	NM_016532	inositol polyphosphate-5-phosphatase K
+422	76	hsa-miR-146a-5p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+423	76	hsa-miR-186-5p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+424	76	hsa-miR-186-5p	5791	PTPRE	NM_001316676	protein tyrosine phosphatase, receptor type E
+425	76	hsa-miR-134-5p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+426	76	hsa-miR-124-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+427	76	hsa-miR-433-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+428	76	hsa-miR-146b-5p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+429	76	hsa-miR-506-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+430	76	hsa-miR-548b-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+431	76	hsa-miR-323b-3p	2660	MSTN	NM_005259	myostatin
+432	76	hsa-miR-371a-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+433	76	hsa-miR-625-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+434	75	hsa-miR-449a	5579	PRKCB	NM_002738	protein kinase C beta
+435	75	hsa-miR-34a-5p	5579	PRKCB	NM_002738	protein kinase C beta
+436	75	hsa-miR-26a-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+437	75	hsa-miR-544a	5588	PRKCQ	NM_001242413	protein kinase C theta
+438	75	hsa-miR-26b-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+439	75	hsa-miR-708-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+440	75	hsa-miR-140-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+441	75	hsa-miR-545-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+442	75	hsa-miR-126-5p	23371	TNS2	NM_015319	tensin 2
+443	75	hsa-miR-126-5p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+444	75	hsa-miR-499a-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+445	75	hsa-miR-656-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+446	75	hsa-miR-195-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+447	74	hsa-miR-450a-2-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+448	74	hsa-miR-449a	5588	PRKCQ	NM_001323266	protein kinase C theta
+449	74	hsa-miR-548j-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+450	74	hsa-miR-3183	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+451	74	hsa-miR-367-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+452	74	hsa-miR-548c-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+453	74	hsa-miR-664b-3p	2660	MSTN	NM_005259	myostatin
+454	74	hsa-miR-34a-5p	5588	PRKCQ	NM_001323266	protein kinase C theta
+455	74	hsa-miR-495-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+456	74	hsa-miR-548b-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+457	74	hsa-miR-520c-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+458	74	hsa-miR-548d-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+459	74	hsa-miR-548h-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+460	74	hsa-miR-373-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+461	74	hsa-miR-363-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+462	74	hsa-miR-337-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+463	74	hsa-miR-302c-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+464	74	hsa-miR-338-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+465	74	hsa-miR-511-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+466	74	hsa-miR-302a-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+467	74	hsa-miR-548o-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+468	74	hsa-miR-302d-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+469	74	hsa-miR-302b-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+470	74	hsa-miR-548am-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+471	74	hsa-miR-25-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+472	74	hsa-miR-374b-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+473	74	hsa-miR-1261	5579	PRKCB	NM_212535	protein kinase C beta
+474	73	hsa-miR-370-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+475	73	hsa-miR-1291	375704	ENHO	NM_198573	energy homeostasis associated
+476	73	hsa-miR-548j-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+477	73	hsa-miR-548j-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+478	73	hsa-miR-548c-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+479	73	hsa-miR-548c-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+480	73	hsa-miR-664b-3p	2887	GRB10	NM_001001555	growth factor receptor bound protein 10
+481	73	hsa-miR-183-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+482	73	hsa-miR-548b-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+483	73	hsa-miR-548b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+484	73	hsa-miR-200c-3p	2660	MSTN	NM_005259	myostatin
+485	73	hsa-miR-361-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+486	73	hsa-miR-429	2660	MSTN	NM_005259	myostatin
+487	73	hsa-miR-548d-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+488	73	hsa-miR-548d-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+489	73	hsa-miR-548h-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+490	73	hsa-miR-548h-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+491	73	hsa-miR-33b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+492	73	hsa-miR-33a-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+493	73	hsa-miR-3614-5p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+494	73	hsa-miR-548o-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+495	73	hsa-miR-548o-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+496	73	hsa-miR-423-5p	5588	PRKCQ	NM_001242413	protein kinase C theta
+497	73	hsa-miR-200b-3p	2660	MSTN	NM_005259	myostatin
+498	73	hsa-miR-1179	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+499	73	hsa-miR-223-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+500	73	hsa-miR-668-3p	5579	PRKCB	NM_002738	protein kinase C beta
+501	73	hsa-miR-548am-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+502	73	hsa-miR-548am-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+503	73	hsa-miR-27a-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+504	73	hsa-miR-27b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+505	72	hsa-miR-449a	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+506	72	hsa-miR-548e-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+507	72	hsa-miR-410-3p	2660	MSTN	NM_005259	myostatin
+508	72	hsa-miR-1275	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+509	72	hsa-miR-3121-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+510	72	hsa-miR-452-5p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+511	72	hsa-miR-150-5p	493829	TRIM72	NM_001008274	tripartite motif containing 72
+512	72	hsa-miR-34a-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+513	72	hsa-miR-183-5p	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+514	72	hsa-miR-544a	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+515	72	hsa-miR-708-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+516	72	hsa-miR-1290	2660	MSTN	NM_005259	myostatin
+517	72	hsa-miR-3143	5791	PTPRE	NM_006504	protein tyrosine phosphatase, receptor type E
+518	72	hsa-miR-548a-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+519	72	hsa-miR-1298-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+520	72	hsa-miR-484	5579	PRKCB	NM_212535	protein kinase C beta
+521	72	hsa-miR-32-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+522	72	hsa-miR-6511a-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+523	72	hsa-miR-497-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+524	72	hsa-miR-671-5p	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+525	72	hsa-miR-513a-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+526	72	hsa-miR-548f-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+527	72	hsa-miR-194-5p	51763	INPP5K	NM_001135642	inositol polyphosphate-5-phosphatase K
+528	71	hsa-miR-126-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+529	71	hsa-miR-155-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+530	71	hsa-miR-421	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+531	71	hsa-miR-183-5p	5579	PRKCB	NM_002738	protein kinase C beta
+532	71	hsa-miR-544a	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+533	71	hsa-miR-513a-3p	2888	GRB14	NM_001303422	growth factor receptor bound protein 14
+534	71	hsa-miR-200a-5p	2660	MSTN	NM_005259	myostatin
+535	71	hsa-miR-3194-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+536	71	hsa-miR-15b-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+537	71	hsa-miR-655-3p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+538	71	hsa-miR-5571-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+539	71	hsa-miR-374c-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+540	71	hsa-miR-16-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+541	71	hsa-miR-330-3p	5579	PRKCB	NM_002738	protein kinase C beta
+542	71	hsa-miR-141-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+543	71	hsa-miR-200a-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+544	71	hsa-miR-3130-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+545	71	hsa-miR-625-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+546	71	hsa-miR-513a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+547	71	hsa-miR-15a-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+548	71	hsa-miR-513c-3p	2888	GRB14	NM_001303422	growth factor receptor bound protein 14
+549	70	hsa-miR-3129-5p	5791	PTPRE	NM_001323355	protein tyrosine phosphatase, receptor type E
+550	70	hsa-miR-520h	3667	IRS1	NM_005544	insulin receptor substrate 1
+551	70	hsa-miR-873-5p	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+552	70	hsa-miR-597-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+553	70	hsa-miR-520g-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+554	70	hsa-miR-495-3p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+555	70	hsa-miR-1910-3p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+556	70	hsa-miR-651-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+557	70	hsa-miR-34c-5p	5579	PRKCB	NM_002738	protein kinase C beta
+558	70	hsa-miR-381-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+559	70	hsa-miR-448	2660	MSTN	NM_005259	myostatin
+560	70	hsa-miR-661	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+561	70	hsa-miR-1301-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+562	70	hsa-miR-199a-3p	5791	PTPRE	NM_001323355	protein tyrosine phosphatase, receptor type E
+563	70	hsa-miR-6511a-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+564	70	hsa-miR-125a-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+565	70	hsa-miR-449b-5p	5579	PRKCB	NM_002738	protein kinase C beta
+566	70	hsa-miR-125b-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+567	70	hsa-miR-450b-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+568	70	hsa-miR-199b-3p	5791	PTPRE	NM_001323355	protein tyrosine phosphatase, receptor type E
+569	69	hsa-miR-548t-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+570	69	hsa-miR-329-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+571	69	hsa-miR-367-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+572	69	hsa-miR-873-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+573	69	hsa-miR-374a-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+574	69	hsa-miR-374a-5p	5580	PRKCD	NM_212539	protein kinase C delta
+575	69	hsa-miR-124-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+576	69	hsa-miR-221-3p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+577	69	hsa-miR-3065-5p	5579	PRKCB	NM_002738	protein kinase C beta
+578	69	hsa-miR-362-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+579	69	hsa-miR-33b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+580	69	hsa-miR-363-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+581	69	hsa-miR-655-3p	5791	PTPRE	NM_006504	protein tyrosine phosphatase, receptor type E
+582	69	hsa-miR-619-5p	493829	TRIM72	NM_001008274	tripartite motif containing 72
+583	69	hsa-miR-374c-5p	5791	PTPRE	NM_006504	protein tyrosine phosphatase, receptor type E
+584	69	hsa-miR-576-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+585	69	hsa-miR-522-5p	4690	NCK1	NM_001291999	NCK adaptor protein 1
+586	69	hsa-miR-381-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+587	69	hsa-miR-543	79837	PIP4K2C	NM_001146260	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+588	69	hsa-miR-33a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+589	69	hsa-miR-141-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+590	69	hsa-miR-200a-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+591	69	hsa-miR-3065-3p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+592	69	hsa-miR-506-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+593	69	hsa-miR-222-3p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+594	69	hsa-miR-223-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+595	69	hsa-miR-25-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+596	69	hsa-miR-513a-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+597	69	hsa-miR-374b-5p	5580	PRKCD	NM_212539	protein kinase C delta
+598	69	hsa-miR-519c-5p	4690	NCK1	NM_001291999	NCK adaptor protein 1
+599	68	hsa-miR-657	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+600	68	hsa-miR-548e-3p	2660	MSTN	NM_005259	myostatin
+601	68	hsa-miR-3179	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+602	68	hsa-miR-380-3p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+603	68	hsa-miR-1297	5579	PRKCB	NM_002738	protein kinase C beta
+604	68	hsa-miR-495-3p	5579	PRKCB	NM_002738	protein kinase C beta
+605	68	hsa-miR-19a-3p	2887	GRB10	NM_001001555	growth factor receptor bound protein 10
+606	68	hsa-miR-211-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+607	68	hsa-miR-34c-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+608	68	hsa-miR-411-3p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+609	68	hsa-miR-548a-3p	2660	MSTN	NM_005259	myostatin
+610	68	hsa-miR-1185-1-3p	5580	PRKCD	NM_001316327	protein kinase C delta
+611	68	hsa-miR-766-3p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+612	68	hsa-miR-379-3p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+613	68	hsa-miR-204-5p	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+614	68	hsa-miR-19b-3p	2887	GRB10	NM_001001555	growth factor receptor bound protein 10
+615	68	hsa-miR-625-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+616	68	hsa-miR-548f-3p	2660	MSTN	NM_005259	myostatin
+617	68	hsa-miR-1185-2-3p	5580	PRKCD	NM_001316327	protein kinase C delta
+618	68	hsa-miR-449b-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+619	67	hsa-miR-486-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+620	67	hsa-miR-1291	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+621	67	hsa-miR-148a-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+622	67	hsa-miR-320d	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+623	67	hsa-miR-1297	4690	NCK1	NM_001190796	NCK adaptor protein 1
+624	67	hsa-miR-202-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+625	67	hsa-miR-513a-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+626	67	hsa-miR-1246	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+627	67	hsa-miR-152-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+628	67	hsa-miR-15b-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+629	67	hsa-miR-485-5p	2931	GSK3A	NM_019884	glycogen synthase kinase 3 alpha
+630	67	hsa-miR-497-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+631	67	hsa-miR-619-5p	51763	INPP5K	NM_016532	inositol polyphosphate-5-phosphatase K
+632	67	hsa-miR-16-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+633	67	hsa-miR-320c	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+634	67	hsa-miR-9-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+635	67	hsa-miR-508-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+636	67	hsa-miR-148b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+637	67	hsa-miR-3157-5p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+638	67	hsa-miR-769-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+639	67	hsa-miR-942-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+640	67	hsa-miR-15a-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+641	67	hsa-miR-195-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+642	67	hsa-miR-424-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+643	67	hsa-miR-320b	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+644	67	hsa-miR-513c-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+645	66	hsa-miR-515-5p	5791	PTPRE	NM_001316676	protein tyrosine phosphatase, receptor type E
+646	66	hsa-miR-3120-3p	7248	TSC1	NM_000368	TSC complex subunit 1
+647	66	hsa-miR-328-3p	3553	IL1B	NM_000576	interleukin 1 beta
+648	66	hsa-miR-22-3p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+649	66	hsa-miR-664b-3p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+650	66	hsa-miR-320d	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+651	66	hsa-miR-409-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+652	66	hsa-miR-544a	7248	TSC1	NM_000368	TSC complex subunit 1
+653	66	hsa-miR-4677-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+654	66	hsa-miR-876-5p	5588	PRKCQ	NM_001323266	protein kinase C theta
+655	66	hsa-miR-188-3p	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+656	66	hsa-miR-655-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+657	66	hsa-miR-374c-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+658	66	hsa-miR-320c	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+659	66	hsa-miR-543	7248	TSC1	NM_001162426	TSC complex subunit 1
+660	66	hsa-miR-627-3p	2660	MSTN	NM_005259	myostatin
+661	66	hsa-miR-374b-5p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+662	66	hsa-miR-320b	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+663	65	hsa-miR-519b-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+664	65	hsa-miR-519a-3p	79837	PIP4K2C	NM_001146259	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+665	65	hsa-miR-5699-5p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+666	65	hsa-miR-1260a	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+667	65	hsa-miR-186-5p	2660	MSTN	NM_005259	myostatin
+668	65	hsa-miR-218-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+669	65	hsa-miR-597-3p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+670	65	hsa-miR-214-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+671	65	hsa-miR-15b-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+672	65	hsa-miR-497-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+673	65	hsa-miR-1260b	5770	PTPN1	NM_002827	protein tyrosine phosphatase, non-receptor type 1
+674	65	hsa-miR-302c-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+675	65	hsa-miR-16-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+676	65	hsa-miR-302a-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+677	65	hsa-miR-3679-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+678	65	hsa-miR-550a-5p	51763	INPP5K	NM_001135642	inositol polyphosphate-5-phosphatase K
+679	65	hsa-miR-3605-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+680	65	hsa-miR-302d-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+681	65	hsa-miR-302b-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+682	65	hsa-miR-1271-3p	51763	INPP5K	NM_001135642	inositol polyphosphate-5-phosphatase K
+683	65	hsa-miR-15a-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+684	65	hsa-miR-761	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+685	65	hsa-miR-195-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+686	65	hsa-miR-424-5p	3667	IRS1	NM_005544	insulin receptor substrate 1
+687	64	hsa-miR-520h	5579	PRKCB	NM_002738	protein kinase C beta
+688	64	hsa-miR-22-3p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+689	64	hsa-miR-520g-3p	5579	PRKCB	NM_002738	protein kinase C beta
+690	64	hsa-miR-200c-3p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+691	64	hsa-miR-429	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+692	64	hsa-let-7f-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+693	64	hsa-let-7d-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+694	64	hsa-miR-497-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+695	64	hsa-miR-653-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+696	64	hsa-miR-151a-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+697	64	hsa-miR-98-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+698	64	hsa-miR-516b-5p	5579	PRKCB	NM_002738	protein kinase C beta
+699	64	hsa-miR-1827	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+700	64	hsa-miR-330-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+701	64	hsa-let-7b-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+702	64	hsa-miR-627-3p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+703	64	hsa-miR-1285-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+704	64	hsa-let-7g-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+705	64	hsa-miR-500a-3p	2660	MSTN	NM_005259	myostatin
+706	64	hsa-miR-3934-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+707	64	hsa-miR-200b-3p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+708	64	hsa-let-7a-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+709	64	hsa-miR-487a-3p	6198	RPS6KB1	NM_001272043	ribosomal protein S6 kinase B1
+710	64	hsa-miR-6511a-5p	9021	SOCS3	NM_003955	suppressor of cytokine signaling 3
+711	64	hsa-miR-766-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+712	64	hsa-let-7i-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+713	64	hsa-miR-942-5p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+714	64	hsa-miR-424-5p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+715	64	hsa-let-7e-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+716	64	hsa-let-7c-5p	8651	SOCS1	NM_003745	suppressor of cytokine signaling 1
+717	63	hsa-miR-32-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+718	63	hsa-miR-576-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+719	63	hsa-miR-34b-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+720	63	hsa-miR-1287-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+721	63	hsa-miR-1275	7248	TSC1	NM_001162426	TSC complex subunit 1
+722	63	hsa-miR-589-5p	23189	KANK1	NM_001256877	KN motif and ankyrin repeat domains 1
+723	63	hsa-miR-1297	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+724	63	hsa-miR-150-5p	5579	PRKCB	NM_002738	protein kinase C beta
+725	63	hsa-miR-485-5p	5791	PTPRE	NM_001316677	protein tyrosine phosphatase, receptor type E
+726	63	hsa-miR-455-3p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+727	63	hsa-miR-34c-5p	5588	PRKCQ	NM_001323266	protein kinase C theta
+728	63	hsa-miR-514a-3p	2660	MSTN	NM_005259	myostatin
+729	63	hsa-miR-30a-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+730	63	hsa-miR-126-5p	79837	PIP4K2C	NM_001146258	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+731	63	hsa-miR-30e-3p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+732	63	hsa-miR-128-3p	5579	PRKCB	NM_002738	protein kinase C beta
+733	63	hsa-miR-128-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+734	63	hsa-miR-513a-5p	7248	TSC1	NM_000368	TSC complex subunit 1
+735	63	hsa-miR-3140-3p	7248	TSC1	NM_001162426	TSC complex subunit 1
+736	63	hsa-miR-132-5p	5590	PRKCZ	NM_001033582	protein kinase C zeta
+737	63	hsa-miR-449b-5p	5588	PRKCQ	NM_001323266	protein kinase C theta
+738	63	hsa-miR-514b-3p	2660	MSTN	NM_005259	myostatin
+739	62	hsa-miR-548e-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+740	62	hsa-miR-374a-5p	2660	MSTN	NM_005259	myostatin
+741	62	hsa-miR-205-5p	2888	GRB14	NM_004490	growth factor receptor bound protein 14
+742	62	hsa-miR-1-3p	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+743	62	hsa-miR-299-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+744	62	hsa-miR-548a-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+745	62	hsa-miR-424-3p	2887	GRB10	NM_001001549	growth factor receptor bound protein 10
+746	62	hsa-miR-3928-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+747	62	hsa-miR-101-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+748	62	hsa-miR-3909	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+749	62	hsa-miR-568	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+750	62	hsa-miR-320e	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+751	62	hsa-miR-206	23189	KANK1	NM_001256876	KN motif and ankyrin repeat domains 1
+752	62	hsa-miR-27a-3p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+753	62	hsa-miR-185-5p	79837	PIP4K2C	NM_001146260	phosphatidylinositol-5-phosphate 4-kinase type 2 gamma
+754	62	hsa-miR-513a-5p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+755	62	hsa-miR-9-5p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+756	62	hsa-miR-548f-3p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+757	62	hsa-miR-504-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+758	62	hsa-miR-889-3p	2660	MSTN	NM_005259	myostatin
+759	62	hsa-miR-27b-3p	10999	SLC27A4	NM_005094	solute carrier family 27 member 4
+760	61	hsa-miR-410-3p	5580	PRKCD	NM_212539	protein kinase C delta
+761	61	hsa-miR-514a-5p	7248	TSC1	NM_001162426	TSC complex subunit 1
+762	61	hsa-miR-374a-5p	5305	PIP4K2A	NM_005028	phosphatidylinositol-5-phosphate 4-kinase type 2 alpha
+763	61	hsa-miR-592	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+764	61	hsa-miR-642a-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+765	61	hsa-miR-15b-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+766	61	hsa-miR-140-3p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+767	61	hsa-miR-497-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+768	61	hsa-miR-16-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+769	61	hsa-miR-3150b-3p	4690	NCK1	NM_001190796	NCK adaptor protein 1
+770	61	hsa-miR-30a-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+771	61	hsa-miR-3614-5p	5579	PRKCB	NM_002738	protein kinase C beta
+772	61	hsa-miR-423-5p	2660	MSTN	NM_005259	myostatin
+773	61	hsa-miR-431-5p	5771	PTPN2	NM_001207013	protein tyrosine phosphatase, non-receptor type 2
+774	61	hsa-miR-30e-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+775	61	hsa-miR-656-3p	3667	IRS1	NM_005544	insulin receptor substrate 1
+776	61	hsa-miR-371a-5p	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+777	61	hsa-miR-3175	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+778	61	hsa-miR-513a-5p	57727	NCOA5	NM_020967	nuclear receptor coactivator 5
+779	61	hsa-miR-15a-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+780	61	hsa-miR-195-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+781	61	hsa-miR-125a-3p	5771	PTPN2	NM_001308287	protein tyrosine phosphatase, non-receptor type 2
+782	61	hsa-miR-424-5p	6198	RPS6KB1	NM_001272042	ribosomal protein S6 kinase B1
+783	61	hsa-miR-326	375704	ENHO	NM_198573	energy homeostasis associated
+784	60	hsa-miR-486-3p	5970	RELA	NM_021975	RELA proto-oncogene, NF-kB subunit
+785	60	hsa-miR-372-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+786	60	hsa-miR-96-5p	5791	PTPRE	NM_001316676	protein tyrosine phosphatase, receptor type E
+787	60	hsa-miR-548j-5p	2660	MSTN	NM_005259	myostatin
+788	60	hsa-miR-3144-5p	2887	GRB10	NM_001001555	growth factor receptor bound protein 10
+789	60	hsa-miR-548c-5p	2660	MSTN	NM_005259	myostatin
+790	60	hsa-miR-421	5167	ENPP1	NM_006208	ectonucleotide pyrophosphatase/phosphodiesterase 1
+791	60	hsa-miR-622	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+792	60	hsa-miR-1297	2660	MSTN	NM_005259	myostatin
+793	60	hsa-miR-3121-3p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+794	60	hsa-miR-452-5p	4690	NCK1	NM_001291999	NCK adaptor protein 1
+795	60	hsa-miR-26a-5p	2660	MSTN	NM_005259	myostatin
+796	60	hsa-miR-193a-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+797	60	hsa-miR-548b-5p	2660	MSTN	NM_005259	myostatin
+798	60	hsa-miR-26b-5p	2660	MSTN	NM_005259	myostatin
+799	60	hsa-miR-520c-3p	5562	PRKAA1	NM_206907	protein kinase AMP-activated catalytic subunit alpha 1
+800	60	hsa-miR-548d-5p	2660	MSTN	NM_005259	myostatin
+801	60	hsa-miR-548h-5p	2660	MSTN	NM_005259	myostatin
+802	60	hsa-miR-182-5p	5791	PTPRE	NM_001316676	protein tyrosine phosphatase, receptor type E
+803	60	hsa-miR-548o-5p	2660	MSTN	NM_005259	myostatin
+804	60	hsa-miR-3605-5p	8396	PIP4K2B	NM_003559	phosphatidylinositol-5-phosphate 4-kinase type 2 beta
+805	60	hsa-miR-221-5p	5590	PRKCZ	NM_001242874	protein kinase C zeta
+806	60	hsa-miR-199a-3p	5579	PRKCB	NM_002738	protein kinase C beta
+807	60	hsa-miR-548am-5p	2660	MSTN	NM_005259	myostatin
+808	60	hsa-miR-223-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+809	60	hsa-miR-3157-5p	55022	PID1	NM_001100818	phosphotyrosine interaction domain containing 1
+810	60	hsa-miR-504-5p	5770	PTPN1	NM_001278618	protein tyrosine phosphatase, non-receptor type 1
+811	60	hsa-miR-505-5p	375704	ENHO	NM_198573	energy homeostasis associated
+812	60	hsa-miR-199b-3p	5579	PRKCB	NM_002738	protein kinase C beta
