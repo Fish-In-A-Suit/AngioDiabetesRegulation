@@ -27,13 +27,13 @@ TERMS_ANGIOGENESIS_NEGATIVE_ARRAY = [
 TERMS_DIABETES_POSITIVE_ARRAY = [
     "negative regulation of cellular response to insulin stimulus","GO:1900077",
     "negative regulation of insulin receptor signaling pathway","GO:0046627",
-]
+    ]
 
 # Negative regulatory terms for search "diabetes"
 TERMS_DIABETES_NEGATIVE_ARRAY = [
     "positive regulation of cellular response to insulin stimulus","GO:1900078",
     "positive regulation of insulin receptor signaling pathway","GO:0046628",
-]
+    ]
 
 # Terms that are neither positive or negative
 TERMS_ANGIOGENESIS_GENERAL = [
@@ -60,7 +60,7 @@ TERMS_ANGIOGENESIS_GENERAL = [
     "regulation of endothelial cell proliferation","GO:0001936",
     "regulation of vascular endothelial cell proliferation","GO:1905562",
     "vascular endothelial cell proliferation","GO:0101023",
-]
+    ]
 
 TERMS_DIABETES_GENERAL = [
     "cellular ketone body metabolic process", "GO:0046950",
@@ -99,10 +99,10 @@ TERMS_DIABETES_GENERAL = [
     "skeletal muscle tissue development","GO:0007519",
     "skeletal muscle tissue growth","GO:0048630",
     "skeletal muscle tissue regeneration","GO:0043403",
-]
+    ]
 
 # Terms that came up when searching "angiogenesis", but are irrelevant for us
 TERMS_EXCLUDED = [
     "cell migration involved in coronary angiogenesis", "GO:0060981",
     "angiogenesis involved in coronary vascular morphogenesis", "GO:0060978",
-]
+    ]
