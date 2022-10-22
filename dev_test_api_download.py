@@ -1,7 +1,5 @@
 #File to test the API get function to retrieve genes for
 #terms in constants.py
-from re import S
-from xmlrpc.client import ResponseError
 import requests
 import urllib.parse
 import json
