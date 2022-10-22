@@ -5,7 +5,15 @@ import urllib.parse
 import json
 
 import logging
-logging.basicConfig(filename='./log_output/test_json_dump.log', filemode='w', level=logging.DEBUG)
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("./log_output/test_json_dump.log", 'w+'),
+        logging.StreamHandler()
+    ]
+)
 
 
 def get_GO_genes_API(termlist):
@@ -25,6 +33,16 @@ def get_GO_genes_API(termlist):
         for item in compact_assoc:
             if item['subject'] == term: #only use directly associated genes
                 genes=item['objects']
-        logging.info(f"GO term: {term} -> Genes/products: {genes}")
+            logging.info(f"GO term: {term} -> Genes/products: {genes}")
 
-get_GO_genes_API(["GO:0001525"])
+def get_ensembl_sequence_API(ID_list):
+    """
+    This function queries ensembl for nucleotide sequence
+    Input of ensembl ID's must be a 1d list. e.g. ['ENSG00000157764']
+    """
+    for id in ID_list:
+        response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}", headers={ "Content-Type" : "text/plain"})
+        logging.debug(response.text)
+
+
+get_ensembl_sequence_API(["ENSG00000157764"])
