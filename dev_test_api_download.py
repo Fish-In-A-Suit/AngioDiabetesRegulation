@@ -86,9 +86,40 @@ def uniprot_mapping(id_old, target='Ensembl'):
             break
     logging.info(ensembl_id)
     return ensembl_id
-        
+
+def find_genes_related_to_GO_terms(terms, destination_file=""):
+    """
+    Finds the genes related to the terms array and dumps the results into a json file.
+    """
+    for term in terms:
+        term_file = str(term).replace(":","-")
+        filepath=f"term_genes/{term_file}.json"
+        file = open(filepath, "w+")
+
+        genes = get_GO_genes_API(term) # get array of genes associated to a term
+        e_id = [] #ensemble id
+        seqeunces = []
+        json_dictionaries = []
+        for i in range(len(genes)):
+            e_id.append(uniprot_mapping(genes[i])) # convert gene ID to Ensembl id
+            if e_id[i] == None:
+                seqeunces.append(None)
+            else:
+                seqeunces.append(get_ensembl_sequence_API(e_id[i]))
+            out = {"term" : term, "gene" : genes[i], "ensembel_id" : e_id[i], "sequence" : seqeunces[i]}
+           # f.write(json.dumps(out)+"\n") For file decoding purposes, json dicts need to be stored in a list and then the list written to the file as per https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
+            json_dictionaries.append(out)
+        file.write(json.dumps(json_dictionaries)+"\n")
+        file.close()
+
+def score_genes(json_files):
+    """
+    Counts the number of appearances of all the genes across all specified json_files (which contain genes
+    related to specific GO terms and are made by the find_genes_related_to_GO_terms function)
+    """       
         
 #DEMO TEST CODE, not to be used in production
+"""
 f = open("demofile2.json", "w+")
 terms = ['GO:0001525']
 for term in terms:
@@ -107,3 +138,7 @@ for term in terms:
         json_dictionaries.append(out)
     f.write(json.dumps(json_dictionaries)+"\n")
 f.close()
+"""
+terms = ['GO:0001525']
+find_genes_related_to_GO_terms(terms)
+# call score_genes(...) here
