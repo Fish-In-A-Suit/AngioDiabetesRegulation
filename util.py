@@ -1,6 +1,7 @@
 # Utility functions file
 import requests
 import constants
+import json
 
 #x = requests.get("http://amigo.geneontology.org/amigo/search/ontology?q=angiogenesis")
 #print(x.text)
@@ -40,3 +41,13 @@ def get_array_terms(array_name):
         print(array_name + " could not be found! Returning empty array.")
         empty = []
         return empty
+
+def read_file_as_json(filepath):
+    """
+    Reads the file into json
+    """
+    with open(filepath, "r") as read_content:
+        return json.load(read_content)
+
+
+# print(read_file_as_json("demofile2.json")) #this now works but breaks the console xd

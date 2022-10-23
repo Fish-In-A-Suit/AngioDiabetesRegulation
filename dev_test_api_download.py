@@ -21,10 +21,9 @@ logging.basicConfig(
     ]
 )
 
-
 def get_GO_genes_API(term):
     """
-    This function retrieves all genes associated with each term.
+    Retrieves all genes associated with each term.
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     """
     url_term = urllib.parse.quote(term)
@@ -32,6 +31,7 @@ def get_GO_genes_API(term):
         "use_compact_associations":True,
         "taxon":["NCBITaxon:9606"] #only for Homo Sapiens
     }
+    # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{url_term}/genes", params=parameters)
     logging.debug(json.dumps(response.json()['compact_associations'], indent=4))
     compact_assoc = response.json()['compact_associations']
@@ -56,9 +56,10 @@ def get_ensembl_sequence_API(id):
 
 def uniprot_mapping(id_old, target='Ensembl'):
     """
-    This function recieves uniprot or other ID and finds the Ensembl id.
+    Recieves uniprot or other ID and finds the Ensembl id.
     Input of ID's must be a 1d list. e.g. ['UniProtKB:A0A3Q1N508']
-"""
+    https://www.uniprot.org/help/id_mapping
+    """
     if "UniProtKB" in id_old:
         source = "UniProtKB_AC-ID"
     id = id_old.split(':')[1]
@@ -73,7 +74,7 @@ def uniprot_mapping(id_old, target='Ensembl'):
         logging.info(j)
         if "jobStatus" in j:
             if j["jobStatus"] == "RUNNING":
-                print(f"Retrying in {POLLING_INTERVAL}s")
+                logging.debug(f"Retrying in {POLLING_INTERVAL}s")
                 time.sleep(POLLING_INTERVAL)
             else:
                 raise Exception(j["jobStatus"])
@@ -88,19 +89,21 @@ def uniprot_mapping(id_old, target='Ensembl'):
         
         
 #DEMO TEST CODE, not to be used in production
-f = open("demofile2.txt", "w+")
+f = open("demofile2.json", "w+")
 terms = ['GO:0001525']
 for term in terms:
-    genes = get_GO_genes_API(term)
+    genes = get_GO_genes_API(term) # get array of genes associated to a term
     e_id = []
     seqeunces = []
-    print(len(genes))
+    json_dictionaries = []
     for i in range(len(genes)):
-        e_id.append(uniprot_mapping(genes[i]))
+        e_id.append(uniprot_mapping(genes[i])) # convert gene ID to Ensembl id
         if e_id[i] == None:
             seqeunces.append(None)
         else:
             seqeunces.append(get_ensembl_sequence_API(e_id[i]))
         out = {"term" : term, "gene" : genes[i], "ensembel_id" : e_id[i], "sequence" : seqeunces[i]}
-        f.write(json.dumps(out)+"\n")
+        # f.write(json.dumps(out)+"\n") For file decoding purposes, json dicts need to be stored in a list and then the list written to the file as per https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
+        json_dictionaries.append(out)
+    f.write(json.dumps(json_dictionaries)+"\n")
 f.close()
