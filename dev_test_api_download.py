@@ -46,7 +46,7 @@ def get_ensembl_sequence_API(id):
     This function queries ensembl for nucleotide sequence
     Input of ensembl ID's must be a 1d list. e.g. ['ENSG00000157764']
     """
-    response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}", headers={ "Content-Type" : "text/plain"})
+    response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}?object_type=transcript;type=cds", headers={ "Content-Type" : "text/plain", })
     if response.ok:
         logging.debug(response.text)
         logging.info(f"Recieved sequence for id {id}.")
@@ -54,7 +54,7 @@ def get_ensembl_sequence_API(id):
     else:
         return None
 
-def uniprot_mapping(id_old, target='Ensembl'):
+def uniprot_mapping(id_old, target='Ensembl_Transcript'):
     """
     Recieves uniprot or other ID and finds the Ensembl id.
     Input of ID's must be a 1d list. e.g. ['UniProtKB:A0A3Q1N508']
