@@ -46,7 +46,7 @@ def get_ensembl_sequence_API(id):
     This function queries ensembl for nucleotide sequence
     Input of ensembl ID's must be a 1d list. e.g. ['ENSG00000157764']
     """
-    response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}?object_type=transcript;type=cds", headers={ "Content-Type" : "text/plain", })
+    response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}?object_type=transcript;type=cds", headers={ "Content-Type" : "text/plain", }) # cds = c-DNA without the UTR regions; type=cdna (in this case UTR region is also kept); retrieves complementary sequence to the gene mRNA (without UTR), same as miRNA sequence (todo: preveri z genetikom)
     if response.ok:
         logging.debug(response.text)
         logging.info(f"Recieved sequence for id {id}.")
@@ -54,7 +54,7 @@ def get_ensembl_sequence_API(id):
     else:
         return None
 
-def uniprot_mapping(id_old, target='Ensembl_Transcript'):
+def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     """
     Recieves uniprot or other ID and finds the Ensembl id.
     Input of ID's must be a 1d list. e.g. ['UniProtKB:A0A3Q1N508']
@@ -142,3 +142,14 @@ f.close()
 terms = ['GO:0001525']
 find_genes_related_to_GO_terms(terms)
 # call score_genes(...) here
+
+
+"""
+Seznam termov -> find_genes_related_to_GO_terms (za vse) -> shranjeno v term_genes
+Loop cez vse jsone (prek termov) -> nova mapa za gene (angiogenesis, diabetes) - PROBLEM S PREKRIVANJI GENOV
+..> ena mapa za gene, vsak gen ma number_angio pa number_diabetes glede na to pr kokih termih se za vsako pojav + mozno total score
+skupn file za vse gene -> vsak gen vsebuje number_angio, number_diabetes + tocno dolocene terme k jih vsebuje
+
+///
+termi v povezavi z geni... zdej pa gene v povezavi s termi -> da je za vsak gen s kokimi termi je povezan
+"""
