@@ -5,11 +5,13 @@ import urllib.parse
 import json
 import time
 import csv
+import util
 
 import logging
 
+
 console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
+console_handler.setLevel(logging.DEBUG)
 file_handler = logging.FileHandler("./log_output/test_json_dump.log", 'w+')
 file_handler.setLevel(logging.DEBUG)
 logging.basicConfig(
@@ -26,6 +28,7 @@ def get_GO_genes_API(term):
     Retrieves all genes associated with each term.
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     """
+    logging.debug("get_GO_genes_API: term = " + term)
     url_term = urllib.parse.quote(term)
     parameters = {
         "use_compact_associations":True,
@@ -91,6 +94,7 @@ def find_genes_related_to_GO_terms(terms, destination_file=""):
     """
     Finds the genes related to the terms array and dumps the results into a json file.
     """
+    logging.debug(f"terms array len:{len(terms)}, elements: {terms}")
     for term in terms:
         term_file = str(term).replace(":","-")
         filepath=f"term_genes/{term_file}.json"
@@ -118,29 +122,9 @@ def score_genes(json_files):
     related to specific GO terms and are made by the find_genes_related_to_GO_terms function)
     """       
         
-#DEMO TEST CODE, not to be used in production
-"""
-f = open("demofile2.json", "w+")
-terms = ['GO:0001525']
-for term in terms:
-    genes = get_GO_genes_API(term) # get array of genes associated to a term
-    e_id = []
-    seqeunces = []
-    json_dictionaries = []
-    for i in range(len(genes)):
-        e_id.append(uniprot_mapping(genes[i])) # convert gene ID to Ensembl id
-        if e_id[i] == None:
-            seqeunces.append(None)
-        else:
-            seqeunces.append(get_ensembl_sequence_API(e_id[i]))
-        out = {"term" : term, "gene" : genes[i], "ensembel_id" : e_id[i], "sequence" : seqeunces[i]}
-        # f.write(json.dumps(out)+"\n") For file decoding purposes, json dicts need to be stored in a list and then the list written to the file as per https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
-        json_dictionaries.append(out)
-    f.write(json.dumps(json_dictionaries)+"\n")
-f.close()
-"""
-terms = ['GO:0001525']
-find_genes_related_to_GO_terms(terms)
+terms_test = ['GO:0001525']
+terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
+find_genes_related_to_GO_terms(terms_angiogenesis_ids)
 # call score_genes(...) here
 
 
