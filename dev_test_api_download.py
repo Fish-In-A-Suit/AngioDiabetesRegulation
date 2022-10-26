@@ -6,6 +6,7 @@ import json
 import time
 import csv
 import util
+import os
 
 import logging
 
@@ -38,10 +39,14 @@ def get_GO_genes_API(term):
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{url_term}/genes", params=parameters)
     logging.debug(json.dumps(response.json()['compact_associations'], indent=4))
     compact_assoc = response.json()['compact_associations']
+    genes = []
     for item in compact_assoc:
         if item['subject'] == term: #only use directly associated genes
             genes=item['objects']
             logging.info(f"GO term: {term} -> Genes/products: {genes}")
+    # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
+    # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
+    logging.debug(f"Term {term} has {len(genes)} associated genes.")
     return genes
 
 def get_ensembl_sequence_API(id):
@@ -63,6 +68,13 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     Input of ID's must be a 1d list. e.g. ['UniProtKB:A0A3Q1N508']
     https://www.uniprot.org/help/id_mapping
     """
+    logging.debug(f"[uniprot_mapping]: id_old = {id_old}")
+    # TODO: some terms (like GO-1903670) have genes that are not defined in UniProt! For example, one gene from
+    # GO-1903670 has id_old ZFIN:ZDB-GENE-041014-357, throws UnboundLocalError (source referenced before assignment)
+    # -> need to search through multiple databases or do we only limit uniprot?
+    
+    # possible solution: source = ""
+    # but this omits any databases that are not uniprot
     if "UniProtKB" in id_old:
         source = "UniProtKB_AC-ID"
     id = id_old.split(':')[1]
@@ -90,7 +102,7 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     logging.info(ensembl_id)
     return ensembl_id
 
-def find_genes_related_to_GO_terms(terms, destination_file=""):
+def find_genes_related_to_GO_terms(terms, ask_for_overrides=True, destination_file=""):
     """
     Finds the genes related to the terms array and dumps the results into a json file.
     """
@@ -98,8 +110,14 @@ def find_genes_related_to_GO_terms(terms, destination_file=""):
     for term in terms:
         term_file = str(term).replace(":","-")
         filepath=f"term_genes/{term_file}.json"
-        file = open(filepath, "w+")
+        override = 0
+        if os.path.isfile(filepath) and ask_for_overrides == True:
+            override = input(f"File {term_file} already exists. Enter 1 to process the file again or 0 to skip:")
+            if int(override) == 0: # careful! override changes type to str as input is given
+                logging.debug(f"Skipping file {term_file}")
+                continue
 
+        file = open(filepath, "w+")
         genes = get_GO_genes_API(term) # get array of genes associated to a term
         e_id = [] #ensemble id
         seqeunces = []
