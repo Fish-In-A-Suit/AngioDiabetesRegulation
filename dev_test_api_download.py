@@ -72,11 +72,14 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     # TODO: some terms (like GO-1903670) have genes that are not defined in UniProt! For example, one gene from
     # GO-1903670 has id_old ZFIN:ZDB-GENE-041014-357, throws UnboundLocalError (source referenced before assignment)
     # -> need to search through multiple databases or do we only limit uniprot?
-    
     # possible solution: source = ""
     # but this omits any databases that are not uniprot
     if "UniProtKB" in id_old:
         source = "UniProtKB_AC-ID"
+    if "ZFIN" in id_old: # gene is from Zebrafish Informatics Network -> check if a human gene ortholog exists in zfin_human-gene-orthologs.txt
+        human_gene_symbol = util.zfin_find_human_ortholog(id_old)
+        return #TODO: DELETE THIS AND CONTINUE WORKING HERE FROM RETURNED HUMAN GENE SYMBOL -> push to uniprot / get id / modify response / supply correct params to response ?
+
     id = id_old.split(':')[1]
     response = requests.post(f"https://rest.uniprot.org/idmapping/run", data={'from':source, 'to':target, 'ids':id})
     logging.debug(response.json())
