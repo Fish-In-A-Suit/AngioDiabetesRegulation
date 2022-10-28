@@ -80,6 +80,7 @@ def uniprot_mapping_API(id_old, source='UniProtKB_AC-ID', target='Ensembl_Transc
     # -> need to search through multiple databases or do we only limit uniprot?
     # possible solution: source = ""
     # but this omits any databases that are not uniprot
+    # TODO: some terms return multiple id, which to chose???
 
     id = id_old.split(':')[1]
     response = requests.post(f"https://rest.uniprot.org/idmapping/run", data={'from':source, 'to':target, 'ids':id})
