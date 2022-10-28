@@ -35,8 +35,7 @@ def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
             genes.append(item['subject']['id'])
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
-    logger.info(f"Term {term} has {len(genes)} associated genes.")
-    logger.info(f"GO term: {term} -> Genes/products: {genes}")
+    logger.info(f"Term {term} has {len(genes)} associated genes/product -> {genes}.")
     return genes
 
 def get_ensembl_sequence_API(id):
