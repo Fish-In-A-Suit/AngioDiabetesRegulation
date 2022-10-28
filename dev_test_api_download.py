@@ -133,7 +133,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     e_id = [] #ensemble id
     seqeunces = []
     json_dictionaries = []
-    for gene in genes:
+    for gene in genes: #gene is is shape prefix:id
         if 'UniProtKB' in gene:
             e_id.append(uniprot_mapping_API(gene))
             seqeunces.append(get_ensembl_sequence_API(e_id[-1]))
