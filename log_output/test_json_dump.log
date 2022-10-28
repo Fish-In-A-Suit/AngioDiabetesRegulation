@@ -1,10 +1,10 @@
-2022-10-26 02:23:59,501 [DEBUG] terms array len:38, elements: ['GO:0001525', 'GO:1903587', 'GO:1903670', 'GO:0045765', 'GO:0060055', 'GO:0002040', 'GO:0002041', 'GO:0002042', 'GO:0002043', 'GO:0002044', 'GO:0106088', 'GO:0002045', 'GO:0120078', 'GO:0090049', 'GO:0071116', 'GO:0120077', 'GO:0043534', 'GO:0003158', 'GO:0001938', 'GO:1905564', 'GO:0001936', 'GO:1905562', 'GO:0101023', 'GO:1903588', 'GO:1903671', 'GO:0016525', 'GO:0106089', 'GO:0090051', 'GO:0043532', 'GO:0032311', 'GO:0001937', 'GO:1905563', 'GO:1903589', 'GO:1903672', 'GO:0045766', 'GO:0106090', 'GO:0090050', 'GO:0001935']
-2022-10-26 02:24:02,049 [DEBUG] Skipping file GO-0001525
-2022-10-26 02:24:03,128 [DEBUG] Skipping file GO-1903587
-2022-10-26 02:24:04,778 [DEBUG] get_GO_genes_API: term = GO:1903670
-2022-10-26 02:24:04,785 [DEBUG] Starting new HTTP connection (1): api.geneontology.org:80
-2022-10-26 02:24:05,450 [DEBUG] http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903670/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 2191
-2022-10-26 02:24:05,453 [DEBUG] [
+2022-10-28 04:22:19,908 [DEBUG] terms array len:38, elements: ['GO:0001525', 'GO:1903587', 'GO:1903670', 'GO:0045765', 'GO:0060055', 'GO:0002040', 'GO:0002041', 'GO:0002042', 'GO:0002043', 'GO:0002044', 'GO:0106088', 'GO:0002045', 'GO:0120078', 'GO:0090049', 'GO:0071116', 'GO:0120077', 'GO:0043534', 'GO:0003158', 'GO:0001938', 'GO:1905564', 'GO:0001936', 'GO:1905562', 'GO:0101023', 'GO:1903588', 'GO:1903671', 'GO:0016525', 'GO:0106089', 'GO:0090051', 'GO:0043532', 'GO:0032311', 'GO:0001937', 'GO:1905563', 'GO:1903589', 'GO:1903672', 'GO:0045766', 'GO:0106090', 'GO:0090050', 'GO:0001935']
+2022-10-28 04:22:21,768 [DEBUG] Skipping file GO-0001525
+2022-10-28 04:22:22,223 [DEBUG] Skipping file GO-1903587
+2022-10-28 04:22:22,851 [DEBUG] get_GO_genes_API: term = GO:1903670
+2022-10-28 04:22:22,853 [DEBUG] Starting new HTTP connection (1): api.geneontology.org:80
+2022-10-28 04:22:23,519 [DEBUG] http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903670/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 2191
+2022-10-28 04:22:23,520 [DEBUG] [
     {
         "subject": "GO:1903670",
         "relation": null,
@@ -120,16 +120,32 @@
         ]
     }
 ]
-2022-10-26 02:24:05,497 [INFO] GO term: GO:1903670 -> Genes/products: ['UniProtKB:P04773', 'ZFIN:ZDB-GENE-041014-357', 'UniProtKB:Q95N27', 'UniProtKB:A0A2I3SC54', 'UniProtKB:E2QST8', 'UniProtKB:Q4R7U3', 'ZFIN:ZDB-GENE-041014-73', 'UniProtKB:F7BMC3', 'ZFIN:ZDB-GENE-041010-218', 'UniProtKB:G1KPN6', 'UniProtKB:M3X9U5', 'MGI:MGI:1931551', 'UniProtKB:F6R6G5', 'ZFIN:ZDB-GENE-030131-6325', 'UniProtKB:Q9QY94', 'UniProtKB:F1SDW9']
-2022-10-26 02:24:05,498 [DEBUG] Term GO:1903670 has 16 associated genes.
-2022-10-26 02:24:05,500 [DEBUG] [uniprot_mapping]: id_old = UniProtKB:P04773
-2022-10-26 02:24:05,506 [DEBUG] Starting new HTTPS connection (1): rest.uniprot.org:443
-2022-10-26 02:24:05,696 [DEBUG] https://rest.uniprot.org:443 "POST /idmapping/run HTTP/1.1" 200 None
-2022-10-26 02:24:05,702 [DEBUG] {'jobId': 'ff1209f1a82d3b5101030d71e0fa85e160b53438'}
-2022-10-26 02:24:05,702 [DEBUG] ff1209f1a82d3b5101030d71e0fa85e160b53438
-2022-10-26 02:24:05,704 [DEBUG] Starting new HTTPS connection (1): rest.uniprot.org:443
-2022-10-26 02:24:05,873 [DEBUG] https://rest.uniprot.org:443 "GET /idmapping/status/ff1209f1a82d3b5101030d71e0fa85e160b53438 HTTP/1.1" 303 None
-2022-10-26 02:24:05,929 [DEBUG] https://rest.uniprot.org:443 "GET /idmapping/results/ff1209f1a82d3b5101030d71e0fa85e160b53438 HTTP/1.1" 200 None
-2022-10-26 02:24:05,931 [INFO] {'results': [], 'failedIds': ['P04773']}
-2022-10-26 02:24:05,931 [INFO] None
-2022-10-26 02:24:05,931 [DEBUG] [uniprot_mapping]: id_old = ZFIN:ZDB-GENE-041014-357
+2022-10-28 04:22:23,530 [INFO] GO term: GO:1903670 -> Genes/products: ['UniProtKB:P04773', 'ZFIN:ZDB-GENE-041014-357', 'UniProtKB:Q95N27', 'UniProtKB:A0A2I3SC54', 'UniProtKB:E2QST8', 'UniProtKB:Q4R7U3', 'ZFIN:ZDB-GENE-041014-73', 'UniProtKB:F7BMC3', 'ZFIN:ZDB-GENE-041010-218', 'UniProtKB:G1KPN6', 'UniProtKB:M3X9U5', 'MGI:MGI:1931551', 'UniProtKB:F6R6G5', 'ZFIN:ZDB-GENE-030131-6325', 'UniProtKB:Q9QY94', 'UniProtKB:F1SDW9']
+2022-10-28 04:22:23,531 [DEBUG] Term GO:1903670 has 16 associated genes.
+2022-10-28 04:22:23,531 [DEBUG] [uniprot_mapping]: id_old = UniProtKB:P04773
+2022-10-28 04:22:23,533 [DEBUG] Starting new HTTPS connection (1): rest.uniprot.org:443
+2022-10-28 04:22:23,692 [DEBUG] https://rest.uniprot.org:443 "POST /idmapping/run HTTP/1.1" 200 None
+2022-10-28 04:22:23,694 [DEBUG] {'jobId': 'ff1209f1a82d3b5101030d71e0fa85e160b53438'}
+2022-10-28 04:22:23,695 [DEBUG] ff1209f1a82d3b5101030d71e0fa85e160b53438
+2022-10-28 04:22:23,697 [DEBUG] Starting new HTTPS connection (1): rest.uniprot.org:443
+2022-10-28 04:22:23,852 [DEBUG] https://rest.uniprot.org:443 "GET /idmapping/status/ff1209f1a82d3b5101030d71e0fa85e160b53438 HTTP/1.1" 303 None
+2022-10-28 04:22:23,923 [DEBUG] https://rest.uniprot.org:443 "GET /idmapping/results/ff1209f1a82d3b5101030d71e0fa85e160b53438 HTTP/1.1" 200 None
+2022-10-28 04:22:23,924 [INFO] {'results': [], 'failedIds': ['P04773']}
+2022-10-28 04:22:23,924 [INFO] None
+2022-10-28 04:22:23,925 [DEBUG] [uniprot_mapping]: id_old = ZFIN:ZDB-GENE-041014-357
+2022-10-28 04:22:23,925 [DEBUG] [zfin_find_human_ortholog]: starting
+2022-10-28 04:22:23,956 [DEBUG] [zfin_find_human_ortholog]: Returning human symbol ADGRG6
+2022-10-28 04:22:23,960 [DEBUG] Starting new HTTPS connection (1): rest.uniprot.org:443
+2022-10-28 04:22:24,114 [DEBUG] https://rest.uniprot.org:443 "GET /uniprotkb/search?query=ADGRG6+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name HTTP/1.1" 200 None
+2022-10-28 04:22:24,116 [DEBUG] results_arr_len = 6
+2022-10-28 04:22:24,116 [DEBUG] Gene name ADGRG6 found to correspond to Q86SQ4. Displaying response 0/6: {'primaryAccession': 'Q86SQ4', 'uniProtkbId': 'AGRG6_HUMAN', 'organism': {'scientificName': 'Homo sapiens', 'commonName': 'Human', 'taxonId': 9606, 'lineage': ['Eukaryota', 'Metazoa', 'Chordata', 'Craniata', 'Vertebrata', 'Euteleostomi', 'Mammalia', 'Eutheria', 'Euarchontoglires', 'Primates', 'Haplorrhini', 'Catarrhini', 'Hominidae', 'Homo']}, 'genes': [{'geneName': {'evidences': [{'evidenceCode': 'ECO:0000312', 'source': 'HGNC', 'id': 'HGNC:13841'}], 'value': 'ADGRG6'}, 'synonyms': [{'value': 'DREG'}, {'value': 'GPR126'}, {'value': 'VIGR'}]}]}
+2022-10-28 04:22:27,623 [DEBUG] results_arr_len = 6
+2022-10-28 04:22:27,624 [DEBUG] Gene name ADGRG6 found to correspond to P04156. Displaying response 1/6: {'primaryAccession': 'P04156', 'uniProtkbId': 'PRIO_HUMAN', 'organism': {'scientificName': 'Homo sapiens', 'commonName': 'Human', 'taxonId': 9606, 'lineage': ['Eukaryota', 'Metazoa', 'Chordata', 'Craniata', 'Vertebrata', 'Euteleostomi', 'Mammalia', 'Eutheria', 'Euarchontoglires', 'Primates', 'Haplorrhini', 'Catarrhini', 'Hominidae', 'Homo']}, 'genes': [{'geneName': {'value': 'PRNP'}, 'synonyms': [{'value': 'ALTPRP'}, {'value': 'PRIP'}, {'value': 'PRP'}]}]}
+2022-10-28 04:22:34,402 [DEBUG] results_arr_len = 6
+2022-10-28 04:22:34,403 [DEBUG] Gene name ADGRG6 found to correspond to H0YFM8. Displaying response 2/6: {'primaryAccession': 'H0YFM8', 'uniProtkbId': 'H0YFM8_HUMAN', 'organism': {'scientificName': 'Homo sapiens', 'commonName': 'Human', 'taxonId': 9606, 'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000439371'}, {'evidenceCode': 'ECO:0000313', 'source': 'Proteomes', 'id': 'UP000005640'}], 'lineage': ['Eukaryota', 'Metazoa', 'Chordata', 'Craniata', 'Vertebrata', 'Euteleostomi', 'Mammalia', 'Eutheria', 'Euarchontoglires', 'Primates', 'Haplorrhini', 'Catarrhini', 'Hominidae', 'Homo']}, 'genes': [{'geneName': {'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000439371'}], 'value': 'ADGRG6'}}]}
+2022-10-28 04:22:35,220 [DEBUG] results_arr_len = 6
+2022-10-28 04:22:35,220 [DEBUG] Gene name ADGRG6 found to correspond to H0YGP2. Displaying response 3/6: {'primaryAccession': 'H0YGP2', 'uniProtkbId': 'H0YGP2_HUMAN', 'organism': {'scientificName': 'Homo sapiens', 'commonName': 'Human', 'taxonId': 9606, 'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000444123'}, {'evidenceCode': 'ECO:0000313', 'source': 'Proteomes', 'id': 'UP000005640'}], 'lineage': ['Eukaryota', 'Metazoa', 'Chordata', 'Craniata', 'Vertebrata', 'Euteleostomi', 'Mammalia', 'Eutheria', 'Euarchontoglires', 'Primates', 'Haplorrhini', 'Catarrhini', 'Hominidae', 'Homo']}, 'genes': [{'geneName': {'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000444123'}], 'value': 'ADGRG6'}}]}
+2022-10-28 04:22:35,810 [DEBUG] results_arr_len = 6
+2022-10-28 04:22:35,810 [DEBUG] Gene name ADGRG6 found to correspond to F5H2L1. Displaying response 4/6: {'primaryAccession': 'F5H2L1', 'uniProtkbId': 'F5H2L1_HUMAN', 'organism': {'scientificName': 'Homo sapiens', 'commonName': 'Human', 'taxonId': 9606, 'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000446287'}, {'evidenceCode': 'ECO:0000313', 'source': 'Proteomes', 'id': 'UP000005640'}], 'lineage': ['Eukaryota', 'Metazoa', 'Chordata', 'Craniata', 'Vertebrata', 'Euteleostomi', 'Mammalia', 'Eutheria', 'Euarchontoglires', 'Primates', 'Haplorrhini', 'Catarrhini', 'Hominidae', 'Homo']}, 'genes': [{'geneName': {'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000446287'}], 'value': 'ADGRG6'}}]}
+2022-10-28 04:22:39,790 [DEBUG] results_arr_len = 6
+2022-10-28 04:22:39,790 [DEBUG] Gene name ADGRG6 found to correspond to F5H054. Displaying response 5/6: {'primaryAccession': 'F5H054', 'uniProtkbId': 'F5H054_HUMAN', 'organism': {'scientificName': 'Homo sapiens', 'commonName': 'Human', 'taxonId': 9606, 'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000438366'}, {'evidenceCode': 'ECO:0000313', 'source': 'Proteomes', 'id': 'UP000005640'}], 'lineage': ['Eukaryota', 'Metazoa', 'Chordata', 'Craniata', 'Vertebrata', 'Euteleostomi', 'Mammalia', 'Eutheria', 'Euarchontoglires', 'Primates', 'Haplorrhini', 'Catarrhini', 'Hominidae', 'Homo']}, 'genes': [{'geneName': {'evidences': [{'evidenceCode': 'ECO:0000313', 'source': 'Ensembl', 'id': 'ENSP00000438366'}], 'value': 'ADGRG6'}}]}

@@ -7,6 +7,7 @@ import time
 import csv
 import util
 import os
+import sys
 
 import logging
 
@@ -33,8 +34,9 @@ def get_GO_genes_API(term):
     url_term = urllib.parse.quote(term)
     parameters = {
         "use_compact_associations":True,
-        "taxon":["NCBITaxon:9606"] #only for Homo Sapiens
+        "taxon":["NCBITaxon:9606"] #only for Homo Sapiens; it is the same if ["taxonomy:9606"] is used
     }
+
     # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{url_term}/genes", params=parameters)
     logging.debug(json.dumps(response.json()['compact_associations'], indent=4))
@@ -76,9 +78,13 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     # but this omits any databases that are not uniprot
     if "UniProtKB" in id_old:
         source = "UniProtKB_AC-ID"
-    if "ZFIN" in id_old: # gene is from Zebrafish Informatics Network -> check if a human gene ortholog exists in zfin_human-gene-orthologs.txt
+    if "ZFIN" in id_old: # gene is from Zebrafish Informatics Network -> check if a human gene ortholog exists in zfin_human-gene-orthologs.txt -> attempt to find its uniprot id
         human_gene_symbol = util.zfin_find_human_ortholog(id_old)
-        return #TODO: DELETE THIS AND CONTINUE WORKING HERE FROM RETURNED HUMAN GENE SYMBOL -> push to uniprot / get id / modify response / supply correct params to response ?
+        if "ZfinError" in human_gene_symbol:
+            logging.debug(f"[uniprot_mapping]: ERROR! human_gene_symbol for {id_old} was not found!")
+            input("Press enter to proceed.")
+        else: #human ortholog exists in uniprot
+            id_old = util.get_uniprot_identifier_recursive(human_gene_symbol)
 
     id = id_old.split(':')[1]
     response = requests.post(f"https://rest.uniprot.org/idmapping/run", data={'from':source, 'to':target, 'ids':id})
@@ -142,7 +148,9 @@ def score_genes(json_files):
     Counts the number of appearances of all the genes across all specified json_files (which contain genes
     related to specific GO terms and are made by the find_genes_related_to_GO_terms function)
     """       
-        
+
+
+# TODO: load src_data_files/trusted_genes.txt into constants.TRUSTED_GENES and implement checking to avoid asking user for input on genes already trusted
 terms_test = ['GO:0001525']
 terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
 find_genes_related_to_GO_terms(terms_angiogenesis_ids)

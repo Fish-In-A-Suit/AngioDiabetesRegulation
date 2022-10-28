@@ -106,3 +106,8 @@ TERMS_EXCLUDED = [
     "cell migration involved in coronary angiogenesis", "GO:0060981",
     "angiogenesis involved in coronary vascular morphogenesis", "GO:0060978",
     ]
+
+# array of genes (like the zebrafish), that have been confirmed to be orthologs by the user
+TRUSTED_GENES = [
+    
+]

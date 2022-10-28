@@ -4,6 +4,10 @@ import constants
 import json
 
 import logging
+import sys
+
+_response_cycle_counter = 0
+_uniprot_identifier_query_result = ""
 
 
 console_handler = logging.StreamHandler()
@@ -132,3 +136,69 @@ def _zfin_get_human_gene_symbol_from_line(line):
     Splits zfin line and retrieves human gene symbol (full caps of zebrafish gene symbol)
     """
     return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
+
+def get_uniprot_identifier(gene_name, prefix="UniProtKB:"):
+    """
+    Retrieves uniprot identifier e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6
+    """
+    _response_cycle_counter = 0
+    response = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
+    # logging.debug(f"Response = {response.text}")
+    response = response.json()
+    uniprot_gene_identifier = response["results"][0]["primaryAccession"]
+    results_arr_len = len(response["results"])
+    logging.debug(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying primary response {_response_cycle_counter}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(response,0)}")
+    user_logic = input("Press 1 to confirm current result, 2 to cycle another result or 0 to discard.")
+    logging.debug(f"[get_uniprot_identifier]: {gene_name} -> {uniprot_gene_identifier}")
+    if prefix != "":
+        return prefix+uniprot_gene_identifier
+    else:
+        return uniprot_gene_identifier
+
+def get_uniprot_identifier_recursive(gene_name, recursion=0, json="", prefix="UniProtKB:"):
+    """
+    Retrieves uniprot identifier e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6
+    """
+    global _uniprot_identifier_query_result
+    uniprot_gene_identifier = ""
+    if recursion == 0:
+        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
+        # logging.debug(f"Response = {_get_uniprot_identifier_query_result.text}")
+        _uniprot_identifier_query_result = _uniprot_identifier_query_result.json()
+
+    uniprot_gene_identifier = _uniprot_identifier_query_result["results"][recursion]["primaryAccession"]
+    results_arr_len = len(_uniprot_identifier_query_result["results"])
+    logging.debug(f"results_arr_len = {results_arr_len}")
+    logging.debug(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
+    user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result or 0 to continue the program and discard all options."))
+    if user_logic == 1:
+        # result is confirmed, save so in TRUSTED_GENES
+        logging.debug(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
+        with open("src_data_files/trusted_genes.txt", "w+") as f:
+            f.write(f"{gene_name} {uniprot_gene_identifier}\n")
+            f.close()
+    elif user_logic == 2:
+        # cycle another result
+        next_recursive_step = recursion + 1
+        if next_recursive_step > results_arr_len: 
+            # cycled through all options, return error
+            logging.debug("Cycled out of options!")
+            return f"[get_uniprot_identifier_new]: CycleOutOfBoundsError: Cycled through all the uniprot gene IDs for {gene_name} without confirming any"
+            # TODO: handle this error in main script file
+        get_uniprot_identifier_recursive(gene_name, recursion=next_recursive_step)
+    elif user_logic == 0:
+        return f"[get_uniprot_identifier_new]: No uniprot gene IDs for {gene_name} found."
+    else:
+        # wrong input, recurse again
+        logging.debug("[get_uniprot_identifier_new]: Wrong input! Must be 0, 1 or 2.")
+        get_uniprot_identifier_recursive(gene_name, recursion)
+
+    if prefix != "":
+        return prefix+uniprot_gene_identifier
+    else:
+        return uniprot_gene_identifier
+
+def _get_uniprot_identifier_json_nth_response(json, nth_response):
+    "Gets the entire nth element in 'results' array inside the json retrieved by get_uniprot_identifier function"
+    return json["results"][nth_response]
+
