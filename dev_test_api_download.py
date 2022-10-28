@@ -11,19 +11,7 @@ import sys
 import constants
 
 import logging
-
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-file_handler = logging.FileHandler("./log_output/test_json_dump.log", 'w+')
-file_handler.setLevel(logging.DEBUG)
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        file_handler,
-        console_handler
-    ]
-)
+logger = logging.getLogger(__name__)
 
 
 def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
@@ -32,14 +20,14 @@ def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     Homo sapiens taxon is NCBITaxon:9606
     """
-    logging.info("get_GO_genes_API: term = " + term)
+    logger.info("get_GO_genes_API: term = " + term)
     parameters = {
         "rows":100000
     }
 
     # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters)
-    logging.debug(json.dumps(response.json(), indent=4))
+    logger.debug(json.dumps(response.json(), indent=4))
     associations = response.json()['associations']
     genes = []
     for item in associations:
@@ -47,8 +35,8 @@ def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
             genes.append(item['subject']['id'])
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
-    logging.info(f"Term {term} has {len(genes)} associated genes.")
-    logging.info(f"GO term: {term} -> Genes/products: {genes}")
+    logger.info(f"Term {term} has {len(genes)} associated genes.")
+    logger.info(f"GO term: {term} -> Genes/products: {genes}")
     return genes
 
 def get_ensembl_sequence_API(id):
@@ -58,8 +46,8 @@ def get_ensembl_sequence_API(id):
     """
     response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}?object_type=transcript;type=cds", headers={ "Content-Type" : "text/plain", }) # cds = c-DNA without the UTR regions; type=cdna (in this case UTR region is also kept); retrieves complementary sequence to the gene mRNA (without UTR), same as miRNA sequence (todo: preveri z genetikom)
     if response.ok:
-        logging.debug(response.text)
-        logging.info(f"Recieved sequence for id {id}.")
+        logger.debug(response.text)
+        logger.info(f"Recieved sequence for id {id}.")
         return response.text
     else:
         return None
@@ -70,7 +58,7 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     Input of ID's must be a 1d list. e.g. ['UniProtKB:A0A3Q1N508']
     https://www.uniprot.org/help/id_mapping
     """
-    logging.debug(f"[uniprot_mapping]: id_old = {id_old}")
+    logger.debug(f"[uniprot_mapping]: id_old = {id_old}")
     source = "UniProtKB_AC-ID" # try to map all genes from other databases to UniProt
 
     # TODO: some terms (like GO-1903670) have genes that are not defined in UniProt! For example, one gene from
@@ -84,27 +72,27 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     if "ZFIN" in id_old: # gene is from Zebrafish Informatics Network -> check if a human gene ortholog exists in zfin_human-gene-orthologs.txt -> attempt to find its uniprot id
         human_gene_symbol = util.zfin_find_human_ortholog(id_old) # eg. adgrg9
         if "ZfinError" in human_gene_symbol:
-            logging.debug(f"[uniprot_mapping]: ERROR! human_gene_symbol for {id_old} was not found!")
+            logger.debug(f"[uniprot_mapping]: ERROR! human_gene_symbol for {id_old} was not found!")
             input("Press enter to proceed.")
         else: #human ortholog exists in uniprot
             id_old = util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=False)
-            logging.debug(f"id_old = {id_old}")
+            logger.debug(f"id_old = {id_old}")
             if "CycleOutOfBoundsError" in id_old or id_old==0:
                 return None
 
     id = id_old.split(':')[1]
     response = requests.post(f"https://rest.uniprot.org/idmapping/run", data={'from':source, 'to':target, 'ids':id})
-    logging.debug(response.json())
+    logger.debug(response.json())
     jobId=response.json()['jobId']
-    logging.debug(jobId)
+    logger.debug(jobId)
     POLLING_INTERVAL=1
     while True:
         request = requests.get(f"https://rest.uniprot.org/idmapping/status/{jobId}")
         j = request.json()
-        logging.info(j)
+        logger.info(j)
         if "jobStatus" in j:
             if j["jobStatus"] == "RUNNING":
-                logging.debug(f"Retrying in {POLLING_INTERVAL}s")
+                logger.debug(f"Retrying in {POLLING_INTERVAL}s")
                 time.sleep(POLLING_INTERVAL)
             else:
                 raise Exception(j["jobStatus"])
@@ -114,14 +102,14 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
             else:
                 ensembl_id=j['results'][0]['to'].split('.')[0]
             break
-    logging.info(ensembl_id)
+    logger.info(ensembl_id)
     return ensembl_id
 
 def find_genes_related_to_GO_terms(terms, ask_for_overrides=True, destination_file=""):
     """
     Finds the genes related to the terms array and dumps the results into a json file.
     """
-    logging.debug(f"terms array len:{len(terms)}, elements: {terms}")
+    logger.debug(f"terms array len:{len(terms)}, elements: {terms}")
     for term in terms:
         term_file = str(term).replace(":","-")
         filepath=f"term_genes/{term_file}.json"
@@ -129,7 +117,7 @@ def find_genes_related_to_GO_terms(terms, ask_for_overrides=True, destination_fi
         if os.path.isfile(filepath) and ask_for_overrides == True:
             override = input(f"File {term_file} already exists. Enter 1 to process the file again or 0 to skip:")
             if int(override) == 0: # careful! override changes type to str as input is given
-                logging.debug(f"Skipping file {term_file}")
+                logger.debug(f"Skipping file {term_file}")
                 continue
 
         file = open(filepath, "w+")
@@ -158,7 +146,7 @@ def score_genes(json_files):
 if __name__ == "__main__":
     # TODO: load src_data_files/trusted_genes.txt into constants.TRUSTED_GENES and implement checking to avoid asking user for input on genes already trusted
     util.load_trusted_genes("src_data_files/trusted_genes.txt")
-    logging.debug(f"constants.TRUSTED_GENES length: {len(constants.TRUSTED_GENES)}")
+    logger.debug(f"constants.TRUSTED_GENES length: {len(constants.TRUSTED_GENES)}")
     terms_test = ['GO:0001525']
     terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
     find_genes_related_to_GO_terms(terms_angiogenesis_ids)
