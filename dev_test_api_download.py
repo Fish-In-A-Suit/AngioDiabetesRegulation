@@ -42,7 +42,7 @@ def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
 def get_ensembl_sequence_API(id):
     """
     This function queries ensembl for nucleotide sequence
-    Input of ensembl ID's must be a 1d list. e.g. ['ENSG00000157764']
+    Input of ensembl ID's must be a string
     """
     response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}?object_type=transcript;type=cds", headers={ "Content-Type" : "text/plain", }) # cds = c-DNA without the UTR regions; type=cdna (in this case UTR region is also kept); retrieves complementary sequence to the gene mRNA (without UTR), same as miRNA sequence (todo: preveri z genetikom)
     if response.ok:
@@ -52,10 +52,24 @@ def get_ensembl_sequence_API(id):
     else:
         return None
 
+def get_rnacentral_sequence_API(id):
+    """
+    This function queries RNA Central for nucleotide sequence
+    Input of RNA Central ID's must be a string
+    """
+    response = requests.get(f"http://rnacentral.org/api/v1/rna/{id}/?format=json")
+    if response.ok:
+        sequence = response['sequence']
+        logger.debug(sequence)
+        logger.info(f"Recieved sequence for id {id} -> {sequence}.")
+        return sequence
+    else:
+        return None
+
 def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     """
     Recieves uniprot or other ID and finds the Ensembl id.
-    Input of ID's must be a 1d list. e.g. ['UniProtKB:A0A3Q1N508']
+    Input of ID's must be a string
     https://www.uniprot.org/help/id_mapping
     """
     logger.debug(f"[uniprot_mapping]: id_old = {id_old}")
