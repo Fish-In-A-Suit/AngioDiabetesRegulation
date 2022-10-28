@@ -12,9 +12,8 @@ import constants
 
 import logging
 
-
 console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.DEBUG)
+console_handler.setLevel(logging.INFO)
 file_handler = logging.FileHandler("./log_output/test_json_dump.log", 'w+')
 file_handler.setLevel(logging.DEBUG)
 logging.basicConfig(
@@ -26,30 +25,30 @@ logging.basicConfig(
     ]
 )
 
-def get_GO_genes_API(term):
+
+def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
     """
     Retrieves all genes associated with each term.
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
+    Homo sapiens taxon is NCBITaxon:9606
     """
-    logging.debug("get_GO_genes_API: term = " + term)
-    url_term = urllib.parse.quote(term)
+    logging.info("get_GO_genes_API: term = " + term)
     parameters = {
-        "use_compact_associations":True,
-        "taxon":["NCBITaxon:9606"] #only for Homo Sapiens; it is the same if ["taxonomy:9606"] is used
+        "rows":100000
     }
 
     # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
-    response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{url_term}/genes", params=parameters)
-    logging.debug(json.dumps(response.json()['compact_associations'], indent=4))
-    compact_assoc = response.json()['compact_associations']
+    response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters)
+    logging.debug(json.dumps(response.json(), indent=4))
+    associations = response.json()['associations']
     genes = []
-    for item in compact_assoc:
-        if item['subject'] == term: #only use directly associated genes
-            genes=item['objects']
-            logging.info(f"GO term: {term} -> Genes/products: {genes}")
+    for item in associations:
+        if item['subject']['taxon']['id'] == taxon and item['object']['id'] == term: #only use directly associated genes
+            genes.append(item['subject']['id'])
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
-    logging.debug(f"Term {term} has {len(genes)} associated genes.")
+    logging.info(f"Term {term} has {len(genes)} associated genes.")
+    logging.info(f"GO term: {term} -> Genes/products: {genes}")
     return genes
 
 def get_ensembl_sequence_API(id):
@@ -156,14 +155,14 @@ def score_genes(json_files):
     related to specific GO terms and are made by the find_genes_related_to_GO_terms function)
     """       
 
-
-# TODO: load src_data_files/trusted_genes.txt into constants.TRUSTED_GENES and implement checking to avoid asking user for input on genes already trusted
-util.load_trusted_genes("src_data_files/trusted_genes.txt")
-logging.debug(f"constants.TRUSTED_GENES length: {len(constants.TRUSTED_GENES)}")
-terms_test = ['GO:0001525']
-terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
-find_genes_related_to_GO_terms(terms_angiogenesis_ids)
-# call score_genes(...) here
+if __name__ == "__main__":
+    # TODO: load src_data_files/trusted_genes.txt into constants.TRUSTED_GENES and implement checking to avoid asking user for input on genes already trusted
+    util.load_trusted_genes("src_data_files/trusted_genes.txt")
+    logging.debug(f"constants.TRUSTED_GENES length: {len(constants.TRUSTED_GENES)}")
+    terms_test = ['GO:0001525']
+    terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
+    find_genes_related_to_GO_terms(terms_angiogenesis_ids)
+    # call score_genes(...) here
 
 
 """
