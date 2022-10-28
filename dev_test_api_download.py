@@ -81,19 +81,6 @@ def uniprot_mapping_API(id_old, source='UniProtKB_AC-ID', target='Ensembl_Transc
     # possible solution: source = ""
     # but this omits any databases that are not uniprot
 
-    if "UniProtKB" in id_old:
-        source = "UniProtKB_AC-ID"
-    if "ZFIN" in id_old: # gene is from Zebrafish Informatics Network -> check if a human gene ortholog exists in zfin_human-gene-orthologs.txt -> attempt to find its uniprot id
-        human_gene_symbol = util.zfin_find_human_ortholog(id_old) # eg. adgrg9
-        if "ZfinError" in human_gene_symbol:
-            logger.debug(f"[uniprot_mapping]: ERROR! human_gene_symbol for {id_old} was not found!")
-            input("Press enter to proceed.")
-        else: #human ortholog exists in uniprot
-            id_old = util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=False)
-            logger.debug(f"id_old = {id_old}")
-            if "CycleOutOfBoundsError" in id_old or id_old==0:
-                return None
-
     id = id_old.split(':')[1]
     response = requests.post(f"https://rest.uniprot.org/idmapping/run", data={'from':source, 'to':target, 'ids':id})
     logger.debug(response.json())
