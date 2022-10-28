@@ -8,6 +8,7 @@ import csv
 import util
 import os
 import sys
+import constants
 
 import logging
 
@@ -71,20 +72,26 @@ def uniprot_mapping(id_old, target='Ensembl_Transcript'): # !
     https://www.uniprot.org/help/id_mapping
     """
     logging.debug(f"[uniprot_mapping]: id_old = {id_old}")
+    source = "UniProtKB_AC-ID" # try to map all genes from other databases to UniProt
+
     # TODO: some terms (like GO-1903670) have genes that are not defined in UniProt! For example, one gene from
     # GO-1903670 has id_old ZFIN:ZDB-GENE-041014-357, throws UnboundLocalError (source referenced before assignment)
     # -> need to search through multiple databases or do we only limit uniprot?
     # possible solution: source = ""
     # but this omits any databases that are not uniprot
+
     if "UniProtKB" in id_old:
         source = "UniProtKB_AC-ID"
     if "ZFIN" in id_old: # gene is from Zebrafish Informatics Network -> check if a human gene ortholog exists in zfin_human-gene-orthologs.txt -> attempt to find its uniprot id
-        human_gene_symbol = util.zfin_find_human_ortholog(id_old)
+        human_gene_symbol = util.zfin_find_human_ortholog(id_old) # eg. adgrg9
         if "ZfinError" in human_gene_symbol:
             logging.debug(f"[uniprot_mapping]: ERROR! human_gene_symbol for {id_old} was not found!")
             input("Press enter to proceed.")
         else: #human ortholog exists in uniprot
-            id_old = util.get_uniprot_identifier_recursive(human_gene_symbol)
+            id_old = util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=False)
+            logging.debug(f"id_old = {id_old}")
+            if "CycleOutOfBoundsError" in id_old or id_old==0:
+                return None
 
     id = id_old.split(':')[1]
     response = requests.post(f"https://rest.uniprot.org/idmapping/run", data={'from':source, 'to':target, 'ids':id})
@@ -151,6 +158,8 @@ def score_genes(json_files):
 
 
 # TODO: load src_data_files/trusted_genes.txt into constants.TRUSTED_GENES and implement checking to avoid asking user for input on genes already trusted
+util.load_trusted_genes("src_data_files/trusted_genes.txt")
+logging.debug(f"constants.TRUSTED_GENES length: {len(constants.TRUSTED_GENES)}")
 terms_test = ['GO:0001525']
 terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
 find_genes_related_to_GO_terms(terms_angiogenesis_ids)

@@ -155,43 +155,64 @@ def get_uniprot_identifier(gene_name, prefix="UniProtKB:"):
     else:
         return uniprot_gene_identifier
 
-def get_uniprot_identifier_recursive(gene_name, recursion=0, json="", prefix="UniProtKB:"):
+def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
     """
-    Retrieves uniprot identifier e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6
+    Retrieves uniprot identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6
+
+    Parameters:
+      - gene_name: A gene name or symbol e.g. ADGRG6
+      - recursion: An internal function parameter to iterate through an array of UniProtKB ids supplied by the response json
+      - prefix: A database prefix, is prefixed before the specifi uniprot gene id
+      - trust_genes: If True, all trusted genes inside trusted_genes.txt will override this function. If false, it
+        notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
     """
+    if gene_name in constants.TRUSTED_GENES:
+        if trust_genes == True:
+            # return the element ahead of the gene_name, which is the previously found uniprot_id
+            return "UniProtKB:" + constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
+        else:
+            trust_genes_user_response = int(input(f"Gene {gene_name} is found among trusted genes. Press 1 to continue with UniProt Id query, or 0 to use the trusted gene."))
+            if trust_genes_user_response == 0:
+                return "UniProtKB:" + constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
+
     global _uniprot_identifier_query_result
     uniprot_gene_identifier = ""
     if recursion == 0:
         _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
-        # logging.debug(f"Response = {_get_uniprot_identifier_query_result.text}")
         _uniprot_identifier_query_result = _uniprot_identifier_query_result.json()
 
     uniprot_gene_identifier = _uniprot_identifier_query_result["results"][recursion]["primaryAccession"]
     results_arr_len = len(_uniprot_identifier_query_result["results"])
-    logging.debug(f"results_arr_len = {results_arr_len}")
-    logging.debug(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
+
+    logging.debug(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
     user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result or 0 to continue the program and discard all options."))
     if user_logic == 1:
         # result is confirmed, save so in TRUSTED_GENES
         logging.debug(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
-        with open("src_data_files/trusted_genes.txt", "w+") as f:
-            f.write(f"{gene_name} {uniprot_gene_identifier}\n")
-            f.close()
+        with open("src_data_files/trusted_genes.txt", "a+") as f:
+            f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
+            if gene_name not in f.read():
+                f.seek(0,2) # move file pointer back to the end of the file
+                f.write(f"{gene_name} {uniprot_gene_identifier}\n")
+                f.close()
     elif user_logic == 2:
         # cycle another result
         next_recursive_step = recursion + 1
-        if next_recursive_step > results_arr_len: 
+        if next_recursive_step > (results_arr_len-1): 
             # cycled through all options, return error
             logging.debug("Cycled out of options!")
             return f"[get_uniprot_identifier_new]: CycleOutOfBoundsError: Cycled through all the uniprot gene IDs for {gene_name} without confirming any"
+            # TODO: major bug here, it should return error, but it returns a gene id instead
+            # look at: https://stackoverflow.com/questions/11356168/return-in-recursive-function
+            # and https://stackoverflow.com/questions/23543485/python-recursive-function-executing-return-statement-incorrectly 
             # TODO: handle this error in main script file
-        get_uniprot_identifier_recursive(gene_name, recursion=next_recursive_step)
+        get_uniprotId_from_geneName(gene_name, recursion=next_recursive_step)
     elif user_logic == 0:
         return f"[get_uniprot_identifier_new]: No uniprot gene IDs for {gene_name} found."
     else:
         # wrong input, recurse again
         logging.debug("[get_uniprot_identifier_new]: Wrong input! Must be 0, 1 or 2.")
-        get_uniprot_identifier_recursive(gene_name, recursion)
+        get_uniprotId_from_geneName(gene_name, recursion)
 
     if prefix != "":
         return prefix+uniprot_gene_identifier
@@ -201,4 +222,15 @@ def get_uniprot_identifier_recursive(gene_name, recursion=0, json="", prefix="Un
 def _get_uniprot_identifier_json_nth_response(json, nth_response):
     "Gets the entire nth element in 'results' array inside the json retrieved by get_uniprot_identifier function"
     return json["results"][nth_response]
+
+def load_trusted_genes(trusted_genes_file_path):
+    """
+    Loads constants.TRUSTED_GENES list with genes from trusted_genes.txt
+    """
+    file = open(trusted_genes_file_path, "r")
+    lines = file.readlines()
+    for line in lines:
+        splitlist = line.split(" ")
+        for element in splitlist:
+            constants.TRUSTED_GENES.append(element)
 
