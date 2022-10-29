@@ -62,12 +62,12 @@ def _import_genes_from_term_json(term, source_folder):
     genes = []
     for block in input_json:
         genes.append(block["product"])
-    logger.debug(f"From file {source_folder}/{term_file}.json we found genes: {genes}")
+    logger.debug(f"From file {source_folder}/{term_file}.json we found {len(genes)} genes: {genes}")
     return genes
 
 def main():
     filename = "gene_scores/test_score.json"
-    terms = ["GO:1903587", "GO:1903670"]
+    terms = ["GO:1903587", "GO:1903670"] #change to gene list from constants
     score_genes(terms, filename)
 
 if __name__ == '__main__':
