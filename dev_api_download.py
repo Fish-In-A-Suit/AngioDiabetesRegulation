@@ -27,7 +27,7 @@ def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
     # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
     response = requests.get(
         f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters)
-    logger.debug(json.dumps(response.json(), indent=4))
+    #logger.debug(json.dumps(response.json(), indent=4))
     associations = response.json()['associations']
     genes = []
     for item in associations:
@@ -185,9 +185,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
 
 def main():
 #    dev_test_api_download.get_GO_genes_API("GO:1903670")
-    terms_test = ['GO:1903587']
+    #terms_test = ['GO:1903587']
 #    terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
-    find_genes_related_to_GO_terms(terms_test)
+    terms_all = util.get_array_terms("ALL")
+    find_genes_related_to_GO_terms(terms_all)
 
 if __name__ == '__main__':
     import logging.config
