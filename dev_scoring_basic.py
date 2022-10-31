@@ -31,6 +31,7 @@ def score_genes(allowed_term_ids, destination_file, source_folder="term_genes"):
         json_gene_scores.append(out)
     logger.info(f"[gene_scores]: {json_gene_scores}")
 
+    json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "count")
     file = open(destination_file, "w+")
     file.write(json.dumps(json_gene_scores)+"\n")
     file.close()
@@ -77,9 +78,10 @@ def _import_genes_from_term_json(term, source_folder):
     return genes
 
 def main():
-    filename = "gene_scores/test_score.json"
-    terms = ["GO:1903587", "GO:1903670"] # TODO: change to gene list from constants
-    score_genes(terms, filename)
+    filename = "gene_scores/test_score_all.json"
+    #terms = ["GO:1903587", "GO:1903670"] # TODO: change to gene list from constants
+    terms_all = util.get_array_terms("ALL")
+    score_genes(terms_all, filename)
 
 if __name__ == '__main__':
     import logging.config
