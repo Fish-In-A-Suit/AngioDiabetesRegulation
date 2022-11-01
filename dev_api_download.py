@@ -13,8 +13,9 @@ import constants
 import logging
 logger = logging.getLogger(__name__)
 
-
-def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
+# todo: check if the new function (get_GO_genes_API_new) works as intended with homosapiens_only = False
+# aka that it returns zebrafish and other orthologs, then delete this old function
+def get_GO_genes_API_old(term, taxon="NCBITaxon:9606"):
     """
     Retrieves all genes associated with each term.
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
@@ -22,26 +23,61 @@ def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
     """
     logger.info("get_GO_genes_API: term = " + term)
     parameters = {
-        # "use_compact_associations":True,
-        # "taxon":["NCBITaxon:9606"] #only for Homo Sapiens; it is the same if ["taxonomy:9606"] is used
+        "use_compact_associations":True,
+        "taxon":["NCBITaxon:9606"], #only for Homo Sapiens; it is the same if ["taxonomy:9606"] is used
         "rows": 100000
     }
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
     #logger.debug(json.dumps(response.json(), indent=4))
     
-    #associations = response.json()['compact_associations']
-    associations = response.json()['associations']
+    associations = response.json()['compact_associations']
     genes = []
     for item in associations:
-        # only use directly associated genes
-        if item['subject']['taxon']['id'] == taxon and item['object']['id'] == term:
-            genes.append(item['subject']['id'])
-        """
         if item['subject'] == term: #only use directly associated genes
             genes=item['objects']
             logging.info(f"GO term: {term} -> Genes/products: {genes}")
-        """
 
+    # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
+    # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
+    
+    logger.info(
+        f"Term {term} has {len(genes)} associated genes/product -> {genes}.")
+    return genes
+    
+def get_GO_genes_API_new(term, homosapiens_only = True, taxon="NCBITaxon:9606"):
+    """
+    Retrieves all genes associated with each term.
+    Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
+    Homo sapiens taxon is NCBITaxon:9606
+    """
+    logger.info("get_GO_genes_API: term = " + term)
+    if homosapiens_only == True:
+        parameters = {
+            "rows": 100000
+        }
+    else:
+        parameters = {
+        "use_compact_associations":True,
+        "taxon":["NCBITaxon:9606"], #only for Homo Sapiens; it is the same if ["taxonomy:9606"] is used
+        "rows": 100000
+        }
+    
+    response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
+    #logger.debug(json.dumps(response.json(), indent=4))
+    genes = []
+    if homosapiens_only == True:
+        associations = response.json()['associations']
+        for item in associations:
+            # only use directly associated genes
+            if item['subject']['taxon']['id'] == taxon and item['object']['id'] == term:
+                genes.append(item['subject']['id'])
+    else:
+        associations = response.json()['compact_associations']
+        for item in associations:
+            # only use directly associated genes
+            if item['subject'] == term: #only use directly associated genes
+                genes=item['objects'] # TODO: investigate if it should .append here
+                logging.info(f"GO term: {term} -> Genes/products: {genes}")
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
     
