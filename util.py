@@ -234,7 +234,19 @@ def load_trusted_genes(trusted_genes_file_path):
         splitlist = line.split(" ")
         for element in splitlist:
             constants.TRUSTED_GENES.append(element)
-    
+
+def get_uniprotId_description(uniprotId):
+    """
+    Returns a description of the specified uniprotId
+    """
+    response=""
+    if ":" in uniprotId:
+        id = uniprotId.split(":")[1]
+        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{id}.txt")
+    else:
+        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{uniprotId}.txt")
+    return response.txt
+
 def sort_list_of_dictionaries(input, field, direction_reversed = True):
     """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
     return sorted(input, key=lambda d: d[field], reverse=direction_reversed)

@@ -230,9 +230,16 @@ def main():
     # dev_test_api_download.get_GO_genes_API("GO:1903670")
     # terms_test = ['GO:1903587']
     # terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
-    
+
+    # statrup functions
+    util.load_trusted_genes("src_data_files/trusted_genes.txt")
+
+    # main functions
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
+    
+    # TODO: check util.get_uniprotId_description; parse "-!- FUNCTION" from the .txt response (eg. for https://rest.uniprot.org/uniprotkb/O14944.txt)
+
     
 
 if __name__ == '__main__':
