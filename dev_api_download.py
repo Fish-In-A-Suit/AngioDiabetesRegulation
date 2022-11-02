@@ -9,49 +9,28 @@ import util
 import os
 import sys
 import constants
+import atexit
 
 import logging
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
-# todo: check if the new function (get_GO_genes_API_new) works as intended with homosapiens_only = False
-# aka that it returns zebrafish and other orthologs, then delete this old function
-def get_GO_genes_API_old(term, taxon="NCBITaxon:9606"):
+# global variables
+FLAG_HOMOSAPIENS_ONLY = True
+
+# Remarks
+#   - no need to track _current_file, since .json files in term_genes aren't saved if script terminates early / if all the json elements haven't already been computed
+#
+#
+
+def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
     """
     Retrieves all genes associated with each term.
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     Homo sapiens taxon is NCBITaxon:9606
     """
     logger.info("get_GO_genes_API: term = " + term)
-    parameters = {
-        "use_compact_associations":True,
-        "taxon":["NCBITaxon:9606"], #only for Homo Sapiens; it is the same if ["taxonomy:9606"] is used
-        "rows": 100000
-    }
-    response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
-    #logger.debug(json.dumps(response.json(), indent=4))
-    
-    associations = response.json()['compact_associations']
-    genes = []
-    for item in associations:
-        if item['subject'] == term: #only use directly associated genes
-            genes=item['objects']
-            logging.info(f"GO term: {term} -> Genes/products: {genes}")
-
-    # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
-    # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
-    
-    logger.info(
-        f"Term {term} has {len(genes)} associated genes/product -> {genes}.")
-    return genes
-    
-def get_GO_genes_API_new(term, homosapiens_only = True, taxon="NCBITaxon:9606"):
-    """
-    Retrieves all genes associated with each term.
-    Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
-    Homo sapiens taxon is NCBITaxon:9606
-    """
-    logger.info("get_GO_genes_API: term = " + term)
-    if homosapiens_only == True:
+    if FLAG_HOMOSAPIENS_ONLY == True:
         parameters = {
             "rows": 100000
         }
@@ -65,7 +44,7 @@ def get_GO_genes_API_new(term, homosapiens_only = True, taxon="NCBITaxon:9606"):
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
     #logger.debug(json.dumps(response.json(), indent=4))
     genes = []
-    if homosapiens_only == True:
+    if FLAG_HOMOSAPIENS_ONLY == True:
         associations = response.json()['associations']
         for item in associations:
             # only use directly associated genes
@@ -228,12 +207,33 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     file.close()
     logger.debug(f"finished gene search for GO term {term}")
 
+def exit_handler():
+    """
+    Executes last code before program exit. If any file is being processed, it's flagged.
+    If there is any last IO operations etc, perform them here.
+    """
+    logging.info("Stopping script!")
+
+
 def main():
-#    dev_test_api_download.get_GO_genes_API("GO:1903670")
-    #terms_test = ['GO:1903587']
-#    terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
+    # register listeners/handlers
+    atexit.register(exit_handler)
+
+    # set global variables -> initialise with global keyword to refer to the global variable, then set value!
+    global FLAG_HOMOSAPIENS_ONLY
+    FLAG_HOMOSAPIENS_ONLY = False
+
+    # Compare any json files for testing -> get_GO_genes_API_new with homosapiens_only=True works as expected
+    # logging.info(util.json_compare("term_genes/GO-0001525.json", "term_genes/homosapiens_only,v1/GO-0001525.json"))
+    # logging.info(util.json_compare("term_genes/GO-0045765.json", "term_genes/homosapiens_only,v1/GO-0045765.json"))
+
+    # dev_test_api_download.get_GO_genes_API("GO:1903670")
+    # terms_test = ['GO:1903587']
+    # terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
+    
     terms_all = util.get_array_terms("ALL")
-    find_genes_related_to_GO_terms(terms_all)
+    find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
+    
 
 if __name__ == '__main__':
     import logging.config

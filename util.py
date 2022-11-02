@@ -2,6 +2,7 @@
 import requests
 import constants
 import json
+import os
 
 import logging
 import sys
@@ -184,11 +185,11 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     uniprot_gene_identifier = _uniprot_identifier_query_result["results"][recursion]["primaryAccession"]
     results_arr_len = len(_uniprot_identifier_query_result["results"])
 
-    logging.debug(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
+    logging.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
     user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result or 0 to continue the program and discard all options."))
     if user_logic == 1:
         # result is confirmed, save so in TRUSTED_GENES
-        logging.debug(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
+        logging.info(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
         with open("src_data_files/trusted_genes.txt", "a+") as f:
             f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
             if gene_name not in f.read():
@@ -200,7 +201,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         next_recursive_step = recursion + 1
         if next_recursive_step > (results_arr_len-1): 
             # cycled through all options, return error
-            logging.debug("Cycled out of options!")
+            logging.info("Cycled out of options!")
             return f"[get_uniprot_identifier_new]: CycleOutOfBoundsError: Cycled through all the uniprot gene IDs for {gene_name} without confirming any"
             # TODO: major bug here, it should return error, but it returns a gene id instead
             # look at: https://stackoverflow.com/questions/11356168/return-in-recursive-function
@@ -236,5 +237,32 @@ def load_trusted_genes(trusted_genes_file_path):
     
 def sort_list_of_dictionaries(input, field, direction_reversed = True):
     """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
-    return sorted(input, key=lambda d: d[field], reverse=direction_reversed) 
+    return sorted(input, key=lambda d: d[field], reverse=direction_reversed)
+
+def append_to_file(srcfilepath, append):
+    """
+    Appends the 'append' to the file before the filetype.
+    Example usage: util.append_to_file("term_genes/GO-0001525.json", ";params=homosapiens_only,v1")
+    --> result: term_genes/GO-0001525;params=homosapiens_only,v1.json
+    """
+    split=srcfilepath.split(".")
+    dstfilepath = split[0] + append + "." + split[1]
+    os.rename(srcfilepath, dstfilepath)
+
+def json_compare(file1, file2):
+    """
+    Compares the contents of file1 and file2 json files. Used during development to check for json
+    file similarity/differences.
+
+    Returns: True if no differences, False if differences
+    """
+    file1_json = read_file_as_json(file1)
+    file2_json = read_file_as_json(file2)
+    if file1_json == file2_json:
+        logging.debug(f"Compare {file1} and {file2}: True")
+        return True
+    else:
+        logging.debug(f"Compare {file1} and {file2}: False")
+        return False
+
 

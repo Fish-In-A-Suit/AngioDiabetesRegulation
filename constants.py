@@ -1,4 +1,10 @@
-# Includes constant values, arrays, etc
+# MISC:
+#   File tree in term_genes:
+#     - homosapiens_only = use Ladi's new get_go_genes_API that only returns homosapiens taxon without any test-animal orthologs
+#
+#
+#
+#
 
 # Positive regulatory terms for search "angiogenesis"
 TERMS_ANGIOGENESIS_POSITIVE_ARRAY = [
