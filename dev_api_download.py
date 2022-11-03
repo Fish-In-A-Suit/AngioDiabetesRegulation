@@ -16,7 +16,8 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 # global variables
-FLAG_HOMOSAPIENS_ONLY = True
+FLAG_HOMOSAPIENS_ONLY = True 
+FLAG_TRUST_GENES = True # trust genes in trusted_genes to be credible -> program doesnt stop at them for validation
 
 # Remarks
 #   - no need to track _current_file, since .json files in term_genes aren't saved if script terminates early / if all the json elements haven't already been computed
@@ -167,38 +168,52 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
 
     genes = get_GO_genes_API(term)  # get array of genes associated to a term
     e_id = []  # ensemble id
-    seqeunces = []
+    sequences = []
     json_dictionaries = []
     for gene in genes:  # gene is is shape prefix:id
+        logging.info(f"[_find_genes_related_to_GO_term]: Processing gene {gene}")
         if 'UniProtKB' in gene:
             e_id.append(uniprot_mapping_API(gene))
-            seqeunces.append(get_ensembl_sequence_API(e_id[-1]))
+            sequences.append(get_ensembl_sequence_API(e_id[-1]))
         elif 'ZFIN' in gene:
-            human_gene_symbol = util.zfin_find_human_ortholog(
-                gene)  # eg. adgrg9
+            human_gene_symbol = util.zfin_find_human_ortholog(gene)  # eg. adgrg9
             if "ZfinError" in human_gene_symbol:
                 logger.debug(
                     f"[uniprot_mapping]: ERROR! human_gene_symbol for {gene} was not found!")
-                input("Press enter to proceed.")
+                # input("Press enter to proceed.") # no need
                 e_id.append(None)
-                seqeunces.append(None)
+                sequences.append(None)
             else:  # human ortholog exists in uniprot
                 e_id.append(util.get_uniprotId_from_geneName(
-                    human_gene_symbol, trust_genes=False))
+                    human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
-                    seqeunces.append(None)
+                    sequences.append(None)
                 else:
-                    seqeunces.append(get_ensembl_sequence_API(e_id[-1]))
+                    sequences.append(get_ensembl_sequence_API(e_id[-1]))
         elif 'RNAcentral' in gene:
             e_id.append(gene.split(':')[1])
-            seqeunces.append(get_rnacentral_sequence_API(e_id[-1]))
+            sequences.append(get_rnacentral_sequence_API(e_id[-1]))
+        elif "Xenbase" in gene:
+            human_gene_symbol = util.xenbase_find_human_ortholog(gene)
+            if "XenbaseError" in human_gene_symbol:
+                logger.info(human_gene_symbol) # error msg is human_gene_symbol
+                e_id.append(None)
+                sequences.append(None)
+            else: # human ortholog exists in xenbase
+                e_id.append(util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
+                logger.debug(f"id_old = {e_id[-1]}")
+                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                    e_id[-1] = None
+                    sequences.append(None)
+                else:
+                    sequences.append(get_ensembl_sequence_API(e_id[-1]))
         else:
             e_id.append(None)
-            seqeunces.append(None)
+            sequences.append(None)
         out = {"term": term, "product": gene,
-               "sequence_id": e_id[-1], "sequence": seqeunces[-1]}
+               "sequence_id": e_id[-1], "sequence": sequences[-1]}
         # f.write(json.dumps(out)+"\n") For file decoding purposes, json dicts need to be stored in a list and then the list written to the file as per https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
         json_dictionaries.append(out)
 
@@ -206,6 +221,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     file.write(json.dumps(json_dictionaries)+"\n")
     file.close()
     logger.debug(f"finished gene search for GO term {term}")
+
 
 def exit_handler():
     """
@@ -223,6 +239,9 @@ def main():
     global FLAG_HOMOSAPIENS_ONLY
     FLAG_HOMOSAPIENS_ONLY = False
 
+    global FLAG_TRUST_GENES
+    FLAG_TRUST_GENES = True
+
     # Compare any json files for testing -> get_GO_genes_API_new with homosapiens_only=True works as expected
     # logging.info(util.json_compare("term_genes/GO-0001525.json", "term_genes/homosapiens_only,v1/GO-0001525.json"))
     # logging.info(util.json_compare("term_genes/GO-0045765.json", "term_genes/homosapiens_only,v1/GO-0045765.json"))
@@ -237,10 +256,13 @@ def main():
     # main functions
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
-    
-    # TODO: check util.get_uniprotId_description; parse "-!- FUNCTION" from the .txt response (eg. for https://rest.uniprot.org/uniprotkb/O14944.txt)
 
+    # showcase functions:
+    # this is how to retrieve uniprotId description (function) from uniprotId:
+    # logging.info(util.get_uniprotId_description("O14944"))
+    # logging.info(util.get_uniprotId_description("Q9BUL8"))
     
+
 
 if __name__ == '__main__':
     import logging.config

@@ -96,14 +96,16 @@ def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_hu
     #lines_firstpass = [1, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 31000, 32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 41000, 42000, 43000]
     #lines_stepdown = []
     #gene_id_number = _zfin_split_row(gene_id)
-    file = open(ortholog_file_path, "r")
+    file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
     lines = file.readlines()
     gene_id=gene_id.split(":")[1] # eliminates ZFIN: 
     for line in lines:
         if gene_id in line:
             human_symbol = _zfin_get_human_gene_symbol_from_line(line)
             logging.debug(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
+            file.close()
             return human_symbol
+    file.close()
     return f"[ZfinError_No-human-ortholog-found:gene_id={gene_id}"
 
     """ # Optimisation possibility:
@@ -132,11 +134,16 @@ def _zfin_split_row(row):
     split = row.split("-")
     return int(split[2]) # the int(num) method also breaks leading zeroes (which is required)!
 
-def _zfin_get_human_gene_symbol_from_line(line):
+def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
     """
     Splits zfin line and retrieves human gene symbol (full caps of zebrafish gene symbol)
     """
-    return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
+    if improved_algorithm == True:
+        # better, as zfin human ortholog sometimes has different name than the zebrafish gene
+        return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
+    else: 
+        return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
+
 
 def get_uniprot_identifier(gene_name, prefix="UniProtKB:"):
     """
@@ -180,12 +187,17 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     uniprot_gene_identifier = ""
     if recursion == 0:
         _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
+        if _uniprot_identifier_query_result.text == "{'results': []}":
+            # empty response, may be because ortholog was found, but human ortholog has different name than the zebrafish ortholog
+            raise Exception(f"No uniprot identifier query result for {gene_name} found.")
         _uniprot_identifier_query_result = _uniprot_identifier_query_result.json()
+        logging.debug(_uniprot_identifier_query_result)
 
     uniprot_gene_identifier = _uniprot_identifier_query_result["results"][recursion]["primaryAccession"]
     results_arr_len = len(_uniprot_identifier_query_result["results"])
 
     logging.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
+    logging.info(get_uniprotId_description(uniprot_gene_identifier))
     user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result or 0 to continue the program and discard all options."))
     if user_logic == 1:
         # result is confirmed, save so in TRUSTED_GENES
@@ -237,15 +249,60 @@ def load_trusted_genes(trusted_genes_file_path):
 
 def get_uniprotId_description(uniprotId):
     """
-    Returns a description of the specified uniprotId
+    Returns a description of the specified uniprotId. 
+    Example: https://rest.uniprot.org/uniprotkb/O14944.txt, this function parses lines after '-!- FUNCTION'
+    
+    Parameters:
+      - uniprotId: either just the Id (e.g. O14944) or a prefixed Id (e.g. UniProtKB:Q9BUL8)
     """
+    # TODO: You can also get interaction data, for example: uniprotId O14944 also Interacts with EGFR and ERBB4
+    # -> parse this from "-!- SUBUNIT" part of the response text
     response=""
     if ":" in uniprotId:
         id = uniprotId.split(":")[1]
         response = requests.get(f"https://rest.uniprot.org/uniprotkb/{id}.txt")
     else:
         response = requests.get(f"https://rest.uniprot.org/uniprotkb/{uniprotId}.txt")
-    return response.txt
+    split = response.text.split("\n")
+    result_lines = []
+    _readline_flag = False
+    for line in split:
+        if _readline_flag == False and "-!-" in line and "FUNCTION" in line:
+            _readline_flag = True
+        if _readline_flag == True and "-!-" in line and "FUNCTION" not in line:
+            _readline_flag = False
+        if _readline_flag == True:
+            result_lines.append(line.replace("CC", "").strip())
+    uniprotId_description = " ".join(result_lines).replace("-!-","").strip()
+    return uniprotId_description
+
+def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenbase_human_ortholog_mapping.txt"):
+    """
+    Attempts to find a human ortholog from the xenbase database.
+    Parameters:
+      - gene_id: eg. Xenbase:XB-GENE-495335 or XB-GENE-495335
+    Returns: symbol of the human ortholog gene (eg. rsu1) or 'XenbaseError_no-human-ortholog-found'
+    """
+    file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
+    lines = file.readlines()
+    gene_id_short = ""
+    if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
+    else: gene_id_short = gene_id
+    
+    for line in lines:
+        if gene_id_short in line:
+            human_symbol = _xenbase_get_human_symbol_from_line(line)
+            logging.debug(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
+            file.close()
+            return human_symbol
+    file.close()
+    return f"[XenbaseError_No-human-ortholog-found:gene_id={gene_id}"
+
+def _xenbase_get_human_symbol_from_line(line):
+    """
+    Splits xenbase line at tabs and gets human gene symbol (in full caps)
+    """
+    return str(line.split("\t")[2]).upper()
 
 def sort_list_of_dictionaries(input, field, direction_reversed = True):
     """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
