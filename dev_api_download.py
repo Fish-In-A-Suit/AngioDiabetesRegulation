@@ -24,40 +24,31 @@ FLAG_TRUST_GENES = True # trust genes in trusted_genes to be credible -> program
 #   - RGD (Rat Genome Database) orthologs downloaded from: https://download.rgd.mcw.edu/data_release/
 #
 
-def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
+def get_GO_genes_API(term):
     """
     Retrieves all genes associated with each term.
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     Homo sapiens taxon is NCBITaxon:9606
     """
     logger.info("get_GO_genes_API: term = " + term)
-    if FLAG_HOMOSAPIENS_ONLY == True:
-        parameters = {
-            "rows": 100000
-        }
-    else:
-        parameters = {
-        "use_compact_associations":True,
-        "taxon":["NCBITaxon:9606"], #only for Homo Sapiens; it is the same if ["taxonomy:9606"] is used
-        "rows": 100000
-        }
+    parameters = {
+        "rows": 10000000
+    }
     
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
     #logger.debug(json.dumps(response.json(), indent=4))
     genes = []
+    associations = response.json()['associations']
     if FLAG_HOMOSAPIENS_ONLY == True:
-        associations = response.json()['associations']
         for item in associations:
             # only use directly associated genes
-            if item['subject']['taxon']['id'] == taxon and item['object']['id'] == term:
+            if item['subject']['taxon']['id'] == "NCBITaxon:9606" and item['object']['id'] == term:
                 genes.append(item['subject']['id'])
     else:
-        associations = response.json()['compact_associations']
         for item in associations:
             # only use directly associated genes
-            if item['subject'] == term: #only use directly associated genes
-                genes=item['objects'] # TODO: investigate if it should .append here
-                logging.info(f"GO term: {term} -> Genes/products: {genes}")
+            if item['object']['id'] == term:
+                genes.append(item['subject']['id'])
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
     
