@@ -5,6 +5,8 @@ import json
 import os
 
 import logging
+logger = logging.getLogger(__name__)
+
 import sys
 
 _response_cycle_counter = 0
@@ -91,14 +93,14 @@ def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_hu
     If gene_id is from the ZFIN database, searches through the zebrafish-human orthologs and returns the name of the
     symbol of the human gene ortholog.
     """
-    logging.debug("[zfin_find_human_ortholog]: starting")
+    logger.debug("[zfin_find_human_ortholog]: starting")
     #file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
     #lines = file.readlines()
     gene_id=gene_id.split(":")[1] # eliminates ZFIN: 
     for line in _zfin_ortholog_readlines:
         if gene_id in line:
             human_symbol = _zfin_get_human_gene_symbol_from_line(line)
-            logging.debug(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
+            logger.debug(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
             #file.close()
             return human_symbol
     #file.close()
@@ -113,25 +115,6 @@ def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
         return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
     else: 
         return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
-
-
-def get_uniprot_identifier(gene_name, prefix="UniProtKB:"):
-    """
-    Retrieves uniprot identifier e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6
-    """
-    _response_cycle_counter = 0
-    response = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
-    # logging.debug(f"Response = {response.text}")
-    response = response.json()
-    uniprot_gene_identifier = response["results"][0]["primaryAccession"]
-    results_arr_len = len(response["results"])
-    logging.debug(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying primary response {_response_cycle_counter}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(response,0)}")
-    user_logic = input("Press 1 to confirm current result, 2 to cycle another result or 0 to discard.")
-    logging.debug(f"[get_uniprot_identifier]: {gene_name} -> {uniprot_gene_identifier}")
-    if prefix != "":
-        return prefix+uniprot_gene_identifier
-    else:
-        return uniprot_gene_identifier
 
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
     """
@@ -157,12 +140,12 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     global _uniprot_identifier_query_result
     uniprot_gene_identifier = ""
     if recursion == 0:
-        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
+        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
         if _uniprot_identifier_query_result.text == "{'results': []}":
             # empty response, may be because ortholog was found, but human ortholog has different name than the zebrafish ortholog
             raise Exception(f"No uniprot identifier query result for {gene_name} found.")
         _uniprot_identifier_query_result = _uniprot_identifier_query_result.json()
-        logging.debug(_uniprot_identifier_query_result)
+        logger.debug(_uniprot_identifier_query_result)
 
     uniprot_gene_identifier = _uniprot_identifier_query_result["results"][recursion]["primaryAccession"]
     results_arr_len = len(_uniprot_identifier_query_result["results"])
@@ -174,26 +157,26 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     genes_primary = _uniprot_identifier_query_result["results"][recursion]["genes"][0]["geneName"]["value"]
     if "synonyms" in _uniprot_identifier_query_result["results"][recursion]["genes"][0]:
         genes_synonyms = _uniprot_identifier_query_result["results"][recursion]["genes"][0]["synonyms"][0]["value"]
-    # logging.debug(f"genes_primary = {genes_primary}, genes_synonyms = {genes_synonyms}")
+    logger.debug(f"genes_primary = {genes_primary}, genes_synonyms = {genes_synonyms}")
     if isinstance(genes_primary, list): 
         for g in genes_primary: genes_all.append(g)
     else: genes_all.append(genes_primary)
     if isinstance(genes_synonyms, list):
         for g in genes_synonyms: genes_all.append(g)
     else: genes_all.append(genes_synonyms)
-    logging.debug(f"genes_all = {genes_all}")
+    logger.debug(f"genes_all = {genes_all}")
 
-    logging.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
-    logging.info(get_uniprotId_description(uniprot_gene_identifier))
+    logger.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
+    logger.info(get_uniprotId_description(uniprot_gene_identifier))
     # check if current gene name is found among genes_all (final check to mitigate 'uniprot-mapping-multiple-results-issue')
     if gene_name not in genes_all:
-        logging.info(f"WARNING: Gene name {gene_name} was not found among gene fields of uniprot query. Fields = {genes_all}. Skipping this result.")
+        logger.info(f"WARNING: Gene name {gene_name} was not found among gene fields of uniprot query. Fields = {genes_all}. Skipping this result.")
         get_uniprotId_from_geneName(gene_name, recursion=next_recursive_step)
 
     user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result or 0 to continue the program and discard all options."))
     if user_logic == 1:
         # result is confirmed, save so in TRUSTED_GENES
-        logging.info(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
+        logger.info(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
         with open("src_data_files/trusted_genes.txt", "a+") as f:
             f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
             if gene_name not in f.read():
@@ -204,7 +187,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         # cycle another result
         if next_recursive_step > (results_arr_len-1): 
             # cycled through all options, return error
-            logging.info("Cycled out of options!")
+            logger.info("Cycled out of options!")
             return f"[get_uniprot_identifier_new]: CycleOutOfBoundsError: Cycled through all the uniprot gene IDs for {gene_name} without confirming any"
             # TODO: major bug here, it should return error, but it returns a gene id instead
             # look at: https://stackoverflow.com/questions/11356168/return-in-recursive-function
@@ -215,7 +198,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         return f"[get_uniprot_identifier_new]: No uniprot gene IDs for {gene_name} found."
     else:
         # wrong input, recurse again
-        logging.debug("[get_uniprot_identifier_new]: Wrong input! Must be 0, 1 or 2.")
+        logger.debug("[get_uniprot_identifier_new]: Wrong input! Must be 0, 1 or 2.")
         get_uniprotId_from_geneName(gene_name, recursion)
 
     if prefix != "":
@@ -283,7 +266,7 @@ def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenb
     for line in _xenbase_ortholog_readlines:
         if gene_id_short in line:
             human_symbol = _xenbase_get_human_symbol_from_line(line)
-            logging.info(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
+            logger.info(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
             # file.close()
             return human_symbol
     # file.close()
@@ -301,7 +284,7 @@ def mgi_find_human_ortholog(gene_id):
     Parameters: gene-id eg. MGI:MGI:98480
     Returns: symbol of the human ortholog gene or "MgiError_no-human-ortholog-found".
     """
-    logging.debug(f"Starting MGI search for {gene_id}")
+    logger.debug(f"Starting MGI search for {gene_id}")
     gene_id_short = ""
     if ":" in gene_id: gene_id_short = gene_id.split(":")[2]
     else: gene_id_short = gene_id
@@ -311,7 +294,7 @@ def mgi_find_human_ortholog(gene_id):
         if gene_id_short in line:
             # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
             human_symbol = _mgi_get_human_symbol_from_line(_mgi_ortholog_readlines[i+1])
-            logging.info(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
+            logger.info(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
             return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
         i += 1
     return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
@@ -337,7 +320,7 @@ def rgd_find_human_ortholog(gene_id):
     for line in _rgd_ortholog_readlines:
         if gene_id_short in line:
             human_symbol = _rgd_get_human_symbol_from_line(line)
-            logging.info(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
+            logger.info(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
             return human_symbol
     return f"[RgdError_No-human-ortholog-found:gene_id={gene_id}"
 
@@ -371,10 +354,10 @@ def json_compare(file1, file2):
     file1_json = read_file_as_json(file1)
     file2_json = read_file_as_json(file2)
     if file1_json == file2_json:
-        logging.debug(f"Compare {file1} and {file2}: True")
+        logger.debug(f"Compare {file1} and {file2}: True")
         return True
     else:
-        logging.debug(f"Compare {file1} and {file2}: False")
+        logger.debug(f"Compare {file1} and {file2}: False")
         return False
 
 def load_human_orthologs():
