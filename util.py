@@ -100,7 +100,7 @@ def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_hu
     for line in _zfin_ortholog_readlines:
         if gene_id in line:
             human_symbol = _zfin_get_human_gene_symbol_from_line(line)
-            logger.debug(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
+            logger.info(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
             #file.close()
             return human_symbol
     #file.close()
@@ -140,7 +140,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     global _uniprot_identifier_query_result
     uniprot_gene_identifier = ""
     if recursion == 0:
-        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=id,gene_names,organism_name")
+        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed")
         if _uniprot_identifier_query_result.text == "{'results': []}":
             # empty response, may be because ortholog was found, but human ortholog has different name than the zebrafish ortholog
             raise Exception(f"No uniprot identifier query result for {gene_name} found.")
@@ -166,7 +166,15 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     else: genes_all.append(genes_synonyms)
     logger.debug(f"genes_all = {genes_all}")
 
-    logger.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
+    if results_arr_len == 1:
+        logger.info(f"[get_uniprot_identifier]: Auto translated {gene_name} -> {uniprot_gene_identifier}. Reason: Only 1 result.")
+        if prefix != "":
+            return prefix+uniprot_gene_identifier
+        else:
+            return uniprot_gene_identifier
+
+    is_reviewed = False if "TrEMBL" in _uniprot_identifier_query_result["results"][recursion]["entryType"] else True
+    logger.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier} (Reviewed: {is_reviewed}). Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
     logger.info(get_uniprotId_description(uniprot_gene_identifier))
     # check if current gene name is found among genes_all (final check to mitigate 'uniprot-mapping-multiple-results-issue')
     if gene_name not in genes_all:
