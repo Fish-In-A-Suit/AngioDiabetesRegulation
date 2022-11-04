@@ -16,19 +16,6 @@ _mgi_ortholog_readlines = ""
 _rgd_ortholog_readlines = ""
 
 
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.DEBUG)
-file_handler = logging.FileHandler("./log_output/test_json_dump.log", 'w+')
-file_handler.setLevel(logging.DEBUG)
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        file_handler,
-        console_handler
-    ]
-)
-
 def get_array_terms(array_name, term_shrink=True):
     """
     Returns the specified array terms, possible options:
