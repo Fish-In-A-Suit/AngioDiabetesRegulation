@@ -7,7 +7,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-
 def score_genes(allowed_term_ids, destination_file, source_folder="term_genes"):
     """
     Counts the number of appearances of all the genes across all specified json_files (which contain genes

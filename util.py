@@ -10,6 +10,11 @@ import sys
 _response_cycle_counter = 0
 _uniprot_identifier_query_result = ""
 
+_zfin_ortholog_readlines = ""
+_xenbase_ortholog_readlines = ""
+_mgi_ortholog_readlines = ""
+_rgd_ortholog_readlines = ""
+
 
 console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.DEBUG)
@@ -78,6 +83,13 @@ def read_file_as_json(filepath):
     with open(filepath, "r") as read_content:
         return json.load(read_content)
 
+def readlines(filepath):
+    """
+    Reads the lines of the specified filepath
+    """
+    with open(filepath, "r") as read_content:
+        return read_content.readlines()
+
 def shrink_term_list(list):
     i = 0
     result_list = []
@@ -87,52 +99,23 @@ def shrink_term_list(list):
         i = i+1
     return result_list
 
-def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_human-zebrafish-gene-orthologs.txt"):
+def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_human_ortholog_mapping.txt"):
     """
     If gene_id is from the ZFIN database, searches through the zebrafish-human orthologs and returns the name of the
     symbol of the human gene ortholog.
     """
     logging.debug("[zfin_find_human_ortholog]: starting")
-    #lines_firstpass = [1, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 31000, 32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 41000, 42000, 43000]
-    #lines_stepdown = []
-    #gene_id_number = _zfin_split_row(gene_id)
-    file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
-    lines = file.readlines()
+    #file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
+    #lines = file.readlines()
     gene_id=gene_id.split(":")[1] # eliminates ZFIN: 
-    for line in lines:
+    for line in _zfin_ortholog_readlines:
         if gene_id in line:
             human_symbol = _zfin_get_human_gene_symbol_from_line(line)
             logging.debug(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
-            file.close()
+            #file.close()
             return human_symbol
-    file.close()
+    #file.close()
     return f"[ZfinError_No-human-ortholog-found:gene_id={gene_id}"
-
-    """ # Optimisation possibility:
-    with open(ortholog_file_path, "r") as f:
-        # split gene-id to get number
-        for i, line in enumerate(f):
-            if i in lines_firstpass or i in lines_stepdown:
-                current_gene_number = _zfin_split_row(line)
-                if current_gene_number < gene_id_number:
-                    # still too far up, continue
-                    continue
-                elif current_gene_number > gene_id_number:
-                    # too far down; reverse function to read backwards
-                    for i in reversed(range(1000)):
-                        # reverse until gene_id_number == current_gene_number
-                        # PROBLEM: how to get file pointer again to read the line !?!??!
-                        return 0 #delete this
-    """
-
-def _zfin_split_row(row):
-    """
-    Splits zfin row and retrieves a number, which is used for zfin_find_human_ortholog faster searching.
-    Example: ZDB-GENE-041014-357	adgrg6	adhesion G protein-coupled receptor G6	ADGRG6	adhesion G protein-coupled receptor G6	612243	57211	13841	AA	ZDB-PUB-030905-1
-    --> return: 041014
-    """
-    split = row.split("-")
-    return int(split[2]) # the int(num) method also breaks leading zeroes (which is required)!
 
 def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
     """
@@ -283,19 +266,19 @@ def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenb
       - gene_id: eg. Xenbase:XB-GENE-495335 or XB-GENE-495335
     Returns: symbol of the human ortholog gene (eg. rsu1) or 'XenbaseError_no-human-ortholog-found'
     """
-    file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
-    lines = file.readlines()
+    # file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
+    # lines = file.readlines()
     gene_id_short = ""
     if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
     else: gene_id_short = gene_id
     
-    for line in lines:
+    for line in _xenbase_ortholog_readlines:
         if gene_id_short in line:
             human_symbol = _xenbase_get_human_symbol_from_line(line)
             logging.debug(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
-            file.close()
+            # file.close()
             return human_symbol
-    file.close()
+    # file.close()
     return f"[XenbaseError_No-human-ortholog-found:gene_id={gene_id}"
 
 def _xenbase_get_human_symbol_from_line(line):
@@ -303,6 +286,58 @@ def _xenbase_get_human_symbol_from_line(line):
     Splits xenbase line at tabs and gets human gene symbol (in full caps)
     """
     return str(line.split("\t")[2]).upper()
+
+def mgi_find_human_ortholog(gene_id):
+    """
+    Attempts to find a human ortholog from the mgi database.
+    Parameters: gene-id eg. MGI:MGI:98480
+    Returns: symbol of the human ortholog gene or "MgiError_no-human-ortholog-found".
+    """
+    logging.debug(f"Starting MGI search for {gene_id}")
+    gene_id_short = ""
+    if ":" in gene_id: gene_id_short = gene_id.split(":")[2]
+    else: gene_id_short = gene_id
+
+    i = 0
+    for line in _mgi_ortholog_readlines:
+        if gene_id_short in line:
+            # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
+            human_symbol = _mgi_get_human_symbol_from_line(_mgi_ortholog_readlines[i+1])
+            logging.debug(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
+            return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
+        i += 1
+    return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
+
+def _mgi_get_human_symbol_from_line(line):
+    """
+    Splits mgi line at tabs and gets human gene symbol
+    """
+    split = line.split("\t")
+    if split[1] != "human":
+        raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
+    return split[3]
+
+def rgd_find_human_ortholog(gene_id):
+    """
+    Attempts to find a human ortholog from the RGD (rat genome database)
+    """
+    gene_id_short = ""
+    if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
+    else: gene_id_short = gene_id
+
+    i = 0
+    for line in _rgd_ortholog_readlines:
+        if gene_id_short in line:
+            human_symbol = _rgd_get_human_symbol_from_line(line)
+            logging.debug(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
+            return human_symbol
+    return f"[RgdError_No-human-ortholog-found:gene_id={gene_id}"
+
+def _rgd_get_human_symbol_from_line(line):
+    """
+    Splits rgd line at tabs and gets human gene smybol
+    """
+    return line.split("\t")[3]
 
 def sort_list_of_dictionaries(input, field, direction_reversed = True):
     """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
@@ -333,5 +368,19 @@ def json_compare(file1, file2):
     else:
         logging.debug(f"Compare {file1} and {file2}: False")
         return False
+
+def load_human_orthologs():
+    """
+    This function should be called at runtime once to load the ortholog mapping txt files into proper variables.
+    """
+    global _zfin_ortholog_readlines
+    _zfin_ortholog_readlines = readlines("src_data_files/zfin_human_ortholog_mapping.txt")
+    global _xenbase_ortholog_readlines
+    _xenbase_ortholog_readlines = readlines("src_data_files/xenbase_human_ortholog_mapping.txt")
+    global _mgi_ortholog_readlines
+    _mgi_ortholog_readlines = readlines("src_data_files/mgi_human_ortholog_mapping.txt")
+    global _rgd_ortholog_readlines
+    _rgd_ortholog_readlines = readlines("src_data_files/rgd_human_ortholog_mapping.txt")
+
 
 

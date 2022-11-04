@@ -21,7 +21,7 @@ FLAG_TRUST_GENES = True # trust genes in trusted_genes to be credible -> program
 
 # Remarks
 #   - no need to track _current_file, since .json files in term_genes aren't saved if script terminates early / if all the json elements haven't already been computed
-#
+#   - RGD (Rat Genome Database) orthologs downloaded from: https://download.rgd.mcw.edu/data_release/
 #
 
 def get_GO_genes_API(term, taxon="NCBITaxon:9606"):
@@ -170,6 +170,12 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     e_id = []  # ensemble id
     sequences = []
     json_dictionaries = []
+
+    # TODO: Code reuse using pass-by-reference, which is handy in Python 3.0 with the 'nonlocal' keyword
+    # -> problem is e_id and sequences, which stay in the local scope aka cannot modify their value in the current
+    # scope from another function
+    # https://stackoverflow.com/questions/8447947/is-it-possible-to-modify-a-variable-in-python-that-is-in-an-outer-enclosing-b
+
     for gene in genes:  # gene is is shape prefix:id
         logging.info(f"[_find_genes_related_to_GO_term]: Processing gene {gene}")
         if 'UniProtKB' in gene:
@@ -209,7 +215,36 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                     sequences.append(None)
                 else:
                     sequences.append(get_ensembl_sequence_API(e_id[-1]))
+        elif "MGI" in gene:
+            human_gene_symbol = util.mgi_find_human_ortholog(gene)
+            if "MgiError" in human_gene_symbol:
+                logger.info(human_gene_symbol) # error msg is human_gene symbol
+                e_id.append(None)
+                sequences.append(None)
+            else: # human ortholog exists in mgi
+                e_id.append(util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
+                logger.debug(f"id_old = {e_id[-1]}")
+                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                    e_id[-1] = None
+                    sequences.append(None)
+                else:
+                    sequences.append(get_ensembl_sequence_API(e_id[-1]))
+        elif "RGD" in gene:
+            human_gene_symbol = util.rgd_find_human_ortholog(gene)
+            if "RgdError" in human_gene_symbol:
+                logger.info(human_gene_symbol)
+                e_id.append(None)
+                sequences.append(None)
+            else: # human ortholog exists in rgd
+                e_id.append(util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
+                logger.debug(f"id_old = {e_id[-1]}")
+                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                    e_id[-1] = None
+                    sequences.append(None)
+                else:
+                    sequences.append(get_ensembl_sequence_API(e_id[-1]))
         else:
+            input(f"No database found for {gene}. Press any key to continue.")
             e_id.append(None)
             sequences.append(None)
         out = {"term": term, "product": gene,
@@ -221,7 +256,6 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     file.write(json.dumps(json_dictionaries)+"\n")
     file.close()
     logger.debug(f"finished gene search for GO term {term}")
-
 
 def exit_handler():
     """
@@ -250,8 +284,9 @@ def main():
     # terms_test = ['GO:1903587']
     # terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
 
-    # statrup functions
+    # startup functions
     util.load_trusted_genes("src_data_files/trusted_genes.txt")
+    util.load_human_orthologs()
 
     # main functions
     terms_all = util.get_array_terms("ALL")
