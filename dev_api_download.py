@@ -285,7 +285,7 @@ def main():
     # terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
 
     # startup functions
-    util.load_trusted_genes("src_data_files/trusted_genes.txt")
+    util.load_trusted_genes("src_data_files/genes_trusted.txt")
     util.load_human_orthologs()
 
     # main functions

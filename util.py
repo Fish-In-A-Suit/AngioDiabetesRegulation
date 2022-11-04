@@ -157,6 +157,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
       - trust_genes: If True, all trusted genes inside trusted_genes.txt will override this function. If false, it
         notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
     """
+    next_recursive_step = recursion + 1
     if gene_name in constants.TRUSTED_GENES:
         if trust_genes == True:
             # return the element ahead of the gene_name, which is the previously found uniprot_id
@@ -179,8 +180,29 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     uniprot_gene_identifier = _uniprot_identifier_query_result["results"][recursion]["primaryAccession"]
     results_arr_len = len(_uniprot_identifier_query_result["results"])
 
+    # as per 'uniprot-mapping-multiple-results-issue': implemented functionality to dismiss results that have different
+    # genes as the speicifed gene (idk why uniprot returns such genes nevertheless)
+    genes_all = []
+    genes_synonyms = "" # init to prevent errors
+    genes_primary = _uniprot_identifier_query_result["results"][recursion]["genes"][0]["geneName"]["value"]
+    if "synonyms" in _uniprot_identifier_query_result["results"][recursion]["genes"][0]:
+        genes_synonyms = _uniprot_identifier_query_result["results"][recursion]["genes"][0]["synonyms"][0]["value"]
+    # logging.debug(f"genes_primary = {genes_primary}, genes_synonyms = {genes_synonyms}")
+    if isinstance(genes_primary, list): 
+        for g in genes_primary: genes_all.append(g)
+    else: genes_all.append(genes_primary)
+    if isinstance(genes_synonyms, list):
+        for g in genes_synonyms: genes_all.append(g)
+    else: genes_all.append(genes_synonyms)
+    logging.debug(f"genes_all = {genes_all}")
+
     logging.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier}. Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
     logging.info(get_uniprotId_description(uniprot_gene_identifier))
+    # check if current gene name is found among genes_all (final check to mitigate 'uniprot-mapping-multiple-results-issue')
+    if gene_name not in genes_all:
+        logging.info(f"WARNING: Gene name {gene_name} was not found among gene fields of uniprot query. Fields = {genes_all}. Skipping this result.")
+        get_uniprotId_from_geneName(gene_name, recursion=next_recursive_step)
+
     user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result or 0 to continue the program and discard all options."))
     if user_logic == 1:
         # result is confirmed, save so in TRUSTED_GENES
@@ -193,7 +215,6 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
                 f.close()
     elif user_logic == 2:
         # cycle another result
-        next_recursive_step = recursion + 1
         if next_recursive_step > (results_arr_len-1): 
             # cycled through all options, return error
             logging.info("Cycled out of options!")
@@ -275,7 +296,7 @@ def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenb
     for line in _xenbase_ortholog_readlines:
         if gene_id_short in line:
             human_symbol = _xenbase_get_human_symbol_from_line(line)
-            logging.debug(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
+            logging.info(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
             # file.close()
             return human_symbol
     # file.close()
@@ -303,7 +324,7 @@ def mgi_find_human_ortholog(gene_id):
         if gene_id_short in line:
             # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
             human_symbol = _mgi_get_human_symbol_from_line(_mgi_ortholog_readlines[i+1])
-            logging.debug(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
+            logging.info(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
             return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
         i += 1
     return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
@@ -329,7 +350,7 @@ def rgd_find_human_ortholog(gene_id):
     for line in _rgd_ortholog_readlines:
         if gene_id_short in line:
             human_symbol = _rgd_get_human_symbol_from_line(line)
-            logging.debug(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
+            logging.info(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
             return human_symbol
     return f"[RgdError_No-human-ortholog-found:gene_id={gene_id}"
 
