@@ -19,6 +19,8 @@ FLAG_HOMOSAPIENS_ONLY = True
 FLAG_TRUST_GENES = True # trust genes in trusted_genes to be credible -> program doesnt stop at them for validation
 APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["ZFIN", ["NCBITaxon:7955"]],
+                      ["RNAcentral",["NCBITaxon:9606"]],
+                      ["Xenbase",["NCBITaxon:8364"]],
                       ["MGI", ["NCBITaxon:10090"]],
                       ["RGD", ["NCBITaxon:10116"]]] #Which pairs of databases and taxons (could be multiple per database) to allow.
 
