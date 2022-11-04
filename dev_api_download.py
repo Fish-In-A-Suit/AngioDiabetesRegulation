@@ -106,10 +106,9 @@ def uniprot_mapping_API(id_old, source='UniProtKB_AC-ID', target='Ensembl_Transc
 
     # TODO: some terms (like GO-1903670) have genes that are not defined in UniProt! For example, one gene from
     # GO-1903670 has id_old ZFIN:ZDB-GENE-041014-357, throws UnboundLocalError (source referenced before assignment)
-    # -> need to search through multiple databases or do we only limit uniprot?
     # possible solution: source = ""
     # but this omits any databases that are not uniprot
-    # TODO: some terms return multiple id, which to chose???
+    # TODO: some terms return multiple id, which to choose???
 
     id = id_old.split(':')[1]
     response = requests.post(f"https://rest.uniprot.org/idmapping/run",
@@ -133,7 +132,7 @@ def uniprot_mapping_API(id_old, source='UniProtKB_AC-ID', target='Ensembl_Transc
             if 'failedIds' in j:
                 ensembl_id = None
             else:  # is index 0 really the best one?
-                ensembl_id = j['results'][0]['to'].split('.')[0]
+                ensembl_id = j['results'][0]['to'].split('.')[0]#TODO:the first intex 0 automatically selects the first results (is that ok?)
             break
     logger.info(f"mapped {id_old} to {ensembl_id}")
     return ensembl_id
