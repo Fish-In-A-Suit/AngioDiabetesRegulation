@@ -13,11 +13,14 @@ import atexit
 
 import logging
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 
 # global variables
 FLAG_HOMOSAPIENS_ONLY = True 
 FLAG_TRUST_GENES = True # trust genes in trusted_genes to be credible -> program doesnt stop at them for validation
+APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
+                      ["ZFIN", ["NCBITaxon:7955"]],
+                      ["MGI", ["NCBITaxon:10090"]],
+                      ["RGD", ["NCBITaxon:10116"]]] #Which pairs of databases and taxons (could be multiple per database) to allow.
 
 # Remarks
 #   - no need to track _current_file, since .json files in term_genes aren't saved if script terminates early / if all the json elements haven't already been computed
@@ -30,6 +33,8 @@ def get_GO_genes_API(term):
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     Homo sapiens taxon is NCBITaxon:9606
     """
+
+
     logger.info("get_GO_genes_API: term = " + term)
     parameters = {
         "rows": 10000000
@@ -39,15 +44,12 @@ def get_GO_genes_API(term):
     #logger.debug(json.dumps(response.json(), indent=4))
     genes = []
     associations = response.json()['associations']
-    if FLAG_HOMOSAPIENS_ONLY == True:
-        for item in associations:
-            # only use directly associated genes
-            if item['subject']['taxon']['id'] == "NCBITaxon:9606" and item['object']['id'] == term:
-                genes.append(item['subject']['id'])
-    else:
-        for item in associations:
-            # only use directly associated genes
-            if item['object']['id'] == term:
+    for item in associations:
+        # only use directly associated genes and genes 
+        if item['object']['id'] == term and item['subject']['taxon']['id'] == "NCBITaxon:9606":
+            genes.append(item['subject']['id'])
+        elif not FLAG_HOMOSAPIENS_ONLY:
+            if item['object']['id'] == term and any((database[0] in item['subject']['id'] and any(taxon in item['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
                 genes.append(item['subject']['id'])
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
