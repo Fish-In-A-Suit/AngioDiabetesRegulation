@@ -47,8 +47,10 @@ def get_GO_genes_API(term):
     genes = []
     associations = response.json()['associations']
     for item in associations:
-        # only use directly associated genes and genes 
-        if item['object']['id'] == term and item['subject']['taxon']['id'] == "NCBITaxon:9606":
+        # only use directly associated genes and genes
+        if item['subject']['id'] in genes:
+            logger.debug(f"Gene {item['subject']['id']} already in the list. Skipping...")
+        elif item['object']['id'] == term and item['subject']['taxon']['id'] == "NCBITaxon:9606":
             genes.append(item['subject']['id'])
         elif not FLAG_HOMOSAPIENS_ONLY:
             if item['object']['id'] == term and any((database[0] in item['subject']['id'] and any(taxon in item['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
