@@ -128,7 +128,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
     """
     next_recursive_step = recursion + 1
-    if gene_name in constants.TRUSTED_GENES:
+    if gene_name in constants.TRUSTED_GENES: #TODO: get from file trusted_genes.txt, not from constants.py?
         if trust_genes == True:
             # return the element ahead of the gene_name, which is the previously found uniprot_id
             return "UniProtKB:" + constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
@@ -166,14 +166,16 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     else: genes_all.append(genes_synonyms)
     logger.debug(f"genes_all = {genes_all}")
 
-    if results_arr_len == 1:
+    if results_arr_len == 1: #if only one result, auto accept it
         logger.info(f"[get_uniprot_identifier]: Auto translated {gene_name} -> {uniprot_gene_identifier}. Reason: Only 1 result.")
         if prefix != "":
             return prefix+uniprot_gene_identifier
         else:
             return uniprot_gene_identifier
 
+    #TODO:Reviewed proteins have priority. If only one in the list is reviewed, auto accept it.
     is_reviewed = False if "TrEMBL" in _uniprot_identifier_query_result["results"][recursion]["entryType"] else True
+
     logger.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier} (Reviewed: {is_reviewed}). Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
     logger.info(get_uniprotId_description(uniprot_gene_identifier))
     # check if current gene name is found among genes_all (final check to mitigate 'uniprot-mapping-multiple-results-issue')
@@ -187,10 +189,12 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         logger.info(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
         with open("src_data_files/trusted_genes.txt", "a+") as f:
             f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
+            logger.debug(f"Opened genes_trusted file.")
             if gene_name not in f.read():
                 f.seek(0,2) # move file pointer back to the end of the file
                 f.write(f"{gene_name} {uniprot_gene_identifier}\n")
                 f.close()
+                logger.debug(f"Writing to genes_trusted file done!")
     elif user_logic == 2:
         # cycle another result
         if next_recursive_step > (results_arr_len-1): 
