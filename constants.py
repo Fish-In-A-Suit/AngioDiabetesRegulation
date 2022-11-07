@@ -117,3 +117,7 @@ TERMS_EXCLUDED = [
 TRUSTED_GENES = [
     
 ]
+
+GENE_DESCRIPTION_ANALYSIS_KEYWORDS = [
+    "vessel", "angiogenesis", "capillary", "artery", "arteriole"
+]

@@ -124,11 +124,12 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
       - gene_name: A gene name or symbol e.g. ADGRG6
       - recursion: An internal function parameter to iterate through an array of UniProtKB ids supplied by the response json
       - prefix: A database prefix, is prefixed before the specifi uniprot gene id
-      - trust_genes: If True, all trusted genes inside trusted_genes.txt will override this function. If false, it
+      - trust_genes: If True, all trusted genes inside genes_trusted.txt will override this function. If false, it
         notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
     """
     next_recursive_step = recursion + 1
-    if gene_name in constants.TRUSTED_GENES: #TODO: get from file trusted_genes.txt, not from constants.py?
+    logging.debug(f"[get_uniprotId_from_geneName]: trusted_genes = {constants.TRUSTED_GENES}")
+    if gene_name in constants.TRUSTED_GENES: # trusted genes loaded at program startup, TODO: check if trusted gene checking is correct
         if trust_genes == True:
             # return the element ahead of the gene_name, which is the previously found uniprot_id
             return "UniProtKB:" + constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
@@ -173,7 +174,9 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         else:
             return uniprot_gene_identifier
 
-    #TODO:Reviewed proteins have priority. If only one in the list is reviewed, auto accept it.
+    # TODO:Reviewed proteins have priority. If only one in the list is reviewed, auto accept it.
+    # reviewed either SwissProt or Trembl -> if Trembl, then false
+    # poglej, če je samo 1 reviewed gen v setu genov -> če ja: autoselect | če ne: ročno select
     is_reviewed = False if "TrEMBL" in _uniprot_identifier_query_result["results"][recursion]["entryType"] else True
 
     logger.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier} (Reviewed: {is_reviewed}). Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
@@ -187,7 +190,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     if user_logic == 1:
         # result is confirmed, save so in TRUSTED_GENES
         logger.info(f"[get_uniprot_identifier]: Confirmed {gene_name} -> {uniprot_gene_identifier}")
-        with open("src_data_files/trusted_genes.txt", "a+") as f:
+        with open("src_data_files/genes_trusted.txt", "a+") as f:
             f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
             logger.debug(f"Opened genes_trusted file.")
             if gene_name not in f.read():
@@ -224,7 +227,7 @@ def _get_uniprot_identifier_json_nth_response(json, nth_response):
 
 def load_trusted_genes(trusted_genes_file_path):
     """
-    Loads constants.TRUSTED_GENES list with genes from trusted_genes.txt
+    Loads constants.TRUSTED_GENES list with genes from genes_trusted.txt
     """
     file = open(trusted_genes_file_path, "r")
     lines = file.readlines()

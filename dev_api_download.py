@@ -282,6 +282,7 @@ def main():
 
     # startup functions
     util.load_trusted_genes("src_data_files/genes_trusted.txt")
+    logging.info(f"Loaded {len(constants.TRUSTED_GENES)} trusted genes.")
     util.load_human_orthologs()
 
     # main functions
