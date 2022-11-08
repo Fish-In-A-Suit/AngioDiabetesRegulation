@@ -48,7 +48,7 @@ def get_GO_genes_API(term):
     associations = response.json()['associations']
     for item in associations:
         # only use directly associated genes and genes
-        if item['subject']['id'] in genes:
+        if item['subject']['id'] in genes: #TODO: explain code
             logger.debug(f"Gene {item['subject']['id']} already in the list. Skipping...")
         elif item['object']['id'] == term and item['subject']['taxon']['id'] == "NCBITaxon:9606":
             genes.append(item['subject']['id'])
@@ -186,7 +186,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else:  # human ortholog exists in uniprot
-                e_id.append(util.get_uniprotId_from_geneName(
+                e_id.append(util.get_uniprotId_from_geneName_new(
                     human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
@@ -204,7 +204,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in xenbase
-                e_id.append(util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
+                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
@@ -218,7 +218,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in mgi
-                e_id.append(util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
+                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
@@ -232,7 +232,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in rgd
-                e_id.append(util.get_uniprotId_from_geneName(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
+                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
