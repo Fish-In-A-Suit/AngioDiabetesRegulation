@@ -293,6 +293,9 @@ def main():
     # this is how to retrieve uniprotId description (function) from uniprotId:
     # logging.info(util.get_uniprotId_description("O14944"))
     # logging.info(util.get_uniprotId_description("Q9BUL8"))
+
+    # debugging
+    # _find_genes_related_to_GO_term("MGI:1340051", "term_genes/homosapiens_only=false,v1", True)
     
 
 

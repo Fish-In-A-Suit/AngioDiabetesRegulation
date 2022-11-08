@@ -428,6 +428,12 @@ def mgi_find_human_ortholog(gene_id):
     """
     logger.debug(f"Starting MGI search for {gene_id}")
     gene_id_short = ""
+    if ":" in gene_id:
+        split = gene_id.split(":")
+        if len(split) == 3: gene_id_short = split[2] # in case of MGI:xxx:xxxxx
+        elif len(split) == 2: gene_id_short = split[1] # in case of MGI:xxxxx
+    else: gene_id_short = gene_id
+
     if ":" in gene_id: gene_id_short = gene_id.split(":")[2]
     else: gene_id_short = gene_id
 
