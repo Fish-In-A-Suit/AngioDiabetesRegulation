@@ -434,9 +434,6 @@ def mgi_find_human_ortholog(gene_id):
         elif len(split) == 2: gene_id_short = split[1] # in case of MGI:xxxxx
     else: gene_id_short = gene_id
 
-    if ":" in gene_id: gene_id_short = gene_id.split(":")[2]
-    else: gene_id_short = gene_id
-
     i = 0
     for line in _mgi_ortholog_readlines:
         if gene_id_short in line:
