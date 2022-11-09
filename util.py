@@ -245,7 +245,8 @@ def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=
     # Autoaccept if only one of the UniprotIds is reviewed
     if NO_reviewed_Ids == 1:
         logger.info(f"[get_uniprotId_from_geneName_new]: Found a single reviewed UniProt Id for gene_name {gene_name}: {reviewedId_single}")
-        return reviewedId_single
+        if prefix != "": return prefix+reviewedId_single
+        else: return reviewedId_single
     
     # Either 2+ or 0 verified UniprotIds -> begin user cycling options
     results_arr_len = len(uniprot_geneIds_dictionary) # update after eliminations

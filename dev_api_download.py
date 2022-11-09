@@ -68,13 +68,15 @@ def get_ensembl_sequence_API(id):
     This function queries ensembl for nucleotide sequence
     Input of ensembl ID's must be a string
     """
+    logger.debug(f"[get_ensembl_sequence_API] Starting Ensembl API for id {id}")
     response = requests.get(f"https://rest.ensembl.org/sequence/id/{id}?object_type=transcript;type=cds", headers={"Content-Type": "text/plain", }
                             )  # cds = c-DNA without the UTR regions; type=cdna (in this case UTR region is also kept); retrieves complementary sequence to the gene mRNA (without UTR), same as miRNA sequence (todo: preveri z genetikom)
     if response.ok:
         logger.debug(response.text)
-        logger.info(f"Recieved sequence for id {id}.")
+        logger.info(f"[get_ensembl_sequence_API] Recieved sequence for id {id}.")
         return response.text
     else:
+        logger.info(f"[get_ensembl_sequence_API] Failed to get sequence for id {id}")
         return None
 
 
@@ -83,15 +85,16 @@ def get_rnacentral_sequence_API(id):
     This function queries RNA Central for nucleotide sequence
     Input of RNA Central ID's must be a string
     """
+    logger.debug(f"[get_rnacentral_sequence_API] Starting RNACentral API for id {id}")
     response = requests.get(
         f"http://rnacentral.org/api/v1/rna/{id}/?format=json")
     if response.ok:
         logger.debug(response.json())
         sequence = response.json()['sequence']
-        logger.info(f"Recieved sequence for id {id} -> {sequence}.")
+        logger.info(f"[get_rnacentral_sequence_API] Recieved sequence for id {id} -> {sequence}.")
         return sequence
     else:
-        logger.debug(f"RNACentral API error")
+        logger.info(f"[get_rnacentral_sequence_API] RNACentral API error")
         return None
 
 
@@ -221,8 +224,8 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else:  # human ortholog exists in uniprot
-                e_id.append(util.get_uniprotId_from_geneName_new(
-                    human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
+                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(
+                    human_gene_symbol, trust_genes=FLAG_TRUST_GENES)))
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
@@ -239,7 +242,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in xenbase
-                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
+                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
@@ -253,7 +256,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in mgi
-                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
+                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)))
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
@@ -267,7 +270,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in rgd
-                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))
+                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)))
                 logger.debug(f"id_old = {e_id[-1]}")
                 if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
