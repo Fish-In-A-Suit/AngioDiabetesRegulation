@@ -298,7 +298,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             else: # human ortholog exists in rgd
                 e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)))
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                if e_id[-1] == None: # request for UniProtKB:Q5YKI7 maps to None --> raises 'TypeError: argument of type NoneType is not iterable' in the elif clause (when "CycleOutOfBoundsError" is checked for in None) -> this first if check solves this
+                    e_id[-1] = None
+                    sequences.append(None)
+                elif "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
                     sequences.append(None)
                 else:
