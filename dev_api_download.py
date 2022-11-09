@@ -216,7 +216,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             _handle_load_from_crash(crash_filepath)
         elif restore_crash == 1: # load crash_filepath json and delete file
             _handle_load_from_crash(crash_filepath)
-            os.remove(filepath)
+            os.remove(crash_filepath)
         elif restore_crash == 2: # load crash_filepath json and keep file
             _handle_load_from_crash(crash_filepath)
         elif restore_crash == 0: # do nthn
