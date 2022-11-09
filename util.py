@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 import sys
 
 _response_cycle_counter = 0
-_uniprot_identifier_query_result = ""
+_uniprot_query_result = ""
 
 _zfin_ortholog_readlines = ""
 _xenbase_ortholog_readlines = ""
@@ -187,8 +187,45 @@ def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
         return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
     else: 
         return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
+    
+def _uniprot_query_API(gene_name, type="gene"):
+    # load all of the genes
+    logger.debug(f"Starting uniprot info query API for gene name {gene_name}")
+    if type == "gene":
+        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
+    elif type == "prot":
+        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
+    if _uniprot_identifier_query_result.text == "{'results': []}":
+        # empty response, may be because ortholog was found, but human ortholog has different name than the gene from the file - denotes an error in file parsing
+        raise Exception(f"No uniprot identifier query result for {gene_name} found.")
+    logger.debug(_uniprot_identifier_query_result.json())
+    return _uniprot_identifier_query_result.json()
 
-def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=True):
+def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
+    logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
+    index = next((index for (index, d) in enumerate(query["results"]) if d["primaryAccession"] == uniprotId), None)
+    ensembl_index_list=[]
+    xref_arr_length = len(query["results"][index]["uniProtKBCrossReferences"])
+    for i in range(xref_arr_length):
+        if query["results"][index]["uniProtKBCrossReferences"][i]["database"] == "Ensembl":
+            ensembl_index_list.append(i)
+
+    if len(ensembl_index_list) == 0:
+        enId = None
+    elif len(ensembl_index_list) == 1:
+        enId=query["results"][index]["uniProtKBCrossReferences"][ensembl_index_list[0]]["id"].split(".")[0]
+    elif len(ensembl_index_list) > 1:
+        if any("idoformId" in query["results"][index]["uniProtKBCrossReferences"][i] for i in ensembl_index_list):
+            for i in ensembl_index_list:
+                if "-1" in query["results"][index]["uniProtKBCrossReferences"][i]["idoformId"]:
+                    enId=query["results"][index]["uniProtKBCrossReferences"][i]["id"].split(".")[0]
+        else:
+            enId=query["results"][index]["uniProtKBCrossReferences"][1]["id"].split(".")[0] 
+                
+    logger.info(f"uniprotId {uniprotId} -> ensemblId {enId}")
+    return enId
+
+def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     """
     Retrieves UniProt Identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6. 
     This function no longer uses recursion and also checks for verification status of the returned Ids.
@@ -199,39 +236,48 @@ def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=
       - trust_genes: If True, all trusted genes inside genes_trusted.txt will override this function. If false, it
         notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
     """
-    # check if gene exists in trusted genes
+    prefix="UniProtKB:" #do we need it?
+
+    if "UniProtKB" in gene_name: #If the input gene name is a protein then query accordingly.
+        _uniprot_query_result=_uniprot_query_API(gene_name, type="prot")
+    else:
+        _uniprot_query_result=_uniprot_query_API(gene_name)
+
+    # check if gene exists in trusted genes TODO
     if gene_name in constants.TRUSTED_GENES:
         if trust_genes == True:
             # return the element ahead of the gene_name, which is the previously found uniprot_id
-            return "UniProtKB:" + constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
+            logger.info(f"Gene {gene_name} is found among trusted genes.")
+            uniprotId = constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
+            ensemblId = _return_ensembl_from_id_and_uniprot_query(uniprotId, _uniprot_query_result)
+            return prefix+uniprotId,ensemblId
         else:
             trust_genes_user_response = int(input(f"Gene {gene_name} is found among trusted genes. Press 1 to continue with UniProt Id query, or 0 to use the trusted gene."))
             if trust_genes_user_response == 0:
-                return "UniProtKB:" + constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
-    
-    # load all of the genes
-    _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed")
-    if _uniprot_identifier_query_result.text == "{'results': []}":
-        # empty response, may be because ortholog was found, but human ortholog has different name than the gene from the file - denotes an error in file parsing
-        raise Exception(f"No uniprot identifier query result for {gene_name} found.")
-    _uniprot_identifier_query_result = _uniprot_identifier_query_result.json()
+                uniprotId = constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
+                ensemblId = _return_ensembl_from_id_and_uniprot_query(uniprotId, _uniprot_query_result)
+                return prefix+uniprotId,ensemblId
 
     uniprot_geneIds_dictionary = {} # stores uniprotId : reviewed_status pairs
-    results_arr_len = len(_uniprot_identifier_query_result["results"])
+    results_arr_len = len(_uniprot_query_result["results"])
 
     # if only one result, auto accept it; TODO: check if this 1 result is verified; if unverified, give user option what to do && ALSO CHECK IF GENE_NAME IS IN GENENAMES REQUEST FIELD, possibly move this down
     if results_arr_len == 1:
-        uniprotId = _uniprot_identifier_query_result["results"][0]["primaryAccession"]
-        logger.info(f"[get_uniprot_identifier]: Auto accepted {gene_name} -> {uniprotId}. Reason: Only 1 result.")
-        if prefix != "": return prefix + uniprotId
-        else: return uniprotId
+        uniprotId = _uniprot_query_result["results"][0]["primaryAccession"]
+        logger.info(f"Auto accepted {gene_name} -> {uniprotId}. Reason: Only 1 result.")
+        ensemblId = _return_ensembl_from_id_and_uniprot_query (uniprotId, _uniprot_query_result)
+        if prefix != "": return prefix + uniprotId, ensemblId
+        else: return uniprotId, ensemblId
 
     for i in range(results_arr_len):
         # reviewed is either TrEMBL or SwissProt. TrEMBL should be set to False and SwissProt reviews should be set to True
-        is_reviewed = False if "TrEMBL" in _uniprot_identifier_query_result["results"][i]["entryType"] else True
-        geneId = _uniprot_identifier_query_result["results"][i]["primaryAccession"]
-        uniprot_geneIds_dictionary[geneId] = is_reviewed # add to dict
-    logger.info(f"[get_uniprotId_from_geneName_new]: uniprot_geneIds_dictionary = {uniprot_geneIds_dictionary}")
+        is_reviewed = False if "TrEMBL" in _uniprot_query_result["results"][i]["entryType"] else True
+        # has transcript is either True or False. We want to have transcripts.
+        has_transcript = True if _uniprot_query_result["results"][i]["uniProtKBCrossReferences"] else False
+
+        geneId = _uniprot_query_result["results"][i]["primaryAccession"]
+        uniprot_geneIds_dictionary[geneId] = {"is_reviewed":is_reviewed, "has_transcript":has_transcript}# add to dict
+    logger.info(f"uniprot_geneIds_dictionary = {uniprot_geneIds_dictionary}")
 
     # Used to check the gene_names field of the request against the gene_name parameter supplied by the function. If gene_name (parameter) is not
     # among gene_names, then such element should not be analysed further.
@@ -240,9 +286,9 @@ def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=
     for j in range(results_arr_len):
         impactGenes_all = []
         impactGenes_synonyms = "" # init to prevent errors
-        impactGenes_primary = _uniprot_identifier_query_result["results"][j]["genes"][0]["geneName"]["value"]
-        if "synonyms" in _uniprot_identifier_query_result["results"][j]["genes"][0]:
-            impactGenes_synonyms = _uniprot_identifier_query_result["results"][j]["genes"][0]["synonyms"][0]["value"]
+        impactGenes_primary = _uniprot_query_result["results"][j]["genes"][0]["geneName"]["value"]
+        if "synonyms" in _uniprot_query_result["results"][j]["genes"][0]:
+            impactGenes_synonyms = _uniprot_query_result["results"][j]["genes"][0]["synonyms"][0]["value"]
         if isinstance(impactGenes_primary, list):
             for g in impactGenes_primary: impactGenes_all.append(g)
         else: impactGenes_all.append(impactGenes_primary)
@@ -250,10 +296,10 @@ def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=
             for g in impactGenes_synonyms: impactGenes_all.append(g)
         else: impactGenes_all.append(impactGenes_synonyms)
         geneIds_impactGenes_dictionary[get_dict_key_at_index(uniprot_geneIds_dictionary,j)] = impactGenes_all
-    logger.debug(f"[get_uniprotId_from_geneName_new]: geneIds_impactGenes_dictionary = {geneIds_impactGenes_dictionary}")
+    logger.debug(f"geneIds_impactGenes_dictionary = {geneIds_impactGenes_dictionary}")
 
     # Eliminate entries where gene_name is not among "impact genes" - final check to mitigate 'uniprot-mapping-multiple-results-issue'
-    # Also checks for autoaccept (if onyl one of the UniprotIds is reviewed) to prevent multiple for loop reiterations
+    # Also checks for autoaccept (if onyl one of the UniprotIds is reviewed and has transcript) to prevent multiple for loop reiterations
     pop_keys = [] # indices of items to eliminate
     pop_keys_indices = []
     reviewedId_single = ""
@@ -263,7 +309,7 @@ def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=
             pop_keys.append(key)
             pop_keys_indices.append(i)
         else: # gene_name is found among geneNames request return field -
-            if uniprot_geneIds_dictionary.get(key) == True: # check if UniprotId is reviewed
+            if uniprot_geneIds_dictionary[key]["is_reviewed"] == True and uniprot_geneIds_dictionary[key]["has_transcript"] == True: # check if UniprotId is reviewed
                 if reviewedId_single == "": # check if no other reviewed id was added before
                     reviewedId_single = key
                     NO_reviewed_Ids += 1
@@ -271,25 +317,28 @@ def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=
     for pop_key in pop_keys:
         uniprot_geneIds_dictionary.pop(pop_key)
         geneIds_impactGenes_dictionary.pop(pop_key)
-    logger.debug(f"[get_uniprotId_from_geneName_new]: removed {len(pop_keys)} faulty ids (gene_name did not match with geneNames field). New uniprot_geneIds_dictionary len = {len(uniprot_geneIds_dictionary)}")
+    logger.debug(f"removed {len(pop_keys)} faulty ids (gene_name did not match with geneNames field). New uniprot_geneIds_dictionary len = {len(uniprot_geneIds_dictionary)}")
 
     # Autoaccept if only one of the UniprotIds is reviewed
     if NO_reviewed_Ids == 1:
-        logger.info(f"[get_uniprotId_from_geneName_new]: Found a single reviewed UniProt Id for gene_name {gene_name}: {reviewedId_single}")
-        if prefix != "": return prefix+reviewedId_single
-        else: return reviewedId_single
+        logger.info(f"Found a single reviewed UniProt Id with a transcript for gene_name {gene_name}: {reviewedId_single}")
+        ensemblId = _return_ensembl_from_id_and_uniprot_query(reviewedId_single, _uniprot_query_result)
+        if prefix != "": return prefix+reviewedId_single, ensemblId
+        else: return reviewedId_single, ensemblId
     
     # Either 2+ or 0 verified UniprotIds -> begin user cycling options
     results_arr_len = len(uniprot_geneIds_dictionary) # update after eliminations
     i = 0
     next_step = 1
-    for uprId, isReviewed in uniprot_geneIds_dictionary: # used camelcase for differentiating inter-for-loop variables (from function variables)
-        logger.info(f"Gene name {gene_name} found to correspond to {uprId} (reviewed = {isReviewed}). Displaying response {i}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,i)}")
+    for uprId, info in uniprot_geneIds_dictionary: # used camelcase for differentiating inter-for-loop variables (from function variables)
+        is_reviewed=info["is_reviewed"]
+        has_transcript=info["has_transcript"]
+        logger.info(f"Gene name {gene_name} found to correspond to {uprId} (reviewed = {isReviewed}, has transcript = {has_transcript}). Displaying response {i}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,i)}")
         logger.info(get_uniprotId_description(uprId))
         
         user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result, or 0 to continue the program and discard all options."))
         if user_logic == 1: # result is confirmed, save so in TRUSTED_GENES
-            logger.info(f"[get_uniprotId_from_geneName_new]: Confirmed {gene_name} -> {uprId}")
+            logger.info(f"Confirmed {gene_name} -> {uprId}")
             with open("src_data_files/genes_trusted.txt", "a+") as f:
                 f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
                 logger.debug(f"Opened genes_trusted file.")
@@ -300,23 +349,24 @@ def get_uniprotId_from_geneName_new(gene_name, prefix="UniProtKB:", trust_genes=
                     logger.debug(f"Writing to genes_trusted file done!")
             # return
             # TODO: handle a case if a user wants to confirm multiple reviewed proteins -> store them in a list and return when next_step > (results_arr_len-1)
-            if prefix != "": return prefix + uprId
-            else: return uprId
+            ensemblId = _return_ensembl_from_id_and_uniprot_query(uprId,_uniprot_query_result)
+            if prefix != "": return prefix + uprId,ensemblId
+            else: return uprId,ensemblId
         elif user_logic == 2: #cycle next result
             if next_step > (results_arr_len - 1):
                 logger.info("Cycled out of options!")
-                return f"[get_uniprot_identifier_new]: CycleOutOfBoundsError: Cycled through all the uniprot gene IDs for {gene_name} without confirming any"
+                return f"CycleOutOfBoundsError: Cycled through all the uniprot gene IDs for {gene_name} without confirming any"
             i += 1 
             next_step += 1
             continue # skip to the next for loop element
         elif user_logic == 0: #TODO: debate the use of this, add return / redo / start loop over functionality
             logger.info("No uniprot geneIds selected.")
-            return f"[get_uniprot_identifier_new]: No uniprot gene Ids for {gene_name} selected."
+            return f"No uniprot gene Ids for {gene_name} selected."
         else:
             # wrong input
             raise Exception(f"[get_uniprot_identifier_new]: Wrong input!")
     logger.info("No uniprot geneIds selected")
-    return f"[get_uniprot_identifier_new]: No uniprot gene Ids for {gene_name} selected."
+    return f"No uniprot gene Ids for {gene_name} selected."
 
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
     """
@@ -430,12 +480,15 @@ def load_trusted_genes(trusted_genes_file_path):
     """
     Loads constants.TRUSTED_GENES list with genes from genes_trusted.txt
     """
-    file = open(trusted_genes_file_path, "r")
-    lines = file.readlines()
-    for line in lines:
-        splitlist = line.split(" ")
-        for element in splitlist:
-            constants.TRUSTED_GENES.append(element)
+    try:
+        file = open(trusted_genes_file_path, "w+")
+        lines = file.readlines()
+        for line in lines:
+            splitlist = line.split(" ")
+            for element in splitlist:
+                constants.TRUSTED_GENES.append(element)
+    except OSError:
+        logger.debug(f"{trusted_genes_file_path} does not exist!")
 
 def get_uniprotId_description(uniprotId):
     """

@@ -248,7 +248,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
         i += 1
         logging.info(f"[_find_genes_related_to_GO_term]: Processing gene {gene}; {i}/{len_genes}")
         if 'UniProtKB' in gene:
-            e_id.append(uniprot_mapping_API(gene))
+            e_id.append(util.get_uniprotId_from_geneName_new(gene)[1])
             sequences.append(get_ensembl_sequence_API(e_id[-1]))
         elif 'ZFIN' in gene:
             human_gene_symbol = util.zfin_find_human_ortholog(gene)  # eg. adgrg9
@@ -260,10 +260,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else:  # human ortholog exists in uniprot
-                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(
-                    human_gene_symbol, trust_genes=FLAG_TRUST_GENES)))
+                e_id.append(util.get_uniprotId_from_geneName_new(
+                    human_gene_symbol, trust_genes=FLAG_TRUST_GENES)[1])
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0 or e_id[-1]==None:
                     e_id[-1] = None
                     sequences.append(None)
                 else:
@@ -278,9 +278,9 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in xenbase
-                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES))) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
+                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)[1]) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0 or e_id[-1]==None:
                     e_id[-1] = None
                     sequences.append(None)
                 else:
@@ -292,9 +292,9 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in mgi
-                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)))
+                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)[1])
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0 or e_id[-1]==None:
                     e_id[-1] = None
                     sequences.append(None)
                 else:
@@ -306,9 +306,9 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(None)
                 sequences.append(None)
             else: # human ortholog exists in rgd
-                e_id.append(uniprot_mapping_API(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)))
+                e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)[1])
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
+                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0 or e_id[-1]==None:
                     e_id[-1] = None
                     sequences.append(None)
                 else:

@@ -3,8 +3,11 @@ log_dict = {
     'disable_existing_loggers': False,
     'formatters': {
         'standard': {
-            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+            'format': '%(asctime)s [%(levelname)s] %(funcName)s: %(message)s'
         },
+        'extended': {
+            'format': '%(asctime)s [%(filename)s:%(lineno)s - %(funcName)s] %(message)s'
+        }
     },
     'handlers': {
         'stream': {
@@ -16,7 +19,8 @@ log_dict = {
             'level': 'DEBUG',
             'filename': './log_output/test_json_dump.log',
             'class': 'logging.FileHandler',
-            'formatter': 'standard'
+            'formatter': 'extended',
+            'mode': 'w',
         }
     },
     'loggers': {
