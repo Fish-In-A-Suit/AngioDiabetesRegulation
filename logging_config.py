@@ -13,7 +13,7 @@ log_dict = {
             'class': 'logging.StreamHandler',
         },
         'file': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'filename': './log_output/test_json_dump.log',
             'class': 'logging.FileHandler',
             'formatter': 'standard'

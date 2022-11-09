@@ -24,6 +24,9 @@ APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["MGI", ["NCBITaxon:10090"]],
                       ["RGD", ["NCBITaxon:10116"]]] #Which pairs of databases and taxons (could be multiple per database) to allow.
 
+json_dictionaries = []
+current_filepath = ""
+
 # Remarks
 #   - no need to track _current_file, since .json files in term_genes aren't saved if script terminates early / if all the json elements haven't already been computed
 #   - RGD (Rat Genome Database) orthologs downloaded from: https://download.rgd.mcw.edu/data_release/
@@ -35,15 +38,13 @@ def get_GO_genes_API(term):
     Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     Homo sapiens taxon is NCBITaxon:9606
     """
-
-
     logger.info("get_GO_genes_API: term = " + term)
     parameters = {
         "rows": 10000000
     }
     
     response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
-    #logger.debug(json.dumps(response.json(), indent=4))
+    # logger.debug(json.dumps(response.json(), indent=4))
     genes = []
     associations = response.json()['associations']
     for item in associations:
@@ -58,8 +59,7 @@ def get_GO_genes_API(term):
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
     
-    logger.info(
-        f"Term {term} has {len(genes)} associated genes/product -> {genes}.")
+    logger.info(f"Term {term} has {len(genes)} associated genes/product -> {genes}.")
     return genes
 
 
@@ -154,31 +154,66 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     Finds the genes related to the term and dumps the results into a json file.
     """
     logger.debug(f"started gene search for GO term {term}")
+    global current_filepath
+    current_filepath = filepath
+
     override = 0
     if os.path.isfile(filepath) and ask_for_overrides == True:
-        override = input(
-            f"File {filepath} already exists. Enter 1 to process the file again or 0 to skip:")
+        override = input(f"File {filepath} already exists. Enter 1 to process the file again or 0 to skip:")
         if int(override) == 0:  # careful! override changes type to str as input is given
             logger.info(f"Skipping file {filepath}")
             return
-
+    
     genes = get_GO_genes_API(term)  # get array of genes associated to a term
     e_id = []  # ensemble id
     sequences = []
-    json_dictionaries = []
+    global json_dictionaries
+
+    # crash recovery
+    _fn = filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
+    crash_filepath = f"term_genes_crash\\{_fn}"
+    logger.debug(f"crash_filepath = {crash_filepath}")
+    crash_json = ""
+    if os.path.exists(crash_filepath):
+        restore_crash = int(input(f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file and 0 to ignore it."))
+        if restore_crash == 1:
+            # load crash_filepath json and delete file
+            crash_json = util.read_file_as_json(crash_filepath)
+            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
+            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
+            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
+            os.remove(filepath)
+        elif restore_crash == 2:
+            # load crash_filepath json and keep file
+            crash_json = util.read_file_as_json(crash_filepath)
+            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
+            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
+            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
+        elif restore_crash == 0:
+            logger.info(f"Crash recovery not selected.")
+            # do nthn
+        if crash_json != "":
+            logger.info(f"Crash recovery: json appended.")
+            json_dictionaries.append(crash_json)
+    else:
+        logger.debug(f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
 
     # TODO: Code reuse using pass-by-reference, which is handy in Python 3.0 with the 'nonlocal' keyword
     # -> problem is e_id and sequences, which stay in the local scope aka cannot modify their value in the current
     # scope from another function
     # https://stackoverflow.com/questions/8447947/is-it-possible-to-modify-a-variable-in-python-that-is-in-an-outer-enclosing-b
 
+    len_genes = len(genes)
+    i = 0
     for gene in genes:  # gene is is shape prefix:id
-        logging.info(f"[_find_genes_related_to_GO_term]: Processing gene {gene}")
+        i += 1
+        logging.info(f"[_find_genes_related_to_GO_term]: Processing gene {gene}; {i}/{len_genes}")
         if 'UniProtKB' in gene:
             e_id.append(uniprot_mapping_API(gene))
             sequences.append(get_ensembl_sequence_API(e_id[-1]))
         elif 'ZFIN' in gene:
             human_gene_symbol = util.zfin_find_human_ortholog(gene)  # eg. adgrg9
+            # TODO: compute ensembl sequence!
             if "ZfinError" in human_gene_symbol:
                 logger.debug(
                     f"[uniprot_mapping]: ERROR! human_gene_symbol for {gene} was not found!")
@@ -243,14 +278,14 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             input(f"No database found for {gene}. Press any key to continue.")
             e_id.append(None)
             sequences.append(None)
-        out = {"term": term, "product": gene,
-               "sequence_id": e_id[-1], "sequence": sequences[-1]}
+        out = {"term": term, "product": gene, "sequence_id": e_id[-1], "sequence": sequences[-1]}
         # f.write(json.dumps(out)+"\n") For file decoding purposes, json dicts need to be stored in a list and then the list written to the file as per https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
         json_dictionaries.append(out)
 
-    file = open(filepath, "w+")
-    file.write(json.dumps(json_dictionaries)+"\n")
-    file.close()
+    #file = open(filepath, "w+")
+    #file.write(json.dumps(json_dictionaries)+"\n")
+    #file.close()
+    util.store_json_dictionaries(filepath, json_dictionaries)
     logger.debug(f"finished gene search for GO term {term}")
 
 def exit_handler():
@@ -258,6 +293,12 @@ def exit_handler():
     Executes last code before program exit. If any file is being processed, it's flagged.
     If there is any last IO operations etc, perform them here.
     """
+
+    # store json dictionaries on crash
+    # TODO: make snapshots (so stopping console at ctrl-c doesn't yeet all the results from previous file, offer user latest snapshot default, but allow snapshot selection)
+    filename = current_filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
+    dest = f"term_genes_crash/{filename}"
+    util.store_json_dictionaries(dest, json_dictionaries)
     logging.info("Stopping script!")
 
 
@@ -289,13 +330,19 @@ def main():
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
 
+    #filepath = f"term_genes/homosapiens_only=false,v1/GO-0001525.json"
+    #_fn = filepath.split("/")[len(filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
+    #crash_filepath = f"term_genes_crash\\{_fn}"
+    #print(os.path.exists("term_genes_crash\\GO-0001525.json"))
+
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
     # logging.info(util.get_uniprotId_description("O14944"))
     # logging.info(util.get_uniprotId_description("Q9BUL8"))
 
-    # debugging
-    # _find_genes_related_to_GO_term("MGI:1340051", "term_genes/homosapiens_only=false,v1", True)
+    # debugging functions: RGD:1359373
+    # human_gene_symbol = util.rgd_find_human_ortholog("RGD:1359373")
+    # util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)
     
 
 

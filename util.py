@@ -72,12 +72,29 @@ def read_file_as_json(filepath):
     with open(filepath, "r") as read_content:
         return json.load(read_content)
 
+def store_json_dictionaries(filepath, dictionaries):
+    """
+    Writes the json dictionaries to file at filepath
+    """
+    file = open(filepath, "w+")
+    file.write(json.dumps(dictionaries)+"\n")
+    file.close()
+
 def readlines(filepath):
     """
     Reads the lines of the specified filepath
     """
     with open(filepath, "r") as read_content:
         return read_content.readlines()
+
+def get_last_geneId_in_crash_json(json):
+    """
+    Gets the Id of the last gene in supplied json. Used in the crash recovery algorithm
+    """
+    logger.debug(f"[get_last_geneId_in_crash_json]: json_len = {len(json)}, json = {json}")
+    geneId = json[len(json)-1]["product"] # get last item in array (len(json[0])-1) and then "product", which is geneId
+    logger.debug(f"[get_last_geneId_in_crash_json]: geneId = {geneId}")
+    return geneId
 
 def shrink_term_list(list):
     i = 0
@@ -87,6 +104,31 @@ def shrink_term_list(list):
             result_list.append(element)
         i = i+1
     return result_list
+
+def list_directionshrink(list, reference_element, forward=True):
+    """
+    If forward = True, keeps all elements in list starting after the reference_element
+    If forward = False, keeps all elements in list starting before the reference_element
+
+    Example: 
+    ls = [0,1,2,3,4,5,6]
+    list_directionshrink(ls, 2, forward=True) --> [3,4,5,6]
+    """
+    result_list = []
+    start_append_forward = False
+    stop_append_backward = False
+    for element in list:
+        if element == reference_element:
+            start_append_forward = True
+            stop_append_backward = True
+        if start_append_forward == True and forward == True:
+            result_list.append(element)
+        if stop_append_backward == False and forward == False:
+            result_list.append(element)
+    result_list.remove(reference_element)
+    logger.debug(f"[list_directionshrink]: Shrank from {len(list)} to {len(result_list)} elements.")
+    return result_list
+
 
 def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_human_ortholog_mapping.txt"):
     """
@@ -464,6 +506,7 @@ def rgd_find_human_ortholog(gene_id):
     i = 0
     for line in _rgd_ortholog_readlines:
         if gene_id_short in line:
+            splitline_debug = line.split("\t")
             human_symbol = _rgd_get_human_symbol_from_line(line)
             logger.info(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
             return human_symbol
@@ -473,7 +516,14 @@ def _rgd_get_human_symbol_from_line(line):
     """
     Splits rgd line at tabs and gets human gene smybol
     """
-    return line.split("\t")[3]
+    # also clears whitespace from linesplit (which is split at tab). Some lines in RGD db text file had whitespace instead of \t -> clear whitespace from array to resolve
+    # example: linesplit = ['Ang2', '1359373', '497229', '', '', '', '', 'Ang2', '1624110', '11731', 'MGI:104984', 'RGD', '\n']
+    linesplit = line.split("\t")
+    result_list = [] 
+    for element in linesplit: 
+        if element != "":
+            result_list.append(element)
+    return result_list[3]
 
 def sort_list_of_dictionaries(input, field, direction_reversed = True):
     """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
