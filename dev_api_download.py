@@ -157,6 +157,27 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     """
     Finds the genes related to the term and dumps the results into a json file.
     """
+    def _handle_load_from_crash(crash_filepath): # inner function as way of both encapsulation and code reuse
+        nonlocal crash_json
+        crash_json = util.read_file_as_json(crash_filepath)
+        if json.dumps(crash_json) != "[]": # if crash_json isn't empty
+            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
+            nonlocal genes
+            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
+            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
+    
+    def _choose_crashfile(crash_filepaths):
+        """
+        Gives user the choise to choose a crash file among crash_filepaths
+        """
+        display_dictionary = {}
+        i=0
+        for path in crash_filepaths:
+            display_dictionary[i] = path
+            i += 1
+        choice = int(input(f"Enter the number of the crashfile from {display_dictionary}"))
+        return display_dictionary[choice]
+
     logger.debug(f"started gene search for GO term {term}")
     global current_filepath
     current_filepath = filepath
@@ -173,40 +194,12 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     sequences = []
     global json_dictionaries
 
-    """
-    # crash recovery
-    _fn = filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json    
-    crash_filepath = f"term_genes_crash\\{_fn}"
-    logger.debug(f"crash_filepath = {crash_filepath}")
-    crash_json = ""
-    if os.path.exists(crash_filepath):
-        restore_crash = int(input(f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file and 0 to ignore it."))
-        if restore_crash == 1:
-            # load crash_filepath json and delete file
-            crash_json = util.read_file_as_json(crash_filepath)
-            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
-            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
-            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
-            os.remove(filepath)
-        elif restore_crash == 2:
-            # load crash_filepath json and keep file
-            crash_json = util.read_file_as_json(crash_filepath)
-            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
-            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
-            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
-        elif restore_crash == 0:
-            logger.info(f"Crash recovery not selected.")
-            # do nthn
-        if crash_json != "":
-            logger.info(f"Crash recovery: json appended.")
-            json_dictionaries.append(crash_json)
-    else:
-        logger.debug(f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
-    """
-
-    # new code for crash recovery, introduced crash snapshots; TODO: cycling among different ones, now it only gets the last
-    # TODO: change filenames so timestamp is before .json
-    _fn = filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
+    # crash recovery code
+    _f = filepath.split("/")
+    _fn = "" # this is the filename eg. GO-0001252
+    for element in _f: # finds the element with .json and assigns it to f
+        if ".json" in element: _fn = element.replace(".json", "")
+    
     crash_filepaths = util.get_files_in_dir("term_genes_crash", _fn)
     logger.debug(f"crash_filepaths = {crash_filepaths}")
     crash_json = ""
@@ -214,23 +207,20 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     if (isinstance(crash_filepaths, list) and len(crash_filepaths)>=1) or crash_filepaths != "":
         crash_filepath = util.get_last_file_in_list(crash_filepaths) # get last of the crashes
     if os.path.exists(crash_filepath):
-        restore_crash = int(input(f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file and 0 to ignore it."))
-        if restore_crash == 1:
-            # load crash_filepath json and delete file
-            crash_json = util.read_file_as_json(crash_filepath)
-            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
-            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
-            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
+        if len(crash_filepaths)>1:
+            restore_crash = int(input(f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file, 3 to display other crash files or 0 to ignore it."))
+        else: 
+            restore_crash = int(input(f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file or 0 to ignore it."))
+        if restore_crash == 3:
+            crash_filepath = _choose_crashfile(crash_filepaths)
+            _handle_load_from_crash(crash_filepath)
+        elif restore_crash == 1: # load crash_filepath json and delete file
+            _handle_load_from_crash(crash_filepath)
             os.remove(filepath)
-        elif restore_crash == 2:
-            # load crash_filepath json and keep file
-            crash_json = util.read_file_as_json(crash_filepath)
-            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
-            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
-            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
-        elif restore_crash == 0:
+        elif restore_crash == 2: # load crash_filepath json and keep file
+            _handle_load_from_crash(crash_filepath)
+        elif restore_crash == 0: # do nthn
             logger.info(f"Crash recovery not selected.")
-            # do nthn
         if crash_json != "":
             logger.info(f"Crash recovery: json appended.")
             json_dictionaries.append(crash_json)
@@ -335,8 +325,8 @@ def exit_handler():
 
     # store json dictionaries on crash
     # TODO: make snapshots (so stopping console at ctrl-c doesn't yeet all the results from previous file, offer user latest snapshot default, but allow snapshot selection)
-    filename = current_filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
-    dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}"
+    filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "") # gets the last item in path eg. GO-0001525.json
+    dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
     util.store_json_dictionaries(dest, json_dictionaries)
     logging.info("Stopping script!")
 
@@ -368,6 +358,7 @@ def main():
     # main functions
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
+    
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
@@ -377,6 +368,9 @@ def main():
     # debugging functions: RGD:1359373
     # human_gene_symbol = util.rgd_find_human_ortholog("RGD:1359373")
     # util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)
+
+    # cleanup files, turn on only once
+    # util.cleanup_crash_term_jsons()
     
 
 
