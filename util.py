@@ -88,7 +88,7 @@ def get_last_file_in_list(list):
     index = 0
     for f in list:
         timestamp = f.split("_")[1]
-        timestamp = timestamp.split(".")[0]
+        # timestamp = timestamp.split(".")[0] no longer needed
         timestamps[index] = timestamp
         index += 1
     ordered_dict = collections.OrderedDict(timestamps)
@@ -107,9 +107,70 @@ def store_json_dictionaries(filepath, dictionaries):
     """
     Writes the json dictionaries to file at filepath
     """
-    file = open(filepath, "w+")
-    file.write(json.dumps(dictionaries)+"\n")
-    file.close()
+    if json.dumps(dictionaries) != "[]":
+        file = open(filepath, "w+")
+        file.write(json.dumps(dictionaries)+"\n")
+        file.close()
+    else: logger.info("[store_json_dictionaries]: JSON for analysis progress not stored, as it is empty.")
+
+def cleanup_crash_term_jsons():
+    """
+    Deletes all except the last jsons for each term in term_genes_crash
+    """
+    logging.info("Cleaning up term_genes_crash.")
+    jsons_dict = {} # dictionary in form of <string> term : <list> filepath snapshots
+    all_files = os.listdir("term_genes_crash")
+    logger.debug(f"all_files = {all_files}")
+    previous_term = ""
+    first_iteration = True
+    term_snapshots = [] # list of all crash files belonging to specific term at different timestamps
+    iteration = 0
+    for f in all_files:
+        current_term = f.split("_")[0]
+        logger.debug(f"iteration: {iteration}, curterm = {current_term}, prevterm = {previous_term}")
+        if current_term != previous_term and first_iteration!=True: # new term
+            previous_term = current_term
+            # if len(term_snapshots)>=1: jsons_dict[current_term] = term_snapshots
+            jsons_dict[current_term] = term_snapshots
+            term_snapshots = [] # reset  
+        elif first_iteration == True: 
+            term_snapshots.append(f)
+            previous_term = current_term
+        else: # previous_term same as current_term
+            term_snapshots.append(f)
+        
+        if iteration == (len(all_files)-1): # final iteration, also append; MUST BE KEPT OUT OF THE IF CASCADE
+            jsons_dict[current_term] = term_snapshots
+        
+        logger.debug(f"iteration: {iteration}, term_snapshots = {term_snapshots}, jsons_dict = {jsons_dict}")
+
+        first_iteration = False
+        iteration += 1
+    logging.debug(f"jsons_dict = {jsons_dict}")
+
+    for term,snapshots in jsons_dict.items():
+        # extract timestamps
+        snapshots_timestamps = []
+        for filename in snapshots:
+            snapshots_timestamps.append(get_timestamp_from_crashterm(filename))
+        # order timestamps
+        snapshots_timestamps.sort()
+        # delete all but the last timestamp files
+        snapshots_timestamps.pop() # removes last element
+        for filename in snapshots:
+            file_timestamp = get_timestamp_from_crashterm(filename)
+            if file_timestamp in snapshots_timestamps and term in filename:
+                os.remove(f"term_genes_crash\\{filename}")
+                logging.info(f"Removed {filename}")
+    
+def get_timestamp_from_crashterm(crashfile_string):
+    """
+    Extracts the first part of the timestamp. Eg GO-0001525_1668012531.381136_.json -> 1668012531
+    """
+    timestamp = crashfile_string.split("_")[1]
+    timestamp_final = int(timestamp.split(".")[0])
+    return timestamp_final
+
 
 def readlines(filepath):
     """
