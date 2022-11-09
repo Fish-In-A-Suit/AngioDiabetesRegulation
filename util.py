@@ -3,6 +3,7 @@ import requests
 import constants
 import json
 import os
+import collections
 
 import logging
 logger = logging.getLogger(__name__)
@@ -64,6 +65,36 @@ def get_array_terms(array_name, term_shrink=True):
         print(array_name + " could not be found! Returning empty array.")
         empty = []
         return empty
+
+def get_files_in_dir(dir_filepath, searchstring = ""):
+    """
+    Searches for files in directory. Use searchstring parameter to append all files that have a specific string in their name.
+    Returns a single or a list of filepaths in the form dir_filepath/file
+    """
+    if searchstring == "":
+        return os.listdir(dir_filepath)
+    else: # search for searchstring, if file includes searchstring, append filepath
+        result_filepaths = []
+        for f in os.listdir(dir_filepath):
+            if searchstring in f:
+                result_filepaths.append(f"{dir_filepath}\\{f}")
+        return result_filepaths
+
+def get_last_file_in_list(list):
+    """
+    Organizes the file by timestamps and returns the most recent file
+    """
+    timestamps = {}
+    index = 0
+    for f in list:
+        timestamp = f.split("_")[1]
+        timestamp = timestamp.split(".")[0]
+        timestamps[index] = timestamp
+        index += 1
+    ordered_dict = collections.OrderedDict(timestamps)
+    logger.debug(f"[get_last_file_in_list]: ordered_dict = {ordered_dict}")
+    if len(ordered_dict) > 0: return list[len(ordered_dict)-1]
+    else: return "empty" # it's okay, because file "empty" doesn't exist
 
 def read_file_as_json(filepath):
     """

@@ -10,6 +10,7 @@ import os
 import sys
 import constants
 import atexit
+import datetime
 
 import logging
 logger = logging.getLogger(__name__)
@@ -172,11 +173,46 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     sequences = []
     global json_dictionaries
 
+    """
     # crash recovery
-    _fn = filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
+    _fn = filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json    
     crash_filepath = f"term_genes_crash\\{_fn}"
     logger.debug(f"crash_filepath = {crash_filepath}")
     crash_json = ""
+    if os.path.exists(crash_filepath):
+        restore_crash = int(input(f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file and 0 to ignore it."))
+        if restore_crash == 1:
+            # load crash_filepath json and delete file
+            crash_json = util.read_file_as_json(crash_filepath)
+            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
+            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
+            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
+            os.remove(filepath)
+        elif restore_crash == 2:
+            # load crash_filepath json and keep file
+            crash_json = util.read_file_as_json(crash_filepath)
+            last_geneId = util.get_last_geneId_in_crash_json(crash_json)
+            genes = util.list_directionshrink(genes, last_geneId, forward=True) # shrink genes to start processing at the first gene after last_geneId
+            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
+        elif restore_crash == 0:
+            logger.info(f"Crash recovery not selected.")
+            # do nthn
+        if crash_json != "":
+            logger.info(f"Crash recovery: json appended.")
+            json_dictionaries.append(crash_json)
+    else:
+        logger.debug(f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
+    """
+
+    # new code for crash recovery, introduced crash snapshots; TODO: cycling among different ones, now it only gets the last
+    # TODO: change filenames so timestamp is before .json
+    _fn = filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
+    crash_filepaths = util.get_files_in_dir("term_genes_crash", _fn)
+    logger.debug(f"crash_filepaths = {crash_filepaths}")
+    crash_json = ""
+    crash_filepath = ""
+    if (isinstance(crash_filepaths, list) and len(crash_filepaths)>=1) or crash_filepaths != "":
+        crash_filepath = util.get_last_file_in_list(crash_filepaths) # get last of the crashes
     if os.path.exists(crash_filepath):
         restore_crash = int(input(f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file and 0 to ignore it."))
         if restore_crash == 1:
@@ -300,7 +336,7 @@ def exit_handler():
     # store json dictionaries on crash
     # TODO: make snapshots (so stopping console at ctrl-c doesn't yeet all the results from previous file, offer user latest snapshot default, but allow snapshot selection)
     filename = current_filepath.split("/")[len(current_filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
-    dest = f"term_genes_crash/{filename}"
+    dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}"
     util.store_json_dictionaries(dest, json_dictionaries)
     logging.info("Stopping script!")
 
@@ -332,11 +368,6 @@ def main():
     # main functions
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
-
-    #filepath = f"term_genes/homosapiens_only=false,v1/GO-0001525.json"
-    #_fn = filepath.split("/")[len(filepath.split("/"))-1] # gets the last item in path eg. GO-0001525.json
-    #crash_filepath = f"term_genes_crash\\{_fn}"
-    #print(os.path.exists("term_genes_crash\\GO-0001525.json"))
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
