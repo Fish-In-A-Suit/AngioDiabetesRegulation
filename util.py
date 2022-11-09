@@ -300,7 +300,7 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     prefix="UniProtKB:" #do we need it?
 
     if "UniProtKB" in gene_name: #If the input gene name is a protein then query accordingly.
-        _uniprot_query_result=_uniprot_query_API(gene_name, type="prot")
+        _uniprot_query_result=_uniprot_query_API(gene_name.split(':')[1], type="prot")
     else:
         _uniprot_query_result=_uniprot_query_API(gene_name)
 
