@@ -327,7 +327,7 @@ def exit_handler():
     """
 
     # store json dictionaries on crash
-    # TODO: make snapshots (so stopping console at ctrl-c doesn't yeet all the results from previous file, offer user latest snapshot default, but allow snapshot selection)
+    # TODO: when saving after crash, prevent nesting. If more crashes are saved one after another, the array is nested further down.
     filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "") # gets the last item in path eg. GO-0001525.json
     dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
     util.store_json_dictionaries(dest, json_dictionaries)

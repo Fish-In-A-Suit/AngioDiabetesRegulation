@@ -614,6 +614,23 @@ def mgi_find_human_ortholog(gene_id):
     Parameters: gene-id eg. MGI:MGI:98480
     Returns: symbol of the human ortholog gene or "MgiError_no-human-ortholog-found".
     """
+    def _mgi_get_human_symbol_from_line(line, line_index):
+        """
+        Splits mgi line at tabs and gets human gene symbol
+        """
+        split = line.split("\t")
+        if split[1] != "human":
+            # raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
+            # try i+2 to check one line further down
+            line = _mgi_ortholog_readlines[i+2]
+            split = line.split("\t")
+            if split[1] == "human":
+                logger.debug(f"Found keyword 'human' on secondpass line querying.")
+                return split[3]
+            else:
+                raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
+        return split[3]
+
     logger.debug(f"Starting MGI search for {gene_id}")
     gene_id_short = ""
     if ":" in gene_id:
@@ -626,20 +643,22 @@ def mgi_find_human_ortholog(gene_id):
     for line in _mgi_ortholog_readlines:
         if gene_id_short in line:
             # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
-            human_symbol = _mgi_get_human_symbol_from_line(_mgi_ortholog_readlines[i+1])
+            logger.debug(f"i = {i}, gene_id_short = {gene_id_short}, line = {line}")
+            human_symbol = _mgi_get_human_symbol_from_line(_mgi_ortholog_readlines[i+1], i)
             logger.info(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
             return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
         i += 1
     return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
 
+"""
 def _mgi_get_human_symbol_from_line(line):
-    """
-    Splits mgi line at tabs and gets human gene symbol
-    """
+    # Splits mgi line at tabs and gets human gene symbol
+    
     split = line.split("\t")
     if split[1] != "human":
         raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
     return split[3]
+"""
 
 def rgd_find_human_ortholog(gene_id):
     """
