@@ -223,7 +223,8 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             logger.info(f"Crash recovery not selected.")
         if crash_json != "":
             logger.info(f"Crash recovery: json appended.")
-            json_dictionaries.append(crash_json)
+            for i in range(len(crash_json)): # adding each element (instead of entire json object) to prevent the repeated nesting bug
+                json_dictionaries.append(crash_json[i])
     else:
         logger.info(f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
 
@@ -370,6 +371,10 @@ def main():
     # main functions
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
+
+    # json = util.read_file_as_json("term_genes_crash/GO-0001525_1668276270.201873_.json") # this contains 11 crash elements
+    # logger.info(f"json.len = {len(json)}, json = {json}") # this loads entire json
+    # TODO: TO SOLVE THE CRASH LOADING, REMOVE THE BRACKETS FROM THE JSON ONCE LOADED!!!!!
     
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
