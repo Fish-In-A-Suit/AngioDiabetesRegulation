@@ -225,7 +225,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             logger.info(f"Crash recovery: json appended.")
             json_dictionaries.append(crash_json)
     else:
-        logger.debug(f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
+        logger.info(f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
 
     # TODO: Code reuse using pass-by-reference, which is handy in Python 3.0 with the 'nonlocal' keyword
     # -> problem is e_id and sequences, which stay in the local scope aka cannot modify their value in the current
@@ -253,7 +253,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 e_id.append(util.get_uniprotId_from_geneName_new(
                     human_gene_symbol, trust_genes=FLAG_TRUST_GENES)[1])
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0 or e_id[-1]==None:
+                if e_id[-1] == None: # prevents 'TypeError: argument of type NoneType is not iterable'
+                    e_id[-1] = None
+                    sequences.append(None)
+                elif "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
                     sequences.append(None)
                 else:
@@ -270,7 +273,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             else: # human ortholog exists in xenbase
                 e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)[1]) # TODO: this is code repetition -> create a function and try to pass e_id by reference!!! (or there will be errors)
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0 or e_id[-1]==None:
+                if e_id[-1] == None: # prevents 'TypeError: argument of type NoneType is not iterable' 
+                    e_id[-1] = None
+                    sequences.append(None)
+                elif "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
                     sequences.append(None)
                 else:
@@ -284,7 +290,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             else: # human ortholog exists in mgi
                 e_id.append(util.get_uniprotId_from_geneName_new(human_gene_symbol, trust_genes=FLAG_TRUST_GENES)[1])
                 logger.debug(f"id_old = {e_id[-1]}")
-                if "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0 or e_id[-1]==None:
+                if e_id[-1] == None: # prevents 'TypeError: argument of type NoneType is not iterable'
+                    e_id[-1] = None
+                    sequences.append(None)
+                elif "CycleOutOfBoundsError" in e_id[-1] or e_id[-1] == 0:
                     e_id[-1] = None
                     sequences.append(None)
                 else:
@@ -327,7 +336,7 @@ def exit_handler():
     """
 
     # store json dictionaries on crash
-    # TODO: when saving after crash, prevent nesting. If more crashes are saved one after another, the array is nested further down.
+    # TODO: when saving after crash with option 1 (with delete file option), prevent nesting. If more crashes are saved one after another, the array is nested further down.
     filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "") # gets the last item in path eg. GO-0001525.json
     dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
     util.store_json_dictionaries(dest, json_dictionaries)
@@ -362,7 +371,6 @@ def main():
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
     
-
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
     # logging.info(util.get_uniprotId_description("O14944"))

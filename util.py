@@ -92,7 +92,7 @@ def get_last_file_in_list(list):
         timestamps[index] = timestamp
         index += 1
     ordered_dict = collections.OrderedDict(timestamps)
-    logger.debug(f"[get_last_file_in_list]: ordered_dict = {ordered_dict}")
+    logger.debug(f"ordered_dict = {ordered_dict}")
     if len(ordered_dict) > 0: return list[len(ordered_dict)-1]
     else: return "empty" # it's okay, because file "empty" doesn't exist
 
@@ -183,7 +183,6 @@ def get_last_geneId_in_crash_json(json):
     """
     Gets the Id of the last gene in supplied json. Used in the crash recovery algorithm
     """
-    logger.debug(f"[get_last_geneId_in_crash_json]: json_len = {len(json)}, json = {json}")
     geneId = json[len(json)-1]["product"] # get last item in array (len(json[0])-1) and then "product", which is geneId
     logger.debug(f"[get_last_geneId_in_crash_json]: geneId = {geneId}")
     return geneId
@@ -259,7 +258,7 @@ def _uniprot_query_API(gene_name, type="gene"):
     if _uniprot_identifier_query_result.text == "{'results': []}":
         # empty response, may be because ortholog was found, but human ortholog has different name than the gene from the file - denotes an error in file parsing
         raise Exception(f"No uniprot identifier query result for {gene_name} found.")
-    logger.debug(_uniprot_identifier_query_result.json())
+    logger.debug(f"type = {type}, _uniprot_id_query_result = {_uniprot_identifier_query_result}, query result json: {_uniprot_identifier_query_result.json()}")
     return _uniprot_identifier_query_result.json()
 
 def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
@@ -366,15 +365,24 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     reviewedId_single = ""
     NO_reviewed_Ids = 0
     for key, value in geneIds_impactGenes_dictionary.items():
+        _d_review_status = uniprot_geneIds_dictionary[key]["is_reviewed"]
+        _d_has_transcript = uniprot_geneIds_dictionary[key]["has_transcript"]
+        logger.debug(f"Autoaccept process: key = {key}, value = {value}, review status = {_d_review_status}, has_transcript = {_d_has_transcript}")
         if gene_name not in value: 
             pop_keys.append(key)
             pop_keys_indices.append(i)
         else: # gene_name is found among geneNames request return field -
-            if uniprot_geneIds_dictionary[key]["is_reviewed"] == True and uniprot_geneIds_dictionary[key]["has_transcript"] == True: # check if UniprotId is reviewed
+            # if uniprot_geneIds_dictionary[key]["is_reviewed"] == True and uniprot_geneIds_dictionary[key]["has_transcript"] == True: # check if UniprotId is reviewed #TODO: check AND as condition here!
+            if uniprot_geneIds_dictionary[key]["is_reviewed"] == True:    
+                if uniprot_geneIds_dictionary[key]["has_transcript"] == True:
+                    logger.debug(f"{key} has_transcript = {_d_has_transcript}")
+                    # TODO: check the meaning of has_transcript field on the code execution
+                    # Some elements have reviewed = True and has_transcript = False -> meaning ?
                 if reviewedId_single == "": # check if no other reviewed id was added before
                     reviewedId_single = key
                     NO_reviewed_Ids += 1
-    # eliminate faulty elements    
+
+    # eliminate faulty elements in uniprot_geneIds_dictionary 
     for pop_key in pop_keys:
         uniprot_geneIds_dictionary.pop(pop_key)
         geneIds_impactGenes_dictionary.pop(pop_key)
@@ -391,10 +399,10 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     results_arr_len = len(uniprot_geneIds_dictionary) # update after eliminations
     i = 0
     next_step = 1
-    for uprId, info in uniprot_geneIds_dictionary: # used camelcase for differentiating inter-for-loop variables (from function variables)
+    for uprId, info in uniprot_geneIds_dictionary.items(): # used camelcase for differentiating inter-for-loop variables (from function variables)
         is_reviewed=info["is_reviewed"]
         has_transcript=info["has_transcript"]
-        logger.info(f"Gene name {gene_name} found to correspond to {uprId} (reviewed = {isReviewed}, has transcript = {has_transcript}). Displaying response {i}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,i)}")
+        logger.info(f"Gene name {gene_name} found to correspond to {uprId} (reviewed = {is_reviewed}, has transcript = {has_transcript}). Displaying response {i}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_query_result,i)}")
         logger.info(get_uniprotId_description(uprId))
         
         user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result, or 0 to continue the program and discard all options."))
