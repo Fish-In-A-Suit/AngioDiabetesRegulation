@@ -636,7 +636,10 @@ def mgi_find_human_ortholog(gene_id):
                 logger.debug(f"Found keyword 'human' on secondpass line querying.")
                 return split[3]
             else:
-                raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
+                # this still means no human ortholog!
+                # example: MGI:2660935 (Prl3d2) contains no "human" (neither i+1 nor i+2), also checked uniprot and no human gene for prl3d2 exists
+                return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
+                # raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
         return split[3]
 
     logger.debug(f"Starting MGI search for {gene_id}")

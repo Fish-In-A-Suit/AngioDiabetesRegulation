@@ -151,6 +151,8 @@ def find_genes_related_to_GO_terms(terms, ask_for_overrides=True, destination_fo
         term_file = str(term).replace(":", "-")
         filepath = f"{destination_folder}/{term_file}.json"
         _find_genes_related_to_GO_term(term, filepath, ask_for_overrides)
+        global json_dictionaries
+        json_dictionaries = [] # reset
 
 
 def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
@@ -335,9 +337,6 @@ def exit_handler():
     Executes last code before program exit. If any file is being processed, it's flagged.
     If there is any last IO operations etc, perform them here.
     """
-
-    # store json dictionaries on crash
-    # TODO: when saving after crash with option 1 (with delete file option), prevent nesting. If more crashes are saved one after another, the array is nested further down.
     filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "") # gets the last item in path eg. GO-0001525.json
     dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
     util.store_json_dictionaries(dest, json_dictionaries)
@@ -371,10 +370,6 @@ def main():
     # main functions
     terms_all = util.get_array_terms("ALL")
     find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
-
-    # json = util.read_file_as_json("term_genes_crash/GO-0001525_1668276270.201873_.json") # this contains 11 crash elements
-    # logger.info(f"json.len = {len(json)}, json = {json}") # this loads entire json
-    # TODO: TO SOLVE THE CRASH LOADING, REMOVE THE BRACKETS FROM THE JSON ONCE LOADED!!!!!
     
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
