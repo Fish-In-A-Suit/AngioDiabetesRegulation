@@ -16,6 +16,8 @@ def score_genes(allowed_term_ids, destination_file, source_folder="term_genes"):
     gene_set = set() # Set data type used instead of List, because a Set cannot have multiple occurences of the same element
     term_genes = [] # array of all genes across all terms; structure = {[term1, genes1], [term2, genes2], ... [term_n, genes_n]}
     for term in allowed_term_ids:
+        if term in constants.TERMS_EMPTY: # some terms have 0 genes, don't process these
+            continue
         genes = _import_genes_from_term_json(term, source_folder)
         term_genes.append([term, genes])
         gene_set.update(genes) # updates values in gene_set with genes, without duplicating existing elements
@@ -77,10 +79,10 @@ def _import_genes_from_term_json(term, source_folder):
     return genes
 
 def main():
-    filename = "gene_scores/test_score_all.json"
+    dest_filename = "gene_scores/test_score_homosapinesonly=false,v1.json"
     #terms = ["GO:1903587", "GO:1903670"] # TODO: change to gene list from constants
     terms_all = util.get_array_terms("ALL")
-    score_genes(terms_all, filename)
+    score_genes(terms_all, dest_filename, source_folder="term_genes/homosapiens_only=false,v1")
 
 if __name__ == '__main__':
     import logging.config

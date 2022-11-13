@@ -114,9 +114,10 @@ TERMS_EXCLUDED = [
     ]
 
 # array of genes (like the zebrafish), that have been confirmed to be orthologs by the user
-TRUSTED_GENES = [
-    
-]
+TRUSTED_GENES = []
+
+# array of empty terms (get_GO_genes_API returned empty list), loaded at startup from appropriate terms_empty.txt file
+TERMS_EMPTY = []
 
 GENE_DESCRIPTION_ANALYSIS_KEYWORDS = [
     "vessel", "angiogenesis", "capillary", "artery", "arteriole"

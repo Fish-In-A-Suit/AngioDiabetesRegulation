@@ -579,19 +579,24 @@ def _get_uniprot_identifier_json_nth_response(json, nth_response):
     "Gets the entire nth element in 'results' array inside the json retrieved by get_uniprot_identifier function"
     return json["results"][nth_response]
 
-def load_trusted_genes(trusted_genes_file_path):
+def load_list_from_file(filepath, array, no_elements_in_line=1, break_character=" "):
     """
-    Loads constants.TRUSTED_GENES list with genes from genes_trusted.txt
+    Reads a file line by line. If a line contains multiple elements, adjust appropriate no_elements_in_line and break character
     """
     try:
-        file = open(trusted_genes_file_path, "w+")
+        file = open(filepath, "r")
         lines = file.readlines()
         for line in lines:
-            splitlist = line.split(" ")
-            for element in splitlist:
-                constants.TRUSTED_GENES.append(element)
+            if "\n" in line:
+                line = line.replace("\n","")
+            if no_elements_in_line > 1:
+                splitlist = line.split(break_character)
+                for e in splitlist:
+                    array.append(e)
+            else:
+                array.append(line)
     except OSError:
-        logger.debug(f"{trusted_genes_file_path} does not exist!")
+        logger.debug(f"{filepath} does not exist!")
 
 def get_uniprotId_description(uniprotId):
     """

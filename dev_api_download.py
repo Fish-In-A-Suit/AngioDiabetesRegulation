@@ -60,7 +60,12 @@ def get_GO_genes_API(term):
                 genes.append(item['subject']['id'])
     # IMPORTANT: Some terms (like GO:1903587) return only genes related to "subterms" (when calling http://api.geneontology.org:80 "GET /api/bioentity/function/GO%3A1903587/genes?use_compact_associations=True&taxon=NCBITaxon%3A9606 HTTP/1.1" 200 1910)
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
-    
+    if len(genes) == 0:
+        # 0 associated gene products -> save in appropriate terms_empty.txt file
+        util.append_to_file(term, os.path.join(util.filepath_striplast(current_filepath),"terms_empty.txt"))
+        logger.info(f"Term {term} doesn't contain any genes. Saved it in {current_filepath}")
+        return []
+
     logger.info(f"Term {term} has {len(genes)} associated genes/product -> {genes}.")
     return genes
 
@@ -151,6 +156,8 @@ def find_genes_related_to_GO_terms(terms, ask_for_overrides=True, destination_fo
     for term in terms:
         term_file = str(term).replace(":", "-")
         filepath = f"{destination_folder}/{term_file}.json"
+        global current_filepath
+        current_filepath = filepath
         _find_genes_related_to_GO_term(term, filepath, ask_for_overrides)
         global json_dictionaries
         json_dictionaries = [] # reset
@@ -182,8 +189,6 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
         return display_dictionary[choice]
 
     logger.debug(f"started gene search for GO term {term}")
-    global current_filepath
-    current_filepath = filepath
 
     override = 0
     if os.path.isfile(filepath) and ask_for_overrides == True:
@@ -371,13 +376,17 @@ def main():
     # terms_angiogenesis_ids = util.get_array_terms("ANGIOGENESIS")
 
     # startup functions
-    util.load_trusted_genes("src_data_files/genes_trusted.txt")
-    logging.info(f"Loaded {len(constants.TRUSTED_GENES)} trusted genes.")
+    # util.load_trusted_genes("src_data_files/genes_trusted.txt")
+    util.load_list_from_file("src_data_files/genes_trusted.txt", constants.TRUSTED_GENES, no_elements_in_line=2, break_character=" ")
+    util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
+    logging.info(f"Loaded {len(constants.TRUSTED_GENES)} trusted genes. trusted_genes = {constants.TRUSTED_GENES}")
+    logging.info(f"Loaded {len(constants.TERMS_EMPTY)} empty terms. terms_empty = {constants.TERMS_EMPTY}")
     util.load_human_orthologs()
 
     # main functions
-    terms_all = util.get_array_terms("ALL")
-    find_genes_related_to_GO_terms(terms_all, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
+    # terms_all = util.get_array_terms("ALL")
+    terms = ["GO:0106088"]
+    # find_genes_related_to_GO_terms(terms, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
