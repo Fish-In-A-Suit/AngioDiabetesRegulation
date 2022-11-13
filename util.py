@@ -285,6 +285,18 @@ def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.info(f"uniprotId {uniprotId} -> ensemblId {enId}")
     return enId
 
+def filepath_striplast(filepath):
+    """
+    Steps back one step in the file tree. Example: dirA/dirB/fileC --> dirA/dirB/
+    """
+    result_filepath = ""
+    if "/" in filepath:
+        split = filepath.split("/")
+        for i in range(len(split)-1):
+            result_filepath = os.path.join(result_filepath, split[i])
+    logger.debug(f"result_filepath = {result_filepath}")
+    return result_filepath
+
 def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     """
     Retrieves UniProt Identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6. 
@@ -395,6 +407,12 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
         if prefix != "": return prefix+reviewedId_single, ensemblId
         else: return reviewedId_single, ensemblId
     
+    # Return None if there are no reviewed ids (TODO: implement a flag for this)
+    # TODO: implement a file where you store such instances
+    if NO_reviewed_Ids == 0:
+        logger.info(f"No reviewed UniProt Ids for gene_name {gene_name} found, returning None")
+        return None, None
+    
     # Either 2+ or 0 verified UniprotIds -> begin user cycling options
     results_arr_len = len(uniprot_geneIds_dictionary) # update after eliminations
     i = 0
@@ -408,14 +426,7 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
         user_logic = int(input("Press 1 to confirm current result, 2 to cycle another result, or 0 to continue the program and discard all options."))
         if user_logic == 1: # result is confirmed, save so in TRUSTED_GENES
             logger.info(f"Confirmed {gene_name} -> {uprId}")
-            with open("src_data_files/genes_trusted.txt", "a+") as f:
-                f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
-                logger.debug(f"Opened genes_trusted file.")
-                if gene_name not in f.read():
-                    f.seek(0,2) # move file pointer back to the end of the file
-                    f.write(f"{gene_name} {uprId}\n")
-                    f.close()
-                    logger.debug(f"Writing to genes_trusted file done!")
+            append_to_file(f"{gene_name} {uprId}\n", "src_data_files/genes_trusted.txt")
             # return
             # TODO: handle a case if a user wants to confirm multiple reviewed proteins -> store them in a list and return when next_step > (results_arr_len-1)
             ensemblId = _return_ensembl_from_id_and_uniprot_query(uprId,_uniprot_query_result)
@@ -436,6 +447,29 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
             raise Exception(f"[get_uniprot_identifier_new]: Wrong input!")
     logger.info("No uniprot geneIds selected")
     return f"No uniprot gene Ids for {gene_name} selected."
+
+def append_to_file(to_append, filepath, append_if_exists=False, add_linebreaks=True):
+    """
+    Appends to_append to filepath.
+      - append_if_exists: If True, appends to_append regardless if the same entry already exists. Otherwise appends only if to_append is a unique entry
+      - add_linebreaks: If True, adds \n add the end of to_append (if \n isn't already inside to_append)
+    """
+    with open(filepath, "a+") as f:
+        logger.debug(f"Opened file {filepath}")
+        if "\n" not in to_append and add_linebreaks == True:
+            to_append = f"{to_append}\n"
+        if append_if_exists == True:
+            # appends to_append regardless if the same entry already exists
+            f.write(to_append)
+            f.close()
+        else:
+            # appends only if there is not a similar entry
+            f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
+            if to_append not in f.read():
+                f.seek(0,2) # move file pointer back to the end of the file
+                f.write(to_append)
+                f.close()
+                logger.debug(f"Written {to_append} to file {filepath}.")
 
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
     """
@@ -705,7 +739,7 @@ def sort_list_of_dictionaries(input, field, direction_reversed = True):
     """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
     return sorted(input, key=lambda d: d[field], reverse=direction_reversed)
 
-def append_to_file(srcfilepath, append):
+def append_to_filepath(srcfilepath, append):
     """
     Appends the 'append' to the file before the filetype.
     Example usage: util.append_to_file("term_genes/GO-0001525.json", ";params=homosapiens_only,v1")

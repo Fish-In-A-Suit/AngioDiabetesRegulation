@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 # global variables
 FLAG_HOMOSAPIENS_ONLY = True 
 FLAG_TRUST_GENES = True # trust genes in trusted_genes to be credible -> program doesnt stop at them for validation
+
 APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["ZFIN", ["NCBITaxon:7955"]],
                       ["RNAcentral",["NCBITaxon:9606"]],
@@ -190,6 +191,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
         if int(override) == 0:  # careful! override changes type to str as input is given
             logger.info(f"Skipping file {filepath}")
             return
+    elif os.path.isfile(filepath) and ask_for_overrides == False:
+        # file exists, skip
+        logger.info(f"Skipping file {filepath}")
+        return
     
     genes = get_GO_genes_API(term)  # get array of genes associated to a term
     e_id = []  # ensemble id
@@ -319,7 +324,10 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
                 else:
                     sequences.append(get_ensembl_sequence_API(e_id[-1]))
         else:
-            input(f"No database found for {gene}. Press any key to continue.")
+            # input(f"No database found for {gene}. Press any key to continue.")
+            logger.debug(f"No database found for {gene}")
+            unsorted_genes_filepath = os.path.join(util.filepath_striplast(filepath), "genes_unsorted.txt")
+            util.append_to_file(f"{term} {gene}", unsorted_genes_filepath)
             e_id.append(None)
             sequences.append(None)
         out = {"term": term, "product": gene, "sequence_id": e_id[-1], "sequence": sequences[-1]}
@@ -369,8 +377,8 @@ def main():
 
     # main functions
     terms_all = util.get_array_terms("ALL")
-    find_genes_related_to_GO_terms(terms_all, destination_folder="term_genes/homosapiens_only=false,v1")
-    
+    find_genes_related_to_GO_terms(terms_all, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
+
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
     # logging.info(util.get_uniprotId_description("O14944"))
