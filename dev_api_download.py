@@ -385,8 +385,8 @@ def main():
 
     # main functions
     # terms_all = util.get_array_terms("ALL")
-    terms = ["GO:0106088"]
-    # find_genes_related_to_GO_terms(terms, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
+    terms = ["GO:1904204"]
+    find_genes_related_to_GO_terms(terms, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
