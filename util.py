@@ -34,32 +34,41 @@ def get_array_terms(array_name, term_shrink=True):
     
     If term_shrink=True, the final list will only consist of GO:xxxxx, if false, returned list will consist of term names AND GO:xxxxx
     """
+    def _shrink_term_list(list):
+        i = 0
+        result_list = []
+        for element in list:
+            if i%2: # 0 = generic term name, 1 = GO:xxxx, 2 = generic term name, 3 = GO:xxxx -> modulo op is 1 at 1, 3, 5 etc
+                result_list.append(element)
+            i = i+1
+        return result_list
+
     if array_name == 'ALL':
-        if term_shrink: return shrink_term_list(constants.TERMS_ANGIOGENESIS_GENERAL + constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY + constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY + constants.TERMS_DIABETES_GENERAL + constants.TERMS_DIABETES_NEGATIVE_ARRAY + constants.TERMS_DIABETES_POSITIVE_ARRAY)
+        if term_shrink: return _shrink_term_list(constants.TERMS_ANGIOGENESIS_GENERAL + constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY + constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY + constants.TERMS_DIABETES_GENERAL + constants.TERMS_DIABETES_NEGATIVE_ARRAY + constants.TERMS_DIABETES_POSITIVE_ARRAY)
         else: return constants.TERMS_ANGIOGENESIS_GENERAL + constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY + constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY + constants.TERMS_DIABETES_GENERAL + constants.TERMS_DIABETES_NEGATIVE_ARRAY + constants.TERMS_DIABETES_POSITIVE_ARRAY
     elif array_name == 'ANGIOGENESIS':
-        if term_shrink: return shrink_term_list(constants.TERMS_ANGIOGENESIS_GENERAL + constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY + constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY)
+        if term_shrink: return _shrink_term_list(constants.TERMS_ANGIOGENESIS_GENERAL + constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY + constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY)
         else: return constants.TERMS_ANGIOGENESIS_GENERAL + constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY + constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY
     elif array_name == 'ANGIOGENESIS-NEGATIVE':
-        if term_shrink: return shrink_term_list(constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY)
+        if term_shrink: return _shrink_term_list(constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY)
         else: return constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY
     elif array_name == 'ANGIOGENESIS-POSITIVE':
-        if term_shrink: return shrink_term_list(constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY)
+        if term_shrink: return _shrink_term_list(constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY)
         else: return constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY
     elif array_name == 'ANGIOGENESIS-GENERAL':
-        if term_shrink: return shrink_term_list(constants.TERMS_ANGIOGENESIS_GENERAL)
+        if term_shrink: return _shrink_term_list(constants.TERMS_ANGIOGENESIS_GENERAL)
         else: return constants.TERMS_ANGIOGENESIS_GENERAL
     elif array_name == 'DIABETES':
-        if term_shrink: return shrink_term_list(constants.TERMS_DIABETES_GENERAL + constants.TERMS_DIABETES_NEGATIVE_ARRAY + constants.TERMS_DIABETES_POSITIVE_ARRAY)
+        if term_shrink: return _shrink_term_list(constants.TERMS_DIABETES_GENERAL + constants.TERMS_DIABETES_NEGATIVE_ARRAY + constants.TERMS_DIABETES_POSITIVE_ARRAY)
         else: return constants.TERMS_DIABETES_GENERAL + constants.TERMS_DIABETES_NEGATIVE_ARRAY + constants.TERMS_DIABETES_POSITIVE_ARRAY
     elif array_name == 'DIABETES-NEGATIVE':
-        if term_shrink: return shrink_term_list(constants.TERMS_DIABETES_NEGATIVE_ARRAY)
+        if term_shrink: return _shrink_term_list(constants.TERMS_DIABETES_NEGATIVE_ARRAY)
         else: return constants.TERMS_DIABETES_NEGATIVE_ARRAY
     elif array_name == 'DIABETES-POSITIVE':
-        if term_shrink: return shrink_term_list(constants.TERMS_DIABETES_POSITIVE_ARRAY)
+        if term_shrink: return _shrink_term_list(constants.TERMS_DIABETES_POSITIVE_ARRAY)
         else: return constants.TERMS_DIABETES_POSITIVE_ARRAY
     elif array_name == 'DIABETES-GENERAL':
-        if term_shrink: return shrink_term_list(constants.TERMS_DIABETES_GENERAL)
+        if term_shrink: return _shrink_term_list(constants.TERMS_DIABETES_GENERAL)
         else: return constants.TERMS_DIABETES_GENERAL
     else:
         print(array_name + " could not be found! Returning empty array.")
@@ -103,6 +112,77 @@ def read_file_as_json(filepath):
     with open(filepath, "r") as read_content:
         return json.load(read_content)
 
+def readlines(filepath):
+    """
+    Reads the lines of the specified filepath
+    """
+    with open(filepath, "r") as read_content:
+        return read_content.readlines()
+
+def append_to_file(to_append, filepath, append_if_exists=False, add_linebreaks=True):
+    """
+    Appends to_append to filepath.
+      - append_if_exists: If True, appends to_append regardless if the same entry already exists. Otherwise appends only if to_append is a unique entry
+      - add_linebreaks: If True, adds \n add the end of to_append (if \n isn't already inside to_append)
+    """
+    with open(filepath, "a+") as f:
+        logger.debug(f"Opened file {filepath}")
+        if "\n" not in to_append and add_linebreaks == True:
+            to_append = f"{to_append}\n"
+        if append_if_exists == True:
+            # appends to_append regardless if the same entry already exists
+            f.write(to_append)
+            f.close()
+        else:
+            # appends only if there is not a similar entry
+            f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
+            if to_append not in f.read():
+                f.seek(0,2) # move file pointer back to the end of the file
+                f.write(to_append)
+                f.close()
+                logger.debug(f"Written {to_append} to file {filepath}.")
+
+def filepath_striplast(filepath):
+    """
+    Steps back one step in the file tree. Example: dirA/dirB/fileC --> dirA/dirB/
+    """
+    result_filepath = ""
+    if "/" in filepath:
+        split = filepath.split("/")
+        for i in range(len(split)-1):
+            result_filepath = os.path.join(result_filepath, split[i])
+    logger.debug(f"result_filepath = {result_filepath}")
+    return result_filepath
+
+def load_list_from_file(filepath, array, no_elements_in_line=1, break_character=" "):
+    """
+    Reads a file line by line. If a line contains multiple elements, adjust appropriate no_elements_in_line and break character
+    """
+    try:
+        file = open(filepath, "r")
+        lines = file.readlines()
+        for line in lines:
+            if "\n" in line:
+                line = line.replace("\n","")
+            if no_elements_in_line > 1:
+                splitlist = line.split(break_character)
+                for e in splitlist:
+                    array.append(e)
+            else:
+                array.append(line)
+    except OSError:
+        logger.debug(f"{filepath} does not exist!")
+
+def append_to_filepath(srcfilepath, append):
+    """
+    Appends the 'append' to the file before the filetype.
+    Example usage: util.append_to_file("term_genes/GO-0001525.json", ";params=homosapiens_only,v1")
+    --> result: term_genes/GO-0001525;params=homosapiens_only,v1.json
+    """
+    split=srcfilepath.split(".")
+    dstfilepath = split[0] + append + "." + split[1]
+    os.rename(srcfilepath, dstfilepath)
+
 def store_json_dictionaries(filepath, dictionaries):
     """
     Writes the json dictionaries to file at filepath
@@ -112,6 +192,22 @@ def store_json_dictionaries(filepath, dictionaries):
         file.write(json.dumps(dictionaries)+"\n")
         file.close()
     else: logger.info("[store_json_dictionaries]: JSON for analysis progress not stored, as it is empty.")
+
+def json_compare(file1, file2):
+    """
+    Compares the contents of file1 and file2 json files. Used during development to check for json
+    file similarity/differences.
+
+    Returns: True if no differences, False if differences
+    """
+    file1_json = read_file_as_json(file1)
+    file2_json = read_file_as_json(file2)
+    if file1_json == file2_json:
+        logger.debug(f"Compare {file1} and {file2}: True")
+        return True
+    else:
+        logger.debug(f"Compare {file1} and {file2}: False")
+        return False
 
 def cleanup_crash_term_jsons():
     """
@@ -171,14 +267,6 @@ def get_timestamp_from_crashterm(crashfile_string):
     timestamp_final = int(timestamp.split(".")[0])
     return timestamp_final
 
-
-def readlines(filepath):
-    """
-    Reads the lines of the specified filepath
-    """
-    with open(filepath, "r") as read_content:
-        return read_content.readlines()
-
 def get_last_geneId_in_crash_json(json):
     """
     Gets the Id of the last gene in supplied json. Used in the crash recovery algorithm
@@ -186,20 +274,12 @@ def get_last_geneId_in_crash_json(json):
     geneId = json[len(json)-1]["product"] # get last item in array (len(json[0])-1) and then "product", which is geneId
     logger.debug(f"[get_last_geneId_in_crash_json]: geneId = {geneId}")
     return geneId
-
-def shrink_term_list(list):
-    i = 0
-    result_list = []
-    for element in list:
-        if i%2: # 0 = generic term name, 1 = GO:xxxx, 2 = generic term name, 3 = GO:xxxx -> modulo op is 1 at 1, 3, 5 etc
-            result_list.append(element)
-        i = i+1
-    return result_list
-
+    
 def list_directionshrink(list, reference_element, forward=True):
     """
-    If forward = True, keeps all elements in list starting after the reference_element
-    If forward = False, keeps all elements in list starting before the reference_element
+    Returns list elements either up to or from the reference_element.
+        If forward = True, keeps all elements in list starting after the reference_element
+        If forward = False, keeps all elements in list starting before the reference_element
 
     Example: 
     ls = [0,1,2,3,4,5,6]
@@ -220,46 +300,40 @@ def list_directionshrink(list, reference_element, forward=True):
     logger.debug(f"[list_directionshrink]: Shrank from {len(list)} to {len(result_list)} elements.")
     return result_list
 
+def sort_list_of_dictionaries(input, field, direction_reversed = True):
+    """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
+    return sorted(input, key=lambda d: d[field], reverse=direction_reversed)
+
+def get_dict_key_at_index(dictionary, index):
+    """
+    Returns the value of the dictionary key at specified index.
+    """
+    keys_list = list(dictionary) # call list(dict) on a dictionary to return a list of its keys
+    key_at_index = keys_list[index]
+    return key_at_index
 
 def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_human_ortholog_mapping.txt"):
     """
     If gene_id is from the ZFIN database, searches through the zebrafish-human orthologs and returns the name of the
     symbol of the human gene ortholog.
     """
-    #file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
-    #lines = file.readlines()
-    gene_id=gene_id.split(":")[1] # eliminates ZFIN: 
+    def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
+        """
+        Splits zfin line and retrieves human gene symbol (full caps of zebrafish gene symbol)
+        """
+        if improved_algorithm == True:
+            # better, as zfin human ortholog sometimes has different name than the zebrafish gene
+            return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
+        else: 
+            return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
+
+    gene_id=gene_id.split(":")[1] # eliminates 'ZFIN:' 
     for line in _zfin_ortholog_readlines:
         if gene_id in line:
             human_symbol = _zfin_get_human_gene_symbol_from_line(line)
             logger.info(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
-            #file.close()
             return human_symbol
-    #file.close()
     return f"[ZfinError_No-human-ortholog-found:gene_id={gene_id}"
-
-def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
-    """
-    Splits zfin line and retrieves human gene symbol (full caps of zebrafish gene symbol)
-    """
-    if improved_algorithm == True:
-        # better, as zfin human ortholog sometimes has different name than the zebrafish gene
-        return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
-    else: 
-        return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
-    
-def _uniprot_query_API(gene_name, type="gene"):
-    # load all of the genes
-    logger.debug(f"Starting uniprot info query API for gene name {gene_name}")
-    if type == "gene":
-        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
-    elif type == "prot":
-        _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
-    if _uniprot_identifier_query_result.text == "{'results': []}":
-        # empty response, may be because ortholog was found, but human ortholog has different name than the gene from the file - denotes an error in file parsing
-        raise Exception(f"No uniprot identifier query result for {gene_name} found.")
-    logger.debug(f"type = {type}, _uniprot_id_query_result = {_uniprot_identifier_query_result}, query result json: {_uniprot_identifier_query_result.json()}")
-    return _uniprot_identifier_query_result.json()
 
 def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
@@ -285,18 +359,6 @@ def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.info(f"uniprotId {uniprotId} -> ensemblId {enId}")
     return enId
 
-def filepath_striplast(filepath):
-    """
-    Steps back one step in the file tree. Example: dirA/dirB/fileC --> dirA/dirB/
-    """
-    result_filepath = ""
-    if "/" in filepath:
-        split = filepath.split("/")
-        for i in range(len(split)-1):
-            result_filepath = os.path.join(result_filepath, split[i])
-    logger.debug(f"result_filepath = {result_filepath}")
-    return result_filepath
-
 def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     """
     Retrieves UniProt Identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6. 
@@ -308,14 +370,32 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
       - trust_genes: If True, all trusted genes inside genes_trusted.txt will override this function. If false, it
         notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
     """
-    prefix="UniProtKB:" #do we need it?
+    def _uniprot_query_API(gene_name, type="gene"):
+        """
+        Finds Uniprot Ids belonging to gene_name, returns result as json
+        """
+        logger.debug(f"Starting uniprot info query API for gene name {gene_name}")
+        if type == "gene":
+            _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
+        elif type == "prot":
+            _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
+        if _uniprot_identifier_query_result.text == "{'results': []}":
+            # empty response, may be because ortholog was found, but human ortholog has different name than the gene from the file - denotes an error in file parsing
+            raise Exception(f"No uniprot identifier query result for {gene_name} found.")
+        logger.debug(f"type = {type}, query result json: {_uniprot_identifier_query_result.json()}")
+        return _uniprot_identifier_query_result.json()
+    
+    def _get_uniprot_identifier_json_nth_response(json, nth_response):
+        "Gets the entire nth element in 'results' array inside the json retrieved by get_uniprot_identifier function"
+        return json["results"][nth_response]
+
+    prefix="UniProtKB:" # do we need it?
 
     if "UniProtKB" in gene_name: #If the input gene name is a protein then query accordingly.
         _uniprot_query_result=_uniprot_query_API(gene_name.split(':')[1], type="prot")
     else:
         _uniprot_query_result=_uniprot_query_API(gene_name)
 
-    # check if gene exists in trusted genes TODO
     if gene_name in constants.TRUSTED_GENES:
         if trust_genes == True:
             # return the element ahead of the gene_name, which is the previously found uniprot_id
@@ -333,7 +413,7 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     uniprot_geneIds_dictionary = {} # stores uniprotId : reviewed_status pairs
     results_arr_len = len(_uniprot_query_result["results"])
 
-    # if only one result, auto accept it; TODO: check if this 1 result is verified; if unverified, give user option what to do && ALSO CHECK IF GENE_NAME IS IN GENENAMES REQUEST FIELD, possibly move this down
+    # if only one result, auto accept it
     if results_arr_len == 1:
         uniprotId = _uniprot_query_result["results"][0]["primaryAccession"]
         logger.info(f"Auto accepted {gene_name} -> {uniprotId}. Reason: Only 1 result.")
@@ -448,40 +528,151 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     logger.info("No uniprot geneIds selected")
     return f"No uniprot gene Ids for {gene_name} selected."
 
-def append_to_file(to_append, filepath, append_if_exists=False, add_linebreaks=True):
+def get_uniprotId_description(uniprotId):
     """
-    Appends to_append to filepath.
-      - append_if_exists: If True, appends to_append regardless if the same entry already exists. Otherwise appends only if to_append is a unique entry
-      - add_linebreaks: If True, adds \n add the end of to_append (if \n isn't already inside to_append)
-    """
-    with open(filepath, "a+") as f:
-        logger.debug(f"Opened file {filepath}")
-        if "\n" not in to_append and add_linebreaks == True:
-            to_append = f"{to_append}\n"
-        if append_if_exists == True:
-            # appends to_append regardless if the same entry already exists
-            f.write(to_append)
-            f.close()
-        else:
-            # appends only if there is not a similar entry
-            f.seek(0) # a+ has file read pointer at bottom, f.seek(0) returns to top
-            if to_append not in f.read():
-                f.seek(0,2) # move file pointer back to the end of the file
-                f.write(to_append)
-                f.close()
-                logger.debug(f"Written {to_append} to file {filepath}.")
-
-def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
-    """
-    Retrieves uniprot identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6
-
+    Returns a description of the specified uniprotId. 
+    Example: https://rest.uniprot.org/uniprotkb/O14944.txt, this function parses lines after '-!- FUNCTION'
+    
     Parameters:
-      - gene_name: A gene name or symbol e.g. ADGRG6
-      - recursion: An internal function parameter to iterate through an array of UniProtKB ids supplied by the response json
-      - prefix: A database prefix, is prefixed before the specifi uniprot gene id
-      - trust_genes: If True, all trusted genes inside genes_trusted.txt will override this function. If false, it
-        notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
+      - uniprotId: either just the Id (e.g. O14944) or a prefixed Id (e.g. UniProtKB:Q9BUL8)
     """
+    # TODO: You can also get interaction data, for example: uniprotId O14944 also Interacts with EGFR and ERBB4
+    # -> parse this from "-!- SUBUNIT" part of the response text
+    response=""
+    if ":" in uniprotId:
+        id = uniprotId.split(":")[1]
+        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{id}.txt")
+    else:
+        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{uniprotId}.txt")
+    split = response.text.split("\n")
+    result_lines = []
+    _readline_flag = False
+    for line in split:
+        if _readline_flag == False and "-!-" in line and "FUNCTION" in line:
+            _readline_flag = True
+        if _readline_flag == True and "-!-" in line and "FUNCTION" not in line:
+            _readline_flag = False
+        if _readline_flag == True:
+            result_lines.append(line.replace("CC", "").strip())
+    uniprotId_description = " ".join(result_lines).replace("-!-","").strip()
+    return uniprotId_description
+
+def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenbase_human_ortholog_mapping.txt"):
+    """
+    Attempts to find a human ortholog from the xenbase database.
+    Parameters:
+      - gene_id: eg. Xenbase:XB-GENE-495335 or XB-GENE-495335
+    Returns: symbol of the human ortholog gene (eg. rsu1) or 'XenbaseError_no-human-ortholog-found'
+    """
+    def _xenbase_get_human_symbol_from_line(line):
+        """Splits xenbase line at tabs and gets human gene symbol (in full caps)"""
+        return str(line.split("\t")[2]).upper()
+
+    gene_id_short = ""
+    if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
+    else: gene_id_short = gene_id
+    
+    for line in _xenbase_ortholog_readlines:
+        if gene_id_short in line:
+            human_symbol = _xenbase_get_human_symbol_from_line(line)
+            logger.info(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
+            return human_symbol
+    return f"[XenbaseError_No-human-ortholog-found:gene_id={gene_id}"
+
+def mgi_find_human_ortholog(gene_id):
+    """
+    Attempts to find a human ortholog from the mgi database.
+    Parameters: gene-id eg. MGI:MGI:98480
+    Returns: symbol of the human ortholog gene or "MgiError_no-human-ortholog-found".
+    """
+    def _mgi_get_human_symbol_from_line(line, line_index):
+        """
+        Splits mgi line at tabs and gets human gene symbol
+        """
+        split = line.split("\t")
+        if split[1] != "human":
+            # try i+2 to check one line further down
+            line = _mgi_ortholog_readlines[line_index+2]
+            split = line.split("\t")
+            if split[1] == "human":
+                logger.debug(f"Found keyword 'human' on secondpass line querying.")
+                return split[3]
+            else:
+                # this still means no human ortholog!
+                # example: MGI:2660935 (Prl3d2) contains no "human" (neither i+1 nor i+2), also checked uniprot and no human gene for prl3d2 exists
+                return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
+        return split[3]
+
+    logger.debug(f"Starting MGI search for {gene_id}")
+    gene_id_short = ""
+    if ":" in gene_id:
+        split = gene_id.split(":")
+        if len(split) == 3: gene_id_short = split[2] # in case of MGI:xxx:xxxxx
+        elif len(split) == 2: gene_id_short = split[1] # in case of MGI:xxxxx
+    else: gene_id_short = gene_id
+
+    i = 0
+    for line in _mgi_ortholog_readlines:
+        if gene_id_short in line:
+            # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
+            logger.debug(f"i = {i}, gene_id_short = {gene_id_short}, line = {line}")
+            human_symbol = _mgi_get_human_symbol_from_line(_mgi_ortholog_readlines[i+1], i)
+            logger.info(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
+            return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
+        i += 1
+    return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
+
+def rgd_find_human_ortholog(gene_id):
+    """ Attempts to find a human ortholog from the RGD (rat genome database) """
+    def _rgd_get_human_symbol_from_line(line):
+        """ Splits rgd line at tabs and gets human gene smybol """
+        # also clears whitespace from linesplit (which is split at tab). Some lines in RGD db text file had whitespace instead of \t -> clear whitespace from array to resolve
+        # example: linesplit = ['Ang2', '1359373', '497229', '', '', '', '', 'Ang2', '1624110', '11731', 'MGI:104984', 'RGD', '\n']
+        linesplit = line.split("\t")
+        result_list = [] 
+        for element in linesplit: 
+            if element != "":
+                result_list.append(element)
+        return result_list[3]
+
+    gene_id_short = ""
+    if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
+    else: gene_id_short = gene_id
+
+    i = 0
+    for line in _rgd_ortholog_readlines:
+        if gene_id_short in line:
+            splitline_debug = line.split("\t")
+            human_symbol = _rgd_get_human_symbol_from_line(line)
+            logger.info(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
+            return human_symbol
+    return f"[RgdError_No-human-ortholog-found:gene_id={gene_id}"
+
+def load_human_orthologs():
+    """
+    This function should be called at runtime once to load the ortholog mapping txt files into proper variables.
+    """
+    global _zfin_ortholog_readlines
+    _zfin_ortholog_readlines = readlines("src_data_files/zfin_human_ortholog_mapping.txt")
+    global _xenbase_ortholog_readlines
+    _xenbase_ortholog_readlines = readlines("src_data_files/xenbase_human_ortholog_mapping.txt")
+    global _mgi_ortholog_readlines
+    _mgi_ortholog_readlines = readlines("src_data_files/mgi_human_ortholog_mapping.txt")
+    global _rgd_ortholog_readlines
+    _rgd_ortholog_readlines = readlines("src_data_files/rgd_human_ortholog_mapping.txt")
+
+""" An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
+def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
+    #
+    # Retrieves uniprot identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6
+    #
+    # Parameters:
+    #  - gene_name: A gene name or symbol e.g. ADGRG6
+    #  - recursion: An internal function parameter to iterate through an array of UniProtKB ids supplied by the response json
+    #  - prefix: A database prefix, is prefixed before the specifi uniprot gene id
+    #  - trust_genes: If True, all trusted genes inside genes_trusted.txt will override this function. If false, it
+    #    notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
+
     next_recursive_step = recursion + 1
     if gene_name in constants.TRUSTED_GENES: # trusted genes loaded at program startup
         if trust_genes == True:
@@ -528,9 +719,6 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         else:
             return uniprot_gene_identifier
 
-    # TODO:Reviewed proteins have priority. If only one in the list is reviewed, auto accept it.
-    # reviewed either SwissProt or Trembl -> if Trembl, then false
-    # poglej, če je samo 1 reviewed gen v setu genov -> če ja: autoselect | če ne: ročno select
     is_reviewed = False if "TrEMBL" in _uniprot_identifier_query_result["results"][recursion]["entryType"] else True
 
     logger.info(f"Gene name {gene_name} found to correspond to {uniprot_gene_identifier} (Reviewed: {is_reviewed}). Displaying response {recursion+1}/{results_arr_len}: {_get_uniprot_identifier_json_nth_response(_uniprot_identifier_query_result,recursion)}")
@@ -558,10 +746,10 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
             # cycled through all options, return error
             logger.info("Cycled out of options!")
             return f"[get_uniprot_identifier_new]: CycleOutOfBoundsError: Cycled through all the uniprot gene IDs for {gene_name} without confirming any"
-            # TODO: major bug here, it should return error, but it returns a gene id instead
+            # todo: major bug here, it should return error, but it returns a gene id instead
             # look at: https://stackoverflow.com/questions/11356168/return-in-recursive-function
             # and https://stackoverflow.com/questions/23543485/python-recursive-function-executing-return-statement-incorrectly 
-            # TODO: handle this error in main script file
+            # todo: handle this error in main script file
         get_uniprotId_from_geneName(gene_name, recursion=next_recursive_step)
     elif user_logic == 0:
         return f"[get_uniprot_identifier_new]: No uniprot gene IDs for {gene_name} found."
@@ -574,222 +762,7 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
         return prefix+uniprot_gene_identifier
     else:
         return uniprot_gene_identifier
-
-def _get_uniprot_identifier_json_nth_response(json, nth_response):
-    "Gets the entire nth element in 'results' array inside the json retrieved by get_uniprot_identifier function"
-    return json["results"][nth_response]
-
-def load_list_from_file(filepath, array, no_elements_in_line=1, break_character=" "):
-    """
-    Reads a file line by line. If a line contains multiple elements, adjust appropriate no_elements_in_line and break character
-    """
-    try:
-        file = open(filepath, "r")
-        lines = file.readlines()
-        for line in lines:
-            if "\n" in line:
-                line = line.replace("\n","")
-            if no_elements_in_line > 1:
-                splitlist = line.split(break_character)
-                for e in splitlist:
-                    array.append(e)
-            else:
-                array.append(line)
-    except OSError:
-        logger.debug(f"{filepath} does not exist!")
-
-def get_uniprotId_description(uniprotId):
-    """
-    Returns a description of the specified uniprotId. 
-    Example: https://rest.uniprot.org/uniprotkb/O14944.txt, this function parses lines after '-!- FUNCTION'
-    
-    Parameters:
-      - uniprotId: either just the Id (e.g. O14944) or a prefixed Id (e.g. UniProtKB:Q9BUL8)
-    """
-    # TODO: You can also get interaction data, for example: uniprotId O14944 also Interacts with EGFR and ERBB4
-    # -> parse this from "-!- SUBUNIT" part of the response text
-    response=""
-    if ":" in uniprotId:
-        id = uniprotId.split(":")[1]
-        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{id}.txt")
-    else:
-        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{uniprotId}.txt")
-    split = response.text.split("\n")
-    result_lines = []
-    _readline_flag = False
-    for line in split:
-        if _readline_flag == False and "-!-" in line and "FUNCTION" in line:
-            _readline_flag = True
-        if _readline_flag == True and "-!-" in line and "FUNCTION" not in line:
-            _readline_flag = False
-        if _readline_flag == True:
-            result_lines.append(line.replace("CC", "").strip())
-    uniprotId_description = " ".join(result_lines).replace("-!-","").strip()
-    return uniprotId_description
-
-def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenbase_human_ortholog_mapping.txt"):
-    """
-    Attempts to find a human ortholog from the xenbase database.
-    Parameters:
-      - gene_id: eg. Xenbase:XB-GENE-495335 or XB-GENE-495335
-    Returns: symbol of the human ortholog gene (eg. rsu1) or 'XenbaseError_no-human-ortholog-found'
-    """
-    # file = open(ortholog_file_path, "r") # TODO: make ortholog files global, init at runtime
-    # lines = file.readlines()
-    gene_id_short = ""
-    if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
-    else: gene_id_short = gene_id
-    
-    for line in _xenbase_ortholog_readlines:
-        if gene_id_short in line:
-            human_symbol = _xenbase_get_human_symbol_from_line(line)
-            logger.info(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
-            # file.close()
-            return human_symbol
-    # file.close()
-    return f"[XenbaseError_No-human-ortholog-found:gene_id={gene_id}"
-
-def _xenbase_get_human_symbol_from_line(line):
-    """
-    Splits xenbase line at tabs and gets human gene symbol (in full caps)
-    """
-    return str(line.split("\t")[2]).upper()
-
-def mgi_find_human_ortholog(gene_id):
-    """
-    Attempts to find a human ortholog from the mgi database.
-    Parameters: gene-id eg. MGI:MGI:98480
-    Returns: symbol of the human ortholog gene or "MgiError_no-human-ortholog-found".
-    """
-    def _mgi_get_human_symbol_from_line(line, line_index):
-        """
-        Splits mgi line at tabs and gets human gene symbol
-        """
-        split = line.split("\t")
-        if split[1] != "human":
-            # raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
-            # try i+2 to check one line further down
-            line = _mgi_ortholog_readlines[i+2]
-            split = line.split("\t")
-            if split[1] == "human":
-                logger.debug(f"Found keyword 'human' on secondpass line querying.")
-                return split[3]
-            else:
-                # this still means no human ortholog!
-                # example: MGI:2660935 (Prl3d2) contains no "human" (neither i+1 nor i+2), also checked uniprot and no human gene for prl3d2 exists
-                return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
-                # raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
-        return split[3]
-
-    logger.debug(f"Starting MGI search for {gene_id}")
-    gene_id_short = ""
-    if ":" in gene_id:
-        split = gene_id.split(":")
-        if len(split) == 3: gene_id_short = split[2] # in case of MGI:xxx:xxxxx
-        elif len(split) == 2: gene_id_short = split[1] # in case of MGI:xxxxx
-    else: gene_id_short = gene_id
-
-    i = 0
-    for line in _mgi_ortholog_readlines:
-        if gene_id_short in line:
-            # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
-            logger.debug(f"i = {i}, gene_id_short = {gene_id_short}, line = {line}")
-            human_symbol = _mgi_get_human_symbol_from_line(_mgi_ortholog_readlines[i+1], i)
-            logger.info(f"Found human ortholog {human_symbol} for mgi gene {gene_id}")
-            return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
-        i += 1
-    return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
-
 """
-def _mgi_get_human_symbol_from_line(line):
-    # Splits mgi line at tabs and gets human gene symbol
-    
-    split = line.split("\t")
-    if split[1] != "human":
-        raise Exception(f"MGI line {line} doesn't contain keyword 'human'!")
-    return split[3]
-"""
-
-def rgd_find_human_ortholog(gene_id):
-    """
-    Attempts to find a human ortholog from the RGD (rat genome database)
-    """
-    gene_id_short = ""
-    if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
-    else: gene_id_short = gene_id
-
-    i = 0
-    for line in _rgd_ortholog_readlines:
-        if gene_id_short in line:
-            splitline_debug = line.split("\t")
-            human_symbol = _rgd_get_human_symbol_from_line(line)
-            logger.info(f"Found human ortholog {human_symbol} for RGD gene {gene_id}")
-            return human_symbol
-    return f"[RgdError_No-human-ortholog-found:gene_id={gene_id}"
-
-def _rgd_get_human_symbol_from_line(line):
-    """
-    Splits rgd line at tabs and gets human gene smybol
-    """
-    # also clears whitespace from linesplit (which is split at tab). Some lines in RGD db text file had whitespace instead of \t -> clear whitespace from array to resolve
-    # example: linesplit = ['Ang2', '1359373', '497229', '', '', '', '', 'Ang2', '1624110', '11731', 'MGI:104984', 'RGD', '\n']
-    linesplit = line.split("\t")
-    result_list = [] 
-    for element in linesplit: 
-        if element != "":
-            result_list.append(element)
-    return result_list[3]
-
-def sort_list_of_dictionaries(input, field, direction_reversed = True):
-    """Sorts the list of dictionaries by the key "field", default direction is reversed (descending)"""
-    return sorted(input, key=lambda d: d[field], reverse=direction_reversed)
-
-def append_to_filepath(srcfilepath, append):
-    """
-    Appends the 'append' to the file before the filetype.
-    Example usage: util.append_to_file("term_genes/GO-0001525.json", ";params=homosapiens_only,v1")
-    --> result: term_genes/GO-0001525;params=homosapiens_only,v1.json
-    """
-    split=srcfilepath.split(".")
-    dstfilepath = split[0] + append + "." + split[1]
-    os.rename(srcfilepath, dstfilepath)
-
-def json_compare(file1, file2):
-    """
-    Compares the contents of file1 and file2 json files. Used during development to check for json
-    file similarity/differences.
-
-    Returns: True if no differences, False if differences
-    """
-    file1_json = read_file_as_json(file1)
-    file2_json = read_file_as_json(file2)
-    if file1_json == file2_json:
-        logger.debug(f"Compare {file1} and {file2}: True")
-        return True
-    else:
-        logger.debug(f"Compare {file1} and {file2}: False")
-        return False
-
-def load_human_orthologs():
-    """
-    This function should be called at runtime once to load the ortholog mapping txt files into proper variables.
-    """
-    global _zfin_ortholog_readlines
-    _zfin_ortholog_readlines = readlines("src_data_files/zfin_human_ortholog_mapping.txt")
-    global _xenbase_ortholog_readlines
-    _xenbase_ortholog_readlines = readlines("src_data_files/xenbase_human_ortholog_mapping.txt")
-    global _mgi_ortholog_readlines
-    _mgi_ortholog_readlines = readlines("src_data_files/mgi_human_ortholog_mapping.txt")
-    global _rgd_ortholog_readlines
-    _rgd_ortholog_readlines = readlines("src_data_files/rgd_human_ortholog_mapping.txt")
-
-def get_dict_key_at_index(dictionary, index):
-    """
-    Returns the value of the dictionary key at specified index.
-    """
-    keys_list = list(dictionary) # call list(dict) on a dictionary to return a list of its keys
-    key_at_index = keys_list[index]
-    return key_at_index
 
 
 
