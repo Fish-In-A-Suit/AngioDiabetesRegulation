@@ -4,6 +4,7 @@ import constants
 import json
 import os
 import collections
+import shutil
 
 import logging
 logger = logging.getLogger(__name__)
@@ -183,6 +184,30 @@ def append_to_filepath(srcfilepath, append):
     dstfilepath = split[0] + append + "." + split[1]
     os.rename(srcfilepath, dstfilepath)
 
+def term_sort_into_file(src_folder, dest_folder, term_list):
+    """
+    Reads src_file, compare dir, copy existing files to dest_file
+    """
+    files_copied = []
+    files_not_found = []
+    for term in term_list:
+        if ":" in term: term = term.replace(":","-")
+        src_term_filepath = f"{src_folder}/{term}.json"
+        if os.path.exists(src_term_filepath):
+            files_copied.append(src_term_filepath)
+            shutil.copy(src_term_filepath, dest_folder)
+        else:
+            files_not_found.append(src_folder)
+    logger.info(f"Finsihed file copy. Files copies = {files_copied}, files not found = {files_not_found}")
+    
+def save_json(json_object, filepath):
+    """
+    Stores json_object to file at filepath
+    """
+    with open(filepath, "w") as f:
+        json.dump(json_object, f)
+    logger.info(f"Stored json to file {filepath}")
+    
 def store_json_dictionaries(filepath, dictionaries):
     """
     Writes the json dictionaries to file at filepath

@@ -34,10 +34,9 @@ current_filepath = ""
 #   - RGD (Rat Genome Database) orthologs downloaded from: https://download.rgd.mcw.edu/data_release/
 #
 
-def get_GO_genes_API(term):
+def get_GO_genes_from_term(term):
     """
-    Retrieves all genes associated with each term.
-    Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
+    Retrieves all genes associated with each term. Input of GO terms must be a 1d list of GO Term Accession. e.g. ['GO:1903502','GO:1903508'].
     Homo sapiens taxon is NCBITaxon:9606
     """
     logger.info("get_GO_genes_API: term = " + term)
@@ -45,13 +44,12 @@ def get_GO_genes_API(term):
         "rows": 10000000
     }
     
-    response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term, read 'objects' property (array of genes) into 'genes' array
-    # logger.debug(json.dumps(response.json(), indent=4))
+    response = requests.get(f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters) # Get JSON response for current term
     genes = []
     associations = response.json()['associations']
     for item in associations:
         # only use directly associated genes and genes
-        if item['subject']['id'] in genes: #TODO: explain code
+        if item['subject']['id'] in genes: # see documentation docx document (involves traversing the json)
             logger.debug(f"Gene {item['subject']['id']} already in the list. Skipping...")
         elif item['object']['id'] == term and item['subject']['taxon']['id'] == "NCBITaxon:9606":
             genes.append(item['subject']['id'])
@@ -201,7 +199,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
         logger.info(f"Skipping file {filepath}")
         return
     
-    genes = get_GO_genes_API(term)  # get array of genes associated to a term
+    genes = get_GO_genes_from_term(term)  # get array of genes associated to a term
     e_id = []  # ensemble id
     sequences = []
     global json_dictionaries
@@ -386,12 +384,19 @@ def main():
     # main functions
     # terms_all = util.get_array_terms("ALL")
     terms = ["GO:1904204"]
-    find_genes_related_to_GO_terms(terms, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
+    # find_genes_related_to_GO_terms(terms, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
+    
+    response = requests.get(f"http://api.geneontology.org/api/bioentity/function/GO:0001525/genes", params={"rows": 1000000})
+    util.save_json(response.json(), "test/test.json")
+    # logger.info(response.json())
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
     # logging.info(util.get_uniprotId_description("O14944"))
     # logging.info(util.get_uniprotId_description("Q9BUL8"))
+
+    # this is how to sort json files into new folders by their respective array
+    # util.term_sort_into_file("term_genes/homosapiens_only=false,v1", "test", constants.TERMS_DIABETES_NEGATIVE_ARRAY)
 
     # debugging functions: RGD:1359373
     # human_gene_symbol = util.rgd_find_human_ortholog("RGD:1359373")
