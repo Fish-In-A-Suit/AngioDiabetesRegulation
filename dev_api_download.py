@@ -433,3 +433,12 @@ skupn file za vse gene -> vsak gen vsebuje number_angio, number_diabetes + tocno
 ///
 termi v povezavi z geni... zdej pa gene v povezavi s termi -> da je za vsak gen s kokimi termi je povezan
 """
+
+
+"""
+set genov za diabetes - set genov za angiogenezo
+presek
+najboljših 10 al 20
+poišči mRNA za te gene -> napovej miRNA
+pathwayi ?
+"""

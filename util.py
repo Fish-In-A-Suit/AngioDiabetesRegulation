@@ -207,7 +207,27 @@ def save_json(json_object, filepath):
     with open(filepath, "w") as f:
         json.dump(json_object, f)
     logger.info(f"Stored json to file {filepath}")
+
+def load_json_by_terms(src_folder, terms):
+    """
+    Returns the json files from src_folder that correspond to term names
+    """
     
+    result_file_list = []
+    missing_files = []
+    for term in terms:
+        _fi = ""
+        if ":" in term: _fi = term.replace(":","-") # switch from GO:xxxx to GO-xxxx
+        else: _fi = term 
+        if ".json" not in _fi: _fi = f"{_fi}.json" # append .json
+        if os.path.exists(f"{src_folder}/{_fi}"): result_file_list.append(f"{src_folder}/{_fi}")
+        else: missing_files.append(f"{src_folder}/{_fi}")
+    if len(missing_files) > 0:
+        logger.info(f"Missing files in {src_folder}: {missing_files}")
+        input("Missing files may be caused by a term only including subterm-genes and not any term specific genes. Press any key to continue")
+    logger.info(f"Returning {len(result_file_list)} result files;  -> {result_file_list}")
+    return result_file_list
+
 def store_json_dictionaries(filepath, dictionaries):
     """
     Writes the json dictionaries to file at filepath

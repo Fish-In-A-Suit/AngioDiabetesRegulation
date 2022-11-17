@@ -83,7 +83,12 @@ def main():
     dest_filename = "gene_scores/test_score_homosapinesonly=false,v1.json"
     #terms = ["GO:1903587", "GO:1903670"] # TODO: change to gene list from constants
     terms_all = util.get_array_terms("ALL")
-    score_genes(terms_all, dest_filename, source_folder="term_genes/homosapiens_only=false,v1")
+    # score_genes(terms_all, dest_filename, source_folder="term_genes/homosapiens_only=false,v1")
+
+    # util.load_json_by_terms("term_genes/homosapiens_only=false,v1", terms_all)
+    termfiles_angiogenesis = util.load_json_by_terms("term_genes/homosapiens_only=false,v1", util.get_array_terms("ANGIOGENESIS"))
+    termfiles_diabetes = util.load_json_by_terms("term_genes/homosapiens_only=false,v1", util.get_array_terms("DIABETES"))
+        
 
 if __name__ == '__main__':
     import logging.config
