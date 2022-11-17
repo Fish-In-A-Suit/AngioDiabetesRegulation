@@ -122,3 +122,19 @@ TERMS_EMPTY = []
 GENE_DESCRIPTION_ANALYSIS_KEYWORDS = [
     "vessel", "angiogenesis", "capillary", "artery", "arteriole"
 ]
+
+# single array enums in use to make the cross section between angiogenesis and diabetes terms
+TERM_ARRAYS_ENUMS_SINGLE = {
+    "terms_angiogenesis_positive": TERMS_ANGIOGENESIS_POSITIVE_ARRAY,
+    "terms_angiogenesis_negative": TERMS_ANGIOGENESIS_NEGATIVE_ARRAY,
+    "terms_angiogenesis_general": TERMS_ANGIOGENESIS_GENERAL,
+    "terms_diabetes_positive": TERMS_DIABETES_POSITIVE_ARRAY,
+    "terms_diabetes_negative": TERMS_DIABETES_NEGATIVE_ARRAY,
+    "terms_diabetes_general": TERMS_DIABETES_GENERAL,
+}
+
+# multiple array enums in use to make the cross section between angiogenesis and diabetes terms
+TERM_ARRAY_ENUMS_MULTIPLE = {
+    "terms_diabetes_all": TERMS_DIABETES_GENERAL + TERMS_DIABETES_NEGATIVE_ARRAY + TERMS_ANGIOGENESIS_POSITIVE_ARRAY,
+    "terms_angiogenesis_all": TERMS_ANGIOGENESIS_GENERAL + TERMS_ANGIOGENESIS_POSITIVE_ARRAY +  TERMS_ANGIOGENESIS_NEGATIVE_ARRAY
+}

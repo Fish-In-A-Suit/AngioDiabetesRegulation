@@ -706,6 +706,36 @@ def load_human_orthologs():
     global _rgd_ortholog_readlines
     _rgd_ortholog_readlines = readlines("src_data_files/rgd_human_ortholog_mapping.txt")
 
+def find_term_corresponding_array(term):
+    """
+    Finds the corresponding array from constants.py for the given GO term. 
+    Parameters:
+      - term: A GO term; GO:xxxxx or GO-xxxxx
+    
+    Returns: a list with 2 elements:
+      - [0]: array enum from constants.TERM_ARRAY_ENUMS_SINGLE, specifying the exact array enum (either angio+, angio- or angio_general, dia+, dia- or dia_general)
+      - [1]: array enum from constants.TERM_ARRAY_ENUMS_MULTIPLE, specifying the general process (either angiogenesis or diabetes)
+    """
+    result = []
+    logger.debug(f"term type = {type(term)}, term = {term}")
+    if "-" in term: 
+        term = term.replace("-",":") # replace - for : which is used in constants.py
+    logger.debug(f"len terms single = {len(constants.TERM_ARRAYS_ENUMS_SINGLE)}")
+    for array_enum, terms in constants.TERM_ARRAYS_ENUMS_SINGLE.items():
+        if term in terms:
+            result.append(array_enum)
+    if len(result) == 0: result.append("notfound") # if no items were added in previous for loop, append "/"
+    
+    # len(result) is now definitely 1
+    for array_enum, terms in constants.TERM_ARRAY_ENUMS_MULTIPLE.items():
+        if term in terms:
+            result.append(array_enum)
+    if len(result) == 1: result.append("notfound") # if no items were added in previous for loop, append "/"
+    logger.debug(f"term {term} array enum query: [0] = {result[0]}, [1] = {result[1]}")
+    return result
+        
+
+
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
     #
