@@ -87,7 +87,7 @@ def get_files_in_dir(dir_filepath, searchstring = ""):
         result_filepaths = []
         for f in os.listdir(dir_filepath):
             if searchstring in f:
-                result_filepaths.append(f"{dir_filepath}\\{f}")
+                result_filepaths.append(f"{dir_filepath}/{f}")
         return result_filepaths
 
 def get_last_file_in_list(list):
@@ -97,7 +97,7 @@ def get_last_file_in_list(list):
     timestamps = {}
     index = 0
     for f in list:
-        timestamp = f.split("_")[1]
+        timestamp = f.split("/")[-1].split("_")[1]
         # timestamp = timestamp.split(".")[0] no longer needed
         timestamps[index] = timestamp
         index += 1
@@ -126,6 +126,7 @@ def append_to_file(to_append, filepath, append_if_exists=False, add_linebreaks=T
       - append_if_exists: If True, appends to_append regardless if the same entry already exists. Otherwise appends only if to_append is a unique entry
       - add_linebreaks: If True, adds \n add the end of to_append (if \n isn't already inside to_append)
     """
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, "a+") as f:
         logger.debug(f"Opened file {filepath}")
         if "\n" not in to_append and add_linebreaks == True:
@@ -204,6 +205,7 @@ def save_json(json_object, filepath):
     """
     Stores json_object to file at filepath
     """
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, "w") as f:
         json.dump(json_object, f)
     logger.info(f"Stored json to file {filepath}")
@@ -233,10 +235,11 @@ def store_json_dictionaries(filepath, dictionaries):
     Writes the json dictionaries to file at filepath
     """
     if json.dumps(dictionaries) != "[]":
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
         file = open(filepath, "w+")
         file.write(json.dumps(dictionaries)+"\n")
         file.close()
-    else: logger.info("[store_json_dictionaries]: JSON for analysis progress not stored, as it is empty.")
+    else: logger.info("JSON for analysis progress not stored, as it is empty.")
 
 def json_compare(file1, file2):
     """
@@ -317,9 +320,17 @@ def get_last_geneId_in_crash_json(json):
     Gets the Id of the last gene in supplied json. Used in the crash recovery algorithm
     """
     geneId = json[len(json)-1]["product"] # get last item in array (len(json[0])-1) and then "product", which is geneId
-    logger.debug(f"[get_last_geneId_in_crash_json]: geneId = {geneId}")
+    logger.debug(f"geneId = {geneId}")
     return geneId
     
+def get_last_GO_term_in_crash_json(json):
+    """
+    Gets the Id of the last gene in supplied json. Used in the crash recovery algorithm
+    """
+    GO_term = json[len(json)-1]["GO_term"] # get last item in array (len(json[0])-1) and then "GO_term", which is geneId
+    logger.debug(f"GO_term = {GO_term}")
+    return GO_term
+
 def list_directionshrink(list, reference_element, forward=True):
     """
     Returns list elements either up to or from the reference_element.
@@ -357,29 +368,6 @@ def get_dict_key_at_index(dictionary, index):
     key_at_index = keys_list[index]
     return key_at_index
 
-def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_human_ortholog_mapping.txt"):
-    """
-    If gene_id is from the ZFIN database, searches through the zebrafish-human orthologs and returns the name of the
-    symbol of the human gene ortholog.
-    """
-    def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
-        """
-        Splits zfin line and retrieves human gene symbol (full caps of zebrafish gene symbol)
-        """
-        if improved_algorithm == True:
-            # better, as zfin human ortholog sometimes has different name than the zebrafish gene
-            return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
-        else: 
-            return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
-
-    gene_id=gene_id.split(":")[1] # eliminates 'ZFIN:' 
-    for line in _zfin_ortholog_readlines:
-        if gene_id in line:
-            human_symbol = _zfin_get_human_gene_symbol_from_line(line)
-            logger.info(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
-            return human_symbol
-    return f"[ZfinError_No-human-ortholog-found:gene_id={gene_id}"
-
 def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
     index = next((index for (index, d) in enumerate(query["results"]) if d["primaryAccession"] == uniprotId), None)
@@ -404,18 +392,7 @@ def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.info(f"uniprotId {uniprotId} -> ensemblId {enId}")
     return enId
 
-def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
-    """
-    Retrieves UniProt Identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6. 
-    This function no longer uses recursion and also checks for verification status of the returned Ids.
-
-    Parameters:
-      - gene_name: A gene name or symbol e.g. ADGRG6
-      - prefix: A database prefix, is prefixed before the specifi uniprot gene id
-      - trust_genes: If True, all trusted genes inside genes_trusted.txt will override this function. If false, it
-        notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
-    """
-    def _uniprot_query_API(gene_name, type="gene"):
+def _uniprot_query_API(gene_name, type="gene"):
         """
         Finds Uniprot Ids belonging to gene_name, returns result as json
         """
@@ -430,30 +407,66 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
         logger.debug(f"type = {type}, query result json: {_uniprot_identifier_query_result.json()}")
         return _uniprot_identifier_query_result.json()
     
+def get_uniprotId_description(uniprotId):
+    """
+    Returns a description of the specified uniprotId. 
+    Example: https://rest.uniprot.org/uniprotkb/O14944.txt, this function parses lines after '-!- FUNCTION'
+    
+    Parameters:
+      - uniprotId: either just the Id (e.g. O14944) or a prefixed Id (e.g. UniProtKB:Q9BUL8)
+    """
+    # TODO: You can also get interaction data, for example: uniprotId O14944 also Interacts with EGFR and ERBB4
+    # -> parse this from "-!- SUBUNIT" part of the response text
+    response=""
+    if ":" in uniprotId:
+        id = uniprotId.split(":")[1]
+        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{id}.txt")
+    else:
+        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{uniprotId}.txt")
+    split = response.text.split("\n")
+    result_lines = []
+    _readline_flag = False
+    for line in split:
+        if _readline_flag == False and "-!-" in line and "FUNCTION" in line:
+            _readline_flag = True
+        if _readline_flag == True and "-!-" in line and "FUNCTION" not in line:
+            _readline_flag = False
+        if _readline_flag == True:
+            result_lines.append(line.replace("CC", "").strip())
+    uniprotId_description = " ".join(result_lines).replace("-!-","").strip()
+    return uniprotId_description
+
+def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
+    """
+    Retrieves UniProt Identifier from a gene symbol/name; e.g. UniProtKB:Q86SQ4, if gene_name=adgrg6. 
+    This function no longer uses recursion and also checks for verification status of the returned Ids.
+
+    Parameters:
+      - gene_name: A gene name or symbol e.g. ADGRG6
+      - prefix: A database prefix, is prefixed before the specifi uniprot gene id
+      - trust_genes: If True, all trusted genes inside genes_trusted.txt will override this function. If false, it
+        notifies you that the gene was found among trusted genes and if you wish to proceed with the function.
+    """
+    
     def _get_uniprot_identifier_json_nth_response(json, nth_response):
         "Gets the entire nth element in 'results' array inside the json retrieved by get_uniprot_identifier function"
         return json["results"][nth_response]
 
     prefix="UniProtKB:" # do we need it?
 
-    if "UniProtKB" in gene_name: #If the input gene name is a protein then query accordingly.
-        _uniprot_query_result=_uniprot_query_API(gene_name.split(':')[1], type="prot")
-    else:
-        _uniprot_query_result=_uniprot_query_API(gene_name)
-
     if gene_name in constants.TRUSTED_GENES:
         if trust_genes == True:
             # return the element ahead of the gene_name, which is the previously found uniprot_id
             logger.info(f"Gene {gene_name} is found among trusted genes.")
             uniprotId = constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
-            ensemblId = _return_ensembl_from_id_and_uniprot_query(uniprotId, _uniprot_query_result)
-            return prefix+uniprotId,ensemblId
+            return prefix+uniprotId
         else:
             trust_genes_user_response = int(input(f"Gene {gene_name} is found among trusted genes. Press 1 to continue with UniProt Id query, or 0 to use the trusted gene."))
             if trust_genes_user_response == 0:
                 uniprotId = constants.TRUSTED_GENES[constants.TRUSTED_GENES.index(gene_name)+1]
-                ensemblId = _return_ensembl_from_id_and_uniprot_query(uniprotId, _uniprot_query_result)
-                return prefix+uniprotId,ensemblId
+                return prefix+uniprotId
+
+    _uniprot_query_result = _uniprot_query_API(gene_name)
 
     uniprot_geneIds_dictionary = {} # stores uniprotId : reviewed_status pairs
     results_arr_len = len(_uniprot_query_result["results"])
@@ -462,9 +475,8 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     if results_arr_len == 1:
         uniprotId = _uniprot_query_result["results"][0]["primaryAccession"]
         logger.info(f"Auto accepted {gene_name} -> {uniprotId}. Reason: Only 1 result.")
-        ensemblId = _return_ensembl_from_id_and_uniprot_query (uniprotId, _uniprot_query_result)
-        if prefix != "": return prefix + uniprotId, ensemblId
-        else: return uniprotId, ensemblId
+        if prefix != "": return prefix + uniprotId
+        else: return uniprotId
 
     for i in range(results_arr_len):
         # reviewed is either TrEMBL or SwissProt. TrEMBL should be set to False and SwissProt reviews should be set to True
@@ -528,9 +540,8 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     # Autoaccept if only one of the UniprotIds is reviewed
     if NO_reviewed_Ids == 1:
         logger.info(f"Found a single reviewed UniProt Id with a transcript for gene_name {gene_name}: {reviewedId_single}")
-        ensemblId = _return_ensembl_from_id_and_uniprot_query(reviewedId_single, _uniprot_query_result)
-        if prefix != "": return prefix+reviewedId_single, ensemblId
-        else: return reviewedId_single, ensemblId
+        if prefix != "": return prefix+reviewedId_single
+        else: return reviewedId_single
     
     # Return None if there are no reviewed ids (TODO: implement a flag for this)
     # TODO: implement a file where you store such instances
@@ -554,9 +565,8 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
             append_to_file(f"{gene_name} {uprId}\n", "src_data_files/genes_trusted.txt")
             # return
             # TODO: handle a case if a user wants to confirm multiple reviewed proteins -> store them in a list and return when next_step > (results_arr_len-1)
-            ensemblId = _return_ensembl_from_id_and_uniprot_query(uprId,_uniprot_query_result)
-            if prefix != "": return prefix + uprId,ensemblId
-            else: return uprId,ensemblId
+            if prefix != "": return prefix + uprId
+            else: return uprId
         elif user_logic == 2: #cycle next result
             if next_step > (results_arr_len - 1):
                 logger.info("Cycled out of options!")
@@ -573,34 +583,28 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     logger.info("No uniprot geneIds selected")
     return f"No uniprot gene Ids for {gene_name} selected."
 
-def get_uniprotId_description(uniprotId):
+def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_human_ortholog_mapping.txt"):
     """
-    Returns a description of the specified uniprotId. 
-    Example: https://rest.uniprot.org/uniprotkb/O14944.txt, this function parses lines after '-!- FUNCTION'
-    
-    Parameters:
-      - uniprotId: either just the Id (e.g. O14944) or a prefixed Id (e.g. UniProtKB:Q9BUL8)
+    If gene_id is from the ZFIN database, searches through the zebrafish-human orthologs and returns the name of the
+    symbol of the human gene ortholog.
     """
-    # TODO: You can also get interaction data, for example: uniprotId O14944 also Interacts with EGFR and ERBB4
-    # -> parse this from "-!- SUBUNIT" part of the response text
-    response=""
-    if ":" in uniprotId:
-        id = uniprotId.split(":")[1]
-        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{id}.txt")
-    else:
-        response = requests.get(f"https://rest.uniprot.org/uniprotkb/{uniprotId}.txt")
-    split = response.text.split("\n")
-    result_lines = []
-    _readline_flag = False
-    for line in split:
-        if _readline_flag == False and "-!-" in line and "FUNCTION" in line:
-            _readline_flag = True
-        if _readline_flag == True and "-!-" in line and "FUNCTION" not in line:
-            _readline_flag = False
-        if _readline_flag == True:
-            result_lines.append(line.replace("CC", "").strip())
-    uniprotId_description = " ".join(result_lines).replace("-!-","").strip()
-    return uniprotId_description
+    def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
+        """
+        Splits zfin line and retrieves human gene symbol (full caps of zebrafish gene symbol)
+        """
+        if improved_algorithm == True:
+            # better, as zfin human ortholog sometimes has different name than the zebrafish gene
+            return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
+        else: 
+            return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
+
+    gene_id=gene_id.split(":")[1] # eliminates 'ZFIN:' 
+    for line in _zfin_ortholog_readlines:
+        if gene_id in line:
+            human_symbol = _zfin_get_human_gene_symbol_from_line(line)
+            logger.info(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
+            return human_symbol
+    return f"[ZfinError_No-human-ortholog-found:gene_id={gene_id}"
 
 def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenbase_human_ortholog_mapping.txt"):
     """
