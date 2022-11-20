@@ -8,11 +8,17 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def score_genes(allowed_term_ids, destination_file, source_folder="term_genes"):
+def score_genes(allowed_term_ids, destination_file, source_folder="term_genes", use_cross_section=False):
     """
     Counts the number of appearances of all the genes across all specified json_files (which contain genes
     related to specific GO terms and are made by the find_genes_related_to_GO_terms function)
+
+    Parameters:
+      - TODO: explain others
+      - use_cross_section: If True, only genes that have both nterms_angio >= 1 and nterms_dia >= 1 are appended to final json.
+                           If False, all genes regardless of having bother angiogenetic or diabetic influence are appended to final json.
     """
+
     def _map_enum(enum_longname):
         """
         Used in _score_term_enums to map longer term enums to shorter enums to not clutter the json
@@ -52,7 +58,7 @@ def score_genes(allowed_term_ids, destination_file, source_folder="term_genes"):
             "nterms_dia-": 0,
             "nterms_dia0": 0
         }
-        # TODO: DEBUG THIS SO IT WORKS FOR DIABETES TERMS!!!
+        
         for term in terms:
             array_enums = util.find_term_corresponding_array(term)
             array_enum_specific = _map_enum(array_enums[0])
@@ -80,8 +86,12 @@ def score_genes(allowed_term_ids, destination_file, source_folder="term_genes"):
         #destination_file = f"{destination_folder}/{gene}.json"
         gene_count_result = _score_gene_basic(gene,term_genes)
         term_enum_score_set = _score_term_enums(gene_count_result[1]) # add nterms_angio, nterms_dia, nterms_angio+, nterms_angio-, nterms_angio0, nterms_dia+, nterms_dia-, nterms_dia0
-        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores:": term_enum_score_set}
-        json_gene_scores.append(out)
+        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set}
+        if use_cross_section == True:
+            if term_enum_score_set["nterms_angio"] != 0 and term_enum_score_set["nterms_dia"] != 0:
+                json_gene_scores.append(out)
+        else:
+            json_gene_scores.append(out)
     logger.info(f"[gene_scores]: {json_gene_scores}")
 
     json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "count")
@@ -132,9 +142,9 @@ def _import_genes_from_term_json(term, source_folder):
 
 def main():
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
-    dest_filename = "gene_scores/test_score_homosapinesonly=false,v1-term_enums.json"
+    dest_filename = "gene_scores/test_score_homosapinesonly=false,v1-term_enums,cross_section.json"
     terms_all = util.get_array_terms("ALL")
-    score_genes(terms_all, dest_filename, source_folder="term_genes/homosapiens_only=false,v1")
+    score_genes(terms_all, dest_filename, source_folder="term_genes/homosapiens_only=false,v1", use_cross_section=True)
 
     # util.load_json_by_terms("term_genes/homosapiens_only=false,v1", terms_all)
     # termfiles_angiogenesis = util.load_json_by_terms("term_genes/homosapiens_only=false,v1", util.get_array_terms("ANGIOGENESIS"))
