@@ -3,12 +3,13 @@ import util
 import constants
 import json
 import sys
+import os
 
 import logging
 logger = logging.getLogger(__name__)
 
 
-def score_genes(allowed_term_ids, destination_file, source_folder="term_genes", use_cross_section=False):
+def score_genes(destination_file, source_folder="term_genes", use_cross_section=False):
     """
     Counts the number of appearances of all the genes across all specified json_files (which contain genes
     related to specific GO terms and are made by the find_genes_related_to_GO_terms function)
@@ -64,15 +65,18 @@ def score_genes(allowed_term_ids, destination_file, source_folder="term_genes", 
         logger.debug(f"term_enum_scores: {result_set}")
         return result_set
 
-    logger.info(f"Finding all genes from terms: {allowed_term_ids}")
+    source_filepath = os.path.join(source_folder, "term_products.json")
+    logger.info(f"Finding all genes from file: {source_filepath}")
     gene_set = set() # Set data type used instead of List, because a Set cannot have multiple occurences of the same element
     term_genes = [] # array of all genes across all terms; structure = {[term1, genes1], [term2, genes2], ... [term_n, genes_n]}
-    for term in allowed_term_ids:
-        if term.replace("-",":") in constants.TERMS_EMPTY: # some terms have 0 genes, don't process these
-            continue
-        genes = _import_genes_from_term_json(term, source_folder)
-        term_genes.append([term, genes])
-        gene_set.update(genes) # updates values in gene_set with genes, without duplicating existing elements
+    source_json = util.read_file_as_json(source_filepath)
+    for term in source_json:
+        if term["products"] != []:
+            genes = [product["UniprotID"] for product in term["products"] if product["UniprotID"] is not None]
+        else:
+            genes = []
+        term_genes.append([term["GO_term"], genes])
+        gene_set.update(genes)
     logger.info(f"Found {len(gene_set)} different genes.")
     logger.debug(f"[term_genes]: {term_genes}")
     
@@ -90,9 +94,7 @@ def score_genes(allowed_term_ids, destination_file, source_folder="term_genes", 
     logger.info(f"[gene_scores]: {json_gene_scores}")
 
     json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "count")
-    file = open(destination_file, "w+")
-    file.write(json.dumps(json_gene_scores)+"\n")
-    file.close()
+    util.save_json(json_gene_scores, destination_file)
 
     logger.info (f"Done with scoring!")
 
@@ -137,9 +139,8 @@ def _import_genes_from_term_json(term, source_folder):
 
 def main():
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
-    dest_filename = "gene_scores/test_score_homosapinesonly=false,v1-term_enums,cross_section.json"
-    terms_all = util.get_array_terms("ALL")
-    score_genes(terms_all, dest_filename, source_folder="term_genes/homosapiens_only=false,v1", use_cross_section=True)
+    dest_filename = "gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json"
+    score_genes(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True)
 
     # util.load_json_by_terms("term_genes/homosapiens_only=false,v1", terms_all)
     # termfiles_angiogenesis = util.load_json_by_terms("term_genes/homosapiens_only=false,v1", util.get_array_terms("ANGIOGENESIS"))
