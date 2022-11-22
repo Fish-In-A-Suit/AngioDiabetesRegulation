@@ -116,7 +116,7 @@ def get_rnacentral_sequence_API(id):
         logger.info(f"RNACentral API error")
         return None
 
-def find_products_related_to_GO_terms_new(terms, filepath):
+def find_products_related_to_GO_terms_new(terms, folder):
     """
     
     """
@@ -148,7 +148,14 @@ def find_products_related_to_GO_terms_new(terms, filepath):
     global json_dictionaries
     json_dictionaries=[]
     global current_filepath
-    current_filepath = filepath
+    current_filepath = os.path.join(folder, "term_products.json")
+
+    if os.path.isfile(current_filepath):
+        override = input(
+            f"File {current_filepath} already exists. Enter 1 to process the file again or 0 to skip:")
+        if int(override) == 0:  # careful! override changes type to str as input is given
+            logger.info(f"Skipping file {current_filepath}")
+            return
 
     # crash recovery code
     _f = current_filepath.split("/")
