@@ -38,14 +38,9 @@ def score_genes(allowed_term_ids, destination_file, source_folder="term_genes", 
         Finds which arrays the terms belong to in constants.py
         Returns the following set:
         {
-            nterms_angio: x,
-            nterms_dia: x,
-            nterms_angio+: x,
-            nterms_angio-: x,
-            nterms_angio0: x,
-            nterms_dia+: x,
-            nterms_dia-: x,
-            nterms_dia0: x
+            nterms_angio: x, nterms_dia: x, 
+            nterms_angio+: x, nterms_angio-: x, nterms_angio0: x,
+            nterms_dia+: x, nterms_dia-: x, nterms_dia0: x
         }
         """
         result_set = {

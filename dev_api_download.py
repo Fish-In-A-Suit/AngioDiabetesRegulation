@@ -11,14 +11,19 @@ import sys
 import constants
 import atexit
 import datetime
+import threading
 
 import logging
 logger = logging.getLogger(__name__)
 
 # global variables
+FLAG_EXIT_HANDLER_CODE = -1
 FLAG_HOMOSAPIENS_ONLY = True
 # trust genes in trusted_genes to be credible -> program doesnt stop at them for validation
 FLAG_TRUST_GENES = True
+FLAG_USE_THREADS = True
+FLAG_NUMBER_THREADS = 4
+threads = []
 
 APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["ZFIN", ["NCBITaxon:7955"]],
@@ -26,14 +31,28 @@ APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["Xenbase", ["NCBITaxon:8364"]],
                       ["MGI", ["NCBITaxon:10090"]],
                       ["RGD", ["NCBITaxon:10116"]]]  # Which pairs of databases and taxons (could be multiple per database) to allow.
-
+crash_json = ""
+global json_dictionaries
 json_dictionaries = []
+temp_json_dict = []
 current_filepath = ""
 
 # Remarks
 #   - no need to track _current_file, since .json files in term_genes aren't saved if script terminates early / if all the json elements haven't already been computed
 #   - RGD (Rat Genome Database) orthologs downloaded from: https://download.rgd.mcw.edu/data_release/
 #
+
+class TermProcessingThread(threading.Thread):
+    def __init__(self, threadName, GO_terms, ask_for_overrides = True, destination_folder = "term_genes"):
+        threading.Thread.__init__(self)
+        self.threadName = threadName
+        self.GO_terms = GO_terms
+        self.ask_for_overrides = ask_for_overrides
+        self.destination_folder = destination_folder
+    
+    def run(self):
+        logger.debug(f"Starting {self.name}")
+        find_products_related_to_GO_terms_new(self.GO_terms, )
 
 
 def get_GO_products_from_term_API(term):
@@ -116,50 +135,67 @@ def get_rnacentral_sequence_API(id):
         logger.info(f"RNACentral API error")
         return None
 
-def find_products_related_to_GO_terms_new(terms, filepath):
+def find_products_related_to_GO_terms_new(terms, destination_folder="term_products", ask_for_overrides=True):
     """
     
     """
-    def _handle_load_from_crash(crash_filepath):  # inner function as way of both encapsulation and code reuse
-        nonlocal crash_json
-        crash_json = util.read_file_as_json(crash_filepath)
-        if json.dumps(crash_json) != "[]":  # if crash_json isn't empty
-            last_GO_term = util.get_last_GO_term_in_crash_json(crash_json)
-            nonlocal terms
-            # shrink genes to start processing at the first gene after last_geneId
-            terms = util.list_directionshrink(terms, last_GO_term, forward=True)
-            logger.info(
-                f"Crash recovery: last_geneId = {last_GO_term}, genes_len = {len(terms)}")
+    global FLAG_EXIT_HANDLER_CODE
+    FLAG_EXIT_HANDLER_CODE = 2
 
-    def _choose_crashfile(crash_filepaths):
-        """
-        Gives user the choise to choose a crash file among crash_filepaths
-        """
-        display_dictionary = {}
-        i = 0
-        for path in crash_filepaths:
-            display_dictionary[i] = path
-            i += 1
-        choice = int(
-            input(f"Enter the number of the crashfile from {display_dictionary}"))
-        return display_dictionary[choice]
+    crash_last_product_directId = ""
+    crash_last_product_uniprotId = ""
 
-    logger.info(f"terms array len:{len(terms)}, elements: {terms}")
-    global json_dictionaries
-    json_dictionaries=[]
     global current_filepath
-    current_filepath = filepath
+    current_filepath = f"{destination_folder}/terms_direct_products.json"
 
-    # crash recovery code
-    _f = current_filepath.split("/")
-    _fn = ""  # this is the filename eg. GO-0001252
-    for element in _f:  # finds the element with .json and assigns it to f
-        if ".json" in element:
-            _fn = element.replace(".json", "")
+    global crash_json
+    global json_dictionaries
 
-    crash_filepaths = util.get_files_in_dir("term_genes_crash", _fn)
+    # Crash handling from the start of term query instead from each specific term-file
+    def _handle_load_from_crash(crash_filepath):
+        global crash_json
+        crash_json = util.read_file_as_json(crash_filepath)
+        nonlocal crash_last_product_uniprotId
+        nonlocal crash_last_product_directId
+        if json.dumps(crash_json) != "[]":
+            # BUGFIX: last product in crash json may not be processed until the end and there is no easy way to check if it is.
+            # Give user the option to either process from the end of the last product (YOU STILL MUST INCLUDE IT IN TERMS ARRAY AND NOT USE DIRECTIONSHRINK),
+            # to start with new term (and leave out any missed products that may not have been processed) or skip to previous term and repeat
+            pl = util.get_last_product_in_crash_json(crash_json)
+            
+            option = int(input(f"Crash recovery json is not empty. Select one option: \n - 0 = process from the end product of the last term \n - 1 = leave out current term with any potential missed out products \n - 2 = skip to previous term and repeat analysis for current term\n"))
+
+            pre_last_GO_term = util.get_pre_last_product_in_crash_json(crash_json)[0]
+            if pre_last_GO_term == -1: pre_last_GO_term = "" # bugfix - crash_json only had 1 term, should be set to "" in order to exclude it from directionshrink
+            last_GO_term = pl[0]
+            crash_last_product_directId = pl[1] # send these off to _find_products_related_to_GO_term_new
+            crash_last_product_uniprotId = pl[2]
+            logger.debug(f"crash_directId = {crash_last_product_directId}, crash_uniprotId = {crash_last_product_uniprotId}")
+
+            nonlocal terms
+            if option == 0: # process current term from the last product onwards (should choose this as default)
+                terms = util.list_directionshrink(terms, pre_last_GO_term, forward=True)
+            elif option == 1: # skip current term, start processing a new term
+                terms = util.list_directionshrink(terms, last_GO_term, forward=True) # this works by shortening the terms used in the for loop
+            elif option == 2: # reprocess current term
+                terms = util.list_directionshrink(terms, pre_last_GO_term, forward=True)
+                crash_last_product_directId, crash_last_product_uniprotId = ""
+    
+    # check if terms file already exists
+    override = 0
+    if os.path.isfile(current_filepath) and ask_for_overrides == True:
+        override = input(f"File {current_filepath} already exists. Enter 1 to process the file again or 0 to skip:")
+        if int(override) == 0:
+            logger.info(f"Skipping file {current_filepath}")
+            return
+        elif os.path.isfile(current_filepath) and ask_for_overrides == False:
+            # file exists, skip
+            logger.info(f"Skipping file {current_filepath}")
+            return
+    
+    # recover crash data (todo: make code reusable?)
+    crash_filepaths = util.get_files_in_dir("term_genes_crash", "product-search-crash")
     logger.debug(f"crash_filepaths = {crash_filepaths}")
-    crash_json = ""
     crash_filepath = ""
     if (isinstance(crash_filepaths, list) and len(crash_filepaths) >= 1) or crash_filepaths != "":
         crash_filepath = util.get_last_file_in_list(
@@ -172,7 +208,7 @@ def find_products_related_to_GO_terms_new(terms, filepath):
             restore_crash = int(input(
                 f"File {crash_filepath} exists as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file or 0 to ignore it."))
         if restore_crash == 3:
-            crash_filepath = _choose_crashfile(crash_filepaths)
+            crash_filepath = util.choose_crashfile(crash_filepaths)
             _handle_load_from_crash(crash_filepath)
         elif restore_crash == 1:  # load crash_filepath json and delete file
             _handle_load_from_crash(crash_filepath)
@@ -181,39 +217,45 @@ def find_products_related_to_GO_terms_new(terms, filepath):
             _handle_load_from_crash(crash_filepath)
         elif restore_crash == 0:  # do nthn
             logger.info(f"Crash recovery not selected.")
+        
         if crash_json != "":
-            logger.info(f"Crash recovery: json appended.")
+            logger.info(f"Appending crash json.")
             # adding each element (instead of entire json object) to prevent the repeated nesting bug
             for i in range(len(crash_json)):
-                json_dictionaries.append(crash_json[i])
+                logger.debug(f"  - appending: {crash_json[i]}")
+                json_dictionaries.append(crash_json[i]) 
+            # in this case, entire crash file is appended and no append process is needed in the subfunction find_TERM (because temp_dict was appended at crash and then loaded with previous line)
+        else: logger.debug(f"Crash json is empty!!")
     else:
-        logger.info(
-            f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
+        logger.info(f"Crash filepath {crash_filepath} doesn't exist. Recovery not started.")
 
-    # TODO: Code reuse using pass-by-reference, which is handy in Python 3.0 with the 'nonlocal' keyword
-    # -> problem is e_id and sequences, which stay in the local scope aka cannot modify their value in the current
-    # scope from another function
-    # https://stackoverflow.com/questions/8447947/is-it-possible-to-modify-a-variable-in-python-that-is-in-an-outer-enclosing-b
-
-
-    #TODO:crash recovery
-    
     for term in terms:
-        term_products=_find_products_related_to_GO_term_new(term)
-        json_dictionaries.append({"GO_term":term, "products":term_products})
-    
+        # term file for each term not needed, since this algorithm works by storing all in one file
+        term_products=_find_products_related_to_GO_term_new(term, crash_last_product_directId)
+        # do not reset json_dictionaries after each iteration
+        json_dictionaries.append({"GO_term":term, "products":term_products}) 
+        # reset temp dict
+        global temp_json_dict
+        temp_json_dict = []
+
     util.store_json_dictionaries(current_filepath, json_dictionaries)
 
 
-def _find_products_related_to_GO_term_new(term):
+def _find_products_related_to_GO_term_new(term, crash_last_product_directId=""):
     """
     
     """
-    logger.info(f"started product search for GO term {term}")
+    logger.info(f"started product search for GO term {term}. crash_last_product_uniprotId = {crash_last_product_directId}")
+    global temp_json_dict
     direct_products = get_GO_products_from_term_API(term)
+    _d_prev_len = len(direct_products)
+    if crash_last_product_directId != "" and crash_last_product_directId in direct_products:
+        direct_products = util.list_directionshrink(direct_products, crash_last_product_directId, forward=True)
+        logger.debug(f"Shrank products for term {term}: {_d_prev_len} -> {len(direct_products)}")
 
     i = 0
     uniprot_productnames = []
+    # only finds products, doesn't process ensembl sequence Id and nucleotide sequence as before
     for product in direct_products:
         i+=1
         logging.debug(
@@ -224,16 +266,27 @@ def _find_products_related_to_GO_term_new(term):
                 logger.debug(
                     f"ERROR! human_gene_symbol for {product} was not found!")
                 uniprot_productnames.append(None)
+                write_to_temp_dict(i)
             else:  # human ortholog exists in uniprot
                 uniprot_productnames.append(util.get_uniprotId_from_geneName_new(
                     gene, trust_genes=FLAG_TRUST_GENES))
+                write_to_temp_dict(i)
+        
+        def write_to_temp_dict(index):
+            """
+            Used in crash recovery
+            """
+            global temp_json_dict
+            temp_json_dict = {"GO_term":term, "products":[{"direct_productID":direct_products[j], "UniprotID":uniprot_productnames[j]} 
+            for j in range(index - 1)]}
         
         if 'UniProtKB' in product:
             uniprot_productnames.append(product)
+            write_to_temp_dict(i)
         elif 'ZFIN' in product:
             human_gene_symbol = util.zfin_find_human_ortholog(product)  # eg. adgrg9
             ortholog_process(human_gene_symbol,product)
-        elif 'RNAcentral' in product: #TODO:what to do with miRNA sequences?, perhaps export them separately
+        elif 'RNAcentral' in product: # TODO:what to do with miRNA sequences?, perhaps export them separately
             uniprot_productnames.append(None)
         elif "Xenbase" in product:
             human_gene_symbol = util.xenbase_find_human_ortholog(product)
@@ -247,24 +300,25 @@ def _find_products_related_to_GO_term_new(term):
         else:
             # input(f"No database found for {gene}. Press any key to continue.")
             logger.debug(f"No database found for {product}")
-            unsorted_genes_filepath = os.path.join("genes_unsorted.txt") #TODO:filepath
+            # unsorted_genes_filepath = os.path.join("genes_unsorted.txt") #TODO:filepath
             unsorted_genes_filepath = os.path.join(
                 util.filepath_striplast(current_filepath), "genes_unsorted.txt")
             util.append_to_file(f"{term} {product}", unsorted_genes_filepath)
             uniprot_productnames.append(None)
+            write_to_temp_dict(i)
 
     logger.debug(f"finished gene search for GO term {term}")
     
     return [{"direct_productID":direct_products[i], "UniprotID":uniprot_productnames[i]} 
             for i in range(len(direct_products))]
 
-
-
-
 def find_genes_related_to_GO_terms(terms, ask_for_overrides=True, destination_folder="term_genes"):
     """
     Finds the genes related to the terms array and dumps the results into a json file.
     """
+    global FLAG_EXIT_HANDLER_CODE
+    FLAG_EXIT_HANDLER_CODE = 1
+
     logger.info(f"terms array len:{len(terms)}, elements: {terms}")
     for term in terms:
         term_file = str(term).replace(":", "-")
@@ -290,11 +344,9 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             genes = util.list_directionshrink(genes, last_geneId, forward=True)
             logger.info(
                 f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(genes)}")
-
+    """
     def _choose_crashfile(crash_filepaths):
-        """
-        Gives user the choise to choose a crash file among crash_filepaths
-        """
+        # Gives user the choise to choose a crash file among crash_filepaths
         display_dictionary = {}
         i = 0
         for path in crash_filepaths:
@@ -303,6 +355,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
         choice = int(
             input(f"Enter the number of the crashfile from {display_dictionary}"))
         return display_dictionary[choice]
+    """
 
     logger.debug(f"started gene search for GO term {term}")
 
@@ -346,7 +399,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             restore_crash = int(input(
                 f"File {crash_filepath} exists for term {term} as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file or 0 to ignore it."))
         if restore_crash == 3:
-            crash_filepath = _choose_crashfile(crash_filepaths)
+            crash_filepath = util.choose_crashfile(crash_filepaths)
             _handle_load_from_crash(crash_filepath)
         elif restore_crash == 1:  # load crash_filepath json and delete file
             _handle_load_from_crash(crash_filepath)
@@ -486,11 +539,23 @@ def exit_handler():
     Executes last code before program exit. If any file is being processed, it's flagged.
     If there is any last IO operations etc, perform them here.
     """
-    filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(
-        ".json", "")  # gets the last item in path eg. GO-0001525.json
-    dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
-    util.store_json_dictionaries(dest, json_dictionaries)
-    logging.info("Stopping script!")
+    global json_dictionaries # prevents bug
+    if FLAG_EXIT_HANDLER_CODE == 1:
+        filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "")  # gets the last item in path eg. GO-0001525.json
+        dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
+        util.store_json_dictionaries(dest, json_dictionaries)
+        logger.info("Stopping script!")
+    elif FLAG_EXIT_HANDLER_CODE == 2:
+        logger.debug(f"json_dict_len = {len(json_dictionaries)}, temp_dict_len = {len(temp_json_dict)}")
+        filename = "product-search-crash" # maybe move in constants.py
+        dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
+        if json.dumps(temp_json_dict) != "[]": # if anything is stored in temp_json_dict
+            json_dictionaries.append(temp_json_dict)
+        json_dictionaries = util.merge_similar_term_products_in_json(json_dictionaries)
+        util.store_json_dictionaries(dest, json_dictionaries)
+        logger.info("Stopping script.")
+    else:
+        logger.info("No exit handler code specified (FLAG_EXIT_HANDLER_CODE)")
 
 
 def main():
@@ -503,10 +568,6 @@ def main():
 
     global FLAG_TRUST_GENES
     FLAG_TRUST_GENES = True
-
-    # Compare any json files for testing -> get_GO_genes_API_new with homosapiens_only=True works as expected
-    # logging.info(util.json_compare("term_genes/GO-0001525.json", "term_genes/homosapiens_only,v1/GO-0001525.json"))
-    # logging.info(util.json_compare("term_genes/GO-0045765.json", "term_genes/homosapiens_only,v1/GO-0045765.json"))
 
     # dev_test_api_download.get_GO_genes_API("GO:1903670")
     # terms_test = ['GO:1903587']
@@ -524,25 +585,24 @@ def main():
         f"Loaded {len(constants.TERMS_EMPTY)} empty terms. terms_empty = {constants.TERMS_EMPTY}")
     util.load_human_orthologs()
 
-    # main functions
+    # old main functions
     # terms_all = util.get_array_terms("ALL")
-    #terms = ["GO:1904204"]
+    # terms = ["GO:1904204"]
     # find_genes_related_to_GO_terms(terms, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
 
     # new main functions
-    #terms = ["GO:0016525"]
+    # terms = ["GO:0016525"]
     terms = util.get_array_terms("ALL")
-    find_products_related_to_GO_terms_new(terms, filepath="term_genes/homosapiens_only=false,v2/term_products.json")
-
-    #response = requests.get(
-    #    f"http://api.geneontology.org/api/bioentity/function/GO:0001525/genes", params={"rows": 1000000})
-    #util.save_json(response.json(), "test/test.json")
-    # logger.info(response.json())
+    find_products_related_to_GO_terms_new(terms)
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:
     # logging.info(util.get_uniprotId_description("O14944"))
     # logging.info(util.get_uniprotId_description("Q9BUL8"))
+
+    # Compare any json files for testing -> get_GO_genes_API_new with homosapiens_only=True works as expected
+    # logging.info(util.json_compare("term_genes/GO-0001525.json", "term_genes/homosapiens_only,v1/GO-0001525.json"))
+    # logging.info(util.json_compare("term_genes/GO-0045765.json", "term_genes/homosapiens_only,v1/GO-0045765.json"))
 
     # this is how to sort json files into new folders by their respective array
     # util.term_sort_into_file("term_genes/homosapiens_only=false,v1", "test", constants.TERMS_DIABETES_NEGATIVE_ARRAY)

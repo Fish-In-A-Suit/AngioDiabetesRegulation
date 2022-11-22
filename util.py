@@ -306,7 +306,32 @@ def cleanup_crash_term_jsons():
             if file_timestamp in snapshots_timestamps and term in filename:
                 os.remove(f"term_genes_crash\\{filename}")
                 logging.info(f"Removed {filename}")
+
+def merge_similar_term_products_in_json(crash_json):
+    """
+    Used in crash recovery. The new workflow uses temp_dictionary, which may append the same term and its products (eg GO:xxxx) to json_dictionaries
+    but the very same term can already exist is json_dictionaries from crash recovery. Therefore, it prevents term duplications in the saved json.
+    """
+    previous_term = ""
+    previous_term_products = []
     
+    for index,element in enumerate(crash_json):
+        current_term = element["GO_term"]
+        current_term_products = element["products"]
+
+        if current_term == previous_term: # merge term products
+            merged_products = current_term_products + previous_term_products
+            # pop TODO: POP BOTH!!! previous too
+            crash_json.pop(index)
+            # insert one index back
+            logger.debug(f"index = {index}, crash_json = {crash_json}")
+            crash_json[index-1]["GO_term"] = current_term
+            crash_json[index-1]["products"] = merged_products
+        
+        previous_term = current_term
+        previous_term_products = current_term_products
+    return crash_json
+
 def get_timestamp_from_crashterm(crashfile_string):
     """
     Extracts the first part of the timestamp. Eg GO-0001525_1668012531.381136_.json -> 1668012531
@@ -344,6 +369,10 @@ def list_directionshrink(list, reference_element, forward=True):
     result_list = []
     start_append_forward = False
     stop_append_backward = False
+    
+    if reference_element not in list:
+        return list
+
     for element in list:
         if element == reference_element:
             start_append_forward = True
@@ -738,7 +767,57 @@ def find_term_corresponding_array(term):
     logger.debug(f"term {term} array enum query: [0] = {result[0]}, [1] = {result[1]}")
     return result
         
+def handle_load_from_crash(full_list, crash_filepath, crash_flag, additional_lists=[]):
+    crash_json = read_file_as_json(crash_filepath)
+    if json.dumps(crash_json) != "[]": # if crash_json isn't empty
+        if crash_flag == 1:
+            last_geneId = get_last_geneId_in_crash_json(crash_json)
+            logger.info(f"Crash recovery: last_geneId = {last_geneId}, genes_len = {len(full_list)}")
+            return list_directionshrink(full_list, last_geneId, forward=True)
+        if crash_flag == 2:
+            # TODO: PROCESS LADI'S NEW ALGORITHM TO SHORTEN ARRAY OF PRODUCTS
+            # RETURN BOTH DIRECTIONSHRINK FOR TERMS AND FOR LAST PRODUCT !!! (add products list in additional_lists)
+            last_element = crash_json[-1]["products"][-1]
+            direct_productId = last_element["direct_productID"]
+            uniprotId = last_element["UniprotID"]
 
+def get_last_product_in_crash_json(crash_json):
+    """
+    Used in crash recovery. Returns:
+      - [0]: GO_term: the last GO term before the crash happened
+      - [1]: direct_productId: the direct product Id (can be ZFIN, RGD etc)
+      - [2]: uniprotId: the uniprot id of the last product in crash_json
+    """
+    GO_term = crash_json[-1]["GO_term"]
+    last_element = crash_json[-1]["products"][-1]
+    direct_productId = last_element["direct_productID"]
+    uniprotId = last_element["UniprotID"]
+    return GO_term, direct_productId, uniprotId
+
+def get_pre_last_product_in_crash_json(crash_json):
+    """
+    Used in crash recovery. Returns the element before the last element in crash json similarly to get_last_product_in_crash_json
+    """
+    # TODO: CHECK IF CRASH_JSON CAN RETURN -2 EG IF LEN(CRASH_JSON) > 1
+    if len(crash_json) > 1:
+        GO_term = crash_json[-2]["GO_term"]
+        last_element = crash_json[-2]["products"][-1]
+        direct_productId = last_element["direct_productID"]
+        uniprotId = last_element["UniprotID"]
+        return GO_term, direct_productId, uniprotId
+    else: return [-1]
+
+def choose_crashfile(crash_filepaths):
+    """
+    Gives user the choise to choose a crash file among crash_filepaths
+    """
+    display_dictionary = {}
+    i = 0
+    for path in crash_filepaths:
+        display_dictionary[i] = path
+        i += 1
+    choice = int(input(f"Enter the number of the crashfile from {display_dictionary}"))
+    return display_dictionary[choice]
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
