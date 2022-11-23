@@ -4,6 +4,7 @@ import constants
 import json
 import sys
 import os
+import math
 
 import logging
 logger = logging.getLogger(__name__)
@@ -86,7 +87,8 @@ def score_genes(destination_file, source_folder="term_genes", use_cross_section=
         gene_count_result = _score_gene_basic(gene,term_genes)
         term_enum_score_set = _score_term_enums(gene_count_result[1]) # add nterms_angio, nterms_dia, nterms_angio+, nterms_angio-, nterms_angio0, nterms_dia+, nterms_dia-, nterms_dia0
         al_score = _score_gene_al(term_enum_score_set)
-        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score}
+        al_e_score = _score_gene_al_e(term_enum_score_set)
+        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score,  "al_e_score": al_e_score}
         if use_cross_section == True:
             if term_enum_score_set["nterms_angio"] != 0 and term_enum_score_set["nterms_dia"] != 0:
                 json_gene_scores.append(out)
@@ -94,7 +96,7 @@ def score_genes(destination_file, source_folder="term_genes", use_cross_section=
             json_gene_scores.append(out)
     logger.info(f"[gene_scores]: {json_gene_scores}")
 
-    json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "al_score")
+    json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "al_e_score")
     util.save_json(json_gene_scores, destination_file)
 
     logger.info (f"Done with scoring!")
@@ -130,6 +132,14 @@ def _score_gene_al(term_scores):
         (term_scores["nterms_angio0"] + term_scores["nterms_dia0"]) * 1 +
         (term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * 10 +
         (term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * -10
+    )
+    return score
+
+def _score_gene_al_e(term_scores):
+    score = (
+        (term_scores["nterms_angio0"] + term_scores["nterms_dia0"]) * 1 +
+        2**(term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * min(term_scores["nterms_angio+"], term_scores["nterms_dia+"]) -
+        8**(term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * max(term_scores["nterms_angio-"], term_scores["nterms_dia-"])
     )
     return score
     
