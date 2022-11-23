@@ -85,7 +85,8 @@ def score_genes(destination_file, source_folder="term_genes", use_cross_section=
         #destination_file = f"{destination_folder}/{gene}.json"
         gene_count_result = _score_gene_basic(gene,term_genes)
         term_enum_score_set = _score_term_enums(gene_count_result[1]) # add nterms_angio, nterms_dia, nterms_angio+, nterms_angio-, nterms_angio0, nterms_dia+, nterms_dia-, nterms_dia0
-        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set}
+        al_score = _score_gene_al(term_enum_score_set)
+        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score}
         if use_cross_section == True:
             if term_enum_score_set["nterms_angio"] != 0 and term_enum_score_set["nterms_dia"] != 0:
                 json_gene_scores.append(out)
@@ -93,7 +94,7 @@ def score_genes(destination_file, source_folder="term_genes", use_cross_section=
             json_gene_scores.append(out)
     logger.info(f"[gene_scores]: {json_gene_scores}")
 
-    json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "count")
+    json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "al_score")
     util.save_json(json_gene_scores, destination_file)
 
     logger.info (f"Done with scoring!")
@@ -123,6 +124,14 @@ def _score_gene_basic(gene, term_genes_list):
             terms_involved_in.append(element[0]) # also append which term the gene was involved in
     logger.debug(f"Gene {gene} has {count} occurences.")
     return count, terms_involved_in
+
+def _score_gene_al(term_scores):
+    score = (
+        (term_scores["nterms_angio0"] + term_scores["nterms_dia0"]) * 1 +
+        (term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * 10 +
+        (term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * -10
+    )
+    return score
     
 def _import_genes_from_term_json(term, source_folder):
     """
