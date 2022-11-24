@@ -818,6 +818,7 @@ def choose_crashfile(crash_filepaths):
         i += 1
     choice = int(input(f"Enter the number of the crashfile from {display_dictionary}"))
     return display_dictionary[choice]
+            
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
