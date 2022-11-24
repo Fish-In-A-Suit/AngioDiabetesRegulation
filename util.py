@@ -612,10 +612,14 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     logger.info("No uniprot geneIds selected")
     return f"No uniprot gene Ids for {gene_name} selected."
 
-def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_human_ortholog_mapping.txt"):
+def zfin_find_human_ortholog(gene_id):
     """
     If gene_id is from the ZFIN database, searches through the zebrafish-human orthologs and returns the name of the
     symbol of the human gene ortholog.
+
+    Returns:
+      - [0]: gene symbol
+      - [1]: long name of the gene
     """
     def _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True):
         """
@@ -623,28 +627,38 @@ def zfin_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/zfin_hu
         """
         if improved_algorithm == True:
             # better, as zfin human ortholog sometimes has different name than the zebrafish gene
-            return line.split("\t")[3] # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
-        else: 
-            return str(line.split("\t")[1]).upper() # split lines at tabs (spacebar is not ok!)
+            human_symbol = line.split("\t")[3]
+            human_gene_name = line.split("\t")[4]
+            return human_symbol, human_gene_name # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
+        else:
+            human_symbol = str(line.split("\t")[1]).upper()
+            human_gene_name = str(line.split("\t")[4])
+            return human_symbol, human_gene_name # split lines at tabs (spacebar is not ok!)
 
     gene_id=gene_id.split(":")[1] # eliminates 'ZFIN:' 
     for line in _zfin_ortholog_readlines:
         if gene_id in line:
-            human_symbol = _zfin_get_human_gene_symbol_from_line(line)
-            logger.info(f"[zfin_find_human_ortholog]: Returning human symbol {human_symbol}")
-            return human_symbol
-    return f"[ZfinError_No-human-ortholog-found:gene_id={gene_id}"
+            e = _zfin_get_human_gene_symbol_from_line(line, improved_algorithm=True)
+            human_symbol = e[0]
+            human_gene_name = e[1]
+            logger.info(f"[ Returning human symbol {human_symbol} and {human_gene_name}")
+            return human_symbol, human_gene_name
+    return [f"ZfinError_No-human-ortholog-found:gene_id={gene_id}"]
 
-def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenbase_human_ortholog_mapping.txt"):
+def xenbase_find_human_ortholog(gene_id):
     """
     Attempts to find a human ortholog from the xenbase database.
     Parameters:
       - gene_id: eg. Xenbase:XB-GENE-495335 or XB-GENE-495335
-    Returns: symbol of the human ortholog gene (eg. rsu1) or 'XenbaseError_no-human-ortholog-found'
+    Returns: 
+      - [0]: symbol of the human ortholog gene (eg. rsu1) or 'XenbaseError_no-human-ortholog-found'
+      - [1]: long name of the gene
     """
     def _xenbase_get_human_symbol_from_line(line):
         """Splits xenbase line at tabs and gets human gene symbol (in full caps)"""
-        return str(line.split("\t")[2]).upper()
+        symbol = str(line.split("\t")[2]).upper()
+        name = str(line.split("\t")[3])
+        return symbol, name
 
     gene_id_short = ""
     if ":" in gene_id: gene_id_short = gene_id.split(":")[1]
@@ -652,16 +666,20 @@ def xenbase_find_human_ortholog(gene_id, ortholog_file_path="src_data_files/xenb
     
     for line in _xenbase_ortholog_readlines:
         if gene_id_short in line:
-            human_symbol = _xenbase_get_human_symbol_from_line(line)
-            logger.info(f"Found human ortholog {human_symbol} for xenbase gene {gene_id}")
-            return human_symbol
-    return f"[XenbaseError_No-human-ortholog-found:gene_id={gene_id}"
+            e = _xenbase_get_human_symbol_from_line(line)
+            human_symbol = e[0]
+            human_gene_name = e[1]
+            logger.info(f"Found human ortholog {human_symbol}, name = {human_gene_name} for xenbase gene {gene_id}")
+            return human_symbol, human_gene_name
+    return [f"[XenbaseError_No-human-ortholog-found:gene_id={gene_id}"]
 
 def mgi_find_human_ortholog(gene_id):
     """
     Attempts to find a human ortholog from the mgi database.
     Parameters: gene-id eg. MGI:MGI:98480
     Returns: symbol of the human ortholog gene or "MgiError_no-human-ortholog-found".
+    
+    Note: Cannot return longer gene name from the MGI .txt file, since it doesn't contain the longer name
     """
     def _mgi_get_human_symbol_from_line(line, line_index):
         """
@@ -671,15 +689,15 @@ def mgi_find_human_ortholog(gene_id):
         if split[1] != "human":
             # try i+2 to check one line further down
             line = _mgi_ortholog_readlines[line_index+2]
-            split = line.split("\t")
-            if split[1] == "human":
+            second_split = line.split("\t")
+            if second_split[1] == "human":
                 logger.debug(f"Found keyword 'human' on secondpass line querying.")
-                return split[3]
+                return second_split[3]
             else:
                 # this still means no human ortholog!
                 # example: MGI:2660935 (Prl3d2) contains no "human" (neither i+1 nor i+2), also checked uniprot and no human gene for prl3d2 exists
                 return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
-        return split[3]
+        else: return split[3]
 
     logger.debug(f"Starting MGI search for {gene_id}")
     gene_id_short = ""
@@ -701,7 +719,12 @@ def mgi_find_human_ortholog(gene_id):
     return f"[MgiError_No-human-ortholog-found:gene_id={gene_id}"
 
 def rgd_find_human_ortholog(gene_id):
-    """ Attempts to find a human ortholog from the RGD (rat genome database) """
+    """ 
+    Attempts to find a human ortholog from the RGD (rat genome database) 
+    Returns: human gene symbol
+
+    Note: longer name of the gene cannot be returned, since it is not specified in the rgd txt file
+    """
     def _rgd_get_human_symbol_from_line(line):
         """ Splits rgd line at tabs and gets human gene smybol """
         # also clears whitespace from linesplit (which is split at tab). Some lines in RGD db text file had whitespace instead of \t -> clear whitespace from array to resolve
@@ -818,6 +841,56 @@ def choose_crashfile(crash_filepaths):
         i += 1
     choice = int(input(f"Enter the number of the crashfile from {display_dictionary}"))
     return display_dictionary[choice]
+
+def find_gene_symbol_and_name_from_id(gene_id):
+    if "UniProtKB" in gene_id:
+        # TODO: SOLVE THIS
+        return "", ""
+    elif "ZFIN" in gene_id:
+        gene_symbol = zfin_find_human_ortholog(gene_id)[0]
+        gene_longname = zfin_find_human_ortholog(gene_id)[1]
+        return gene_symbol, gene_longname
+    elif "Xenbase" in gene_id:
+        gene_symbol = xenbase_find_human_ortholog(gene_id)[0]
+        gene_longname = xenbase_find_human_ortholog(gene_id)[0]
+        return gene_symbol, gene_longname
+    elif "RGD" in gene_id:
+        gene_symbol = rgd_find_human_ortholog(gene_id) # not [0] because MGI and RGD cannot return gene longname
+        return gene_symbol, ""
+    elif "MGI" in gene_id:
+        gene_symbol = mgi_find_human_ortholog(gene_id)
+        return gene_symbol, ""
+
+def scoring_results_postprocess(score_results_filepath):
+    """
+    Adds product names and descriptions.
+    """
+    score_results_json = read_file_as_json(score_results_filepath)
+    final_json_elements = []
+    for i,element in enumerate(score_results_json):
+        id = element["gene"]
+        count = element["count"]
+        symbol = ""
+        long_name = ""
+        description = ""
+        terms = element["terms"] 
+        term_enum_scores = element["term_enum_scores"]
+
+        symbol = find_gene_symbol_and_name_from_id(id)[0]
+        long_name = find_gene_symbol_and_name_from_id(id)[1]
+        if "UniProtKB" in id:
+            description = get_uniprotId_description(id)
+        else:
+            description = get_uniprotId_description(get_uniprotId_from_geneName_new(symbol))
+        out = {"gene": id, "count": count, "symbol": symbol, "long_name": long_name, "description": description, "terms": terms, "term_enum_scores": term_enum_scores}
+        final_json_elements.append(out)
+    
+    _fn = score_results_filepath.replace(".json", "")
+    save_json(final_json_elements, f"{_fn}_postprocess.json")
+
+
+
+
             
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.

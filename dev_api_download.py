@@ -284,12 +284,12 @@ def _find_products_related_to_GO_term_new(term, crash_last_product_directId=""):
             uniprot_productnames.append(product)
             write_to_temp_dict(i)
         elif 'ZFIN' in product:
-            human_gene_symbol = util.zfin_find_human_ortholog(product)  # eg. adgrg9
+            human_gene_symbol = util.zfin_find_human_ortholog(product)[0]  # eg. adgrg9
             ortholog_process(human_gene_symbol,product)
         elif 'RNAcentral' in product: # TODO:what to do with miRNA sequences?, perhaps export them separately
             uniprot_productnames.append(None)
         elif "Xenbase" in product:
-            human_gene_symbol = util.xenbase_find_human_ortholog(product)
+            human_gene_symbol = util.xenbase_find_human_ortholog(product)[0]
             ortholog_process(human_gene_symbol,product)
         elif "MGI" in product:
             human_gene_symbol = util.mgi_find_human_ortholog(product)
@@ -432,8 +432,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             e_id.append(util.get_uniprotId_from_geneName_new(gene)[1])
             sequences.append(get_ensembl_sequence_API(e_id[-1]))
         elif 'ZFIN' in gene:
-            human_gene_symbol = util.zfin_find_human_ortholog(
-                gene)  # eg. adgrg9
+            human_gene_symbol = util.zfin_find_human_ortholog(gene)[0]  # eg. adgrg9
             # TODO: compute ensembl sequence!
             if "ZfinError" in human_gene_symbol:
                 logger.debug(
@@ -457,7 +456,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
             e_id.append(gene.split(':')[1])
             sequences.append(get_rnacentral_sequence_API(e_id[-1]))
         elif "Xenbase" in gene:
-            human_gene_symbol = util.xenbase_find_human_ortholog(gene)
+            human_gene_symbol = util.xenbase_find_human_ortholog(gene)[0]
             if "XenbaseError" in human_gene_symbol:
                 # error msg is human_gene_symbol
                 logger.info(human_gene_symbol)

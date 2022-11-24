@@ -2,7 +2,7 @@
     {
         "gene": "UniProtKB:Q16613",
         "count": 8,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0001938",
             "GO:1903672",
@@ -25,9 +25,31 @@
         "al_score": 26
     },
     {
+        "gene": "UniProtKB:O15530",
+        "count": 5,
+        "terms": [
+            "GO:1905564",
+            "GO:1903672",
+            "GO:0045766",
+            "GO:0032869",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 2,
+            "nterms_angio+": 2,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 23
+    },
+    {
         "gene": "UniProtKB:Q9Y243",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001938",
             "GO:1905564",
             "GO:0045766",
@@ -49,7 +71,7 @@
     {
         "gene": "UniProtKB:Q0VGL1",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045765",
             "GO:0001938",
@@ -69,52 +91,9 @@
         "al_score": 23
     },
     {
-        "gene": "UniProtKB:O15530",
-        "count": 5,
-        "terms:": [
-            "GO:1905564",
-            "GO:1903672",
-            "GO:0045766",
-            "GO:0032869",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 2,
-            "nterms_angio+": 2,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 23
-    },
-    {
-        "gene": "UniProtKB:Q96GR2",
-        "count": 4,
-        "terms:": [
-            "GO:0001525",
-            "GO:0001938",
-            "GO:0045766",
-            "GO:0046627"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 1,
-            "nterms_dia-": 0,
-            "nterms_dia0": 0
-        },
-        "al_score": 22
-    },
-    {
         "gene": "UniProtKB:Q9Y3B1",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:1905564",
             "GO:1903672",
             "GO:0001935",
@@ -135,7 +114,7 @@
     {
         "gene": "UniProtKB:P17861",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045766",
             "GO:0001935",
@@ -154,9 +133,30 @@
         "al_score": 22
     },
     {
+        "gene": "UniProtKB:Q96GR2",
+        "count": 4,
+        "terms": [
+            "GO:0001525",
+            "GO:0001938",
+            "GO:0045766",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 0
+        },
+        "al_score": 22
+    },
+    {
         "gene": "UniProtKB:Q14155",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0001935",
             "GO:1900077"
@@ -174,9 +174,9 @@
         "al_score": 21
     },
     {
-        "gene": "UniProtKB:P05771",
+        "gene": "UniProtKB:Q9BR61",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
             "GO:0046627"
         ],
@@ -195,7 +195,7 @@
     {
         "gene": "UniProtKB:Q99767",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
             "GO:0046627"
         ],
@@ -214,7 +214,7 @@
     {
         "gene": "UniProtKB:P01584",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
             "GO:0046627"
         ],
@@ -231,9 +231,9 @@
         "al_score": 20
     },
     {
-        "gene": "UniProtKB:Q9BR61",
+        "gene": "UniProtKB:P05771",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
             "GO:0046627"
         ],
@@ -252,7 +252,7 @@
     {
         "gene": "UniProtKB:Q15465",
         "count": 6,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:1903672",
             "GO:0014858",
@@ -275,7 +275,7 @@
     {
         "gene": "UniProtKB:O00548",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:1903672",
             "GO:0048633",
@@ -295,9 +295,30 @@
         "al_score": 14
     },
     {
+        "gene": "UniProtKB:Q8NC06",
+        "count": 4,
+        "terms": [
+            "GO:1903672",
+            "GO:0032869",
+            "GO:0006006",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 3,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 3
+        },
+        "al_score": 13
+    },
+    {
         "gene": "UniProtKB:P55265",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:1903672",
             "GO:0032869",
             "GO:0006006",
@@ -318,7 +339,7 @@
     {
         "gene": "UniProtKB:Q92982",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045765",
             "GO:0045766",
@@ -339,7 +360,7 @@
     {
         "gene": "UniProtKB:Q96E22",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0002040",
             "GO:0006006",
@@ -358,50 +379,9 @@
         "al_score": 13
     },
     {
-        "gene": "UniProtKB:Q8NC06",
-        "count": 4,
-        "terms:": [
-            "GO:1903672",
-            "GO:0032869",
-            "GO:0006006",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 3,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 13
-    },
-    {
-        "gene": "UniProtKB:P14618",
-        "count": 3,
-        "terms:": [
-            "GO:0002040",
-            "GO:1903672",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 12
-    },
-    {
         "gene": "UniProtKB:Q13480",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045766",
             "GO:0008286"
@@ -419,29 +399,9 @@
         "al_score": 12
     },
     {
-        "gene": "UniProtKB:Q8IZT6",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0045766",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 12
-    },
-    {
         "gene": "UniProtKB:O00443",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0090050",
             "GO:0008286"
@@ -459,12 +419,12 @@
         "al_score": 12
     },
     {
-        "gene": "UniProtKB:P50120",
+        "gene": "UniProtKB:P20248",
         "count": 3,
-        "terms:": [
-            "GO:1905564",
+        "terms": [
+            "GO:0002041",
             "GO:0045766",
-            "GO:0032869"
+            "GO:0005520"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -481,7 +441,7 @@
     {
         "gene": "UniProtKB:Q8WXF5",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0043560",
             "GO:0046627"
@@ -501,7 +461,7 @@
     {
         "gene": "UniProtKB:P08047",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:1905564",
             "GO:0045766",
             "GO:0032869"
@@ -519,9 +479,49 @@
         "al_score": 12
     },
     {
-        "gene": "UniProtKB:Q9NRG9",
+        "gene": "UniProtKB:Q8NGI0",
         "count": 3,
-        "terms:": [
+        "terms": [
+            "GO:0001525",
+            "GO:0001938",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 0
+        },
+        "al_score": 12
+    },
+    {
+        "gene": "UniProtKB:P19338",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0043560",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 12
+    },
+    {
+        "gene": "UniProtKB:Q8IZT6",
+        "count": 3,
+        "terms": [
             "GO:0001525",
             "GO:0045766",
             "GO:0032869"
@@ -541,7 +541,7 @@
     {
         "gene": "UniProtKB:Q92847",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:1905564",
             "GO:1903672",
             "GO:0032869"
@@ -559,12 +559,12 @@
         "al_score": 12
     },
     {
-        "gene": "UniProtKB:P20248",
+        "gene": "UniProtKB:Q9UKV0",
         "count": 3,
-        "terms:": [
-            "GO:0002041",
-            "GO:0045766",
-            "GO:0005520"
+        "terms": [
+            "GO:0001525",
+            "GO:0090050",
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -579,69 +579,29 @@
         "al_score": 12
     },
     {
-        "gene": "UniProtKB:Q9H1A4",
+        "gene": "UniProtKB:Q9NRG9",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0043560",
-            "GO:0046627"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 1,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 12
-    },
-    {
-        "gene": "UniProtKB:P19338",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0043560",
-            "GO:0046627"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 1,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 12
-    },
-    {
-        "gene": "UniProtKB:Q9NQB0",
-        "count": 3,
-        "terms:": [
             "GO:0045766",
-            "GO:0006006",
-            "GO:1901142"
+            "GO:0032869"
         ],
         "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
+            "nterms_angio": 2,
+            "nterms_dia": 1,
             "nterms_angio+": 1,
             "nterms_angio-": 0,
-            "nterms_angio0": 0,
+            "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 2
+            "nterms_dia0": 1
         },
         "al_score": 12
     },
     {
         "gene": "UniProtKB:Q14188",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0045765",
             "GO:0045766",
             "GO:0006006"
@@ -659,11 +619,31 @@
         "al_score": 12
     },
     {
-        "gene": "UniProtKB:Q9UKV0",
+        "gene": "UniProtKB:Q9H1A4",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0090050",
+            "GO:0043560",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 12
+    },
+    {
+        "gene": "UniProtKB:P14618",
+        "count": 3,
+        "terms": [
+            "GO:0002040",
+            "GO:1903672",
             "GO:0032869"
         ],
         "term_enum_scores": {
@@ -679,67 +659,49 @@
         "al_score": 12
     },
     {
-        "gene": "UniProtKB:Q8NGI0",
+        "gene": "UniProtKB:P50120",
         "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0001938",
-            "GO:0046627"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 1,
-            "nterms_dia-": 0,
-            "nterms_dia0": 0
-        },
-        "al_score": 12
-    },
-    {
-        "gene": "UniProtKB:Q9C0C7",
-        "count": 2,
-        "terms:": [
+        "terms": [
+            "GO:1905564",
             "GO:0045766",
             "GO:0032869"
         ],
         "term_enum_scores": {
-            "nterms_angio": 1,
+            "nterms_angio": 2,
             "nterms_dia": 1,
             "nterms_angio+": 1,
             "nterms_angio-": 0,
-            "nterms_angio0": 0,
+            "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
         },
-        "al_score": 11
+        "al_score": 12
     },
     {
-        "gene": "UniProtKB:Q9UQP3",
-        "count": 2,
-        "terms:": [
-            "GO:1903672",
-            "GO:0007519"
+        "gene": "UniProtKB:Q9NQB0",
+        "count": 3,
+        "terms": [
+            "GO:0045766",
+            "GO:0006006",
+            "GO:1901142"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 1,
+            "nterms_dia": 2,
             "nterms_angio+": 1,
             "nterms_angio-": 0,
             "nterms_angio0": 0,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia0": 2
         },
-        "al_score": 11
+        "al_score": 12
     },
     {
-        "gene": "UniProtKB:Q99958",
+        "gene": "UniProtKB:Q15818",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0090050",
             "GO:0008286"
         ],
@@ -756,11 +718,68 @@
         "al_score": 11
     },
     {
-        "gene": "UniProtKB:A8K2U0",
+        "gene": "UniProtKB:Q15427",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
-            "GO:0032869"
+            "GO:0014856"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 11
+    },
+    {
+        "gene": "UniProtKB:P49023",
+        "count": 2,
+        "terms": [
+            "GO:0045766",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 11
+    },
+    {
+        "gene": "UniProtKB:Q8NFV4",
+        "count": 2,
+        "terms": [
+            "GO:1903672",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 11
+    },
+    {
+        "gene": "UniProtKB:Q9H845",
+        "count": 2,
+        "terms": [
+            "GO:0045766",
+            "GO:0006006"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -777,7 +796,7 @@
     {
         "gene": "UniProtKB:Q8N157",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
             "GO:0008286"
         ],
@@ -794,9 +813,47 @@
         "al_score": 11
     },
     {
-        "gene": "UniProtKB:P07949",
+        "gene": "UniProtKB:Q9NPB8",
         "count": 2,
-        "terms:": [
+        "terms": [
+            "GO:0045766",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 11
+    },
+    {
+        "gene": "UniProtKB:P52789",
+        "count": 2,
+        "terms": [
+            "GO:0045766",
+            "GO:0006006"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 11
+    },
+    {
+        "gene": "UniProtKB:Q9C0C7",
+        "count": 2,
+        "terms": [
             "GO:0045766",
             "GO:0032869"
         ],
@@ -813,9 +870,28 @@
         "al_score": 11
     },
     {
+        "gene": "UniProtKB:Q5JQC9",
+        "count": 2,
+        "terms": [
+            "GO:0045766",
+            "GO:0014856"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 11
+    },
+    {
         "gene": "UniProtKB:O75414",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:1903672",
             "GO:0043560"
         ],
@@ -834,7 +910,7 @@
     {
         "gene": "UniProtKB:P14210",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
             "GO:0014856"
         ],
@@ -851,30 +927,11 @@
         "al_score": 11
     },
     {
-        "gene": "UniProtKB:O75460",
+        "gene": "UniProtKB:P07949",
         "count": 2,
-        "terms:": [
-            "GO:0001935",
-            "GO:1901142"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 11
-    },
-    {
-        "gene": "UniProtKB:Q9H845",
-        "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
-            "GO:0006006"
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -889,9 +946,9 @@
         "al_score": 11
     },
     {
-        "gene": "UniProtKB:Q15818",
+        "gene": "UniProtKB:Q99958",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0090050",
             "GO:0008286"
         ],
@@ -908,11 +965,11 @@
         "al_score": 11
     },
     {
-        "gene": "UniProtKB:P49023",
+        "gene": "UniProtKB:A8K2U0",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
-            "GO:0007519"
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -927,11 +984,11 @@
         "al_score": 11
     },
     {
-        "gene": "UniProtKB:Q15427",
+        "gene": "UniProtKB:O75460",
         "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0014856"
+        "terms": [
+            "GO:0001935",
+            "GO:1901142"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -946,67 +1003,10 @@
         "al_score": 11
     },
     {
-        "gene": "UniProtKB:Q5JQC9",
+        "gene": "UniProtKB:Q9UQP3",
         "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0014856"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 11
-    },
-    {
-        "gene": "UniProtKB:Q8NFV4",
-        "count": 2,
-        "terms:": [
+        "terms": [
             "GO:1903672",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 11
-    },
-    {
-        "gene": "UniProtKB:P52789",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0006006"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 11
-    },
-    {
-        "gene": "UniProtKB:Q9NPB8",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
             "GO:0007519"
         ],
         "term_enum_scores": {
@@ -1024,7 +1024,7 @@
     {
         "gene": "UniProtKB:P01344",
         "count": 8,
-        "terms:": [
+        "terms": [
             "GO:0002040",
             "GO:1905564",
             "GO:0045766",
@@ -1047,9 +1047,77 @@
         "al_score": 6
     },
     {
+        "gene": "UniProtKB:Q9Y653",
+        "count": 5,
+        "terms": [
+            "GO:0001525",
+            "GO:0043559",
+            "GO:1901143",
+            "GO:1901142",
+            "GO:0038020"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 4,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 4
+        },
+        "al_score": 5
+    },
+    {
+        "gene": "UniProtKB:Q6ULP2",
+        "count": 7,
+        "terms": [
+            "GO:0001525",
+            "GO:0001938",
+            "GO:0001937",
+            "GO:0001935",
+            "GO:0032869",
+            "GO:0038016",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 4,
+            "nterms_dia": 3,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 3
+        },
+        "al_score": 5
+    },
+    {
+        "gene": "UniProtKB:P13688",
+        "count": 5,
+        "terms": [
+            "GO:0001525",
+            "GO:1903670",
+            "GO:0032869",
+            "GO:1901143",
+            "GO:0038016"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 3,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 3
+        },
+        "al_score": 5
+    },
+    {
         "gene": "UniProtKB:U3KPV4",
         "count": 7,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045765",
             "GO:0001936",
@@ -1071,33 +1139,9 @@
         "al_score": 5
     },
     {
-        "gene": "UniProtKB:Q6ULP2",
-        "count": 7,
-        "terms:": [
-            "GO:0001525",
-            "GO:0001938",
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0032869",
-            "GO:0038016",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 4,
-            "nterms_dia": 3,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 5
-    },
-    {
         "gene": "UniProtKB:P42336",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0006006",
             "GO:0038028",
@@ -1119,34 +1163,12 @@
     {
         "gene": "UniProtKB:P31749",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0002042",
             "GO:0001938",
             "GO:0032869",
             "GO:0006006",
             "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 3,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 5
-    },
-    {
-        "gene": "UniProtKB:P13688",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:1903670",
-            "GO:0032869",
-            "GO:1901143",
-            "GO:0038016"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -1163,7 +1185,7 @@
     {
         "gene": "UniProtKB:O95831",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0002042",
             "GO:0001938",
             "GO:0032869",
@@ -1183,98 +1205,9 @@
         "al_score": 5
     },
     {
-        "gene": "UniProtKB:Q9Y653",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:0043559",
-            "GO:1901143",
-            "GO:1901142",
-            "GO:0038020"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 4,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 4
-        },
-        "al_score": 5
-    },
-    {
-        "gene": "UniProtKB:P51636",
-        "count": 6,
-        "terms:": [
-            "GO:0001938",
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0008286",
-            "GO:0014859",
-            "GO:0014856"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 3,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 4
-    },
-    {
-        "gene": "UniProtKB:P98160",
-        "count": 6,
-        "terms:": [
-            "GO:0001525",
-            "GO:0043534",
-            "GO:0001938",
-            "GO:0016525",
-            "GO:0001935",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 5,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 3,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 4
-    },
-    {
-        "gene": "UniProtKB:Q13685",
-        "count": 4,
-        "terms:": [
-            "GO:0001525",
-            "GO:0060055",
-            "GO:0043534",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 3,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 4
-    },
-    {
         "gene": "UniProtKB:Q03135",
         "count": 6,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0001938",
             "GO:0001937",
@@ -1295,32 +1228,9 @@
         "al_score": 4
     },
     {
-        "gene": "UniProtKB:Q8WXS3",
-        "count": 6,
-        "terms:": [
-            "GO:1905564",
-            "GO:0045766",
-            "GO:0006006",
-            "GO:0038028",
-            "GO:0048633",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 4,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 3
-        },
-        "al_score": 4
-    },
-    {
         "gene": "UniProtKB:P45844",
         "count": 6,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0002040",
             "GO:0001938",
@@ -1341,32 +1251,32 @@
         "al_score": 4
     },
     {
-        "gene": "UniProtKB:Q96EB6",
+        "gene": "UniProtKB:Q8WXS3",
         "count": 6,
-        "terms:": [
-            "GO:0001525",
-            "GO:0002042",
-            "GO:0001938",
+        "terms": [
+            "GO:1905564",
             "GO:0045766",
-            "GO:0014858",
+            "GO:0006006",
+            "GO:0038028",
+            "GO:0048633",
             "GO:0046628"
         ],
         "term_enum_scores": {
-            "nterms_angio": 4,
-            "nterms_dia": 2,
+            "nterms_angio": 2,
+            "nterms_dia": 4,
             "nterms_angio+": 1,
             "nterms_angio-": 0,
-            "nterms_angio0": 3,
+            "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 1,
-            "nterms_dia0": 1
+            "nterms_dia0": 3
         },
         "al_score": 4
     },
     {
         "gene": "UniProtKB:Q7Z7A4",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:1903670",
             "GO:0032869",
             "GO:1901143",
@@ -1387,7 +1297,7 @@
     {
         "gene": "UniProtKB:O75923",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0001938",
             "GO:0007519",
@@ -1406,111 +1316,101 @@
         "al_score": 4
     },
     {
-        "gene": "UniProtKB:Q7KZI7",
-        "count": 3,
-        "terms:": [
-            "GO:0002042",
-            "GO:0032869",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:P80108",
-        "count": 3,
-        "terms:": [
-            "GO:0002042",
-            "GO:0032869",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:Q0P651",
-        "count": 3,
-        "terms:": [
+        "gene": "UniProtKB:Q13685",
+        "count": 4,
+        "terms": [
             "GO:0001525",
-            "GO:0032869",
-            "GO:0008286"
+            "GO:0060055",
+            "GO:0043534",
+            "GO:0043403"
         ],
         "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
+            "nterms_angio": 3,
+            "nterms_dia": 1,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
+            "nterms_angio0": 3,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 4
+    },
+    {
+        "gene": "UniProtKB:P51636",
+        "count": 6,
+        "terms": [
+            "GO:0001938",
+            "GO:0001937",
+            "GO:0001935",
+            "GO:0008286",
+            "GO:0014859",
+            "GO:0014856"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 3,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 2
+            "nterms_dia0": 3
         },
-        "al_score": 3
+        "al_score": 4
     },
     {
-        "gene": "UniProtKB:O60504",
+        "gene": "UniProtKB:Q96EB6",
+        "count": 6,
+        "terms": [
+            "GO:0001525",
+            "GO:0002042",
+            "GO:0001938",
+            "GO:0045766",
+            "GO:0014858",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 4,
+            "nterms_dia": 2,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 3,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 1
+        },
+        "al_score": 4
+    },
+    {
+        "gene": "UniProtKB:P98160",
+        "count": 6,
+        "terms": [
+            "GO:0001525",
+            "GO:0043534",
+            "GO:0001938",
+            "GO:0016525",
+            "GO:0001935",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 5,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 3,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 4
+    },
+    {
+        "gene": "UniProtKB:A6NKG5",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0014841",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:Q14118",
-        "count": 3,
-        "terms:": [
-            "GO:0060055",
-            "GO:0007519",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:Q16539",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0006006",
             "GO:0007519"
         ],
         "term_enum_scores": {
@@ -1526,32 +1426,12 @@
         "al_score": 3
     },
     {
-        "gene": "UniProtKB:P80188",
+        "gene": "UniProtKB:P51153",
         "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0006006",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:P08183",
-        "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0032869",
-            "GO:0007519"
+            "GO:0032593"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -1568,7 +1448,7 @@
     {
         "gene": "UniProtKB:P49841",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0008286",
             "GO:0043560",
@@ -1588,31 +1468,111 @@
         "al_score": 3
     },
     {
-        "gene": "UniProtKB:P61221",
+        "gene": "UniProtKB:Q08AH3",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0045765",
-            "GO:0045766",
-            "GO:0032869",
-            "GO:0046628"
+            "GO:0001938",
+            "GO:0001937",
+            "GO:0001935",
+            "GO:0006006"
         ],
         "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 2,
+            "nterms_angio": 4,
+            "nterms_dia": 1,
             "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 3
+    },
+    {
+        "gene": "UniProtKB:P07203",
+        "count": 3,
+        "terms": [
+            "GO:0060055",
+            "GO:0043534",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 2,
             "nterms_dia+": 0,
-            "nterms_dia-": 1,
+            "nterms_dia-": 0,
             "nterms_dia0": 1
+        },
+        "al_score": 3
+    },
+    {
+        "gene": "UniProtKB:P80188",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0006006",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 3
+    },
+    {
+        "gene": "UniProtKB:O14908",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0002040",
+            "GO:0014732"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 3
+    },
+    {
+        "gene": "UniProtKB:Q0P651",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0032869",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
         },
         "al_score": 3
     },
     {
         "gene": "UniProtKB:P51608",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0001938",
             "GO:0016525",
@@ -1634,7 +1594,7 @@
     {
         "gene": "UniProtKB:O95477",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0002040",
             "GO:0007519",
             "GO:0043403"
@@ -1652,32 +1612,12 @@
         "al_score": 3
     },
     {
-        "gene": "UniProtKB:P07203",
+        "gene": "UniProtKB:Q9NQ30",
         "count": 3,
-        "terms:": [
-            "GO:0060055",
-            "GO:0043534",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:O14908",
-        "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0002040",
-            "GO:0014732"
+            "GO:0005520"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -1692,53 +1632,33 @@
         "al_score": 3
     },
     {
-        "gene": "UniProtKB:P51153",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0032869",
-            "GO:0032593"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:Q08AH3",
+        "gene": "UniProtKB:P61221",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0001938",
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0006006"
+            "GO:0045765",
+            "GO:0045766",
+            "GO:0032869",
+            "GO:0046628"
         ],
         "term_enum_scores": {
-            "nterms_angio": 4,
-            "nterms_dia": 1,
+            "nterms_angio": 3,
+            "nterms_dia": 2,
             "nterms_angio+": 1,
-            "nterms_angio-": 1,
+            "nterms_angio-": 0,
             "nterms_angio0": 2,
             "nterms_dia+": 0,
-            "nterms_dia-": 0,
+            "nterms_dia-": 1,
             "nterms_dia0": 1
         },
         "al_score": 3
     },
     {
-        "gene": "UniProtKB:A6NKG5",
+        "gene": "UniProtKB:Q16539",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0014841",
+            "GO:0006006",
             "GO:0007519"
         ],
         "term_enum_scores": {
@@ -1754,86 +1674,109 @@
         "al_score": 3
     },
     {
-        "gene": "UniProtKB:Q9NQ30",
+        "gene": "UniProtKB:Q7KZI7",
         "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0002040",
-            "GO:0005520"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 3
-    },
-    {
-        "gene": "UniProtKB:P29353",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
+        "terms": [
+            "GO:0002042",
+            "GO:0032869",
             "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 1,
+            "nterms_dia": 2,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia0": 2
         },
-        "al_score": 2
+        "al_score": 3
     },
     {
-        "gene": "UniProtKB:Q16270",
-        "count": 2,
-        "terms:": [
-            "GO:0002040",
-            "GO:0005520"
+        "gene": "UniProtKB:P80108",
+        "count": 3,
+        "terms": [
+            "GO:0002042",
+            "GO:0032869",
+            "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 1,
+            "nterms_dia": 2,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia0": 2
         },
-        "al_score": 2
+        "al_score": 3
     },
     {
-        "gene": "UniProtKB:P29279",
-        "count": 2,
-        "terms:": [
+        "gene": "UniProtKB:O60504",
+        "count": 3,
+        "terms": [
             "GO:0001525",
-            "GO:0005520"
+            "GO:0014841",
+            "GO:0043403"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 1,
+            "nterms_dia": 2,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia0": 2
         },
-        "al_score": 2
+        "al_score": 3
     },
     {
-        "gene": "UniProtKB:Q9Y5B8",
+        "gene": "UniProtKB:P08183",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0032869",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 3
+    },
+    {
+        "gene": "UniProtKB:Q14118",
+        "count": 3,
+        "terms": [
+            "GO:0060055",
+            "GO:0007519",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 3
+    },
+    {
+        "gene": "UniProtKB:Q92569",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0002042",
             "GO:0008286"
         ],
@@ -1850,47 +1793,9 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P42345",
-        "count": 2,
-        "terms:": [
-            "GO:0001938",
-            "GO:1904206"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:P07814",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
         "gene": "UniProtKB:P39059",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0007519"
         ],
@@ -1907,11 +1812,11 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:Q9UBN7",
+        "gene": "UniProtKB:Q96B36",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0007519"
+            "GO:0014732"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -1926,9 +1831,9 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P54259",
+        "gene": "UniProtKB:P42338",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0060055",
             "GO:1903671",
             "GO:0001935",
@@ -1947,11 +1852,30 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P63244",
+        "gene": "UniProtKB:Q99424",
         "count": 2,
-        "terms:": [
+        "terms": [
+            "GO:1905564",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:Q6UXT9",
+        "count": 2,
+        "terms": [
             "GO:0001525",
-            "GO:0007519"
+            "GO:0043403"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -1968,7 +1892,7 @@
     {
         "gene": "UniProtKB:Q9BWC9",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0007519"
         ],
@@ -1985,10 +1909,48 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P18065",
+        "gene": "UniProtKB:P42345",
         "count": 2,
-        "terms:": [
-            "GO:0001525",
+        "terms": [
+            "GO:0001938",
+            "GO:1904206"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:Q99999",
+        "count": 2,
+        "terms": [
+            "GO:0001938",
+            "GO:1904206"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:P51589",
+        "count": 2,
+        "terms": [
+            "GO:0001938",
             "GO:0005520"
         ],
         "term_enum_scores": {
@@ -2004,9 +1966,47 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:Q96ER9",
+        "gene": "UniProtKB:Q16270",
+        "count": 2,
+        "terms": [
+            "GO:0002040",
+            "GO:0005520"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:P56945",
+        "count": 2,
+        "terms": [
+            "GO:1903670",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:P49815",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:1905563",
             "GO:0032869",
             "GO:0046626",
@@ -2027,7 +2027,7 @@
     {
         "gene": "UniProtKB:Q13887",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0043403"
         ],
@@ -2044,11 +2044,11 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:Q96B36",
+        "gene": "UniProtKB:Q9Y5B8",
         "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0014732"
+        "terms": [
+            "GO:0002042",
+            "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2063,29 +2063,10 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P13747",
+        "gene": "UniProtKB:P18065",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:P51589",
-        "count": 2,
-        "terms:": [
-            "GO:0001938",
             "GO:0005520"
         ],
         "term_enum_scores": {
@@ -2101,11 +2082,30 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:Q8IWT3",
+        "gene": "UniProtKB:P05090",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0001525",
-            "GO:0043403"
+            "GO:0006006"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:P29279",
+        "count": 2,
+        "terms": [
+            "GO:0001525",
+            "GO:0005520"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2122,7 +2122,7 @@
     {
         "gene": "UniProtKB:O14514",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:1905564",
             "GO:0016525",
             "GO:0045766",
@@ -2141,66 +2141,9 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P53805",
-        "count": 2,
-        "terms:": [
-            "GO:0002040",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:Q99424",
-        "count": 2,
-        "terms:": [
-            "GO:1905564",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:Q99999",
-        "count": 2,
-        "terms:": [
-            "GO:0001938",
-            "GO:1904206"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
         "gene": "UniProtKB:Q9Y6N7",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0002042",
             "GO:0043403"
         ],
@@ -2217,66 +2160,9 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:Q14774",
-        "count": 2,
-        "terms:": [
-            "GO:0002040",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:Q6UXT9",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:Q92569",
-        "count": 2,
-        "terms:": [
-            "GO:0002042",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:P42338",
+        "gene": "UniProtKB:P54259",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0060055",
             "GO:1903671",
             "GO:0001935",
@@ -2295,29 +2181,10 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P56945",
+        "gene": "UniProtKB:P53805",
         "count": 2,
-        "terms:": [
-            "GO:1903670",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 2
-    },
-    {
-        "gene": "UniProtKB:Q14993",
-        "count": 2,
-        "terms:": [
-            "GO:0060055",
+        "terms": [
+            "GO:0002040",
             "GO:0007519"
         ],
         "term_enum_scores": {
@@ -2333,9 +2200,104 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P49815",
+        "gene": "UniProtKB:P13747",
+        "count": 2,
+        "terms": [
+            "GO:0001525",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:Q14774",
+        "count": 2,
+        "terms": [
+            "GO:0002040",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:P07814",
+        "count": 2,
+        "terms": [
+            "GO:0001525",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:P29353",
+        "count": 2,
+        "terms": [
+            "GO:0001525",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:Q9UBN7",
+        "count": 2,
+        "terms": [
+            "GO:0001525",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:Q96ER9",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:1905563",
             "GO:0032869",
             "GO:0046626",
@@ -2354,11 +2316,49 @@
         "al_score": 2
     },
     {
-        "gene": "UniProtKB:P05090",
+        "gene": "UniProtKB:Q14993",
         "count": 2,
-        "terms:": [
+        "terms": [
+            "GO:0060055",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:P63244",
+        "count": 2,
+        "terms": [
             "GO:0001525",
-            "GO:0006006"
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 2
+    },
+    {
+        "gene": "UniProtKB:Q8IWT3",
+        "count": 2,
+        "terms": [
+            "GO:0001525",
+            "GO:0043403"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2375,7 +2375,7 @@
     {
         "gene": "UniProtKB:O43506",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:1905563",
             "GO:0032869",
@@ -2397,7 +2397,7 @@
     {
         "gene": "UniProtKB:P84090",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001937",
             "GO:0001935",
             "GO:0008286"
@@ -2417,7 +2417,7 @@
     {
         "gene": "UniProtKB:Q96A54",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0045766",
             "GO:0046628"
         ],
@@ -2436,7 +2436,7 @@
     {
         "gene": "UniProtKB:O00482",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0046627"
         ],
@@ -2455,7 +2455,7 @@
     {
         "gene": "UniProtKB:P09012",
         "count": 6,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045765",
             "GO:0001936",
@@ -2478,7 +2478,7 @@
     {
         "gene": "UniProtKB:P41159",
         "count": 6,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045765",
             "GO:0001936",
@@ -2499,33 +2499,9 @@
         "al_score": -5
     },
     {
-        "gene": "UniProtKB:P21359",
-        "count": 7,
-        "terms:": [
-            "GO:0001525",
-            "GO:0045765",
-            "GO:0001938",
-            "GO:0016525",
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 6,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 2,
-            "nterms_angio0": 3,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -6
-    },
-    {
         "gene": "UniProtKB:P25106",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0016525",
             "GO:0032869",
@@ -2547,7 +2523,7 @@
     {
         "gene": "UniProtKB:Q9BT17",
         "count": 7,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0045765",
             "GO:0001938",
@@ -2571,7 +2547,31 @@
     {
         "gene": "UniProtKB:P27216",
         "count": 7,
-        "terms:": [
+        "terms": [
+            "GO:0001525",
+            "GO:0045765",
+            "GO:0001938",
+            "GO:0016525",
+            "GO:0001937",
+            "GO:0001935",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 6,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 2,
+            "nterms_angio0": 3,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -6
+    },
+    {
+        "gene": "UniProtKB:P21359",
+        "count": 7,
+        "terms": [
             "GO:0001525",
             "GO:0045765",
             "GO:0001938",
@@ -2595,7 +2595,7 @@
     {
         "gene": "UniProtKB:Q05513",
         "count": 6,
-        "terms:": [
+        "terms": [
             "GO:0090049",
             "GO:0016525",
             "GO:0032869",
@@ -2618,7 +2618,7 @@
     {
         "gene": "UniProtKB:Q99798",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0002040",
             "GO:0090051",
@@ -2639,7 +2639,7 @@
     {
         "gene": "UniProtKB:Q9UK05",
         "count": 6,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0001938",
             "GO:0016525",
@@ -2660,30 +2660,9 @@
         "al_score": -7
     },
     {
-        "gene": "UniProtKB:Q6P093",
-        "count": 4,
-        "terms:": [
-            "GO:0001525",
-            "GO:0032869",
-            "GO:0043560",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 3,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 2
-        },
-        "al_score": -7
-    },
-    {
         "gene": "UniProtKB:P60606",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0016525",
             "GO:0032869",
@@ -2702,9 +2681,90 @@
         "al_score": -7
     },
     {
+        "gene": "UniProtKB:Q6P093",
+        "count": 4,
+        "terms": [
+            "GO:0001525",
+            "GO:0032869",
+            "GO:0043560",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 3,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 2
+        },
+        "al_score": -7
+    },
+    {
+        "gene": "UniProtKB:O14639",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0090051",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -8
+    },
+    {
+        "gene": "UniProtKB:Q8NEM8",
+        "count": 3,
+        "terms": [
+            "GO:0001938",
+            "GO:0001937",
+            "GO:0006006"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -8
+    },
+    {
+        "gene": "UniProtKB:O00459",
+        "count": 3,
+        "terms": [
+            "GO:0090051",
+            "GO:0032869",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": -8
+    },
+    {
         "gene": "UniProtKB:Q9UBU3",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:1905564",
             "GO:0016525",
             "GO:0001937",
@@ -2724,49 +2784,9 @@
         "al_score": -8
     },
     {
-        "gene": "UniProtKB:Q06413",
+        "gene": "UniProtKB:P50222",
         "count": 3,
-        "terms:": [
-            "GO:0001938",
-            "GO:1905563",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -8
-    },
-    {
-        "gene": "UniProtKB:Q8NEM8",
-        "count": 3,
-        "terms:": [
-            "GO:0001938",
-            "GO:0001937",
-            "GO:0006006"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -8
-    },
-    {
-        "gene": "UniProtKB:O14639",
-        "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0090051",
             "GO:0007519"
@@ -2784,29 +2804,9 @@
         "al_score": -8
     },
     {
-        "gene": "UniProtKB:Q9NZW5",
+        "gene": "UniProtKB:Q13370",
         "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0016525",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -8
-    },
-    {
-        "gene": "UniProtKB:O75448",
-        "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0016525",
             "GO:0032869"
@@ -2824,9 +2824,29 @@
         "al_score": -8
     },
     {
+        "gene": "UniProtKB:Q9NZW5",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0016525",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -8
+    },
+    {
         "gene": "UniProtKB:Q07021",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0003158",
             "GO:0001937",
             "GO:0043403"
@@ -2844,12 +2864,32 @@
         "al_score": -8
     },
     {
-        "gene": "UniProtKB:P50222",
+        "gene": "UniProtKB:Q06413",
         "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0090051",
+        "terms": [
+            "GO:0001938",
+            "GO:1905563",
             "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -8
+    },
+    {
+        "gene": "UniProtKB:O75448",
+        "count": 3,
+        "terms": [
+            "GO:0001525",
+            "GO:0016525",
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -2866,7 +2906,7 @@
     {
         "gene": "UniProtKB:Q9P1F3",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0001937",
             "GO:0001935",
@@ -2886,29 +2926,9 @@
         "al_score": -8
     },
     {
-        "gene": "UniProtKB:P60484",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0016525",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -8
-    },
-    {
         "gene": "UniProtKB:A6NFH5",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0016525",
             "GO:0032869"
@@ -2926,9 +2946,9 @@
         "al_score": -8
     },
     {
-        "gene": "UniProtKB:Q13370",
+        "gene": "UniProtKB:P60484",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0001525",
             "GO:0016525",
             "GO:0032869"
@@ -2942,33 +2962,13 @@
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
-        },
-        "al_score": -8
-    },
-    {
-        "gene": "UniProtKB:O00459",
-        "count": 3,
-        "terms:": [
-            "GO:0090051",
-            "GO:0032869",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
         },
         "al_score": -8
     },
     {
         "gene": "UniProtKB:Q7Z3H0",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0090051",
             "GO:0032869",
             "GO:0008286"
@@ -2986,238 +2986,10 @@
         "al_score": -8
     },
     {
-        "gene": "UniProtKB:P61586",
+        "gene": "UniProtKB:Q9UQL6",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0090051",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:P17302",
-        "count": 2,
-        "terms:": [
-            "GO:0001937",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:Q96C86",
-        "count": 2,
-        "terms:": [
-            "GO:0001937",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:Q13324",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0048630"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:P24468",
-        "count": 2,
-        "terms:": [
-            "GO:0001937",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:Q9UBJ2",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:P01375",
-        "count": 2,
-        "terms:": [
-            "GO:0001937",
-            "GO:0006006"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:P55347",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 0
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:O95389",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0005520"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:P17693",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0005009"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:P61812",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:O75419",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -9
-    },
-    {
-        "gene": "UniProtKB:Q96EY9",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
             "GO:0032869"
         ],
         "term_enum_scores": {
@@ -3235,7 +3007,7 @@
     {
         "gene": "UniProtKB:Q09428",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0043403"
         ],
@@ -3252,11 +3024,11 @@
         "al_score": -9
     },
     {
-        "gene": "UniProtKB:Q8WVV5",
+        "gene": "UniProtKB:P01375",
         "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0007519"
+        "terms": [
+            "GO:0001937",
+            "GO:0006006"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3271,11 +3043,11 @@
         "al_score": -9
     },
     {
-        "gene": "UniProtKB:P98177",
+        "gene": "UniProtKB:Q96C86",
         "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0008286"
+        "terms": [
+            "GO:0001937",
+            "GO:0007519"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3292,7 +3064,7 @@
     {
         "gene": "UniProtKB:Q9UKU0",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0032869"
         ],
@@ -3311,7 +3083,7 @@
     {
         "gene": "UniProtKB:Q93086",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0048630"
         ],
@@ -3328,11 +3100,182 @@
         "al_score": -9
     },
     {
-        "gene": "UniProtKB:Q9UQL6",
+        "gene": "UniProtKB:Q8WVV5",
         "count": 2,
-        "terms:": [
-            "GO:0090051",
+        "terms": [
+            "GO:0016525",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:P55347",
+        "count": 2,
+        "terms": [
+            "GO:0001525",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 0
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:P17693",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
+            "GO:0005009"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:O95389",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
+            "GO:0005520"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:Q13324",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
+            "GO:0048630"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:O75419",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
             "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:Q96EY9",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:P17302",
+        "count": 2,
+        "terms": [
+            "GO:0001937",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:Q9UBJ2",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:P61586",
+        "count": 2,
+        "terms": [
+            "GO:0090051",
+            "GO:0007519"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3349,7 +3292,7 @@
     {
         "gene": "UniProtKB:P37231",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:1905563",
             "GO:0032869",
@@ -3368,9 +3311,66 @@
         "al_score": -9
     },
     {
+        "gene": "UniProtKB:P98177",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:P61812",
+        "count": 2,
+        "terms": [
+            "GO:0016525",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
+        "gene": "UniProtKB:P24468",
+        "count": 2,
+        "terms": [
+            "GO:0001937",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -9
+    },
+    {
         "gene": "UniProtKB:P05305",
         "count": 11,
-        "terms:": [
+        "terms": [
             "GO:0002042",
             "GO:0001938",
             "GO:1903671",
@@ -3398,7 +3398,7 @@
     {
         "gene": "UniProtKB:Q6UXT8",
         "count": 5,
-        "terms:": [
+        "terms": [
             "GO:0001938",
             "GO:0016525",
             "GO:1905563",
@@ -3418,9 +3418,9 @@
         "al_score": -17
     },
     {
-        "gene": "UniProtKB:P42224",
+        "gene": "UniProtKB:Q5TA50",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0001937",
             "GO:0032869"
@@ -3438,9 +3438,9 @@
         "al_score": -19
     },
     {
-        "gene": "UniProtKB:Q5TA50",
+        "gene": "UniProtKB:P42224",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0001937",
             "GO:0032869"
@@ -3460,7 +3460,7 @@
     {
         "gene": "UniProtKB:Q8TAU0",
         "count": 3,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0001937",
             "GO:0007519"
@@ -3478,9 +3478,9 @@
         "al_score": -19
     },
     {
-        "gene": "UniProtKB:P01019",
+        "gene": "UniProtKB:P28332",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0046628"
         ],
@@ -3497,9 +3497,9 @@
         "al_score": -20
     },
     {
-        "gene": "UniProtKB:P28332",
+        "gene": "UniProtKB:P01019",
         "count": 2,
-        "terms:": [
+        "terms": [
             "GO:0016525",
             "GO:0046628"
         ],
@@ -3518,7 +3518,7 @@
     {
         "gene": "UniProtKB:P09917",
         "count": 4,
-        "terms:": [
+        "terms": [
             "GO:1903671",
             "GO:0016525",
             "GO:0001937",

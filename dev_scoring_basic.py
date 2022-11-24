@@ -84,7 +84,7 @@ def score_genes_v2(destination_file, source_folder="term_genes", use_cross_secti
         gene_count_result = _score_gene_basic(gene,term_genes)
         term_enum_score_set = _score_term_enums(gene_count_result[1]) # add nterms_angio, nterms_dia, nterms_angio+, nterms_angio-, nterms_angio0, nterms_dia+, nterms_dia-, nterms_dia0
         al_score = _score_gene_al(term_enum_score_set)
-        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score}
+        out = {"gene": gene, "count": gene_count_result[0], "terms": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score}
         if use_cross_section == True:
             if term_enum_score_set["nterms_angio"] != 0 and term_enum_score_set["nterms_dia"] != 0:
                 json_gene_scores.append(out)
@@ -115,7 +115,7 @@ def score_genes_v1(allowed_term_ids, destination_file, source_folder="term_genes
         #destination_file = f"{destination_folder}/{gene}.json"
         gene_count_result = _score_gene_basic(gene,term_genes)
         term_enum_score_set = _score_term_enums(gene_count_result[1]) # add nterms_angio, nterms_dia, nterms_angio+, nterms_angio-, nterms_angio0, nterms_dia+, nterms_dia-, nterms_dia0
-        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set}
+        out = {"gene": gene, "count": gene_count_result[0], "terms": gene_count_result[1], "term_enum_scores": term_enum_score_set}
         if use_cross_section == True:
             if term_enum_score_set["nterms_angio"] != 0 and term_enum_score_set["nterms_dia"] != 0:
                 json_gene_scores.append(out)
@@ -177,10 +177,12 @@ def _import_genes_from_term_json(term, source_folder):
 def main():
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
     dest_filename = "gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json"
-    # score_genes_v2(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True, use_v2_workflow=True)
+    # score_genes_v2(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True)
 
-    dest_filename_v1 = "gene_scores/test_score_homosapinesonly=false,v1-term_enums,cross_section(1).json"
-    score_genes_v1(util.get_array_terms("ALL"), dest_filename_v1, source_folder="term_genes/homosapiens_only=false,v1", use_cross_section=True)
+    # dest_filename_v1 = "XXXXXX"
+    # score_genes_v1(util.get_array_terms("ALL"), dest_filename_v1, source_folder="term_genes/homosapiens_only=false,v1", use_cross_section=True)
+
+    util.scoring_results_postprocess("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")
 
     # util.load_json_by_terms("term_genes/homosapiens_only=false,v1", terms_all)
     # termfiles_angiogenesis = util.load_json_by_terms("term_genes/homosapiens_only=false,v1", util.get_array_terms("ANGIOGENESIS"))
