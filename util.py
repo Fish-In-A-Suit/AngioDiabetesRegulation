@@ -14,6 +14,7 @@ import sys
 _response_cycle_counter = 0
 _uniprot_query_result = ""
 
+_uniprot_genes_readlines = ""
 _zfin_ortholog_readlines = ""
 _xenbase_ortholog_readlines = ""
 _mgi_ortholog_readlines = ""
@@ -753,6 +754,8 @@ def load_human_orthologs():
     """
     This function should be called at runtime once to load the ortholog mapping txt files into proper variables.
     """
+    global _uniprot_genes_readlines
+    _uniprot_genes_readlines = readlines("src_data_files/uniprotkb_human_idmapping.dat")
     global _zfin_ortholog_readlines
     _zfin_ortholog_readlines = readlines("src_data_files/zfin_human_ortholog_mapping.txt")
     global _xenbase_ortholog_readlines
@@ -842,10 +845,24 @@ def choose_crashfile(crash_filepaths):
     choice = int(input(f"Enter the number of the crashfile from {display_dictionary}"))
     return display_dictionary[choice]
 
+def uniprot_find_human_symbol(gene_id):
+    """
+    Finds a gene symbol (eg. adgrg) from gene_id (UniProtKB:XXXXX)
+    """
+    if ":" in gene_id: gene_id = gene_id.split(":")[1]
+    for line in _uniprot_genes_readlines:
+        if gene_id in line:
+            line = line.replace("\n", "")
+            split = line.split("\t")
+            gene_symbol = split[2]
+            return gene_symbol
+    return "UniprotError - Gene symbol not found."
+
 def find_gene_symbol_and_name_from_id(gene_id):
     if "UniProtKB" in gene_id:
-        # TODO: SOLVE THIS
-        return "", ""
+        gene_symbol = uniprot_find_human_symbol(gene_id)
+        gene_longname = "" # todo: need to access uniprot_sprot.xml, which takes ages to load
+        return gene_symbol, gene_longname
     elif "ZFIN" in gene_id:
         gene_symbol = zfin_find_human_ortholog(gene_id)[0]
         gene_longname = zfin_find_human_ortholog(gene_id)[1]
@@ -887,10 +904,6 @@ def scoring_results_postprocess(score_results_filepath):
     
     _fn = score_results_filepath.replace(".json", "")
     save_json(final_json_elements, f"{_fn}_postprocess.json")
-
-
-
-
             
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.

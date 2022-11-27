@@ -1,5 +1,7 @@
 import util
 import json
+import xml.etree.ElementTree as ET
+import sys
 
 import logging
 logger = logging.getLogger(__name__)
@@ -18,8 +20,17 @@ def main():
     # test_json = util.read_file_as_json("term_genes_crash/product-search-crash_1669038434.568223_.json")
     # logger.info(test_json[-1]["GO_term"])
 
-    terms_all = util.get_array_terms("ALL")
-    find_products_related_to_GO_terms_new(terms_all, "GO:0043534")
+    # terms_all = util.get_array_terms("ALL")
+    # find_products_related_to_GO_terms_new(terms_all, "GO:0043534")
+
+    myTree = ET.parse("src_data_files/uniprot_sprot_human.xml")
+    
+    i = 0
+    for element in myTree.iter("entry"):
+        logger.debug(element.attrib)
+        if i == 10:
+            sys.exit()
+        i+=1
 
 
 if __name__ == '__main__':
