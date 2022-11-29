@@ -1,4 +1,3 @@
-from asyncio.log import logger
 import util
 import constants
 import json
@@ -157,17 +156,17 @@ def _score_gene_basic(gene, term_genes_list):
 
 def _score_gene_al(term_scores):
     score = (
-        (term_scores["nterms_angio0"] + term_scores["nterms_dia0"]) * 1 +
-        (term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * 10 +
-        (term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * -10
+        ((term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * 10 +
+        (term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * -10) *
+        (term_scores["nterms_angio0"] + term_scores["nterms_dia0"]) * 1 
     )
     return score
 
 def _score_gene_al_e(term_scores):
     score = (
-        (term_scores["nterms_angio0"] + term_scores["nterms_dia0"]) * 1 +
-        2**(term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * min(term_scores["nterms_angio+"], term_scores["nterms_dia+"]) -
-        8**(term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * max(term_scores["nterms_angio-"], term_scores["nterms_dia-"])
+        (2**(term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * min(term_scores["nterms_angio+"], term_scores["nterms_dia+"]) -
+        8**(term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * max(term_scores["nterms_angio-"], term_scores["nterms_dia-"])) *
+        (term_scores["nterms_angio0"] + term_scores["nterms_dia0"]) * 1
     )
     return score
     
@@ -185,14 +184,15 @@ def _import_genes_from_term_json(term, source_folder):
     return genes
 
 def main():
+    #TODO set "to_be_inhibited", based on score?
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
     dest_filename = "gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json"
-    # score_genes_v2(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True)
+    score_genes_v2(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True)
 
     # dest_filename_v1 = "XXXXXX"
     # score_genes_v1(util.get_array_terms("ALL"), dest_filename_v1, source_folder="term_genes/homosapiens_only=false,v1", use_cross_section=True)
 
-    util.scoring_results_postprocess("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")
+    #util.scoring_results_postprocess("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")
 
     # util.load_json_by_terms("term_genes/homosapiens_only=false,v1", terms_all)
     # termfiles_angiogenesis = util.load_json_by_terms("term_genes/homosapiens_only=false,v1", util.get_array_terms("ANGIOGENESIS"))
