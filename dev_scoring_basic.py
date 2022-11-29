@@ -186,6 +186,8 @@ def _import_genes_from_term_json(term, source_folder):
 def main():
     #TODO set "to_be_inhibited", based on score?
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
+    util.load_human_orthologs()
+    
     dest_filename = "gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json"
     score_genes_v2(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True)
 
