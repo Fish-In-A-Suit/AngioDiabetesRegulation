@@ -57,10 +57,13 @@ def _get_ensembl_sequence_API(id, type="cdna"):
         return None
 
 def main():
-    #manual settings
-    gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    # manual settings
+    # gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    gene_list = util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json")[0]
 
-    #TODO get all genes from term_products.json into gene_list
+    # Maybe get all genes from term_products.json into gene_list.
+    # Might not be needed since we are only interested in top 10. Commented function call below executes the desired algorithm.
+    # gene_list = util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")[0]
 
     get_mrna(gene_list, "term_genes/homosapiens_only=false,v2")
 

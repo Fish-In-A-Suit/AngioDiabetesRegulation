@@ -934,7 +934,23 @@ def extract_n_elements_from_json(json_filepath, n, destination_filepath):
             break
     store_json_dictionaries(destination_filepath, results)
     return results
-            
+
+def get_uniprotids_from_json(json_filepath, uniprot_id_identifier="gene"):
+    """
+    Parameters:
+      - json_filepath
+      - uniprot_id_identifier: the json identifier which holds the value of the element's uniprotId
+
+    Returns:
+      - [0]: a list of uniprotIds of elements inside json_filepath
+      - [1]: the entire json object
+    """
+    json_obj = read_file_as_json(json_filepath)
+    uniprotIds = []
+    for el in json_obj:
+        uniprotIds.append(el[uniprot_id_identifier])
+    logger.debug(f"UniprotIds: {uniprotIds}")
+    return uniprotIds, json_obj
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
