@@ -8,6 +8,17 @@ import logging
 logger = logging.getLogger(__name__)
 
 def get_mrna(gene_list, target_folder):
+    """
+    Loops through gene_list and constructs a .json file, where each element has structure:
+    {
+        "UniprotID":
+        "EnsemblID":
+        "ToBeInhibited":
+        "mRNA":
+    }
+    File is saved as target_folder/product_mRNA.json
+    Return: the whole json object
+    """
     ensembl_ids = get_ensembl_ids_from_uniprot_ids(gene_list)
     mRNAs = _get_ensembl_mRNA_sequences(ensembl_ids)
 
@@ -16,6 +27,7 @@ def get_mrna(gene_list, target_folder):
         out = {"UniprotID" : gene_list[i], "EnsemblID" : ensembl_ids[i], "mRNA" : mRNAs[i]}
         json_mRNAs.append(out)
     util.save_json(json_mRNAs, os.path.join(target_folder, "product_mRNA.json"))
+    return json_mRNAs
 
 def get_ensembl_ids_from_uniprot_ids(gene_list):
     ensembl_ids=[]
@@ -57,10 +69,14 @@ def _get_ensembl_sequence_API(id, type="cdna"):
         return None
 
 def main():
-    #manual settings
-    gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    # manual settings
+    # gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    # gene_list = util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section_postprocess.json")[0]
+    gene_list = util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section_postprocess.json", "gene")[0]
 
-    #TODO get all genes from term_products.json into gene_list
+    # Maybe get all genes from term_products.json into gene_list.
+    # Might not be needed since we are only interested in top 10. Commented function call below executes the desired algorithm.
+    # gene_list = util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")[0]
 
     get_mrna(gene_list, "term_genes/homosapiens_only=false,v2")
 

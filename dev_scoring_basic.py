@@ -156,6 +156,10 @@ def _score_gene_basic(gene, term_genes_list):
     return count, terms_involved_in
 
 def _score_gene_al(term_scores):
+    """
+    With the current setting, top genes will be those which have positive angiogenetic and diabetic terms.
+    Score is lower for genes with negative angiogenetic and diabetic terms.
+    """
     score = (
         ((term_scores["nterms_angio+"] + term_scores["nterms_dia+"]) * 10 +
         (term_scores["nterms_angio-"] + term_scores["nterms_dia-"]) * -10) *

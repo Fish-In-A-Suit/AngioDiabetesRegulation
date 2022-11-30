@@ -23,14 +23,16 @@ def main():
     # terms_all = util.get_array_terms("ALL")
     # find_products_related_to_GO_terms_new(terms_all, "GO:0043534")
 
-    myTree = ET.parse("src_data_files/uniprot_sprot_human.xml")
-    
-    i = 0
-    for element in myTree.iter("entry"):
-        logger.debug(element.attrib)
-        if i == 10:
-            sys.exit()
-        i+=1
+    # myTree = ET.parse("src_data_files/uniprot_sprot_human.xml")
+    # i = 0
+    # for element in myTree.iter("entry"):
+    #    logger.debug(element.attrib)
+    #    if i == 10:
+    #        sys.exit()
+    #    i+=1
+
+    #util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json")[0]
+    util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json","gene")[0]
 
 
 if __name__ == '__main__':

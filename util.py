@@ -238,7 +238,7 @@ def store_json_dictionaries(filepath, dictionaries):
     if json.dumps(dictionaries) != "[]":
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         file = open(filepath, "w+")
-        file.write(json.dumps(dictionaries)+"\n")
+        json.dump(dictionaries, file, indent=4)
         file.close()
     else: logger.info("JSON for analysis progress not stored, as it is empty.")
 
@@ -904,7 +904,72 @@ def scoring_results_postprocess(score_results_filepath):
     
     _fn = score_results_filepath.replace(".json", "")
     save_json(final_json_elements, f"{_fn}_postprocess.json")
-            
+
+def get_ensembl_ids_from_uniprot_ids(gene_list):
+    """
+    Gets a gene_list of UniprotIds, returns a list of appropriate EnsemblIds
+    """
+    def _get_ensembl_id_from_uniprot_id(gene):
+        gene_id = gene.split(":")[1]
+        up_query = _uniprot_query_API(gene_id, type="prot")
+        ensembl_id = _return_ensembl_from_id_and_uniprot_query(gene_id, up_query)
+        return ensembl_id
+
+    ensembl_ids=[]
+    for gene in gene_list:
+        ensembl_ids.append(_get_ensembl_id_from_uniprot_id(gene))
+    return ensembl_ids
+
+def extract_n_elements_from_json(json_filepath, n, destination_filepath):
+    """
+    Takes n elements from the start of the json and saves them into destination_filepath. Also returns computed json object.
+    Note: n should be from 1-infinity. The 0 convention is handled in code. So if n=10, 10 elements are returned (from 0 to 9)
+    """
+    json_object = read_file_as_json(json_filepath)
+    results = []
+    for index, element in enumerate(json_object):
+        if index < n:
+            results.append(element)
+        else:
+            break
+    store_json_dictionaries(destination_filepath, results)
+    return results
+
+def get_uniprotids_from_json(json_filepath, uniprot_id_identifier="gene"):
+    """
+    Note: this function is deprecated. Rather use get_identifier_values_from_json with the "gene" identifier
+    Parameters:
+      - json_filepath
+      - uniprot_id_identifier: the json identifier which holds the value of the element's uniprotId
+
+    Returns:
+      - [0]: a list of uniprotIds of elements inside json_filepath
+      - [1]: the entire json object
+    """
+    #json_obj = read_file_as_json(json_filepath)
+    #uniprotIds = []
+    #for el in json_obj:
+    #    uniprotIds.append(el[uniprot_id_identifier])
+    #logger.debug(f"UniprotIds: {uniprotIds}")
+    #return uniprotIds, json_obj
+    return get_identifier_values_from_json(json_filepath, uniprot_id_identifier)
+
+def get_identifier_values_from_json(json_filepath, identifier):
+    """
+    Loops through all top-level json elements, queries identifier of each element and appends the value to list
+
+    Returns:
+      - [0]: list of identifier values
+      - [1]: entire json obj
+
+    Example: you want to get all UniprotIds (of all elements) inside a json -> use get_identifier_values_from_json(filepath, "gene")
+    """
+    json_obj = read_file_as_json(json_filepath)
+    identifier_values = []
+    for element in json_obj:
+        identifier_values.append(element[identifier])
+    logger.debug(f"Values for identifier {identifier}: {identifier_values}")
+    return identifier_values, json_obj
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
