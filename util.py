@@ -238,7 +238,7 @@ def store_json_dictionaries(filepath, dictionaries):
     if json.dumps(dictionaries) != "[]":
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         file = open(filepath, "w+")
-        file.write(json.dumps(dictionaries)+"\n")
+        json.dump(dictionaries, file, indent=4)
         file.close()
     else: logger.info("JSON for analysis progress not stored, as it is empty.")
 
@@ -919,6 +919,21 @@ def get_ensembl_ids_from_uniprot_ids(gene_list):
     for gene in gene_list:
         ensembl_ids.append(_get_ensembl_id_from_uniprot_id(gene))
     return ensembl_ids
+
+def extract_n_elements_from_json(json_filepath, n, destination_filepath):
+    """
+    Takes n elements from the start of the json and saves them into destination_filepath. Also returns computed json object.
+    Note: n should be from 1-infinity. The 0 convention is handled in code. So if n=10, 10 elements are returned (from 0 to 9)
+    """
+    json_object = read_file_as_json(json_filepath)
+    results = []
+    for index, element in enumerate(json_object):
+        if index < n:
+            results.append(element)
+        else:
+            break
+    store_json_dictionaries(destination_filepath, results)
+    return results
             
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
