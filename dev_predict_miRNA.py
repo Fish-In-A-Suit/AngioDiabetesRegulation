@@ -8,7 +8,18 @@ import logging
 logger = logging.getLogger(__name__)
 
 def get_mrna(gene_list, to_be_inhibited, target_folder):
-    ensembl_ids = get_ensembl_ids_from_uniprot_ids(gene_list)
+    """
+    Loops through gene_list and constructs a .json file, where each element has structure:
+    {
+        "UniprotID":
+        "EnsemblID":
+        "ToBeInhibited":
+        "mRNA":
+    }
+    File is saved as target_folder/product_mRNA.json
+    Return: the whole json object
+    """
+    ensembl_ids = util.get_ensembl_ids_from_uniprot_ids(gene_list)
     mRNAs = _get_ensembl_mRNA_sequences(ensembl_ids)
 
     json_mRNAs = []
@@ -16,18 +27,7 @@ def get_mrna(gene_list, to_be_inhibited, target_folder):
         out = {"UniprotID" : gene_list[i], "EnsemblID" : ensembl_ids[i], "ToBeInhibited":to_be_inhibited[i], "mRNA" : mRNAs[i]}
         json_mRNAs.append(out)
     util.save_json(json_mRNAs, os.path.join(target_folder, "product_mRNA.json"))
-
-def get_ensembl_ids_from_uniprot_ids(gene_list):
-    ensembl_ids=[]
-    for gene in gene_list:
-        ensembl_ids.append(_get_ensembl_id_from_uniprot_id(gene))
-    return ensembl_ids
-
-def _get_ensembl_id_from_uniprot_id(gene):
-    gene_id = gene.split(":")[1]
-    up_query = util._uniprot_query_API(gene_id, type="prot")
-    ensembl_id = util._return_ensembl_from_id_and_uniprot_query(gene_id, up_query)
-    return ensembl_id
+    return json_mRNAs
 
 def _get_ensembl_mRNA_sequences(ensembl_ids):
     mRNAs=[]
@@ -109,8 +109,6 @@ def predict_miRNAs(mRNAs, to_be_inhibited, length, treshold_to_accept):
 
     treshold_to_accept - what is the minimal percentage of the miRNA length that must fit to a mRNA in order to be considered as 'fitting'
     """
-
-
     mRNAsubsequences = [] #with this the function _find_all_unique_substrings_from_string is only called once instead of each time in the loop of _overlap_substring_on_mRNAs
     for mRNA in mRNAs:
         mRNAsubsequences.append(list(_find_all_unique_substrings_from_string(mRNA, length)))

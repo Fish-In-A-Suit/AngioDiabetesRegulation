@@ -904,6 +904,21 @@ def scoring_results_postprocess(score_results_filepath):
     
     _fn = score_results_filepath.replace(".json", "")
     save_json(final_json_elements, f"{_fn}_postprocess.json")
+
+def get_ensembl_ids_from_uniprot_ids(gene_list):
+    """
+    Gets a gene_list of UniprotIds, returns a list of appropriate EnsemblIds
+    """
+    def _get_ensembl_id_from_uniprot_id(gene):
+        gene_id = gene.split(":")[1]
+        up_query = _uniprot_query_API(gene_id, type="prot")
+        ensembl_id = _return_ensembl_from_id_and_uniprot_query(gene_id, up_query)
+        return ensembl_id
+
+    ensembl_ids=[]
+    for gene in gene_list:
+        ensembl_ids.append(_get_ensembl_id_from_uniprot_id(gene))
+    return ensembl_ids
             
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
