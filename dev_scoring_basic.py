@@ -85,7 +85,8 @@ def score_genes_v2(destination_file, source_folder="term_genes", use_cross_secti
         term_enum_score_set = _score_term_enums(gene_count_result[1]) # add nterms_angio, nterms_dia, nterms_angio+, nterms_angio-, nterms_angio0, nterms_dia+, nterms_dia-, nterms_dia0
         al_score = _score_gene_al(term_enum_score_set)
         al_e_score = _score_gene_al_e(term_enum_score_set)
-        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score,  "al_e_score": al_e_score}
+        al_corr_score = _score_gene_al_corr(term_enum_score_set)
+        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score,  "al_e_score": al_e_score, "al_corr_score": al_corr_score}
         if use_cross_section == True:
             if term_enum_score_set["nterms_angio"] != 0 and term_enum_score_set["nterms_dia"] != 0:
                 json_gene_scores.append(out)
@@ -93,7 +94,7 @@ def score_genes_v2(destination_file, source_folder="term_genes", use_cross_secti
             json_gene_scores.append(out)
     logger.info(f"[gene_scores]: {json_gene_scores}")
 
-    json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "al_e_score")
+    json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "al_corr_score")
     util.save_json(json_gene_scores, destination_file)
     logger.info (f"Done with scoring!")
 
@@ -170,6 +171,16 @@ def _score_gene_al_e(term_scores):
     )
     return score
     
+def _score_gene_al_corr(term_scores):
+    score = (
+        min(term_scores["nterms_angio"]*term_scores["nterms_dia"], 1) * (
+        (min(term_scores["nterms_angio+"]*term_scores["nterms_dia+"], 1) * max(1-(term_scores["nterms_angio-"]+term_scores["nterms_dia-"]), 0) + 
+        max(-(term_scores["nterms_angio-"]*term_scores["nterms_dia-"]), -1) * max(1-(term_scores["nterms_angio-"]+term_scores["nterms_dia-"]), 0)) * 10 +
+        (term_scores["nterms_angio+"]**(1/2) + term_scores["nterms_dia+"]**(1/2) - term_scores["nterms_angio-"]**(1/2) - term_scores["nterms_dia-"]**(1/2) )
+        ) * max(term_scores["nterms_angio0"]**(1/3) + term_scores["nterms_dia0"]**(1/3), 1)
+        )
+    return score
+
 def _import_genes_from_term_json(term, source_folder):
     """
     TODO
@@ -186,7 +197,7 @@ def _import_genes_from_term_json(term, source_folder):
 def main():
     #TODO set "to_be_inhibited", based on score?
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
-    util.load_human_orthologs()
+    #util.load_human_orthologs()
     
     dest_filename = "gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json"
     score_genes_v2(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True)
