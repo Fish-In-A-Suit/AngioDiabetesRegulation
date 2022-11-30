@@ -8,17 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 def get_mrna(gene_list, to_be_inhibited, target_folder):
-    """
-    Loops through gene_list and constructs a .json file, where each element has structure:
-    {
-        "UniprotID":
-        "EnsemblID":
-        "ToBeInhibited":
-        "mRNA":
-    }
-    File is saved as target_folder/product_mRNA.json
-    Return: the whole json object
-    """
+    
     ensembl_ids = util.get_ensembl_ids_from_uniprot_ids(gene_list)
     mRNAs = _get_ensembl_mRNA_sequences(ensembl_ids)
 
@@ -126,12 +116,12 @@ def predict_miRNAs(mRNAs, to_be_inhibited, length, treshold_to_accept):
     logger.debug(substring_results)
 
 def main():
-    gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    mrna_filepath = "term_genes/homosapiens_only=false,v2/product_mRNA.json"
+    #gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    gene_list = util.get_identifier_values_from_json(mrna_filepath, "gene")[0]
     to_be_inhibited = [1, 1, 1]
-    get_mrna(gene_list, to_be_inhibited, "term_genes/homosapiens_only=false,v2")
 
-    
-    #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
+    mRNAs = util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0] #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
     #predicted_miRNAs = predict_miRNAs(mRNAs, to_be_inhibited, 10, 0.5)
 
 

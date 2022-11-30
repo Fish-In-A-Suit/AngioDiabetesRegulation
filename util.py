@@ -937,6 +937,7 @@ def extract_n_elements_from_json(json_filepath, n, destination_filepath):
 
 def get_uniprotids_from_json(json_filepath, uniprot_id_identifier="gene"):
     """
+    Note: this function is deprecated. Rather use get_identifier_values_from_json with the "gene" identifier
     Parameters:
       - json_filepath
       - uniprot_id_identifier: the json identifier which holds the value of the element's uniprotId
@@ -945,12 +946,30 @@ def get_uniprotids_from_json(json_filepath, uniprot_id_identifier="gene"):
       - [0]: a list of uniprotIds of elements inside json_filepath
       - [1]: the entire json object
     """
+    #json_obj = read_file_as_json(json_filepath)
+    #uniprotIds = []
+    #for el in json_obj:
+    #    uniprotIds.append(el[uniprot_id_identifier])
+    #logger.debug(f"UniprotIds: {uniprotIds}")
+    #return uniprotIds, json_obj
+    return get_identifier_values_from_json(json_filepath, uniprot_id_identifier)
+
+def get_identifier_values_from_json(json_filepath, identifier):
+    """
+    Loops through all top-level json elements, queries identifier of each element and appends the value to list
+
+    Returns:
+      - [0]: list of identifier values
+      - [1]: entire json obj
+
+    Example: you want to get all UniprotIds (of all elements) inside a json -> use get_identifier_values_from_json(filepath, "gene")
+    """
     json_obj = read_file_as_json(json_filepath)
-    uniprotIds = []
-    for el in json_obj:
-        uniprotIds.append(el[uniprot_id_identifier])
-    logger.debug(f"UniprotIds: {uniprotIds}")
-    return uniprotIds, json_obj
+    identifier_values = []
+    for element in json_obj:
+        identifier_values.append(element[identifier])
+    logger.debug(f"Values for identifier {identifier}: {identifier_values}")
+    return identifier_values, json_obj
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):

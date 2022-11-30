@@ -31,7 +31,8 @@ def main():
     #        sys.exit()
     #    i+=1
 
-    util.extract_n_elements_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json", 10, "gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json")
+    #util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json")[0]
+    util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json","gene")[0]
 
 
 if __name__ == '__main__':
