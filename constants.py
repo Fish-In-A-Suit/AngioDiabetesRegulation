@@ -6,6 +6,8 @@
 #
 #
 
+TARGET_FOLDER = "test_run_1" #just a constant to be used in all stages of analysis
+
 # Positive regulatory terms for search "angiogenesis"
 TERMS_ANGIOGENESIS_POSITIVE_ARRAY = [
     "positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis", "GO:1903589",

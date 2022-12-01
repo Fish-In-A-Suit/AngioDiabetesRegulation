@@ -36,20 +36,24 @@ def _overlap_substring_on_mRNAs(substring, mRNAssubstrings, treshold_to_accept):
     return miRNA_results
 
 def _overlap_substring_on_mRNAsubstrings(substring, mRNAsubstrings):
-    logger.debug(f"Overlaping {substring} on {mRNAsubstrings}")
+    #logger.debug(f"Overlaping {substring} on {mRNAsubstrings}")
     length = len(substring)
     temp_miRNA_results = []
     for j in range(len(mRNAsubstrings)):
             overlap = 1-(jellyfish.levenshtein_distance(substring, mRNAsubstrings[j]) / length)
-            logger.debug(f"Overlap of substring {substring} on mRNAsubstring {mRNAsubstrings[j]} is {overlap}")
+            #logger.debug(f"Overlap of substring {substring} on mRNAsubstring {mRNAsubstrings[j]} is {overlap}")
             temp_miRNA_results.append([mRNAsubstrings[j], overlap])
     return temp_miRNA_results
 
 def _find_best_overlap_miRNA_on_mRNA(miRNA, mRNA):
+    if mRNA == None:
+        return 0
     mRNAsubstrings = _find_all_unique_substrings_from_string(mRNA, len(miRNA))
     miRNA_overlaps = _overlap_substring_on_mRNAsubstrings(miRNA, mRNAsubstrings)
     only_overlaps = [element[1] for element in miRNA_overlaps]
     best_overlap = max(only_overlaps)
+
+    logger.debug(f"Best overlap of miRNA ({miRNA}) on mRNA ({mRNA}) is {best_overlap})")
     return best_overlap
 
 def _score_miRNA(overlap_result, productnames, product_score):
@@ -84,17 +88,20 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
     treshold_to_accept - what is the minimal percentage of the miRNA length that must fit to a mRNA in order to be considered as 'fitting'
     """
 
+    logger.info(f"Starting brute-force prediction of miRNA (length {length}) overlaps for (productID, score): {list(map(lambda i, s: (i, s), productnames, product_scores))}")
+
     miRNA_candidates = _generate_all_miRNA_permutations_with_repetitions(length)
 
     json_overlap_results = []
     for i in range(len(miRNA_candidates)):
         miRNA = miRNA_candidates[i]
+        logger.info(f"Overlaping miRNA -> {miRNA} ({i}/{len(miRNA_candidates)})")
 
         mirna_overlap_results=[]
 
         for j in range(len(mRNAs)):
             mRNA = mRNAs[j]
-
+            
             overlap = _find_best_overlap_miRNA_on_mRNA(miRNA, mRNA)
             if overlap >= treshold_to_accept:
                 mirna_overlap_results.append({"productID" : productnames[j], "overlap" : overlap})
@@ -112,20 +119,28 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
     logger.info (f"Done with predicting miRNA!")
 
 def main():
-    #mrna_filepath = "term_genes/homosapiens_only=false,v2/product_mRNA.json"
-    #gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
-    #gene_list = util.get_identifier_values_from_json(mrna_filepath, "gene")[0]
+    mrna_filepath = "term_genes/homosapiens_only=false,v2/product_mRNA.json"
+    #product_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    product_list = util.get_identifier_values_from_json(mrna_filepath, "UniprotID")[0]
 
-    #mRNAs = util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0] #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
+    mRNAs = util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0] #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
     #predicted_miRNAs = predict_miRNAs(mRNAs, 10, 0.5)
+
+    scores_json = util.read_file_as_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")
+    scores = []
+    for product in product_list:
+        product_scores_index = next((index for (index, d) in enumerate(scores_json) if d["product"] == product), None)
+        scores.append(scores_json[product_scores_index]["al_corr_score"])
+
 
     #product_scores_index = next((index for (index, d) in enumerate(product_scores) if d["product"] == productID), None)
     #corr_score = product_scores[product_scores_index]["al_corr_score"]   
     # 
-    productIDs = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
-    mRNAs = ["GAACATCTGCTACTACAGCCTTGCAGCCCGGAGTCCCGGATTTTACTGGTTCCCGTGCCTGCGGACAGGC","ATTGCTGGGGCTCCGCTTCGGGGAGGAGGACGCTGAGGAGGCGCCGAGCCGCGC","CCAAACCCTAAAGCTGATATCACAAAGTACCATTTCTCCAAGTTGGGGGCTCAGAGGGGAGTCATCATGAGCGA"]
-    scores = [0.5, -1, 1]
-    predict_miRNAs(productIDs, mRNAs, scores, length=5, treshold_to_accept=0.5, target_folder="term_genes/homosapiens_only=false,v2") 
+    #product_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
+    #mRNAs = ["GAACATCTGCTACTACAGCCTTGCAGCCCGGAGTCCCGGATTTTACTGGTTCCCGTGCCTGCGGACAGGC","ATTGCTGGGGCTCCGCTTCGGGGAGGAGGACGCTGAGGAGGCGCCGAGCCGCGC","CCAAACCCTAAAGCTGATATCACAAAGTACCATTTCTCCAAGTTGGGGGCTCAGAGGGGAGTCATCATGAGCGA"]
+    #scores = [0.5, -1, 1]
+    
+    predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder="term_genes/homosapiens_only=false,v2") 
 
 
 if __name__ == '__main__':
