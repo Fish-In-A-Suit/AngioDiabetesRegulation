@@ -86,7 +86,7 @@ def score_genes_v2(destination_file, source_folder="term_genes", use_cross_secti
         al_score = _score_gene_al(term_enum_score_set)
         al_e_score = _score_gene_al_e(term_enum_score_set)
         al_corr_score = _score_gene_al_corr(term_enum_score_set)
-        out = {"gene": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score,  "al_e_score": al_e_score, "al_corr_score": al_corr_score}
+        out = {"product": gene, "count": gene_count_result[0], "terms:": gene_count_result[1], "term_enum_scores": term_enum_score_set, "al_score": al_score,  "al_e_score": al_e_score, "al_corr_score": al_corr_score}
         if use_cross_section == True:
             if term_enum_score_set["nterms_angio"] != 0 and term_enum_score_set["nterms_dia"] != 0:
                 json_gene_scores.append(out)
@@ -199,7 +199,6 @@ def _import_genes_from_term_json(term, source_folder):
     return genes
 
 def main():
-    #TODO set "to_be_inhibited", based on score?
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
     #util.load_human_orthologs()
     

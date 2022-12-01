@@ -13,7 +13,6 @@ def get_mrna(gene_list, target_folder):
     {
         "UniprotID":
         "EnsemblID":
-        "ToBeInhibited":
         "mRNA":
     }
     File is saved as target_folder/product_mRNA.json
