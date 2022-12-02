@@ -286,8 +286,6 @@ def _find_products_related_to_GO_term_new(term, crash_last_product_directId=""):
         elif 'ZFIN' in product:
             human_gene_symbol = util.zfin_find_human_ortholog(product)[0]  # eg. adgrg9
             ortholog_process(human_gene_symbol,product)
-        elif 'RNAcentral' in product: # TODO:what to do with miRNA sequences?, perhaps export them separately
-            uniprot_productnames.append(None)
         elif "Xenbase" in product:
             human_gene_symbol = util.xenbase_find_human_ortholog(product)[0]
             ortholog_process(human_gene_symbol,product)
@@ -577,7 +575,7 @@ def main():
     util.load_list_from_file("src_data_files/genes_trusted.txt",
                              constants.TRUSTED_GENES, no_elements_in_line=2, break_character=" ")
     util.load_list_from_file(
-        "term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
+        os.path.join(constants.TARGET_FOLDER, "terms_empty.txt"), constants.TERMS_EMPTY)
     logging.info(
         f"Loaded {len(constants.TRUSTED_GENES)} trusted genes. trusted_genes = {constants.TRUSTED_GENES}")
     logging.info(
