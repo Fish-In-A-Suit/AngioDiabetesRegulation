@@ -71,13 +71,14 @@ def main():
     # manual settings
     # gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
     # gene_list = util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section_postprocess.json")[0]
-    gene_list = util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section_postprocess.json", "gene")[0]
+    source_file = os.path.join(constants.TARGET_FOLDER, "product_scores.json")
+    gene_list = util.get_identifier_values_from_json(source_file, "gene")[0]
 
     # Maybe get all genes from term_products.json into gene_list.
     # Might not be needed since we are only interested in top 10. Commented function call below executes the desired algorithm.
     # gene_list = util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")[0]
 
-    get_mrna(gene_list, "term_genes/homosapiens_only=false,v2")
+    get_mrna(gene_list, constants.TARGET_FOLDER)
 
 
 if __name__ == '__main__':

@@ -52,7 +52,7 @@ def _score_term_enums(terms):
     logger.debug(f"term_enum_scores: {result_set}")
     return result_set
 
-def score_genes_v2(destination_file, source_folder="term_genes", use_cross_section=False):
+def score_genes_v2(destination_filename="product_scores.json" , source_folder="term_genes", use_cross_section=False):
     """
     Counts the number of appearances of all the genes across all specified json_files (which contain genes
     related to specific GO terms and are made by the find_genes_related_to_GO_terms function)
@@ -95,7 +95,7 @@ def score_genes_v2(destination_file, source_folder="term_genes", use_cross_secti
     logger.info(f"[gene_scores]: {json_gene_scores}")
 
     json_gene_scores = util.sort_list_of_dictionaries(json_gene_scores, "al_corr_score")
-    util.save_json(json_gene_scores, destination_file)
+    util.save_json(json_gene_scores, os.path.join(source_folder, destination_filename))
     logger.info (f"Done with scoring!")
 
 def score_genes_v1(allowed_term_ids, destination_file, source_folder="term_genes", use_cross_section=False):
@@ -202,8 +202,7 @@ def main():
     util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
     #util.load_human_orthologs()
     
-    dest_filename = "gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json"
-    score_genes_v2(dest_filename, source_folder="term_genes/homosapiens_only=false,v2", use_cross_section=True)
+    score_genes_v2(source_folder=constants.TARGET_FOLDER, use_cross_section=True)
 
     # dest_filename_v1 = "XXXXXX"
     # score_genes_v1(util.get_array_terms("ALL"), dest_filename_v1, source_folder="term_genes/homosapiens_only=false,v1", use_cross_section=True)

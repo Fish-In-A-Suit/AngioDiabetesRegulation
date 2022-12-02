@@ -592,7 +592,7 @@ def main():
     # new main functions
     # terms = ["GO:0016525"]
     terms = util.get_array_terms("ALL")
-    find_products_related_to_GO_terms_new(terms)
+    find_products_related_to_GO_terms_new(terms, destination_folder=constants.TARGET_FOLDER)
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:

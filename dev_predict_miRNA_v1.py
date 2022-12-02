@@ -119,14 +119,14 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
     logger.info (f"Done with predicting miRNA!")
 
 def main():
-    mrna_filepath = "term_genes/homosapiens_only=false,v2/product_mRNA.json"
+    mrna_filepath = os.path.join(constants.TARGET_FOLDER, "product_mRNA.json")
     #product_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
     product_list = util.get_identifier_values_from_json(mrna_filepath, "UniprotID")[0]
 
     mRNAs = util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0] #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
     #predicted_miRNAs = predict_miRNAs(mRNAs, 10, 0.5)
 
-    scores_json = util.read_file_as_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section.json")
+    scores_json = util.read_file_as_json(os.path.join(constants.TARGET_FOLDER, "product_scores.json"))
     scores = []
     for product in product_list:
         product_scores_index = next((index for (index, d) in enumerate(scores_json) if d["product"] == product), None)
@@ -140,7 +140,7 @@ def main():
     #mRNAs = ["GAACATCTGCTACTACAGCCTTGCAGCCCGGAGTCCCGGATTTTACTGGTTCCCGTGCCTGCGGACAGGC","ATTGCTGGGGCTCCGCTTCGGGGAGGAGGACGCTGAGGAGGCGCCGAGCCGCGC","CCAAACCCTAAAGCTGATATCACAAAGTACCATTTCTCCAAGTTGGGGGCTCAGAGGGGAGTCATCATGAGCGA"]
     #scores = [0.5, -1, 1]
     
-    predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder="term_genes/homosapiens_only=false,v2") 
+    predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
 
 
 if __name__ == '__main__':
