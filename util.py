@@ -82,6 +82,8 @@ def get_files_in_dir(dir_filepath, searchstring = ""):
     Searches for files in directory. Use searchstring parameter to append all files that have a specific string in their name.
     Returns a single or a list of filepaths in the form dir_filepath/file
     """
+    if not os.path.exists(dir_filepath):
+        return []
     if searchstring == "":
         return os.listdir(dir_filepath)
     else: # search for searchstring, if file includes searchstring, append filepath
@@ -577,7 +579,7 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
     # TODO: implement a file where you store such instances
     if NO_reviewed_Ids == 0:
         logger.info(f"No reviewed UniProt Ids for gene_name {gene_name} found, returning None")
-        return None, None
+        return None
     
     # Either 2+ or 0 verified UniprotIds -> begin user cycling options
     results_arr_len = len(uniprot_geneIds_dictionary) # update after eliminations
@@ -609,7 +611,7 @@ def get_uniprotId_from_geneName_new(gene_name, trust_genes=True):
             return f"No uniprot gene Ids for {gene_name} selected."
         else:
             # wrong input
-            raise Exception(f"[get_uniprot_identifier_new]: Wrong input!")
+            raise Exception(f" Wrong input!")
     logger.info("No uniprot geneIds selected")
     return f"No uniprot gene Ids for {gene_name} selected."
 

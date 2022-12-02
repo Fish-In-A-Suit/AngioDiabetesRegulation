@@ -141,7 +141,8 @@ def main():
     #scores = [0.5, -1, 1]
     
     predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
-
+    #WARNING: this is a brute force method pathfinder, with extensive debug output! do not use with length more than 5.
+    #It will create large log files and take up a significant amount of ram!
 
 if __name__ == '__main__':
     import logging.config

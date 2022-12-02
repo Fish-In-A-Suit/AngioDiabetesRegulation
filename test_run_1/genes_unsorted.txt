@@ -1,0 +1,4 @@
+GO:1903588 ComplexPortal:CPX-450
+GO:1903672 ComplexPortal:CPX-1012
+GO:0045766 ComplexPortal:CPX-436
+GO:0045766 ComplexPortal:CPX-362

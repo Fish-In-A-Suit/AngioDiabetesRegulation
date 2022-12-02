@@ -63,7 +63,7 @@ def score_genes_v2(destination_filename="product_scores.json" , source_folder="t
                            If False, all genes regardless of having bother angiogenetic or diabetic influence are appended to final json.
     """
     
-    source_filepath = os.path.join(source_folder, "term_products.json")
+    source_filepath = os.path.join(source_folder, "terms_direct_products.json")
     logger.info(f"Finding all genes from file: {source_filepath}")
     gene_set = set() # Set data type used instead of List, because a Set cannot have multiple occurences of the same element
     term_genes = [] # array of all genes across all terms; structure = {[term1, genes1], [term2, genes2], ... [term_n, genes_n]}
@@ -199,7 +199,7 @@ def _import_genes_from_term_json(term, source_folder):
     return genes
 
 def main():
-    util.load_list_from_file("term_genes/homosapiens_only=false,v1/terms_empty.txt", constants.TERMS_EMPTY)
+    util.load_list_from_file(os.path.join(constants.TARGET_FOLDER, "terms_empty.txt"), constants.TERMS_EMPTY)
     #util.load_human_orthologs()
     
     score_genes_v2(source_folder=constants.TARGET_FOLDER, use_cross_section=True)

@@ -1,6 +1,6 @@
 [
     {
-        "gene": "UniProtKB:Q0VGL1",
+        "product": "UniProtKB:Q0VGL1",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -24,7 +24,7 @@
         "al_corr_score": 17.306994843688898
     },
     {
-        "gene": "UniProtKB:Q96GR2",
+        "product": "UniProtKB:Q96GR2",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -47,7 +47,7 @@
         "al_corr_score": 15.119052598738477
     },
     {
-        "gene": "UniProtKB:Q99767",
+        "product": "UniProtKB:Q99767",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -68,7 +68,7 @@
         "al_corr_score": 12.0
     },
     {
-        "gene": "UniProtKB:P01584",
+        "product": "UniProtKB:P01584",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -89,7 +89,7 @@
         "al_corr_score": 12.0
     },
     {
-        "gene": "UniProtKB:P05771",
+        "product": "UniProtKB:P05771",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -110,7 +110,7 @@
         "al_corr_score": 12.0
     },
     {
-        "gene": "UniProtKB:Q9BR61",
+        "product": "UniProtKB:Q9BR61",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -131,7 +131,7 @@
         "al_corr_score": 12.0
     },
     {
-        "gene": "UniProtKB:Q14155",
+        "product": "UniProtKB:Q14155",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -153,7 +153,7 @@
         "al_corr_score": 12.0
     },
     {
-        "gene": "UniProtKB:Q16613",
+        "product": "UniProtKB:Q16613",
         "count": 8,
         "terms:": [
             "GO:0001525",
@@ -180,7 +180,7 @@
         "al_corr_score": 4.026721532899425
     },
     {
-        "gene": "UniProtKB:Q9Y243",
+        "product": "UniProtKB:Q9Y243",
         "count": 5,
         "terms:": [
             "GO:0001938",
@@ -204,7 +204,7 @@
         "al_corr_score": 3.196010998653774
     },
     {
-        "gene": "UniProtKB:O15530",
+        "product": "UniProtKB:O15530",
         "count": 5,
         "terms:": [
             "GO:1905564",
@@ -228,7 +228,7 @@
         "al_corr_score": 3.196010998653774
     },
     {
-        "gene": "UniProtKB:Q9Y3B1",
+        "product": "UniProtKB:Q9Y3B1",
         "count": 4,
         "terms:": [
             "GO:1905564",
@@ -251,7 +251,7 @@
         "al_corr_score": 2.8284271247461903
     },
     {
-        "gene": "UniProtKB:P17861",
+        "product": "UniProtKB:P17861",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -274,7 +274,7 @@
         "al_corr_score": 2.8284271247461903
     },
     {
-        "gene": "UniProtKB:Q15465",
+        "product": "UniProtKB:Q15465",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -299,7 +299,7 @@
         "al_corr_score": 2.5874010519681994
     },
     {
-        "gene": "UniProtKB:O00548",
+        "product": "UniProtKB:O00548",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -323,7 +323,7 @@
         "al_corr_score": 2.4422495703074083
     },
     {
-        "gene": "UniProtKB:Q92982",
+        "product": "UniProtKB:Q92982",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -346,7 +346,7 @@
         "al_corr_score": 2.2599210498948734
     },
     {
-        "gene": "UniProtKB:Q96E22",
+        "product": "UniProtKB:Q96E22",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -369,7 +369,7 @@
         "al_corr_score": 2.2599210498948734
     },
     {
-        "gene": "UniProtKB:Q9UKV0",
+        "product": "UniProtKB:Q9UKV0",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -391,7 +391,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q9NRG9",
+        "product": "UniProtKB:Q9NRG9",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -413,7 +413,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q8WXF5",
+        "product": "UniProtKB:Q8WXF5",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -435,7 +435,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q8IZT6",
+        "product": "UniProtKB:Q8IZT6",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -457,7 +457,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q9H1A4",
+        "product": "UniProtKB:Q9H1A4",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -479,7 +479,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q92847",
+        "product": "UniProtKB:Q92847",
         "count": 3,
         "terms:": [
             "GO:1905564",
@@ -501,7 +501,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q13480",
+        "product": "UniProtKB:Q13480",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -523,7 +523,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:P20248",
+        "product": "UniProtKB:P20248",
         "count": 3,
         "terms:": [
             "GO:0002041",
@@ -545,7 +545,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:P19338",
+        "product": "UniProtKB:P19338",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -567,7 +567,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:O00443",
+        "product": "UniProtKB:O00443",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -589,7 +589,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:P50120",
+        "product": "UniProtKB:P50120",
         "count": 3,
         "terms:": [
             "GO:1905564",
@@ -611,7 +611,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:P14618",
+        "product": "UniProtKB:P14618",
         "count": 3,
         "terms:": [
             "GO:0002040",
@@ -633,7 +633,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:P08047",
+        "product": "UniProtKB:P08047",
         "count": 3,
         "terms:": [
             "GO:1905564",
@@ -655,7 +655,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q14188",
+        "product": "UniProtKB:Q14188",
         "count": 3,
         "terms:": [
             "GO:0045765",
@@ -677,7 +677,7 @@
         "al_corr_score": 2.0
     },
     {
-        "gene": "UniProtKB:Q8NC06",
+        "product": "UniProtKB:Q8NC06",
         "count": 4,
         "terms:": [
             "GO:1903672",
@@ -700,7 +700,7 @@
         "al_corr_score": 1.4422495703074083
     },
     {
-        "gene": "UniProtKB:P55265",
+        "product": "UniProtKB:P55265",
         "count": 4,
         "terms:": [
             "GO:1903672",
@@ -723,7 +723,7 @@
         "al_corr_score": 1.4422495703074083
     },
     {
-        "gene": "UniProtKB:Q9NQB0",
+        "product": "UniProtKB:Q9NQB0",
         "count": 3,
         "terms:": [
             "GO:0045766",
@@ -745,7 +745,7 @@
         "al_corr_score": 1.2599210498948732
     },
     {
-        "gene": "UniProtKB:Q8NGI0",
+        "product": "UniProtKB:Q8NGI0",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -767,7 +767,7 @@
         "al_corr_score": 1.2599210498948732
     },
     {
-        "gene": "UniProtKB:P14210",
+        "product": "UniProtKB:P14210",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -788,7 +788,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:P49023",
+        "product": "UniProtKB:P49023",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -809,7 +809,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:O75414",
+        "product": "UniProtKB:O75414",
         "count": 2,
         "terms:": [
             "GO:1903672",
@@ -830,7 +830,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:P52789",
+        "product": "UniProtKB:P52789",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -851,7 +851,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q99958",
+        "product": "UniProtKB:Q99958",
         "count": 2,
         "terms:": [
             "GO:0090050",
@@ -872,7 +872,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q9H845",
+        "product": "UniProtKB:Q9H845",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -893,7 +893,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q9NPB8",
+        "product": "UniProtKB:Q9NPB8",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -914,7 +914,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:O75460",
+        "product": "UniProtKB:O75460",
         "count": 2,
         "terms:": [
             "GO:0001935",
@@ -935,7 +935,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q15427",
+        "product": "UniProtKB:Q15427",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -956,7 +956,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q15818",
+        "product": "UniProtKB:Q15818",
         "count": 2,
         "terms:": [
             "GO:0090050",
@@ -977,7 +977,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:P07949",
+        "product": "UniProtKB:P07949",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -998,7 +998,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q5JQC9",
+        "product": "UniProtKB:Q5JQC9",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -1019,7 +1019,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:A8K2U0",
+        "product": "UniProtKB:A8K2U0",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -1040,7 +1040,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q8NFV4",
+        "product": "UniProtKB:Q8NFV4",
         "count": 2,
         "terms:": [
             "GO:1903672",
@@ -1061,7 +1061,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q9C0C7",
+        "product": "UniProtKB:Q9C0C7",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -1082,7 +1082,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q8N157",
+        "product": "UniProtKB:Q8N157",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -1103,7 +1103,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q9UQP3",
+        "product": "UniProtKB:Q9UQP3",
         "count": 2,
         "terms:": [
             "GO:1903672",
@@ -1124,7 +1124,7 @@
         "al_corr_score": 1.0
     },
     {
-        "gene": "UniProtKB:Q6ULP2",
+        "product": "UniProtKB:Q6ULP2",
         "count": 7,
         "terms:": [
             "GO:0001525",
@@ -1150,7 +1150,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q9BWC9",
+        "product": "UniProtKB:Q9BWC9",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1171,7 +1171,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P01344",
+        "product": "UniProtKB:P01344",
         "count": 8,
         "terms:": [
             "GO:0002040",
@@ -1198,7 +1198,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q96EB6",
+        "product": "UniProtKB:Q96EB6",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -1223,7 +1223,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P29353",
+        "product": "UniProtKB:P29353",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1244,7 +1244,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q13887",
+        "product": "UniProtKB:Q13887",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1265,7 +1265,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P54259",
+        "product": "UniProtKB:P54259",
         "count": 4,
         "terms:": [
             "GO:0060055",
@@ -1288,7 +1288,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q9Y653",
+        "product": "UniProtKB:Q9Y653",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -1312,7 +1312,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P51153",
+        "product": "UniProtKB:P51153",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -1334,7 +1334,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q7KZI7",
+        "product": "UniProtKB:Q7KZI7",
         "count": 3,
         "terms:": [
             "GO:0002042",
@@ -1356,7 +1356,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P51608",
+        "product": "UniProtKB:P51608",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -1380,7 +1380,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O14514",
+        "product": "UniProtKB:O14514",
         "count": 4,
         "terms:": [
             "GO:1905564",
@@ -1403,7 +1403,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O00482",
+        "product": "UniProtKB:O00482",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -1424,7 +1424,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q08AH3",
+        "product": "UniProtKB:Q08AH3",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -1448,7 +1448,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O95477",
+        "product": "UniProtKB:O95477",
         "count": 3,
         "terms:": [
             "GO:0002040",
@@ -1470,7 +1470,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P07814",
+        "product": "UniProtKB:P07814",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1491,7 +1491,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P84090",
+        "product": "UniProtKB:P84090",
         "count": 3,
         "terms:": [
             "GO:0001937",
@@ -1513,7 +1513,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P31749",
+        "product": "UniProtKB:P31749",
         "count": 5,
         "terms:": [
             "GO:0002042",
@@ -1537,7 +1537,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q96ER9",
+        "product": "UniProtKB:Q96ER9",
         "count": 4,
         "terms:": [
             "GO:1905563",
@@ -1560,7 +1560,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P49841",
+        "product": "UniProtKB:P49841",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -1584,7 +1584,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P29279",
+        "product": "UniProtKB:P29279",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1605,7 +1605,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q96B36",
+        "product": "UniProtKB:Q96B36",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1626,7 +1626,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P56945",
+        "product": "UniProtKB:P56945",
         "count": 2,
         "terms:": [
             "GO:1903670",
@@ -1647,7 +1647,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q9Y6N7",
+        "product": "UniProtKB:Q9Y6N7",
         "count": 2,
         "terms:": [
             "GO:0002042",
@@ -1668,7 +1668,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q92569",
+        "product": "UniProtKB:Q92569",
         "count": 2,
         "terms:": [
             "GO:0002042",
@@ -1689,7 +1689,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P63244",
+        "product": "UniProtKB:P63244",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1710,7 +1710,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P42338",
+        "product": "UniProtKB:P42338",
         "count": 4,
         "terms:": [
             "GO:0060055",
@@ -1733,7 +1733,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P45844",
+        "product": "UniProtKB:P45844",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -1758,7 +1758,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P13688",
+        "product": "UniProtKB:P13688",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -1782,7 +1782,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P42345",
+        "product": "UniProtKB:P42345",
         "count": 2,
         "terms:": [
             "GO:0001938",
@@ -1803,7 +1803,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P51589",
+        "product": "UniProtKB:P51589",
         "count": 2,
         "terms:": [
             "GO:0001938",
@@ -1824,7 +1824,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P07203",
+        "product": "UniProtKB:P07203",
         "count": 3,
         "terms:": [
             "GO:0060055",
@@ -1846,7 +1846,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P49815",
+        "product": "UniProtKB:P49815",
         "count": 4,
         "terms:": [
             "GO:1905563",
@@ -1869,7 +1869,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q03135",
+        "product": "UniProtKB:Q03135",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -1894,7 +1894,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q7Z7A4",
+        "product": "UniProtKB:Q7Z7A4",
         "count": 4,
         "terms:": [
             "GO:1903670",
@@ -1917,7 +1917,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P61221",
+        "product": "UniProtKB:P61221",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -1941,7 +1941,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q99999",
+        "product": "UniProtKB:Q99999",
         "count": 2,
         "terms:": [
             "GO:0001938",
@@ -1962,7 +1962,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q0P651",
+        "product": "UniProtKB:Q0P651",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -1984,7 +1984,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:A6NKG5",
+        "product": "UniProtKB:A6NKG5",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -2006,7 +2006,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P39059",
+        "product": "UniProtKB:P39059",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2027,7 +2027,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O75923",
+        "product": "UniProtKB:O75923",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -2050,7 +2050,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P80188",
+        "product": "UniProtKB:P80188",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -2072,7 +2072,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P98160",
+        "product": "UniProtKB:P98160",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -2097,7 +2097,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O14908",
+        "product": "UniProtKB:O14908",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -2119,7 +2119,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O95831",
+        "product": "UniProtKB:O95831",
         "count": 5,
         "terms:": [
             "GO:0002042",
@@ -2143,7 +2143,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q14993",
+        "product": "UniProtKB:Q14993",
         "count": 2,
         "terms:": [
             "GO:0060055",
@@ -2164,7 +2164,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P53805",
+        "product": "UniProtKB:P53805",
         "count": 2,
         "terms:": [
             "GO:0002040",
@@ -2185,7 +2185,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P80108",
+        "product": "UniProtKB:P80108",
         "count": 3,
         "terms:": [
             "GO:0002042",
@@ -2207,7 +2207,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q96A54",
+        "product": "UniProtKB:Q96A54",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -2228,7 +2228,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q13685",
+        "product": "UniProtKB:Q13685",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -2251,7 +2251,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P51636",
+        "product": "UniProtKB:P51636",
         "count": 6,
         "terms:": [
             "GO:0001938",
@@ -2276,7 +2276,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O43506",
+        "product": "UniProtKB:O43506",
         "count": 5,
         "terms:": [
             "GO:0016525",
@@ -2300,7 +2300,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q8IWT3",
+        "product": "UniProtKB:Q8IWT3",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2321,7 +2321,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q9UBN7",
+        "product": "UniProtKB:Q9UBN7",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2342,7 +2342,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P42336",
+        "product": "UniProtKB:P42336",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -2366,7 +2366,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q99424",
+        "product": "UniProtKB:Q99424",
         "count": 2,
         "terms:": [
             "GO:1905564",
@@ -2387,7 +2387,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q16270",
+        "product": "UniProtKB:Q16270",
         "count": 2,
         "terms:": [
             "GO:0002040",
@@ -2408,7 +2408,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P05090",
+        "product": "UniProtKB:P05090",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2429,7 +2429,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q9Y5B8",
+        "product": "UniProtKB:Q9Y5B8",
         "count": 2,
         "terms:": [
             "GO:0002042",
@@ -2450,7 +2450,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:U3KPV4",
+        "product": "UniProtKB:U3KPV4",
         "count": 7,
         "terms:": [
             "GO:0001525",
@@ -2476,7 +2476,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P13747",
+        "product": "UniProtKB:P13747",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2497,7 +2497,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q6UXT9",
+        "product": "UniProtKB:Q6UXT9",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2518,7 +2518,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q16539",
+        "product": "UniProtKB:Q16539",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -2540,7 +2540,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:O60504",
+        "product": "UniProtKB:O60504",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -2562,7 +2562,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P08183",
+        "product": "UniProtKB:P08183",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -2584,7 +2584,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P18065",
+        "product": "UniProtKB:P18065",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2605,7 +2605,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q14774",
+        "product": "UniProtKB:Q14774",
         "count": 2,
         "terms:": [
             "GO:0002040",
@@ -2626,7 +2626,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q8WXS3",
+        "product": "UniProtKB:Q8WXS3",
         "count": 6,
         "terms:": [
             "GO:1905564",
@@ -2651,7 +2651,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q14118",
+        "product": "UniProtKB:Q14118",
         "count": 3,
         "terms:": [
             "GO:0060055",
@@ -2673,7 +2673,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:Q9NQ30",
+        "product": "UniProtKB:Q9NQ30",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -2695,7 +2695,7 @@
         "al_corr_score": 0.0
     },
     {
-        "gene": "UniProtKB:P37231",
+        "product": "UniProtKB:P37231",
         "count": 4,
         "terms:": [
             "GO:0016525",
@@ -2718,7 +2718,7 @@
         "al_corr_score": -0.41421356237309515
     },
     {
-        "gene": "UniProtKB:Q9P1F3",
+        "product": "UniProtKB:Q9P1F3",
         "count": 5,
         "terms:": [
             "GO:0016525",
@@ -2742,7 +2742,7 @@
         "al_corr_score": -0.5218763863858056
     },
     {
-        "gene": "UniProtKB:Q9UBU3",
+        "product": "UniProtKB:Q9UBU3",
         "count": 5,
         "terms:": [
             "GO:1905564",
@@ -2766,7 +2766,7 @@
         "al_corr_score": -0.8284271247461903
     },
     {
-        "gene": "UniProtKB:Q9UK05",
+        "product": "UniProtKB:Q9UK05",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -2791,7 +2791,7 @@
         "al_corr_score": -0.9360899487589008
     },
     {
-        "gene": "UniProtKB:P17302",
+        "product": "UniProtKB:P17302",
         "count": 2,
         "terms:": [
             "GO:0001937",
@@ -2812,7 +2812,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P55347",
+        "product": "UniProtKB:P55347",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -2833,7 +2833,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P24468",
+        "product": "UniProtKB:P24468",
         "count": 2,
         "terms:": [
             "GO:0001937",
@@ -2854,7 +2854,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P17693",
+        "product": "UniProtKB:P17693",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -2875,7 +2875,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q8WVV5",
+        "product": "UniProtKB:Q8WVV5",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -2896,7 +2896,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q96C86",
+        "product": "UniProtKB:Q96C86",
         "count": 2,
         "terms:": [
             "GO:0001937",
@@ -2917,7 +2917,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q9UBJ2",
+        "product": "UniProtKB:Q9UBJ2",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -2938,7 +2938,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:O75419",
+        "product": "UniProtKB:O75419",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -2959,7 +2959,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q13324",
+        "product": "UniProtKB:Q13324",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -2980,7 +2980,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q96EY9",
+        "product": "UniProtKB:Q96EY9",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3001,7 +3001,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P61812",
+        "product": "UniProtKB:P61812",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3022,7 +3022,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P98177",
+        "product": "UniProtKB:P98177",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3043,7 +3043,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q93086",
+        "product": "UniProtKB:Q93086",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3064,7 +3064,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P01375",
+        "product": "UniProtKB:P01375",
         "count": 2,
         "terms:": [
             "GO:0001937",
@@ -3085,7 +3085,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:O95389",
+        "product": "UniProtKB:O95389",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3106,7 +3106,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q9UKU0",
+        "product": "UniProtKB:Q9UKU0",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3127,7 +3127,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q09428",
+        "product": "UniProtKB:Q09428",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3148,7 +3148,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:Q9UQL6",
+        "product": "UniProtKB:Q9UQL6",
         "count": 2,
         "terms:": [
             "GO:0090051",
@@ -3169,7 +3169,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P61586",
+        "product": "UniProtKB:P61586",
         "count": 2,
         "terms:": [
             "GO:0090051",
@@ -3190,7 +3190,7 @@
         "al_corr_score": -1.0
     },
     {
-        "gene": "UniProtKB:P21359",
+        "product": "UniProtKB:P21359",
         "count": 7,
         "terms:": [
             "GO:0001525",
@@ -3216,7 +3216,7 @@
         "al_corr_score": -1.0116128947211924
     },
     {
-        "gene": "UniProtKB:Q9BT17",
+        "product": "UniProtKB:Q9BT17",
         "count": 7,
         "terms:": [
             "GO:0001525",
@@ -3242,7 +3242,7 @@
         "al_corr_score": -1.0116128947211924
     },
     {
-        "gene": "UniProtKB:P27216",
+        "product": "UniProtKB:P27216",
         "count": 7,
         "terms:": [
             "GO:0001525",
@@ -3268,7 +3268,7 @@
         "al_corr_score": -1.0116128947211924
     },
     {
-        "gene": "UniProtKB:O00459",
+        "product": "UniProtKB:O00459",
         "count": 3,
         "terms:": [
             "GO:0090051",
@@ -3290,7 +3290,7 @@
         "al_corr_score": -1.2599210498948732
     },
     {
-        "gene": "UniProtKB:Q7Z3H0",
+        "product": "UniProtKB:Q7Z3H0",
         "count": 3,
         "terms:": [
             "GO:0090051",
@@ -3312,7 +3312,7 @@
         "al_corr_score": -1.2599210498948732
     },
     {
-        "gene": "UniProtKB:P42224",
+        "product": "UniProtKB:P42224",
         "count": 3,
         "terms:": [
             "GO:0016525",
@@ -3334,7 +3334,7 @@
         "al_corr_score": -1.4142135623730951
     },
     {
-        "gene": "UniProtKB:Q8TAU0",
+        "product": "UniProtKB:Q8TAU0",
         "count": 3,
         "terms:": [
             "GO:0016525",
@@ -3356,7 +3356,7 @@
         "al_corr_score": -1.4142135623730951
     },
     {
-        "gene": "UniProtKB:Q5TA50",
+        "product": "UniProtKB:Q5TA50",
         "count": 3,
         "terms:": [
             "GO:0016525",
@@ -3378,7 +3378,7 @@
         "al_corr_score": -1.4142135623730951
     },
     {
-        "gene": "UniProtKB:P09917",
+        "product": "UniProtKB:P09917",
         "count": 4,
         "terms:": [
             "GO:1903671",
@@ -3401,7 +3401,7 @@
         "al_corr_score": -1.7320508075688772
     },
     {
-        "gene": "UniProtKB:P05305",
+        "product": "UniProtKB:P05305",
         "count": 11,
         "terms:": [
             "GO:0002042",
@@ -3431,7 +3431,7 @@
         "al_corr_score": -1.9781261847079739
     },
     {
-        "gene": "UniProtKB:P01019",
+        "product": "UniProtKB:P01019",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3452,7 +3452,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:P28332",
+        "product": "UniProtKB:P28332",
         "count": 2,
         "terms:": [
             "GO:0016525",
@@ -3473,7 +3473,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:O75448",
+        "product": "UniProtKB:O75448",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3495,7 +3495,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:Q06413",
+        "product": "UniProtKB:Q06413",
         "count": 3,
         "terms:": [
             "GO:0001938",
@@ -3517,7 +3517,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:P50222",
+        "product": "UniProtKB:P50222",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3539,7 +3539,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:P60484",
+        "product": "UniProtKB:P60484",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3561,7 +3561,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:Q07021",
+        "product": "UniProtKB:Q07021",
         "count": 3,
         "terms:": [
             "GO:0003158",
@@ -3583,7 +3583,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:Q8NEM8",
+        "product": "UniProtKB:Q8NEM8",
         "count": 3,
         "terms:": [
             "GO:0001938",
@@ -3605,7 +3605,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:O14639",
+        "product": "UniProtKB:O14639",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3627,7 +3627,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:A6NFH5",
+        "product": "UniProtKB:A6NFH5",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3649,7 +3649,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:Q9NZW5",
+        "product": "UniProtKB:Q9NZW5",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3671,7 +3671,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:Q13370",
+        "product": "UniProtKB:Q13370",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3693,7 +3693,7 @@
         "al_corr_score": -2.0
     },
     {
-        "gene": "UniProtKB:Q6P093",
+        "product": "UniProtKB:Q6P093",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -3716,7 +3716,7 @@
         "al_corr_score": -2.2599210498948734
     },
     {
-        "gene": "UniProtKB:Q05513",
+        "product": "UniProtKB:Q05513",
         "count": 6,
         "terms:": [
             "GO:0090049",
@@ -3741,7 +3741,7 @@
         "al_corr_score": -2.2599210498948734
     },
     {
-        "gene": "UniProtKB:Q99798",
+        "product": "UniProtKB:Q99798",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -3764,7 +3764,7 @@
         "al_corr_score": -2.2599210498948734
     },
     {
-        "gene": "UniProtKB:P60606",
+        "product": "UniProtKB:P60606",
         "count": 4,
         "terms:": [
             "GO:0001525",
@@ -3787,7 +3787,7 @@
         "al_corr_score": -2.2599210498948734
     },
     {
-        "gene": "UniProtKB:P25106",
+        "product": "UniProtKB:P25106",
         "count": 5,
         "terms:": [
             "GO:0001525",
@@ -3811,7 +3811,7 @@
         "al_corr_score": -2.4422495703074083
     },
     {
-        "gene": "UniProtKB:P41159",
+        "product": "UniProtKB:P41159",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -3836,7 +3836,7 @@
         "al_corr_score": -2.7021706202022813
     },
     {
-        "gene": "UniProtKB:P09012",
+        "product": "UniProtKB:P09012",
         "count": 6,
         "terms:": [
             "GO:0001525",
@@ -3861,7 +3861,7 @@
         "al_corr_score": -2.7021706202022813
     },
     {
-        "gene": "UniProtKB:Q6UXT8",
+        "product": "UniProtKB:Q6UXT8",
         "count": 5,
         "terms:": [
             "GO:0001938",
