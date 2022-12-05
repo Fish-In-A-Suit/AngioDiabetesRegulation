@@ -1,0 +1,696 @@
+[
+    {
+        "miRNA": "AAAAAAAAAA",
+        "miRNA_overlaps": [
+            {
+                "productID": "UniProtKB:Q0VGL1",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q96GR2",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q99767",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P01584",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q14155",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9BR61",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P05771",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q16613",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9Y243",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O15530",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P17861",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9Y3B1",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q15465",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O00548",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q92982",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q96E22",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q14188",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9H1A4",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q13480",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q92847",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P14618",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P20248",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8IZT6",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8WXF5",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P19338",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UKV0",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O00443",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P08047",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9NRG9",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P50120",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P55265",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8NC06",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8NGI0",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9NQB0",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q99958",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:A8K2U0",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9C0C7",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O75414",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O75460",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8NFV4",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q15427",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P49023",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9H845",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9NPB8",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q15818",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P07949",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P52789",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UQP3",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8N157",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q5JQC9",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P14210",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9Y653",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9NQ30",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P42336",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P49841",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P29353",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9Y6N7",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UBN7",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:U3KPV4",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P84090",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O14514",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q99424",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O95831",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P07814",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q0P651",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P80108",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P18065",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P51608",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q7KZI7",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8WXS3",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q92569",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P13747",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q03135",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q08AH3",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O60504",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9BWC9",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P49815",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P54259",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q14993",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q16539",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q96B36",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P53805",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P39059",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P80188",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P42338",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q14774",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q99999",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O00482",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q13887",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q6ULP2",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P05090",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O75923",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P56945",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P08183",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P31749",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O43506",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q96ER9",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:A6NKG5",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P45844",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P51153",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q7Z7A4",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q13685",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P42345",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P98160",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P01344",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q6UXT9",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8IWT3",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P63244",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P29279",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9Y5B8",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P51589",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q96A54",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q16270",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O95477",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q96EB6",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P07203",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O14908",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P61221",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P51636",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P13688",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P37231",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9P1F3",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UBU3",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UK05",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P24468",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P61586",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UBJ2",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q93086",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UKU0",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8WVV5",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O75419",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P17302",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q13324",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P01375",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q09428",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P55347",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P98177",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q96C86",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P17693",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P61812",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O95389",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9UQL6",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P21359",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P27216",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9BT17",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q7Z3H0",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O00459",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q5TA50",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8TAU0",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P42224",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P09917",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P05305",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O14639",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q8NEM8",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q06413",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q13370",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P01019",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q9NZW5",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P60484",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P50222",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:O75448",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:A6NFH5",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P28332",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q07021",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q99798",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q05513",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q6P093",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P60606",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P25106",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P41159",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:P09012",
+                "overlap": 1.0
+            },
+            {
+                "productID": "UniProtKB:Q6UXT8",
+                "overlap": 1.0
+            }
+        ],
+        "miRNA_score": 90.16508769003792
+    }
+]

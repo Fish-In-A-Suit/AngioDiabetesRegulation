@@ -5,6 +5,7 @@ import json
 import os
 import collections
 import shutil
+import time
 
 import logging
 logger = logging.getLogger(__name__)
@@ -973,6 +974,21 @@ def get_identifier_values_from_json(json_filepath, identifier):
     # logger.debug(f"Values for identifier {identifier}: {identifier_values}") #can clog the console
     logger.debug(f"Returned {len(json_obj)} elements")
     return identifier_values, json_obj
+
+def get_time():
+    return time.time()
+
+def compute_time(first_time, print_message=False):
+    """
+    Computes and displays time between first_time and now
+
+    Parameters:
+      - first_time: use get_time() at a start of a function, then call compute_time with that time from the end of the function
+      - print_message: if True, prints message to logger.debug
+    """
+    now = time.time()
+    if print_message: logger.debug("%s seconds" % (now - first_time))
+    return "%s seconds" % (now - first_time)
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):

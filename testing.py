@@ -30,9 +30,11 @@ def main():
     #    if i == 10:
     #        sys.exit()
     #    i+=1
-
-    #util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json")[0]
-    util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json","gene")[0]
+    start_time = util.get_time()
+    # util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json")[0]
+    # util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json","gene")[0]
+    end_time = util.compute_time(start_time)
+    logger.debug(end_time)
 
 
 if __name__ == '__main__':

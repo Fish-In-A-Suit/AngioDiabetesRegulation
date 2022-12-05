@@ -39,11 +39,11 @@ def _overlap_substring_on_mRNA(substring, mRNA):
     """
     Overlaps substring over mRNA (also a string), returns overlap score as levenstein distance
     """
+    
     mRNA_length = len(mRNA)
     substring_length = len(substring)
-
-    overlap = 1-(jellyfish.levenshtein_distance(substring, mRNA) - max(mRNA_length-substring, 0)) / substring_length
-    #logger.debug(f"Overlap of substring {substring} on mRNAsubstring {mRNAsubstrings[j]} is {overlap}")
+    # logger.debug(f"Overlapping substring {substring} over type {type(mRNA)}")
+    overlap = 1-(jellyfish.levenshtein_distance(substring, mRNA) - max(mRNA_length-substring_length, 0)) / substring_length
     return overlap
 
 def _score_miRNA(overlap_result, productnames, product_score):
@@ -74,7 +74,7 @@ def _score_miRNA(overlap_result, productnames, product_score):
     return score
 
 
-def _generate_all_miRNA_permutations_with_repetitions(length):
+def generate_all_miRNA_permutations_with_repetitions(length):
     """
     Generates all the possible miRNA permutations (with repetitions (eg AATT) included) of the specified length.
     """
@@ -97,16 +97,30 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
         substring that is at least treshold_to_accept similar to the wanted.
 
     treshold_to_accept - what is the minimal percentage of the miRNA length that must fit to a mRNA in order to be considered as 'fitting'
+    
+    Parameters:
+      - productnames: a list of uniprotIds obtained by util.get_identifier_values_from_json(mrna_filepath, "UniprotID")[0]
+      - mRNAs: a list of all mRNA sequences obtained by util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0]
+      - product_scores: a list of all respective uniprotId product scores
+      - length: the length of miRNA permutations
+      - threshold_to_accept: the minimal percentage of miRNA length that must fit to a mRNA to be considered as a possible fit
+      - target_folder: where to save miRNA_overlap.json
+      - debug_loop_break: used for breaking the top level for loop after debug_loop_break iterations
     """
 
     logger.info(f"Starting brute-force prediction of miRNA (length {length}) overlaps for (productID, score): {list(map(lambda i, s: (i, s), productnames, product_scores))}")
 
-    miRNA_candidates = _generate_all_miRNA_permutations_with_repetitions(length)
+    t = util.get_time()
+    miRNA_candidates = generate_all_miRNA_permutations_with_repetitions(length)
+    logger.debug(f"Permutation calculation: {util.compute_time(t)} seconds.")
 
     json_overlap_results = [] # this is the final result that is saved
     logger.info(f"Total miRNA candidates: {len(miRNA_candidates)}")
+    start_time = util.get_time()
     for i in range(len(miRNA_candidates)): # for each miRNA
-        if(i >= debug_loop_break): break # breaks out of the top-level for loop after debug_loop_break iterations
+        if(i >= debug_loop_break): 
+            logger.debug(f"{i} iterations took {util.compute_time(start_time)}")
+            break # breaks out of the top-level for loop after debug_loop_break iterations
         miRNA = miRNA_candidates[i]
         logger.info(f"Overlaping miRNA -> {miRNA} ({i}/{len(miRNA_candidates)})")
         
@@ -118,6 +132,7 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
 
         for j in range(len(mRNAs)): # for each mRNA
             mRNA = mRNAs[j]
+            if mRNA == None: continue
             overlap = _overlap_substring_on_mRNA(miRNA, mRNA) # levenstein score
             if overlap >= treshold_to_accept:
                 # TODO: in the future, maybe accept, score and save all predicted miRNAs, then check which of the predicted miRNA sequences already exist as discovered and what their predicted score is
@@ -150,6 +165,12 @@ def main():
     product_list = util.get_identifier_values_from_json(mrna_filepath, "UniprotID")[0]
 
     mRNAs = util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0] #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
+    
+    # in product_mRNA.json that includes all mRNAs, found 2 mRNAs with null
+    _d_mRNAs_types = []
+    for i,mRNA in enumerate(mRNAs):
+        _d_mRNAs_types.append(f"i={i} {type(mRNA)}")
+    logger.debug(f"mRNAs types (any Nones -> check algorithm for possible errors) = {_d_mRNAs_types}")
 
     scores_json = util.read_file_as_json(os.path.join(constants.TARGET_FOLDER, "product_scores.json"))
     scores = []
@@ -165,7 +186,7 @@ def main():
     #mRNAs = ["GAACATCTGCTACTACAGCCTTGCAGCCCGGAGTCCCGGATTTTACTGGTTCCCGTGCCTGCGGACAGGC","ATTGCTGGGGCTCCGCTTCGGGGAGGAGGACGCTGAGGAGGCGCCGAGCCGCGC","CCAAACCCTAAAGCTGATATCACAAAGTACCATTTCTCCAAGTTGGGGGCTCAGAGGGGAGTCATCATGAGCGA"]
     #scores = [0.5, -1, 1]
     
-    predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
+    predict_miRNAs(product_list, mRNAs, scores, length=14, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
     #WARNING: this is a brute force method pathfinder, with extensive debug output! do not use with length more than 5.
     #It will create large log files and take up a significant amount of ram!
 
