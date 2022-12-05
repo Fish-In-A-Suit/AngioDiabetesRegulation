@@ -36,7 +36,9 @@ def _overlap_substring_on_mRNAs(substring, mRNAs):
     return miRNA_results
 
 def _overlap_substring_on_mRNA(substring, mRNA):
-    #logger.debug(f"Overlaping {substring} on {mRNAsubstrings}")
+    """
+    Overlaps substring over mRNA (also a string), returns overlap score as levenstein distance
+    """
     mRNA_length = len(mRNA)
     substring_length = len(substring)
 
@@ -45,6 +47,23 @@ def _overlap_substring_on_mRNA(substring, mRNA):
     return overlap
 
 def _score_miRNA(overlap_result, productnames, product_score):
+    """
+    Computes a final score for a miRNA sequence from all possible overlap scores.
+
+    Parameters:
+      - overlap_result: a json of all overlap results (obtained after string overlapping onto mRNAs) for a given miRNA
+                        in the form of 
+        {
+            "miRNA": ATGCCTA, 
+            "miRNA_overlaps": {
+               ["productID":aaa, "overlap":a], 
+               ["productID":bbb, "overlap":b]
+            }
+        }
+      
+      - productnames: a list of uniprotid productnames obtained by util.get_identifier_values_from_json(mrna_filepath, "UniprotID")[0]
+      - product_score: a list of uniprotid product scores (same length as productnames just contains their respective al_corr scores)
+    """
     score = 0
     for overlap_element in overlap_result["miRNA_overlaps"]:
         current_productname = overlap_element["productID"]
@@ -55,13 +74,17 @@ def _score_miRNA(overlap_result, productnames, product_score):
     return score
 
 
-def _generate_all_miRNA_permutations_with_repetitions(lenght):
+def _generate_all_miRNA_permutations_with_repetitions(length):
+    """
+    Generates all the possible miRNA permutations (with repetitions (eg AATT) included) of the specified length.
+    """
     nucleotides = ["A", "T", "C", "G"]
-    permutations = list(map("".join, itertools.product(nucleotides, repeat=lenght)))
-    logger.debug(f"There are {len(permutations)} permutations with length {lenght}")
+    # https://stackoverflow.com/questions/3099987/generating-permutations-with-repetitions
+    permutations = list(map("".join, itertools.product(nucleotides, repeat=length)))
+    logger.debug(f"There are {len(permutations)} permutations with length {length}")
     return permutations
 
-def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_accept, target_folder):
+def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_accept, target_folder, debug_loop_break=1):
     """
     Aljosa&Ladi algorithm for finding miRNA of certain length from a list of mRNA.
     Because this is a scientific program, return all possible predictions with some sort of score.
@@ -80,21 +103,36 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
 
     miRNA_candidates = _generate_all_miRNA_permutations_with_repetitions(length)
 
-    json_overlap_results = []
-    for i in range(len(miRNA_candidates)):
+    json_overlap_results = [] # this is the final result that is saved
+    logger.info(f"Total miRNA candidates: {len(miRNA_candidates)}")
+    for i in range(len(miRNA_candidates)): # for each miRNA
+        if(i >= debug_loop_break): break # breaks out of the top-level for loop after debug_loop_break iterations
         miRNA = miRNA_candidates[i]
         logger.info(f"Overlaping miRNA -> {miRNA} ({i}/{len(miRNA_candidates)})")
+        
+        # fills up after the mRNA for loop
+        # each element represents overlap scores of all mRNAs for a single miRNA
+        # mirna_overlap_results[1] = {"productID": xxx, "overlap": x} ...
 
-        mirna_overlap_results=[]
+        mirna_overlap_results=[] # fills up after the mRNA for loop
 
-        for j in range(len(mRNAs)):
+        for j in range(len(mRNAs)): # for each mRNA
             mRNA = mRNAs[j]
-            
-            overlap = _overlap_substring_on_mRNA(miRNA, mRNA)
+            overlap = _overlap_substring_on_mRNA(miRNA, mRNA) # levenstein score
             if overlap >= treshold_to_accept:
+                # TODO: in the future, maybe accept, score and save all predicted miRNAs, then check which of the predicted miRNA sequences already exist as discovered and what their predicted score is
                 mirna_overlap_results.append({"productID" : productnames[j], "overlap" : overlap})
         
+        # each element in json_overlap_results represents a single miRNA and it's scoring results (obtained by overlapping it over mRNAs)
+        # {
+        #   "miRNA": ATGCCTA, 
+        #   "miRNA_overlaps": {
+        #       ["productID":aaa, "overlap":a], 
+        #       ["productID":bbb, "overlap":b]
+        #   }
+        # }
         temp_json = { "miRNA" : miRNA, "miRNA_overlaps" : mirna_overlap_results} #TODO: what if mirna_overlap_results is []??
+        # TODO: maybe compute _score_miRNA here to avoid doubling for loops ?
         json_overlap_results.append(temp_json)
 
     for i in range(len(json_overlap_results)):
@@ -118,7 +156,7 @@ def main():
     for product in product_list:
         product_scores_index = next((index for (index, d) in enumerate(scores_json) if d["product"] == product), None)
         scores.append(scores_json[product_scores_index]["al_corr_score"])
-    logger.debug(scores)
+    logger.debug(f"Found {len(mRNAs)} mRNAs with the following {len(scores)} product scores: {scores}")
 
     #product_scores_index = next((index for (index, d) in enumerate(product_scores) if d["product"] == productID), None)
     #corr_score = product_scores[product_scores_index]["al_corr_score"]   
@@ -127,7 +165,7 @@ def main():
     #mRNAs = ["GAACATCTGCTACTACAGCCTTGCAGCCCGGAGTCCCGGATTTTACTGGTTCCCGTGCCTGCGGACAGGC","ATTGCTGGGGCTCCGCTTCGGGGAGGAGGACGCTGAGGAGGCGCCGAGCCGCGC","CCAAACCCTAAAGCTGATATCACAAAGTACCATTTCTCCAAGTTGGGGGCTCAGAGGGGAGTCATCATGAGCGA"]
     #scores = [0.5, -1, 1]
     
-    # predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
+    predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
     #WARNING: this is a brute force method pathfinder, with extensive debug output! do not use with length more than 5.
     #It will create large log files and take up a significant amount of ram!
 
