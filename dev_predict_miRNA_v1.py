@@ -112,14 +112,13 @@ def main():
     product_list = util.get_identifier_values_from_json(mrna_filepath, "UniprotID")[0]
 
     mRNAs = util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0] #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
-    #predicted_miRNAs = predict_miRNAs(mRNAs, 10, 0.5)
 
     scores_json = util.read_file_as_json(os.path.join(constants.TARGET_FOLDER, "product_scores.json"))
     scores = []
     for product in product_list:
         product_scores_index = next((index for (index, d) in enumerate(scores_json) if d["product"] == product), None)
         scores.append(scores_json[product_scores_index]["al_corr_score"])
-
+    logger.debug(scores)
 
     #product_scores_index = next((index for (index, d) in enumerate(product_scores) if d["product"] == productID), None)
     #corr_score = product_scores[product_scores_index]["al_corr_score"]   
@@ -128,7 +127,7 @@ def main():
     #mRNAs = ["GAACATCTGCTACTACAGCCTTGCAGCCCGGAGTCCCGGATTTTACTGGTTCCCGTGCCTGCGGACAGGC","ATTGCTGGGGCTCCGCTTCGGGGAGGAGGACGCTGAGGAGGCGCCGAGCCGCGC","CCAAACCCTAAAGCTGATATCACAAAGTACCATTTCTCCAAGTTGGGGGCTCAGAGGGGAGTCATCATGAGCGA"]
     #scores = [0.5, -1, 1]
     
-    predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
+    # predict_miRNAs(product_list, mRNAs, scores, length=4, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
     #WARNING: this is a brute force method pathfinder, with extensive debug output! do not use with length more than 5.
     #It will create large log files and take up a significant amount of ram!
 

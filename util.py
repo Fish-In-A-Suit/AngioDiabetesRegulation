@@ -970,7 +970,8 @@ def get_identifier_values_from_json(json_filepath, identifier):
     identifier_values = []
     for element in json_obj:
         identifier_values.append(element[identifier])
-    logger.debug(f"Values for identifier {identifier}: {identifier_values}")
+    # logger.debug(f"Values for identifier {identifier}: {identifier_values}") #can clog the console
+    logger.debug(f"Returned {len(json_obj)} elements")
     return identifier_values, json_obj
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
