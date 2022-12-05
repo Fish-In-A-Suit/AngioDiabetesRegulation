@@ -26,35 +26,23 @@ def _find_all_unique_substrings_from_string(mRNA, length):
 def find_indices_of_substring(full_string, sub_string):
     return [index for index in range(len(full_string)) if full_string.startswith(sub_string, index)]
 
-def _overlap_substring_on_mRNAs(substring, mRNAssubstrings, treshold_to_accept):
+def _overlap_substring_on_mRNAs(substring, mRNAs):
     #TODO:exception if length of substring and all mRNA substrings is not same
     logger.debug(f"Starting overlap analysis of substring {substring}")
     miRNA_results=[]
-    for i in range(len(mRNAssubstrings)):
-        logger.debug(f"Trying {i}. mRNAsubsequences: {mRNAssubstrings[i]}")
-        miRNA_results.append(_overlap_substring_on_mRNAsubstrings(substring, mRNAssubstrings[i], treshold_to_accept))
+    for i in range(len(mRNAs)):
+        #logger.debug(f"Trying {i}. mRNAsubsequences: {mRNAssubstrings[i]}")
+        miRNA_results.append(_overlap_substring_on_mRNA(substring, mRNAs[i]))
     return miRNA_results
 
-def _overlap_substring_on_mRNAsubstrings(substring, mRNAsubstrings):
+def _overlap_substring_on_mRNA(substring, mRNA):
     #logger.debug(f"Overlaping {substring} on {mRNAsubstrings}")
-    length = len(substring)
-    temp_miRNA_results = []
-    for j in range(len(mRNAsubstrings)):
-            overlap = 1-(jellyfish.levenshtein_distance(substring, mRNAsubstrings[j]) / length)
-            #logger.debug(f"Overlap of substring {substring} on mRNAsubstring {mRNAsubstrings[j]} is {overlap}")
-            temp_miRNA_results.append([mRNAsubstrings[j], overlap])
-    return temp_miRNA_results
+    mRNA_length = len(mRNA)
+    substring_length = len(substring)
 
-def _find_best_overlap_miRNA_on_mRNA(miRNA, mRNA):
-    if mRNA == None:
-        return 0
-    mRNAsubstrings = _find_all_unique_substrings_from_string(mRNA, len(miRNA))
-    miRNA_overlaps = _overlap_substring_on_mRNAsubstrings(miRNA, mRNAsubstrings)
-    only_overlaps = [element[1] for element in miRNA_overlaps]
-    best_overlap = max(only_overlaps)
-
-    logger.debug(f"Best overlap of miRNA ({miRNA}) on mRNA ({mRNA}) is {best_overlap})")
-    return best_overlap
+    overlap = 1-(jellyfish.levenshtein_distance(substring, mRNA) - max(mRNA_length-substring, 0)) / substring_length
+    #logger.debug(f"Overlap of substring {substring} on mRNAsubstring {mRNAsubstrings[j]} is {overlap}")
+    return overlap
 
 def _score_miRNA(overlap_result, productnames, product_score):
     score = 0
@@ -102,7 +90,7 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
         for j in range(len(mRNAs)):
             mRNA = mRNAs[j]
             
-            overlap = _find_best_overlap_miRNA_on_mRNA(miRNA, mRNA)
+            overlap = _overlap_substring_on_mRNA(miRNA, mRNA)
             if overlap >= treshold_to_accept:
                 mirna_overlap_results.append({"productID" : productnames[j], "overlap" : overlap})
         
