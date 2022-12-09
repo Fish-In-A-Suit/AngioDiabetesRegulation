@@ -12,15 +12,16 @@ def _find_all_unique_substrings_from_strings(mRNAs, length):
     logger.debug(f"Finding all unique substrings with length {length} from {len(mRNAs)} mRNAs.")
     substrings = set()
     for mRNA in mRNAs:
-        substrings.update(_find_all_unique_substrings_from_string(mRNA, length))
-    logger.debug(f"Found {len(substrings)} unique substrings: {substrings}")
-    return substrings
+        if mRNA is not None:
+            substrings.update(_find_all_unique_substrings_from_string(mRNA, length))
+    logger.info(f"Found {len(substrings)} unique substrings:")
+    return list(substrings)
 
 def _find_all_unique_substrings_from_string(mRNA, length):
     substrings = set()
     for i in range(len(mRNA)-length):
         substrings.update([mRNA[i:i+length]])
-    logger.debug(f"Recieved string {mRNA}  ->  {substrings}")
+    #logger.debug(f"Recieved string {mRNA}  ->  {substrings}")
     return list(substrings)
 
 def find_indices_of_substring(full_string, sub_string):
@@ -40,7 +41,7 @@ def _overlap_substring_on_mRNA(substring, mRNA):
     mRNA_length = len(mRNA)
     substring_length = len(substring)
 
-    overlap = 1-(jellyfish.levenshtein_distance(substring, mRNA) - max(mRNA_length-substring, 0)) / substring_length
+    overlap = 1-(jellyfish.levenshtein_distance(substring, mRNA) - max(mRNA_length-substring_length, 0)) / substring_length
     #logger.debug(f"Overlap of substring {substring} on mRNAsubstring {mRNAsubstrings[j]} is {overlap}")
     return overlap
 
@@ -54,11 +55,10 @@ def _score_miRNA(overlap_result, productnames, product_score):
         score += overlap * product_score[score_index]
     return score
 
-
 def _generate_all_miRNA_permutations_with_repetitions(lenght):
     nucleotides = ["A", "T", "C", "G"]
     permutations = list(map("".join, itertools.product(nucleotides, repeat=lenght)))
-    logger.debug(f"There are {len(permutations)} permutations with length {lenght}")
+    logger.info(f"There are {len(permutations)} permutations with length {lenght}")
     return permutations
 
 def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_accept, target_folder):
