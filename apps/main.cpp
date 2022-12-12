@@ -1,8 +1,16 @@
+#include "test-cpp-lib-hello.h"
+
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <string>
 #include <list>
 #include <chrono>
+#include <json/json.h> //jsoncpp
+#include <rapidjson/document.h> //rapidjson
+#include "rapidjson/filereadstream.h"
+#include <cstdio>
+// #include <test-cpp-library/include/test-cpp-lib-hello.h>
 
 using namespace std;
 using namespace std::chrono;
@@ -10,28 +18,28 @@ using namespace std::chrono;
 /*
 Workflow for miRNA prediction:
   (1) input parameters:
-        - productNames: the uniprot ids of products 
+        - productNames: the uniprot ids of products
         - mRNAs: array of mRNA molecules to be analysed (each corresponds to one productName)
         - productScores: the scores of the products
         - miRNALength: the length of the miRNAs that will be computed. Immensely increases required computation power after 14+
         - thresholdToAccept:
         - targetFolder:
         - debugLoopBreak:
-  
+
   (2) Given miRNALength, generate all possible (unique) mRNA substrings (from all mRNAs) and store them in mRNA_unique_substrings
       Hash the substrings into bits --> mRNA_unique_substrings_hashed. If this is not done, you would have to do complex bit-stepping in part (3)
       (you'd have to step through the mRNA sequence bit by bit and append miRNA at different starting bits, first in a forward direction and then
       backwards too)
-  
+
   miRNA_mRNA_fitting_dict =
   {
     {
-        "miRNA": "xxxxx", 
+        "miRNA": "xxxxx",
         "mRNAsubstrings": ["xxxxxx", "aaaaaa", "bbbbbb"]
         "mRNAsubstringsScores": [1.0, 0.25, 0.32]
     }
     {
-        "miRNA": "xxxxx", 
+        "miRNA": "xxxxx",
         "mRNAsubstrings": ["xxxxxx", "aaaaaa", "bbbbbb"]
         "mRNAsubstringsScores": [1.0, 0.25, 0.32]
     }
@@ -54,26 +62,31 @@ Workflow for miRNA prediction:
       order & save miRNA_mRNA_fitting_dict
 */
 
-class Constants 
+class Constants
 {
 public:
-    enum TimeUnits { NANOSECONDS,
-                     MICROSECONDS,
-                     MILLISECONDS,
-                     SECONDS,
-                     MINUTES,
-                     HOURS};
+    enum TimeUnits
+    {
+        NANOSECONDS,
+        MICROSECONDS,
+        MILLISECONDS,
+        SECONDS,
+        MINUTES,
+        HOURS
+    };
 };
 
 class HighResolutionTimeManager
 {
 public:
-    HighResolutionTimeManager() {
+    HighResolutionTimeManager()
+    {
         // constructor
         setStartTime();
     }
 
-    void setStartTime() {
+    void setStartTime()
+    {
         startTime = std::chrono::high_resolution_clock::now();
     }
 
@@ -83,13 +96,15 @@ public:
      *
      * @param timeUnit: either "nanoseconds", "microseconds", "milliseconds", "seconds", "minutes, "hours" from Constants.TimeUnits
      */
-    long getElapsedTime(Constants::TimeUnits timeUnit) {
+    long getElapsedTime(Constants::TimeUnits timeUnit)
+    {
         // TODO: check that startTime is not 0
         auto stop = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<nanoseconds>(stop - startTime); // initialise auto var
         // namespaces used for code portability
         // Constants::TimeUnits timeUnit = timeUnit;
-        switch (timeUnit) {
+        switch (timeUnit)
+        {
         case Constants::TimeUnits::NANOSECONDS:
             duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - startTime);
             break;
@@ -116,11 +131,9 @@ private:
 // todo: port into OOP style
 void predict_miRNA_values(list<string> t)
 {
-
 }
 
-
-long test_sequence_container_speed() 
+long test_sequence_container_speed()
 {
     // Use auto keyword to avoid typing long type definitions
     auto start = high_resolution_clock::now();
@@ -137,21 +150,48 @@ int main()
 
     HighResolutionTimeManager hrtm; // this will call the constructor
 
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+    std::string helloJim = generateHelloString("Aljosa & Ladi");
+    std::cout << helloJim << std::endl;
+
+    vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
     int i = 0;
-    for (const string& word : msg)
+    for (const string &word : msg)
     {
         cout << word << " ";
         ++i;
     }
     cout << endl;
 
+    // *** JsonCpp json parsing ***:
+    // this doesnt work with a relative filepath, but absolute filepath is ok.
+    // BUG: JSON::READER DOESN'T HANDLE RELATIVE FILEPATHS!
+    //std::ifstream json_file_ifs("C:\\Aljosa\\Development\\Unity-Github\\AngioDiabetesRegulation\\src_data_files\\test.json", std::ifstream::binary);
+    //Json::Reader reader;
+    //Json::Value root;
+    //reader.parse(json_file_ifs, root, false); // // reader can also read strings
+    //cout << root << endl;
+    //cout << "Book: " << root["book"].asString() << endl;
+    //std::string encoding = root.get("encoding", "UTF-8").asString();
+    //std::cout << encoding << "\n";
+
+    // *** RapidJSON parsing ***
+    FILE *fp = fopen("C:\\Aljosa\\Development\\Unity-Github\\AngioDiabetesRegulation\\src_data_files\\test.json", "rb");
+    char readBuffer[65536];
+    rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
+    rapidjson::Document document;
+    document.ParseStream(is);
+    fclose(fp);
+
+    assert(document.HasMember("book"));
+    assert(document["book"].IsString());
+    printf("book = %s\n", document["book"].GetString());
+
     cout << hrtm.getElapsedTime(Constants::MILLISECONDS) << endl;
 }
 
 /**
  * A "functional-programming" way of coding to compute elapsed time -> ported to OOP with the HighResolutionTimeManager class.
- * 
+ *
  * Computes elapsed program runtime by subtracting current time (computed at this function call) from the supplied start time,
  * returning the amount of units (seconds, microseconds, etc.) passed.
  *
