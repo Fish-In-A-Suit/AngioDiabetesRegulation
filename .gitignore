@@ -2,3 +2,5 @@
 __pycache__/*
 src_data_files/uniprotkb_human_idmapping.dat
 out
+src_data_files/uniprot_sprot_human.xml
+term_genes_crash

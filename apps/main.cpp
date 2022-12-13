@@ -1,4 +1,6 @@
 #include "test-cpp-lib-hello.h"
+#include "StringUtils.h"
+#include "HighResolutionTimeManager.h"
 
 #include <iostream>
 #include <fstream>
@@ -10,10 +12,10 @@
 #include <rapidjson/document.h> //rapidjson
 #include "rapidjson/filereadstream.h"
 #include <cstdio>
+
 // #include <test-cpp-library/include/test-cpp-lib-hello.h>
 
 using namespace std;
-using namespace std::chrono;
 
 /*
 Workflow for miRNA prediction:
@@ -62,72 +64,6 @@ Workflow for miRNA prediction:
       order & save miRNA_mRNA_fitting_dict
 */
 
-class Constants
-{
-public:
-    enum TimeUnits
-    {
-        NANOSECONDS,
-        MICROSECONDS,
-        MILLISECONDS,
-        SECONDS,
-        MINUTES,
-        HOURS
-    };
-};
-
-class HighResolutionTimeManager
-{
-public:
-    HighResolutionTimeManager()
-    {
-        // constructor
-        setStartTime();
-    }
-
-    void setStartTime()
-    {
-        startTime = std::chrono::high_resolution_clock::now();
-    }
-
-    /**
-     * Computes elapsed program runtime by subtracting current time (computed at this function call) from the supplied start time,
-     * returning the amount of units (seconds, microseconds, etc.) passed.
-     *
-     * @param timeUnit: either "nanoseconds", "microseconds", "milliseconds", "seconds", "minutes, "hours" from Constants.TimeUnits
-     */
-    long getElapsedTime(Constants::TimeUnits timeUnit)
-    {
-        // TODO: check that startTime is not 0
-        auto stop = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<nanoseconds>(stop - startTime); // initialise auto var
-        // namespaces used for code portability
-        // Constants::TimeUnits timeUnit = timeUnit;
-        switch (timeUnit)
-        {
-        case Constants::TimeUnits::NANOSECONDS:
-            duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - startTime);
-            break;
-        case Constants::TimeUnits::MICROSECONDS:
-            duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - startTime);
-            break;
-        case Constants::TimeUnits::MILLISECONDS:
-            duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - startTime);
-            break;
-        case Constants::TimeUnits::SECONDS:
-            duration = std::chrono::duration_cast<std::chrono::seconds>(stop - startTime);
-            break;
-        case Constants::TimeUnits::HOURS:
-            duration = std::chrono::duration_cast<std::chrono::hours>(stop - startTime);
-            break;
-        }
-        return duration.count();
-    }
-
-private:
-    std::chrono::high_resolution_clock::time_point startTime;
-};
-
 // todo: port into OOP style
 void predict_miRNA_values(list<string> t)
 {
@@ -136,7 +72,7 @@ void predict_miRNA_values(list<string> t)
 long test_sequence_container_speed()
 {
     // Use auto keyword to avoid typing long type definitions
-    auto start = high_resolution_clock::now();
+    auto start = std::chrono::high_resolution_clock::now();
     int i = 111111111;
 
     // todo: test vectors, lists, forward lists and deques for speed comparisons
@@ -147,9 +83,6 @@ int main()
     // "functional-programming" way of computing elapsed time:
     // auto startTime = high_resolution_clock::now();
     // cout << compute_elapsed_time(startTime, Constants::TimeUnits::NANOSECONDS) << endl;
-
-    HighResolutionTimeManager hrtm; // this will call the constructor
-
     std::string helloJim = generateHelloString("Aljosa & Ladi");
     std::cout << helloJim << std::endl;
 
@@ -175,18 +108,18 @@ int main()
     //std::cout << encoding << "\n";
 
     // *** RapidJSON parsing ***
+    HighResolutionTimeManager hrtm;
     FILE *fp = fopen("C:\\Aljosa\\Development\\Unity-Github\\AngioDiabetesRegulation\\src_data_files\\test.json", "rb");
     char readBuffer[65536];
     rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
     rapidjson::Document document;
     document.ParseStream(is);
     fclose(fp);
+    cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
 
     assert(document.HasMember("book"));
     assert(document["book"].IsString());
     printf("book = %s\n", document["book"].GetString());
-
-    cout << hrtm.getElapsedTime(Constants::MILLISECONDS) << endl;
 }
 
 /**
