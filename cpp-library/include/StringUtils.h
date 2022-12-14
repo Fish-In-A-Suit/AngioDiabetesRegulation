@@ -11,12 +11,13 @@
 
 // class declaration is made in .h file
 class StringUtils{
-    int testInt; //just for demonstration
 
 public:
     // StrUtils(int test); // you can define constructor params like so
-    StringUtils();
-    std::string to_string(double, int);
+    static std::string to_string(double, int); // declare statics here and not in cpp; use StringUtils::to_string to call.
+
+private:
+    StringUtils(); // constructor declared private, as StringUtils is meant to provide static string manipulation methods
 };
 
 #endif

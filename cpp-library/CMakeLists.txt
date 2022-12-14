@@ -9,6 +9,7 @@ add_library(cpp-library
     src/StringUtils.cpp
     src/HighResolutionTimeManager.cpp
     src/Constants.cpp
+    src/FileUtils.cpp
 )
 # add_library(cpp-library src/StrUtils.cpp) - this doesnt work, add all libs to the already existing add_library function call.
 

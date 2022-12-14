@@ -13,7 +13,6 @@
 // note: DO NOT USE () next to class defition here !
 class HighResolutionTimeManager {
     std::chrono::high_resolution_clock::time_point startTime;
-    StringUtils StringUtils;
 
 public:
     HighResolutionTimeManager();

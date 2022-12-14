@@ -1,6 +1,7 @@
 #include "test-cpp-lib-hello.h"
 #include "StringUtils.h"
 #include "HighResolutionTimeManager.h"
+#include "FileUtils.h"
 
 #include <iostream>
 #include <fstream>
@@ -76,10 +77,14 @@ long test_sequence_container_speed()
     int i = 111111111;
 
     // todo: test vectors, lists, forward lists and deques for speed comparisons
+    return -1;
 }
 
 int main()
 {
+    // init functions
+    FileUtils fileUtils(1); // directoryClimb = 1, because main.cpp is located in AngioDiabetesRegulation/apps, this climbs up one directory into the project root
+
     // "functional-programming" way of computing elapsed time:
     // auto startTime = high_resolution_clock::now();
     // cout << compute_elapsed_time(startTime, Constants::TimeUnits::NANOSECONDS) << endl;
@@ -109,7 +114,9 @@ int main()
 
     // *** RapidJSON parsing ***
     HighResolutionTimeManager hrtm;
-    FILE *fp = fopen("C:\\Aljosa\\Development\\Unity-Github\\AngioDiabetesRegulation\\src_data_files\\test.json", "rb");
+    // TODO: MAKE A FUNCTION TO CONVERT TO ABSOLUTE FILE
+    // FILE *fp = fopen("F:\\Development\\Unity-Github\\AngioDiabetesRegulation\\src_data_files\\test.json", "rb");
+    FILE *fp = fopen(FileUtils::getAbsoluteFilepath("src_data_files\\test.json").second, "rb");
     char readBuffer[65536];
     rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
     rapidjson::Document document;

@@ -119,11 +119,15 @@ std::string HighResolutionTimeManager::_divideTimeAndReturn(long duration, long 
     {
         // problem: std::to_string doesn't allow to set precision (always xx.000000 decimals, I want only 2 decs precision)
         // return std::to_string(divided) + " " + upflowMarker;
-        return StringUtils.to_string(divided, decimalAccuracy) + " " + upflowMarker;
+        
+        // changed conversion, to_string is now static
+        //return StringUtils.to_string(divided, decimalAccuracy) + " " + upflowMarker;
+        return StringUtils::to_string(divided, decimalAccuracy) + " " + upflowMarker;
     }
     else
     {
         // return std::to_string(duration) + " " + downflowMarker;
-        return StringUtils.to_string(divided, decimalAccuracy) + " " + downflowMarker;
+        //return StringUtils.to_string(divided, decimalAccuracy) + " " + downflowMarker;
+        return StringUtils::to_string(divided, decimalAccuracy) + " " + downflowMarker;
     }
 }

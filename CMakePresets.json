@@ -8,7 +8,7 @@
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "environment": {
-                "VCPKG_ROOT": "C:\\Aljosa\\Development\\Unity-Github\\vcpkg"
+                "VCPKG_ROOT": "F:\\Development\\Unity-Github\\vcpkg"
             },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",

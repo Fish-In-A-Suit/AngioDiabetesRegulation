@@ -14,7 +14,7 @@ project(
 # message("INTERFACE INCLUDE LIBS: ${jsoncpp_INTERFACE_INCLUDE_DIRECTORIES}")
 
 # need to have include directories so vscode can find vpckg libraries
-INCLUDE_DIRECTORIES(C:/Aljosa/Development/Unity-Github/vcpkg/installed/x64-windows/include)
+INCLUDE_DIRECTORIES(F:/Development/Unity-Github/vcpkg/installed/x64-windows/include)
 find_package(RapidJSON REQUIRED)
 
 add_subdirectory(cpp-library)   # look in "test-cpp-library" subdirectory for CMakeLists.txt to process
