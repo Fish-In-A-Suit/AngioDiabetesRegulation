@@ -20,8 +20,7 @@ FileUtils::FileUtils(int directoryClimb) {
 
 /**
  * Returns the absolute filepath to the relative filepath parameter.
- * @param relativeProjectFilepath: a relative path to a directory or a file on the project
- * @param asConstChar: if set to true, 
+ * @param relativeProjectFilepath: a relative path to a directory or a file on the project 
  * @returns absolute filepath to the specified relative file
  * 
  * Read: https://stackoverflow.com/questions/41872550/returning-two-values-of-two-different-types-in-a-c-function
