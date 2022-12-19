@@ -12,9 +12,11 @@
             "program": "${workspaceFolder}\\out\\build\\${command:cmake.activeConfigurePresetName}\\apps\\main.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            //"cwd": "${fileDirname}",
+            "cwd": "${workspaceRoot}",
             "environment": [],
             "console":"integratedTerminal",
+            //"console": "externalTerminal",
             "preLaunchTask": "CMake: build"
         }
     ]

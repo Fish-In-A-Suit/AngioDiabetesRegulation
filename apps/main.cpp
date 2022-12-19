@@ -83,13 +83,7 @@ long test_sequence_container_speed()
 int main()
 {
     // init functions
-    FileUtils fileUtils(1); // directoryClimb = 1, because main.cpp is located in AngioDiabetesRegulation/apps, this climbs up one directory into the project root
-
-    // "functional-programming" way of computing elapsed time:
-    // auto startTime = high_resolution_clock::now();
-    // cout << compute_elapsed_time(startTime, Constants::TimeUnits::NANOSECONDS) << endl;
-    std::string helloJim = generateHelloString("Aljosa & Ladi");
-    std::cout << helloJim << std::endl;
+    FileUtils fileUtils(0); // directoryClimb = 1, because main.cpp is located in AngioDiabetesRegulation/apps, this climbs up one directory into the project root; directoryClimb no longer required after solving err1
 
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
     int i = 0;
@@ -100,23 +94,10 @@ int main()
     }
     cout << endl;
 
-    // *** JsonCpp json parsing ***:
-    // this doesnt work with a relative filepath, but absolute filepath is ok.
-    // BUG: JSON::READER DOESN'T HANDLE RELATIVE FILEPATHS!
-    //std::ifstream json_file_ifs("C:\\Aljosa\\Development\\Unity-Github\\AngioDiabetesRegulation\\src_data_files\\test.json", std::ifstream::binary);
-    //Json::Reader reader;
-    //Json::Value root;
-    //reader.parse(json_file_ifs, root, false); // // reader can also read strings
-    //cout << root << endl;
-    //cout << "Book: " << root["book"].asString() << endl;
-    //std::string encoding = root.get("encoding", "UTF-8").asString();
-    //std::cout << encoding << "\n";
-
     // *** RapidJSON parsing ***
     HighResolutionTimeManager hrtm;
-    // TODO: MAKE A FUNCTION TO CONVERT TO ABSOLUTE FILE
-    // FILE *fp = fopen("F:\\Development\\Unity-Github\\AngioDiabetesRegulation\\src_data_files\\test.json", "rb");
-    FILE *fp = fopen(FileUtils::getAbsoluteFilepath("src_data_files\\test.json").second, "rb");
+    // FILE *fp = fopen(FileUtils::getAbsoluteFilepath("src_data_files\\test.json").second, "rb");
+    FILE *fp = fopen("src_data_files\\test.json", "rb");
     char readBuffer[65536];
     rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
     rapidjson::Document document;

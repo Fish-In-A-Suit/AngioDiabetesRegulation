@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${vcpkgRoot}/x64-windows/include"
+                "${vcpkgRoot}/x64-windows/include",
+                "C:/Aljosa/Development/Unity-Github/vcpkg/installed/x64-windows/include",
             ],
             "defines": [
                 "_DEBUG",

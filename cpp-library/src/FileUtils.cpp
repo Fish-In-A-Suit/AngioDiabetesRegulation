@@ -1,8 +1,7 @@
 // FileUtils.cpp
 
 #include "FileUtils.h"
-#include <filesystem>
-#include <iostream>
+
 
 /**
  * FileUtils constructor. It initialises the projectRootPath to the folder which contains the .cpp file from where FileUtils(int) constr is called.
@@ -11,6 +10,7 @@
 FileUtils::FileUtils(int directoryClimb) {
     // find and set project root path
     FileUtils::projectRootPath = std::filesystem::current_path().string();
+    std::cout << "project root path before climbing: " << projectRootPath << std::endl;
     for(int i = 0; i < directoryClimb; i++) {
         std::filesystem::path p = FileUtils::projectRootPath; 
         FileUtils::projectRootPath = p.parent_path().string();

@@ -3,6 +3,8 @@
 #define FileUtils_H
 
 #include <string>
+#include <filesystem>
+#include <iostream>
 
 class FileUtils {
 public:
