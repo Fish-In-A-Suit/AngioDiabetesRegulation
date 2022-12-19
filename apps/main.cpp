@@ -1,7 +1,9 @@
 #include "test-cpp-lib-hello.h"
 #include "StringUtils.h"
 #include "HighResolutionTimeManager.h"
+#include "HighResolutionTimeManagerV2.h"
 #include "FileUtils.h"
+#include "JsonObject.h"
 
 #include <iostream>
 #include <fstream>
@@ -95,19 +97,15 @@ int main()
     cout << endl;
 
     // *** RapidJSON parsing ***
-    HighResolutionTimeManager hrtm;
-    // FILE *fp = fopen(FileUtils::getAbsoluteFilepath("src_data_files\\test.json").second, "rb");
-    FILE *fp = fopen("src_data_files\\test.json", "rb");
-    char readBuffer[65536];
-    rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
-    rapidjson::Document document;
-    document.ParseStream(is);
-    fclose(fp);
-    cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
+    // HighResolutionTimeManager hrtm;
+    // cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
 
-    assert(document.HasMember("book"));
-    assert(document["book"].IsString());
-    printf("book = %s\n", document["book"].GetString());
+    HighResolutionTimeManagerV2 hrtm2;
+    JsonObject jsonObj("src_data_files/test.json", 65565, true);
+    printf("book = %s\n", jsonObj.getValue("book"));
+    hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+
+    return 0;
 }
 
 /**

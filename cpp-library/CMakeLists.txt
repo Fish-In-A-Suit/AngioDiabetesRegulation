@@ -6,6 +6,7 @@ add_library(cpp-library
     src/test-cpp-lib-hello.cpp 
     src/StringUtils.cpp
     src/HighResolutionTimeManager.cpp
+    src/HighResolutionTimeManagerV2.cpp
     src/Constants.cpp
     src/FileUtils.cpp
     src/JsonObject.cpp

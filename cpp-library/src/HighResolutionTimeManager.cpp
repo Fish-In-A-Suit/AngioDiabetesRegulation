@@ -1,6 +1,7 @@
 // HighResolutionTimeManager.cpp
 
 #include "HighResolutionTimeManager.h"
+#include <iostream>
 
 HighResolutionTimeManager::HighResolutionTimeManager() {
     setStartTime();
@@ -45,6 +46,7 @@ long HighResolutionTimeManager::getElapsedTime(Constants::TimeUnits timeUnit, bo
     }
 
     long long_duration = (long)duration.count();
+    std::cout << duration.count() << std::endl;
     return long_duration;
 }
 
@@ -122,7 +124,8 @@ std::string HighResolutionTimeManager::_divideTimeAndReturn(long duration, long 
         
         // changed conversion, to_string is now static
         //return StringUtils.to_string(divided, decimalAccuracy) + " " + upflowMarker;
-        return StringUtils::to_string(divided, decimalAccuracy) + " " + upflowMarker;
+        // if it upflows, after first division, another division is necessarry
+        return StringUtils::to_string(divided/divider, decimalAccuracy) + " " + upflowMarker;
     }
     else
     {
