@@ -15,6 +15,11 @@ public:
         MINUTES,
         HOURS
     };
+
+    enum LogLevels {
+        DEBUG,
+        INFO
+    };
 };
 
 #endif

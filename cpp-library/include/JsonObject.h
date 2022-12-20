@@ -5,6 +5,9 @@
 //#include "rapidjson/document.h"
 #include <rapidjson/document.h> // rapidjson
 #include <rapidjson/filereadstream.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/writer.h>
+#include <rapidjson/prettywriter.h>
 
 class JsonObject
 {
@@ -13,6 +16,7 @@ public:
     void setJson(std::string, int);
     // rapidjson::Document getJsonDoc(); // cannot return due to it being prohibited by document.h
     const char* getValue(std::string);
+    std::string toString(bool);
 
     bool getAssertionStatus();
     void setAssertionStatus(bool);

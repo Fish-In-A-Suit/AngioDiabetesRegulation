@@ -11,6 +11,7 @@ add_library(cpp-library
     src/FileUtils.cpp
     src/JsonObject.cpp
     "include/JsonObject.h"
+    src/Logger.cpp
 )
 
 # PUBLIC needed to make both /include/*.h and /src/*.cpp available elsewhere in project

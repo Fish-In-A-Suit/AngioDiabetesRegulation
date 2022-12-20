@@ -11,13 +11,17 @@
             // task 'CMake: build v1' saves the main executable as build/apps/main.exe; in case of changes, also change the program field!
             "program": "${workspaceFolder}\\out\\build\\${command:cmake.activeConfigurePresetName}\\apps\\main.exe",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             //"cwd": "${fileDirname}",
             "cwd": "${workspaceRoot}",
             "environment": [],
             "console":"integratedTerminal",
             //"console": "externalTerminal",
-            "preLaunchTask": "CMake: build"
+            "preLaunchTask": "CMake: build",
+            "logging": {
+                "moduleLoad": false,
+                "trace": true
+            }
         }
     ]
 }

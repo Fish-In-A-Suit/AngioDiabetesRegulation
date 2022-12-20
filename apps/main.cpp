@@ -4,6 +4,7 @@
 #include "HighResolutionTimeManagerV2.h"
 #include "FileUtils.h"
 #include "JsonObject.h"
+#include "Logger.h"
 
 #include <iostream>
 #include <fstream>
@@ -82,10 +83,68 @@ long test_sequence_container_speed()
     return -1;
 }
 
+// this function is buggy, only works for length = 4 
+std::vector<std::string> generatePermutations(std::string sequence, int length) {
+    std::vector<std::string> permutations;
+    std::string permutation;
+
+    // generate all permutations of the given length
+    for (int a = 0; a < sequence.length(); ++a) {
+        permutation += sequence[a];
+        
+        for (int t = 0; t < sequence.length(); ++t) {
+            permutation += sequence[t];
+
+            for (int c = 0; c < sequence.length(); ++c) {
+                permutation += sequence[c];
+
+                for (int g = 0; g < sequence.length(); ++g) {
+                    permutation += sequence[g];
+
+                    // add the permutation to the vector if it is the desired length
+                    if(permutation.length() == length) {
+                        // std::cout << permutation << std::endl;
+                        permutations.push_back(permutation);
+                    }
+                    permutation.pop_back();
+                }
+                permutation.pop_back();
+            }
+            permutation.pop_back();
+        }
+        permutation.pop_back();
+    }
+    return permutations;
+}
+
+/**
+ * Creates permutations of input string S of length n
+ * 
+ * @param s: Input string, the characters of which will be used in the permutation
+ * @param n: The length of the permutations
+ * @param count: Pointer to the count variable (should be initialised before this function is called)
+ * @param t: Used for recursion, do not set it when calling the function.
+ * 
+ * Example call: 
+ * int count = 0;
+ * enumerate("ATCG", 8, count);
+*/
+void enumerate(const string& s, int n, int &count, string t = "") {
+    if (n == 0) {
+        ++count;
+    } else {
+        for (char c : s) {
+            ++count;
+            enumerate(s, n-1, count, t+c);
+        }
+    }
+}
+
 int main()
 {
     // init functions
     FileUtils fileUtils(0); // directoryClimb = 1, because main.cpp is located in AngioDiabetesRegulation/apps, this climbs up one directory into the project root; directoryClimb no longer required after solving err1
+    Logger::setLevel(Constants::LogLevels::DEBUG);
 
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
     int i = 0;
@@ -99,10 +158,29 @@ int main()
     // *** RapidJSON parsing ***
     // HighResolutionTimeManager hrtm;
     // cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
-
     HighResolutionTimeManagerV2 hrtm2;
-    JsonObject jsonObj("src_data_files/test.json", 65565, true);
+
+    // 65565 is enough memory for all jsons in test_run_1
+    JsonObject jsonObj("src_data_files/test.json", 65565, false);
+    JsonObject mRNAProductsJson("test_run_1/product_mRNA.json", 65565, false);
+    JsonObject productScoresJson("test_run_1/product_scores.json", 6556, false);
+    JsonObject termsDirectProductsJson("test_run_1/terms_direct_products.json", 65565, false);
+    // Logger::checkType(&jsonObj);
+    // Logger::debug(termsDirectProductsJson.toString(false));
+
     printf("book = %s\n", jsonObj.getValue("book"));
+    //printf("characters = %s\n", jsonObj.getValue("characters"));
+    // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+
+    hrtm2.setStartTime();
+    // ATTEMPT 1
+    // vector<std::string> permutations = generatePermutations("ATCG", 8);
+    //cout << permutations.size() << endl;
+
+    //ATTEMPT 2: len(12) -> 2,64s   len(14) -> 42,1s 
+    int count = 0;
+    enumerate("ATCG", 4, count);
+    Logger::debug(std::to_string(count));
     hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
 
     return 0;

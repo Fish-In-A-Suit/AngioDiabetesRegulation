@@ -1,15 +1,23 @@
 // HighResolutionTimeManagerV2.cpp
 
 #include "HighResolutionTimeManagerV2.h"
+#include "Logger.h"
 
 HighResolutionTimeManagerV2::HighResolutionTimeManagerV2() {
     setStartTime();
+    Logger::debug("set start time.");
 }
 
 void HighResolutionTimeManagerV2::setStartTime() {
     startTime = std::chrono::high_resolution_clock::now();
 }
 
+/**
+ * Returns a string of elapsed time and optionally prints it to terminal.
+ * 
+ * @param timeUnit: One of Constants::TimeUnits::NANOSECONDS, MICROSECONDS, MILLISECONDS, SECONDS, HOURS
+ * @param print: If true, will print the calculated time difference to terminal.
+*/
 std::string HighResolutionTimeManagerV2::getElapsedTime(Constants::TimeUnits timeUnit, bool print) {
     auto stopTime = std::chrono::high_resolution_clock::now();
     double duration;
