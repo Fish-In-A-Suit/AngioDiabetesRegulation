@@ -19,6 +19,14 @@ FileUtils::FileUtils(int directoryClimb) {
 }
 
 /**
+ * FileUtils destructor.
+*/
+FileUtils::~FileUtils() {
+    // destructor implementation goes here
+    std::cout << "FileUtils destructor called." << std::endl;
+}
+
+/**
  * Returns the absolute filepath to the relative filepath parameter.
  * @param relativeProjectFilepath: a relative path to a directory or a file on the project 
  * @returns absolute filepath to the specified relative file

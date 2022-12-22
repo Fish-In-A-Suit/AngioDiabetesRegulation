@@ -9,6 +9,7 @@
 class FileUtils {
 public:
     FileUtils(int);
+    ~FileUtils();
     static std::pair<std::string, const char*> getAbsoluteFilepath(std::string);
     static std::string getProjectRootPath();
     static void setProjectRootPath(std::string);

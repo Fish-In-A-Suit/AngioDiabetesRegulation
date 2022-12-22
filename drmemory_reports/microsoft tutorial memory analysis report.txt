@@ -1,0 +1,59 @@
+Dr. Memory version 2.5.0 build 0 built on Oct 18 2021 03:01:22
+Windows version: WinVer=105;Rel=2009;Build=22000;Edition=Core
+Dr. Memory results for pid 51780: "main.exe"
+Application cmdline: "C:\Aljosa\Development\Unity-Github\AngioDiabetesRegulation\out\build\ConfigurePresetv1\apps\main.exe"
+Recorded 124 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin64\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000003c603ff730-0x0000003c603ff738 8 byte(s)
+# 0 ___chkstk_ms
+# 1 _pei386_runtime_relocator
+# 2 __tmainCRTStartup
+# 3 .l_start
+# 4 ntdll.dll!RtlUserThreadStart
+Note: @0:00:00.141 in thread 46088
+Note: 0x0000003c603ff730 refers to 776 byte(s) beyond the top of the stack 0x0000003c603ffa38
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #2: POSSIBLE LEAK 118 direct bytes 0x0000017e2d8501c0-0x0000017e2d850236 + 0 indirect bytes
+# 0 replace_malloc                   [d:\a\drmemory\drmemory\common\alloc_replace.c:2580]
+# 1 msvcrt.dll!realloc              +0x17a    (0x00007ff9ace7c93b <msvcrt.dll+0x1c93b>)
+# 2 msvcrt.dll!unlock               +0x40c    (0x00007ff9ace9e6ed <msvcrt.dll+0x3e6ed>)
+# 3 msvcrt.dll!_getmainargs         +0x30     (0x00007ff9ace67ca1 <msvcrt.dll+0x7ca1>)
+# 4 pre_cpp_init
+# 5 msvcrt.dll!initterm             +0x2c     (0x00007ff9ace9d54d <msvcrt.dll+0x3d54d>)
+# 6 __tmainCRTStartup
+# 7 .l_start
+# 8 ntdll.dll!RtlUserThreadStart
+
+Error #3: POSSIBLE LEAK 24 direct bytes 0x0000017e2d850de0-0x0000017e2d850df8 + 0 indirect bytes
+# 0 replace_malloc                   [d:\a\drmemory\drmemory\common\alloc_replace.c:2580]
+# 1 libgcc_s_seh-1.dll!?            +0x0      (0x00007ff97d87311b <libgcc_s_seh-1.dll+0x1311b>)
+# 2 __tcf_1 
+# 3 msvcrt.dll!initterm_e           +0x1d0    (0x00007ff9ace9d741 <msvcrt.dll+0x3d741>)
+# 4 __tmainCRTStartup
+# 5 .l_start
+# 6 ntdll.dll!RtlUserThreadStart
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      2
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      1 unique,     2 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      2 unique,     2 total,    142 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      4 potential error(s) (suspected false positives)
+         (details: C:\Users\User\AppData\Roaming\Dr. Memory\DrMemory-main.exe.51780.000\potential_errors.txt)
+     15 unique,    15 total,   1478 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: C:\Users\User\AppData\Roaming\Dr. Memory\DrMemory-main.exe.51780.000\results.txt

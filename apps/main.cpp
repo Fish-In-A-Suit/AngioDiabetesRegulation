@@ -144,9 +144,12 @@ int main()
 {
     // init functions
 
-    // FileUtils also causes a memory leak.
-    FileUtils fileUtils(0); // directoryClimb = 1, because main.cpp is located in AngioDiabetesRegulation/apps, this climbs up one directory into the project root; directoryClimb no longer required after solving err1
-    Logger::setLevel(Constants::LogLevels::DEBUG);
+    // Warning: if FileUtils is ever needed, make sure to initialise it.
+    // this causes INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete
+    // FileUtils fileUtils(0); // directoryClimb = 1, because main.cpp is located in AngioDiabetesRegulation/apps, this climbs up one directory into the project root; directoryClimb no longer required after solving err1
+    FileUtils* fileUtils = new FileUtils(0);
+
+    // Logger::setLevel(Constants::LogLevels::DEBUG);
 
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
     int i = 0;
@@ -186,6 +189,9 @@ int main()
     // enumerate("ATCG", 4, count);
     // Logger::debug(std::to_string(count));
     // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+
+    // call destructors
+    delete fileUtils;
 
     return 0;
 }
