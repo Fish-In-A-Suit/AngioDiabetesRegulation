@@ -143,6 +143,8 @@ void enumerate(const string& s, int n, int &count, string t = "") {
 int main()
 {
     // init functions
+
+    // FileUtils also causes a memory leak.
     FileUtils fileUtils(0); // directoryClimb = 1, because main.cpp is located in AngioDiabetesRegulation/apps, this climbs up one directory into the project root; directoryClimb no longer required after solving err1
     Logger::setLevel(Constants::LogLevels::DEBUG);
 
@@ -150,38 +152,40 @@ int main()
     int i = 0;
     for (const string &word : msg)
     {
-        cout << word << " ";
+        std::cout << word << " ";
         ++i;
     }
-    cout << endl;
+    std::cout << endl;
 
     // *** RapidJSON parsing ***
-    // HighResolutionTimeManager hrtm;
-    // cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
-    HighResolutionTimeManagerV2 hrtm2;
+    // // HighResolutionTimeManager hrtm;
+    // // cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
+    // HighResolutionTimeManagerV2 hrtm2;
 
     // 65565 is enough memory for all jsons in test_run_1
-    JsonObject jsonObj("src_data_files/test.json", 65565, false);
-    JsonObject mRNAProductsJson("test_run_1/product_mRNA.json", 65565, false);
-    JsonObject productScoresJson("test_run_1/product_scores.json", 6556, false);
-    JsonObject termsDirectProductsJson("test_run_1/terms_direct_products.json", 65565, false);
-    // Logger::checkType(&jsonObj);
-    // Logger::debug(termsDirectProductsJson.toString(false));
 
-    printf("book = %s\n", jsonObj.getValue("book"));
-    //printf("characters = %s\n", jsonObj.getValue("characters"));
-    // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    // JsonObject causes heap corruptions
+    // JsonObject jsonObj("src_data_files/test.json", 65565, false);
+    // JsonObject mRNAProductsJson("test_run_1/product_mRNA.json", 65565, false);
+    // JsonObject productScoresJson("test_run_1/product_scores.json", 6556, false);
+    // JsonObject termsDirectProductsJson("test_run_1/terms_direct_products.json", 65565, false);
+    // // Logger::checkType(&jsonObj);
+    // // Logger::debug(termsDirectProductsJson.toString(false));
 
-    hrtm2.setStartTime();
+    // printf("book = %s\n", jsonObj.getValue("book"));
+    // // printf("characters = %s\n", jsonObj.getValue("characters"));
+    // // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+
+    // hrtm2.setStartTime();
     // ATTEMPT 1
-    // vector<std::string> permutations = generatePermutations("ATCG", 8);
-    //cout << permutations.size() << endl;
+    // // vector<std::string> permutations = generatePermutations("ATCG", 8);
+    // // cout << permutations.size() << endl;
 
     //ATTEMPT 2: len(12) -> 2,64s   len(14) -> 42,1s 
-    int count = 0;
-    enumerate("ATCG", 4, count);
-    Logger::debug(std::to_string(count));
-    hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    // int count = 0;
+    // enumerate("ATCG", 4, count);
+    // Logger::debug(std::to_string(count));
+    // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
 
     return 0;
 }

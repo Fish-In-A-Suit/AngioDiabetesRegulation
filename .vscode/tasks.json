@@ -28,7 +28,7 @@
             ],
             "group": "build",
             "problemMatcher": [],
-            "detail": "CMake template build task"
+            "detail": "CMake template build task",
         },
         {
             "type": "cmake",
@@ -48,7 +48,11 @@
             "preset": "${command:cmake.activeBuildPresetName}",
             "group": "build",
             "problemMatcher": [],
-            "detail": "CMake template build task"
+            "detail": "CMake template build task",
+            // "options": {
+            //    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+            //    "CMAKE_BUILD_TYPE": "Debug"
+            // }
         }
     ],
     "version": "2.0.0"
