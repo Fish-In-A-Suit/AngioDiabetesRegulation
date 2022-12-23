@@ -2,6 +2,10 @@
 
 #include "Logger.h"
 
+Logger::~Logger() {
+    // logger class destructor. Even the classes with a hidden (private) constructor need a public destructor
+    std::cout << "Logger destructor called." << std::endl;
+}
 /**
  * All inline static functions should be declared AND defined in .h file. Defining in .cpp file raises "function used but never defined" error.
  * 

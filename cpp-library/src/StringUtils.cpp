@@ -15,6 +15,11 @@ StringUtils::StringUtils() {
 
 }
 
+// destructor implementation
+StringUtils::~StringUtils() {
+    std::cout << "StringUtils destructor called" << std::endl;
+}
+
 std::string StringUtils::to_string(double value, int precision) {
     std::ostringstream streamObj;              // create an output string stream
     streamObj << std::fixed;                   // set fixed-point notation

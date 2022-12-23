@@ -8,11 +8,13 @@
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/writer.h>
 #include <rapidjson/prettywriter.h>
+#include <iostream>
 
 class JsonObject
 {
 public:
     JsonObject(std::string, int, bool);
+    ~JsonObject();
     void setJson(std::string, int);
     // rapidjson::Document getJsonDoc(); // cannot return due to it being prohibited by document.h
     const char* getValue(std::string);
@@ -21,6 +23,7 @@ public:
     bool getAssertionStatus();
     void setAssertionStatus(bool);
 private:
+    std::string filepath;
     rapidjson::Document jsonDoc;
     bool checkAssertions;
 };

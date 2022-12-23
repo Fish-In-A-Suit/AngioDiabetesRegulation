@@ -13,7 +13,13 @@ JsonObject::JsonObject(std::string filepath, int readBufferSize, bool checkAsser
     checkAssertions = checkAsserts;
 }
 
+JsonObject::~JsonObject() {
+    // destructor implementation
+    std::cout << "JsonObject for " << filepath << " called." << std::endl;
+}
+
 void JsonObject::setJson(std::string filepath, int readBufferSize) {
+    this->filepath = filepath; 
     FILE *fp = fopen(filepath.c_str(), "rb");
     char readBuffer[readBufferSize];
     rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));

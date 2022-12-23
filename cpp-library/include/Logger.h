@@ -15,6 +15,8 @@ class Logger {
     inline static std::string loggerName;
 
 public:
+    ~Logger();
+    
     inline static void setLevel(Constants::LogLevels level) {
         logLevel = level;
     };

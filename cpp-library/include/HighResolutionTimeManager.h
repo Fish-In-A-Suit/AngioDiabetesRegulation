@@ -16,6 +16,7 @@ class HighResolutionTimeManager {
 
 public:
     HighResolutionTimeManager();
+    ~HighResolutionTimeManager();
     void setStartTime();
     long getElapsedTime(Constants::TimeUnits, bool);
     std::string getElapsedTime(Constants::TimeUnits);

@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.11-3.18)
 
 project(cpp-library)
 
+# if there are any errors with JsonObject, also pass "include/JsonObject.h" here
 add_library(cpp-library 
     src/test-cpp-lib-hello.cpp 
     src/StringUtils.cpp
@@ -10,7 +11,6 @@ add_library(cpp-library
     src/Constants.cpp
     src/FileUtils.cpp
     src/JsonObject.cpp
-    "include/JsonObject.h"
     src/Logger.cpp
 )
 

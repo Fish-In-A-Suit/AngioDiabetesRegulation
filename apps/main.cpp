@@ -163,31 +163,33 @@ int main()
     // *** RapidJSON parsing ***
     // // HighResolutionTimeManager hrtm;
     // // cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
-    // HighResolutionTimeManagerV2 hrtm2;
+    HighResolutionTimeManagerV2 hrtm2;
 
     // 65565 is enough memory for all jsons in test_run_1
 
-    // JsonObject causes heap corruptions
-    // JsonObject jsonObj("src_data_files/test.json", 65565, false);
-    // JsonObject mRNAProductsJson("test_run_1/product_mRNA.json", 65565, false);
-    // JsonObject productScoresJson("test_run_1/product_scores.json", 6556, false);
-    // JsonObject termsDirectProductsJson("test_run_1/terms_direct_products.json", 65565, false);
+    // JsonObject causes possible heap corruptions -> check
+    JsonObject jsonObj("src_data_files/test.json", 65565, false);
+    JsonObject mRNAProductsJson("test_run_1/product_mRNA.json", 65565, false);
+    JsonObject productScoresJson("test_run_1/product_scores.json", 6556, false);
+    JsonObject termsDirectProductsJson("test_run_1/terms_direct_products.json", 65565, false);
     // // Logger::checkType(&jsonObj);
     // // Logger::debug(termsDirectProductsJson.toString(false));
 
-    // printf("book = %s\n", jsonObj.getValue("book"));
+    printf("book = %s\n", jsonObj.getValue("book"));
     // // printf("characters = %s\n", jsonObj.getValue("characters"));
     // // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
 
-    // hrtm2.setStartTime();
+    hrtm2.setStartTime();
     // ATTEMPT 1
     // // vector<std::string> permutations = generatePermutations("ATCG", 8);
     // // cout << permutations.size() << endl;
 
     //ATTEMPT 2: len(12) -> 2,64s   len(14) -> 42,1s 
-    // int count = 0;
-    // enumerate("ATCG", 4, count);
-    // Logger::debug(std::to_string(count));
+    int count = 0;
+    enumerate("ATCG", 4, count);
+    Logger::debug(std::to_string(count));
+
+    // this causes code to break smh
     // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
 
     // call destructors

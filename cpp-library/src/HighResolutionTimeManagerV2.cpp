@@ -8,6 +8,11 @@ HighResolutionTimeManagerV2::HighResolutionTimeManagerV2() {
     Logger::debug("set start time.");
 }
 
+HighResolutionTimeManagerV2::~HighResolutionTimeManagerV2() {
+    // destructor implementation
+    std::cout << "HighResolutionTimeManagerV2 destructor called." << std::endl;
+}
+
 void HighResolutionTimeManagerV2::setStartTime() {
     startTime = std::chrono::high_resolution_clock::now();
 }
