@@ -5,6 +5,7 @@
 #include "FileUtils.h"
 #include "JsonObject.h"
 #include "Logger.h"
+#include "PermutationUtils.h"
 
 #include <iostream>
 #include <fstream>
@@ -20,6 +21,9 @@
 // #include <test-cpp-library/include/test-cpp-lib-hello.h>
 
 using namespace std;
+
+int d_callcount = 0;
+int d_perms = 0;
 
 /*
 Workflow for miRNA prediction:
@@ -140,6 +144,63 @@ void enumerate(const string& s, int n, int &count, string t = "") {
     }
 }
 
+// Recursive function to generate permutations
+void generatePermutationsV1(std::vector<int> permutation, int length)
+{
+    ++d_callcount;
+    // * long long d_size; // enable this to check size of permutation in debug view; setting 'length' to either 6 or 12, or 22 keeps the permutation vector at 24bytes in memory
+
+    // Base case: if the permutation has the desired length, print or store it
+    if (permutation.size() == length)
+    {
+        ++d_perms;
+        for (int b : permutation)
+        {
+            std::cout << std::bitset<2>(b);
+        }
+        std::cout << std::endl;
+        // * d_size = sizeof(permutation);
+        return;
+    }
+
+    // Recursive case: generate permutations by appending each of the possible values
+    for (int b : {0b00, 0b01, 0b10, 0b11})
+    {
+        std::vector<int> newPermutation = permutation;
+        newPermutation.push_back(b);
+        generatePermutationsV1(newPermutation, length);
+    }
+}
+
+/**
+ * WARNING: When changing length, make sure to also change std::bitset<VALUE> to length * 2 (C++ doesn't allow it to be dynamic)
+*/
+void generatePermutationsV2(int permutation, int length) {
+    // use for loop
+    for (int i = 0; i <= length; ++i) {
+        for (int bit : {0b00, 0b01, 0b10, 0b11}) {
+            // set the last 2 bits in permutation to 'bit'
+            permutation |= bit;
+
+            // TODO: also set the "farther" bits ie after first loop, you need to set bits 3 and 4 from the left 
+
+            // store the bits
+            std::cout << std::bitset<12>(permutation) << std::endl;
+
+            // clear the bits - this is necessary, otherwise if 01 is set and then 10, the end will be 11 (should be 10)
+            permutation &= 0b00;
+        }
+        // bit shift for 2 left
+        permutation <<= 2;
+    }
+}
+
+void printVectorElements(std::vector<int> &vec) {
+    for (int i = 0; i < vec.size(); i++) {
+        std::cout << vec.at(i) << std::endl;
+    }
+} 
+
 int main()
 {
     // init functions
@@ -185,9 +246,23 @@ int main()
     // // cout << permutations.size() << endl;
 
     //ATTEMPT 2: len(12) -> 2,64s   len(14) -> 42,1s 
-    int count = 0;
-    enumerate("ATCG", 4, count);
-    Logger::debug(std::to_string(count));
+    // int count = 0;
+    // enumerate("ATCG", 4, count);
+    // Logger::debug(std::to_string(count));
+
+    // ATTEMPT 3: recursive function; WORKS!
+    //generatePermutationsV1({}, 22);
+    //std::cout << "The function was called " << d_callcount << " times." << std::endl;
+    //std::cout << "Number of permutations: " << d_perms << std::endl;
+
+    // ATTEMPT 4: for-loop function;
+    // generatePermutationsV2(0b000000000000, 6);
+
+    // ATTEMPT 5:
+    // std::vector<int> permutations = generatePermutationsV3(3);
+    std::vector<int> permutations = PermutationUtils::generatePermutations(3, {0b00, 0b01, 0b10, 0b11});
+    cout << "Number of permutations: " << permutations.size() << endl;
+    printVectorElements(permutations);
 
     // this causes code to break smh
     // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
