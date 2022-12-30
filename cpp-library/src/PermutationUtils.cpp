@@ -12,12 +12,50 @@ PermutationUtils::~PermutationUtils() {
 std::vector<int> PermutationUtils::generatePermutations(int length, std::vector<int> bitPairValues = {0b00, 0b01, 0b10, 0b11})
 {
     std::vector<int> permutations = {};
-    permutations = bitShiftPrimary(bitPairValues);
+    permutations = bitShiftPrimary(bitPairValues, 2, {0b00, 0b01, 0b10, 0b11});
     for (int i = 0; i < (length - 2); ++i)
     {
-        permutations = bitShiftPrimary(permutations);
+        permutations = bitShiftPrimary(permutations, 2, {0b00,0b01,0b10,0b11});
     }
     return permutations;
+}
+
+/**
+ * Example call: generatePermutationsRecursively({}, 12);
+ */
+void PermutationUtils::generatePermutationsRecursively(std::vector<int> permutation, int length) {
+    // Base case: if the permutation has the desired length, print or store it
+    if (permutation.size() == length)
+    {
+        for (int b : permutation)
+        {
+            std::cout << std::bitset<2>(b);
+        }
+        std::cout << std::endl;
+        // * d_size = sizeof(permutation);
+        return;
+    }
+
+    // Recursive case: generate permutations by appending each of the possible values
+    for (int b : {0b00, 0b01, 0b10, 0b11})
+    {
+        std::vector<int> newPermutation = permutation;
+        newPermutation.push_back(b);
+        generatePermutationsRecursively(newPermutation, length);
+    }
+}
+
+/**
+ * The length of permutation can be seen nucleotide-wise or bit-wise (which is 2 times the length of nucleotides).
+ * This function excepts the permutationLength to be specified bit-wise (ie. AAAA -> len = 8 bits)
+ * 
+ * WARNING: Make sure to adjust the value in std::bitset<VALUE> according to the amount of bits you want to represent.
+*/
+void PermutationUtils::printPermutations(std::vector<int> permutations) {
+    for (int i = 0; i < permutations.size(); i++)
+    {
+        std::cout << permutations.at(i) << ", " << std::bitset<6>(permutations.at(i)) << std::endl;
+    }
 }
 
 std::vector<int> PermutationUtils::bitShiftPrimary(int permutation, int bitShift = 2, std::vector<int> primaryBitPairValues = {0b00, 0b01, 0b10, 0b11})

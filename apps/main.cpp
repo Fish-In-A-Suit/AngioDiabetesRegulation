@@ -22,8 +22,6 @@
 
 using namespace std;
 
-int d_callcount = 0;
-int d_perms = 0;
 
 /*
 Workflow for miRNA prediction:
@@ -72,132 +70,11 @@ Workflow for miRNA prediction:
       order & save miRNA_mRNA_fitting_dict
 */
 
-// todo: port into OOP style
-void predict_miRNA_values(list<string> t)
-{
-}
 
-long test_sequence_container_speed()
-{
-    // Use auto keyword to avoid typing long type definitions
-    auto start = std::chrono::high_resolution_clock::now();
-    int i = 111111111;
-
-    // todo: test vectors, lists, forward lists and deques for speed comparisons
-    return -1;
-}
-
-// this function is buggy, only works for length = 4 
-std::vector<std::string> generatePermutations(std::string sequence, int length) {
-    std::vector<std::string> permutations;
-    std::string permutation;
-
-    // generate all permutations of the given length
-    for (int a = 0; a < sequence.length(); ++a) {
-        permutation += sequence[a];
-        
-        for (int t = 0; t < sequence.length(); ++t) {
-            permutation += sequence[t];
-
-            for (int c = 0; c < sequence.length(); ++c) {
-                permutation += sequence[c];
-
-                for (int g = 0; g < sequence.length(); ++g) {
-                    permutation += sequence[g];
-
-                    // add the permutation to the vector if it is the desired length
-                    if(permutation.length() == length) {
-                        // std::cout << permutation << std::endl;
-                        permutations.push_back(permutation);
-                    }
-                    permutation.pop_back();
-                }
-                permutation.pop_back();
-            }
-            permutation.pop_back();
-        }
-        permutation.pop_back();
-    }
-    return permutations;
-}
-
-/**
- * Creates permutations of input string S of length n
- * 
- * @param s: Input string, the characters of which will be used in the permutation
- * @param n: The length of the permutations
- * @param count: Pointer to the count variable (should be initialised before this function is called)
- * @param t: Used for recursion, do not set it when calling the function.
- * 
- * Example call: 
- * int count = 0;
- * enumerate("ATCG", 8, count);
-*/
-void enumerate(const string& s, int n, int &count, string t = "") {
-    if (n == 0) {
-        ++count;
-    } else {
-        for (char c : s) {
-            ++count;
-            enumerate(s, n-1, count, t+c);
-        }
-    }
-}
-
-// Recursive function to generate permutations
-void generatePermutationsV1(std::vector<int> permutation, int length)
-{
-    ++d_callcount;
-    // * long long d_size; // enable this to check size of permutation in debug view; setting 'length' to either 6 or 12, or 22 keeps the permutation vector at 24bytes in memory
-
-    // Base case: if the permutation has the desired length, print or store it
-    if (permutation.size() == length)
-    {
-        ++d_perms;
-        for (int b : permutation)
-        {
-            std::cout << std::bitset<2>(b);
-        }
-        std::cout << std::endl;
-        // * d_size = sizeof(permutation);
-        return;
-    }
-
-    // Recursive case: generate permutations by appending each of the possible values
-    for (int b : {0b00, 0b01, 0b10, 0b11})
-    {
-        std::vector<int> newPermutation = permutation;
-        newPermutation.push_back(b);
-        generatePermutationsV1(newPermutation, length);
-    }
-}
-
-/**
- * WARNING: When changing length, make sure to also change std::bitset<VALUE> to length * 2 (C++ doesn't allow it to be dynamic)
-*/
-void generatePermutationsV2(int permutation, int length) {
-    // use for loop
-    for (int i = 0; i <= length; ++i) {
-        for (int bit : {0b00, 0b01, 0b10, 0b11}) {
-            // set the last 2 bits in permutation to 'bit'
-            permutation |= bit;
-
-            // TODO: also set the "farther" bits ie after first loop, you need to set bits 3 and 4 from the left 
-
-            // store the bits
-            std::cout << std::bitset<12>(permutation) << std::endl;
-
-            // clear the bits - this is necessary, otherwise if 01 is set and then 10, the end will be 11 (should be 10)
-            permutation &= 0b00;
-        }
-        // bit shift for 2 left
-        permutation <<= 2;
-    }
-}
-
+// todo: port into VectorUtils
 void printVectorElements(std::vector<int> &vec) {
     for (int i = 0; i < vec.size(); i++) {
-        std::cout << vec.at(i) << std::endl;
+        std::cout << vec.at(i) << ", " << std::bitset<6>(vec.at(i)) << std::endl;
     }
 } 
 
@@ -240,32 +117,36 @@ int main()
     // // printf("characters = %s\n", jsonObj.getValue("characters"));
     // // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
 
-    hrtm2.setStartTime();
-    // ATTEMPT 1
-    // // vector<std::string> permutations = generatePermutations("ATCG", 8);
-    // // cout << permutations.size() << endl;
+    
 
-    //ATTEMPT 2: len(12) -> 2,64s   len(14) -> 42,1s 
-    // int count = 0;
-    // enumerate("ATCG", 4, count);
-    // Logger::debug(std::to_string(count));
-
-    // ATTEMPT 3: recursive function; WORKS!
-    //generatePermutationsV1({}, 22);
-    //std::cout << "The function was called " << d_callcount << " times." << std::endl;
-    //std::cout << "Number of permutations: " << d_perms << std::endl;
-
-    // ATTEMPT 4: for-loop function;
-    // generatePermutationsV2(0b000000000000, 6);
-
-    // ATTEMPT 5:
-    // std::vector<int> permutations = generatePermutationsV3(3);
     std::vector<int> permutations = PermutationUtils::generatePermutations(3, {0b00, 0b01, 0b10, 0b11});
     cout << "Number of permutations: " << permutations.size() << endl;
-    printVectorElements(permutations);
+    PermutationUtils::printPermutations(permutations);
+    //printVectorElements(permutations);
+
+    hrtm2.setStartTime();
+
+    // takes 3,3 s; 0b(31 x 1)
+    // for (uint32_t i; i < 0b1111111111111111111111111111111; i++ ){
+    // }
+
+    // takes ~450 years; 0b(63 x 1)
+    /*
+    for (uint64_t i; i < 0b111111111111111111111111111111111111111111111111111111111111111; i++) {
+        if (i % 1000000000 == 0) {
+            // print each billion
+            std::cout << (i / 1000000000) << " bil" << std::endl;
+        }
+    }
+    */
+
+    for (uint64_t i = 0; i < 18446744073709551615ull; ++i)
+    {
+        // Do something with i
+    }
 
     // this causes code to break smh
-    // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
 
     // call destructors
     delete fileUtils;
