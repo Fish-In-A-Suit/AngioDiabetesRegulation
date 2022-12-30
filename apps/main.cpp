@@ -140,10 +140,12 @@ int main()
     }
     */
 
+    /*
     for (uint64_t i = 0; i < 18446744073709551615ull; ++i)
     {
         // Do something with i
     }
+    */
 
     // this causes code to break smh
     hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
