@@ -19,3 +19,9 @@ include_directories(C:/Aljosa/Development/Unity-Github/vcpkg/installed/x64-windo
 
 add_subdirectory(cpp-library)   # look in "test-cpp-library" subdirectory for CMakeLists.txt to process
 add_subdirectory(apps)    # look in "test-apps" subdirectory for CMakeLists.txt to process
+
+add_executable(main apps/main.cpp)
+
+target_link_libraries(main PRIVATE cpp-library)
+
+target_compile_features(main PUBLIC cxx_std_20)

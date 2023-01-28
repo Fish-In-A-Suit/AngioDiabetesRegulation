@@ -1,4 +1,4 @@
-#include "test-cpp-lib-hello.h"
+// #include "test-cpp-lib-hello.h"
 #include "StringUtils.h"
 #include "HighResolutionTimeManager.h"
 #include "HighResolutionTimeManagerV2.h"
@@ -146,6 +146,15 @@ int main()
         // Do something with i
     }
     */
+
+    int bilcount = 0;
+    for (uint64_t i = 0; i < 274877906943; i++) {
+        if (i % 1000000000 == 0)
+        {
+            bilcount++;
+            std::cout << bilcount << " bil." << std::endl;
+        }
+    }
 
     // this causes code to break smh
     hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);

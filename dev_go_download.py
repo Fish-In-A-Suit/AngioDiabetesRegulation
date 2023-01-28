@@ -198,15 +198,12 @@ def find_products_related_to_GO_terms_new(terms, destination_folder="term_produc
     logger.debug(f"crash_filepaths = {crash_filepaths}")
     crash_filepath = ""
     if (isinstance(crash_filepaths, list) and len(crash_filepaths) >= 1) or crash_filepaths != "":
-        crash_filepath = util.get_last_file_in_list(
-            crash_filepaths)  # get last of the crashes
+        crash_filepath = util.get_last_file_in_list(crash_filepaths)  # get last of the crashes
     if os.path.exists(crash_filepath):
         if len(crash_filepaths) > 1:
-            restore_crash = int(input(
-                f"File {crash_filepath} exists as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file, 3 to display other crash files or 0 to ignore it."))
+            restore_crash = int(input(f"File {crash_filepath} exists as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file, 3 to display other crash files or 0 to ignore it."))
         else:
-            restore_crash = int(input(
-                f"File {crash_filepath} exists as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file or 0 to ignore it."))
+            restore_crash = int(input(f"File {crash_filepath} exists as an option for crash recovery. Press 1 to recover data and delete the file, 2 to recover data and keep the file or 0 to ignore it."))
         if restore_crash == 3:
             crash_filepath = util.choose_crashfile(crash_filepaths)
             _handle_load_from_crash(crash_filepath)
@@ -572,14 +569,10 @@ def main():
 
     # startup functions
     # util.load_trusted_genes("src_data_files/genes_trusted.txt")
-    util.load_list_from_file("src_data_files/genes_trusted.txt",
-                             constants.TRUSTED_GENES, no_elements_in_line=2, break_character=" ")
-    util.load_list_from_file(
-        os.path.join(constants.TARGET_FOLDER, "terms_empty.txt"), constants.TERMS_EMPTY)
-    logging.info(
-        f"Loaded {len(constants.TRUSTED_GENES)} trusted genes. trusted_genes = {constants.TRUSTED_GENES}")
-    logging.info(
-        f"Loaded {len(constants.TERMS_EMPTY)} empty terms. terms_empty = {constants.TERMS_EMPTY}")
+    util.load_list_from_file("src_data_files/genes_trusted.txt", constants.TRUSTED_GENES, no_elements_in_line=2, break_character=" ")
+    util.load_list_from_file(os.path.join(constants.TARGET_FOLDER, "terms_empty.txt"), constants.TERMS_EMPTY)
+    logging.info(f"Loaded {len(constants.TRUSTED_GENES)} trusted genes. trusted_genes = {constants.TRUSTED_GENES}")
+    logging.info(f"Loaded {len(constants.TERMS_EMPTY)} empty terms. terms_empty = {constants.TERMS_EMPTY}")
     util.load_human_orthologs()
 
     # old main functions
