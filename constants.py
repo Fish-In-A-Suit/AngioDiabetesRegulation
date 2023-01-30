@@ -8,6 +8,8 @@
 
 TARGET_FOLDER = "test_run_2" #just a constant to be used in all stages of analysis
 
+FILE_miRDB_miRNAs = "src_data_files/miRNAdbs/miRDB_v6.0_prediction_result.txt"
+
 # Positive regulatory terms for search "angiogenesis"
 TERMS_ANGIOGENESIS_POSITIVE_ARRAY = [
     "positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis", "GO:1903589",

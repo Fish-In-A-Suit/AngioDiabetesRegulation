@@ -80,6 +80,9 @@ def main():
 
     get_mrna(gene_list, constants.TARGET_FOLDER)
 
+    # appends mRNA RefSeq__NT accession IDs (from uniprotkb_human_idmapping.dat) to the result array, makes a new file called product_mRNA_NCBIacc
+    util.product_mRNA_append_refseqIds()
+
 
 if __name__ == '__main__':
     import logging.config

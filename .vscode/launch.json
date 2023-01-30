@@ -1,15 +1,14 @@
-
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    // see also: https://code.visualstudio.com/docs/cpp/config-mingw
-    // see also: https://code.visualstudio.com/docs/editor/variables-reference
-    // see also: https://code.visualstudio.com/docs/editor/debugging#_launch-configurations
-    // see also: https://code.visualstudio.com/docs/cpp/launch-json-reference 
-    // see also: https://code.visualstudio.com/docs/cpp/cpp-debug 
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+// see also: https://code.visualstudio.com/docs/cpp/config-mingw
+// see also: https://code.visualstudio.com/docs/editor/variables-reference
+// see also: https://code.visualstudio.com/docs/editor/debugging#_launch-configurations
+// see also: https://code.visualstudio.com/docs/cpp/launch-json-reference 
+// see also: https://code.visualstudio.com/docs/cpp/cpp-debug 
 {
     "version": "0.2.0",
-    "configurations": [   
+    "configurations": [
         {
             "name": "(Windows) Launch",
             "type": "cppdbg",

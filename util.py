@@ -861,6 +861,33 @@ def uniprot_find_human_symbol(gene_id):
             return gene_symbol
     return "UniprotError - Gene symbol not found."
 
+def product_mRNA_json_append_refseqIds(product_mRNA_json_filepath=constants.TARGET_FOLDER+"/product_mRNA.json", result_filepath=constants.TARGET_FOLDER+"/product_mRNA_refseq.json"):
+    """
+    Appends the NCBI accession ids (eg. NM_001008395.3) to each element inside product_mRNA. NCBI accession ids are necessary for intercompatibility with
+    the miRDB_v6.0_prediction_result.txt file (which contains miRNA match strengths against known mRNAs (mRNAs presented in NCBI accession format)
+    """
+    product_mRNA_json = read_file_as_json(product_mRNA_json_filepath)
+    uniprot_human_idmapping = readlines("src_data_files/uniprotkb_human_idmapping.dat")
+
+    # uniprotkb_human_idmapping: if stripped uniprot id is in line and if RefSeq_NT is the second line element, append third line element
+    # (refseq id) to array
+    uniprotIds_to_refseqIds = []
+    i = 0
+    for element in product_mRNA_json:
+        logger.info(f"Processing {i}")
+        uniprotId_stripped = element["UniprotID"].split(":")[1] # UniProtKB:Q0VGL1 -> Q0VGL1
+        for line in uniprot_human_idmapping:
+            if uniprotId_stripped in line and "RefSeq_NT" in line:
+                uniprotIds_to_refseqIds.append(line.split("\t")[2].replace("\n", "")) # append the third line element (refseq id)
+        
+        # after all lines are read: append uniprotIds_to_refseqIds_dict to the current UniProtKB Id, reset the list
+        product_mRNA_json[i]["RefSeq_NT_IDs"] = uniprotIds_to_refseqIds # create RefSeq_NT_IDs field for i'th element in product_mRNA and store refseqids
+        uniprotIds_to_refseqIds = []
+        i += 1
+    
+    # save new json
+    save_json(product_mRNA_json, result_filepath)
+
 def find_gene_symbol_and_name_from_id(gene_id):
     if "UniProtKB" in gene_id:
         gene_symbol = uniprot_find_human_symbol(gene_id)

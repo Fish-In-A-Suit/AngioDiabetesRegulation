@@ -12,6 +12,8 @@ import constants
 import atexit
 import datetime
 import threading
+from win10toast import ToastNotifier
+import winsound
 
 import logging
 logger = logging.getLogger(__name__)
@@ -161,9 +163,9 @@ def find_products_related_to_GO_terms_new(terms, destination_folder="term_produc
             # BUGFIX: last product in crash json may not be processed until the end and there is no easy way to check if it is.
             # Give user the option to either process from the end of the last product (YOU STILL MUST INCLUDE IT IN TERMS ARRAY AND NOT USE DIRECTIONSHRINK),
             # to start with new term (and leave out any missed products that may not have been processed) or skip to previous term and repeat
-            pl = util.get_last_product_in_crash_json(crash_json)
+            pl = util.get_last_product_in_crash_json(crash_json) # pl = product_last
             
-            option = int(input(f"Crash recovery json is not empty. Select one option: \n - 0 = process from the end product of the last term \n - 1 = leave out current term with any potential missed out products \n - 2 = skip to previous term and repeat analysis for current term\n"))
+            option = int(input(f"Crash recovery json is not empty. Select one option: \n - 0 = process current term, starting from the last processed product (use this by default) \n - 1 = leave out current term with any potential missed out products \n - 2 = process the last term from the start (all products again)\n"))
 
             pre_last_GO_term = util.get_pre_last_product_in_crash_json(crash_json)[0]
             if pre_last_GO_term == -1: pre_last_GO_term = "" # bugfix - crash_json only had 1 term, should be set to "" in order to exclude it from directionshrink
@@ -177,7 +179,7 @@ def find_products_related_to_GO_terms_new(terms, destination_folder="term_produc
                 terms = util.list_directionshrink(terms, pre_last_GO_term, forward=True)
             elif option == 1: # skip current term, start processing a new term
                 terms = util.list_directionshrink(terms, last_GO_term, forward=True) # this works by shortening the terms used in the for loop
-            elif option == 2: # reprocess current term
+            elif option == 2: # reprocess current term (starting from the first product onwards)
                 terms = util.list_directionshrink(terms, pre_last_GO_term, forward=True)
                 crash_last_product_directId, crash_last_product_uniprotId = ""
     
@@ -255,8 +257,7 @@ def _find_products_related_to_GO_term_new(term, crash_last_product_directId=""):
     # only finds products, doesn't process ensembl sequence Id and nucleotide sequence as before
     for product in direct_products:
         i+=1
-        logging.debug(
-            f"Processing product {product}; {i}/{len(direct_products)}")
+        logger.info(f"Processing product {product}; {i}/{len(direct_products)}")
         
         def ortholog_process(gene,product):
             if "Error" in gene:
@@ -421,8 +422,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
     i = 0
     for gene in genes:  # gene is is shape prefix:id
         i += 1
-        logging.info(
-            f"Processing gene {gene}; {i}/{len_genes}")
+        logger.info(f"Processing gene {gene}; {i}/{len_genes}")
         if 'UniProtKB' in gene:
             e_id.append(util.get_uniprotId_from_geneName_new(gene)[1])
             sequences.append(get_ensembl_sequence_API(e_id[-1]))
@@ -534,6 +534,15 @@ def exit_handler():
     If there is any last IO operations etc, perform them here.
     """
     global json_dictionaries # prevents bug
+    toast = ToastNotifier()
+    winsound.PlaySound("C:/Windows/Media/notify.wav", winsound.SND_ALIAS)
+    toast.show_toast(
+        "AngioDiab program stopped.",
+        "An error might have occurred.",
+        duration = 20,
+        threaded = True,
+    )
+
     if FLAG_EXIT_HANDLER_CODE == 1:
         filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "")  # gets the last item in path eg. GO-0001525.json
         dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
