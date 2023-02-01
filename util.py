@@ -399,7 +399,39 @@ def get_dict_key_at_index(dictionary, index):
     """
     keys_list = list(dictionary) # call list(dict) on a dictionary to return a list of its keys
     key_at_index = keys_list[index]
-    return key_at_index
+    return 
+
+def remove_dict_list_elements(src_dict, string_to_remove):
+    """
+    Removes the elements which contain 'string_to_remove' from the lists inside a dictionary. The dictionary has to have the form:
+    key1: list1, key2: list2, key3: list3; example 'UniProtKB:Q0VGL1': ['NM_001008395.3', 'XM_017012198.1'], 'UniProtKB:Q96GR2': ['NM_001199377.1', 'NM_015162.4'];
+    if you call this function using "XM" as 'string_to_remove', it produces: 'UniProtKB:Q0VGL1': ['NM_001008395.3'], 'UniProtKB:Q96GR2': ['NM_001199377.1', 'NM_015162.4'];
+
+    Returns the dictionary with the lists without the elements that contain string_to_remove
+    """
+    result_dict = {}
+    for key in src_dict:
+        current_list = src_dict[key]
+        current_result_list = []
+        for element in current_list:
+            if string_to_remove not in element:
+                current_result_list.append(element)
+        result_dict[key] = current_result_list
+        current_result_list = []
+    return result_dict
+
+
+def remove_list_elements(src_list, string_to_remove):
+    """
+    Removes all the elements which contain 'string_to_remove' from the src_list
+    Returns the list without the removed elements.
+    """
+    result = []
+    for element in src_list:
+        if string_to_remove not in element:
+            result.append(element)
+    return result
+    
 
 def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
