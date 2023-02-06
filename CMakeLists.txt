@@ -7,8 +7,13 @@ project(
     VERSION 0.1
     DESCRIPTION "Small CMake example built with VSCode")
 
+find_package(CUDA REQUIRED)
+
+message("cuda include dirs = ${CUDA_INCLUDE_DIRS}")
+message("cuda libraries = ${CUDA_LIBRARIES}")
+
 # need to have include directories so vscode can find vpckg libraries
-include_directories(C:/Aljosa/Development/Unity-Github/vcpkg/installed/x64-windows/include)
+include_directories(C:/Aljosa/Development/Unity-Github/vcpkg/installed/x64-windows/include ${CUDA_INCLUDE_DIRS})
 
 # find_package checks in C:\Program Files\CMake\share\cmake-3.25\Modules and tried to find FindRapidjson.cmake
 # (I snatched a custom rapidjson.cmake that sets Rapidjson_INCLUDE_DIRS variable)
@@ -22,6 +27,6 @@ add_subdirectory(apps)    # look in "test-apps" subdirectory for CMakeLists.txt 
 
 add_executable(main apps/main.cpp)
 
-target_link_libraries(main PRIVATE cpp-library)
+target_link_libraries(main PRIVATE cpp-library ${CUDA_LIBRARIES})
 
 target_compile_features(main PUBLIC cxx_std_20)

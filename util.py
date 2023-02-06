@@ -6,6 +6,7 @@ import os
 import collections
 import shutil
 import time
+from Bio import SeqIO
 
 import logging
 logger = logging.getLogger(__name__)
@@ -1033,6 +1034,46 @@ def get_identifier_values_from_json(json_filepath, identifier):
     # logger.debug(f"Values for identifier {identifier}: {identifier_values}") #can clog the console
     logger.debug(f"Returned {len(json_obj)} elements")
     return identifier_values, json_obj
+
+def read_embl_file_records(embl_filepath):
+    """
+    Reads the records inside an embl filepath (either a .embl file or a .dat file with records stored in the embl format) into a list
+    of records, each record can have it's fields queried by record.id, record.seq (for sequence), record.annotation etc.
+
+    Returns: a list of embl records
+    """
+    records = list(SeqIO.parse(embl_filepath, "embl"))
+    return records
+
+def save_mirbase_hsap_miRNAs(embl_mirbase_download_filepath, destination_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt"):
+    """
+    Loops through the records in embl_mirbase_download_filepath, saves the miRNAs with the 'Homo Sapiens' in their DE (record.desc) field
+    (note: a Homo-Sapiens miRNA will also contain the hsa prefix in record.name) in the destination_filepath.txt file in the format:
+
+        AC (record.id), ID (record.name), SEQ (record.seq), base pair count
+
+        MI0000060 \t hsa-let-7a-1 \t ugggaugagg uaguagguug uauaguuuua gggucacacc caccacuggg agauaacuau acaaucuacu gucuuuccua \t 80
+    
+    Parameters:
+      - @param embl_mirbase_download_filepath: the filepath to a .dat file downloaded from https://mirbase.org/ftp.shtml
+      - @param destination_filepath: the filepath to the .txt file that will contain the parsed homo sapiens miRNAs only
+    """
+    if os.path.exists(destination_filepath):
+        user_in = input(f"{destination_filepath} already exists. Press 0 to abort or 1 to process the mirbase embl raw file again.")
+        if user_in == 0:
+            logger.info("Aborted.")
+            return
+        logger.info(f"Processing {destination_filepath}")
+
+    with open(destination_filepath, "a") as f:
+        records = read_embl_file_records(embl_mirbase_download_filepath)
+        count = len(records)
+        i=0
+        for record in records:
+            logger.info(f"{i}/{count}")
+            if "hsa" in record.name or "Homo" in record.description:
+                f.write(f"{record.id}\t{record.name}\t{record.seq}\t{len(record.seq)}\n")
+            i+=1
 
 def get_time():
     return time.time()

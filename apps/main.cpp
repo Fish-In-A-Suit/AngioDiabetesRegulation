@@ -18,6 +18,8 @@
 #include "rapidjson/filereadstream.h"
 #include <cstdio>
 
+#include <cuda_runtime.h>
+
 // #include <test-cpp-library/include/test-cpp-lib-hello.h>
 
 using namespace std;
