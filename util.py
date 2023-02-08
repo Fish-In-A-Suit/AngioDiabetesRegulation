@@ -1045,7 +1045,7 @@ def read_embl_file_records(embl_filepath):
     records = list(SeqIO.parse(embl_filepath, "embl"))
     return records
 
-def save_mirbase_hsap_miRNAs(embl_mirbase_download_filepath, destination_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt"):
+def save_mirbase_hsap_miRNAs_for_cpp(embl_mirbase_download_filepath, destination_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt"):
     """
     Loops through the records in embl_mirbase_download_filepath, saves the miRNAs with the 'Homo Sapiens' in their DE (record.desc) field
     (note: a Homo-Sapiens miRNA will also contain the hsa prefix in record.name) in the destination_filepath.txt file in the format:
@@ -1074,6 +1074,75 @@ def save_mirbase_hsap_miRNAs(embl_mirbase_download_filepath, destination_filepat
             if "hsa" in record.name or "Homo" in record.description:
                 f.write(f"{record.id}\t{record.name}\t{record.seq}\t{len(record.seq)}\n")
             i+=1
+
+def save_mRNAs_for_cpp(product_mRNA_refseq_json_filepath, destination_filepath=constants.TARGET_FOLDER+"/product_mRNAs_cpp.txt"):
+    """
+    Loops through the product_mRNA_refseq_json_filepath file (usually stored in test_run_X/product_mRNA_refseq_json). From each json element,
+    UniProtID, mRNA sequence and refseq_NT_ids are extracted and stored on the same line. 
+
+    File structure:
+    UniProtId \t mRNA_sequence \t refseq_NT_id 1 \t refseq_NT_ID 2 \t ...
+
+    As you can see, the first and second line elements will always be UniProtId and mRNA sequence, respectively. Then, one ore more
+    refseq_NT_ids may follow (some mRNAs have 8+ refseq IDs which denote different transcription variants)
+
+    The mRNA_refseq file is created in the current constants.TAGRET_FOLDER after running dev_mrna_download.py
+    """
+    # handle product_mRNA_refseq_json_filepath
+    if not os.path.exists(product_mRNA_refseq_json_filepath):
+        user_input = input(f"File {product_mRNA_refseq_json_filepath} does not exist. Press 0 to abort (and make sure to run dev_mrna_download.py) next time. Press 1 to write a custom relative path to a mrna_refseq json file.")
+        if user_input == 0:
+            return -1
+        elif user_input == 1:
+            user_input = input(f"Write the relative path to mrna refseq file and press enter:")
+            product_mRNA_refseq_json_filepath = user_input
+            if not os.path.exists(product_mRNA_refseq_json_filepath): return -1
+        else:
+            logger.info("Invalid input. Can only be 0 or 1.")
+            return -1
+
+    # handle destination_filepath
+    if os.path.exists(destination_filepath):
+        user_input = input(f"File {destination_filepath} already exists. Press 0 to continue and overwrite the file, 1 to abort or 2 to change the name of destination_filepath")
+        # if user_input == 0, do nothing
+        if user_input == 1:
+            logger.info("Aborting")
+            return -1
+        elif user_input == 2:
+            dest_filepath_input = input(f"Write the relative filepath to the destination file and press enter:")
+            destination_filepath = dest_filepath_input
+            if os.path.exists(destination_filepath): 
+                logger.info("That destination path exists too. Aborting")
+                return -1
+
+    # read each element into a single line representation
+    logger.info(f"Determined mRNA refseq json filepath: {product_mRNA_refseq_json_filepath}")
+    jsonObj = read_file_as_json(product_mRNA_refseq_json_filepath)
+    result_lines = []
+    for element in jsonObj: # read each element into a single line, separator = tab (\t)
+        # debug
+        element_uniprot_id = element["UniprotID"]
+        element_mRNA_seq = element["mRNA"]
+        element_refseq_NT_ids = element["RefSeq_NT_IDs"]
+        logger.debug(f"unipr = {element_uniprot_id}, mRNA = {element_mRNA_seq}, refseq = {element_refseq_NT_ids}")
+
+        # handle None (bug fix)
+        if element_uniprot_id == None: element_uniprot_id = "None"
+        if element_mRNA_seq == None: element_mRNA_seq = "None"
+
+        # main line creation logic
+        line_string = element_uniprot_id + "\t" + element_mRNA_seq # uniprotid and mRNA_sequence are the first two line elements
+        for refseq_NT_id in element["RefSeq_NT_IDs"]: # append all refseqs from the NCBI Nucleotide database (that are not XM, since XM are not confirmed)
+            if "XM" not in refseq_NT_id:
+                line_string = line_string + "\t" + refseq_NT_id
+        line_string = line_string + "\n"
+        result_lines.append(line_string)
+    
+    # write the lines to destination_filepath
+    f = open(destination_filepath, "w")
+    f.writelines(result_lines)
+    f.close()
+
 
 def get_time():
     return time.time()

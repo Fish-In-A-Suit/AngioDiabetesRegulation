@@ -83,6 +83,9 @@ def main():
     # appends mRNA RefSeq__NT accession IDs (from uniprotkb_human_idmapping.dat) to the result array, makes a new file called product_mRNA_NCBIacc
     util.product_mRNA_json_append_refseqIds()
 
+    # create the mRNAs file to be processed by the c++ code (for miRNA annealing)
+    util.save_mRNAs_for_cpp(constants.TARGET_FOLDER + "/product_mRNA_refseq.json")
+
 
 if __name__ == '__main__':
     import logging.config
