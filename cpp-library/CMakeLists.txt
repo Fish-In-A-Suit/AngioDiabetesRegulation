@@ -13,7 +13,7 @@ add_library(cpp-library
     src/JsonObject.cpp
     src/Logger.cpp
     src/PermutationUtils.cpp
-)
+    src/SequenceComparator.cpp)
 
 # PUBLIC needed to make both /include/*.h and /src/*.cpp available elsewhere in project
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/includes)

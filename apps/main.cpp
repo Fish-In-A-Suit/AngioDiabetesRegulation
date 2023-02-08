@@ -17,6 +17,8 @@
 #include <rapidjson/document.h> //rapidjson
 #include "rapidjson/filereadstream.h"
 #include <cstdio>
+#include <Windows.h>
+#include <filesystem>
 
 #include <cuda_runtime.h>
 
@@ -99,6 +101,19 @@ int main()
         ++i;
     }
     std::cout << endl;
+
+    // get the project source path
+    TCHAR szPath[MAX_PATH];
+    if (GetModuleFileName(NULL, szPath, MAX_PATH)) {
+        std::string path(szPath);
+        std::string::size_type pos = path.find_last_of("\\/");
+        std::string root = path.substr(0, pos);
+        std::cout << "Project root path is: " << root << std::endl;
+    }
+
+    // another way of getting the project source path
+    // this error is caused by Visual Studio, isn't displayed in VSCode and runs normally in VS also.
+    std::cout << "Project root path (using std::filesystem::current_path()): " << std::filesystem::current_path().string() << std::endl;
 
     // *** RapidJSON parsing ***
     // // HighResolutionTimeManager hrtm;

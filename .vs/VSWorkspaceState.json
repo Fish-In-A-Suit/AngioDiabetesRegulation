@@ -1,0 +1,19 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\ConfigurePresetv1",
+      "out\\install\\ConfigurePresetv1"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\apps",
+    "\\cpp-library",
+    "\\cpp-library\\src",
+    "\\Local settings (.vs)",
+    "\\out\\build",
+    "\\out\\build\\ConfigurePresetv1"
+  ],
+  "SelectedNode": "\\apps\\main.cpp",
+  "PreviewInSolutionExplorer": false
+}

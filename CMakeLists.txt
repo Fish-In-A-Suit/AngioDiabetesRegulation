@@ -9,6 +9,7 @@ project(
 
 find_package(CUDA REQUIRED)
 
+message("CMake Version: ${CMAKE_VERSION}")
 message("cuda include dirs = ${CUDA_INCLUDE_DIRS}")
 message("cuda libraries = ${CUDA_LIBRARIES}")
 
@@ -26,6 +27,13 @@ add_subdirectory(cpp-library)   # look in "test-cpp-library" subdirectory for CM
 add_subdirectory(apps)    # look in "test-apps" subdirectory for CMakeLists.txt to process
 
 add_executable(main apps/main.cpp)
+
+message("ProjectDir = ${ProjectDir}")
+message("SolutionDir = ${SolutionDir}")
+message("WorkspaceRoot = ${workspaceRoot}")
+message("CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
+set_property(TARGET main PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+set(PROJECT_SOURCE_DIR "$(CMAKE_CURRENT_SOURCE_DIR)")
 
 target_link_libraries(main PRIVATE cpp-library ${CUDA_LIBRARIES})
 
