@@ -6,6 +6,7 @@
 #include "JsonObject.h"
 #include "Logger.h"
 #include "PermutationUtils.h"
+#include "SequenceComparator.h"
 
 #include <iostream>
 #include <fstream>
@@ -115,34 +116,30 @@ int main()
     // this error is caused by Visual Studio, isn't displayed in VSCode and runs normally in VS also.
     std::cout << "Project root path (using std::filesystem::current_path()): " << std::filesystem::current_path().string() << std::endl;
 
-    // *** RapidJSON parsing ***
-    // // HighResolutionTimeManager hrtm;
-    // // cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
+    // --- RapidJSON parsing ---
     HighResolutionTimeManagerV2 hrtm2;
 
     // 65565 is enough memory for all jsons in test_run_1
-
     // JsonObject causes possible heap corruptions -> check
     JsonObject jsonObj("src_data_files/test.json", 65565, false);
     JsonObject mRNAProductsJson("test_run_1/product_mRNA.json", 65565, false);
     JsonObject productScoresJson("test_run_1/product_scores.json", 6556, false);
     JsonObject termsDirectProductsJson("test_run_1/terms_direct_products.json", 65565, false);
-    // // Logger::checkType(&jsonObj);
-    // // Logger::debug(termsDirectProductsJson.toString(false));
 
     printf("book = %s\n", jsonObj.getValue("book"));
-    // // printf("characters = %s\n", jsonObj.getValue("characters"));
-    // // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    // --- ---
 
-    
+    // --- Sequence comparisons ---
+    SequenceComparator sequenceComparator("src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt", "");
+    // --- ---
 
     std::vector<int> permutations = PermutationUtils::generatePermutations(3, {0b00, 0b01, 0b10, 0b11});
     cout << "Number of permutations: " << permutations.size() << endl;
-    PermutationUtils::printPermutations(permutations);
+    //PermutationUtils::printPermutations(permutations);
     //printVectorElements(permutations);
 
-    hrtm2.setStartTime();
-
+    // --- BILLION COUNTING CODE ---
+    // hrtm2.setStartTime();
     // takes 3,3 s; 0b(31 x 1)
     // for (uint32_t i; i < 0b1111111111111111111111111111111; i++ ){
     // }
@@ -164,6 +161,7 @@ int main()
     }
     */
 
+    /* enable this for showcasing billion count speeds to Ladi & Umek
     int bilcount = 0;
     for (uint64_t i = 0; i < 274877906943; i++) {
         if (i % 1000000000 == 0)
@@ -172,9 +170,9 @@ int main()
             std::cout << bilcount << " bil." << std::endl;
         }
     }
-
-    // this causes code to break smh
-    hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    */
+    // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    // --- END OF BILLION COUNTING CODE ---
 
     // call destructors
     delete fileUtils;

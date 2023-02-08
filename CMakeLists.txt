@@ -5,7 +5,11 @@ cmake_minimum_required(VERSION 3.11-3.18)
 project(
     AngioDiabetesRegulation
     VERSION 0.1
-    DESCRIPTION "Small CMake example built with VSCode")
+    DESCRIPTION "AngioDiabetesRegulation Project")
+
+# std::filesystem:: not found error
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(CUDA REQUIRED)
 
@@ -35,6 +39,14 @@ message("CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
 set_property(TARGET main PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 set(PROJECT_SOURCE_DIR "$(CMAKE_CURRENT_SOURCE_DIR)")
 
-target_link_libraries(main PRIVATE cpp-library ${CUDA_LIBRARIES})
+# to enable Visual Studio "Edit and continue" option
+if(MSVC)
+  target_compile_options(main PUBLIC "/ZI")
+  target_link_options(main PUBLIC "/INCREMENTAL")
+endif()
+
+add_compile_options("/std:c++17")
+
+target_link_libraries(main PRIVATE cpp-library ${CUDA_LIBRARIES} stdc++fs)
 
 target_compile_features(main PUBLIC cxx_std_20)

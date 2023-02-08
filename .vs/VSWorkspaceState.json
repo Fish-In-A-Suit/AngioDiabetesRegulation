@@ -9,11 +9,12 @@
     "",
     "\\apps",
     "\\cpp-library",
+    "\\cpp-library\\includes",
     "\\cpp-library\\src",
     "\\Local settings (.vs)",
     "\\out\\build",
     "\\out\\build\\ConfigurePresetv1"
   ],
-  "SelectedNode": "\\apps\\main.cpp",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
