@@ -6,5 +6,5 @@ src_data_files/uniprot_sprot_human.xml
 term_genes_crash
 CMakePresets.json
 log_output
-
+.vs
 .vscode/settings.json
