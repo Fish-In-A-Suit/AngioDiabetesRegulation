@@ -8,8 +8,13 @@ SequenceComparator::SequenceComparator(std::string miRNAsequences_filepath, std:
 	this->miRNA_miRDB_ids = miRNAfile_process_result[0];
 	this->miRNA_names = miRNAfile_process_result[1];
 	this->miRNA_sequences = miRNAfile_process_result[2];
-	std::cout << "miRNA_miRDB_ids: " << std::endl;
-	StringUtils::print_vector(miRNA_miRDB_ids);
+	//std::cout << "miRNA_miRDB_ids: " << std::endl;
+	//StringUtils::print_vector(miRNA_miRDB_ids);
+
+	std::vector<std::vector<std::string>> mRNA_file_process_result = process_mRNAsequences_file(mRNAsequences_filepath);
+	this->mRNA_ids = mRNA_file_process_result[0];
+	this->mRNA_sequences = mRNA_file_process_result[1];
+	std::cout << "Processed counts for mRNA_ids, mRNA_sequences, mRNA_refseq_ids: " << mRNA_ids.size() << ", " << mRNA_sequences.size() << ", " << mRNA_refseq_ids.size() << std::endl;
 }
 
 
@@ -49,7 +54,9 @@ std::vector<std::vector<std::string>> SequenceComparator::process_miRNAsequences
 	if (file.is_open()) {
 		std::string line;
 		while (std::getline(file, line)) {
-			std::vector<std::string> line_elements = StringUtils::split(line, "\t");
+			//std::vector<std::string> line_elements = StringUtils::split(line, "\t");
+			std::vector<std::string> line_elements;
+			StringUtils::split(line, "\t", line_elements);
 			miRNA_miRDB_ids.push_back(line_elements[0]);
 			miRNA_names.push_back(line_elements[1]);
 			miRNA_sequences.push_back(line_elements[2]);
@@ -63,6 +70,72 @@ std::vector<std::vector<std::string>> SequenceComparator::process_miRNAsequences
 	return result;
 }
 
-std::vector<std::string> SequenceComparator::process_mRNAsequences_file(std::string mRNA_sequences_filepath) {
+/*
+ * Processes the mRNA sequences file (usually in constants(.py).TARGET_FOLDER/product_mRNAs_cpp.txt. In that file, mRNA elements are stored in the
+ * following manner:
+ * 
+ *     mRNA_uniprot_id \t mRNA_sequence \t mRNA_refseq_id1 \t mRNA_refseq_id2 \t [other mRNA_refseq_ids]
+ * 
+ * This function processes each line and appends mRNA_uniprot_id, mRNA_sequence and refseq_ids into respective std::vector arrays. Since there can
+ * be multiple refseq_ids per element, they are set directly into the member field (this->mRNA_refseq_ids) instead of being returned. The returned values
+ * are only an std::vector<std::string> of mRNA uniprot ids and std::vector<std::string> of mRNA sequences.
+ * 
+ * @param mRNA_sequences_filepath: The parameter to the product_mRNAs_cpp.txt generated at the end of dev_mrna_download.py or from a product_mRNA_refseq.json file
+ * that is passed to the util.save_mRNAs_for_cpp (in util.py).
+ * 
+ * @return:
+ *   - [0]: std::vector<std::string> mRNA_uniprot_ids; a vector of uniprot ids
+ *   - [1]: std::vector<std::string> mRNA_sequences; a vector of respective mRNA sequences
+ *   Note: mRNA_refseq_ids are stored directly into this->mRNA_refseq_ids
+ */
+std::vector<std::vector<std::string>> SequenceComparator::process_mRNAsequences_file(std::string mRNA_sequences_filepath) {
+	std::vector<std::string> mRNA_uniprot_ids;
+	std::vector<std::string> mRNA_sequences;
 
+	std::ifstream file(mRNA_sequences_filepath);
+	if (file.is_open()) {
+		std::string line;
+		int line_index = 0;
+		while (std::getline(file, line)) {
+			if(StringUtils::contains(line, "#")) {
+				line_index++;
+				continue;
+			}
+
+			std::cout << "Processing: " << line_index << "; " << line.substr(0, 20) << std::endl;
+			std::vector<std::string> line_elements; StringUtils::split(line, "\t", line_elements);
+			std::cout << "	l[0]: " << line_elements[0] << ", l[1]: " << line_elements[1].substr(0, 10) << "; l[1] length: " << line_elements[1].length() << std::endl;
+
+			std::string mRNA_uniprot_id = line_elements[0];
+			std::string mRNA_sequence = line_elements[1];
+			if ((mRNA_uniprot_id == "None") || (mRNA_sequence == "None")) {
+				// this can happen if during dev_mRNA_download.py ensembl doesn't find mRNA sequence and is normal: skip this line
+				continue;
+			}
+			std::cout << "	uid = " << mRNA_uniprot_id << std::endl;
+
+			mRNA_uniprot_ids.push_back(mRNA_uniprot_id);
+			mRNA_sequences.push_back(mRNA_sequence);
+
+			std::cout << "	line_elements.size() = " << line_elements.size() << std::endl;
+			std::cout << "	std::vector<std::string> mRNA_sequences sizeof " << sizeof(mRNA_sequences) << ", element count = " << mRNA_sequences.size() << std::endl;
+
+			// directly load all of the other line_elements into this->mRNA_refseq_ids
+			std::vector<std::string> current_mRNA_refseq_ids;
+			for (int i = 0; i < line_elements.size(); i++) {
+				if ((i == 0) || (i == 1)) {
+					// don't load [0] and [1], since they are mRNA_uniprot_id and mRNA_sequence
+					continue;
+				}
+				current_mRNA_refseq_ids.push_back(line_elements[i]);
+			}
+			this->mRNA_refseq_ids.push_back(current_mRNA_refseq_ids);
+			line_index++;
+		}
+	}
+
+	std::vector<std::vector<std::string>> result;
+	result.push_back(mRNA_uniprot_ids);
+	result.push_back(mRNA_sequences);
+	return result;
 }

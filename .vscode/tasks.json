@@ -42,12 +42,15 @@
             "type": "cmake",
             "label": "CMake: build",
             "command": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "targets": [
                 "all"
             ],
             "preset": "${command:cmake.activeBuildPresetName}",
             "group": "build",
-            "problemMatcher": [],
+            "problemMatcher": ["$gcc"],
             "detail": "CMake template build task",
             // "options": {
             //    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",

@@ -14,20 +14,21 @@
             "type": "cppdbg",
             "request": "launch",
             // task 'CMake: build v1' saves the main executable as build/apps/main.exe; in case of changes, also change the program field!
-            "program": "${workspaceFolder}\\out\\build\\${command:cmake.activeConfigurePresetName}\\apps\\main.exe",
+            "program": "${workspaceFolder}/out/build/${command:cmake.activeConfigurePresetName}/main.exe",
             "args": [],
             "stopAtEntry": false,
-            //"cwd": "${fileDirname}",
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}", //"cwd": "${fileDirname}",
             "environment": [],
             //"console":"externalTerminal",
             //"console": "externalTerminal", this is used by cppvsdbg type
             "externalConsole": false,
             "preLaunchTask": "CMake: build",
-            "logging": {
-                "moduleLoad": false,
-                "trace": true
-            },
+
+            //"logging": {
+            //    "moduleLoad": false,
+            //    "trace": true
+            //},
+            
             // this was added as per https://code.visualstudio.com/docs/cpp/config-mingw 
             "MIMode": "gdb",
             "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
@@ -37,7 +38,14 @@
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            
+            // enables debugging of the debug adapter
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true
+            }
         }
     ]
 }

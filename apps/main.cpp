@@ -130,13 +130,14 @@ int main()
     // --- ---
 
     // --- Sequence comparisons ---
-    SequenceComparator sequenceComparator("src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt", "");
+    SequenceComparator sequenceComparator("src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt", "test_run_2/product_mRNAs_cpp.txt");
     // --- ---
 
     std::vector<int> permutations = PermutationUtils::generatePermutations(3, {0b00, 0b01, 0b10, 0b11});
     cout << "Number of permutations: " << permutations.size() << endl;
     //PermutationUtils::printPermutations(permutations);
     //printVectorElements(permutations);
+    // s
 
     // --- BILLION COUNTING CODE ---
     // hrtm2.setStartTime();

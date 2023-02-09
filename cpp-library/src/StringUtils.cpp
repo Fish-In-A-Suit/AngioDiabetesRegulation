@@ -29,24 +29,41 @@ std::string StringUtils::to_string(double value, int precision) {
 }
 
 /*
- * Splits 'str' string based on delimiter and returns the remaining split elements inside std::vector<std::string>
+ * Splits 'str' string based on delimiter and populates the remaining split elements inside the supplied
+ * std::vector<std::string>
  * 
  * @param str: The string to split
  * @param delimiter: The delimiter string where the splits occur
+ * @param line_elements: an empty std::vector<std::string> to populate
  * 
  * @return std::vector<std::string> of remaining elements after split
  */
-std::vector<std::string> StringUtils::split(std::string str, std::string delimiter) {
+void StringUtils::split(std::string& str, std::string delimiter, std::vector<std::string>& line_elements) {
     size_t pos = 0;
     std::string token;
-    std::vector<std::string> result;
 
     while ((pos = str.find(delimiter)) != std::string::npos) {
         token = str.substr(0, pos);
-        result.push_back(token);
+        line_elements.push_back(token);
         str.erase(0, pos + delimiter.length());
     }
-    return result;
+    return;
+}
+
+bool StringUtils::contains(std::string& str, std::string& substr) {
+    std::cout << "str = " << str << ", substr = " << substr << ", str.find(substr) = " << str.find(substr) << std::endl;
+    if(str.find(substr) != std::string::npos) {
+        std::cout << "true" << std::endl;
+        return true; // found
+    } else {
+        std::cout << "false" << std::endl;
+        return false; // not found
+    }
+}
+
+bool StringUtils::contains(std::string& str, const char* substr) {
+    std::string substr_str = substr; // std::string has a constructor from const char *, so this is legal (https://stackoverflow.com/questions/24127946/converting-a-const-char-to-stdstring)
+    contains(str, substr_str);
 }
 
 /*
