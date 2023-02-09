@@ -22,10 +22,6 @@ SequenceComparator::~SequenceComparator() {
 	std::cout << "SequenceComparator destructor called" << std::endl;
 }
 
-void SequenceComparator::load_miRNA_sequences(std::string)
-{
-}
-
 /*
  * Processes the miRNAsequences file, which is generated from the function util.save_mirbase_hsap_miRNAs from the python part of this project.
  * The file has the following structure: 

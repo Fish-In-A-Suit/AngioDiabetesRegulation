@@ -23,7 +23,6 @@ class SequenceComparator {
 public:
 	SequenceComparator(std::string, std::string);
 	~SequenceComparator();
-	void load_miRNA_sequences(std::string);
 
 private:
 	std::vector<std::vector<std::string>> process_miRNAsequences_file(std::string); // processes mirbase_miRNA_hsa-only.txt
