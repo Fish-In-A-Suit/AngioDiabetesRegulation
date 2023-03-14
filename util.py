@@ -260,8 +260,8 @@ def load_sequence_comparison_results(filepath = "src_data_files/sequence_compari
                     current_miRNA_mRNA_matches_dict = {}
 
                 current_miRNA_identifiers_split = line.strip().split(",")
-                current_miRNA_othername = current_miRNA_identifiers_split[0]
-                current_miRNA_mirbase_id = current_miRNA_identifiers_split[1]
+                current_miRNA_othername = current_miRNA_identifiers_split[1]
+                current_miRNA_mirbase_id = current_miRNA_identifiers_split[0]
             if "\t" in line:
                 line = line.replace("\t", "")
                 mRNAid = line.split(": ")[0]
