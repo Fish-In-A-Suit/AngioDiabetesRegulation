@@ -219,7 +219,6 @@ def load_json_by_terms(src_folder, terms):
     """
     Returns the json files from src_folder that correspond to term names
     """
-    
     result_file_list = []
     missing_files = []
     for term in terms:
@@ -234,6 +233,45 @@ def load_json_by_terms(src_folder, terms):
         input("Missing files may be caused by a term only including subterm-genes and not any term specific genes. Press any key to continue")
     logger.info(f"Returning {len(result_file_list)} result files;  -> {result_file_list}")
     return result_file_list
+
+def load_sequence_comparison_results(filepath = "src_data_files/sequence_comparison_results.txt"):
+    if os.path.isfile(filepath):
+        logger.info(f"Loading sequence comparison results from {filepath}")
+        file_lines = []
+        load_list_from_file(filepath, file_lines) # read all file lines from filepath into file_lines
+        
+        sequence_comparison_results_json = [] # master list, containing all current_miRNA_element_dict elements
+        current_miRNA_element_dict = {} # a dictionary for a single miRNA element
+        current_miRNA_mirbase_id = "" # eg. MI0000060
+        current_miRNA_othername = "" # eg. hsa-let-7a-1
+        current_miRNA_mRNA_matches_dict = {} 
+        i = 0
+        for line in file_lines:
+            if "#" in line or "//" in line:
+                continue
+            if "\t" not in line:
+                if i != 0:
+                    # not the first iteration -> create & save current_miRNA_element_dict to sequence_comparison_results_json
+                    current_miRNA_element_list = [current_miRNA_othername, current_miRNA_mRNA_matches_dict]
+                    current_miRNA_element_dict[current_miRNA_mirbase_id] = current_miRNA_element_list
+                    sequence_comparison_results_json.append(current_miRNA_element_dict)
+                    # reset
+                    current_miRNA_element_dict = {}
+                    current_miRNA_mRNA_matches_dict = {}
+
+                current_miRNA_identifiers_split = line.strip().split(",")
+                current_miRNA_othername = current_miRNA_identifiers_split[0]
+                current_miRNA_mirbase_id = current_miRNA_identifiers_split[1]
+            if "\t" in line:
+                line = line.replace("\t", "")
+                mRNAid = line.split(": ")[0]
+                match_strength = float(line.split(": ")[1])
+                current_miRNA_mRNA_matches_dict[mRNAid] = match_strength
+            i += 1
+        return sequence_comparison_results_json
+
+
+
 
 def store_json_dictionaries(filepath, dictionaries):
     """
@@ -1261,6 +1299,8 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     else:
         return uniprot_gene_identifier
 """
+
+
 
 
 

@@ -2,6 +2,8 @@ import util
 import json
 import xml.etree.ElementTree as ET
 import sys
+import constants
+import os
 
 import logging
 logger = logging.getLogger(__name__)
@@ -35,6 +37,9 @@ def main():
     # util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json","gene")[0]
     end_time = util.compute_time(start_time)
     logger.debug(end_time)
+
+    sequence_comparison_results_json = util.load_sequence_comparison_results("src_data_files/sequence_comparison_results.txt")
+    util.save_json(sequence_comparison_results_json, os.path.join(constants.TARGET_FOLDER, "sequence_comparison_results.json"))
 
 
 if __name__ == '__main__':
