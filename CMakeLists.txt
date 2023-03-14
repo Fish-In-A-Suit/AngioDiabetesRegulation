@@ -5,7 +5,8 @@ cmake_minimum_required(VERSION 3.11-3.18)
 project(
     AngioDiabetesRegulation
     VERSION 0.1
-    DESCRIPTION "AngioDiabetesRegulation Project")
+    DESCRIPTION "AngioDiabetesRegulation Project"
+    )
 
 # std::filesystem:: not found error
 set(CMAKE_CXX_STANDARD 17)

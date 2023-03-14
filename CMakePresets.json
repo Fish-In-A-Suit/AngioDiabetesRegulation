@@ -3,31 +3,57 @@
     "configurePresets": [
         {
             "name": "ConfigurePresetv1",
-            "displayName": "Configure preset One (using cmake)",
+            "displayName": "ConfigurePresetv1",
             "description": "Sets Ninja generator, build and install directory",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "environment": {
-                "VCPKG_ROOT": "F:\\Development\\Unity-Github\\vcpkg"
+              "VCPKG_ROOT": "F:\\Development\\Unity-Github\\vcpkg"
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_C_COMPILER": "C:/msys64/mingw64/bin/gcc.exe",
-                "CMAKE_CXX_COMPILER": "C:/msys64/mingw64/bin/g++.exe",
-                "CMAKE_TOOLCHAIN_FILE": {
-                    "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-                    "type": "FILEPATH"
-                },
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+              "CMAKE_BUILD_TYPE": "Debug",
+              "CMAKE_C_COMPILER": "C:/msys64/mingw64/bin/gcc.exe",
+              "CMAKE_CXX_COMPILER": "C:/msys64/mingw64/bin/g++.exe",
+              "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+              "CMAKE_TOOLCHAIN_FILE": {
+                "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "type": "FILEPATH"
+              }              
             }
-        }
-    ],
-    "buildPresets": [
-        {
+          },
+          {
+            "name": "ConfigurePreset - CUDA",
+            "displayName": "ConfigurePreset - CUDA",
+            "description": "Sets Ninja generator, build and install directory for a CUDA build.",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build-cuda/${presetName}",
+            "environment": {
+              "VCPKG_ROOT": "C:\\Aljosa\\Development\\Unity-Github\\vcpkg"
+            },
+            "cacheVariables": {
+              "CMAKE_BUILD_TYPE": "Debug",
+              "CMAKE_C_COMPILER": "C:/msys64/mingw64/bin/gcc.exe",
+              "CMAKE_CXX_COMPILER": "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/nvcc.exe",
+              "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+              "CMAKE_TOOLCHAIN_FILE": {
+                "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "type": "FILEPATH"
+              }
+            }
+          }
+        ],
+        "buildPresets": [
+          {
             "name": "BuildPresetv1",
             "description": "Build Preset V1",
             "displayName": "",
             "configurePreset": "ConfigurePresetv1"
-        }
-    ]
+          },
+          {
+            "name": "BuildPreset - CUDA",
+            "description": "Builds a C++ project with nvcc to enable CUDA functionality",
+            "displayName": "BuildPreset - CUDA",
+            "configurePreset": "ConfigurePreset - CUDA"
+          }
+        ]
 }

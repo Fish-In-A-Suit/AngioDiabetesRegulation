@@ -75,13 +75,9 @@ Workflow for miRNA prediction:
       order & save miRNA_mRNA_fitting_dict
 */
 
-
-// todo: port into VectorUtils
-void printVectorElements(std::vector<int> &vec) {
-    for (int i = 0; i < vec.size(); i++) {
-        std::cout << vec.at(i) << ", " << std::bitset<6>(vec.at(i)) << std::endl;
-    }
-} 
+__global__ void helloWorldKernel() {
+    printf("Hello world from CUDA!\n");
+}
 
 int main()
 {
@@ -93,6 +89,10 @@ int main()
     FileUtils* fileUtils = new FileUtils(0);
 
     // Logger::setLevel(Constants::LogLevels::DEBUG);
+
+    // this is not allowed for .cpp classes. Have to be .cu classes.
+    // helloWorldKernel<<<1, 1>>>();
+    // cudaDeviceSynchronize();
 
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
     int i = 0;
@@ -136,8 +136,6 @@ int main()
     std::vector<int> permutations = PermutationUtils::generatePermutations(3, {0b00, 0b01, 0b10, 0b11});
     cout << "Number of permutations: " << permutations.size() << endl;
     //PermutationUtils::printPermutations(permutations);
-    //printVectorElements(permutations);
-    // s
 
     // --- BILLION COUNTING CODE ---
     // hrtm2.setStartTime();
@@ -152,13 +150,6 @@ int main()
             // print each billion
             std::cout << (i / 1000000000) << " bil" << std::endl;
         }
-    }
-    */
-
-    /*
-    for (uint64_t i = 0; i < 18446744073709551615ull; ++i)
-    {
-        // Do something with i
     }
     */
 

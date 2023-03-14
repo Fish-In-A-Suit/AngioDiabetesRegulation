@@ -97,24 +97,21 @@ std::vector<std::vector<std::string>> SequenceComparator::process_mRNAsequences_
 				line_index++;
 				continue;
 			}
-
-			std::cout << "Processing: " << line_index << "; " << line.substr(0, 20) << std::endl;
 			std::vector<std::string> line_elements; StringUtils::split(line, "\t", line_elements);
-			std::cout << "	l[0]: " << line_elements[0] << ", l[1]: " << line_elements[1].substr(0, 10) << "; l[1] length: " << line_elements[1].length() << std::endl;
-
 			std::string mRNA_uniprot_id = line_elements[0];
 			std::string mRNA_sequence = line_elements[1];
 			if ((mRNA_uniprot_id == "None") || (mRNA_sequence == "None")) {
 				// this can happen if during dev_mRNA_download.py ensembl doesn't find mRNA sequence and is normal: skip this line
+				line_index++;
 				continue;
 			}
-			std::cout << "	uid = " << mRNA_uniprot_id << std::endl;
+			std::cout << "Processing: " << line_index << "; uid = " << mRNA_uniprot_id << "; mRNA_length = " << mRNA_sequence.length() << std::endl;
 
 			mRNA_uniprot_ids.push_back(mRNA_uniprot_id);
 			mRNA_sequences.push_back(mRNA_sequence);
 
-			std::cout << "	line_elements.size() = " << line_elements.size() << std::endl;
-			std::cout << "	std::vector<std::string> mRNA_sequences sizeof " << sizeof(mRNA_sequences) << ", element count = " << mRNA_sequences.size() << std::endl;
+			// std::cout << "	line_elements.size() = " << line_elements.size() << std::endl;
+			// std::cout << "	std::vector<std::string> mRNA_sequences sizeof " << sizeof(mRNA_sequences) << ", element count = " << mRNA_sequences.size() << std::endl;
 
 			// directly load all of the other line_elements into this->mRNA_refseq_ids
 			std::vector<std::string> current_mRNA_refseq_ids;

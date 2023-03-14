@@ -23,11 +23,6 @@
             //"console": "externalTerminal", this is used by cppvsdbg type
             "externalConsole": false,
             "preLaunchTask": "CMake: build",
-
-            //"logging": {
-            //    "moduleLoad": false,
-            //    "trace": true
-            //},
             
             // this was added as per https://code.visualstudio.com/docs/cpp/config-mingw 
             "MIMode": "gdb",
@@ -46,6 +41,15 @@
                 "traceResponse": true,
                 "engineLogging": true
             }
+        },
+        {
+            "name": "(Windows) CUDA Launch",
+            "type": "cuda-gdb",
+            "request": "launch",
+            "program": "${workspaceFolder}/out/build-cuda/${command:cmake.activeConfigurePresetName}/main.exe",
+            "cwd": "${workspaceRoot}", //"cwd": "${fileDirname}",
+            "preLaunchTask": "CMake: build",
+            "stopAtEntry": false,  
         }
     ]
 }

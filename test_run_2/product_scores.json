@@ -91,6 +91,27 @@
         "al_corr_score": 12.414213562373096
     },
     {
+        "product": "UniProtKB:Q99767",
+        "count": 2,
+        "terms:": [
+            "GO:0045766",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 0
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 12.0
+    },
+    {
         "product": "UniProtKB:Q14155",
         "count": 3,
         "terms:": [
@@ -110,27 +131,6 @@
         },
         "al_score": 20,
         "al_e_score": 4,
-        "al_corr_score": 12.0
-    },
-    {
-        "product": "UniProtKB:Q99767",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0046627"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 1,
-            "nterms_dia-": 0,
-            "nterms_dia0": 0
-        },
-        "al_score": 0,
-        "al_e_score": 0,
         "al_corr_score": 12.0
     },
     {
@@ -181,30 +181,6 @@
         "al_corr_score": 3.659137658991841
     },
     {
-        "product": "UniProtKB:Q9Y243",
-        "count": 5,
-        "terms:": [
-            "GO:0001938",
-            "GO:1905564",
-            "GO:0045766",
-            "GO:0090050",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 4,
-            "nterms_dia": 1,
-            "nterms_angio+": 2,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 60,
-        "al_e_score": 0,
-        "al_corr_score": 3.196010998653774
-    },
-    {
         "product": "UniProtKB:O15530",
         "count": 5,
         "terms:": [
@@ -223,6 +199,30 @@
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 2
+        },
+        "al_score": 60,
+        "al_e_score": 0,
+        "al_corr_score": 3.196010998653774
+    },
+    {
+        "product": "UniProtKB:Q9Y243",
+        "count": 5,
+        "terms:": [
+            "GO:0001938",
+            "GO:1905564",
+            "GO:0045766",
+            "GO:0090050",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 4,
+            "nterms_dia": 1,
+            "nterms_angio+": 2,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
         },
         "al_score": 60,
         "al_e_score": 0,
@@ -370,29 +370,6 @@
         "al_corr_score": 2.4422495703074083
     },
     {
-        "product": "UniProtKB:Q96E22",
-        "count": 4,
-        "terms:": [
-            "GO:0001525",
-            "GO:0002040",
-            "GO:0006006",
-            "GO:0046627"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 1,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 30,
-        "al_e_score": 0,
-        "al_corr_score": 2.2599210498948734
-    },
-    {
         "product": "UniProtKB:Q92982",
         "count": 4,
         "terms:": [
@@ -416,12 +393,57 @@
         "al_corr_score": 2.2599210498948734
     },
     {
-        "product": "UniProtKB:O00443",
-        "count": 3,
+        "product": "UniProtKB:Q96E22",
+        "count": 4,
         "terms:": [
             "GO:0001525",
-            "GO:0090050",
-            "GO:0008286"
+            "GO:0002040",
+            "GO:0006006",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 30,
+        "al_e_score": 0,
+        "al_corr_score": 2.2599210498948734
+    },
+    {
+        "product": "UniProtKB:P20248",
+        "count": 3,
+        "terms:": [
+            "GO:0002041",
+            "GO:0045766",
+            "GO:0005520"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 20,
+        "al_e_score": 0,
+        "al_corr_score": 2.0
+    },
+    {
+        "product": "UniProtKB:P14618",
+        "count": 3,
+        "terms:": [
+            "GO:0002040",
+            "GO:1903672",
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -460,12 +482,12 @@
         "al_corr_score": 2.0
     },
     {
-        "product": "UniProtKB:Q9NRG9",
+        "product": "UniProtKB:O00443",
         "count": 3,
         "terms:": [
             "GO:0001525",
-            "GO:0045766",
-            "GO:0032869"
+            "GO:0090050",
+            "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -548,28 +570,6 @@
         "al_corr_score": 2.0
     },
     {
-        "product": "UniProtKB:P14618",
-        "count": 3,
-        "terms:": [
-            "GO:0002040",
-            "GO:1903672",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 20,
-        "al_e_score": 0,
-        "al_corr_score": 2.0
-    },
-    {
         "product": "UniProtKB:Q9UKV0",
         "count": 3,
         "terms:": [
@@ -592,12 +592,12 @@
         "al_corr_score": 2.0
     },
     {
-        "product": "UniProtKB:P20248",
+        "product": "UniProtKB:Q9NRG9",
         "count": 3,
         "terms:": [
-            "GO:0002041",
+            "GO:0001525",
             "GO:0045766",
-            "GO:0005520"
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -614,7 +614,7 @@
         "al_corr_score": 2.0
     },
     {
-        "product": "UniProtKB:Q8NC06",
+        "product": "UniProtKB:P55265",
         "count": 4,
         "terms:": [
             "GO:1903672",
@@ -637,7 +637,7 @@
         "al_corr_score": 1.4422495703074083
     },
     {
-        "product": "UniProtKB:P55265",
+        "product": "UniProtKB:Q8NC06",
         "count": 4,
         "terms:": [
             "GO:1903672",
@@ -682,11 +682,179 @@
         "al_corr_score": 1.2599210498948732
     },
     {
-        "product": "UniProtKB:Q9UQP3",
+        "product": "UniProtKB:Q99958",
+        "count": 2,
+        "terms:": [
+            "GO:0090050",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:O75460",
+        "count": 2,
+        "terms:": [
+            "GO:0001935",
+            "GO:1901142"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:Q9H845",
+        "count": 2,
+        "terms:": [
+            "GO:0045766",
+            "GO:0006006"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:O75414",
         "count": 2,
         "terms:": [
             "GO:1903672",
-            "GO:0007519"
+            "GO:0043560"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:Q15427",
+        "count": 2,
+        "terms:": [
+            "GO:0045766",
+            "GO:0014856"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:Q92847",
+        "count": 2,
+        "terms:": [
+            "GO:1903672",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:P07949",
+        "count": 2,
+        "terms:": [
+            "GO:0045766",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:P50120",
+        "count": 2,
+        "terms:": [
+            "GO:0045766",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:P08047",
+        "count": 2,
+        "terms:": [
+            "GO:0045766",
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -766,70 +934,28 @@
         "al_corr_score": 1.0
     },
     {
-        "product": "UniProtKB:P52789",
+        "product": "UniProtKB:Q8NGI0",
         "count": 2,
         "terms:": [
-            "GO:0045766",
-            "GO:0006006"
+            "GO:0001525",
+            "GO:0046627"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
             "nterms_dia": 1,
-            "nterms_angio+": 1,
+            "nterms_angio+": 0,
             "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 1,
             "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia0": 0
         },
         "al_score": 10,
         "al_e_score": 0,
         "al_corr_score": 1.0
     },
     {
-        "product": "UniProtKB:Q9NPB8",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:Q92847",
-        "count": 2,
-        "terms:": [
-            "GO:1903672",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:Q99958",
+        "product": "UniProtKB:Q15818",
         "count": 2,
         "terms:": [
             "GO:0090050",
@@ -871,154 +997,7 @@
         "al_corr_score": 1.0
     },
     {
-        "product": "UniProtKB:Q9H845",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0006006"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:O75414",
-        "count": 2,
-        "terms:": [
-            "GO:1903672",
-            "GO:0043560"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
         "product": "UniProtKB:Q9C0C7",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:Q15427",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0014856"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:O75460",
-        "count": 2,
-        "terms:": [
-            "GO:0001935",
-            "GO:1901142"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:Q15818",
-        "count": 2,
-        "terms:": [
-            "GO:0090050",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:P50120",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 10,
-        "al_e_score": 0,
-        "al_corr_score": 1.0
-    },
-    {
-        "product": "UniProtKB:P08047",
         "count": 2,
         "terms:": [
             "GO:0045766",
@@ -1060,21 +1039,42 @@
         "al_corr_score": 1.0
     },
     {
-        "product": "UniProtKB:Q8NGI0",
+        "product": "UniProtKB:P52789",
         "count": 2,
         "terms:": [
-            "GO:0001525",
-            "GO:0046627"
+            "GO:0045766",
+            "GO:0006006"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
             "nterms_dia": 1,
-            "nterms_angio+": 0,
+            "nterms_angio+": 1,
             "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 0
+            "nterms_dia0": 1
+        },
+        "al_score": 10,
+        "al_e_score": 0,
+        "al_corr_score": 1.0
+    },
+    {
+        "product": "UniProtKB:Q9UQP3",
+        "count": 2,
+        "terms:": [
+            "GO:1903672",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
         },
         "al_score": 10,
         "al_e_score": 0,
@@ -1102,11 +1102,11 @@
         "al_corr_score": 1.0
     },
     {
-        "product": "UniProtKB:P07949",
+        "product": "UniProtKB:Q9NPB8",
         "count": 2,
         "terms:": [
             "GO:0045766",
-            "GO:0032869"
+            "GO:0007519"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -1172,10 +1172,99 @@
         "al_corr_score": 0.5218763863858056
     },
     {
-        "product": "UniProtKB:P56945",
+        "product": "UniProtKB:P51153",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0032869",
+            "GO:0032593"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q8IWT3",
         "count": 2,
         "terms:": [
-            "GO:1903670",
+            "GO:0001525",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P54259",
+        "count": 4,
+        "terms:": [
+            "GO:0060055",
+            "GO:1903671",
+            "GO:0001935",
+            "GO:0043560"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": -16,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P31749",
+        "count": 4,
+        "terms:": [
+            "GO:0002042",
+            "GO:0032869",
+            "GO:0006006",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 3,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 3
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q92569",
+        "count": 2,
+        "terms:": [
+            "GO:0002042",
             "GO:0008286"
         ],
         "term_enum_scores": {
@@ -1193,23 +1282,66 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:O95831",
-        "count": 4,
+        "product": "UniProtKB:O43506",
+        "count": 5,
         "terms:": [
-            "GO:0002042",
+            "GO:0016525",
+            "GO:1905563",
             "GO:0032869",
-            "GO:0006006",
-            "GO:0008286"
+            "GO:1900077",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 3,
+            "nterms_angio+": 0,
+            "nterms_angio-": 2,
+            "nterms_angio0": 0,
+            "nterms_dia+": 2,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": -128,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q6UXT9",
+        "count": 2,
+        "terms:": [
+            "GO:0001525",
+            "GO:0043403"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 3,
+            "nterms_dia": 1,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 3
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:O00482",
+        "count": 2,
+        "terms:": [
+            "GO:0016525",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 0
         },
         "al_score": 0,
         "al_e_score": 0,
@@ -1239,26 +1371,223 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q96ER9",
+        "product": "UniProtKB:Q7Z7A4",
         "count": 4,
         "terms:": [
-            "GO:1905563",
+            "GO:1903670",
             "GO:0032869",
-            "GO:0046626",
-            "GO:0046627"
+            "GO:1901143",
+            "GO:0038016"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
             "nterms_dia": 3,
             "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 3
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P42345",
+        "count": 2,
+        "terms:": [
+            "GO:0001938",
+            "GO:1904206"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P80188",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0006006",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 2
         },
         "al_score": 0,
-        "al_e_score": -16,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P29353",
+        "count": 2,
+        "terms:": [
+            "GO:0001525",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P51608",
+        "count": 5,
+        "terms:": [
+            "GO:0001525",
+            "GO:0001938",
+            "GO:0016525",
+            "GO:0045766",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 4,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": -24,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P01375",
+        "count": 3,
+        "terms:": [
+            "GO:0001937",
+            "GO:0006006",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": -8,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q9NQ30",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0002040",
+            "GO:0005520"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q16539",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0006006",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P07203",
+        "count": 3,
+        "terms:": [
+            "GO:0060055",
+            "GO:0043534",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q13887",
+        "count": 2,
+        "terms:": [
+            "GO:0001525",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
         "al_corr_score": 0.0
     },
     {
@@ -1286,119 +1615,12 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:O14908",
+        "product": "UniProtKB:A6NKG5",
         "count": 3,
         "terms:": [
             "GO:0001525",
-            "GO:0002040",
-            "GO:0014732"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P13747",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q96A54",
-        "count": 2,
-        "terms:": [
-            "GO:0045766",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 0
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P07814",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:O14514",
-        "count": 3,
-        "terms:": [
-            "GO:0016525",
-            "GO:0045766",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": -8,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P51153",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0032869",
-            "GO:0032593"
+            "GO:0014841",
+            "GO:0007519"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -1415,71 +1637,20 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P13688",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:1903670",
-            "GO:0032869",
-            "GO:1901143",
-            "GO:0038016"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 3,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P01344",
-        "count": 8,
-        "terms:": [
-            "GO:0002040",
-            "GO:1905564",
-            "GO:0045766",
-            "GO:0006006",
-            "GO:0038028",
-            "GO:0008286",
-            "GO:0048633",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 5,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 4
-        },
-        "al_score": 0,
-        "al_e_score": -48,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P01375",
+        "product": "UniProtKB:P84090",
         "count": 3,
         "terms:": [
             "GO:0001937",
-            "GO:0006006",
-            "GO:0046627"
+            "GO:0001935",
+            "GO:0008286"
         ],
         "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
             "nterms_angio-": 1,
             "nterms_angio0": 0,
-            "nterms_dia+": 1,
+            "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
         },
@@ -1512,62 +1683,40 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P07203",
+        "product": "UniProtKB:O95477",
         "count": 3,
         "terms:": [
-            "GO:0060055",
-            "GO:0043534",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q6UXT9",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
+            "GO:0002040",
+            "GO:0007519",
             "GO:0043403"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 1,
+            "nterms_dia": 2,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia0": 2
         },
         "al_score": 0,
         "al_e_score": 0,
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q9NQ30",
-        "count": 3,
+        "product": "UniProtKB:P18065",
+        "count": 2,
         "terms:": [
             "GO:0001525",
-            "GO:0002040",
             "GO:0005520"
         ],
         "term_enum_scores": {
-            "nterms_angio": 2,
+            "nterms_angio": 1,
             "nterms_dia": 1,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
-            "nterms_angio0": 2,
+            "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
@@ -1577,71 +1726,31 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P80188",
-        "count": 3,
+        "product": "UniProtKB:Q9Y653",
+        "count": 5,
         "terms:": [
             "GO:0001525",
-            "GO:0006006",
-            "GO:0007519"
+            "GO:0043559",
+            "GO:1901143",
+            "GO:1901142",
+            "GO:0038020"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 2,
+            "nterms_dia": 4,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 2
+            "nterms_dia0": 4
         },
         "al_score": 0,
         "al_e_score": 0,
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q9Y6N7",
-        "count": 2,
-        "terms:": [
-            "GO:0002042",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P42345",
-        "count": 2,
-        "terms:": [
-            "GO:0001938",
-            "GO:1904206"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q13887",
+        "product": "UniProtKB:P13747",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1662,7 +1771,7 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P63244",
+        "product": "UniProtKB:Q9UBN7",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1677,94 +1786,6 @@
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q14774",
-        "count": 2,
-        "terms:": [
-            "GO:0002040",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P31749",
-        "count": 4,
-        "terms:": [
-            "GO:0002042",
-            "GO:0032869",
-            "GO:0006006",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 3,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P08183",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0032869",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q0P651",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0032869",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
         },
         "al_score": 0,
         "al_e_score": 0,
@@ -1793,53 +1814,7 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q14118",
-        "count": 3,
-        "terms:": [
-            "GO:0060055",
-            "GO:0007519",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P61221",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:0045765",
-            "GO:0045766",
-            "GO:0032869",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 2,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": -24,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q9UBN7",
+        "product": "UniProtKB:Q9BWC9",
         "count": 2,
         "terms:": [
             "GO:0001525",
@@ -1860,31 +1835,7 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q8WXS3",
-        "count": 5,
-        "terms:": [
-            "GO:0045766",
-            "GO:0006006",
-            "GO:0038028",
-            "GO:0048633",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 4,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 3
-        },
-        "al_score": 0,
-        "al_e_score": -24,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q7KZI7",
+        "product": "UniProtKB:P80108",
         "count": 3,
         "terms:": [
             "GO:0002042",
@@ -1927,149 +1878,55 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:O95477",
-        "count": 3,
-        "terms:": [
-            "GO:0002040",
-            "GO:0007519",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P51636",
-        "count": 6,
-        "terms:": [
-            "GO:0001938",
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0008286",
-            "GO:0014859",
-            "GO:0014856"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 3,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 0,
-        "al_e_score": -32,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:O00482",
+        "product": "UniProtKB:Q96B36",
         "count": 2,
         "terms:": [
-            "GO:0016525",
-            "GO:0046627"
+            "GO:0001525",
+            "GO:0014732"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
             "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 1,
-            "nterms_dia-": 0,
-            "nterms_dia0": 0
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q9Y653",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:0043559",
-            "GO:1901143",
-            "GO:1901142",
-            "GO:0038020"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 4,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 4
+            "nterms_dia0": 1
         },
         "al_score": 0,
         "al_e_score": 0,
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P45844",
-        "count": 5,
+        "product": "UniProtKB:O14908",
+        "count": 3,
         "terms:": [
             "GO:0001525",
             "GO:0002040",
-            "GO:0001937",
-            "GO:0045766",
-            "GO:0006006"
+            "GO:0014732"
         ],
         "term_enum_scores": {
-            "nterms_angio": 4,
+            "nterms_angio": 2,
             "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
             "nterms_angio0": 2,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
         },
         "al_score": 0,
-        "al_e_score": -24,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q9Y5B8",
-        "count": 2,
-        "terms:": [
-            "GO:0002042",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
         "al_e_score": 0,
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q16539",
+        "product": "UniProtKB:Q0P651",
         "count": 3,
         "terms:": [
             "GO:0001525",
-            "GO:0006006",
-            "GO:0007519"
+            "GO:0032869",
+            "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2080,6 +1937,27 @@
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P05090",
+        "count": 2,
+        "terms:": [
+            "GO:0001525",
+            "GO:0006006"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
         },
         "al_score": 0,
         "al_e_score": 0,
@@ -2107,64 +1985,44 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q8IWT3",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q96B36",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0014732"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P80108",
-        "count": 3,
+        "product": "UniProtKB:O95831",
+        "count": 4,
         "terms:": [
             "GO:0002042",
             "GO:0032869",
+            "GO:0006006",
             "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
-            "nterms_dia": 2,
+            "nterms_dia": 3,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 2
+            "nterms_dia0": 3
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q14993",
+        "count": 2,
+        "terms:": [
+            "GO:0060055",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
         },
         "al_score": 0,
         "al_e_score": 0,
@@ -2196,33 +2054,34 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P54259",
-        "count": 4,
+        "product": "UniProtKB:Q8WXS3",
+        "count": 5,
         "terms:": [
-            "GO:0060055",
-            "GO:1903671",
-            "GO:0001935",
-            "GO:0043560"
+            "GO:0045766",
+            "GO:0006006",
+            "GO:0038028",
+            "GO:0048633",
+            "GO:0046628"
         ],
         "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 1,
+            "nterms_angio": 1,
+            "nterms_dia": 4,
             "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
             "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia-": 1,
+            "nterms_dia0": 3
         },
         "al_score": 0,
-        "al_e_score": -16,
+        "al_e_score": -24,
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P29353",
+        "product": "UniProtKB:P56945",
         "count": 2,
         "terms:": [
-            "GO:0001525",
+            "GO:1903670",
             "GO:0008286"
         ],
         "term_enum_scores": {
@@ -2240,101 +2099,11 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:O60504",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0014841",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 2,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q96EB6",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:0002042",
-            "GO:0045766",
-            "GO:0014858",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 2,
-            "nterms_angio+": 1,
-            "nterms_angio-": 0,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": -24,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q13685",
-        "count": 4,
-        "terms:": [
-            "GO:0001525",
-            "GO:0060055",
-            "GO:0043534",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 3,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P53805",
+        "product": "UniProtKB:P63244",
         "count": 2,
         "terms:": [
-            "GO:0002040",
+            "GO:0001525",
             "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P05090",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0006006"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2375,34 +2144,11 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q7Z7A4",
-        "count": 4,
-        "terms:": [
-            "GO:1903670",
-            "GO:0032869",
-            "GO:1901143",
-            "GO:0038016"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 3,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 3
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P18065",
+        "product": "UniProtKB:P53805",
         "count": 2,
         "terms:": [
-            "GO:0001525",
-            "GO:0005520"
+            "GO:0002040",
+            "GO:0007519"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2419,7 +2165,167 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q92569",
+        "product": "UniProtKB:P07814",
+        "count": 2,
+        "terms:": [
+            "GO:0001525",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q14118",
+        "count": 3,
+        "terms:": [
+            "GO:0060055",
+            "GO:0007519",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q03135",
+        "count": 5,
+        "terms:": [
+            "GO:0001525",
+            "GO:0001937",
+            "GO:0001935",
+            "GO:0038016",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 2,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": -24,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q9Y6N7",
+        "count": 2,
+        "terms:": [
+            "GO:0002042",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P13688",
+        "count": 5,
+        "terms:": [
+            "GO:0001525",
+            "GO:1903670",
+            "GO:0032869",
+            "GO:1901143",
+            "GO:0038016"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 3,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 3
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q14774",
+        "count": 2,
+        "terms:": [
+            "GO:0002040",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P01344",
+        "count": 8,
+        "terms:": [
+            "GO:0002040",
+            "GO:1905564",
+            "GO:0045766",
+            "GO:0006006",
+            "GO:0038028",
+            "GO:0008286",
+            "GO:0048633",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 5,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 4
+        },
+        "al_score": 0,
+        "al_e_score": -48,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q9Y5B8",
         "count": 2,
         "terms:": [
             "GO:0002042",
@@ -2440,18 +2346,20 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q14993",
-        "count": 2,
+        "product": "UniProtKB:Q13685",
+        "count": 4,
         "terms:": [
+            "GO:0001525",
             "GO:0060055",
-            "GO:0007519"
+            "GO:0043534",
+            "GO:0043403"
         ],
         "term_enum_scores": {
-            "nterms_angio": 1,
+            "nterms_angio": 3,
             "nterms_dia": 1,
             "nterms_angio+": 0,
             "nterms_angio-": 0,
-            "nterms_angio0": 1,
+            "nterms_angio0": 3,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
@@ -2461,36 +2369,12 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:P51608",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:0001938",
-            "GO:0016525",
-            "GO:0045766",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 4,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": -24,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:A6NKG5",
+        "product": "UniProtKB:Q7KZI7",
         "count": 3,
         "terms:": [
-            "GO:0001525",
-            "GO:0014841",
-            "GO:0007519"
+            "GO:0002042",
+            "GO:0032869",
+            "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2533,81 +2417,12 @@
         "al_corr_score": 0.0
     },
     {
-        "product": "UniProtKB:Q9BWC9",
-        "count": 2,
-        "terms:": [
-            "GO:0001525",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 0,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:O43506",
-        "count": 5,
-        "terms:": [
-            "GO:0016525",
-            "GO:1905563",
-            "GO:0032869",
-            "GO:1900077",
-            "GO:0046627"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 3,
-            "nterms_angio+": 0,
-            "nterms_angio-": 2,
-            "nterms_angio0": 0,
-            "nterms_dia+": 2,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": 0,
-        "al_e_score": -128,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:Q03135",
-        "count": 5,
-        "terms:": [
-            "GO:0001525",
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0038016",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 2,
-            "nterms_angio+": 1,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 2
-        },
-        "al_score": 0,
-        "al_e_score": -24,
-        "al_corr_score": 0.0
-    },
-    {
-        "product": "UniProtKB:P84090",
+        "product": "UniProtKB:O14514",
         "count": 3,
         "terms:": [
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0008286"
+            "GO:0016525",
+            "GO:0045766",
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -2621,6 +2436,191 @@
         },
         "al_score": 0,
         "al_e_score": -8,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:O60504",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0014841",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P45844",
+        "count": 5,
+        "terms:": [
+            "GO:0001525",
+            "GO:0002040",
+            "GO:0001937",
+            "GO:0045766",
+            "GO:0006006"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 4,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": -24,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q96ER9",
+        "count": 4,
+        "terms:": [
+            "GO:1905563",
+            "GO:0032869",
+            "GO:0046626",
+            "GO:0046627"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 3,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 1,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": -16,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P08183",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0032869",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 2,
+            "nterms_angio+": 0,
+            "nterms_angio-": 0,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 2
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P61221",
+        "count": 5,
+        "terms:": [
+            "GO:0001525",
+            "GO:0045765",
+            "GO:0045766",
+            "GO:0032869",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 2,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": -24,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:P51636",
+        "count": 6,
+        "terms:": [
+            "GO:0001938",
+            "GO:0001937",
+            "GO:0001935",
+            "GO:0008286",
+            "GO:0014859",
+            "GO:0014856"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 3,
+            "nterms_angio+": 1,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 3
+        },
+        "al_score": 0,
+        "al_e_score": -32,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q96EB6",
+        "count": 5,
+        "terms:": [
+            "GO:0001525",
+            "GO:0002042",
+            "GO:0045766",
+            "GO:0014858",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 2,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 1
+        },
+        "al_score": 0,
+        "al_e_score": -24,
+        "al_corr_score": 0.0
+    },
+    {
+        "product": "UniProtKB:Q96A54",
+        "count": 2,
+        "terms:": [
+            "GO:0045766",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 1,
+            "nterms_angio-": 0,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 0
+        },
+        "al_score": 0,
+        "al_e_score": 0,
         "al_corr_score": 0.0
     },
     {
@@ -2693,31 +2693,6 @@
         "al_score": -20,
         "al_e_score": -256,
         "al_corr_score": -0.8284271247461903
-    },
-    {
-        "product": "UniProtKB:Q9BT17",
-        "count": 6,
-        "terms:": [
-            "GO:0001525",
-            "GO:0045765",
-            "GO:0016525",
-            "GO:0001937",
-            "GO:0001935",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 5,
-            "nterms_dia": 1,
-            "nterms_angio+": 1,
-            "nterms_angio-": 2,
-            "nterms_angio0": 2,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -30,
-        "al_e_score": -384,
-        "al_corr_score": -0.9360899487589008
     },
     {
         "product": "UniProtKB:P21359",
@@ -2795,137 +2770,36 @@
         "al_corr_score": -0.9360899487589008
     },
     {
-        "product": "UniProtKB:Q06413",
-        "count": 2,
+        "product": "UniProtKB:Q9BT17",
+        "count": 6,
         "terms:": [
-            "GO:1905563",
+            "GO:0001525",
+            "GO:0045765",
+            "GO:0016525",
+            "GO:0001937",
+            "GO:0001935",
             "GO:0007519"
         ],
         "term_enum_scores": {
-            "nterms_angio": 1,
+            "nterms_angio": 5,
             "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
+            "nterms_angio+": 1,
+            "nterms_angio-": 2,
+            "nterms_angio0": 2,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
             "nterms_dia0": 1
         },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
+        "al_score": -30,
+        "al_e_score": -384,
+        "al_corr_score": -0.9360899487589008
     },
     {
-        "product": "UniProtKB:Q09428",
+        "product": "UniProtKB:P24468",
         "count": 2,
         "terms:": [
-            "GO:0016525",
-            "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
-    },
-    {
-        "product": "UniProtKB:Q96EY9",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
-    },
-    {
-        "product": "UniProtKB:Q93086",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0048630"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
-    },
-    {
-        "product": "UniProtKB:P61812",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
+            "GO:0001937",
             "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
-    },
-    {
-        "product": "UniProtKB:Q13324",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0048630"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
-    },
-    {
-        "product": "UniProtKB:P98177",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -2963,32 +2837,11 @@
         "al_corr_score": -1.0
     },
     {
-        "product": "UniProtKB:P61586",
+        "product": "UniProtKB:Q13324",
         "count": 2,
         "terms:": [
-            "GO:0090051",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
-    },
-    {
-        "product": "UniProtKB:Q9UQL6",
-        "count": 2,
-        "terms:": [
-            "GO:0090051",
-            "GO:0032869"
+            "GO:0016525",
+            "GO:0048630"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3026,11 +2879,11 @@
         "al_corr_score": -1.0
     },
     {
-        "product": "UniProtKB:O95389",
+        "product": "UniProtKB:P17693",
         "count": 2,
         "terms:": [
             "GO:0016525",
-            "GO:0005520"
+            "GO:0005009"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3047,32 +2900,11 @@
         "al_corr_score": -1.0
     },
     {
-        "product": "UniProtKB:P24468",
-        "count": 2,
-        "terms:": [
-            "GO:0001937",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -10,
-        "al_e_score": -8,
-        "al_corr_score": -1.0
-    },
-    {
-        "product": "UniProtKB:O75419",
+        "product": "UniProtKB:P98177",
         "count": 2,
         "terms:": [
             "GO:0016525",
-            "GO:0032869"
+            "GO:0008286"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3110,11 +2942,11 @@
         "al_corr_score": -1.0
     },
     {
-        "product": "UniProtKB:P17693",
+        "product": "UniProtKB:O75419",
         "count": 2,
         "terms:": [
             "GO:0016525",
-            "GO:0005009"
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3131,11 +2963,95 @@
         "al_corr_score": -1.0
     },
     {
-        "product": "UniProtKB:Q9UBJ2",
+        "product": "UniProtKB:Q96EY9",
         "count": 2,
         "terms:": [
             "GO:0016525",
             "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:P61586",
+        "count": 2,
+        "terms:": [
+            "GO:0090051",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:Q93086",
+        "count": 2,
+        "terms:": [
+            "GO:0016525",
+            "GO:0048630"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:Q09428",
+        "count": 2,
+        "terms:": [
+            "GO:0016525",
+            "GO:0043403"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:O95389",
+        "count": 2,
+        "terms:": [
+            "GO:0016525",
+            "GO:0005520"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3199,6 +3115,90 @@
         "terms:": [
             "GO:0016525",
             "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:Q9UBJ2",
+        "count": 2,
+        "terms:": [
+            "GO:0016525",
+            "GO:0032869"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:Q06413",
+        "count": 2,
+        "terms:": [
+            "GO:1905563",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:P61812",
+        "count": 2,
+        "terms:": [
+            "GO:0016525",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -10,
+        "al_e_score": -8,
+        "al_corr_score": -1.0
+    },
+    {
+        "product": "UniProtKB:Q9UQL6",
+        "count": 2,
+        "terms:": [
+            "GO:0090051",
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 1,
@@ -3281,12 +3281,12 @@
         "al_corr_score": -1.4142135623730951
     },
     {
-        "product": "UniProtKB:Q8TAU0",
+        "product": "UniProtKB:Q5TA50",
         "count": 3,
         "terms:": [
             "GO:0016525",
             "GO:0001937",
-            "GO:0007519"
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -3303,12 +3303,12 @@
         "al_corr_score": -1.4142135623730951
     },
     {
-        "product": "UniProtKB:Q5TA50",
+        "product": "UniProtKB:Q8TAU0",
         "count": 3,
         "terms:": [
             "GO:0016525",
             "GO:0001937",
-            "GO:0032869"
+            "GO:0007519"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -3377,56 +3377,55 @@
         "al_corr_score": -1.7878507702282815
     },
     {
+        "product": "UniProtKB:P28332",
+        "count": 2,
+        "terms:": [
+            "GO:0016525",
+            "GO:0046628"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 1,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 0,
+            "nterms_dia+": 0,
+            "nterms_dia-": 1,
+            "nterms_dia0": 0
+        },
+        "al_score": 0,
+        "al_e_score": 0,
+        "al_corr_score": -2.0
+    },
+    {
+        "product": "UniProtKB:O14639",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0090051",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -20,
+        "al_e_score": -16,
+        "al_corr_score": -2.0
+    },
+    {
         "product": "UniProtKB:Q07021",
         "count": 3,
         "terms:": [
             "GO:0003158",
             "GO:0001937",
             "GO:0043403"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -20,
-        "al_e_score": -16,
-        "al_corr_score": -2.0
-    },
-    {
-        "product": "UniProtKB:P60484",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0016525",
-            "GO:0032869"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -20,
-        "al_e_score": -16,
-        "al_corr_score": -2.0
-    },
-    {
-        "product": "UniProtKB:P50222",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0090051",
-            "GO:0007519"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
@@ -3465,51 +3464,7 @@
         "al_corr_score": -2.0
     },
     {
-        "product": "UniProtKB:Q9NZW5",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0016525",
-            "GO:0008286"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -20,
-        "al_e_score": -16,
-        "al_corr_score": -2.0
-    },
-    {
-        "product": "UniProtKB:O14639",
-        "count": 3,
-        "terms:": [
-            "GO:0001525",
-            "GO:0090051",
-            "GO:0007519"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 2,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 1,
-            "nterms_dia+": 0,
-            "nterms_dia-": 0,
-            "nterms_dia0": 1
-        },
-        "al_score": -20,
-        "al_e_score": -16,
-        "al_corr_score": -2.0
-    },
-    {
-        "product": "UniProtKB:A6NFH5",
+        "product": "UniProtKB:Q13370",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3552,7 +3507,51 @@
         "al_corr_score": -2.0
     },
     {
-        "product": "UniProtKB:Q13370",
+        "product": "UniProtKB:P50222",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0090051",
+            "GO:0007519"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -20,
+        "al_e_score": -16,
+        "al_corr_score": -2.0
+    },
+    {
+        "product": "UniProtKB:Q9NZW5",
+        "count": 3,
+        "terms:": [
+            "GO:0001525",
+            "GO:0016525",
+            "GO:0008286"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 2,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 1,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
+        },
+        "al_score": -20,
+        "al_e_score": -16,
+        "al_corr_score": -2.0
+    },
+    {
+        "product": "UniProtKB:P60484",
         "count": 3,
         "terms:": [
             "GO:0001525",
@@ -3574,48 +3573,26 @@
         "al_corr_score": -2.0
     },
     {
-        "product": "UniProtKB:P28332",
-        "count": 2,
-        "terms:": [
-            "GO:0016525",
-            "GO:0046628"
-        ],
-        "term_enum_scores": {
-            "nterms_angio": 1,
-            "nterms_dia": 1,
-            "nterms_angio+": 0,
-            "nterms_angio-": 1,
-            "nterms_angio0": 0,
-            "nterms_dia+": 0,
-            "nterms_dia-": 1,
-            "nterms_dia0": 0
-        },
-        "al_score": 0,
-        "al_e_score": 0,
-        "al_corr_score": -2.0
-    },
-    {
-        "product": "UniProtKB:P60606",
-        "count": 4,
+        "product": "UniProtKB:A6NFH5",
+        "count": 3,
         "terms:": [
             "GO:0001525",
             "GO:0016525",
-            "GO:0032869",
-            "GO:0008286"
+            "GO:0032869"
         ],
         "term_enum_scores": {
             "nterms_angio": 2,
-            "nterms_dia": 2,
+            "nterms_dia": 1,
             "nterms_angio+": 0,
             "nterms_angio-": 1,
             "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 2
+            "nterms_dia0": 1
         },
-        "al_score": -30,
-        "al_e_score": -24,
-        "al_corr_score": -2.2599210498948734
+        "al_score": -20,
+        "al_e_score": -16,
+        "al_corr_score": -2.0
     },
     {
         "product": "UniProtKB:Q6P093",
@@ -3635,6 +3612,29 @@
             "nterms_dia+": 0,
             "nterms_dia-": 1,
             "nterms_dia0": 2
+        },
+        "al_score": -30,
+        "al_e_score": -24,
+        "al_corr_score": -2.2599210498948734
+    },
+    {
+        "product": "UniProtKB:Q99798",
+        "count": 4,
+        "terms:": [
+            "GO:0001525",
+            "GO:0002040",
+            "GO:0090051",
+            "GO:0046626"
+        ],
+        "term_enum_scores": {
+            "nterms_angio": 3,
+            "nterms_dia": 1,
+            "nterms_angio+": 0,
+            "nterms_angio-": 1,
+            "nterms_angio0": 2,
+            "nterms_dia+": 0,
+            "nterms_dia-": 0,
+            "nterms_dia0": 1
         },
         "al_score": -30,
         "al_e_score": -24,
@@ -3666,23 +3666,23 @@
         "al_corr_score": -2.2599210498948734
     },
     {
-        "product": "UniProtKB:Q99798",
+        "product": "UniProtKB:P60606",
         "count": 4,
         "terms:": [
             "GO:0001525",
-            "GO:0002040",
-            "GO:0090051",
-            "GO:0046626"
+            "GO:0016525",
+            "GO:0032869",
+            "GO:0008286"
         ],
         "term_enum_scores": {
-            "nterms_angio": 3,
-            "nterms_dia": 1,
+            "nterms_angio": 2,
+            "nterms_dia": 2,
             "nterms_angio+": 0,
             "nterms_angio-": 1,
-            "nterms_angio0": 2,
+            "nterms_angio0": 1,
             "nterms_dia+": 0,
             "nterms_dia-": 0,
-            "nterms_dia0": 1
+            "nterms_dia0": 2
         },
         "al_score": -30,
         "al_e_score": -24,
