@@ -269,6 +269,8 @@ def load_sequence_comparison_results(filepath = "src_data_files/sequence_compari
                 current_miRNA_mRNA_matches_dict[mRNAid] = match_strength
             i += 1
         return sequence_comparison_results_json
+    else:
+        logger.info(f"ERROR! Filepath {filepath} does not exist!")
 
 
 
