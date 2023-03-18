@@ -11,12 +11,14 @@ def score_miRNAs(overlaps, scores_dict, treshold):
     mirna_scores = []
     for mirna in overlaps:
         basic_score = 0
+        inhibited = []
         for product in overlaps[mirna]:
             product_score = scores_dict[product]
             overlap = overlaps[mirna][product]
+            if overlap >= treshold: inhibited.append(product)
             basic_score += _score_mirna_basic(product_score, overlap, treshold)
 
-        out = {"mirna": mirna, "basic_score": basic_score}
+        out = {"mirna": mirna, "basic_score": basic_score, "products_inhibited": inhibited}
         mirna_scores.append(out)
 
     return mirna_scores
