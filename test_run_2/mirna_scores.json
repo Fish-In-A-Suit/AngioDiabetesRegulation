@@ -1,0 +1,7666 @@
+[
+    {
+        "mirna": "hsa-mir-4508",
+        "basic_score": -38.95896250824441
+    },
+    {
+        "mirna": "hsa-mir-602",
+        "basic_score": -43.41239335374679
+    },
+    {
+        "mirna": "hsa-mir-5680",
+        "basic_score": -43.89767472798536
+    },
+    {
+        "mirna": "hsa-mir-1290",
+        "basic_score": -47.06924760323918
+    },
+    {
+        "mirna": "hsa-mir-3161",
+        "basic_score": -51.76985462550317
+    },
+    {
+        "mirna": "hsa-mir-9898",
+        "basic_score": -52.04929038410029
+    },
+    {
+        "mirna": "hsa-mir-3920",
+        "basic_score": -53.76985462550317
+    },
+    {
+        "mirna": "hsa-mir-6724-4",
+        "basic_score": -57.33344949806454
+    },
+    {
+        "mirna": "hsa-mir-377",
+        "basic_score": -58.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-4298",
+        "basic_score": -58.45157930751947
+    },
+    {
+        "mirna": "hsa-mir-4325",
+        "basic_score": -59.60883434696595
+    },
+    {
+        "mirna": "hsa-let-7e",
+        "basic_score": -61.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-584",
+        "basic_score": -61.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-6083",
+        "basic_score": -61.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-548ac",
+        "basic_score": -62.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-12121",
+        "basic_score": -62.240820478492964
+    },
+    {
+        "mirna": "hsa-mir-3135b",
+        "basic_score": -62.45614612651839
+    },
+    {
+        "mirna": "hsa-mir-4509-3",
+        "basic_score": -62.759394319148655
+    },
+    {
+        "mirna": "hsa-mir-516b-2",
+        "basic_score": -63.50565273067777
+    },
+    {
+        "mirna": "hsa-mir-877",
+        "basic_score": -63.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-939",
+        "basic_score": -63.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-548ae-2",
+        "basic_score": -63.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-3118-1",
+        "basic_score": -63.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4448",
+        "basic_score": -64.17941163029813
+    },
+    {
+        "mirna": "hsa-mir-215",
+        "basic_score": -64.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-4794",
+        "basic_score": -64.70459056241405
+    },
+    {
+        "mirna": "hsa-mir-449a",
+        "basic_score": -64.72287262404892
+    },
+    {
+        "mirna": "hsa-mir-296",
+        "basic_score": -65.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-6507",
+        "basic_score": -65.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-3132",
+        "basic_score": -65.16250698017014
+    },
+    {
+        "mirna": "hsa-mir-6085",
+        "basic_score": -65.19706770572132
+    },
+    {
+        "mirna": "hsa-mir-4435-2",
+        "basic_score": -65.5317494280262
+    },
+    {
+        "mirna": "hsa-mir-383",
+        "basic_score": -65.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-1272",
+        "basic_score": -65.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-5694",
+        "basic_score": -65.67911985127732
+    },
+    {
+        "mirna": "hsa-mir-940",
+        "basic_score": -66.57939941000164
+    },
+    {
+        "mirna": "hsa-mir-3189",
+        "basic_score": -66.60547751931803
+    },
+    {
+        "mirna": "hsa-mir-6070",
+        "basic_score": -66.67722560593158
+    },
+    {
+        "mirna": "hsa-mir-4434",
+        "basic_score": -66.77507038989357
+    },
+    {
+        "mirna": "hsa-mir-4478",
+        "basic_score": -67.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-599",
+        "basic_score": -67.41239335374677
+    },
+    {
+        "mirna": "hsa-mir-4665",
+        "basic_score": -67.41239335374677
+    },
+    {
+        "mirna": "hsa-mir-7850",
+        "basic_score": -67.50031589835162
+    },
+    {
+        "mirna": "hsa-mir-496",
+        "basic_score": -67.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-375",
+        "basic_score": -67.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-515-1",
+        "basic_score": -67.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-526a-2",
+        "basic_score": -67.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4428",
+        "basic_score": -67.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-12127",
+        "basic_score": -67.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-2681",
+        "basic_score": -67.9837406504062
+    },
+    {
+        "mirna": "hsa-mir-4497",
+        "basic_score": -68.54406867112321
+    },
+    {
+        "mirna": "hsa-mir-8080",
+        "basic_score": -68.64494914369568
+    },
+    {
+        "mirna": "hsa-mir-4527",
+        "basic_score": -68.72610185273153
+    },
+    {
+        "mirna": "hsa-let-7a-3",
+        "basic_score": -69.06924760323913
+    },
+    {
+        "mirna": "hsa-let-7b",
+        "basic_score": -69.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-10b",
+        "basic_score": -69.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-494",
+        "basic_score": -69.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-1285-1",
+        "basic_score": -69.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-3921",
+        "basic_score": -69.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-378e",
+        "basic_score": -69.36177634312308
+    },
+    {
+        "mirna": "hsa-mir-4509-1",
+        "basic_score": -69.45059671899038
+    },
+    {
+        "mirna": "hsa-mir-892b",
+        "basic_score": -69.53301768716024
+    },
+    {
+        "mirna": "hsa-mir-6740",
+        "basic_score": -69.58908970302888
+    },
+    {
+        "mirna": "hsa-mir-4785",
+        "basic_score": -69.72097837870321
+    },
+    {
+        "mirna": "hsa-let-7a-2",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-26a-2",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-423",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-433",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-520d",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-3128",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4306",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-3688-1",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4458",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-5589",
+        "basic_score": -69.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-12131",
+        "basic_score": -69.95374674385396
+    },
+    {
+        "mirna": "hsa-mir-6830",
+        "basic_score": -70.02549483046754
+    },
+    {
+        "mirna": "hsa-mir-4701",
+        "basic_score": -70.18474846262431
+    },
+    {
+        "mirna": "hsa-mir-1261",
+        "basic_score": -70.36144481190642
+    },
+    {
+        "mirna": "hsa-mir-302f",
+        "basic_score": -70.7261018527315
+    },
+    {
+        "mirna": "hsa-mir-6763",
+        "basic_score": -70.74498650753777
+    },
+    {
+        "mirna": "hsa-mir-3615",
+        "basic_score": -70.76066257828269
+    },
+    {
+        "mirna": "hsa-mir-548aw",
+        "basic_score": -70.79472505802708
+    },
+    {
+        "mirna": "hsa-mir-4513",
+        "basic_score": -70.94142750075697
+    },
+    {
+        "mirna": "hsa-mir-603",
+        "basic_score": -71.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-938",
+        "basic_score": -71.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-1268b",
+        "basic_score": -71.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-4649",
+        "basic_score": -71.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-6774",
+        "basic_score": -71.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-4661",
+        "basic_score": -71.28050467807243
+    },
+    {
+        "mirna": "hsa-mir-4492",
+        "basic_score": -71.4895964456053
+    },
+    {
+        "mirna": "hsa-mir-5191",
+        "basic_score": -71.58908970302888
+    },
+    {
+        "mirna": "hsa-mir-4495",
+        "basic_score": -71.6272930682725
+    },
+    {
+        "mirna": "hsa-mir-4472-2",
+        "basic_score": -71.65956953050839
+    },
+    {
+        "mirna": "hsa-mir-3529",
+        "basic_score": -71.67515562544976
+    },
+    {
+        "mirna": "hsa-mir-548i-1",
+        "basic_score": -71.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-4656",
+        "basic_score": -71.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-6750",
+        "basic_score": -71.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-4297",
+        "basic_score": -71.82185806817962
+    },
+    {
+        "mirna": "hsa-mir-3180-4",
+        "basic_score": -71.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-1273c",
+        "basic_score": -71.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4707",
+        "basic_score": -71.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-6126",
+        "basic_score": -71.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-6529",
+        "basic_score": -72.14485090474695
+    },
+    {
+        "mirna": "hsa-mir-4251",
+        "basic_score": -72.17941163029813
+    },
+    {
+        "mirna": "hsa-mir-7156",
+        "basic_score": -72.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-3960",
+        "basic_score": -72.2623317688104
+    },
+    {
+        "mirna": "hsa-mir-92a-2",
+        "basic_score": -72.41751682777506
+    },
+    {
+        "mirna": "hsa-mir-7845",
+        "basic_score": -72.41751682777506
+    },
+    {
+        "mirna": "hsa-mir-7162",
+        "basic_score": -72.59828175024934
+    },
+    {
+        "mirna": "hsa-mir-1228",
+        "basic_score": -72.69925373008788
+    },
+    {
+        "mirna": "hsa-mir-3678",
+        "basic_score": -72.72287262404892
+    },
+    {
+        "mirna": "hsa-mir-30b",
+        "basic_score": -72.72610185273153
+    },
+    {
+        "mirna": "hsa-mir-3675",
+        "basic_score": -72.78217386860014
+    },
+    {
+        "mirna": "hsa-mir-6789",
+        "basic_score": -72.95564098919967
+    },
+    {
+        "mirna": "hsa-mir-548y",
+        "basic_score": -73.0131755873705
+    },
+    {
+        "mirna": "hsa-mir-543",
+        "basic_score": -73.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-548j",
+        "basic_score": -73.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-4753",
+        "basic_score": -73.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-5007",
+        "basic_score": -73.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-5587",
+        "basic_score": -73.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-548f-4",
+        "basic_score": -73.09924150979138
+    },
+    {
+        "mirna": "hsa-mir-6846",
+        "basic_score": -73.37376405500346
+    },
+    {
+        "mirna": "hsa-mir-708",
+        "basic_score": -73.53301768716024
+    },
+    {
+        "mirna": "hsa-mir-6862-1",
+        "basic_score": -73.55452897747769
+    },
+    {
+        "mirna": "hsa-mir-4457",
+        "basic_score": -73.61060099334632
+    },
+    {
+        "mirna": "hsa-mir-6780a",
+        "basic_score": -73.82592664137177
+    },
+    {
+        "mirna": "hsa-mir-1471",
+        "basic_score": -73.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4279",
+        "basic_score": -73.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4642",
+        "basic_score": -73.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4438",
+        "basic_score": -73.89767472798535
+    },
+    {
+        "mirna": "hsa-mir-365a",
+        "basic_score": -73.95374674385396
+    },
+    {
+        "mirna": "hsa-mir-581",
+        "basic_score": -73.95374674385396
+    },
+    {
+        "mirna": "hsa-mir-3191",
+        "basic_score": -74.28969672529287
+    },
+    {
+        "mirna": "hsa-mir-2054",
+        "basic_score": -74.41751682777506
+    },
+    {
+        "mirna": "hsa-mir-12125",
+        "basic_score": -74.41751682777506
+    },
+    {
+        "mirna": "hsa-mir-1277",
+        "basic_score": -74.44751073432731
+    },
+    {
+        "mirna": "hsa-mir-3179-1",
+        "basic_score": -74.59828175024928
+    },
+    {
+        "mirna": "hsa-mir-1248",
+        "basic_score": -74.59828175024934
+    },
+    {
+        "mirna": "hsa-mir-1912",
+        "basic_score": -74.78217386860014
+    },
+    {
+        "mirna": "hsa-mir-4735",
+        "basic_score": -74.78217386860014
+    },
+    {
+        "mirna": "hsa-mir-4510",
+        "basic_score": -74.93609066843077
+    },
+    {
+        "mirna": "hsa-mir-3179-3",
+        "basic_score": -74.9373589275648
+    },
+    {
+        "mirna": "hsa-mir-4638",
+        "basic_score": -74.94142750075692
+    },
+    {
+        "mirna": "hsa-mir-3074",
+        "basic_score": -75.0131755873705
+    },
+    {
+        "mirna": "hsa-mir-15b",
+        "basic_score": -75.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-3928",
+        "basic_score": -75.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-320c-2",
+        "basic_score": -75.30201596838988
+    },
+    {
+        "mirna": "hsa-mir-8067",
+        "basic_score": -75.37376405500346
+    },
+    {
+        "mirna": "hsa-mir-6735",
+        "basic_score": -75.58908970302888
+    },
+    {
+        "mirna": "hsa-mir-4525",
+        "basic_score": -75.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-302b",
+        "basic_score": -75.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-3164",
+        "basic_score": -75.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-4708",
+        "basic_score": -76.02549483046751
+    },
+    {
+        "mirna": "hsa-mir-3670-1",
+        "basic_score": -76.07437107726743
+    },
+    {
+        "mirna": "hsa-mir-3668",
+        "basic_score": -76.59828175024928
+    },
+    {
+        "mirna": "hsa-mir-339",
+        "basic_score": -76.72610185273153
+    },
+    {
+        "mirna": "hsa-mir-3183",
+        "basic_score": -76.80953882508261
+    },
+    {
+        "mirna": "hsa-mir-4765",
+        "basic_score": -76.99343094343344
+    },
+    {
+        "mirna": "hsa-mir-1236",
+        "basic_score": -77.24594395252124
+    },
+    {
+        "mirna": "hsa-mir-4439",
+        "basic_score": -77.24594395252127
+    },
+    {
+        "mirna": "hsa-mir-5692c-1",
+        "basic_score": -77.24594395252127
+    },
+    {
+        "mirna": "hsa-mir-4319",
+        "basic_score": -77.30201596838988
+    },
+    {
+        "mirna": "hsa-mir-3686",
+        "basic_score": -77.30201596838988
+    },
+    {
+        "mirna": "hsa-mir-12115",
+        "basic_score": -77.30201596838991
+    },
+    {
+        "mirna": "hsa-mir-3689a",
+        "basic_score": -77.46126960054666
+    },
+    {
+        "mirna": "hsa-mir-6506",
+        "basic_score": -77.5837528707027
+    },
+    {
+        "mirna": "hsa-mir-3672",
+        "basic_score": -77.64203452302094
+    },
+    {
+        "mirna": "hsa-mir-3657",
+        "basic_score": -77.69645806542796
+    },
+    {
+        "mirna": "hsa-mir-1304",
+        "basic_score": -77.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-5688",
+        "basic_score": -77.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-1250",
+        "basic_score": -77.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-6837",
+        "basic_score": -78.27800783955531
+    },
+    {
+        "mirna": "hsa-mir-5697",
+        "basic_score": -78.28969672529287
+    },
+    {
+        "mirna": "hsa-mir-1283-1",
+        "basic_score": -78.41751682777509
+    },
+    {
+        "mirna": "hsa-mir-4724",
+        "basic_score": -78.59828175024931
+    },
+    {
+        "mirna": "hsa-mir-3677",
+        "basic_score": -78.71004556765901
+    },
+    {
+        "mirna": "hsa-mir-1343",
+        "basic_score": -78.92254516050927
+    },
+    {
+        "mirna": "hsa-mir-4538",
+        "basic_score": -79.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-5192",
+        "basic_score": -79.16479124348542
+    },
+    {
+        "mirna": "hsa-mir-5681b",
+        "basic_score": -79.24594395252124
+    },
+    {
+        "mirna": "hsa-mir-3939",
+        "basic_score": -79.35632133787813
+    },
+    {
+        "mirna": "hsa-mir-548av",
+        "basic_score": -79.37376405500346
+    },
+    {
+        "mirna": "hsa-mir-7851",
+        "basic_score": -79.58908970302888
+    },
+    {
+        "mirna": "hsa-mir-5586",
+        "basic_score": -79.76985462550313
+    },
+    {
+        "mirna": "hsa-mir-4304",
+        "basic_score": -79.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-3059",
+        "basic_score": -79.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-1264",
+        "basic_score": -80.0595573102119
+    },
+    {
+        "mirna": "hsa-let-7g",
+        "basic_score": -80.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-636",
+        "basic_score": -80.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-6827",
+        "basic_score": -80.3457687411615
+    },
+    {
+        "mirna": "hsa-mir-4667",
+        "basic_score": -80.36864058097514
+    },
+    {
+        "mirna": "hsa-mir-4657",
+        "basic_score": -80.41751682777506
+    },
+    {
+        "mirna": "hsa-mir-3621",
+        "basic_score": -80.47046164776712
+    },
+    {
+        "mirna": "hsa-mir-3147",
+        "basic_score": -80.59828175024931
+    },
+    {
+        "mirna": "hsa-mir-1282",
+        "basic_score": -80.67722560593161
+    },
+    {
+        "mirna": "hsa-mir-5193",
+        "basic_score": -80.7261018527315
+    },
+    {
+        "mirna": "hsa-mir-6758",
+        "basic_score": -80.7261018527315
+    },
+    {
+        "mirna": "hsa-mir-7846",
+        "basic_score": -81.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-6862-2",
+        "basic_score": -81.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-6809",
+        "basic_score": -81.17505816959708
+    },
+    {
+        "mirna": "hsa-mir-7155",
+        "basic_score": -81.30201596838988
+    },
+    {
+        "mirna": "hsa-mir-3618",
+        "basic_score": -81.46126960054666
+    },
+    {
+        "mirna": "hsa-mir-548k",
+        "basic_score": -81.46126960054669
+    },
+    {
+        "mirna": "hsa-mir-548ai",
+        "basic_score": -81.52365892534966
+    },
+    {
+        "mirna": "hsa-mir-3660",
+        "basic_score": -81.593158276221
+    },
+    {
+        "mirna": "hsa-mir-548t",
+        "basic_score": -81.61060099334635
+    },
+    {
+        "mirna": "hsa-mir-5696",
+        "basic_score": -81.69403796569743
+    },
+    {
+        "mirna": "hsa-mir-942",
+        "basic_score": -81.69403796569746
+    },
+    {
+        "mirna": "hsa-mir-633",
+        "basic_score": -81.73519186714593
+    },
+    {
+        "mirna": "hsa-mir-516b-1",
+        "basic_score": -81.8976747279853
+    },
+    {
+        "mirna": "hsa-mir-4261",
+        "basic_score": -81.92503968446779
+    },
+    {
+        "mirna": "hsa-mir-6842",
+        "basic_score": -82.02549483046751
+    },
+    {
+        "mirna": "hsa-mir-8068",
+        "basic_score": -82.20219117974965
+    },
+    {
+        "mirna": "hsa-mir-320a",
+        "basic_score": -82.57939941000163
+    },
+    {
+        "mirna": "hsa-mir-662",
+        "basic_score": -82.57939941000163
+    },
+    {
+        "mirna": "hsa-mir-6770-2",
+        "basic_score": -82.64088057050354
+    },
+    {
+        "mirna": "hsa-mir-320e",
+        "basic_score": -82.85799052840582
+    },
+    {
+        "mirna": "hsa-mir-199b",
+        "basic_score": -83.01317558737047
+    },
+    {
+        "mirna": "hsa-mir-573",
+        "basic_score": -83.06601837455652
+    },
+    {
+        "mirna": "hsa-mir-4698",
+        "basic_score": -83.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-1244-2",
+        "basic_score": -83.34148759276754
+    },
+    {
+        "mirna": "hsa-mir-1298",
+        "basic_score": -83.3563213378781
+    },
+    {
+        "mirna": "hsa-mir-4500",
+        "basic_score": -83.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-9-2",
+        "basic_score": -83.37783262819558
+    },
+    {
+        "mirna": "hsa-mir-3926-1",
+        "basic_score": -83.41239335374677
+    },
+    {
+        "mirna": "hsa-mir-1180",
+        "basic_score": -83.50565273067774
+    },
+    {
+        "mirna": "hsa-mir-6499",
+        "basic_score": -83.65061672414247
+    },
+    {
+        "mirna": "hsa-mir-4288",
+        "basic_score": -83.84160271211668
+    },
+    {
+        "mirna": "hsa-mir-519e",
+        "basic_score": -83.89444549930273
+    },
+    {
+        "mirna": "hsa-mir-381",
+        "basic_score": -83.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-6513",
+        "basic_score": -84.16500381868725
+    },
+    {
+        "mirna": "hsa-mir-6726",
+        "basic_score": -84.20303052425915
+    },
+    {
+        "mirna": "hsa-mir-526a-1",
+        "basic_score": -84.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-539",
+        "basic_score": -84.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-660",
+        "basic_score": -84.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-4483",
+        "basic_score": -84.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-765",
+        "basic_score": -84.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-5581",
+        "basic_score": -84.41751682777506
+    },
+    {
+        "mirna": "hsa-mir-4664",
+        "basic_score": -84.4735888436437
+    },
+    {
+        "mirna": "hsa-mir-5739",
+        "basic_score": -84.6211535900629
+    },
+    {
+        "mirna": "hsa-mir-6508",
+        "basic_score": -84.62115359006295
+    },
+    {
+        "mirna": "hsa-mir-759",
+        "basic_score": -84.67722560593157
+    },
+    {
+        "mirna": "hsa-mir-3913-1",
+        "basic_score": -84.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-378h",
+        "basic_score": -84.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-1244-1",
+        "basic_score": -84.7647311514748
+    },
+    {
+        "mirna": "hsa-mir-885",
+        "basic_score": -84.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-302a",
+        "basic_score": -85.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-330",
+        "basic_score": -85.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-3663",
+        "basic_score": -85.0346868776879
+    },
+    {
+        "mirna": "hsa-mir-514a-1",
+        "basic_score": -85.0660183745565
+    },
+    {
+        "mirna": "hsa-mir-593",
+        "basic_score": -85.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-762",
+        "basic_score": -85.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-6715b",
+        "basic_score": -85.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-548h-1",
+        "basic_score": -85.55129974879509
+    },
+    {
+        "mirna": "hsa-mir-10395",
+        "basic_score": -85.55452897747769
+    },
+    {
+        "mirna": "hsa-mir-1302-2",
+        "basic_score": -85.6277190017722
+    },
+    {
+        "mirna": "hsa-mir-6841",
+        "basic_score": -85.72097837870317
+    },
+    {
+        "mirna": "hsa-mir-527",
+        "basic_score": -85.76662539682053
+    },
+    {
+        "mirna": "hsa-mir-143",
+        "basic_score": -85.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1322",
+        "basic_score": -85.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-550b-1",
+        "basic_score": -85.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1226",
+        "basic_score": -85.9276686345376
+    },
+    {
+        "mirna": "hsa-mir-5685",
+        "basic_score": -86.13044309313607
+    },
+    {
+        "mirna": "hsa-mir-92b",
+        "basic_score": -86.18474846262431
+    },
+    {
+        "mirna": "hsa-mir-516a-2",
+        "basic_score": -86.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-548a-1",
+        "basic_score": -86.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-613",
+        "basic_score": -86.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-1972-1",
+        "basic_score": -86.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-4533",
+        "basic_score": -86.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-8055",
+        "basic_score": -86.24082047849295
+    },
+    {
+        "mirna": "hsa-mir-6077",
+        "basic_score": -86.33407985542395
+    },
+    {
+        "mirna": "hsa-mir-875",
+        "basic_score": -86.41751682777503
+    },
+    {
+        "mirna": "hsa-mir-424",
+        "basic_score": -86.41751682777505
+    },
+    {
+        "mirna": "hsa-mir-5582",
+        "basic_score": -86.43902811809251
+    },
+    {
+        "mirna": "hsa-mir-7159",
+        "basic_score": -86.57853710631225
+    },
+    {
+        "mirna": "hsa-mir-888",
+        "basic_score": -86.57939941000161
+    },
+    {
+        "mirna": "hsa-mir-548aj-1",
+        "basic_score": -86.57939941000161
+    },
+    {
+        "mirna": "hsa-mir-495",
+        "basic_score": -86.62115359006293
+    },
+    {
+        "mirna": "hsa-mir-3914-2",
+        "basic_score": -86.72287262404889
+    },
+    {
+        "mirna": "hsa-mir-516a-1",
+        "basic_score": -86.7261018527315
+    },
+    {
+        "mirna": "hsa-mir-4437",
+        "basic_score": -86.82042295301586
+    },
+    {
+        "mirna": "hsa-mir-1302-4",
+        "basic_score": -86.88535548488828
+    },
+    {
+        "mirna": "hsa-mir-3714",
+        "basic_score": -86.88535548488828
+    },
+    {
+        "mirna": "hsa-mir-6766",
+        "basic_score": -86.93735892756479
+    },
+    {
+        "mirna": "hsa-mir-6818",
+        "basic_score": -87.01317558737047
+    },
+    {
+        "mirna": "hsa-mir-298",
+        "basic_score": -87.06924760323913
+    },
+    {
+        "mirna": "hsa-mir-4776-1",
+        "basic_score": -87.19706770572132
+    },
+    {
+        "mirna": "hsa-mir-4275",
+        "basic_score": -87.21909582987762
+    },
+    {
+        "mirna": "hsa-mir-378b",
+        "basic_score": -87.24271472383865
+    },
+    {
+        "mirna": "hsa-mir-7847",
+        "basic_score": -87.25001252571336
+    },
+    {
+        "mirna": "hsa-mir-519a-2",
+        "basic_score": -87.28457325126452
+    },
+    {
+        "mirna": "hsa-mir-1913",
+        "basic_score": -87.3563213378781
+    },
+    {
+        "mirna": "hsa-mir-4431",
+        "basic_score": -87.3563213378781
+    },
+    {
+        "mirna": "hsa-mir-23a",
+        "basic_score": -87.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-422a",
+        "basic_score": -87.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-506",
+        "basic_score": -87.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-941-2",
+        "basic_score": -87.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-3655",
+        "basic_score": -87.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-6836",
+        "basic_score": -87.45804037186409
+    },
+    {
+        "mirna": "hsa-mir-30d",
+        "basic_score": -87.50565273067774
+    },
+    {
+        "mirna": "hsa-mir-561",
+        "basic_score": -87.50565273067774
+    },
+    {
+        "mirna": "hsa-mir-767",
+        "basic_score": -87.50565273067774
+    },
+    {
+        "mirna": "hsa-mir-9500",
+        "basic_score": -87.58502112983673
+    },
+    {
+        "mirna": "hsa-mir-5003",
+        "basic_score": -87.80693995375948
+    },
+    {
+        "mirna": "hsa-mir-4719",
+        "basic_score": -87.81423775563424
+    },
+    {
+        "mirna": "hsa-mir-1-2",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-367",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-324",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-563",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-2115",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-4254",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-4689",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-6736",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-6769b",
+        "basic_score": -87.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-4290",
+        "basic_score": -88.05692836014207
+    },
+    {
+        "mirna": "hsa-mir-6079",
+        "basic_score": -88.10676649551814
+    },
+    {
+        "mirna": "hsa-mir-124-3",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-146b",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-562",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-551b",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-652",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-653",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-4318",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-6794",
+        "basic_score": -88.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-518a-2",
+        "basic_score": -88.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-592",
+        "basic_score": -88.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-3935",
+        "basic_score": -88.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-4760",
+        "basic_score": -88.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-5001",
+        "basic_score": -88.33407985542394
+    },
+    {
+        "mirna": "hsa-mir-4703",
+        "basic_score": -88.3418191239842
+    },
+    {
+        "mirna": "hsa-mir-625",
+        "basic_score": -88.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-509-3",
+        "basic_score": -88.5793994100016
+    },
+    {
+        "mirna": "hsa-mir-5699",
+        "basic_score": -88.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-6850",
+        "basic_score": -88.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-486-1",
+        "basic_score": -88.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-1276",
+        "basic_score": -88.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-371b",
+        "basic_score": -88.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-200b",
+        "basic_score": -88.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-6869",
+        "basic_score": -88.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-802",
+        "basic_score": -88.96975434581546
+    },
+    {
+        "mirna": "hsa-mir-620",
+        "basic_score": -88.99749951662555
+    },
+    {
+        "mirna": "hsa-mir-194-1",
+        "basic_score": -89.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-518c",
+        "basic_score": -89.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-521-2",
+        "basic_score": -89.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-508",
+        "basic_score": -89.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-887",
+        "basic_score": -89.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-3131",
+        "basic_score": -89.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-329-1",
+        "basic_score": -89.0346868776879
+    },
+    {
+        "mirna": "hsa-mir-643",
+        "basic_score": -89.14099568985264
+    },
+    {
+        "mirna": "hsa-mir-3175",
+        "basic_score": -89.15675314878231
+    },
+    {
+        "mirna": "hsa-mir-615",
+        "basic_score": -89.19706770572131
+    },
+    {
+        "mirna": "hsa-mir-7161",
+        "basic_score": -89.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-3912",
+        "basic_score": -89.25001252571334
+    },
+    {
+        "mirna": "hsa-mir-6719",
+        "basic_score": -89.25001252571334
+    },
+    {
+        "mirna": "hsa-mir-520g",
+        "basic_score": -89.2845732512645
+    },
+    {
+        "mirna": "hsa-mir-181a-2",
+        "basic_score": -89.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-487b",
+        "basic_score": -89.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-3195",
+        "basic_score": -89.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-499b",
+        "basic_score": -89.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-6839",
+        "basic_score": -89.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-4521",
+        "basic_score": -89.40782653474781
+    },
+    {
+        "mirna": "hsa-mir-1182",
+        "basic_score": -89.42983607087207
+    },
+    {
+        "mirna": "hsa-mir-614",
+        "basic_score": -89.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-1283-2",
+        "basic_score": -89.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-1302-11",
+        "basic_score": -89.52225251524179
+    },
+    {
+        "mirna": "hsa-mir-1908",
+        "basic_score": -89.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-3165",
+        "basic_score": -89.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-6739",
+        "basic_score": -89.5545289774777
+    },
+    {
+        "mirna": "hsa-mir-514a-2",
+        "basic_score": -89.59315827622098
+    },
+    {
+        "mirna": "hsa-mir-186",
+        "basic_score": -89.63347283315991
+    },
+    {
+        "mirna": "hsa-mir-135b",
+        "basic_score": -89.6420345230209
+    },
+    {
+        "mirna": "hsa-mir-598",
+        "basic_score": -89.83274219611283
+    },
+    {
+        "mirna": "hsa-mir-4635",
+        "basic_score": -89.84160271211667
+    },
+    {
+        "mirna": "hsa-mir-1234",
+        "basic_score": -89.8703097715028
+    },
+    {
+        "mirna": "hsa-mir-3139",
+        "basic_score": -89.87616343766783
+    },
+    {
+        "mirna": "hsa-mir-6885",
+        "basic_score": -89.87838921423025
+    },
+    {
+        "mirna": "hsa-mir-17",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-21",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-103a-2",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-198",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-208a",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-148a",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-221",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-let-7i",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-372",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-380",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-337",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-338",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-335",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-431",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-517c",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-501",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-376a-2",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-553",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-587",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-550a-1",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-612",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-658",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-936",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548p",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1292",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3667",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4650-2",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4789",
+        "basic_score": -89.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4278",
+        "basic_score": -89.96942281459886
+    },
+    {
+        "mirna": "hsa-mir-5681a",
+        "basic_score": -90.02236763459089
+    },
+    {
+        "mirna": "hsa-mir-452",
+        "basic_score": -90.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-4999",
+        "basic_score": -90.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-6073",
+        "basic_score": -90.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-8082",
+        "basic_score": -90.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-1184-1",
+        "basic_score": -90.07114184858484
+    },
+    {
+        "mirna": "hsa-mir-3140",
+        "basic_score": -90.11300037601072
+    },
+    {
+        "mirna": "hsa-mir-6509",
+        "basic_score": -90.11300037601072
+    },
+    {
+        "mirna": "hsa-mir-4744",
+        "basic_score": -90.12867644675563
+    },
+    {
+        "mirna": "hsa-mir-4520-2",
+        "basic_score": -90.1847484626243
+    },
+    {
+        "mirna": "hsa-mir-6504",
+        "basic_score": -90.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-22",
+        "basic_score": -90.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-657",
+        "basic_score": -90.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-3613",
+        "basic_score": -90.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-4774",
+        "basic_score": -90.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-4274",
+        "basic_score": -90.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-4489",
+        "basic_score": -90.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-3171",
+        "basic_score": -90.24082047849294
+    },
+    {
+        "mirna": "hsa-mir-4446",
+        "basic_score": -90.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1183",
+        "basic_score": -90.45157930751941
+    },
+    {
+        "mirna": "hsa-mir-126",
+        "basic_score": -90.49333348758071
+    },
+    {
+        "mirna": "hsa-mir-4688",
+        "basic_score": -90.49333348758074
+    },
+    {
+        "mirna": "hsa-mir-12118",
+        "basic_score": -90.56684822057466
+    },
+    {
+        "mirna": "hsa-mir-5693",
+        "basic_score": -90.5793994100016
+    },
+    {
+        "mirna": "hsa-mir-941-1",
+        "basic_score": -90.57939941000163
+    },
+    {
+        "mirna": "hsa-mir-4780",
+        "basic_score": -90.63284247580046
+    },
+    {
+        "mirna": "hsa-mir-525",
+        "basic_score": -90.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-567",
+        "basic_score": -90.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-4776-2",
+        "basic_score": -90.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-4748",
+        "basic_score": -90.72287262404889
+    },
+    {
+        "mirna": "hsa-mir-7-3",
+        "basic_score": -90.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-138-2",
+        "basic_score": -90.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-149",
+        "basic_score": -90.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-361",
+        "basic_score": -90.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-7852",
+        "basic_score": -90.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-196a-1",
+        "basic_score": -90.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-4772",
+        "basic_score": -90.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-3197",
+        "basic_score": -90.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-484",
+        "basic_score": -90.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-512-1",
+        "basic_score": -90.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-455",
+        "basic_score": -90.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-4474",
+        "basic_score": -90.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-610",
+        "basic_score": -90.98174205769587
+    },
+    {
+        "mirna": "hsa-mir-1911",
+        "basic_score": -91.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-3605",
+        "basic_score": -91.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-550b-2",
+        "basic_score": -91.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-93",
+        "basic_score": -91.01317558737047
+    },
+    {
+        "mirna": "hsa-mir-548m",
+        "basic_score": -91.06468078424018
+    },
+    {
+        "mirna": "hsa-mir-933",
+        "basic_score": -91.0813542711343
+    },
+    {
+        "mirna": "hsa-mir-5094",
+        "basic_score": -91.16250698017011
+    },
+    {
+        "mirna": "hsa-mir-6796",
+        "basic_score": -91.19706770572131
+    },
+    {
+        "mirna": "hsa-mir-12114",
+        "basic_score": -91.24594395252124
+    },
+    {
+        "mirna": "hsa-mir-4330",
+        "basic_score": -91.28050467807243
+    },
+    {
+        "mirna": "hsa-mir-648",
+        "basic_score": -91.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-183",
+        "basic_score": -91.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-483",
+        "basic_score": -91.37783262819555
+    },
+    {
+        "mirna": "hsa-mir-184",
+        "basic_score": -91.37783262819556
+    },
+    {
+        "mirna": "hsa-mir-3670-3",
+        "basic_score": -91.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-5194",
+        "basic_score": -91.45804037186406
+    },
+    {
+        "mirna": "hsa-mir-548i-3",
+        "basic_score": -91.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-4641",
+        "basic_score": -91.50565273067774
+    },
+    {
+        "mirna": "hsa-mir-4697",
+        "basic_score": -91.50565273067774
+    },
+    {
+        "mirna": "hsa-mir-3689f",
+        "basic_score": -91.51277479741634
+    },
+    {
+        "mirna": "hsa-mir-520b",
+        "basic_score": -91.52102997527979
+    },
+    {
+        "mirna": "hsa-mir-376a-1",
+        "basic_score": -91.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-4429",
+        "basic_score": -91.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-2392",
+        "basic_score": -91.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-135a-2",
+        "basic_score": -91.62052323270345
+    },
+    {
+        "mirna": "hsa-mir-3689c",
+        "basic_score": -91.6420345230209
+    },
+    {
+        "mirna": "hsa-mir-655",
+        "basic_score": -91.64516171889748
+    },
+    {
+        "mirna": "hsa-mir-6892",
+        "basic_score": -91.64516171889748
+    },
+    {
+        "mirna": "hsa-mir-6780b",
+        "basic_score": -91.6451617188975
+    },
+    {
+        "mirna": "hsa-mir-2467",
+        "basic_score": -91.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6078",
+        "basic_score": -91.79818147056167
+    },
+    {
+        "mirna": "hsa-mir-490",
+        "basic_score": -91.84160271211667
+    },
+    {
+        "mirna": "hsa-mir-5590",
+        "basic_score": -91.8842473929826
+    },
+    {
+        "mirna": "hsa-mir-15a",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-19b-2",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-99a",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-199a-2",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-210",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-224",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-23b",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-153-2",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-219a-2",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-323a",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-325",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-448",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-492",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-520a",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-517a",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-519d",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-552",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-558",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548a-2",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-616",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-654",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-320b-1",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-770",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-922",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-935",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1279",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1284",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1255b-2",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-513c",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3136",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3201",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4303",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-23c",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-378d-1",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548aj-2",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4539",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4766",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-7975",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-11399",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3085",
+        "basic_score": -91.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-107",
+        "basic_score": -91.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-432",
+        "basic_score": -91.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-1178",
+        "basic_score": -91.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-3148",
+        "basic_score": -91.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-5092",
+        "basic_score": -91.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-548ax",
+        "basic_score": -91.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-6805",
+        "basic_score": -91.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-4666b",
+        "basic_score": -91.8976747279853
+    },
+    {
+        "mirna": "hsa-mir-6823",
+        "basic_score": -91.89767472798532
+    },
+    {
+        "mirna": "hsa-mir-10523",
+        "basic_score": -91.90936361372285
+    },
+    {
+        "mirna": "hsa-mir-4690",
+        "basic_score": -91.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-3914-1",
+        "basic_score": -91.99939376197126
+    },
+    {
+        "mirna": "hsa-mir-16-1",
+        "basic_score": -92.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-519c",
+        "basic_score": -92.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-575",
+        "basic_score": -92.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-4534",
+        "basic_score": -92.11300037601072
+    },
+    {
+        "mirna": "hsa-mir-4796",
+        "basic_score": -92.11300037601073
+    },
+    {
+        "mirna": "hsa-mir-1197",
+        "basic_score": -92.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-12135",
+        "basic_score": -92.21388006548715
+    },
+    {
+        "mirna": "hsa-mir-585",
+        "basic_score": -92.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-611",
+        "basic_score": -92.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-647",
+        "basic_score": -92.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-3929",
+        "basic_score": -92.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-4454",
+        "basic_score": -92.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-4662b",
+        "basic_score": -92.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-5197",
+        "basic_score": -92.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-7107",
+        "basic_score": -92.33407985542394
+    },
+    {
+        "mirna": "hsa-mir-605",
+        "basic_score": -92.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-628",
+        "basic_score": -92.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4752",
+        "basic_score": -92.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-541",
+        "basic_score": -92.47727720250819
+    },
+    {
+        "mirna": "hsa-mir-1910",
+        "basic_score": -92.4892649143886
+    },
+    {
+        "mirna": "hsa-mir-6068",
+        "basic_score": -92.49333348758071
+    },
+    {
+        "mirna": "hsa-mir-10399",
+        "basic_score": -92.54940550344938
+    },
+    {
+        "mirna": "hsa-mir-7702",
+        "basic_score": -92.5793994100016
+    },
+    {
+        "mirna": "hsa-mir-3910-1",
+        "basic_score": -92.58887712782703
+    },
+    {
+        "mirna": "hsa-mir-4444-2",
+        "basic_score": -92.59505252156669
+    },
+    {
+        "mirna": "hsa-mir-1252",
+        "basic_score": -92.59828175024924
+    },
+    {
+        "mirna": "hsa-mir-4485",
+        "basic_score": -92.60776178263326
+    },
+    {
+        "mirna": "hsa-mir-5196",
+        "basic_score": -92.70681633897642
+    },
+    {
+        "mirna": "hsa-mir-1-1",
+        "basic_score": -92.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-488",
+        "basic_score": -92.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-302e",
+        "basic_score": -92.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4424",
+        "basic_score": -92.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-7844",
+        "basic_score": -92.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-297",
+        "basic_score": -92.78217386860011
+    },
+    {
+        "mirna": "hsa-mir-3681",
+        "basic_score": -92.8184162642952
+    },
+    {
+        "mirna": "hsa-mir-6080",
+        "basic_score": -92.81936122966252
+    },
+    {
+        "mirna": "hsa-mir-373",
+        "basic_score": -92.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-382",
+        "basic_score": -92.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-548d-1",
+        "basic_score": -92.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-4775",
+        "basic_score": -92.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-6732",
+        "basic_score": -92.88535548488827
+    },
+    {
+        "mirna": "hsa-mir-132",
+        "basic_score": -92.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-6859-4",
+        "basic_score": -92.94142750075693
+    },
+    {
+        "mirna": "hsa-mir-34b",
+        "basic_score": -92.97142140730917
+    },
+    {
+        "mirna": "hsa-mir-301a",
+        "basic_score": -93.00241041545203
+    },
+    {
+        "mirna": "hsa-mir-125b-2",
+        "basic_score": -93.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-519b",
+        "basic_score": -93.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-551a",
+        "basic_score": -93.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-3611",
+        "basic_score": -93.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-4634",
+        "basic_score": -93.06924760323912
+    },
+    {
+        "mirna": "hsa-mir-4768",
+        "basic_score": -93.06924760323912
+    },
+    {
+        "mirna": "hsa-mir-5580",
+        "basic_score": -93.24271472383862
+    },
+    {
+        "mirna": "hsa-mir-4773-1",
+        "basic_score": -93.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-631",
+        "basic_score": -93.28050467807239
+    },
+    {
+        "mirna": "hsa-mir-550a-3",
+        "basic_score": -93.30201596838985
+    },
+    {
+        "mirna": "hsa-mir-3911",
+        "basic_score": -93.34639909852095
+    },
+    {
+        "mirna": "hsa-mir-548h-3",
+        "basic_score": -93.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-3972",
+        "basic_score": -93.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-10a",
+        "basic_score": -93.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-2909",
+        "basic_score": -93.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-3196",
+        "basic_score": -93.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-548ad",
+        "basic_score": -93.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-4514",
+        "basic_score": -93.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-5692c-2",
+        "basic_score": -93.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-3689e",
+        "basic_score": -93.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-2113",
+        "basic_score": -93.44958071480912
+    },
+    {
+        "mirna": "hsa-mir-9985",
+        "basic_score": -93.46126960054669
+    },
+    {
+        "mirna": "hsa-mir-4733",
+        "basic_score": -93.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-203a",
+        "basic_score": -93.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-127",
+        "basic_score": -93.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-507",
+        "basic_score": -93.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-7158",
+        "basic_score": -93.53564663723
+    },
+    {
+        "mirna": "hsa-mir-4755",
+        "basic_score": -93.55129974879509
+    },
+    {
+        "mirna": "hsa-mir-30c-1",
+        "basic_score": -93.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-376b",
+        "basic_score": -93.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-650",
+        "basic_score": -93.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-548f-2",
+        "basic_score": -93.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-3169",
+        "basic_score": -93.5545289774777
+    },
+    {
+        "mirna": "hsa-mir-8069-1",
+        "basic_score": -93.5545289774777
+    },
+    {
+        "mirna": "hsa-mir-9900",
+        "basic_score": -93.58908970302886
+    },
+    {
+        "mirna": "hsa-mir-548x",
+        "basic_score": -93.60119637092401
+    },
+    {
+        "mirna": "hsa-mir-138-1",
+        "basic_score": -93.64516171889747
+    },
+    {
+        "mirna": "hsa-mir-4283-2",
+        "basic_score": -93.70492209363064
+    },
+    {
+        "mirna": "hsa-mir-12113",
+        "basic_score": -93.76662539682047
+    },
+    {
+        "mirna": "hsa-mir-517b",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-548f-5",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-1321",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3120",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3127",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-544b",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3144",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3154",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4442",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4444-1",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4522",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-7160",
+        "basic_score": -93.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4479",
+        "basic_score": -93.88161844291275
+    },
+    {
+        "mirna": "hsa-let-7a-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-let-7c",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-let-7d",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-18a",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-19b-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-26a-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-101-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-103a-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-105-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-16-2",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-197",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-129-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-34a",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-187",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-212",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-27b",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-133a-2",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-125a",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-185",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-188",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-128-2",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-106b",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-374a",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-379",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-340",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-148b",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-196b",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-329-2",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-518b",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-520c",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-518a-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-520h",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-522",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-519a-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-504",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-513a-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-556",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-559",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-568",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-572",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-583",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-588",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-597",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548a-3",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-600",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-606",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-617",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-627",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-629",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-638",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1296",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-454",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-876",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-216b",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-924",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548f-3",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1262",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1269a",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1278",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-103b-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1915",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-2110",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3145",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3149",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3159",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3202-1",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4322",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3662",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3924",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4425",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4523",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3977",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4633",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4644",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4663",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4749",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5188",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5700",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6081",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6500",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6502",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6512",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6720",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6764",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6776",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6843",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6870",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6880",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-7152",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-7977",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-8485",
+        "basic_score": -93.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-320c-1",
+        "basic_score": -93.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-3064",
+        "basic_score": -93.92766863453755
+    },
+    {
+        "mirna": "hsa-mir-548ag-1",
+        "basic_score": -93.98518027352853
+    },
+    {
+        "mirna": "hsa-mir-25",
+        "basic_score": -94.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-451a",
+        "basic_score": -94.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-7973-1",
+        "basic_score": -94.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-6741",
+        "basic_score": -94.05285978694994
+    },
+    {
+        "mirna": "hsa-mir-6730",
+        "basic_score": -94.11300037601072
+    },
+    {
+        "mirna": "hsa-mir-6724-2",
+        "basic_score": -94.15780804961854
+    },
+    {
+        "mirna": "hsa-mir-139",
+        "basic_score": -94.19020346786922
+    },
+    {
+        "mirna": "hsa-mir-3156-2",
+        "basic_score": -94.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-10226",
+        "basic_score": -94.20625975294176
+    },
+    {
+        "mirna": "hsa-mir-124-2",
+        "basic_score": -94.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-524",
+        "basic_score": -94.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-571",
+        "basic_score": -94.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-4421",
+        "basic_score": -94.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-3177",
+        "basic_score": -94.33407985542394
+    },
+    {
+        "mirna": "hsa-mir-4677",
+        "basic_score": -94.34576874116144
+    },
+    {
+        "mirna": "hsa-mir-1184-2",
+        "basic_score": -94.349457100026
+    },
+    {
+        "mirna": "hsa-mir-4477a",
+        "basic_score": -94.39015187129255
+    },
+    {
+        "mirna": "hsa-mir-182",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-412",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-514a-3",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-663a",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1293",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3119-1",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3202-2",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4320",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4267",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4515",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4645",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4723",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6084",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6749",
+        "basic_score": -94.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3938",
+        "basic_score": -94.46105702534484
+    },
+    {
+        "mirna": "hsa-mir-6791",
+        "basic_score": -94.47035961496107
+    },
+    {
+        "mirna": "hsa-mir-3150a",
+        "basic_score": -94.47727720250819
+    },
+    {
+        "mirna": "hsa-mir-670",
+        "basic_score": -94.51712904121351
+    },
+    {
+        "mirna": "hsa-mir-6737",
+        "basic_score": -94.52069844406319
+    },
+    {
+        "mirna": "hsa-mir-7515",
+        "basic_score": -94.54545588627207
+    },
+    {
+        "mirna": "hsa-mir-6728",
+        "basic_score": -94.57677045993185
+    },
+    {
+        "mirna": "hsa-mir-4696",
+        "basic_score": -94.5793994100016
+    },
+    {
+        "mirna": "hsa-mir-6784",
+        "basic_score": -94.59505252156669
+    },
+    {
+        "mirna": "hsa-mir-300",
+        "basic_score": -94.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-639",
+        "basic_score": -94.61038841814448
+    },
+    {
+        "mirna": "hsa-mir-3180-5",
+        "basic_score": -94.67002983686282
+    },
+    {
+        "mirna": "hsa-mir-7843",
+        "basic_score": -94.68111844398761
+    },
+    {
+        "mirna": "hsa-mir-5591",
+        "basic_score": -94.72287262404888
+    },
+    {
+        "mirna": "hsa-mir-518d",
+        "basic_score": -94.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-596",
+        "basic_score": -94.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-3622b",
+        "basic_score": -94.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-5087",
+        "basic_score": -94.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-5585",
+        "basic_score": -94.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-521-1",
+        "basic_score": -94.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-634",
+        "basic_score": -94.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-1294",
+        "basic_score": -94.84193424333327
+    },
+    {
+        "mirna": "hsa-mir-133a-1",
+        "basic_score": -94.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-503",
+        "basic_score": -94.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-6890",
+        "basic_score": -94.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-12136",
+        "basic_score": -94.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-6075",
+        "basic_score": -94.8579905284058
+    },
+    {
+        "mirna": "hsa-mir-370",
+        "basic_score": -94.88535548488827
+    },
+    {
+        "mirna": "hsa-mir-345",
+        "basic_score": -94.88535548488827
+    },
+    {
+        "mirna": "hsa-mir-4730",
+        "basic_score": -94.88535548488827
+    },
+    {
+        "mirna": "hsa-mir-574",
+        "basic_score": -94.90999397108229
+    },
+    {
+        "mirna": "hsa-mir-4277",
+        "basic_score": -94.93735892756476
+    },
+    {
+        "mirna": "hsa-mir-137",
+        "basic_score": -94.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-141",
+        "basic_score": -94.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-450a-2",
+        "basic_score": -94.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-6082",
+        "basic_score": -94.99437232074897
+    },
+    {
+        "mirna": "hsa-mir-623",
+        "basic_score": -94.99749951662554
+    },
+    {
+        "mirna": "hsa-mir-320d-2",
+        "basic_score": -95.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-1256",
+        "basic_score": -95.06924760323912
+    },
+    {
+        "mirna": "hsa-mir-6866",
+        "basic_score": -95.06924760323912
+    },
+    {
+        "mirna": "hsa-mir-12128",
+        "basic_score": -95.06924760323912
+    },
+    {
+        "mirna": "hsa-mir-1285-2",
+        "basic_score": -95.09924150979134
+    },
+    {
+        "mirna": "hsa-mir-8065",
+        "basic_score": -95.16479124348544
+    },
+    {
+        "mirna": "hsa-mir-1295b",
+        "basic_score": -95.16689806403292
+    },
+    {
+        "mirna": "hsa-mir-8084",
+        "basic_score": -95.23395624064082
+    },
+    {
+        "mirna": "hsa-mir-4679-1",
+        "basic_score": -95.24271472383863
+    },
+    {
+        "mirna": "hsa-mir-9-1",
+        "basic_score": -95.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-4260",
+        "basic_score": -95.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4655",
+        "basic_score": -95.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4706",
+        "basic_score": -95.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-1181",
+        "basic_score": -95.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-1268a",
+        "basic_score": -95.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-548aa-2",
+        "basic_score": -95.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-1273h",
+        "basic_score": -95.37376405500342
+    },
+    {
+        "mirna": "hsa-mir-32",
+        "basic_score": -95.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-98",
+        "basic_score": -95.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-218-2",
+        "basic_score": -95.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-630",
+        "basic_score": -95.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-3664",
+        "basic_score": -95.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-130a",
+        "basic_score": -95.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-4734",
+        "basic_score": -95.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-595",
+        "basic_score": -95.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-604",
+        "basic_score": -95.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-769",
+        "basic_score": -95.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-3160-1",
+        "basic_score": -95.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-4281",
+        "basic_score": -95.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-6516",
+        "basic_score": -95.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-1306",
+        "basic_score": -95.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-499a",
+        "basic_score": -95.51734161641528
+    },
+    {
+        "mirna": "hsa-mir-342",
+        "basic_score": -95.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-4300",
+        "basic_score": -95.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-6848",
+        "basic_score": -95.54189512637284
+    },
+    {
+        "mirna": "hsa-mir-4512",
+        "basic_score": -95.54877514608987
+    },
+    {
+        "mirna": "hsa-mir-3174",
+        "basic_score": -95.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-4486",
+        "basic_score": -95.5545289774777
+    },
+    {
+        "mirna": "hsa-mir-3118-2",
+        "basic_score": -95.57710199114845
+    },
+    {
+        "mirna": "hsa-mir-4758",
+        "basic_score": -95.57710199114845
+    },
+    {
+        "mirna": "hsa-mir-578",
+        "basic_score": -95.58908970302888
+    },
+    {
+        "mirna": "hsa-mir-153-1",
+        "basic_score": -95.6420345230209
+    },
+    {
+        "mirna": "hsa-mir-590",
+        "basic_score": -95.64516171889748
+    },
+    {
+        "mirna": "hsa-mir-6832",
+        "basic_score": -95.76255682362836
+    },
+    {
+        "mirna": "hsa-mir-27a",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-95",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-106a",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-152",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-378a",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-518e",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-33b",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-1291",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4308",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3682",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3926-2",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4659a",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6133",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6746",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6762",
+        "basic_score": -95.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3155b",
+        "basic_score": -95.7698546255031
+    },
+    {
+        "mirna": "hsa-mir-1305",
+        "basic_score": -95.84160271211667
+    },
+    {
+        "mirna": "hsa-mir-4731",
+        "basic_score": -95.87616343766784
+    },
+    {
+        "mirna": "hsa-mir-5703",
+        "basic_score": -95.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-19a",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-29b-2",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-105-2",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-192",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-181c",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-204",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-135a-1",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-144",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-129-2",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-146a",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-190a",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-155",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-30e",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-363",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-365b",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-151a",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-18b",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-511",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-520e",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-520f",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-502",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-505",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-532",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-545",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-601",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-608",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-622",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-637",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-646",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548d-2",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-890",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-744",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-665",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-921",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1289-2",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1249",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1469",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1538",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3118-3",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3124",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3199-1",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-378c",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4321",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4265",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4262",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-2355",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4263",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4284",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4289",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3679",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3923",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3925",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-676",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3937",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3941",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4449",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4450",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4455",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4463",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4471",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4506",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4681",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4767",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5692a-2",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6131",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6134",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6501",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6752",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-8063",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-8064",
+        "basic_score": -95.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1246",
+        "basic_score": -95.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-4673",
+        "basic_score": -95.89767472798529
+    },
+    {
+        "mirna": "hsa-mir-6886",
+        "basic_score": -95.8976747279853
+    },
+    {
+        "mirna": "hsa-mir-4747",
+        "basic_score": -95.9909341049163
+    },
+    {
+        "mirna": "hsa-mir-320b-2",
+        "basic_score": -95.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-4302",
+        "basic_score": -95.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-1470",
+        "basic_score": -96.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-1973",
+        "basic_score": -96.05548873701974
+    },
+    {
+        "mirna": "hsa-mir-3180-2",
+        "basic_score": -96.05692836014205
+    },
+    {
+        "mirna": "hsa-mir-4684",
+        "basic_score": -96.05692836014205
+    },
+    {
+        "mirna": "hsa-mir-548o",
+        "basic_score": -96.07437107726739
+    },
+    {
+        "mirna": "hsa-mir-4464",
+        "basic_score": -96.07437107726739
+    },
+    {
+        "mirna": "hsa-mir-1193",
+        "basic_score": -96.11300037601072
+    },
+    {
+        "mirna": "hsa-mir-378g",
+        "basic_score": -96.11300037601072
+    },
+    {
+        "mirna": "hsa-mir-5787",
+        "basic_score": -96.11300037601072
+    },
+    {
+        "mirna": "hsa-mir-3122",
+        "basic_score": -96.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-3162",
+        "basic_score": -96.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-4756",
+        "basic_score": -96.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-4432",
+        "basic_score": -96.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-4790",
+        "basic_score": -96.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-1253",
+        "basic_score": -96.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4481",
+        "basic_score": -96.33636411873923
+    },
+    {
+        "mirna": "hsa-let-7f-2",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-20a",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-96",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-331",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-429",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-493",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-510",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-570",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-624",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-151b",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-764",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-190b",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3179-2",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3674",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4423",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4709",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4759",
+        "basic_score": -96.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1825",
+        "basic_score": -96.41751682777503
+    },
+    {
+        "mirna": "hsa-mir-8079",
+        "basic_score": -96.41751682777503
+    },
+    {
+        "mirna": "hsa-mir-1324",
+        "basic_score": -96.47727720250819
+    },
+    {
+        "mirna": "hsa-mir-8059",
+        "basic_score": -96.53334921837686
+    },
+    {
+        "mirna": "hsa-mir-3659",
+        "basic_score": -96.59828175024924
+    },
+    {
+        "mirna": "hsa-mir-3166",
+        "basic_score": -96.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-3170",
+        "basic_score": -96.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-9902-1",
+        "basic_score": -96.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-4727",
+        "basic_score": -96.63829748104538
+    },
+    {
+        "mirna": "hsa-mir-378i",
+        "basic_score": -96.65435376611792
+    },
+    {
+        "mirna": "hsa-mir-6770-3",
+        "basic_score": -96.67002983686288
+    },
+    {
+        "mirna": "hsa-mir-28",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-328",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-557",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-301b",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-1281",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4427",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4494",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4501",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6511a-1",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-7855",
+        "basic_score": -96.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-649",
+        "basic_score": -96.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-3126",
+        "basic_score": -96.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-4651",
+        "basic_score": -96.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-3167",
+        "basic_score": -96.81360739827468
+    },
+    {
+        "mirna": "hsa-mir-6772",
+        "basic_score": -96.83473847426458
+    },
+    {
+        "mirna": "hsa-mir-1255a",
+        "basic_score": -96.84193424333327
+    },
+    {
+        "mirna": "hsa-mir-711",
+        "basic_score": -96.8579905284058
+    },
+    {
+        "mirna": "hsa-mir-4456",
+        "basic_score": -96.93735892756477
+    },
+    {
+        "mirna": "hsa-mir-5000",
+        "basic_score": -96.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-6505",
+        "basic_score": -96.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-6854",
+        "basic_score": -96.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-10401",
+        "basic_score": -96.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-3186",
+        "basic_score": -96.94142750075693
+    },
+    {
+        "mirna": "hsa-mir-411",
+        "basic_score": -96.99343094343344
+    },
+    {
+        "mirna": "hsa-mir-3184",
+        "basic_score": -96.99711930229793
+    },
+    {
+        "mirna": "hsa-mir-4769",
+        "basic_score": -96.99749951662554
+    },
+    {
+        "mirna": "hsa-mir-4674",
+        "basic_score": -97.04637576342546
+    },
+    {
+        "mirna": "hsa-mir-12129",
+        "basic_score": -97.06924760323912
+    },
+    {
+        "mirna": "hsa-mir-8086",
+        "basic_score": -97.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-500a",
+        "basic_score": -97.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-6808",
+        "basic_score": -97.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-3913-2",
+        "basic_score": -97.24271472383862
+    },
+    {
+        "mirna": "hsa-mir-548ak",
+        "basic_score": -97.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-3648-2",
+        "basic_score": -97.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-1271",
+        "basic_score": -97.25001252571334
+    },
+    {
+        "mirna": "hsa-mir-3158-1",
+        "basic_score": -97.25001252571334
+    },
+    {
+        "mirna": "hsa-mir-498",
+        "basic_score": -97.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-889",
+        "basic_score": -97.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-944",
+        "basic_score": -97.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-1202",
+        "basic_score": -97.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-3194",
+        "basic_score": -97.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4671",
+        "basic_score": -97.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4685",
+        "basic_score": -97.30201596838991
+    },
+    {
+        "mirna": "hsa-mir-6124",
+        "basic_score": -97.34555616595966
+    },
+    {
+        "mirna": "hsa-mir-891b",
+        "basic_score": -97.3932098727976
+    },
+    {
+        "mirna": "hsa-mir-3176",
+        "basic_score": -97.405197584678
+    },
+    {
+        "mirna": "hsa-mir-4468",
+        "basic_score": -97.405197584678
+    },
+    {
+        "mirna": "hsa-mir-555",
+        "basic_score": -97.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-8062",
+        "basic_score": -97.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-548bb",
+        "basic_score": -97.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-618",
+        "basic_score": -97.46126960054661
+    },
+    {
+        "mirna": "hsa-mir-548ah",
+        "basic_score": -97.46126960054661
+    },
+    {
+        "mirna": "hsa-mir-8052",
+        "basic_score": -97.46126960054661
+    },
+    {
+        "mirna": "hsa-mir-4691",
+        "basic_score": -97.46126960054667
+    },
+    {
+        "mirna": "hsa-mir-128-1",
+        "basic_score": -97.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-130b",
+        "basic_score": -97.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-5692b",
+        "basic_score": -97.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-6754",
+        "basic_score": -97.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-6859-1",
+        "basic_score": -97.50565273067772
+    },
+    {
+        "mirna": "hsa-mir-6511a-4",
+        "basic_score": -97.5173416164153
+    },
+    {
+        "mirna": "hsa-mir-548z",
+        "basic_score": -97.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-302d",
+        "basic_score": -97.5545289774777
+    },
+    {
+        "mirna": "hsa-mir-3691",
+        "basic_score": -97.58596250715229
+    },
+    {
+        "mirna": "hsa-mir-3617",
+        "basic_score": -97.61060099334631
+    },
+    {
+        "mirna": "hsa-mir-3944",
+        "basic_score": -97.61060099334631
+    },
+    {
+        "mirna": "hsa-mir-5683",
+        "basic_score": -97.67202842957317
+    },
+    {
+        "mirna": "hsa-mir-223",
+        "basic_score": -97.7384210958285
+    },
+    {
+        "mirna": "hsa-mir-489",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-1231",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3130-1",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4420",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6747",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6751",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6775",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-8056",
+        "basic_score": -97.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-548c",
+        "basic_score": -97.7698546255031
+    },
+    {
+        "mirna": "hsa-mir-6743",
+        "basic_score": -97.78729734262842
+    },
+    {
+        "mirna": "hsa-mir-4679-2",
+        "basic_score": -97.81652201894948
+    },
+    {
+        "mirna": "hsa-mir-4726",
+        "basic_score": -97.8218580681796
+    },
+    {
+        "mirna": "hsa-mir-4763",
+        "basic_score": -97.84160271211667
+    },
+    {
+        "mirna": "hsa-mir-24-1",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-24-2",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-7-2",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-218-1",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-125b-1",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-140",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-145",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-34c",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-425",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-450a-1",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-491",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-513a-2",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-544a",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-580",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-586",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-591",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-626",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-632",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-640",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-659",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-758",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1323",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-874",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1302-7",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548g",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-103b-2",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3116-2",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548w",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-514b",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4257",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4326",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3685",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3922",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3936",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3940",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3945",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4433a",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548ae-1",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4441",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4466",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4518",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4529",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4721",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4802",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5186",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5682",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5701-1",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6798",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6816",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6863",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-7849",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-8087",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-9983",
+        "basic_score": -97.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3157",
+        "basic_score": -97.92910825765986
+    },
+    {
+        "mirna": "hsa-mir-384",
+        "basic_score": -97.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-4436a",
+        "basic_score": -97.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-512-2",
+        "basic_score": -97.99939376197125
+    },
+    {
+        "mirna": "hsa-mir-892a",
+        "basic_score": -98.07437107726739
+    },
+    {
+        "mirna": "hsa-mir-509-2",
+        "basic_score": -98.07437107726739
+    },
+    {
+        "mirna": "hsa-mir-10397",
+        "basic_score": -98.07437107726744
+    },
+    {
+        "mirna": "hsa-mir-3190",
+        "basic_score": -98.12721386445344
+    },
+    {
+        "mirna": "hsa-mir-4530",
+        "basic_score": -98.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-548h-2",
+        "basic_score": -98.19020346786922
+    },
+    {
+        "mirna": "hsa-mir-6812",
+        "basic_score": -98.19020346786922
+    },
+    {
+        "mirna": "hsa-mir-675",
+        "basic_score": -98.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-645",
+        "basic_score": -98.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-3688-2",
+        "basic_score": -98.24082047849292
+    },
+    {
+        "mirna": "hsa-mir-147a",
+        "basic_score": -98.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-154",
+        "basic_score": -98.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-200c",
+        "basic_score": -98.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-410",
+        "basic_score": -98.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-1289-1",
+        "basic_score": -98.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-1260b",
+        "basic_score": -98.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-3151",
+        "basic_score": -98.30180339318807
+    },
+    {
+        "mirna": "hsa-mir-378d-2",
+        "basic_score": -98.31802357035141
+    },
+    {
+        "mirna": "hsa-mir-4699",
+        "basic_score": -98.31802357035141
+    },
+    {
+        "mirna": "hsa-mir-6852",
+        "basic_score": -98.32425745084409
+    },
+    {
+        "mirna": "hsa-mir-1258",
+        "basic_score": -98.38295610222386
+    },
+    {
+        "mirna": "hsa-mir-30c-2",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-7-1",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-181a-1",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-195",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-376c",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-181d",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-569",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1224",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1468",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1302-1",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1288",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-718",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-2861",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3155a",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3187",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4294",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4256",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4491",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4537",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4652",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-5090",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6748",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6806",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6822",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6826",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6868",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6877",
+        "basic_score": -98.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3680-1",
+        "basic_score": -98.47527051378756
+    },
+    {
+        "mirna": "hsa-mir-5702",
+        "basic_score": -98.51077620470605
+    },
+    {
+        "mirna": "hsa-mir-1244-4",
+        "basic_score": -98.5224650904436
+    },
+    {
+        "mirna": "hsa-mir-12126",
+        "basic_score": -98.5453369302572
+    },
+    {
+        "mirna": "hsa-mir-548ag-2",
+        "basic_score": -98.56684822057471
+    },
+    {
+        "mirna": "hsa-mir-3665",
+        "basic_score": -98.59421317705713
+    },
+    {
+        "mirna": "hsa-mir-548ba",
+        "basic_score": -98.5950525215667
+    },
+    {
+        "mirna": "hsa-mir-3612",
+        "basic_score": -98.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-6873",
+        "basic_score": -98.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-3135a",
+        "basic_score": -98.63284247580046
+    },
+    {
+        "mirna": "hsa-mir-3609",
+        "basic_score": -98.63284247580046
+    },
+    {
+        "mirna": "hsa-mir-92a-1",
+        "basic_score": -98.65435376611791
+    },
+    {
+        "mirna": "hsa-mir-222",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-124-1",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-371a",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-2682",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-1302-10",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-3910-2",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-3927",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-3689d-2",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4520-1",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4660",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4728",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6800",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6831",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6511b-2",
+        "basic_score": -98.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4270",
+        "basic_score": -98.76066257828266
+    },
+    {
+        "mirna": "hsa-mir-5088",
+        "basic_score": -98.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-6887",
+        "basic_score": -98.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-526b",
+        "basic_score": -98.81360739827468
+    },
+    {
+        "mirna": "hsa-mir-548v",
+        "basic_score": -98.81360739827468
+    },
+    {
+        "mirna": "hsa-mir-6889",
+        "basic_score": -98.81360739827474
+    },
+    {
+        "mirna": "hsa-mir-515-2",
+        "basic_score": -98.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-1185-1",
+        "basic_score": -98.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-5583-1",
+        "basic_score": -98.85392195521368
+    },
+    {
+        "mirna": "hsa-mir-6090",
+        "basic_score": -98.88535548488827
+    },
+    {
+        "mirna": "hsa-mir-891a",
+        "basic_score": -98.89393768600976
+    },
+    {
+        "mirna": "hsa-mir-1303",
+        "basic_score": -98.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-548h-4",
+        "basic_score": -98.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-3180-1",
+        "basic_score": -98.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-1302-6",
+        "basic_score": -98.94142750075689
+    },
+    {
+        "mirna": "hsa-mir-4452",
+        "basic_score": -98.95353416865211
+    },
+    {
+        "mirna": "hsa-mir-134",
+        "basic_score": -98.95887021788221
+    },
+    {
+        "mirna": "hsa-mir-362",
+        "basic_score": -99.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-450b",
+        "basic_score": -99.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-4725",
+        "basic_score": -99.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-548aq",
+        "basic_score": -99.01317558737045
+    },
+    {
+        "mirna": "hsa-mir-4804",
+        "basic_score": -99.03061830449579
+    },
+    {
+        "mirna": "hsa-mir-3156-3",
+        "basic_score": -99.08669032036445
+    },
+    {
+        "mirna": "hsa-mir-4751",
+        "basic_score": -99.10871922761677
+    },
+    {
+        "mirna": "hsa-mir-4754",
+        "basic_score": -99.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-12130",
+        "basic_score": -99.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-6786",
+        "basic_score": -99.11812385003905
+    },
+    {
+        "mirna": "hsa-mir-4268",
+        "basic_score": -99.12531961910773
+    },
+    {
+        "mirna": "hsa-mir-6744",
+        "basic_score": -99.13640591167388
+    },
+    {
+        "mirna": "hsa-mir-378f",
+        "basic_score": -99.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-6893",
+        "basic_score": -99.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-4296",
+        "basic_score": -99.22086325935405
+    },
+    {
+        "mirna": "hsa-mir-5690",
+        "basic_score": -99.23395624064082
+    },
+    {
+        "mirna": "hsa-mir-5707",
+        "basic_score": -99.23395624064082
+    },
+    {
+        "mirna": "hsa-mir-6074",
+        "basic_score": -99.23395624064082
+    },
+    {
+        "mirna": "hsa-mir-1204",
+        "basic_score": -99.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-1266",
+        "basic_score": -99.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-1251",
+        "basic_score": -99.28000643226562
+    },
+    {
+        "mirna": "hsa-mir-548al",
+        "basic_score": -99.28050467807239
+    },
+    {
+        "mirna": "hsa-mir-7854",
+        "basic_score": -99.29032708265235
+    },
+    {
+        "mirna": "hsa-mir-205",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-302c",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-326",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-577",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-609",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-1203",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4517",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4743",
+        "basic_score": -99.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-6847",
+        "basic_score": -99.30608454158201
+    },
+    {
+        "mirna": "hsa-mir-4666a",
+        "basic_score": -99.352252764686
+    },
+    {
+        "mirna": "hsa-mir-181b-1",
+        "basic_score": -99.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-1205",
+        "basic_score": -99.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-3658",
+        "basic_score": -99.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-5190",
+        "basic_score": -99.37376405500342
+    },
+    {
+        "mirna": "hsa-mir-11400",
+        "basic_score": -99.37376405500342
+    },
+    {
+        "mirna": "hsa-mir-323b",
+        "basic_score": -99.405197584678
+    },
+    {
+        "mirna": "hsa-mir-6717",
+        "basic_score": -99.405197584678
+    },
+    {
+        "mirna": "hsa-mir-1185-2",
+        "basic_score": -99.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-3943",
+        "basic_score": -99.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-4712",
+        "basic_score": -99.46126960054661
+    },
+    {
+        "mirna": "hsa-mir-133b",
+        "basic_score": -99.49845696160904
+    },
+    {
+        "mirna": "hsa-mir-4282",
+        "basic_score": -99.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-4445",
+        "basic_score": -99.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-6835",
+        "basic_score": -99.53301768716021
+    },
+    {
+        "mirna": "hsa-mir-4273",
+        "basic_score": -99.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-6834",
+        "basic_score": -99.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-4670",
+        "basic_score": -99.58908970302886
+    },
+    {
+        "mirna": "hsa-mir-4717",
+        "basic_score": -99.58908970302886
+    },
+    {
+        "mirna": "hsa-mir-4793",
+        "basic_score": -99.58908970302886
+    },
+    {
+        "mirna": "hsa-mir-12124",
+        "basic_score": -99.58908970302888
+    },
+    {
+        "mirna": "hsa-mir-3713",
+        "basic_score": -99.61060099334631
+    },
+    {
+        "mirna": "hsa-mir-6128",
+        "basic_score": -99.62910543382495
+    },
+    {
+        "mirna": "hsa-mir-548s",
+        "basic_score": -99.6420345230209
+    },
+    {
+        "mirna": "hsa-mir-6130",
+        "basic_score": -99.64516171889747
+    },
+    {
+        "mirna": "hsa-mir-6727",
+        "basic_score": -99.65624801146362
+    },
+    {
+        "mirna": "hsa-mir-10527",
+        "basic_score": -99.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-523",
+        "basic_score": -99.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-346",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-1976",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3143",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4301",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4305",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4498",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4637",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-5704",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6069",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6127",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-892c",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6769a",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6821",
+        "basic_score": -99.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-214",
+        "basic_score": -99.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-4451",
+        "basic_score": -99.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-10400",
+        "basic_score": -99.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-5187",
+        "basic_score": -99.8653982657494
+    },
+    {
+        "mirna": "hsa-mir-6857",
+        "basic_score": -99.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-33a",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-29b-1",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-199a-1",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-122",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-202",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-193b",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-509-1",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-554",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-550a-2",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-656",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-671",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1301",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1307",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-2117",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3137",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4309",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4316",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3918",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-642b",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4426",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4499",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4654",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4801",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5006",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548ap",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5687",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6718",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6760",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6864",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6874",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6511a-3",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-8073",
+        "basic_score": -99.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-449b",
+        "basic_score": -99.92503968446775
+    },
+    {
+        "mirna": "hsa-mir-4636",
+        "basic_score": -99.94332174610264
+    },
+    {
+        "mirna": "hsa-mir-941-5",
+        "basic_score": -99.98374065040618
+    },
+    {
+        "mirna": "hsa-mir-6086",
+        "basic_score": -99.99939376197125
+    },
+    {
+        "mirna": "hsa-mir-6733",
+        "basic_score": -100.01829906139878
+    },
+    {
+        "mirna": "hsa-mir-4647",
+        "basic_score": -100.03718371620502
+    },
+    {
+        "mirna": "hsa-mir-4714",
+        "basic_score": -100.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-4465",
+        "basic_score": -100.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4487",
+        "basic_score": -100.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-5698",
+        "basic_score": -100.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6768",
+        "basic_score": -100.35787540905667
+    },
+    {
+        "mirna": "hsa-mir-217",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-101-2",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-621",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-635",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-661",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-208b",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3661",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4503",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4716",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4436b-1",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-5089",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-5691",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-5706",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6756",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6792",
+        "basic_score": -100.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3690-2",
+        "basic_score": -100.5453369302572
+    },
+    {
+        "mirna": "hsa-mir-6828",
+        "basic_score": -100.56109438918688
+    },
+    {
+        "mirna": "hsa-mir-548i-2",
+        "basic_score": -100.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-4722",
+        "basic_score": -100.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-4307",
+        "basic_score": -100.64851854654538
+    },
+    {
+        "mirna": "hsa-mir-181b-2",
+        "basic_score": -100.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-5091",
+        "basic_score": -100.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6853",
+        "basic_score": -100.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-10393",
+        "basic_score": -100.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4255",
+        "basic_score": -100.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-548h-5",
+        "basic_score": -100.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-4678",
+        "basic_score": -100.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-1238",
+        "basic_score": -100.83417731127659
+    },
+    {
+        "mirna": "hsa-mir-4798",
+        "basic_score": -100.83786567014116
+    },
+    {
+        "mirna": "hsa-mir-934",
+        "basic_score": -100.90999397108229
+    },
+    {
+        "mirna": "hsa-mir-3182",
+        "basic_score": -100.95887021788226
+    },
+    {
+        "mirna": "hsa-mir-6788",
+        "basic_score": -101.04637576342546
+    },
+    {
+        "mirna": "hsa-mir-6819",
+        "basic_score": -101.08669032036445
+    },
+    {
+        "mirna": "hsa-mir-1267",
+        "basic_score": -101.10871922761677
+    },
+    {
+        "mirna": "hsa-mir-576",
+        "basic_score": -101.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-3130-2",
+        "basic_score": -101.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-3622a",
+        "basic_score": -101.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-548aa-1",
+        "basic_score": -101.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-4729",
+        "basic_score": -101.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-6716",
+        "basic_score": -101.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-3178",
+        "basic_score": -101.16479124348544
+    },
+    {
+        "mirna": "hsa-mir-6824",
+        "basic_score": -101.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-100",
+        "basic_score": -101.23395624064082
+    },
+    {
+        "mirna": "hsa-mir-4315-1",
+        "basic_score": -101.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-4291",
+        "basic_score": -101.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-548an",
+        "basic_score": -101.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-6777",
+        "basic_score": -101.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-12116",
+        "basic_score": -101.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-6088",
+        "basic_score": -101.25001252571334
+    },
+    {
+        "mirna": "hsa-mir-20b",
+        "basic_score": -101.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-564",
+        "basic_score": -101.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-3199-2",
+        "basic_score": -101.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4313",
+        "basic_score": -101.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4502",
+        "basic_score": -101.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-548az",
+        "basic_score": -101.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-7106",
+        "basic_score": -101.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-6089-1",
+        "basic_score": -101.33920332945226
+    },
+    {
+        "mirna": "hsa-mir-4528",
+        "basic_score": -101.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-3975",
+        "basic_score": -101.37376405500342
+    },
+    {
+        "mirna": "hsa-mir-8058",
+        "basic_score": -101.37376405500342
+    },
+    {
+        "mirna": "hsa-mir-193a",
+        "basic_score": -101.37783262819553
+    },
+    {
+        "mirna": "hsa-mir-6778",
+        "basic_score": -101.38808189081074
+    },
+    {
+        "mirna": "hsa-mir-99b",
+        "basic_score": -101.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-1265",
+        "basic_score": -101.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-3152",
+        "basic_score": -101.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-1244-3",
+        "basic_score": -101.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-5009",
+        "basic_score": -101.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-1243",
+        "basic_score": -101.49845696160904
+    },
+    {
+        "mirna": "hsa-mir-206",
+        "basic_score": -101.5330176871602
+    },
+    {
+        "mirna": "hsa-mir-4715",
+        "basic_score": -101.53524346372257
+    },
+    {
+        "mirna": "hsa-mir-369",
+        "basic_score": -101.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-4436b-2",
+        "basic_score": -101.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-8077",
+        "basic_score": -101.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-4686",
+        "basic_score": -101.58908970302886
+    },
+    {
+        "mirna": "hsa-mir-9851",
+        "basic_score": -101.61060099334631
+    },
+    {
+        "mirna": "hsa-mir-937",
+        "basic_score": -101.6420345230209
+    },
+    {
+        "mirna": "hsa-mir-4524a",
+        "basic_score": -101.6420345230209
+    },
+    {
+        "mirna": "hsa-mir-4669",
+        "basic_score": -101.6420345230209
+    },
+    {
+        "mirna": "hsa-mir-4536-1",
+        "basic_score": -101.64516171889747
+    },
+    {
+        "mirna": "hsa-mir-5684",
+        "basic_score": -101.68463334327518
+    },
+    {
+        "mirna": "hsa-mir-5002",
+        "basic_score": -101.69080873701479
+    },
+    {
+        "mirna": "hsa-mir-1207",
+        "basic_score": -101.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-6797",
+        "basic_score": -101.7384210958285
+    },
+    {
+        "mirna": "hsa-mir-4791",
+        "basic_score": -101.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-409",
+        "basic_score": -101.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3133",
+        "basic_score": -101.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4443",
+        "basic_score": -101.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6804",
+        "basic_score": -101.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4299",
+        "basic_score": -101.79136591582059
+    },
+    {
+        "mirna": "hsa-mir-651",
+        "basic_score": -101.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-3973",
+        "basic_score": -101.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-30a",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1286",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1287",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-1295a",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548u",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3185",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4276",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3919",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3150b",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4507",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4535",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4650-1",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-451b",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4786",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5011",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5195",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4524b",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-7704",
+        "basic_score": -101.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-8061",
+        "basic_score": -101.89767472798533
+    },
+    {
+        "mirna": "hsa-mir-4453",
+        "basic_score": -101.9465509747852
+    },
+    {
+        "mirna": "hsa-mir-760",
+        "basic_score": -101.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-5689",
+        "basic_score": -101.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-7108",
+        "basic_score": -102.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-7151",
+        "basic_score": -102.02549483046747
+    },
+    {
+        "mirna": "hsa-mir-548at",
+        "basic_score": -102.06238336538703
+    },
+    {
+        "mirna": "hsa-mir-142",
+        "basic_score": -102.07437107726739
+    },
+    {
+        "mirna": "hsa-mir-941-4",
+        "basic_score": -102.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-3188",
+        "basic_score": -102.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-3651",
+        "basic_score": -102.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-4509-2",
+        "basic_score": -102.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-4761",
+        "basic_score": -102.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-664a",
+        "basic_score": -102.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-6849",
+        "basic_score": -102.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-10526",
+        "basic_score": -102.18651510900473
+    },
+    {
+        "mirna": "hsa-mir-147b",
+        "basic_score": -102.19020346786922
+    },
+    {
+        "mirna": "hsa-mir-7856",
+        "basic_score": -102.19020346786922
+    },
+    {
+        "mirna": "hsa-mir-4777",
+        "basic_score": -102.20625975294175
+    },
+    {
+        "mirna": "hsa-mir-1914",
+        "basic_score": -102.2408204784929
+    },
+    {
+        "mirna": "hsa-mir-2052",
+        "basic_score": -102.25826319561824
+    },
+    {
+        "mirna": "hsa-mir-194-2",
+        "basic_score": -102.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-1539",
+        "basic_score": -102.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-548x-2",
+        "basic_score": -102.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-1302-3",
+        "basic_score": -102.36144481190641
+    },
+    {
+        "mirna": "hsa-mir-4315-2",
+        "basic_score": -102.36144481190641
+    },
+    {
+        "mirna": "hsa-mir-4447",
+        "basic_score": -102.38295610222386
+    },
+    {
+        "mirna": "hsa-mir-4779",
+        "basic_score": -102.39015187129255
+    },
+    {
+        "mirna": "hsa-mir-6861",
+        "basic_score": -102.4014605427025
+    },
+    {
+        "mirna": "hsa-mir-582",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-668",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-374b",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1302-5",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-2053",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4310",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4286",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4292",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3907",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-374c",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4435-1",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4496",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4516",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4519",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6803",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-8078",
+        "basic_score": -102.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6879",
+        "basic_score": -102.4458436728336
+    },
+    {
+        "mirna": "hsa-mir-4713",
+        "basic_score": -102.46639307457494
+    },
+    {
+        "mirna": "hsa-mir-6089-2",
+        "basic_score": -102.47046164776711
+    },
+    {
+        "mirna": "hsa-mir-8076",
+        "basic_score": -102.5453369302572
+    },
+    {
+        "mirna": "hsa-mir-1972-2",
+        "basic_score": -102.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-4648",
+        "basic_score": -102.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-6801",
+        "basic_score": -102.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-4705",
+        "basic_score": -102.61572446737463
+    },
+    {
+        "mirna": "hsa-mir-4271",
+        "basic_score": -102.64705596424318
+    },
+    {
+        "mirna": "hsa-mir-10525",
+        "basic_score": -102.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-31",
+        "basic_score": -102.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-1255b-1",
+        "basic_score": -102.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4329",
+        "basic_score": -102.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-548au",
+        "basic_score": -102.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-8071-2",
+        "basic_score": -102.75671296110536
+    },
+    {
+        "mirna": "hsa-mir-1302-8",
+        "basic_score": -102.75753538240608
+    },
+    {
+        "mirna": "hsa-mir-1269b",
+        "basic_score": -102.76066257828265
+    },
+    {
+        "mirna": "hsa-mir-4460",
+        "basic_score": -102.76611758352757
+    },
+    {
+        "mirna": "hsa-mir-6721",
+        "basic_score": -102.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-150",
+        "basic_score": -102.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-3198-1",
+        "basic_score": -102.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-6882",
+        "basic_score": -102.83105011540002
+    },
+    {
+        "mirna": "hsa-mir-7974",
+        "basic_score": -102.85392195521369
+    },
+    {
+        "mirna": "hsa-mir-920",
+        "basic_score": -102.87771750884642
+    },
+    {
+        "mirna": "hsa-mir-421",
+        "basic_score": -102.93735892756476
+    },
+    {
+        "mirna": "hsa-mir-5571",
+        "basic_score": -102.93735892756476
+    },
+    {
+        "mirna": "hsa-mir-3976",
+        "basic_score": -102.95887021788221
+    },
+    {
+        "mirna": "hsa-mir-6724-3",
+        "basic_score": -103.04950295930203
+    },
+    {
+        "mirna": "hsa-mir-5047",
+        "basic_score": -103.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-642a",
+        "basic_score": -103.22086325935405
+    },
+    {
+        "mirna": "hsa-mir-548o-2",
+        "basic_score": -103.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-5705",
+        "basic_score": -103.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-6895",
+        "basic_score": -103.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-10398",
+        "basic_score": -103.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-12119",
+        "basic_score": -103.24594395252123
+    },
+    {
+        "mirna": "hsa-let-7f-1",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-497",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-548b",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-607",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-1237",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-548e",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-320d-1",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-2116",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-3917",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4695",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4771-1",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-5093",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-6514",
+        "basic_score": -103.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-3142",
+        "basic_score": -103.33344949806443
+    },
+    {
+        "mirna": "hsa-mir-5701-3",
+        "basic_score": -103.38808189081072
+    },
+    {
+        "mirna": "hsa-mir-518f",
+        "basic_score": -103.42670887499546
+    },
+    {
+        "mirna": "hsa-mir-378j",
+        "basic_score": -103.42670887499551
+    },
+    {
+        "mirna": "hsa-mir-7112",
+        "basic_score": -103.42983607087203
+    },
+    {
+        "mirna": "hsa-mir-6125",
+        "basic_score": -103.45731998336933
+    },
+    {
+        "mirna": "hsa-mir-548n",
+        "basic_score": -103.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-6878",
+        "basic_score": -103.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-8070",
+        "basic_score": -103.5545289774777
+    },
+    {
+        "mirna": "hsa-mir-4327",
+        "basic_score": -103.61060099334631
+    },
+    {
+        "mirna": "hsa-mir-9903",
+        "basic_score": -103.61060099334631
+    },
+    {
+        "mirna": "hsa-mir-1200",
+        "basic_score": -103.63473672114617
+    },
+    {
+        "mirna": "hsa-mir-211",
+        "basic_score": -103.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-485",
+        "basic_score": -103.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-4469",
+        "basic_score": -103.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-196a-2",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-873",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-513b",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3690-1",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4467",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-5189",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-5692a-1",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-6872",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-8053",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-10396b",
+        "basic_score": -103.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3200",
+        "basic_score": -103.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-3689d-1",
+        "basic_score": -103.8470577173616
+    },
+    {
+        "mirna": "hsa-mir-6761",
+        "basic_score": -103.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-542",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548f-1",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-2114",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4283-1",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4430",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4475",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4511",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4737",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6757",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-548bc",
+        "basic_score": -103.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6742",
+        "basic_score": -103.9465509747852
+    },
+    {
+        "mirna": "hsa-mir-8085",
+        "basic_score": -103.94655097478525
+    },
+    {
+        "mirna": "hsa-mir-3065",
+        "basic_score": -103.98111170033636
+    },
+    {
+        "mirna": "hsa-mir-4293",
+        "basic_score": -104.05285978694994
+    },
+    {
+        "mirna": "hsa-mir-619",
+        "basic_score": -104.07437107726744
+    },
+    {
+        "mirna": "hsa-mir-6793",
+        "basic_score": -104.0828307343224
+    },
+    {
+        "mirna": "hsa-mir-1206",
+        "basic_score": -104.12103847071378
+    },
+    {
+        "mirna": "hsa-mir-548i-4",
+        "basic_score": -104.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-3117",
+        "basic_score": -104.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-4272",
+        "basic_score": -104.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-1184-3",
+        "basic_score": -104.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-9718",
+        "basic_score": -104.2736404402203
+    },
+    {
+        "mirna": "hsa-mir-191",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-466",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4632",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4700",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6790",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6813",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6860",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-7154",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-11401",
+        "basic_score": -104.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6510",
+        "basic_score": -104.29376529848494
+    },
+    {
+        "mirna": "hsa-mir-5695",
+        "basic_score": -104.30180339318807
+    },
+    {
+        "mirna": "hsa-mir-122b",
+        "basic_score": -104.36144481190641
+    },
+    {
+        "mirna": "hsa-mir-3915",
+        "basic_score": -104.38295610222386
+    },
+    {
+        "mirna": "hsa-mir-1263",
+        "basic_score": -104.38930893873126
+    },
+    {
+        "mirna": "hsa-mir-4653",
+        "basic_score": -104.4014605427025
+    },
+    {
+        "mirna": "hsa-mir-4764",
+        "basic_score": -104.4014605427025
+    },
+    {
+        "mirna": "hsa-mir-4295",
+        "basic_score": -104.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4540",
+        "basic_score": -104.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4692",
+        "basic_score": -104.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4787",
+        "basic_score": -104.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6729",
+        "basic_score": -104.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6844",
+        "basic_score": -104.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-216a",
+        "basic_score": -104.41751682777503
+    },
+    {
+        "mirna": "hsa-mir-3909",
+        "basic_score": -104.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-4536-2",
+        "basic_score": -104.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-5708",
+        "basic_score": -104.61038841814454
+    },
+    {
+        "mirna": "hsa-mir-6845",
+        "basic_score": -104.64705596424318
+    },
+    {
+        "mirna": "hsa-mir-761",
+        "basic_score": -104.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-3181",
+        "basic_score": -104.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-4472-1",
+        "basic_score": -104.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-4773-2",
+        "basic_score": -104.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-4732",
+        "basic_score": -104.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-4739",
+        "basic_score": -104.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-5572",
+        "basic_score": -104.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6856",
+        "basic_score": -104.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-12117",
+        "basic_score": -104.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6838",
+        "basic_score": -104.74989740636423
+    },
+    {
+        "mirna": "hsa-mir-589",
+        "basic_score": -104.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-664b",
+        "basic_score": -104.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-6781",
+        "basic_score": -104.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-3146",
+        "basic_score": -104.82571406616992
+    },
+    {
+        "mirna": "hsa-mir-4720",
+        "basic_score": -104.87771750884642
+    },
+    {
+        "mirna": "hsa-mir-3173",
+        "basic_score": -104.9027982020136
+    },
+    {
+        "mirna": "hsa-mir-4788",
+        "basic_score": -104.93735892756476
+    },
+    {
+        "mirna": "hsa-mir-6071",
+        "basic_score": -104.93735892756476
+    },
+    {
+        "mirna": "hsa-mir-3671",
+        "basic_score": -104.94142750075687
+    },
+    {
+        "mirna": "hsa-mir-6765",
+        "basic_score": -104.95887021788226
+    },
+    {
+        "mirna": "hsa-mir-4741",
+        "basic_score": -105.01863059261538
+    },
+    {
+        "mirna": "hsa-mir-6511b-1",
+        "basic_score": -105.07470260848405
+    },
+    {
+        "mirna": "hsa-mir-6165",
+        "basic_score": -105.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-6783",
+        "basic_score": -105.12531961910773
+    },
+    {
+        "mirna": "hsa-mir-1909",
+        "basic_score": -105.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-3652",
+        "basic_score": -105.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-3650",
+        "basic_score": -105.21773606347747
+    },
+    {
+        "mirna": "hsa-mir-9-3",
+        "basic_score": -105.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-136",
+        "basic_score": -105.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-1275",
+        "basic_score": -105.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-4658",
+        "basic_score": -105.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-6745",
+        "basic_score": -105.27737748219582
+    },
+    {
+        "mirna": "hsa-mir-4311",
+        "basic_score": -105.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-548ay",
+        "basic_score": -105.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-6851",
+        "basic_score": -105.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-7706",
+        "basic_score": -105.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-12122",
+        "basic_score": -105.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-7853",
+        "basic_score": -105.30201596838985
+    },
+    {
+        "mirna": "hsa-mir-1270",
+        "basic_score": -105.33344949806443
+    },
+    {
+        "mirna": "hsa-mir-3198-2",
+        "basic_score": -105.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-4778",
+        "basic_score": -105.36177634312301
+    },
+    {
+        "mirna": "hsa-mir-4646",
+        "basic_score": -105.39755960863616
+    },
+    {
+        "mirna": "hsa-mir-6855",
+        "basic_score": -105.42983607087204
+    },
+    {
+        "mirna": "hsa-mir-4643",
+        "basic_score": -105.46126960054661
+    },
+    {
+        "mirna": "hsa-mir-549a",
+        "basic_score": -105.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-548l",
+        "basic_score": -105.47337626844185
+    },
+    {
+        "mirna": "hsa-mir-3118-4",
+        "basic_score": -105.47871231767195
+    },
+    {
+        "mirna": "hsa-mir-1245b",
+        "basic_score": -105.59454470827379
+    },
+    {
+        "mirna": "hsa-mir-6767",
+        "basic_score": -105.7384210958285
+    },
+    {
+        "mirna": "hsa-mir-4280",
+        "basic_score": -105.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-4710",
+        "basic_score": -105.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3123",
+        "basic_score": -105.79721958198556
+    },
+    {
+        "mirna": "hsa-mir-4757",
+        "basic_score": -105.81873087230306
+    },
+    {
+        "mirna": "hsa-mir-6894",
+        "basic_score": -105.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-4484",
+        "basic_score": -105.85329159785417
+    },
+    {
+        "mirna": "hsa-mir-449c",
+        "basic_score": -105.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-3942",
+        "basic_score": -105.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-5701-2",
+        "basic_score": -105.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-7703",
+        "basic_score": -105.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-8081",
+        "basic_score": -106.00262299065386
+    },
+    {
+        "mirna": "hsa-mir-3614",
+        "basic_score": -106.07437107726739
+    },
+    {
+        "mirna": "hsa-mir-1225",
+        "basic_score": -106.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-2276",
+        "basic_score": -106.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-3153",
+        "basic_score": -106.13451166632817
+    },
+    {
+        "mirna": "hsa-mir-3134",
+        "basic_score": -106.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-4640",
+        "basic_score": -106.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-8089",
+        "basic_score": -106.19020346786922
+    },
+    {
+        "mirna": "hsa-mir-7978",
+        "basic_score": -106.20219117974963
+    },
+    {
+        "mirna": "hsa-mir-10394",
+        "basic_score": -106.20854401625704
+    },
+    {
+        "mirna": "hsa-mir-4718",
+        "basic_score": -106.26233176881036
+    },
+    {
+        "mirna": "hsa-mir-3138",
+        "basic_score": -106.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4328",
+        "basic_score": -106.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-3908",
+        "basic_score": -106.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6810",
+        "basic_score": -106.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6876",
+        "basic_score": -106.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4659b",
+        "basic_score": -106.34576874116144
+    },
+    {
+        "mirna": "hsa-mir-6129",
+        "basic_score": -106.4014605427025
+    },
+    {
+        "mirna": "hsa-mir-26b",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1227",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3129",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3168",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4312",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4264",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-5008",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-5584",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-8083",
+        "basic_score": -106.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4504",
+        "basic_score": -106.46639307457494
+    },
+    {
+        "mirna": "hsa-mir-4493",
+        "basic_score": -106.47046164776711
+    },
+    {
+        "mirna": "hsa-mir-3193",
+        "basic_score": -106.51306046802134
+    },
+    {
+        "mirna": "hsa-mir-6858",
+        "basic_score": -106.5767704599318
+    },
+    {
+        "mirna": "hsa-mir-6773",
+        "basic_score": -106.57853710631221
+    },
+    {
+        "mirna": "hsa-mir-200a",
+        "basic_score": -106.58887712782703
+    },
+    {
+        "mirna": "hsa-mir-1229",
+        "basic_score": -106.59421317705718
+    },
+    {
+        "mirna": "hsa-mir-8072",
+        "basic_score": -106.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-12132",
+        "basic_score": -106.68484591847695
+    },
+    {
+        "mirna": "hsa-mir-579",
+        "basic_score": -106.7063572087944
+    },
+    {
+        "mirna": "hsa-mir-3666",
+        "basic_score": -106.7063572087944
+    },
+    {
+        "mirna": "hsa-mir-4704",
+        "basic_score": -106.71004556765897
+    },
+    {
+        "mirna": "hsa-mir-5579",
+        "basic_score": -106.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6072",
+        "basic_score": -106.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-6833",
+        "basic_score": -106.77810529540798
+    },
+    {
+        "mirna": "hsa-mir-4770",
+        "basic_score": -106.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-548q",
+        "basic_score": -106.86561084095118
+    },
+    {
+        "mirna": "hsa-mir-6724-1",
+        "basic_score": -106.93735892756476
+    },
+    {
+        "mirna": "hsa-mir-6807",
+        "basic_score": -106.95887021788221
+    },
+    {
+        "mirna": "hsa-mir-10524",
+        "basic_score": -106.95887021788226
+    },
+    {
+        "mirna": "hsa-mir-6859-2",
+        "basic_score": -107.01863059261544
+    },
+    {
+        "mirna": "hsa-mir-4477b",
+        "basic_score": -107.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-641",
+        "basic_score": -107.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-6779",
+        "basic_score": -107.20562939558224
+    },
+    {
+        "mirna": "hsa-mir-1297",
+        "basic_score": -107.21773606347747
+    },
+    {
+        "mirna": "hsa-mir-6884",
+        "basic_score": -107.23026788177631
+    },
+    {
+        "mirna": "hsa-mir-1233-1",
+        "basic_score": -107.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-3648-1",
+        "basic_score": -107.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-4462",
+        "basic_score": -107.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-8054",
+        "basic_score": -107.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-6515",
+        "basic_score": -107.29888877251327
+    },
+    {
+        "mirna": "hsa-mir-3141",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4526",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4531",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4781",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4784",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4803",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-6755",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-6770-1",
+        "basic_score": -107.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-4314",
+        "basic_score": -107.32938092487231
+    },
+    {
+        "mirna": "hsa-mir-6787",
+        "basic_score": -107.33344949806443
+    },
+    {
+        "mirna": "hsa-mir-7110",
+        "basic_score": -107.405197584678
+    },
+    {
+        "mirna": "hsa-mir-4473",
+        "basic_score": -107.42670887499551
+    },
+    {
+        "mirna": "hsa-mir-4418",
+        "basic_score": -107.46126960054661
+    },
+    {
+        "mirna": "hsa-mir-4680",
+        "basic_score": -107.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-766",
+        "basic_score": -107.5662178632152
+    },
+    {
+        "mirna": "hsa-mir-1199",
+        "basic_score": -107.6506167241424
+    },
+    {
+        "mirna": "hsa-mir-6738",
+        "basic_score": -107.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-6782",
+        "basic_score": -107.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-7114",
+        "basic_score": -107.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-1260a",
+        "basic_score": -107.75379834043056
+    },
+    {
+        "mirna": "hsa-mir-7976",
+        "basic_score": -107.75379834043056
+    },
+    {
+        "mirna": "hsa-mir-4488",
+        "basic_score": -107.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-7153",
+        "basic_score": -107.8653982657494
+    },
+    {
+        "mirna": "hsa-mir-219a-1",
+        "basic_score": -107.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-3115",
+        "basic_score": -107.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6722",
+        "basic_score": -107.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-6799",
+        "basic_score": -108.00262299065386
+    },
+    {
+        "mirna": "hsa-mir-2277",
+        "basic_score": -108.05285978694994
+    },
+    {
+        "mirna": "hsa-mir-3119-2",
+        "basic_score": -108.05285978694994
+    },
+    {
+        "mirna": "hsa-mir-4795",
+        "basic_score": -108.06238336538703
+    },
+    {
+        "mirna": "hsa-mir-4440",
+        "basic_score": -108.0969440909382
+    },
+    {
+        "mirna": "hsa-mir-6888",
+        "basic_score": -108.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-11181",
+        "basic_score": -108.21388006548713
+    },
+    {
+        "mirna": "hsa-mir-6771",
+        "basic_score": -108.21794863867925
+    },
+    {
+        "mirna": "hsa-mir-487a",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-941-3",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4269",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-548ab",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-4422",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-3974",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-5004",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6734",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-7111",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-8066",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-10392",
+        "basic_score": -108.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6875",
+        "basic_score": -108.31433521148685
+    },
+    {
+        "mirna": "hsa-mir-486-2",
+        "basic_score": -108.34170016796932
+    },
+    {
+        "mirna": "hsa-mir-4711",
+        "basic_score": -108.34576874116144
+    },
+    {
+        "mirna": "hsa-mir-29a",
+        "basic_score": -108.4014605427025
+    },
+    {
+        "mirna": "hsa-mir-1827",
+        "basic_score": -108.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-3689b",
+        "basic_score": -108.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4799",
+        "basic_score": -108.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6503",
+        "basic_score": -108.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4505",
+        "basic_score": -108.42297183301994
+    },
+    {
+        "mirna": "hsa-mir-4683",
+        "basic_score": -108.49315775244466
+    },
+    {
+        "mirna": "hsa-mir-6883",
+        "basic_score": -108.5224650904436
+    },
+    {
+        "mirna": "hsa-mir-7973-2",
+        "basic_score": -108.5224650904436
+    },
+    {
+        "mirna": "hsa-mir-4285",
+        "basic_score": -108.55702581599476
+    },
+    {
+        "mirna": "hsa-mir-4682",
+        "basic_score": -108.59421317705718
+    },
+    {
+        "mirna": "hsa-mir-2278",
+        "basic_score": -108.7063572087944
+    },
+    {
+        "mirna": "hsa-mir-3654",
+        "basic_score": -108.72610185273149
+    },
+    {
+        "mirna": "hsa-mir-1233-2",
+        "basic_score": -108.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-6802",
+        "basic_score": -108.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-1245a",
+        "basic_score": -108.82164549297781
+    },
+    {
+        "mirna": "hsa-mir-4694",
+        "basic_score": -108.86561084095118
+    },
+    {
+        "mirna": "hsa-mir-4762",
+        "basic_score": -108.87771750884642
+    },
+    {
+        "mirna": "hsa-mir-3610",
+        "basic_score": -108.92537121568441
+    },
+    {
+        "mirna": "hsa-mir-3160-2",
+        "basic_score": -108.95887021788221
+    },
+    {
+        "mirna": "hsa-mir-4482",
+        "basic_score": -109.13023051793422
+    },
+    {
+        "mirna": "hsa-mir-10396a",
+        "basic_score": -109.15813958083513
+    },
+    {
+        "mirna": "hsa-mir-6814",
+        "basic_score": -109.22307211270757
+    },
+    {
+        "mirna": "hsa-mir-4266",
+        "basic_score": -109.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-3683",
+        "basic_score": -109.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-6715a",
+        "basic_score": -109.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-7150",
+        "basic_score": -109.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-5010",
+        "basic_score": -109.25805062041647
+    },
+    {
+        "mirna": "hsa-mir-3606",
+        "basic_score": -109.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-6785",
+        "basic_score": -109.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-12123",
+        "basic_score": -109.32938092487231
+    },
+    {
+        "mirna": "hsa-mir-4675",
+        "basic_score": -109.42264030180334
+    },
+    {
+        "mirna": "hsa-mir-3619",
+        "basic_score": -109.51014584734659
+    },
+    {
+        "mirna": "hsa-mir-4324",
+        "basic_score": -109.55452897747764
+    },
+    {
+        "mirna": "hsa-mir-1179",
+        "basic_score": -109.5662178632152
+    },
+    {
+        "mirna": "hsa-mir-3116-1",
+        "basic_score": -109.5662178632152
+    },
+    {
+        "mirna": "hsa-mir-3158-2",
+        "basic_score": -109.57832453111044
+    },
+    {
+        "mirna": "hsa-mir-3192",
+        "basic_score": -109.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-4252",
+        "basic_score": -109.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-6815",
+        "basic_score": -109.74698278568943
+    },
+    {
+        "mirna": "hsa-mir-3646",
+        "basic_score": -109.75379834043056
+    },
+    {
+        "mirna": "hsa-mir-4738",
+        "basic_score": -109.75379834043056
+    },
+    {
+        "mirna": "hsa-mir-3934",
+        "basic_score": -109.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-3125",
+        "basic_score": -109.76985462550309
+    },
+    {
+        "mirna": "hsa-mir-3649",
+        "basic_score": -109.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-3670-4",
+        "basic_score": -109.84705771736165
+    },
+    {
+        "mirna": "hsa-mir-3163",
+        "basic_score": -109.87480288817167
+    },
+    {
+        "mirna": "hsa-mir-4742",
+        "basic_score": -109.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-9901",
+        "basic_score": -109.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-8075",
+        "basic_score": -110.03886538634896
+    },
+    {
+        "mirna": "hsa-mir-3156-1",
+        "basic_score": -110.09012853619711
+    },
+    {
+        "mirna": "hsa-mir-8060",
+        "basic_score": -110.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-6753",
+        "basic_score": -110.21794863867925
+    },
+    {
+        "mirna": "hsa-mir-4676",
+        "basic_score": -110.4014605427025
+    },
+    {
+        "mirna": "hsa-mir-1208",
+        "basic_score": -110.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-548am",
+        "basic_score": -110.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-1247",
+        "basic_score": -110.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-644a",
+        "basic_score": -110.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-4480",
+        "basic_score": -110.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-4668",
+        "basic_score": -110.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-4736",
+        "basic_score": -110.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-4693",
+        "basic_score": -110.65435376611791
+    },
+    {
+        "mirna": "hsa-mir-6731",
+        "basic_score": -110.68171872260038
+    },
+    {
+        "mirna": "hsa-mir-4750",
+        "basic_score": -110.76611758352757
+    },
+    {
+        "mirna": "hsa-mir-3180-3",
+        "basic_score": -110.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-4746",
+        "basic_score": -110.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-6829",
+        "basic_score": -110.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-6825",
+        "basic_score": -110.93735892756476
+    },
+    {
+        "mirna": "hsa-mir-1257",
+        "basic_score": -110.99030374755685
+    },
+    {
+        "mirna": "hsa-mir-6511a-2",
+        "basic_score": -110.99343094343342
+    },
+    {
+        "mirna": "hsa-mir-3620",
+        "basic_score": -111.0584824313207
+    },
+    {
+        "mirna": "hsa-mir-29c",
+        "basic_score": -111.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-4470",
+        "basic_score": -111.17419586590765
+    },
+    {
+        "mirna": "hsa-mir-4259",
+        "basic_score": -111.24594395252123
+    },
+    {
+        "mirna": "hsa-mir-3670-2",
+        "basic_score": -111.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-1302-9",
+        "basic_score": -111.34148759276755
+    },
+    {
+        "mirna": "hsa-mir-7157",
+        "basic_score": -111.42264030180334
+    },
+    {
+        "mirna": "hsa-mir-10522",
+        "basic_score": -111.42670887499551
+    },
+    {
+        "mirna": "hsa-mir-6811",
+        "basic_score": -111.51014584734659
+    },
+    {
+        "mirna": "hsa-mir-3616",
+        "basic_score": -111.63796594982878
+    },
+    {
+        "mirna": "hsa-mir-4782",
+        "basic_score": -111.68234907995989
+    },
+    {
+        "mirna": "hsa-mir-4317",
+        "basic_score": -111.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-4800",
+        "basic_score": -111.76578605231097
+    },
+    {
+        "mirna": "hsa-mir-663b",
+        "basic_score": -111.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-548as",
+        "basic_score": -111.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-6881",
+        "basic_score": -111.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-9986",
+        "basic_score": -111.8653982657494
+    },
+    {
+        "mirna": "hsa-mir-6865",
+        "basic_score": -111.89767472798528
+    },
+    {
+        "mirna": "hsa-mir-4258",
+        "basic_score": -111.9465509747852
+    },
+    {
+        "mirna": "hsa-mir-4771-2",
+        "basic_score": -111.9932183682316
+    },
+    {
+        "mirna": "hsa-mir-1537",
+        "basic_score": -112.00262299065386
+    },
+    {
+        "mirna": "hsa-mir-6795",
+        "basic_score": -112.00262299065386
+    },
+    {
+        "mirna": "hsa-mir-4797",
+        "basic_score": -112.07437107726744
+    },
+    {
+        "mirna": "hsa-mir-1843",
+        "basic_score": -112.13044309313605
+    },
+    {
+        "mirna": "hsa-mir-4476",
+        "basic_score": -112.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-6759",
+        "basic_score": -112.16187662281064
+    },
+    {
+        "mirna": "hsa-mir-3121",
+        "basic_score": -112.18651510900466
+    },
+    {
+        "mirna": "hsa-mir-943",
+        "basic_score": -112.26995208135574
+    },
+    {
+        "mirna": "hsa-mir-6820",
+        "basic_score": -112.26995208135574
+    },
+    {
+        "mirna": "hsa-mir-1299",
+        "basic_score": -112.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-3916",
+        "basic_score": -112.34576874116144
+    },
+    {
+        "mirna": "hsa-mir-9899",
+        "basic_score": -112.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-6076",
+        "basic_score": -112.45440536269459
+    },
+    {
+        "mirna": "hsa-mir-3692",
+        "basic_score": -112.5982817502493
+    },
+    {
+        "mirna": "hsa-mir-4783",
+        "basic_score": -112.71004556765897
+    },
+    {
+        "mirna": "hsa-mir-5588",
+        "basic_score": -112.77497809953141
+    },
+    {
+        "mirna": "hsa-mir-4672",
+        "basic_score": -112.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-6867",
+        "basic_score": -112.80953882508257
+    },
+    {
+        "mirna": "hsa-mir-12120",
+        "basic_score": -112.95887021788226
+    },
+    {
+        "mirna": "hsa-mir-500b",
+        "basic_score": -112.99030374755685
+    },
+    {
+        "mirna": "hsa-mir-203b",
+        "basic_score": -113.10206756496652
+    },
+    {
+        "mirna": "hsa-mir-3978",
+        "basic_score": -113.11812385003904
+    },
+    {
+        "mirna": "hsa-mir-299",
+        "basic_score": -113.30201596838984
+    },
+    {
+        "mirna": "hsa-mir-1587",
+        "basic_score": -113.39755960863616
+    },
+    {
+        "mirna": "hsa-mir-4687",
+        "basic_score": -113.47548308898939
+    },
+    {
+        "mirna": "hsa-mir-7109",
+        "basic_score": -113.6626044360228
+    },
+    {
+        "mirna": "hsa-mir-8071-1",
+        "basic_score": -113.69403796569739
+    },
+    {
+        "mirna": "hsa-mir-4323",
+        "basic_score": -113.82185806817958
+    },
+    {
+        "mirna": "hsa-mir-4740",
+        "basic_score": -113.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-8069-2",
+        "basic_score": -113.89360615479316
+    },
+    {
+        "mirna": "hsa-mir-8057",
+        "basic_score": -114.06238336538703
+    },
+    {
+        "mirna": "hsa-mir-3684",
+        "basic_score": -114.28969672529283
+    },
+    {
+        "mirna": "hsa-mir-6891",
+        "basic_score": -114.31120801561033
+    },
+    {
+        "mirna": "hsa-mir-4253",
+        "basic_score": -114.41751682777502
+    },
+    {
+        "mirna": "hsa-mir-4287",
+        "basic_score": -114.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-5583-2",
+        "basic_score": -114.7821738686001
+    },
+    {
+        "mirna": "hsa-mir-219b",
+        "basic_score": -114.87771750884642
+    },
+    {
+        "mirna": "hsa-mir-4639",
+        "basic_score": -115.47871231767195
+    },
+    {
+        "mirna": "hsa-mir-6840",
+        "basic_score": -115.47871231767195
+    },
+    {
+        "mirna": "hsa-mir-3179-4",
+        "basic_score": -115.63796594982878
+    },
+    {
+        "mirna": "hsa-mir-12133",
+        "basic_score": -115.88161844291275
+    },
+    {
+        "mirna": "hsa-mir-6132",
+        "basic_score": -116.19020346786922
+    },
+    {
+        "mirna": "hsa-mir-4433b",
+        "basic_score": -116.28562815210071
+    },
+    {
+        "mirna": "hsa-mir-7705",
+        "basic_score": -116.70323001291789
+    },
+    {
+        "mirna": "hsa-mir-548ar",
+        "basic_score": -116.74989740636423
+    },
+    {
+        "mirna": "hsa-mir-4745",
+        "basic_score": -116.80190084904072
+    },
+    {
+        "mirna": "hsa-mir-6871",
+        "basic_score": -117.43162208838055
+    },
+    {
+        "mirna": "hsa-mir-8074",
+        "basic_score": -117.70614463359263
+    },
+    {
+        "mirna": "hsa-mir-4662a",
+        "basic_score": -117.82197702419441
+    },
+    {
+        "mirna": "hsa-mir-7113",
+        "basic_score": -118.09588236758489
+    },
+    {
+        "mirna": "hsa-mir-8088",
+        "basic_score": -118.55389862011819
+    },
+    {
+        "mirna": "hsa-mir-6817",
+        "basic_score": -120.39464498796141
+    },
+    {
+        "mirna": "hsa-mir-4490",
+        "basic_score": -120.97055910361976
+    },
+    {
+        "mirna": "hsa-mir-6859-3",
+        "basic_score": -121.47871231767195
+    },
+    {
+        "mirna": "hsa-mir-3680-2",
+        "basic_score": -122.04209461503152
+    },
+    {
+        "mirna": "hsa-mir-548ao",
+        "basic_score": -122.6502851929258
+    },
+    {
+        "mirna": "hsa-mir-7848",
+        "basic_score": -124.17931933993597
+    },
+    {
+        "mirna": "hsa-mir-5100",
+        "basic_score": -124.59421317705718
+    }
+]
