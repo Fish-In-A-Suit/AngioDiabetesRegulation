@@ -1,8 +1,8 @@
 {
   "OutputFoldersPerTargetSystem": {
     "Local Machine": [
-      "out\\build\\ConfigurePresetv1",
-      "out\\install\\ConfigurePresetv1"
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
     ]
   },
   "ExpandedNodes": [
@@ -11,10 +11,10 @@
     "\\cpp-library",
     "\\cpp-library\\includes",
     "\\cpp-library\\src",
-    "\\Local settings (.vs)",
-    "\\out\\build",
-    "\\out\\build\\ConfigurePresetv1"
+    "\\src_data_files",
+    "\\src_data_files\\miRNAdbs",
+    "\\test_run_2"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\cpp-library\\includes\\SequenceComparator.h",
   "PreviewInSolutionExplorer": false
 }

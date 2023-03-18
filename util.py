@@ -442,6 +442,14 @@ def get_dict_key_at_index(dictionary, index):
     key_at_index = keys_list[index]
     return 
 
+def get_dict_key_at_value(dictionary, in_value):
+    """
+    Returns the key of the specified value in the dictionary.
+    """
+    for key,value in dictionary.items():
+        if value == in_value:
+            return key
+
 def remove_dict_list_elements(src_dict, string_to_remove):
     """
     Removes the elements which contain 'string_to_remove' from the lists inside a dictionary. The dictionary has to have the form:
