@@ -215,6 +215,15 @@ def save_json(json_object, filepath):
         json.dump(json_object, f, indent=4)
     logger.info(f"Stored json to file {filepath}")
 
+def save_txt(string, filepath):
+    """
+    Stores string to file at filepath
+    """
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    with open(filepath, "w") as f:
+        f.write(string)
+    logger.info(f"Stored string to file {filepath}")
+
 def load_json_by_terms(src_folder, terms):
     """
     Returns the json files from src_folder that correspond to term names
@@ -516,7 +525,7 @@ def _uniprot_query_API(gene_name, type="gene"):
         if type == "gene":
             _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
         elif type == "prot":
-            _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
+            _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,protein_name")
         if _uniprot_identifier_query_result.text == "{'results': []}":
             # empty response, may be because ortholog was found, but human ortholog has different name than the gene from the file - denotes an error in file parsing
             raise Exception(f"No uniprot identifier query result for {gene_name} found.")
