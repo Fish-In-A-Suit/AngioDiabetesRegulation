@@ -38,8 +38,11 @@ def main():
     end_time = util.compute_time(start_time)
     logger.debug(end_time)
 
+    # CALL THESE FUNCTIONS TO SAVE CUDA MRNA-MIRNA MATCH STRENGTH RESULTS AS JSON
     # sequence_comparison_results_json = util.load_sequence_comparison_results("src_data_files/sequence_comparison_results.txt")
     # util.save_json(sequence_comparison_results_json, os.path.join(constants.TARGET_FOLDER, "sequence_comparison_results.json"))
+
+    # util.save_mirbase_hsap_miRNAs_for_cpp("src_data_files/miRNAdbs/mirbase_miRNA_06-02-2023.dat")
 
     match_strength_test = util.compare_miRNA_mRNA_match_strength_single("ATTTC", "TATAG")
     logger.debug(f"match strength is: {match_strength_test}")
@@ -59,9 +62,9 @@ def main():
     #        logger.debug(f"{dict_element['MI0000060'][1]['UniProtKB:Q0VGL1']}")
     #    i += 1
 
-    logger.debug(util.find_CUDA_miRNA_mRNA_match_strength('hsa-let-7f-1', 'UniProtKB:Q0VGL1'))
+    # logger.debug(util.find_CUDA_miRNA_mRNA_match_strength('hsa-let-7f-1', 'UniProtKB:Q0VGL1'))
 
-    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("hsa-let-7f-1", 'UniProtKB:Q0VGL1'))
+    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("hsa-let-7f-1", 'UniProtKB:Q9BR61'))
 
     
 

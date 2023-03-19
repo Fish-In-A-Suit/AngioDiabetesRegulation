@@ -1104,7 +1104,7 @@ def read_embl_file_records(embl_filepath):
     records = list(SeqIO.parse(embl_filepath, "embl"))
     return records
 
-def save_mirbase_hsap_miRNAs_for_cpp(embl_mirbase_download_filepath, destination_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt"):
+def save_mirbase_hsap_miRNAs_for_cpp(embl_mirbase_download_filepath, destination_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt", convert_uracil_thymine = True):
     """
     Loops through the records in embl_mirbase_download_filepath, saves the miRNAs with the 'Homo Sapiens' in their DE (record.desc) field
     (note: a Homo-Sapiens miRNA will also contain the hsa prefix in record.name) in the destination_filepath.txt file in the format:
@@ -1114,8 +1114,9 @@ def save_mirbase_hsap_miRNAs_for_cpp(embl_mirbase_download_filepath, destination
         MI0000060 \t hsa-let-7a-1 \t ugggaugagg uaguagguug uauaguuuua gggucacacc caccacuggg agauaacuau acaaucuacu gucuuuccua \t 80
     
     Parameters:
-      - @param embl_mirbase_download_filepath: the filepath to a .dat file downloaded from https://mirbase.org/ftp.shtml
+      - @param embl_mirbase_download_filepath: the filepath to a .dat file downloaded from https://mirbase.org/ftp.shtml (eg. src_data_files/miRNAdbs/mirbase_miRNA_06-02-2023.dat)
       - @param destination_filepath: the filepath to the .txt file that will contain the parsed homo sapiens miRNAs only
+      - @param convert_uracil_thymine: if true, it converts uracil (U) in a sequence (if Us are detected) to thymine (T). If false, uracils are left unchanged.
     """
     if os.path.exists(destination_filepath):
         user_in = input(f"{destination_filepath} already exists. Press 0 to abort or 1 to process the mirbase embl raw file again.")
@@ -1131,7 +1132,11 @@ def save_mirbase_hsap_miRNAs_for_cpp(embl_mirbase_download_filepath, destination
         for record in records:
             logger.info(f"{i}/{count}")
             if "hsa" in record.name or "Homo" in record.description:
-                f.write(f"{record.id}\t{record.name}\t{record.seq}\t{len(record.seq)}\n")
+                sequence = record.seq
+                if convert_uracil_thymine == True:
+                    if "U" in sequence:
+                        sequence = convert_thymine_uracil(sequence, 0)
+                f.write(f"{record.id}\t{record.name}\t{sequence}\t{len(record.seq)}\n")
             i+=1
 
 def save_mRNAs_for_cpp(product_mRNA_refseq_json_filepath, destination_filepath=constants.TARGET_FOLDER+"/product_mRNAs_cpp.txt"):
@@ -1232,19 +1237,18 @@ def compare_miRNA_mRNA_match_strength_single(miRNA,mRNA, debugLog = True):
     """
     
     def _run_miRNA_mRNA_match_strength_compare_logic(miRNA,mRNA):
-        i = 0
-        _max_match_strength = 0.0
-
         miRNA_size = len(miRNA)
         mRNA_size = len(mRNA)
 
+        _max_match_strength = 0.0
+        i = 0
         for character in mRNA:
             if i > (mRNA_size - miRNA_size):
                 break
             mRNA_substring = mRNA[i:int(i+miRNA_size)]
             num_matches = 0
             for j in range(0, miRNA_size):
-                if mRNA_substring[j] == miRNA[j]:
+                if (miRNA[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA[j] == 'G' and mRNA_substring == 'C'):
                     num_matches += 1
             current_match_score = num_matches/miRNA_size
             if current_match_score > _max_match_strength:
@@ -1253,16 +1257,20 @@ def compare_miRNA_mRNA_match_strength_single(miRNA,mRNA, debugLog = True):
         return _max_match_strength
 
     # check if miRNA is id
+    _d_miRNA_id = ""
+    _d_mRNA_id = ""
     if "hsa" in miRNA or "MI" in miRNA:
+        _d_miRNA_id = miRNA
         miRNA = find_miRNA_sequence(miRNA)
     # check if mRNA is id
     if "Prot" in mRNA:
+        _d_mRNA_id = mRNA
         mRNA = find_mRNA_sequence(mRNA)
 
     forward_match_strength = _run_miRNA_mRNA_match_strength_compare_logic(miRNA,mRNA) # forward comparison
     backward_match_strength = _run_miRNA_mRNA_match_strength_compare_logic(miRNA,mRNA[::-1]) # backward comparison - flip one sequence
     if debugLog == True:
-        logger.debug(f"{miRNA} :: {mRNA} match scores:")
+        logger.debug(f"{_d_miRNA_id} :: {_d_mRNA_id} match scores:")
         logger.debug(f"    - forward: {forward_match_strength}")
         logger.debug(f"    - backward: {backward_match_strength}")
 
@@ -1499,6 +1507,17 @@ def check_file_exists(filepath, debug_message=""):
             logger.info(debug_message)
         return False
 
+def convert_thymine_uracil(sequence, T_to_U = 1):
+    """
+    Converts thymine (T) to uracil (U), if 'T_to_U' is 1.
+    Converts uracil (U) to thymine (T), if 'T_to_U' is 0.
+
+    Returns the converted sequence
+    """
+    if T_to_U == 1:
+        return sequence.replace("T", "U")
+    else:
+        return sequence.replace("U", "T")
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
