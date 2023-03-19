@@ -41,27 +41,29 @@ def main():
     # sequence_comparison_results_json = util.load_sequence_comparison_results("src_data_files/sequence_comparison_results.txt")
     # util.save_json(sequence_comparison_results_json, os.path.join(constants.TARGET_FOLDER, "sequence_comparison_results.json"))
 
-    match_strength_test = util.compare_miRNA_mRNA_match_strength_single("ATTT", "TATA")
+    match_strength_test = util.compare_miRNA_mRNA_match_strength_single("ATTTC", "TATAG")
     logger.debug(f"match strength is: {match_strength_test}")
 
     util.init_CUDA_sequence_comparison_results_json()
-    logger.debug(f"{constants.CUDA_sequence_comparison_results_json[0]['MI0000060']}")
-
     util.init_MI_HSA_miRNA_mapping()
+    util.init_mRNA_and_miRNA_sequence_dicts()
 
     miRNA_id = util.map_mi_hsa("", "hsa-let-7f-1", 1)
     logger.debug(f"miRNA_id = {miRNA_id}")
 
-    i = 0
-    logger.debug(f"-------")
-    for dict_element in constants.CUDA_sequence_comparison_results_json:
-        #if dict_element['MI0000060'] != None:
-        #    logger.debug("dict element found!")
-        if i == 0:
-            logger.debug(f"{dict_element['MI0000060'][1]['UniProtKB:Q0VGL1']}")
-        i += 1
+    # this code showcases how to access elements in constants.CUDA_sequence_comparison_results_json.
+    # i = 0
+    # logger.debug(f"-------")
+    # for dict_element in constants.CUDA_sequence_comparison_results_json:
+    #    if i == 0:
+    #        logger.debug(f"{dict_element['MI0000060'][1]['UniProtKB:Q0VGL1']}")
+    #    i += 1
 
-    logger.debug(util.find_CUDA_mRNA_miRNA_match_strength('UniProtKB:Q0VGL1','hsa-let-7f-1'))
+    logger.debug(util.find_CUDA_miRNA_mRNA_match_strength('hsa-let-7f-1', 'UniProtKB:Q0VGL1'))
+
+    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("hsa-let-7f-1", 'UniProtKB:Q0VGL1'))
+
+    
 
     #string = "Word"
     #string_list = [*string]

@@ -16,6 +16,10 @@ CUDA_sequence_comparison_results_isinit = False
 MI_HSA_miRNA_id_mapping = {} # mapping between MIxxxxxx and hsa-xxx-xx miRNA identifiers (initialised from mirbase_miRNA_hsa-only.txt), generated from util.save_mirbase_hsap_miRNAs_for_cpp()
 MI_HSA_miRNA_id_mapping_isinit = False
 
+mRNA_id_sequence_dict = {}
+miRNA_id_sequence_dict = {}
+mRNA_miRNA_id_sequence_dicts_isinit = False
+
 # Positive regulatory terms for search "angiogenesis"
 TERMS_ANGIOGENESIS_POSITIVE_ARRAY = [
     "positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis", "GO:1903589",

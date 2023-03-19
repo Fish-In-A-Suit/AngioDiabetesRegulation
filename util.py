@@ -84,7 +84,7 @@ def get_files_in_dir(dir_filepath, searchstring = ""):
     Searches for files in directory. Use searchstring parameter to append all files that have a specific string in their name.
     Returns a single or a list of filepaths in the form dir_filepath/file
     """
-    if not os.path.exists(dir_filepath):
+    if not check_file_exists(dir_filepath):
         return []
     if searchstring == "":
         return os.listdir(dir_filepath)
@@ -449,6 +449,8 @@ def get_dict_key_at_value(dictionary, in_value):
     for key,value in dictionary.items():
         if value == in_value:
             return key
+    logger.debug(f"ERROR! Couldnt find value {in_value} during dictionary search. Returning None.")
+    return None
 
 def remove_dict_list_elements(src_dict, string_to_remove):
     """
@@ -1137,14 +1139,14 @@ def save_mRNAs_for_cpp(product_mRNA_refseq_json_filepath, destination_filepath=c
     The mRNA_refseq file is created in the current constants.TAGRET_FOLDER after running dev_mrna_download.py
     """
     # handle product_mRNA_refseq_json_filepath
-    if not os.path.exists(product_mRNA_refseq_json_filepath):
+    if not check_file_exists(product_mRNA_refseq_json_filepath):
         user_input = input(f"File {product_mRNA_refseq_json_filepath} does not exist. Press 0 to abort (and make sure to run dev_mrna_download.py) next time. Press 1 to write a custom relative path to a mrna_refseq json file.")
         if user_input == 0:
             return -1
         elif user_input == 1:
             user_input = input(f"Write the relative path to mrna refseq file and press enter:")
             product_mRNA_refseq_json_filepath = user_input
-            if not os.path.exists(product_mRNA_refseq_json_filepath): return -1
+            if not check_file_exists(product_mRNA_refseq_json_filepath): return -1
         else:
             logger.info("Invalid input. Can only be 0 or 1.")
             return -1
@@ -1206,6 +1208,288 @@ def compute_time(first_time, print_message=False):
     now = time.time()
     if print_message: logger.debug("%s seconds" % (now - first_time))
     return "%s seconds" % (now - first_time)
+
+def compare_miRNA_mRNA_match_strength_single(miRNA,mRNA, debugLog = True):
+    """
+    Compares the match strength of miRNA and mRNA. This function contains the same algorithm which the CUDA kernels use
+    to brute-force compute the best match miRNA-mRNA match strength. Algorithm anneals entire miRNA nucleotide sequence on
+    all possible mRNA starting nucleotides.
+
+    @param miRNA: a miRNA sequence or id (a MI or HSA id)
+    @param mRNA: a mRNA sequence or id (uniprot id)
+    @param debugLog: if True, will print the forward and backward comparison scores.
+
+    @return: the best match strength between miRNA and mRNA
+    """
+    
+    def _run_miRNA_mRNA_match_strength_compare_logic(miRNA,mRNA):
+        i = 0
+        _max_match_strength = 0.0
+
+        miRNA_size = len(miRNA)
+        mRNA_size = len(mRNA)
+
+        for character in mRNA:
+            if i > (mRNA_size - miRNA_size):
+                break
+            mRNA_substring = mRNA[i:int(i+miRNA_size)]
+            num_matches = 0
+            for j in range(0, miRNA_size):
+                if mRNA_substring[j] == miRNA[j]:
+                    num_matches += 1
+            current_match_score = num_matches/miRNA_size
+            if current_match_score > _max_match_strength:
+                _max_match_strength = current_match_score
+            i += 1
+        return _max_match_strength
+
+    # check if miRNA is id
+    if "hsa" in miRNA or "MI" in miRNA:
+        miRNA = find_miRNA_sequence(miRNA)
+    # check if mRNA is id
+    if "Prot" in mRNA:
+        mRNA = find_mRNA_sequence(mRNA)
+
+    forward_match_strength = _run_miRNA_mRNA_match_strength_compare_logic(miRNA,mRNA) # forward comparison
+    backward_match_strength = _run_miRNA_mRNA_match_strength_compare_logic(miRNA,mRNA[::-1]) # backward comparison - flip one sequence
+    if debugLog == True:
+        logger.debug(f"{miRNA} :: {mRNA} match scores:")
+        logger.debug(f"    - forward: {forward_match_strength}")
+        logger.debug(f"    - backward: {backward_match_strength}")
+
+    result_match_strength = 0
+    if forward_match_strength > backward_match_strength:
+        result_match_strength = forward_match_strength
+    else:
+        result_match_strength = backward_match_strength
+    return result_match_strength
+
+    # miRNA_size = len(miRNA)
+    # mRNA_size = len(mRNA)   
+    # i = 0
+    # maximum_match_strength = 0.0
+    # for character in mRNA:
+    #    if i > (mRNA_size - miRNA_size):
+    #        break
+    #    mRNA_substring = mRNA[i:int(i+miRNA_size)]
+    #    num_matches = 0
+    #    for i in range(0, miRNA_size):
+    #        if mRNA_substring[i] == miRNA[i]:
+    #            num_matches += 1
+    #    current_match_score = num_matches/miRNA_size
+    #    if current_match_score > maximum_match_strength:
+    #        maximum_match_strength = current_match_score
+    #    i += 1
+    #return maximum_match_strength
+
+def init_CUDA_sequence_comparison_results_json(cuda_analysis_filepath = "test_run_2/sequence_comparison_results.json"):
+    """
+    This function should be called to initialise constants.CUDA_sequence_comparison_results_json! 
+    """
+    if constants.CUDA_sequence_comparison_results_isinit == True:
+        return
+    if not os.path.exists(cuda_analysis_filepath):
+        logger.info(f"ERROR! The filepath {cuda_analysis_filepath} does not exist!")
+        return -1
+    constants.CUDA_sequence_comparison_results_json = read_file_as_json(cuda_analysis_filepath)
+    if(len(constants.CUDA_sequence_comparison_results_json) > 0):
+        logger.info("CUDA sequence comparison results json init success.")
+        constants.CUDA_sequence_comparison_results_isinit = True
+
+def init_MI_HSA_miRNA_mapping(mi_hsa_miRNA_mapping_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt"):
+    """
+    Populates constants.MI_HSA_miRNA_id_mapping dictionary with MI miRNA ids (as keys) and respective HSA miRNA ids (as values).
+    """
+    if constants.MI_HSA_miRNA_id_mapping_isinit == True:
+        return
+    if not os.path.exists(mi_hsa_miRNA_mapping_filepath):
+        logger.info(f"ERROR! The filepath {mi_hsa_miRNA_mapping_filepath} does not exist!")
+        return -1
+    MI_HSA_miRNA_file_readlines = readlines(mi_hsa_miRNA_mapping_filepath)
+    for line in MI_HSA_miRNA_file_readlines:
+        splitline = line.split("\t")
+        MI_id = splitline[0]
+        HSA_id = splitline[1]
+        constants.MI_HSA_miRNA_id_mapping[MI_id] = HSA_id
+    if len(constants.MI_HSA_miRNA_id_mapping) > 0: 
+        logger.info(f"Initialised {len(constants.MI_HSA_miRNA_id_mapping)} elements in constants.MI_HSA_miRNA_id_mapping")
+        constants.MI_HSA_miRNA_id_mapping_isinit = True
+    else:
+        logger.info("Error! constants.MI_HSA_miRNA_id_mapping has 0 elements.")
+
+def map_mi_hsa(miRNA_mi_id, miRNA_hsa_id, reverse = 0):
+    """
+    Finds a hsa-xxx mRNA id from a mi-xxx mRNA id.
+    If reverse = 1, then it finds a mi-xxx mRNA id from a hsa-xxx mRNA id
+
+    If you want to find a HSA id from a MI id:
+        map_mi_hsa("MIXXXXXX", "", 0)
+    
+    If you want to find a MI id from a HSA id:
+        map_mi_hsa("", "hsa-let-xxx", 1)
+    """
+    if constants.MI_HSA_miRNA_id_mapping_isinit == False:
+        logger.info(f"MI_HSA_miRNA_mappings haven't been initialised. Attempting init.")
+        init_MI_HSA_miRNA_mapping()
+    if reverse == 0:
+        result_hsa_id = constants.MI_HSA_miRNA_id_mapping[miRNA_mi_id]
+        if result_hsa_id != None:
+            return result_hsa_id
+        else:
+            logger.debug(f"Error querying {miRNA_mi_id} for hsa id!")
+    else: # reverse == 1, should map hsa to mi
+        result_mi_id = get_dict_key_at_value(constants.MI_HSA_miRNA_id_mapping, miRNA_hsa_id)
+        if  result_mi_id != None:
+            return result_mi_id
+        else:
+            logger.debug(f"Error querying {miRNA_hsa_id} for mi id!")
+
+
+def find_CUDA_miRNA_mRNA_match_strength(miRNA_id, mRNA_id, cuda_analysis_filepath = "test_run_2/sequence_comparison_results.json"):
+    """
+    Finds the match strength (from the brute-force CUDA process) between a mRNA and a miRNA.
+
+    @param miRNA_id: Either a MI (miRDB) id (eg. MI0000060) or a HSA id (eg. hsa-let-7f-1)
+    @param mRNA_id: A full UniprotKB mRNA id (eg. UniProtKB:Q0VGL1)
+    @cuda_analysis_filepath: a filepath to the .json file which was generated using util.load_sequence_comparison_results and subsequently saved using util.save_json
+
+    @return (float) brute-force match strength (based on sequence comparison) between the specified mRNA and miRNA
+    """
+
+    if not check_file_exists(cuda_analysis_filepath):
+        return -1
+    if constants.CUDA_sequence_comparison_results_isinit == False:
+        logger.info(f"CUDA sequence comparison results haven't been initialised using util.init_CUDA_sequence_comparison_results_json. Attempting init.")
+        init_CUDA_sequence_comparison_results_json()
+    if constants.MI_HSA_miRNA_id_mapping_isinit == False:
+        logger.info(f"MI_HSA_miRNA_mappings haven't been initialised. Attempting init.")
+        init_MI_HSA_miRNA_mapping()
+    if constants.mRNA_miRNA_id_sequence_dicts_isinit == False:
+        logger.info(f"miRNA-mRNA id to sequence dictionary not initialised. Attempting init.")
+        init_mRNA_and_miRNA_sequence_dicts()
+
+    # if a miRNA sequence is supplied, get the ID
+    if "hsa" not in miRNA_id and "MI" not in miRNA_id:
+        _miRNA_id = get_dict_key_at_value(constants.miRNA_id_sequence_dict, miRNA_id)
+        if _miRNA_id == None:
+            logger.info(f"ERROR! Couldn't find miRNA id from {miRNA_id}")
+        miRNA_id = _miRNA_id
+    
+    # if a mRNA sequence is supplied, get the ID
+    if "Prot" not in mRNA_id:
+        _mRNA_id = get_dict_key_at_value(constants.mRNA_id_sequence_dict, mRNA_id)
+        if _mRNA_id == None:
+            logger.info(f"ERROR! Couldn't find miRNA id from {mRNA_id}")
+        mRNA_id = _mRNA_id
+    
+    # if miRNA_id is HSA, convert it to MI (implications in the querying of elements in constants.CUDA_sequence_comparison_results_json, where keys are saved as MI identifiers)
+    if "hsa" in miRNA_id:
+        miRNA_id = map_mi_hsa("", miRNA_id, 1)
+    
+    # main logic -> return the CUDA-computed match strength
+    for list_element in constants.CUDA_sequence_comparison_results_json: # each list element is actually a dicionary
+        if list_element.get(miRNA_id) != None:
+            match_strengths_dict = list_element[miRNA_id][1] # returns the list of mRNAs and their match strength for this specific miRNA, eg {'UniProtKB:Q0VGL1': 0.2125, 'UniProtKB:Q96GR2': 0.2125, ...}
+            return match_strengths_dict[mRNA_id]
+
+def init_mRNA_and_miRNA_sequence_dicts(mRNA_sequences_filepath = os.path.join(constants.TARGET_FOLDER, "product_mRNAs_cpp.txt"), miRNA_sequences_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt"):
+    """
+    Uses mRNA_sequences_filepath (should point to test_run_X/product_mRNAs_cpp.txt, generated by util.save_mRNAs_for_cpp) and
+    miRNA_sequences_filepath (should point to src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt, generated by util.save_mirbase_hsap_miRNAs_for_cpp)
+    to populate constants.mRNA_id_sequence_dict and constants.miRNA_id_sequence_dict, with keys as mRNA UniprotKB ids or miRNA MI ids
+    and values as respective sequences.
+    """
+    if constants.mRNA_miRNA_id_sequence_dicts_isinit == True:
+        return
+    if not check_file_exists(mRNA_sequences_filepath):
+        return -1
+    if not check_file_exists(miRNA_sequences_filepath):
+        return -1
+    
+    mRNA_readlines = readlines(mRNA_sequences_filepath)
+    miRNA_readlines = readlines(miRNA_sequences_filepath)
+
+    for line in mRNA_readlines:
+        line = line.split("\t")
+        if len(line) > 1: # prevent empty lines from being read
+            # logger.debug(f"line = {line}")
+            if line[1] != "None": # check if the sequence isnt None (eg. UniProtKB:Q96EY9 has a faulty sequence)
+                constants.mRNA_id_sequence_dict[line[0]] = line[1] # line[0] = UniprotKB id, line[1] = sequence
+    
+    for line in miRNA_readlines:
+        line = line.split("\t")
+        if len(line) > 1: # prevent empty lines from being read
+            constants.miRNA_id_sequence_dict[line[0]] = line[2] # line[0] = MI id, line[1] = HSA id, line[2] = sequnece
+    
+    if len(constants.mRNA_id_sequence_dict) > 0 and len(constants.miRNA_id_sequence_dict) > 0:
+        logger.info(f"Initialised {len(constants.mRNA_id_sequence_dict)} mRNA and {len(constants.miRNA_id_sequence_dict)} miRNA ids and their respective sequences.")
+        constants.mRNA_miRNA_id_sequence_dicts_isinit = True
+    else:
+        logger.info(f"Error initialising mRNA and miRNA id sequence dictionaries. len constants.mRNA_id_sequence_dict = {len(constants.mRNA_id_sequence_dict)}, len constrants.miRNA_id_sequence_dict = {len(constants.miRNA_id_sequence_dict)}")
+
+def find_mRNA_sequence(mRNA_id):
+    """
+    Finds the mRNA sequence given the mRNA_id (should be a UniprotKB:xxxxx id).
+    You should call util.init_mRNA_and_miRNA_sequence_dicts before calling this function.
+    """
+    if constants.mRNA_miRNA_id_sequence_dicts_isinit == False:
+        logger.info(f"mRNA and miRNA id to sequence mappings not initialised. Attempting init.")
+        init_mRNA_and_miRNA_sequence_dicts()
+    if constants.mRNA_id_sequence_dict.get(mRNA_id) != None:
+        return constants.mRNA_id_sequence_dict[mRNA_id]
+    else:
+        logger.info(f"ERROR! Couldn't find {mRNA_id} in constants.mRNA_id_sequence_dict.")
+        return None
+
+def find_miRNA_sequence(miRNA_id):
+    """
+    Finds the miRNA sequence given the miRNA_id (should be either MI or HSA type id).
+    You should call util.init_mRNA_and_miRNA_sequence_dicts before calling this function.
+    """
+    if constants.mRNA_miRNA_id_sequence_dicts_isinit == False:
+        logger.info(f"mRNA and miRNA id to sequence mappings not initialised. Attempting init.")
+        init_mRNA_and_miRNA_sequence_dicts()
+    
+    # convert to MI type id
+    if "hsa" in miRNA_id:
+        miRNA_id = map_mi_hsa("", miRNA_id, reverse=1)
+    
+    if constants.miRNA_id_sequence_dict.get(miRNA_id) != None:
+        return constants.miRNA_id_sequence_dict[miRNA_id]
+    else:
+        logger.info(f"ERROR! Couldn't find {miRNA_id} in constants.miRNA_id_sequence_dict.")
+        return None
+
+def compare_python_CUDA_miRNA_mRNA_match_strength(miRNA,mRNA, debugLog=True):
+    """
+    Does a python comparison of the mRNA to miRNA sequence (using util.compare_miRNA_mRNA_match_strength_single)
+    against a CUDA-processed mRNA to miRNA match strength (using util.find_CUDA_miRNA_mRNA_match_strength).
+    
+    @param miRNA: a miRNA id (either HSA or MI type) or a miRNA sequence
+    @param mRNA: a mRNA id (of uniprotkb type) or a mRNA sequence
+    @param debugLog: if True, prints out both match strengths (one computed via python and one via CUDA)
+
+    @return: python's match strength divided by CUDA's match strength. If both are equal (this is desired behaviour),
+    the return value should be 1 (True).
+    """
+    CUDA_match_strength = find_CUDA_miRNA_mRNA_match_strength(miRNA,mRNA)
+    python_match_strength = compare_miRNA_mRNA_match_strength_single(miRNA, mRNA)
+    result = python_match_strength / CUDA_match_strength
+    if debugLog == True:
+        logger.debug(f"Match strength {miRNA} :: {mRNA} = {result}")
+    return result
+
+
+def check_file_exists(filepath, debug_message=""):
+    if os.path.exists(filepath):
+        return True
+    else:
+        if debug_message == "":
+            logger.info(f"File at path {filepath} does not exist!")
+        else:
+            logger.info(debug_message)
+        return False
+
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
