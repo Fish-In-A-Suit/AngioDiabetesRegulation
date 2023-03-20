@@ -6,6 +6,7 @@ import os
 import collections
 import shutil
 import time
+import itertools
 
 import logging
 logger = logging.getLogger(__name__)
@@ -989,6 +990,53 @@ def compute_time(first_time, print_message=False):
     now = time.time()
     if print_message: logger.debug("%s seconds" % (now - first_time))
     return "%s seconds" % (now - first_time)
+
+def get_size(object, string_notation=True):
+    """
+    Finds the size (in bytes, kb, mb) of the object
+    """
+    size = sys.getsizeof(object)
+    if string_notation == True:
+        if size < 1000:
+            return f"{str(size)} bytes"
+        elif size < 1000000:
+            r = round(size/1000, 2)
+            return f"{str(r)} kb"
+        elif size < 1000000000:
+            r = round(size/1000000, 2)
+            return f"{str(r)} mb"
+    else:
+        return size
+
+def binary_search(arr, x, low, high):
+    if low > high:
+        return False
+    else:
+        mid = (low + high) / 2
+        if x == arr[mid]: 
+            return mid
+        elif x > arr[mid]: # x is on the right side
+            return binary_search(arr, x, mid + 1, high)
+        else: # x is on the left side
+            return binary_search(arr, x, low, mid -1)
+
+def get_permutations_with_repetitions(length, permutation_values=["A", "T", "C", "G"], as_numbered_dict=True):
+    """
+    Returns all of the permutations of permutation_values with the specified length (with repetitions included).
+
+    options: TODO remove last param and replace with options
+      - "LIST": returns result as a list of all permutations
+      - "NUMBERED_DICT": returns result as a numbered dictionary of all permutations
+      - "DICT_HEX": returns result as a dictionary of permutations and their respecive hex values
+    """
+    
+    permutations = list(map("".join, itertools.product(permutation_values, repeat=length)))
+    dict_result = {}
+    if as_numbered_dict == True:
+        for i, permutation in enumerate(permutations):
+            dict_result[i] = permutation
+        return dict_result
+    else: return permutations
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
