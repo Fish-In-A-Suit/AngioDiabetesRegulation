@@ -1245,9 +1245,9 @@ def compare_miRNA_mRNA_match_strength_single(miRNA,mRNA, debugLog = True):
         for character in mRNA:
             if i > (mRNA_size - miRNA_size):
                 break
-            mRNA_substring = mRNA[i:int(i+miRNA_size)]
+            mRNA_substring = mRNA[i:int(i+miRNA_size)] # CUDA block does this
             num_matches = 0
-            for j in range(0, miRNA_size):
+            for j in range(0, miRNA_size): # CUDA thread does this
                 if (miRNA[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA[j] == 'G' and mRNA_substring == 'C'):
                     num_matches += 1
             current_match_score = num_matches/miRNA_size

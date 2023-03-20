@@ -44,8 +44,9 @@ def main():
 
     # util.save_mirbase_hsap_miRNAs_for_cpp("src_data_files/miRNAdbs/mirbase_miRNA_06-02-2023.dat")
 
-    match_strength_test = util.compare_miRNA_mRNA_match_strength_single("ATTTC", "TATAG")
-    logger.debug(f"match strength is: {match_strength_test}")
+    #
+    # match_strength_test = util.compare_miRNA_mRNA_match_strength_single("ATTTC", "TATAG")
+    # logger.debug(f"match strength is: {match_strength_test}")
 
     util.init_CUDA_sequence_comparison_results_json()
     util.init_MI_HSA_miRNA_mapping()
@@ -64,7 +65,7 @@ def main():
 
     # logger.debug(util.find_CUDA_miRNA_mRNA_match_strength('hsa-let-7f-1', 'UniProtKB:Q0VGL1'))
 
-    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("hsa-let-7f-1", 'UniProtKB:Q9BR61'))
+    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("MI0000291", 'UniProtKB:P13688'))
 
     
 
