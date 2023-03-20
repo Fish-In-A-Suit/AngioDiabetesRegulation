@@ -6,6 +6,7 @@ import os
 import collections
 import shutil
 import time
+from Bio import SeqIO
 import itertools
 
 import logging
@@ -84,7 +85,7 @@ def get_files_in_dir(dir_filepath, searchstring = ""):
     Searches for files in directory. Use searchstring parameter to append all files that have a specific string in their name.
     Returns a single or a list of filepaths in the form dir_filepath/file
     """
-    if not os.path.exists(dir_filepath):
+    if not check_file_exists(dir_filepath):
         return []
     if searchstring == "":
         return os.listdir(dir_filepath)
@@ -215,11 +216,19 @@ def save_json(json_object, filepath):
         json.dump(json_object, f, indent=4)
     logger.info(f"Stored json to file {filepath}")
 
+def save_txt(string, filepath):
+    """
+    Stores string to file at filepath
+    """
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    with open(filepath, "w") as f:
+        f.write(string)
+    logger.info(f"Stored string to file {filepath}")
+
 def load_json_by_terms(src_folder, terms):
     """
     Returns the json files from src_folder that correspond to term names
     """
-    
     result_file_list = []
     missing_files = []
     for term in terms:
@@ -234,6 +243,47 @@ def load_json_by_terms(src_folder, terms):
         input("Missing files may be caused by a term only including subterm-genes and not any term specific genes. Press any key to continue")
     logger.info(f"Returning {len(result_file_list)} result files;  -> {result_file_list}")
     return result_file_list
+
+def load_sequence_comparison_results(filepath = "src_data_files/sequence_comparison_results.txt"):
+    if os.path.isfile(filepath):
+        logger.info(f"Loading sequence comparison results from {filepath}")
+        file_lines = []
+        load_list_from_file(filepath, file_lines) # read all file lines from filepath into file_lines
+        
+        sequence_comparison_results_json = [] # master list, containing all current_miRNA_element_dict elements
+        current_miRNA_element_dict = {} # a dictionary for a single miRNA element
+        current_miRNA_mirbase_id = "" # eg. MI0000060
+        current_miRNA_othername = "" # eg. hsa-let-7a-1
+        current_miRNA_mRNA_matches_dict = {} 
+        i = 0
+        for line in file_lines:
+            if "#" in line or "//" in line:
+                continue
+            if "\t" not in line:
+                if i != 0:
+                    # not the first iteration -> create & save current_miRNA_element_dict to sequence_comparison_results_json
+                    current_miRNA_element_list = [current_miRNA_othername, current_miRNA_mRNA_matches_dict]
+                    current_miRNA_element_dict[current_miRNA_mirbase_id] = current_miRNA_element_list
+                    sequence_comparison_results_json.append(current_miRNA_element_dict)
+                    # reset
+                    current_miRNA_element_dict = {}
+                    current_miRNA_mRNA_matches_dict = {}
+
+                current_miRNA_identifiers_split = line.strip().split(",")
+                current_miRNA_othername = current_miRNA_identifiers_split[1]
+                current_miRNA_mirbase_id = current_miRNA_identifiers_split[0]
+            if "\t" in line:
+                line = line.replace("\t", "")
+                mRNAid = line.split(": ")[0]
+                match_strength = float(line.split(": ")[1])
+                current_miRNA_mRNA_matches_dict[mRNAid] = match_strength
+            i += 1
+        return sequence_comparison_results_json
+    else:
+        logger.info(f"ERROR! Filepath {filepath} does not exist!")
+
+
+
 
 def store_json_dictionaries(filepath, dictionaries):
     """
@@ -400,7 +450,49 @@ def get_dict_key_at_index(dictionary, index):
     """
     keys_list = list(dictionary) # call list(dict) on a dictionary to return a list of its keys
     key_at_index = keys_list[index]
-    return key_at_index
+    return 
+
+def get_dict_key_at_value(dictionary, in_value):
+    """
+    Returns the key of the specified value in the dictionary.
+    """
+    for key,value in dictionary.items():
+        if value == in_value:
+            return key
+    logger.debug(f"ERROR! Couldnt find value {in_value} during dictionary search. Returning None.")
+    return None
+
+def remove_dict_list_elements(src_dict, string_to_remove):
+    """
+    Removes the elements which contain 'string_to_remove' from the lists inside a dictionary. The dictionary has to have the form:
+    key1: list1, key2: list2, key3: list3; example 'UniProtKB:Q0VGL1': ['NM_001008395.3', 'XM_017012198.1'], 'UniProtKB:Q96GR2': ['NM_001199377.1', 'NM_015162.4'];
+    if you call this function using "XM" as 'string_to_remove', it produces: 'UniProtKB:Q0VGL1': ['NM_001008395.3'], 'UniProtKB:Q96GR2': ['NM_001199377.1', 'NM_015162.4'];
+
+    Returns the dictionary with the lists without the elements that contain string_to_remove
+    """
+    result_dict = {}
+    for key in src_dict:
+        current_list = src_dict[key]
+        current_result_list = []
+        for element in current_list:
+            if string_to_remove not in element:
+                current_result_list.append(element)
+        result_dict[key] = current_result_list
+        current_result_list = []
+    return result_dict
+
+
+def remove_list_elements(src_list, string_to_remove):
+    """
+    Removes all the elements which contain 'string_to_remove' from the src_list
+    Returns the list without the removed elements.
+    """
+    result = []
+    for element in src_list:
+        if string_to_remove not in element:
+            result.append(element)
+    return result
+    
 
 def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
@@ -434,7 +526,7 @@ def _uniprot_query_API(gene_name, type="gene"):
         if type == "gene":
             _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
         elif type == "prot":
-            _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl")
+            _uniprot_identifier_query_result = requests.get(f"https://rest.uniprot.org/uniprotkb/search?query={gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,protein_name")
         if _uniprot_identifier_query_result.text == "{'results': []}":
             # empty response, may be because ortholog was found, but human ortholog has different name than the gene from the file - denotes an error in file parsing
             raise Exception(f"No uniprot identifier query result for {gene_name} found.")
@@ -862,6 +954,33 @@ def uniprot_find_human_symbol(gene_id):
             return gene_symbol
     return "UniprotError - Gene symbol not found."
 
+def product_mRNA_json_append_refseqIds(product_mRNA_json_filepath=constants.TARGET_FOLDER+"/product_mRNA.json", result_filepath=constants.TARGET_FOLDER+"/product_mRNA_refseq.json"):
+    """
+    Appends the NCBI accession ids (eg. NM_001008395.3) to each element inside product_mRNA. NCBI accession ids are necessary for intercompatibility with
+    the miRDB_v6.0_prediction_result.txt file (which contains miRNA match strengths against known mRNAs (mRNAs presented in NCBI accession format)
+    """
+    product_mRNA_json = read_file_as_json(product_mRNA_json_filepath)
+    uniprot_human_idmapping = readlines("src_data_files/uniprotkb_human_idmapping.dat")
+
+    # uniprotkb_human_idmapping: if stripped uniprot id is in line and if RefSeq_NT is the second line element, append third line element
+    # (refseq id) to array
+    uniprotIds_to_refseqIds = []
+    i = 0
+    for element in product_mRNA_json:
+        logger.info(f"Processing {i}")
+        uniprotId_stripped = element["UniprotID"].split(":")[1] # UniProtKB:Q0VGL1 -> Q0VGL1
+        for line in uniprot_human_idmapping:
+            if uniprotId_stripped in line and "RefSeq_NT" in line:
+                uniprotIds_to_refseqIds.append(line.split("\t")[2].replace("\n", "")) # append the third line element (refseq id)
+        
+        # after all lines are read: append uniprotIds_to_refseqIds_dict to the current UniProtKB Id, reset the list
+        product_mRNA_json[i]["RefSeq_NT_IDs"] = uniprotIds_to_refseqIds # create RefSeq_NT_IDs field for i'th element in product_mRNA and store refseqids
+        uniprotIds_to_refseqIds = []
+        i += 1
+    
+    # save new json
+    save_json(product_mRNA_json, result_filepath)
+
 def find_gene_symbol_and_name_from_id(gene_id):
     if "UniProtKB" in gene_id:
         gene_symbol = uniprot_find_human_symbol(gene_id)
@@ -976,6 +1095,120 @@ def get_identifier_values_from_json(json_filepath, identifier):
     logger.debug(f"Returned {len(json_obj)} elements")
     return identifier_values, json_obj
 
+def read_embl_file_records(embl_filepath):
+    """
+    Reads the records inside an embl filepath (either a .embl file or a .dat file with records stored in the embl format) into a list
+    of records, each record can have it's fields queried by record.id, record.seq (for sequence), record.annotation etc.
+
+    Returns: a list of embl records
+    """
+    records = list(SeqIO.parse(embl_filepath, "embl"))
+    return records
+
+def save_mirbase_hsap_miRNAs_for_cpp(embl_mirbase_download_filepath, destination_filepath = "src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt", convert_uracil_thymine = True):
+    """
+    Loops through the records in embl_mirbase_download_filepath, saves the miRNAs with the 'Homo Sapiens' in their DE (record.desc) field
+    (note: a Homo-Sapiens miRNA will also contain the hsa prefix in record.name) in the destination_filepath.txt file in the format:
+
+        AC (record.id), ID (record.name), SEQ (record.seq), base pair count
+
+        MI0000060 \t hsa-let-7a-1 \t ugggaugagg uaguagguug uauaguuuua gggucacacc caccacuggg agauaacuau acaaucuacu gucuuuccua \t 80
+    
+    Parameters:
+      - @param embl_mirbase_download_filepath: the filepath to a .dat file downloaded from https://mirbase.org/ftp.shtml (eg. src_data_files/miRNAdbs/mirbase_miRNA_06-02-2023.dat)
+      - @param destination_filepath: the filepath to the .txt file that will contain the parsed homo sapiens miRNAs only
+      - @param convert_uracil_thymine: if true, it converts uracil (U) in a sequence (if Us are detected) to thymine (T). If false, uracils are left unchanged.
+    """
+    if os.path.exists(destination_filepath):
+        user_in = input(f"{destination_filepath} already exists. Press 0 to abort or 1 to process the mirbase embl raw file again.")
+        if user_in == 0:
+            logger.info("Aborted.")
+            return
+        logger.info(f"Processing {destination_filepath}")
+
+    with open(destination_filepath, "a") as f:
+        records = read_embl_file_records(embl_mirbase_download_filepath)
+        count = len(records)
+        i=0
+        for record in records:
+            logger.info(f"{i}/{count}")
+            if "hsa" in record.name or "Homo" in record.description:
+                sequence = record.seq
+                if convert_uracil_thymine == True:
+                    if "U" in sequence:
+                        sequence = convert_thymine_uracil(sequence, 0)
+                f.write(f"{record.id}\t{record.name}\t{sequence}\t{len(record.seq)}\n")
+            i+=1
+
+def save_mRNAs_for_cpp(product_mRNA_refseq_json_filepath, destination_filepath=constants.TARGET_FOLDER+"/product_mRNAs_cpp.txt"):
+    """
+    Loops through the product_mRNA_refseq_json_filepath file (usually stored in test_run_X/product_mRNA_refseq_json). From each json element,
+    UniProtID, mRNA sequence and refseq_NT_ids are extracted and stored on the same line. 
+
+    File structure:
+    UniProtId \t mRNA_sequence \t refseq_NT_id 1 \t refseq_NT_ID 2 \t ...
+
+    As you can see, the first and second line elements will always be UniProtId and mRNA sequence, respectively. Then, one ore more
+    refseq_NT_ids may follow (some mRNAs have 8+ refseq IDs which denote different transcription variants)
+
+    The mRNA_refseq file is created in the current constants.TAGRET_FOLDER after running dev_mrna_download.py
+    """
+    # handle product_mRNA_refseq_json_filepath
+    if not check_file_exists(product_mRNA_refseq_json_filepath):
+        user_input = input(f"File {product_mRNA_refseq_json_filepath} does not exist. Press 0 to abort (and make sure to run dev_mrna_download.py) next time. Press 1 to write a custom relative path to a mrna_refseq json file.")
+        if user_input == 0:
+            return -1
+        elif user_input == 1:
+            user_input = input(f"Write the relative path to mrna refseq file and press enter:")
+            product_mRNA_refseq_json_filepath = user_input
+            if not check_file_exists(product_mRNA_refseq_json_filepath): return -1
+        else:
+            logger.info("Invalid input. Can only be 0 or 1.")
+            return -1
+
+    # handle destination_filepath
+    if os.path.exists(destination_filepath):
+        user_input = input(f"File {destination_filepath} already exists. Press 0 to continue and overwrite the file, 1 to abort or 2 to change the name of destination_filepath")
+        # if user_input == 0, do nothing
+        if user_input == 1:
+            logger.info("Aborting")
+            return -1
+        elif user_input == 2:
+            dest_filepath_input = input(f"Write the relative filepath to the destination file and press enter:")
+            destination_filepath = dest_filepath_input
+            if os.path.exists(destination_filepath): 
+                logger.info("That destination path exists too. Aborting")
+                return -1
+
+    # read each element into a single line representation
+    logger.info(f"Determined mRNA refseq json filepath: {product_mRNA_refseq_json_filepath}")
+    jsonObj = read_file_as_json(product_mRNA_refseq_json_filepath)
+    result_lines = []
+    for element in jsonObj: # read each element into a single line, separator = tab (\t)
+        # debug
+        element_uniprot_id = element["UniprotID"]
+        element_mRNA_seq = element["mRNA"]
+        element_refseq_NT_ids = element["RefSeq_NT_IDs"]
+        logger.debug(f"unipr = {element_uniprot_id}, mRNA = {element_mRNA_seq}, refseq = {element_refseq_NT_ids}")
+
+        # handle None (bug fix)
+        if element_uniprot_id == None: element_uniprot_id = "None"
+        if element_mRNA_seq == None: element_mRNA_seq = "None"
+
+        # main line creation logic
+        line_string = element_uniprot_id + "\t" + element_mRNA_seq # uniprotid and mRNA_sequence are the first two line elements
+        for refseq_NT_id in element["RefSeq_NT_IDs"]: # append all refseqs from the NCBI Nucleotide database (that are not XM, since XM are not confirmed)
+            if "XM" not in refseq_NT_id:
+                line_string = line_string + "\t" + refseq_NT_id
+        line_string = line_string + "\n"
+        result_lines.append(line_string)
+    
+    # write the lines to destination_filepath
+    f = open(destination_filepath, "w")
+    f.writelines(result_lines)
+    f.close()
+
+
 def get_time():
     return time.time()
 
@@ -990,53 +1223,6 @@ def compute_time(first_time, print_message=False):
     now = time.time()
     if print_message: logger.debug("%s seconds" % (now - first_time))
     return "%s seconds" % (now - first_time)
-
-def get_size(object, string_notation=True):
-    """
-    Finds the size (in bytes, kb, mb) of the object
-    """
-    size = sys.getsizeof(object)
-    if string_notation == True:
-        if size < 1000:
-            return f"{str(size)} bytes"
-        elif size < 1000000:
-            r = round(size/1000, 2)
-            return f"{str(r)} kb"
-        elif size < 1000000000:
-            r = round(size/1000000, 2)
-            return f"{str(r)} mb"
-    else:
-        return size
-
-def binary_search(arr, x, low, high):
-    if low > high:
-        return False
-    else:
-        mid = (low + high) / 2
-        if x == arr[mid]: 
-            return mid
-        elif x > arr[mid]: # x is on the right side
-            return binary_search(arr, x, mid + 1, high)
-        else: # x is on the left side
-            return binary_search(arr, x, low, mid -1)
-
-def get_permutations_with_repetitions(length, permutation_values=["A", "T", "C", "G"], as_numbered_dict=True):
-    """
-    Returns all of the permutations of permutation_values with the specified length (with repetitions included).
-
-    options: TODO remove last param and replace with options
-      - "LIST": returns result as a list of all permutations
-      - "NUMBERED_DICT": returns result as a numbered dictionary of all permutations
-      - "DICT_HEX": returns result as a dictionary of permutations and their respecive hex values
-    """
-    
-    permutations = list(map("".join, itertools.product(permutation_values, repeat=length)))
-    dict_result = {}
-    if as_numbered_dict == True:
-        for i, permutation in enumerate(permutations):
-            dict_result[i] = permutation
-        return dict_result
-    else: return permutations
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):
@@ -1140,6 +1326,8 @@ def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", tru
     else:
         return uniprot_gene_identifier
 """
+
+
 
 
 

@@ -21,10 +21,12 @@ JsonObject::~JsonObject() {
 void JsonObject::setJson(std::string filepath, int readBufferSize) {
     this->filepath = filepath; 
     FILE *fp = fopen(filepath.c_str(), "rb");
-    char readBuffer[readBufferSize];
+    char* readBuffer = new char[readBufferSize];
+    //char readBuffer[readBufferSize]; // this is flagged as an error, since stack-based array have to have their size known at compile time.
     rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
     jsonDoc.ParseStream(is);
     fclose(fp);
+    delete[] readBuffer; // delete the readBuffer after usage
 }
 
 const char* JsonObject::getValue(std::string key){

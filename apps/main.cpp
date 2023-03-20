@@ -1,10 +1,12 @@
-#include "test-cpp-lib-hello.h"
+// #include "test-cpp-lib-hello.h"
 #include "StringUtils.h"
 #include "HighResolutionTimeManager.h"
 #include "HighResolutionTimeManagerV2.h"
 #include "FileUtils.h"
 #include "JsonObject.h"
 #include "Logger.h"
+#include "PermutationUtils.h"
+#include "SequenceComparator.h"
 
 #include <iostream>
 #include <fstream>
@@ -16,10 +18,15 @@
 #include <rapidjson/document.h> //rapidjson
 #include "rapidjson/filereadstream.h"
 #include <cstdio>
+#include <Windows.h>
+#include <filesystem>
+
+#include <cuda_runtime.h>
 
 // #include <test-cpp-library/include/test-cpp-lib-hello.h>
 
 using namespace std;
+
 
 /*
 Workflow for miRNA prediction:
@@ -68,76 +75,8 @@ Workflow for miRNA prediction:
       order & save miRNA_mRNA_fitting_dict
 */
 
-// todo: port into OOP style
-void predict_miRNA_values(list<string> t)
-{
-}
-
-long test_sequence_container_speed()
-{
-    // Use auto keyword to avoid typing long type definitions
-    auto start = std::chrono::high_resolution_clock::now();
-    int i = 111111111;
-
-    // todo: test vectors, lists, forward lists and deques for speed comparisons
-    return -1;
-}
-
-// this function is buggy, only works for length = 4 
-std::vector<std::string> generatePermutations(std::string sequence, int length) {
-    std::vector<std::string> permutations;
-    std::string permutation;
-
-    // generate all permutations of the given length
-    for (int a = 0; a < sequence.length(); ++a) {
-        permutation += sequence[a];
-        
-        for (int t = 0; t < sequence.length(); ++t) {
-            permutation += sequence[t];
-
-            for (int c = 0; c < sequence.length(); ++c) {
-                permutation += sequence[c];
-
-                for (int g = 0; g < sequence.length(); ++g) {
-                    permutation += sequence[g];
-
-                    // add the permutation to the vector if it is the desired length
-                    if(permutation.length() == length) {
-                        // std::cout << permutation << std::endl;
-                        permutations.push_back(permutation);
-                    }
-                    permutation.pop_back();
-                }
-                permutation.pop_back();
-            }
-            permutation.pop_back();
-        }
-        permutation.pop_back();
-    }
-    return permutations;
-}
-
-/**
- * Creates permutations of input string S of length n
- * 
- * @param s: Input string, the characters of which will be used in the permutation
- * @param n: The length of the permutations
- * @param count: Pointer to the count variable (should be initialised before this function is called)
- * @param t: Used for recursion, do not set it when calling the function.
- * 
- * Example call: 
- * int count = 0;
- * enumerate("ATCG", 8, count);
-*/
-void enumerate(const string& s, int n, int &count, string t = "") {
-    if (n == 0) {
-        ++count;
-    } else {
-        for (char c : s) {
-            ++count;
-            enumerate(s, n-1, count, t+c);
-        }
-    }
+__global__ void helloWorldKernel() {
+    printf("Hello world from CUDA!\n");
 }
 
 int main()
@@ -151,6 +90,10 @@ int main()
 
     // Logger::setLevel(Constants::LogLevels::DEBUG);
 
+    // this is not allowed for .cpp classes. Have to be .cu classes.
+    // helloWorldKernel<<<1, 1>>>();
+    // cudaDeviceSynchronize();
+
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
     int i = 0;
     for (const string &word : msg)
@@ -160,37 +103,68 @@ int main()
     }
     std::cout << endl;
 
-    // *** RapidJSON parsing ***
-    // // HighResolutionTimeManager hrtm;
-    // // cout << "Took " << hrtm.getElapsedTime(Constants::MICROSECONDS) << " to parse file." << endl;
+    // get the project source path
+    TCHAR szPath[MAX_PATH];
+    if (GetModuleFileName(NULL, szPath, MAX_PATH)) {
+        std::string path(szPath);
+        std::string::size_type pos = path.find_last_of("\\/");
+        std::string root = path.substr(0, pos);
+        std::cout << "Project root path is: " << root << std::endl;
+    }
+
+    // another way of getting the project source path
+    // this error is caused by Visual Studio, isn't displayed in VSCode and runs normally in VS also.
+    std::cout << "Project root path (using std::filesystem::current_path()): " << std::filesystem::current_path().string() << std::endl;
+
+    // --- RapidJSON parsing ---
     HighResolutionTimeManagerV2 hrtm2;
 
     // 65565 is enough memory for all jsons in test_run_1
-
     // JsonObject causes possible heap corruptions -> check
     JsonObject jsonObj("src_data_files/test.json", 65565, false);
     JsonObject mRNAProductsJson("test_run_1/product_mRNA.json", 65565, false);
     JsonObject productScoresJson("test_run_1/product_scores.json", 6556, false);
     JsonObject termsDirectProductsJson("test_run_1/terms_direct_products.json", 65565, false);
-    // // Logger::checkType(&jsonObj);
-    // // Logger::debug(termsDirectProductsJson.toString(false));
 
     printf("book = %s\n", jsonObj.getValue("book"));
-    // // printf("characters = %s\n", jsonObj.getValue("characters"));
-    // // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    // --- ---
 
-    hrtm2.setStartTime();
-    // ATTEMPT 1
-    // // vector<std::string> permutations = generatePermutations("ATCG", 8);
-    // // cout << permutations.size() << endl;
+    // --- Sequence comparisons ---
+    SequenceComparator sequenceComparator("src_data_files/miRNAdbs/mirbase_miRNA_hsa-only.txt", "test_run_2/product_mRNAs_cpp.txt");
+    // --- ---
 
-    //ATTEMPT 2: len(12) -> 2,64s   len(14) -> 42,1s 
-    int count = 0;
-    enumerate("ATCG", 4, count);
-    Logger::debug(std::to_string(count));
+    std::vector<int> permutations = PermutationUtils::generatePermutations(3, {0b00, 0b01, 0b10, 0b11});
+    cout << "Number of permutations: " << permutations.size() << endl;
+    //PermutationUtils::printPermutations(permutations);
 
-    // this causes code to break smh
+    // --- BILLION COUNTING CODE ---
+    // hrtm2.setStartTime();
+    // takes 3,3 s; 0b(31 x 1)
+    // for (uint32_t i; i < 0b1111111111111111111111111111111; i++ ){
+    // }
+
+    // takes ~450 years; 0b(63 x 1)
+    /*
+    for (uint64_t i; i < 0b111111111111111111111111111111111111111111111111111111111111111; i++) {
+        if (i % 1000000000 == 0) {
+            // print each billion
+            std::cout << (i / 1000000000) << " bil" << std::endl;
+        }
+    }
+    */
+
+    /* enable this for showcasing billion count speeds to Ladi & Umek
+    int bilcount = 0;
+    for (uint64_t i = 0; i < 274877906943; i++) {
+        if (i % 1000000000 == 0)
+        {
+            bilcount++;
+            std::cout << bilcount << " bil." << std::endl;
+        }
+    }
+    */
     // hrtm2.getElapsedTime(Constants::TimeUnits::MILLISECONDS, true);
+    // --- END OF BILLION COUNTING CODE ---
 
     // call destructors
     delete fileUtils;

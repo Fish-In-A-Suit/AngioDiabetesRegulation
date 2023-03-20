@@ -42,17 +42,27 @@
             "type": "cmake",
             "label": "CMake: build",
             "command": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "targets": [
                 "all"
             ],
             "preset": "${command:cmake.activeBuildPresetName}",
             "group": "build",
-            "problemMatcher": [],
+            "problemMatcher": ["$gcc"],
             "detail": "CMake template build task",
             // "options": {
             //    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
             //    "CMAKE_BUILD_TYPE": "Debug"
             // }
+        },
+        {
+            "label": "Run current python file",
+            "type": "shell",
+            "command": "python",
+            "args": ["${fileBasename}"],
+            "problemMatcher": []
         }
     ],
     "version": "2.0.0"

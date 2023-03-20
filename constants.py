@@ -6,7 +6,19 @@
 #
 #
 
-TARGET_FOLDER = "test_run_1" #just a constant to be used in all stages of analysis
+TARGET_FOLDER = "test_run_2" #just a constant to be used in all stages of analysis
+
+FILE_miRDB_miRNAs = "src_data_files/miRNAdbs/miRDB_v6.0_prediction_result.txt"
+
+CUDA_sequence_comparison_results_json = [] # the json pointing to sequence_comparison_results.json, should be loaded at runtime!!!!
+CUDA_sequence_comparison_results_isinit = False
+
+MI_HSA_miRNA_id_mapping = {} # mapping between MIxxxxxx and hsa-xxx-xx miRNA identifiers (initialised from mirbase_miRNA_hsa-only.txt), generated from util.save_mirbase_hsap_miRNAs_for_cpp()
+MI_HSA_miRNA_id_mapping_isinit = False
+
+mRNA_id_sequence_dict = {}
+miRNA_id_sequence_dict = {}
+mRNA_miRNA_id_sequence_dicts_isinit = False
 
 # Positive regulatory terms for search "angiogenesis"
 TERMS_ANGIOGENESIS_POSITIVE_ARRAY = [

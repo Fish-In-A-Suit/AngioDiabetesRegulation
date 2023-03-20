@@ -4,4 +4,10 @@ src_data_files/uniprotkb_human_idmapping.dat
 out
 src_data_files/uniprot_sprot_human.xml
 term_genes_crash
-CMakeLists.txt
+CMakePresets.json
+log_output
+.vs
+.vscode/settings.json
+temp
+src_data_files\miRNAdbs\mirbase_miRNA_06-02-2023.dat
+src_data_files\miRNAdbs\miRDB_v6.0_prediction_result.txt

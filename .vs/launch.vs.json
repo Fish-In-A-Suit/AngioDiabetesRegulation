@@ -1,0 +1,13 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "out\\build\\ConfigurePresetv1\\main.exe",
+      "projectTarget": "",
+      "name": "main.exe launch",
+      "currentDir": "${workspaceRoot}"
+    }
+  ]
+}
