@@ -7,6 +7,7 @@ import collections
 import shutil
 import time
 from Bio import SeqIO
+import itertools
 
 import logging
 logger = logging.getLogger(__name__)
