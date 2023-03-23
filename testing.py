@@ -65,11 +65,25 @@ def main():
 
     # logger.debug(util.find_CUDA_miRNA_mRNA_match_strength('hsa-let-7f-1', 'UniProtKB:Q0VGL1'))
 
+
     logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("MI0000060", 'UniProtKB:Q0VGL1'))
+    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("MI0000060", 'UniProtKB:Q96E22'))
 
     logger.debug("---")
 
     logger.debug(util.compare_miRNA_mRNA_match_strength_single_v2("MI0000060", 'UniProtKB:Q0VGL1', debugLog=True, fileWrite=True))
+
+    total_ops = len(constants.miRNA_id_sequence_dict) * len(constants.mRNA_id_sequence_dict)
+    i = 0
+    with open("python_sequence_comparison_score.txt", "a") as f:
+        for miRNA_id, miRNA_sequence in constants.miRNA_id_sequence_dict.items():
+            logger.debug(f"{miRNA_id}:")
+            f.write(f"{miRNA_id}:\n")
+            for mRNA_id, mRNA_sequence in constants.mRNA_id_sequence_dict.items():
+                match_strength = util.compare_miRNA_mRNA_match_strength_single_v2(miRNA_sequence, mRNA_sequence, debugLog=False)
+                logger.debug(f"    - {mRNA_id}: {match_strength}")
+                f.write(f"\t{mRNA_id}: {format(match_strength, '.4f')}\n")
+                i+=1
 
     #string = "Word"
     #string_list = [*string]

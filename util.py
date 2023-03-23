@@ -1251,7 +1251,7 @@ def compare_miRNA_mRNA_match_strength_single(miRNA,mRNA, debugLog = True):
             num_matches = 0
             for j in range(0, miRNA_size): # CUDA thread does this
                 total_opcounts += 1
-                if (miRNA[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA[j] == 'G' and mRNA_substring == 'C'):
+                if (miRNA[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA[j] == 'G' and mRNA_substring[j] == 'C'):
                     num_matches += 1
             current_match_score = num_matches/miRNA_size
             if current_match_score > _max_match_strength:
@@ -1328,7 +1328,7 @@ def compare_miRNA_mRNA_match_strength_single_v2(miRNA,mRNA, debugLog = True, fil
         successful_matches = 0
         all_characters = len(miRNA)
         for character in miRNA:
-            if (miRNA_seq[j] == "A" and mRNA_substring[j] == "T") or (miRNA_seq[j] == "T" and mRNA_substring[j] == "A") or (miRNA_seq[j] == "C" and mRNA_substring[j] == "G") or (miRNA_seq[j] == "G" and mRNA_substring == "C"):
+            if (miRNA_seq[j] == "A" and mRNA_substring[j] == "T") or (miRNA_seq[j] == "T" and mRNA_substring[j] == "A") or (miRNA_seq[j] == "C" and mRNA_substring[j] == "G") or (miRNA_seq[j] == "G" and mRNA_substring[j] == "C"):
                 successful_matches += 1
             j+=1
             constants._d_total_opcounts += 1
