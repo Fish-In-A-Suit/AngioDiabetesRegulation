@@ -112,7 +112,7 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
 
     t = util.get_time()
     miRNA_candidates = generate_all_miRNA_permutations_with_repetitions(length)
-    logger.debug(f"Permutation calculation: {util.compute_time(t)} seconds.")
+    logger.debug(f"Permutation calculation: {util.compute_time(t)} seconds. Size of object = {util.get_size(miRNA_candidates)}")
 
     json_overlap_results = [] # this is the final result that is saved
     logger.info(f"Total miRNA candidates: {len(miRNA_candidates)}")
@@ -160,6 +160,9 @@ def predict_miRNAs(productnames, mRNAs, product_scores, length, treshold_to_acce
     logger.info (f"Done with predicting miRNA!")
 
 def main():
+    constants.PERMUTATIONS_LEN_FOUR = util.get_permutations_with_repetitions(4, ["A","T","C","G"])
+    logger.debug(constants.PERMUTATIONS_LEN_FOUR)
+    
     mrna_filepath = os.path.join(constants.TARGET_FOLDER, "product_mRNA.json")
     #product_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
     product_list = util.get_identifier_values_from_json(mrna_filepath, "UniprotID")[0]
@@ -167,10 +170,10 @@ def main():
     mRNAs = util.get_identifier_values_from_json(mrna_filepath, "mRNA")[0] #mRNAs = ["ABABABABABABABABABAB","ABCABCABABABABABABABABABABABCABC","ABCABCABCABCABCABC"]
     
     # in product_mRNA.json that includes all mRNAs, found 2 mRNAs with null
-    _d_mRNAs_types = []
-    for i,mRNA in enumerate(mRNAs):
-        _d_mRNAs_types.append(f"i={i} {type(mRNA)}")
-    logger.debug(f"mRNAs types (any Nones -> check algorithm for possible errors) = {_d_mRNAs_types}")
+    #_d_mRNAs_types = []
+    #for i,mRNA in enumerate(mRNAs):
+    #    _d_mRNAs_types.append(f"i={i} {type(mRNA)}")
+    #logger.debug(f"mRNAs types (any Nones -> check algorithm for possible errors) = {_d_mRNAs_types}")
 
     scores_json = util.read_file_as_json(os.path.join(constants.TARGET_FOLDER, "product_scores.json"))
     scores = []
@@ -186,7 +189,7 @@ def main():
     #mRNAs = ["GAACATCTGCTACTACAGCCTTGCAGCCCGGAGTCCCGGATTTTACTGGTTCCCGTGCCTGCGGACAGGC","ATTGCTGGGGCTCCGCTTCGGGGAGGAGGACGCTGAGGAGGCGCCGAGCCGCGC","CCAAACCCTAAAGCTGATATCACAAAGTACCATTTCTCCAAGTTGGGGGCTCAGAGGGGAGTCATCATGAGCGA"]
     #scores = [0.5, -1, 1]
     
-    predict_miRNAs(product_list, mRNAs, scores, length=14, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
+    predict_miRNAs(product_list, mRNAs, scores, length=13, treshold_to_accept=0.5, target_folder=constants.TARGET_FOLDER) 
     #WARNING: this is a brute force method pathfinder, with extensive debug output! do not use with length more than 5.
     #It will create large log files and take up a significant amount of ram!
 

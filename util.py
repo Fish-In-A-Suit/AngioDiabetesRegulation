@@ -1243,18 +1243,27 @@ def compare_miRNA_mRNA_match_strength_single(miRNA,mRNA, debugLog = True):
 
         _max_match_strength = 0.0
         i = 0
+        total_opcounts = 0
         for character in mRNA:
             if i > (mRNA_size - miRNA_size):
                 break
             mRNA_substring = mRNA[i:int(i+miRNA_size)] # CUDA block does this
             num_matches = 0
             for j in range(0, miRNA_size): # CUDA thread does this
+                total_opcounts += 1
                 if (miRNA[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA[j] == 'G' and mRNA_substring == 'C'):
                     num_matches += 1
             current_match_score = num_matches/miRNA_size
             if current_match_score > _max_match_strength:
                 _max_match_strength = current_match_score
             i += 1
+        
+        # processing is valid, if total_opcounts / ((mRNA_size-miRNA_size)*miRNA_size) == 1
+        if total_opcounts / ((mRNA_size - miRNA_size)*miRNA_size) == 1:
+            logger.debug("opcount score OK")
+        else:
+            logger.debug(f"total_opcounts = {total_opcounts}, mRNA_size = {mRNA_size}, miRNA_size = {miRNA_size} (diff = {mRNA_size - miRNA_size}), opscore = {total_opcounts / ((mRNA_size - miRNA_size)*miRNA_size)}")
+
         return _max_match_strength
 
     # check if miRNA is id
@@ -1299,6 +1308,109 @@ def compare_miRNA_mRNA_match_strength_single(miRNA,mRNA, debugLog = True):
     #        maximum_match_strength = current_match_score
     #    i += 1
     #return maximum_match_strength
+
+def compare_miRNA_mRNA_match_strength_single_v2(miRNA,mRNA, debugLog = True, fileWrite = False, fileWrite_filepath_root = "debug_files"):
+    """
+    Compares the match strength of miRNA and mRNA. This function contains the same algorithm which the CUDA kernels use
+    to brute-force compute the best match miRNA-mRNA match strength. Algorithm anneals entire miRNA nucleotide sequence on
+    all possible mRNA starting nucleotides.
+
+    @param miRNA: a miRNA sequence or id (a MI or HSA id)
+    @param mRNA: a mRNA sequence or id (uniprot id)
+    @param debugLog: if True, will print the forward and backward comparison scores.
+    @param fileWrite: writes the operations to the file
+    @param fileWrite_filepath_root: the root folder where the output will be saved
+
+    @return: the best match strength between miRNA and mRNA
+    """
+    def _compare_sequences(miRNA_seq, mRNA_substring):
+        j = 0
+        successful_matches = 0
+        all_characters = len(miRNA)
+        for character in miRNA:
+            if (miRNA_seq[j] == "A" and mRNA_substring[j] == "T") or (miRNA_seq[j] == "T" and mRNA_substring[j] == "A") or (miRNA_seq[j] == "C" and mRNA_substring[j] == "G") or (miRNA_seq[j] == "G" and mRNA_substring == "C"):
+                successful_matches += 1
+            j+=1
+            constants._d_total_opcounts += 1
+        return successful_matches/float(all_characters)
+    
+    def _compare_sequences_debug(miRNA_seq, mRNA_substring, anneal_start_index, filepath):
+        j = 0
+        successful_matches = 0
+        all_characters = len(miRNA)
+        _d_matches_str = ""
+        with open(filepath, "a") as f:
+            for character in miRNA:
+                if ((miRNA_seq[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA_seq[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA_seq[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA_seq[j] == 'G' and mRNA_substring == 'C')):
+                    _d_matches_str += "T"
+                    successful_matches += 1
+                else:
+                    _d_matches_str += " "
+                j+=1
+                constants._d_total_opcounts += 1
+            # sequence_op is an operation performed on a single sequence
+            f.write(f"seq_op {int(constants._d_total_opcounts/len(miRNA))}, op {constants._d_total_opcounts}: {successful_matches}/{all_characters} = {successful_matches/float(all_characters)}\n")
+            f.write(f"miRNA: {miRNA_seq}\n")
+            f.write(f"mRNA:  {mRNA_substring}\n")
+            f.write(f"match: {_d_matches_str}\n")
+            f.write("\n")
+        
+        return successful_matches/float(all_characters)
+    
+    # check if miRNA is id
+    _d_miRNA_id = ""
+    _d_mRNA_id = ""
+    if "hsa" in miRNA or "MI" in miRNA:
+        _d_miRNA_id = miRNA
+        miRNA = find_miRNA_sequence(miRNA)
+
+    # check if mRNA is id
+    if "Prot" in mRNA:
+        _d_mRNA_id = mRNA
+        mRNA = find_mRNA_sequence(mRNA)
+
+    _d_mRNA_id_rep = _d_mRNA_id.replace(":","") 
+    fileWrite_filepath_p = os.path.join(fileWrite_filepath_root, f"{_d_miRNA_id}-{_d_mRNA_id_rep}_comparison_log.txt") # full filepath to outfile for log
+    miRNA_size = len(miRNA)
+    mRNA_size = len(mRNA)
+    constants._d_total_opcounts = 0
+
+    if(fileWrite == True):
+        with open(fileWrite_filepath_p, "a") as f:
+            f.write(f"# Comparison log for {_d_miRNA_id} - {_d_mRNA_id}\n")
+            f.write(f"#\n")
+            f.write(f"# miRNA_seq: {miRNA}\n")
+            f.write(f"# mRNA_seq: {mRNA}\n")
+            f.write("\n")
+
+    i = 0
+    max_match_strength = 0.0
+    for character in mRNA:
+        if i > (mRNA_size - miRNA_size):
+            break
+        
+        mRNA_substring = mRNA[i:int(i+miRNA_size)]
+        if fileWrite == False:
+            match_strength_straight = _compare_sequences(miRNA, mRNA_substring)
+            match_strength_reversed = _compare_sequences(miRNA, mRNA_substring[::-1])
+        else: # debug to file output
+            match_strength_straight = _compare_sequences_debug(miRNA, mRNA_substring, i, fileWrite_filepath_p)
+            match_strength_reversed = _compare_sequences_debug(miRNA, mRNA_substring[::-1], i, fileWrite_filepath_p)
+        
+        match_strength = 0
+        if(match_strength_straight > match_strength_reversed):
+            match_strength = match_strength_straight
+        else:
+            match_strength = match_strength_reversed
+        if match_strength > max_match_strength:
+            max_match_strength = match_strength
+        i += 1
+    
+    if debugLog == True:
+        logger.debug(f"{_d_miRNA_id} :: {_d_mRNA_id} match score: {max_match_strength}")
+        logger.debug(f"miRNA_len = {miRNA_size}, mRNA_len = {mRNA_size} (diff = {mRNA_size - miRNA_size}): opcount_total = {constants._d_total_opcounts/2}") # divide total opcounts by 2, because we do a forward and reverse comparison!
+
+    return max_match_strength
 
 def init_CUDA_sequence_comparison_results_json(cuda_analysis_filepath = "test_run_2/sequence_comparison_results.json"):
     """

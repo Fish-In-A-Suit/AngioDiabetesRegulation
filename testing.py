@@ -65,9 +65,11 @@ def main():
 
     # logger.debug(util.find_CUDA_miRNA_mRNA_match_strength('hsa-let-7f-1', 'UniProtKB:Q0VGL1'))
 
-    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("MI0000291", 'UniProtKB:P13688'))
+    logger.debug(util.compare_python_CUDA_miRNA_mRNA_match_strength("MI0000060", 'UniProtKB:Q0VGL1'))
 
-    
+    logger.debug("---")
+
+    logger.debug(util.compare_miRNA_mRNA_match_strength_single_v2("MI0000060", 'UniProtKB:Q0VGL1', debugLog=True, fileWrite=True))
 
     #string = "Word"
     #string_list = [*string]

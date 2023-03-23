@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${vcpkgRoot}/x64-windows/include",
-                "C:/Aljosa/Development/Unity-Github/vcpkg/installed/x64-windows/include",
+                "F:/Development/Unity-Github/vcpkg/installed/x64-windows/include"
             ],
             "defines": [
                 "_DEBUG",

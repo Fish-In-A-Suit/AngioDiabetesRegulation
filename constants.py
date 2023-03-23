@@ -20,6 +20,8 @@ mRNA_id_sequence_dict = {}
 miRNA_id_sequence_dict = {}
 mRNA_miRNA_id_sequence_dicts_isinit = False
 
+_d_total_opcounts = 0 # for debugging miRNA-mRNA strengths
+
 # Positive regulatory terms for search "angiogenesis"
 TERMS_ANGIOGENESIS_POSITIVE_ARRAY = [
     "positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis", "GO:1903589",
