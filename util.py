@@ -1341,7 +1341,7 @@ def compare_miRNA_mRNA_match_strength_single_v2(miRNA,mRNA, debugLog = True, fil
         _d_matches_str = ""
         with open(filepath, "a") as f:
             for character in miRNA:
-                if ((miRNA_seq[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA_seq[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA_seq[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA_seq[j] == 'G' and mRNA_substring == 'C')):
+                if ((miRNA_seq[j] == 'A' and mRNA_substring[j] == 'T') or (miRNA_seq[j] == 'T' and mRNA_substring[j] == 'A') or (miRNA_seq[j] == 'C' and mRNA_substring[j] == 'G') or (miRNA_seq[j] == 'G' and mRNA_substring[j] == 'C')):
                     _d_matches_str += "T"
                     successful_matches += 1
                 else:
