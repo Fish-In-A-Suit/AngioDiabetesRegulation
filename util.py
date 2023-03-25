@@ -851,7 +851,7 @@ def load_human_orthologs():
     This function should be called at runtime once to load the ortholog mapping txt files into proper variables.
     """
     global _uniprot_genes_readlines
-    _uniprot_genes_readlines = readlines("src_data_files/uniprotkb_human_idmapping.dat")
+    _uniprot_genes_readlines = readlines("src_data_files/uniprotkb_human_idmapping.dat") # from https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/idmapping/by_organism/, file HUMAN_9606_idmapping.dat.gz  
     global _zfin_ortholog_readlines
     _zfin_ortholog_readlines = readlines("src_data_files/zfin_human_ortholog_mapping.txt")
     global _xenbase_ortholog_readlines
