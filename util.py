@@ -23,6 +23,54 @@ _xenbase_ortholog_readlines = ""
 _mgi_ortholog_readlines = ""
 _rgd_ortholog_readlines = ""
 
+def read_input_file(filepath=os.path.join(constants.TARGET_FOLDER, "input.txt")):
+    """
+    returns dictionary of the contents of the input file
+    {
+    setting_name:value,
+    processes:[{"name":"process_name1", "direction":"+"}],
+    GO_terms: [{"GO_id":"GO:1903589", "process":"angio", "direction":"+", "weight":1}]
+    }
+    """
+    output = {}
+    temp_processes = []
+    temp_GO = []
+    with open(filepath, "r") as read_content:
+        read_lines = read_content.read().splitlines()[2:] #skip first 2 lines
+        section = "" #what is the current section i am reading
+        for line in read_lines:
+            if "#settings" in line:
+                section = "settings"
+                continue
+            elif "#processes" in line:
+                section = "process"
+                continue
+            elif "#GO_terms" in line:
+                section = "GO"
+                continue
+            if section == "settings":
+                chunks = line.split(' ')
+                output[chunks[0]] = chunks[1]
+            elif section == "process":
+                chunks = line.split(' ')
+                if "processes" in output.keys():
+                    temp_processes = output["processes"]
+                temp_processes.append({"name":chunks[0], "direction":chunks[1]})
+                output["processes"] = temp_processes
+            elif section == "GO":
+                chunks = line.split(' ')
+                if "GO_terms" in output.keys():
+                    temp_GO = output["GO_terms"]
+                temp_GO.append({"GO_id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3]})
+                output["GO_terms"] = temp_GO
+    
+    return output
+
+
+def get_array_terms_from_input_list(input_list, filter=[]):
+    output = [element["GO_id"] for element in input_list if all(x in element.values() for x in filter)]
+    return output
+
 
 def get_array_terms(array_name, term_shrink=True):
     """
@@ -448,9 +496,9 @@ def get_dict_key_at_index(dictionary, index):
     """
     Returns the value of the dictionary key at specified index.
     """
-    keys_list = list(dictionary) # call list(dict) on a dictionary to return a list of its keys
+    keys_list = list(dictionary.keys()) # call list(dict) on a dictionary to return a list of its keys
     key_at_index = keys_list[index]
-    return 
+    return key_at_index
 
 def get_dict_key_at_value(dictionary, in_value):
     """

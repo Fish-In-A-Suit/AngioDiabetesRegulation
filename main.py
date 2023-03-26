@@ -16,7 +16,37 @@ Introduction to Gene Ontology:
 """
 
      
+import logging
+logger = logging.getLogger(__name__)
 
+import util
+
+
+def main():
+   run_get_products = True
+   run_score_products = False
+   run_get_mRNA = False
+   run_predict_miRNA_overlap = False
+   run_score_miRNA = False
+   
+   inputs = util.read_input_file()
+
+   if run_get_products:
+      terms = util.get_array_terms_from_input_list(inputs["GO_terms"])
+      import dev_go_download
+      dev_go_download.main(terms)
+
+   if run_score_products:
+      import dev_scoring_products_basic
+      dev_scoring_products_basic.main()
+
+   
+
+if __name__ == '__main__':
+    import logging.config
+    import logging_config as cfg
+    logging.config.dictConfig(cfg.log_dict)
+    main()
 
 
 

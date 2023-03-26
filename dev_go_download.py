@@ -14,6 +14,7 @@ import datetime
 import threading
 from win10toast import ToastNotifier
 import winsound
+import traceback
 
 import logging
 logger = logging.getLogger(__name__)
@@ -66,10 +67,17 @@ def get_GO_products_from_term_API(term):
     parameters = {
         "rows": 10000000
     }
-
-    # Get JSON response for current term
-    response = requests.get(
+    
+    for _ in range(3):
+        try:
+            response = requests.get(
         f"http://api.geneontology.org/api/bioentity/function/{term}/genes", params=parameters)
+            if response.ok:
+                break
+        except Exception as exc:
+            logger.info(traceback.format_exc())
+            time.sleep(3)
+
     genes = []
     associations = response.json()['associations']
     for item in associations:
@@ -561,7 +569,7 @@ def exit_handler():
         logger.info("No exit handler code specified (FLAG_EXIT_HANDLER_CODE)")
 
 
-def main():
+def main(terms_list=None):
     # register listeners/handlers
     atexit.register(exit_handler)
 
@@ -590,9 +598,10 @@ def main():
     # find_genes_related_to_GO_terms(terms, ask_for_overrides = False, destination_folder="term_genes/homosapiens_only=false,v1")
 
     # new main functions
-    # terms = ["GO:0016525"]
-    terms = util.get_array_terms("ALL")
-    find_products_related_to_GO_terms_new(terms, destination_folder=constants.TARGET_FOLDER)
+    if terms_list is None:
+        terms_list = ["GO:0016525"]
+    #terms = util.get_array_terms("ALL")
+    find_products_related_to_GO_terms_new(terms_list, destination_folder=constants.TARGET_FOLDER)
 
     # showcase functions:
     # this is how to retrieve uniprotId description (function) from uniprotId:

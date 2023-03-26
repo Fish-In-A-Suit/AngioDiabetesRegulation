@@ -1,0 +1,86 @@
+###Input file for Term Enrichment System###
+#[name] is the start of new secretion and includes description of data, data is space delimited
+#settings
+homosapiens_only True
+#processes [proces name] [to be expressed + or suppressed -]
+diabetes +
+angio +
+#GO_terms [GO id] [process] [upregulated + or downregulated - or general 0] [weight 0-1]
+GO:1903589 angio + 1
+GO:1903672 angio + 1
+GO:0045766 angio + 1
+GO:0106090 angio + 1
+GO:0090050 angio + 1
+GO:0001935 angio + 1
+GO:1903588 angio - 1
+GO:1903671 angio - 1
+GO:0016525 angio - 1
+GO:0106089 angio - 1
+GO:0090051 angio - 1
+GO:0043532 angio - 1
+GO:0032311 angio - 1
+GO:0001937 angio - 1
+GO:1905563 angio - 1
+GO:1900077 diabetes + 1
+GO:0046627 diabetes + 1
+GO:1900078 diabetes - 1
+GO:0046628 diabetes - 1
+GO:0001525 angio 0 1
+GO:1903587 angio 0 1
+GO:1903670 angio 0 1
+GO:0045765 angio 0 1
+GO:0060055 angio 0 1
+GO:0002040 angio 0 1
+GO:0002041 angio 0 1
+GO:0002042 angio 0 1
+GO:0002043 angio 0 1
+GO:0002044 angio 0 1
+GO:0106088 angio 0 1
+GO:0002045 angio 0 1
+GO:0120078 angio 0 1
+GO:0090049 angio 0 1
+GO:0071116 angio 0 1
+GO:0120077 angio 0 1
+GO:0043534 angio 0 1
+GO:0003158 angio 0 1
+GO:0001938 angio 0 1
+GO:1905564 angio 0 1
+GO:0001936 angio 0 1
+GO:1905562 angio 0 1
+GO:0101023 angio 0 1
+GO:0046950 diabetes 0 1
+GO:0032869 diabetes 0 1
+GO:0044381 diabetes 0 1
+GO:0006006 diabetes 0 1
+GO:0043559 diabetes 0 1
+GO:1901143 diabetes 0 1
+GO:1901142 diabetes 0 1
+GO:0005899 diabetes 0 1
+GO:0038016 diabetes 0 1
+GO:0038020 diabetes 0 1
+GO:0038028 diabetes 0 1
+GO:0008286 diabetes 0 1
+GO:0043560 diabetes 0 1
+GO:0005009 diabetes 0 1
+GO:0005520 diabetes 0 1
+GO:0032593 diabetes 0 1
+GO:0046626 diabetes 0 1
+GO:0014859 diabetes 0 1
+GO:1904205 diabetes 0 1
+GO:0048632 diabetes 0 1
+GO:0014858 diabetes 0 1
+GO:1904206 diabetes 0 1
+GO:0048633 diabetes 0 1
+GO:0014733 diabetes 0 1
+GO:0014857 diabetes 0 1
+GO:1904204 diabetes 0 1
+GO:0048631 diabetes 0 1
+GO:0043501 diabetes 0 1
+GO:0014732 diabetes 0 1
+GO:0014856 diabetes 0 1
+GO:0098528 diabetes 0 1
+GO:0014734 diabetes 0 1
+GO:0014841 diabetes 0 1
+GO:0007519 diabetes 0 1
+GO:0048630 diabetes 0 1
+GO:0043403 diabetes 0 1

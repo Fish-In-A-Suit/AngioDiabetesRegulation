@@ -6,7 +6,7 @@
 #
 #
 
-TARGET_FOLDER = "test_run_2" #just a constant to be used in all stages of analysis
+TARGET_FOLDER = "diabetes_angio_1" #just a constant to be used in all stages of analysis
 
 FILE_miRDB_miRNAs = "src_data_files/miRNAdbs/miRDB_v6.0_prediction_result.txt"
 
