@@ -75,6 +75,22 @@ def main():
 
     total_ops = len(constants.miRNA_id_sequence_dict) * len(constants.mRNA_id_sequence_dict)
     i = 0
+
+    writelines = []
+    for miRNA_id, miRNA_sequence in constants.miRNA_id_sequence_dict.items():
+        logger.debug(f"{i}/{len(constants.miRNA_id_sequence_dict)}: {miRNA_id}")
+        writelines.append(f"{miRNA_id}:\n")
+        i+=1
+        for mRNA_id, mRNA_sequence in constants.mRNA_id_sequence_dict.items():
+            match_strength = util.compare_miRNA_mRNA_match_strength_single_v2(miRNA_sequence, mRNA_sequence, debugLog=False)
+            writelines.append(f"\t{mRNA_id}: {format(match_strength, '.4f')}\n")
+        # write all mRNAs for this miRNA
+        with open("python_sequence_comparison_score.txt", "a") as f:
+            for line in writelines:
+                f.write(line)
+        writelines = [] 
+
+    """ # slower way
     with open("python_sequence_comparison_score.txt", "a") as f:
         for miRNA_id, miRNA_sequence in constants.miRNA_id_sequence_dict.items():
             logger.debug(f"{miRNA_id}:")
@@ -84,6 +100,7 @@ def main():
                 logger.debug(f"    - {mRNA_id}: {match_strength}")
                 f.write(f"\t{mRNA_id}: {format(match_strength, '.4f')}\n")
                 i+=1
+    """
 
     #string = "Word"
     #string_list = [*string]
