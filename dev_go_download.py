@@ -12,7 +12,7 @@ import constants
 import atexit
 import datetime
 import threading
-from win10toast import ToastNotifier
+#from win10toast import ToastNotifier
 import winsound
 import traceback
 
@@ -542,14 +542,14 @@ def exit_handler():
     If there is any last IO operations etc, perform them here.
     """
     global json_dictionaries # prevents bug
-    toast = ToastNotifier()
-    winsound.PlaySound("C:/Windows/Media/notify.wav", winsound.SND_ALIAS)
-    toast.show_toast(
-        "AngioDiab program stopped.",
-        "An error might have occurred.",
-        duration = 20,
-        threaded = True,
-    )
+    #toast = ToastNotifier()
+    #winsound.PlaySound("C:/Windows/Media/notify.wav", winsound.SND_ALIAS)
+    #toast.show_toast(
+    #    "AngioDiab program stopped.",
+    #    "An error might have occurred.",
+    #    duration = 20,
+    #    threaded = True,
+    #)
 
     if FLAG_EXIT_HANDLER_CODE == 1:
         filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "")  # gets the last item in path eg. GO-0001525.json
