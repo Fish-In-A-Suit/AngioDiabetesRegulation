@@ -23,7 +23,7 @@ _xenbase_ortholog_readlines = ""
 _mgi_ortholog_readlines = ""
 _rgd_ortholog_readlines = ""
 
-def read_input_file(filepath=os.path.join(constants.TARGET_FOLDER, "input.txt")):
+def read_input_file(filepath=os.path.join(constants.TARGET_FOLDER, "input.txt"), line_element_delimiter='\t'):
     """
     returns dictionary of the contents of the input file
     {
@@ -32,6 +32,26 @@ def read_input_file(filepath=os.path.join(constants.TARGET_FOLDER, "input.txt"))
     GO_terms: [{"GO_id":"GO:1903589", "process":"angio", "direction":"+", "weight":1}]
     }
     """
+    def process_comment(line, comment_delimiter="#", line_keep_delimiter="###"):
+        """
+        Processes a comment in the line: returns the part of the line before the comment.
+        Example line: 'attg 4 binding_strength # this is an example' -> returns: 'attg 4 binding_strength '
+        
+        Parameters:
+          - line: the line whose comment to process
+          - comment_delimiter: the character used to denote a comment
+          - line_keep_delimiter: a special set of characters to denote a "logic line", the result of which you should keep
+                                 logic lines should be marked with "###" at the start. For a logic line, the returned result is
+                                 line without the line_keep_delimiter
+        """
+        if line_keep_delimiter in line:
+            return line.replace(line_keep_delimiter, "")
+        
+        if comment_delimiter in line:
+            return line.split(comment_delimiter)[0]
+        else:
+            return line
+        
     output = {}
     temp_processes = []
     temp_GO = []
@@ -39,26 +59,27 @@ def read_input_file(filepath=os.path.join(constants.TARGET_FOLDER, "input.txt"))
         read_lines = read_content.read().splitlines()[2:] #skip first 2 lines
         section = "" #what is the current section i am reading
         for line in read_lines:
-            if "#settings" in line:
+            line = process_comment(line)
+            if "settings" in line:
                 section = "settings"
                 continue
-            elif "#processes" in line:
+            elif "processes" in line:
                 section = "process"
                 continue
-            elif "#GO_terms" in line:
+            elif "GO_terms" in line:
                 section = "GO"
                 continue
             if section == "settings":
-                chunks = line.split(' ')
+                chunks = line.split(line_element_delimiter)
                 output[chunks[0]] = chunks[1]
             elif section == "process":
-                chunks = line.split(' ')
+                chunks = line.split(line_element_delimiter)
                 if "processes" in output.keys():
                     temp_processes = output["processes"]
                 temp_processes.append({"name":chunks[0], "direction":chunks[1]})
                 output["processes"] = temp_processes
             elif section == "GO":
-                chunks = line.split(' ')
+                chunks = line.split(line_element_delimiter)
                 if "GO_terms" in output.keys():
                     temp_GO = output["GO_terms"]
                 temp_GO.append({"GO_id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3]})
@@ -173,6 +194,14 @@ def readlines(filepath):
     """
     with open(filepath, "r") as read_content:
         return read_content.readlines()
+
+def writelines(filepath, lines):
+    """
+    Writes 'lines' to filepath file
+    """
+    file = open(filepath, "w")
+    file.writelines(lines)
+    file.close()
 
 def append_to_file(to_append, filepath, append_if_exists=False, add_linebreaks=True):
     """
@@ -1679,6 +1708,82 @@ def convert_thymine_uracil(sequence, T_to_U = 1):
         return sequence.replace("T", "U")
     else:
         return sequence.replace("U", "T")
+
+def replace_in_file(src, dst, src_string, replace_string, ignore_comments=True, comment_delimiter="#"):
+    """
+    Replaces all occurences of 'src_string' with 'replace_string' from 'src' and writes
+    the output to 'dst' file.
+
+    If 'ignore_comments' is True, it ignores all lines delimited by the 'comment_delimiter'
+    """
+    readlines = readlines(src)
+    result_lines = []
+    for line in readlines:
+        if "#" in line:
+            result_lines.append(line)
+            continue
+        res = line.replace(src_string, replace_string)
+        result_lines.append(res)
+        
+    dst_file = open(dst, "w")
+    dst_file.writelines(result_lines)
+    dst_file.close()
+
+def generate_go_names_in_input_file(dst_file):
+    """
+    Appends a Gene Ontology process name in the lines where terms are noted.
+    File = constants.TARGET_FOLDER/input.txt
+    """
+    inputs_file_readlines = readlines(os.path.join(constants.TARGET_FOLDER, "input.txt"))
+    terms_angio_pos = convert_linear_list_to_dictionary(constants.TERMS_ANGIOGENESIS_POSITIVE_ARRAY, flip=True)
+    terms_angio_neg = convert_linear_list_to_dictionary(constants.TERMS_ANGIOGENESIS_NEGATIVE_ARRAY, flip=True)
+    terms_angio_general = convert_linear_list_to_dictionary(constants.TERMS_ANGIOGENESIS_GENERAL, flip=True)
+    terms_dia_pos = convert_linear_list_to_dictionary(constants.TERMS_DIABETES_POSITIVE_ARRAY, flip=True)
+    terms_dia_neg = convert_linear_list_to_dictionary(constants.TERMS_DIABETES_NEGATIVE_ARRAY, flip=True)
+    terms_dia_general = convert_linear_list_to_dictionary(constants.TERMS_DIABETES_GENERAL, flip=True)
+
+    # compute dict between all terms and their represetnative names
+    all_terms_dict = {**terms_angio_pos, **terms_angio_neg, **terms_angio_general, **terms_dia_pos, **terms_dia_neg, **terms_dia_general}
+
+    result_lines = []
+    segment_terms_pointer = 0
+    i = 0
+    for line in inputs_file_readlines:
+        if segment_terms_pointer == 1: # we are now in the GO_terms segment
+            current_GO_term = line.split("\t")[0]
+            current_GO_label = all_terms_dict[current_GO_term]
+            line = line.replace("\n","")
+            line = f"{line}\t{current_GO_label}\n"
+        if segment_terms_pointer == 0 and "GO_terms" in line:
+            segment_terms_pointer = 1
+        i+=1
+
+        result_lines.append(line)
+    
+    writelines(os.path.join(constants.TARGET_FOLDER, "input1.txt"),result_lines)
+        
+
+def convert_linear_list_to_dictionary(linear_list, flip=False):
+    """
+    Converts a linear list of [a1,b1,a2,b2,a3,b3] to dictionary between ax and bx
+    
+    If flip == True, then final dictionary is between bx (keys) and ax (values)
+    """
+    i = 0
+    temp_pair = []
+    result_dict = {}
+    for element in linear_list:
+        temp_pair.append(element)
+        if i % 2 == 1 and i != 0:
+            if flip == False:
+                result_dict[temp_pair[0]] = temp_pair[1]
+            else:
+                result_dict[temp_pair[1]] = temp_pair[0]
+            temp_pair = []
+        i+=1
+    return result_dict
+        
+
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.
 def get_uniprotId_from_geneName(gene_name, recursion=0, prefix="UniProtKB:", trust_genes=True):

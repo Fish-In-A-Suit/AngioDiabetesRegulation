@@ -600,7 +600,8 @@ def main(terms_list=None):
     # new main functions
     if terms_list is None:
         terms_list = ["GO:0016525"]
-    #terms = util.get_array_terms("ALL")
+        # terms_list = util.get_array_terms("ALL")
+
     find_products_related_to_GO_terms_new(terms_list, destination_folder=constants.TARGET_FOLDER)
 
     # showcase functions:

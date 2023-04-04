@@ -29,10 +29,12 @@ def main():
    run_predict_miRNA_overlap = False
    run_score_miRNA = False
    
+   # inputs being read from file implementation
    inputs = util.read_input_file()
 
    if run_get_products:
-      terms = util.get_array_terms_from_input_list(inputs["GO_terms"])
+      # terms = util.get_array_terms("ALL") # old implementation of the angio-diabetes problem
+      terms = util.get_array_terms_from_input_list(inputs["GO_terms"]) 
       import dev_go_download
       dev_go_download.main(terms)
 

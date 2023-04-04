@@ -32,6 +32,13 @@ def main():
     #    if i == 10:
     #        sys.exit()
     #    i+=1
+
+    
+    
+    # util.replace_in_file(os.path.join(constants.TARGET_FOLDER, "input.txt"), os.path.join(constants.TARGET_FOLDER, "input1.txt"), " ", "\t")
+    util.generate_go_names_in_input_file(os.path.join(constants.TARGET_FOLDER, "input1.txt"))
+    return 0 
+
     start_time = util.get_time()
     # util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json")[0]
     # util.get_identifier_values_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section,top10.json","gene")[0]
