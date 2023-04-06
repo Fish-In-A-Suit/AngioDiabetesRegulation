@@ -151,7 +151,7 @@ class ReverseLookup:
         for goterm in tqdm(self.goterms):
             goterm.fetch_products()
 
-    def load_go_term_data_file(self, filename: str) -> None:
+    def load_go_term_datafile(self, filename: str) -> None:
         with open(filename, 'r') as f:
             data = json.load(f)
         for element in data['goterms']:
@@ -161,7 +161,7 @@ class ReverseLookup:
                     term.description = element.get('description')
                     term.products = element.get('products')
 
-    def save_goterms_to_file(self, filename: str) -> None:
+    def save_goterms_to_datafile(self, filename: str) -> None:
         """
         Saves all GOTerm objects to a JSON file.
 
@@ -171,6 +171,31 @@ class ReverseLookup:
         data = {'goterms': []}
         for goterm in self.goterms:
             data['goterms'].append(goterm.__dict__)
+        
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=4)
+
+    def load_products_datafile(self, filename: str) -> None:
+        with open(filename, 'r') as f:
+            data = json.load(f)
+        for element in data['products']:
+            for product in self.products:
+                if product.id in element.values():
+                    product.uniprot_id = element.get('uniprot_id')
+                    product.description = element.get('description')
+                    product.mRNA = element.get('mRNA')
+                    product.scores = element.get('scores')
+
+    def save_products_to_datafile(self, filename: str) -> None:
+        """
+        Saves all Product objects to a JSON file.
+
+        Args:
+            filename (str): The name of the file to save the data to.
+        """
+        data = {'products': []}
+        for product in self.products:
+            data['products'].append(product.__dict__)
         
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)

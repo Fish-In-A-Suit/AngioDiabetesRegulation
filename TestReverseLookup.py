@@ -10,11 +10,13 @@ def test_build():
     print(model.__dict__)
 
 def test_save():
-    model.save_goterms_to_file("diabetes_angio_1/goterms.json")
+    model.create_products_from_goterms()
+    print(model.__dict__)
+    model.save_products_to_datafile("diabetes_angio_1/products.json")
 
 def test_load():
-    model.load_go_term_data_file("diabetes_angio_1/goterms.json")
-    model.save_goterms_to_file("diabetes_angio_1/goterms2.json")
+    model.load_go_term_datafile("diabetes_angio_1/goterms.json")
+
 
 if __name__ == '__main__':
     import logging.config
@@ -25,5 +27,5 @@ if __name__ == '__main__':
     model = ReverseLookup.ReverseLookup.from_file("diabetes_angio_1/input_2.txt")
 
     #test_build()
-    #test_save()
     test_load()
+    test_save()
