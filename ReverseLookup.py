@@ -151,6 +151,13 @@ class ReverseLookup:
         for goterm in tqdm(self.goterms):
             goterm.fetch_products()
 
+    def create_products_from_goterms(self) -> None:
+        products_set = set()
+        for term in self.goterms:
+            products_set.update(term.products)
+        for product in products_set:
+            self.products.append(Product.from_dict({'id':product}))
+
     def load_go_term_datafile(self, filename: str) -> None:
         with open(filename, 'r') as f:
             data = json.load(f)
@@ -199,13 +206,6 @@ class ReverseLookup:
         
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
-
-    def create_products_from_goterms(self) -> None:
-        products_set = set()
-        for term in self.goterms:
-            products_set.update(term.products)
-        for product in products_set:
-            self.products.append(Product.from_dict({'id':product}))
     
     @classmethod
     def from_file(cls, filepath: str) -> 'ReverseLookup':
@@ -284,57 +284,3 @@ class ReverseLookup:
         goterms = [GOTerm.from_dict(d) for d in data['goterms']]
         target_processes = data['target_processes']
         return cls(goterms, target_processes)
-
-
-class ReverseLookupIO:
-    @staticmethod
-    def load(filename: str) -> 'ReverseLookup':
-        """
-        Load a set of Gene Ontology terms and associated products from a file.
-
-        Args:
-            filename (str): The name of the file to load.
-
-        Returns:
-            ReverseLookup: A `ReverseLookup` object containing the GO terms and products.
-        """
-        with open(filename, 'r') as f:
-            data = json.load(f)
-
-        reverse_lookup = ReverseLookup()
-
-        for goterm_data in data['goterms']:
-            goterm = GOTerm.from_dict(goterm_data)
-            reverse_lookup.add_goterm(goterm)
-
-        for product_data in data['products']:
-            product = Product.from_dict(product_data)
-            reverse_lookup.add_product(product)
-
-        return reverse_lookup
-
-    @staticmethod
-    def save(filename: str, reverse_lookup: 'ReverseLookup') -> bool:
-        """
-        Save a set of Gene Ontology terms and associated products to a file.
-
-        Args:
-            filename (str): The name of the file to save to.
-            reverse_lookup (ReverseLookup): A `ReverseLookup` object containing the GO terms and products.
-
-        Returns:
-            bool: True if the file was saved successfully, False otherwise.
-        """
-        data = {
-            'goterms': [goterm.to_dict() for goterm in reverse_lookup.goterms],
-            'products': [product.to_dict() for product in reverse_lookup.products]
-        }
-
-        try:
-            with open(filename, 'w') as f:
-                json.dump(data, f, indent=4)
-            return True
-        except:
-            return False
-
-
