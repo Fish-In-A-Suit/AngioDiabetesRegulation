@@ -6,12 +6,13 @@ import logging
 logger = logging.getLogger(__name__)
 
 class go_analysis_model:
-    def __init__(self, config_filepath = None, target_processes=[], go_terms_definitions=[], target_folder="./", homosapiensonly=True):
+    def __init__(self, config_filepath = None, auto_save=True, target_processes=[], go_terms_definitions=[], target_folder="./", homosapiensonly=True):
         self.target_folder = target_folder
         self.homosapiensonly = homosapiensonly
         self.target_processes = target_processes #list of dicts
         self.go_terms_definitions = go_terms_definitions #list of dicts
         self.config_filepath = os.path.join(target_folder, "config.txt") if config_filepath is None else config_filepath
+        self.auto_save = auto_save
         #flags - maybe better use hash?
         #self.products_download_updated = False
         #self.product_scores_updated = False
@@ -70,7 +71,7 @@ class go_analysis_model:
 
             self.go_terms_definitions.append(dict_to_be_appended)
             logger.info(f"Appended {dict_to_be_appended} to GO term list")
-            self.save_data("config")
+            if self.auto_save: self.save_data("config")
         
         if any(isinstance(el, list | dict | tuple) for el in entries):
             logger.info(f"Detected multiple entries input")
@@ -109,7 +110,7 @@ class go_analysis_model:
 
             dict_to_be_appended = {"process": process, "direction":direction}
             self.target_processes.append(dict_to_be_appended)
-            self.save_data("config")
+            if self.auto_save: self.save_data("config")
 
 
         if any(isinstance(el, list | dict | tuple) for el in entries):
@@ -198,7 +199,7 @@ class go_analysis_model:
 
     def generate_hash(self, object):
         """
-        do we need it?
+        do we need it in separate function?
         """
 
     def save_data(self, which="all"):
@@ -238,6 +239,46 @@ class go_analysis_model:
                 for go_term in self.go_terms_definitions:
                     file.write(f"{go_term['GO_id']}\t{go_term['process']}\t{go_term['direction']}\t{go_term['weight']}\t{go_term['description']}\n")
             logger.info(f"Succesfuly saved the config to {self.config_filepath}")
+
+    def check_model_design(self):
+        """
+        This is a housekeeping function that ensures data is correctly formated before we start the analysis.
+        It prevents many errors due to bad input data. It checks all parts of the model that are most recent,
+        which means their HASH of the configuration matches the HASH of current configuration.
+        1. All GO_id must include "GO:" -> run check_go_dict_format
+        2. All the processes included in go_terms_definitions must also be defined in target_processes
+        3. There must be no duplicates in go_terms_definitions or target_processes
+        ---
+        4. TODO: add for productlist, product_scores, mrna, mirna, mirnascores
+        """
+        #First check the go_terms_definitions to have all the requered elements and GO_id has prefix "GO:"
+        for goterm in self.go_terms_definitions:
+            self.check_go_dict_format(goterm)
+        #if no exceptions were raised then all terms have all requered elements and GO:
+        logger.info(f"All entries to go_terms_definitions have all the required elements and 'GO:' in GO_id")
+        
+        #we will now create two sets; one with all the processes in go_terms_definitions and one with all the processes in target_processes
+        #if they are equal we have the same processes in both declarations
+        go_terms_processes_set = set()
+        target_processes_set = set()
+        for goterm in self.go_terms_definitions:
+            go_terms_processes_set.add(goterm["process"])
+        for proccess in self.target_processes:
+            target_processes_set.add(proccess["process"])
+        if not (go_terms_processes_set == target_processes_set):
+            raise RuntimeError(f"The processes in go_terms_definitions ({go_terms_processes_set}) do not match the processes in target_processes ({target_processes_set})")
+        else:
+            logger.info(f"The processes in go_terms_definitions match the processes in target_processes")
+        
+        #Now we will check for duplicates in go_terms_definitions
+        go_id_set = set()
+        for goterm in self.go_terms_definitions:
+            go_id_set.add(goterm["GO_id"])
+        if not (len(self.go_terms_definitions) == len(go_id_set)):
+            raise RuntimeError(f"There are duplicates ")
+
+
+
 
 
         

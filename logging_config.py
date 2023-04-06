@@ -6,7 +6,7 @@ log_dict = {
             'format': '%(asctime)s [%(levelname)s] %(funcName)s: %(message)s'
         },
         'extended': {
-            'format': '%(asctime)s [%(filename)s:%(lineno)s - %(funcName)s] %(message)s'
+            'format': '%(asctime)s [%(filename)s:%(lineno)s] - [%(funcName)s] %(message)s'
         }
     },
     'handlers': {
