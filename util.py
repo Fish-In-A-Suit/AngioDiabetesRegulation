@@ -585,7 +585,7 @@ def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     elif len(ensembl_index_list) == 1:
         enId=query["results"][index]["uniProtKBCrossReferences"][ensembl_index_list[0]]["id"].split(".")[0]
     elif len(ensembl_index_list) > 1:
-        if any("idoformId" in query["results"][index]["uniProtKBCrossReferences"][i] for i in ensembl_index_list):
+        if any("isoformId" in query["results"][index]["uniProtKBCrossReferences"][i] for i in ensembl_index_list):
             for i in ensembl_index_list:
                 if "-1" in query["results"][index]["uniProtKBCrossReferences"][i]["idoformId"]:
                     enId=query["results"][index]["uniProtKBCrossReferences"][i]["id"].split(".")[0]
