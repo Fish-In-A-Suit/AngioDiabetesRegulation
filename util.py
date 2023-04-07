@@ -575,7 +575,7 @@ def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
     index = next((index for (index, d) in enumerate(query["results"]) if d["primaryAccession"] == uniprotId), None)
     ensembl_index_list=[]
-    xref_arr_length = len(query["results"][index]["uniProtKBCrossReferences"])
+    xref_arr_length = len(query["results"][index]["uniProtKBCrossReferences"]) # the count of cross-referenced databases
     for i in range(xref_arr_length):
         if query["results"][index]["uniProtKBCrossReferences"][i]["database"] == "Ensembl":
             ensembl_index_list.append(i)
@@ -587,7 +587,7 @@ def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
     elif len(ensembl_index_list) > 1:
         if any("isoformId" in query["results"][index]["uniProtKBCrossReferences"][i] for i in ensembl_index_list):
             for i in ensembl_index_list:
-                if "-1" in query["results"][index]["uniProtKBCrossReferences"][i]["idoformId"]:
+                if "-1" in query["results"][index]["uniProtKBCrossReferences"][i]["isoformId"]:
                     enId=query["results"][index]["uniProtKBCrossReferences"][i]["id"].split(".")[0]
         else:
             enId=query["results"][index]["uniProtKBCrossReferences"][1]["id"].split(".")[0] 
