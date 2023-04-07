@@ -80,33 +80,60 @@ class UniProtAPI:
     def get_uniprot_id(self, gene_name, retries=3, timeout=5):
         """
         Given a gene name, returns the corresponding UniProt ID using the UniProt API.
+
+        Parameters:
+        - gene_name (str): name of the gene to search for.
+        - retries (int): maximum number of times to retry the request in case of network errors.
+        - timeout (int): timeout in seconds for the request.
+
+        Returns:
+        - str: UniProt ID if found, None otherwise.
         """
+
+        # Define the URL to query the UniProt API
         url = f"{self.base_url}search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl"
+
+        # Try the request up to `retries` times
         for i in range(retries):
             try:
+                # Make the request and raise an exception if the response status is not 200 OK
                 response = requests.get(url, timeout=timeout)
                 response.raise_for_status()
+
+                # Parse the response JSON and get the list of results
                 results = response.json()["results"]
+
+                # If no results were found, return None
                 if len(results) == 0:
                     return None
+
+                # If only one result was found, accept it automatically
                 elif len(results) == 1:
                     uniprot_id = results[0]["primaryAccession"]
                     logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 result.")
                     return "UniProtKB:" + uniprot_id
 
+                # If multiple results were found, filter out the non-reviewed ones
                 reviewed_ids = []
                 for result in results:
+                    # Skip the result if the gene name is not a match
                     if gene_name not in result["genes"][0]["geneName"]["value"]:
                         continue
+                    # Skip the result if it is not reviewed
                     if "TrEMBL" not in result["entryType"]:
                         reviewed_ids.append(result)
+
+                # If no reviewed result was found, return None
                 if len(reviewed_ids) == 0:
                     return None
+
+                # If only one reviewed result was found, accept it automatically
                 elif len(reviewed_ids) == 1:
                     uniprot_id = reviewed_ids[0]["primaryAccession"]
                     logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 reviewed result.")
                     return "UniProtKB:" + uniprot_id
 
+                # If multiple reviewed results were found, ask the user to choose one
                 logger.info(f"Multiple reviewed results found for {gene_name}. Please choose the correct UniProt ID from the following list:")
                 for i, result in enumerate(reviewed_ids):
                     genes = result["genes"]
@@ -117,16 +144,22 @@ class UniProtAPI:
                             for synonym in gene["synonyms"]:
                                 impact_genes.add(synonym["value"])
                     print(f"{i + 1}. {result['primaryAccession']} ({', '.join(impact_genes)})")
-                #choice = input("> ")
-                choice = "1"
-                if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):
+                # Get the user's choice and return the corresponding UniProt ID
+                # choice = input("> ")  # prompt the user for input, but commented out for now
+                choice = "1"  # for testing purposes, use "1" as the user's choice
+                if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):  # check if the user's choice is valid
+                    # get the UniProt ID of the chosen result and return it
                     uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
                     return "UniProtKB:" + uniprot_id
                 else:
+                    # raise an error if the user's choice is not valid
                     raise ValueError(f"Invalid choice: {choice}")
             except requests.exceptions.RequestException:
+                # if there was an error with the HTTP request, log a warning
                 logger.warning(f"Failed to fetch UniProt data for {gene_name}")
+            # wait for the specified timeout before retrying the request
             time.sleep(timeout)
+            # if all retries fail, return None
         return None
 
     
