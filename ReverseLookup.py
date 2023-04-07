@@ -118,7 +118,7 @@ class UniProtAPI:
                                 impact_genes.add(synonym["value"])
                     print(f"{i + 1}. {result['primaryAccession']} ({', '.join(impact_genes)})")
                 #choice = input("> ")
-                choice = 1
+                choice = "1"
                 if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):
                     uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
                     return "UniProtKB:" + uniprot_id
