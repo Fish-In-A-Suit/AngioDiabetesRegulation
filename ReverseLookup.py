@@ -5,7 +5,8 @@ import os
 from typing import List, Dict, Set, Optional
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
-import urllib
+from prettytable import PrettyTable
+from texttable import Texttable
 
 import logging
 # Initialize logger
@@ -116,7 +117,8 @@ class UniProtAPI:
                             for synonym in gene["synonyms"]:
                                 impact_genes.add(synonym["value"])
                     print(f"{i + 1}. {result['primaryAccession']} ({', '.join(impact_genes)})")
-                choice = input("> ")
+                #choice = input("> ")
+                choice = 1
                 if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):
                     uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
                     return "UniProtKB:" + uniprot_id
@@ -132,7 +134,22 @@ class UniProtAPI:
         """
         Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
         """
-        return None
+        uniprot_id = uniprot_id.split(":")[1]
+        url = f"{self.base_url}search?query=gene:{uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,protein_name"
+        for i in range(retries):
+            try:
+                response = requests.get(url, timeout=timeout)
+                response.raise_for_status()
+                results = response.json()["results"]
+                if len(results) == 0:
+                    return {}
+                else:
+                    full_name = results[0]["proteinDescription"]["recommendedName"]["fullName"]["value"]
+                    return {"full_name" : full_name}
+            except requests.exceptions.RequestException:
+                logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
+            time.sleep(timeout)
+        return {}
 
 class HumanOrthologFinder:
     def __init__(self):
@@ -365,14 +382,14 @@ class RGDHumanOrthologFinder(HumanOrthologFinder):
         return f"[RgdError_No-human-ortholog-found:product_id={product_id}"
 
 class GOTerm:
-    def __init__(self, id: str, process: str, regulation_type: str, name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: List[str] = []):
+    def __init__(self, id: str, process: str, direction: str, name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: List[str] = []):
         """
         A class representing a Gene Ontology term.
 
         Args:
             id (str): The ID of the GO term.
             process (str): The name of the biological process associated with the GO term.
-            regulation_type (str): The type of regulation associated with the GO term (e.g. positive or negative or general).
+            direction (str): The type of regulation associated with the GO term (e.g. positive or negative or general).
             name (str): Name (optional).
             description (str): A description of the GO term (optional).
             weight (float): The weight of the GO term.
@@ -380,10 +397,10 @@ class GOTerm:
         """
         self.id = id
         self.process = process
-        self.regulation_type = regulation_type
+        self.direction = direction
         self.name = name
         self.description = description
-        self.weight = weight
+        self.weight = float(weight)
         self.products = products
 
     def fetch_name_description(self, api: GOApi):
@@ -410,7 +427,7 @@ class GOTerm:
         Returns:
             A new instance of the GOTerm class.
         """
-        goterm = cls(d['id'], d['process'], d['regulation_type'], d.get('name'), d.get('description'), d.get('weight', 1.0), d.get('products', []))
+        goterm = cls(d['id'], d['process'], d['direction'], d.get('name'), d.get('description'), d.get('weight', 1.0), d.get('products', []))
         return goterm
 
 class Product:
@@ -440,6 +457,12 @@ class Product:
                 uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
                 if uniprot_id is not None:
                     self.uniprot_id = uniprot_id
+
+    def fetch_Uniprot_info(self, uniprot_api: UniProtAPI) -> None:
+        if self.uniprot_id == None: return
+        full_name=uniprot_api.get_uniprot_info(self.uniprot_id).get("full_name")
+        if full_name is not None:
+            self.description = full_name
                 
 
     @classmethod
@@ -536,6 +559,132 @@ class ReverseLookup:
             self.save_products_to_datafile('crash_products.json')
             # Re-raise the exception so that the caller of the method can handle it.
             raise e    
+
+    def fetch_Uniprot_infos(self) -> None:
+        try:   
+            uniprot_api = UniProtAPI()
+            # Iterate over each Product object in the ReverseLookup object.
+            with logging_redirect_tqdm():
+                for product in tqdm(self.products):
+                    # Check if the Product object doesn't have a UniProt ID.
+                    if product.description == None and product.uniprot_id is not None:
+                        # If it doesn't, fetch UniProt data for the Product object.
+                        product.fetch_Uniprot_info(uniprot_api)
+        except Exception as e:
+            raise e 
+
+    def score_products(self) -> None:
+        def _opposite_direction(direction):
+            if direction == "0":
+                return "0"
+            elif direction == "+":
+                return "-"
+            elif direction == "-":
+                return "+"
+
+        def adv_score(goterms_list: List[GOTerm]) -> float:
+            score = 0.0
+
+            a = 10
+            b1 = 2
+            b2 = 0.5
+            c1 = 1
+            c2 = 0.1
+
+            # Check if all target processes are regulated in the same direction as the GOTerms in the list
+            # and none of them are regulated in the opposite direction
+            if (
+                # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
+                all(
+                    any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                    for process in self.target_processes
+                )
+                # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+                and not any(
+                    any(_opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                    for process in self.target_processes
+                )
+            ):
+                # If all target processes are regulated in the same direction, add a points to the score
+                score += a
+
+            # Check if all target processes are regulated in the opposite direction as the GOTerms in the list
+            # and none of them are regulated in the same direction
+            if (
+                # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+                all(
+                    any(_opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                    for process in self.target_processes
+                )
+                # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
+                and not any(
+                    any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                    for process in self.target_processes
+                )
+            ):
+                # If all target processes are regulated in the opposite direction, subtract a points from the score
+                score -= a
+
+            # Calculate the score based on the number of processes in target_processes that are regulated
+            # by GOTerms in the same direction as defined in the list
+            score += sum(
+                (b1**(b2 * sum(
+                    # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
+                    goterm.weight for goterm in goterms_list if process['direction'] == goterm.direction and process['process'] == goterm.process)))
+                    for process in self.target_processes
+            )
+            # Calculate the score based on the number of processes in target_processes that are regulated
+            # by GOTerms in the oposite direction as defined in the list
+            score -= sum(
+                (b1**(b2 * sum(
+                    # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
+                    goterm.weight for goterm in goterms_list if _opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process)))
+                    for process in self.target_processes
+            )
+
+            # Calculate the score by multiplying the current score with a factor based on the number of GOTerms with direction "0"
+            score = score * (
+                c1  # Start with a base factor of 1
+                + (c2  # Add a factor based on a constant value c
+                    * sum(  # Multiply c by the sum of weights of all GOTerms with direction "0"
+                        goterm.weight  # Get the weight of each GOTerm
+                        for goterm in goterms_list  # Iterate over all GOTerms in the list
+                        if goterm.direction == "0"  # Only consider GOTerms with direction "0"
+                    )
+                )
+            )
+
+            return score
+
+        def nterms_per_process(goterms_list: List[GOTerm]) -> dict:
+            # Create an empty dictionary to store the count of GOTerms for each process and direction
+            nterms_dict = {}
+            
+            # Iterate over each process in the target_processes list
+            for process in self.target_processes:
+                # Count the number of GOTerms that have a direction of "+" and a process matching the current process
+                nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if (goterm.direction == "+" and process['process'] == goterm.process))
+                
+                # Count the number of GOTerms that have a direction of "-" and a process matching the current process
+                nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if (goterm.direction == "-" and process['process'] == goterm.process))
+                
+                # Count the number of GOTerms that have a direction of "0" and a process matching the current process
+                nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if (goterm.direction == "0" and process['process'] == goterm.process))
+            
+            # Return the dictionary containing the count of GOTerms for each process and direction
+            return nterms_dict
+
+        for product in self.products:
+            product_id = product.id
+            goterms_list = []
+            for goterm in self.goterms:
+                if product_id in goterm.products:
+                    goterms_list.append(goterm)
+            
+            adv_score_result = adv_score(goterms_list)
+            dict_of_terms_per_process = nterms_per_process(goterms_list)
+
+            product.scores = {"adv_score":adv_score_result, "nterms":dict_of_terms_per_process}
 
     def load_go_term_datafile(self, filename: str) -> None:
         with open(filename, 'r') as f:
@@ -639,13 +788,13 @@ class ReverseLookup:
                     chunks = line.split(LINE_ELEMENT_DELIMITER)
                 elif section == "process":
                     chunks = line.split(LINE_ELEMENT_DELIMITER)
-                    target_processes.append({"process":chunks[0], "regulation_goal":chunks[1]})
+                    target_processes.append({"process":chunks[0], "direction":chunks[1]})
                 elif section == "GO":
                     chunks = line.split(LINE_ELEMENT_DELIMITER)
                     if len(chunks) == 5:
-                        d = {"id":chunks[0], "process":chunks[1], "regulation_type":chunks[2], "weight":chunks[3], "description": chunks[4]}
+                        d = {"id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3], "description": chunks[4]}
                     else:
-                        d = {"id":chunks[0], "process":chunks[1], "regulation_type":chunks[2], "weight":chunks[3]}
+                        d = {"id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3]}
                     go_terms.append(GOTerm.from_dict(d))
         return cls(go_terms, target_processes)
     
@@ -664,3 +813,111 @@ class ReverseLookup:
         goterms = [GOTerm.from_dict(d) for d in data['goterms']]
         target_processes = data['target_processes']
         return cls(goterms, target_processes)
+
+class ReportGenerator:
+    def __init__(self, reverse_lookup: ReverseLookup):
+        self.reverse_lookup = reverse_lookup
+    
+    def _generate_header(self, text: str) -> str:
+        header = f"{'=' * 40}\n{text}\n{'=' * 40}\n"
+        return header
+    
+    def _generate_section(self, text: str) -> str:
+        header = f"{'-' * 40}\n{text}\n{'-' * 40}\n"
+        return header
+
+    def generate_detailed_design_report(self, filepath: str):
+        # Group the GOTerms by process and direction
+        grouped_goterms = {}
+        for target in self.reverse_lookup.target_processes:
+            grouped_goterms[(target["process"], "+")] = []
+            grouped_goterms[(target["process"], "-")] = []
+            grouped_goterms[(target["process"], "0")] = []
+        for goterm in self.reverse_lookup.goterms:
+            key = (goterm.process, goterm.direction)
+            grouped_goterms[key].append(goterm)
+
+        # Generate the report header
+        report = self._generate_header("Detailed design report")
+
+        # Generate the Target Processes section of the report
+        target_processes_table = PrettyTable()
+        target_processes_table.field_names = ["Process", "Direction"]
+        for target in self.reverse_lookup.target_processes:
+            target_processes_table.add_row([target["process"], target["direction"]])
+        report += "\nTarget Processes\n\n" + str(target_processes_table)
+
+        # Generate the GOTerm section of the report
+        goterm_table = PrettyTable()
+        goterm_table.field_names = ["Process", "Direction", "GOTerm ID", "GOTerm Name"]
+        for (process, direction), goterms in grouped_goterms.items():
+            goterm_table.add_row([process, direction, "", ""])
+            for goterm in goterms:
+                goterm_table.add_row(["", "", goterm.id, goterm.name])
+        report += "\n\nGO Terms\n\n" + str(goterm_table)
+
+        # Generate the Product section of the report
+        product_table = PrettyTable()
+        product_table.field_names = ["Product Name", "Product Description", "Involved in Processes"]
+        for product in self.reverse_lookup.products:
+            processes = ", ".join([goterm.id for goterm in self.reverse_lookup.goterms if product.id in goterm.products])
+            product_table.add_row([product.id, product.description, processes])
+        report += "\n\nProducts\n\n" + str(product_table)
+
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        with open(filepath, 'w') as f:
+            f.write(report)
+
+    def generate_summary_report(self, filepath=None):
+            
+        report = ""
+
+        # Generate header
+        report += self._generate_header("MODEL SUMMARY")
+        
+        # Generate the Target Processes section of the report
+        target_processes_table = Texttable()
+        target_processes_table.header(["Process", "Direction"])
+        for target in self.reverse_lookup.target_processes:
+            target_processes_table.add_row([target["process"], target["direction"]])
+        report += "\nTarget Processes\n" + target_processes_table.draw() + '\n\n'
+        
+        # Generate GOTerms summary
+        goterms = self.reverse_lookup.goterms
+        goterms_table = Texttable()
+        goterms_table.header(["Process", "+", "-", "0", "Total"])
+        total_p = 0
+        total_m = 0
+        total_z = 0
+        total = 0
+        for process in self.reverse_lookup.target_processes:
+            process_goterms = [goterm for goterm in goterms if goterm.process == process['process']]
+            n_plus = len([goterm for goterm in process_goterms if goterm.direction == '+'])
+            n_minus = len([goterm for goterm in process_goterms if goterm.direction == '-'])
+            n_zero = len([goterm for goterm in process_goterms if goterm.direction == '0'])
+            n_total = n_plus + n_minus + n_zero
+            total_p += n_plus
+            total_m += n_minus
+            total_z += n_zero
+            total += n_total
+            goterms_table.add_row([f"{process['process']}", n_plus, n_minus, n_zero, n_total])
+        goterms_table.add_row(['Total', total_p, total_m, total_z, total])
+
+        report += "GOTerms Summary\n"
+        report += goterms_table.draw() + '\n\n'
+        
+        # Products
+        histogram_products_table = Texttable()
+        histogram_products_table.header(["Involved in N GOTerms", "N"])
+        num_goterms = []
+        for product in self.reverse_lookup.products:
+            num_goterms.append(len([goterm for goterm in self.reverse_lookup.goterms if product.id in goterm.products]))
+        for i in range (1,max(num_goterms)+1):
+            histogram_products_table.add_row([i, num_goterms.count(i)])
+        histogram_products_table.add_row(["Total", len(self.reverse_lookup.products)])
+        report += "\nProduct distribution\n" + histogram_products_table.draw() + '\n\n'
+
+        # Save to file
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        with open(filepath, 'w') as f:
+            f.write(report)
