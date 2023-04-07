@@ -167,8 +167,33 @@ class UniProtAPI:
         """
         Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
         """
+        def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
+            logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
+            index = next((index for (index, d) in enumerate(query) if d["primaryAccession"] == uniprotId), None)
+            ensembl_index_list=[]
+            xref_arr_length = len(query[index]["uniProtKBCrossReferences"]) # the count of cross-referenced databases
+            for i in range(xref_arr_length):
+                if query[index]["uniProtKBCrossReferences"][i]["database"] == "Ensembl":
+                    ensembl_index_list.append(i)
+
+            if len(ensembl_index_list) == 0:
+                enId = None
+            elif len(ensembl_index_list) == 1:
+                enId=query[index]["uniProtKBCrossReferences"][ensembl_index_list[0]]["id"].split(".")[0]
+            elif len(ensembl_index_list) > 1:
+                if any("isoformId" in query[index]["uniProtKBCrossReferences"][i].keys() for i in ensembl_index_list):
+                    for i in ensembl_index_list:
+                        if "-1" in query[index]["uniProtKBCrossReferences"][i].get("isoformId", ""):
+                            enId=query[index]["uniProtKBCrossReferences"][i]["id"].split(".")[0]
+                try: enId
+                except NameError:
+                    enId=query[index]["uniProtKBCrossReferences"][ensembl_index_list[0]]["id"].split(".")[0] 
+                        
+            logger.info(f"uniprotId {uniprotId} -> ensemblId {enId}")
+            return enId
+    
         uniprot_id = uniprot_id.split(":")[1]
-        url = f"{self.base_url}search?query=gene:{uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,protein_name"
+        url = f"{self.base_url}search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,protein_name"
         for i in range(retries):
             try:
                 response = requests.get(url, timeout=timeout)
@@ -178,7 +203,8 @@ class UniProtAPI:
                     return {}
                 else:
                     full_name = results[0]["proteinDescription"]["recommendedName"]["fullName"]["value"]
-                    return {"full_name" : full_name}
+                    ensembl_id = _return_ensembl_from_id_and_uniprot_query(uniprot_id, results)
+                    return {"full_name" : full_name, "ensembl_id" : ensembl_id}
             except requests.exceptions.RequestException:
                 logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
             time.sleep(timeout)
@@ -464,7 +490,7 @@ class GOTerm:
         return goterm
 
 class Product:
-    def __init__(self, id: str, uniprot_id: str = None, description: str = None, mRNA: str = None, scores: dict = None):
+    def __init__(self, id: str, uniprot_id: str = None, description: str = None, ensembl_id: str= None, mRNA: str = None, scores: dict = None):
         """
         A class representing a product (e.g. a gene or protein).
 
@@ -472,12 +498,14 @@ class Product:
             id (str): The ID of the product.
             uniprot_id (str): The UniProt ID of the product.
             description (str): A description of the product.
+            ensembl_id (str):
             mRNA (str): The mRNA sequence of the product.
             scores (dict): A dictionary of scores associated with the product (e.g. expression score, functional score).
         """
         self.id = id
         self.uniprot_id = uniprot_id
         self.description = description
+        self.ensembl_id = ensembl_id
         self.mRNA = mRNA
         self.scores = {} if scores is None else scores.copy()
     
@@ -493,9 +521,13 @@ class Product:
 
     def fetch_Uniprot_info(self, uniprot_api: UniProtAPI) -> None:
         if self.uniprot_id == None: return
-        full_name=uniprot_api.get_uniprot_info(self.uniprot_id).get("full_name")
+        info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
+        full_name = info_dict.get("full_name")
+        ensembl_id = info_dict.get("ensembl_id")
         if full_name is not None:
             self.description = full_name
+        if ensembl_id is not None:
+            self.ensembl_id = ensembl_id
                 
 
     @classmethod
@@ -509,7 +541,7 @@ class Product:
         Returns:
             Product: A new Product instance created from the input dictionary.
         """
-        return cls(d['id'], d.get('uniprot_id'), d.get('description'), d.get('mRNA'), d.get('scores'))
+        return cls(d['id'], d.get('uniprot_id'), d.get('description'), d.get('ensembl_id'), d.get('mRNA'), d.get('scores'))
 
 class ReverseLookup:
     def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = []):
@@ -752,6 +784,7 @@ class ReverseLookup:
                 if product.id in element.values():
                     product.uniprot_id = element.get('uniprot_id')
                     product.description = element.get('description')
+                    product.ensembl_id = element.get('ensembl_id')
                     product.mRNA = element.get('mRNA')
                     product.scores = element.get('scores')
 

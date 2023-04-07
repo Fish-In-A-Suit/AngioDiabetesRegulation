@@ -1,4 +1,5 @@
 import ReverseLookup
+from wakepy import keepawake
 
 import logging
 logger = logging.getLogger(__name__)
@@ -19,7 +20,7 @@ def test_load():
     model.load_products_datafile("diabetes_angio_1/products.json")
 
 def test_uniprotid():
-    model.fetch_UniprotID_products()
+    #model.fetch_UniprotID_products()
     model.fetch_Uniprot_infos()
 
 def test_scoring():
@@ -37,11 +38,11 @@ if __name__ == '__main__':
     logger.info("testing!")
 
     model = ReverseLookup.ReverseLookup.from_file("diabetes_angio_1/input.txt")
-
-    test_load()
-    #test_build()
-    #test_save()
-    test_uniprotid()
-    #test_scoring()
-    #test_report()
-    test_save()
+    with keepawake(keep_screen_awake=False):
+        test_load()
+        #test_build()
+        #test_save()
+        test_uniprotid()
+        #test_scoring()
+        #test_report()
+        test_save()
