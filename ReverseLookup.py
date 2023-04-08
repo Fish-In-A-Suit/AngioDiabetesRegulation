@@ -1116,8 +1116,8 @@ class Scoring:
         for product_id, overlap in mirna.mRNA_overlaps.items():
             product = next((x for x in self.reverse_lookup.products if x.uniprot_id == product_id), None)
             if product is not None:
-                if overlap >= treshold:
-                    a = -1
+                if overlap >= treshold: #inhibited
+                    a = -1 #deduct the score, since high score indicates the products is favourable for our target processes
                 else:
                     a = 1
                 score += a * product.scores["adv_score"]
