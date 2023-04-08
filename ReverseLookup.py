@@ -7,6 +7,7 @@ from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 from prettytable import PrettyTable
 from texttable import Texttable
+import gzip
 
 import logging
 # Initialize logger
@@ -161,8 +162,7 @@ class UniProtAPI:
             time.sleep(timeout)
             # if all retries fail, return None
         return None
-
-    
+  
     def get_uniprot_info(self, uniprot_id, retries=3, timeout=5):
         """
         Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
@@ -192,8 +192,37 @@ class UniProtAPI:
             logger.info(f"uniprotId {uniprotId} -> ensemblId {enId}")
             return enId
     
+        def _return_refseqnt_from_id_and_uniprot_query(uniprotId, query):
+            logger.debug(f"Starting retrival of refseqNT for uniprotId {uniprotId}")
+            index = next((index for (index, d) in enumerate(query) if d["primaryAccession"] == uniprotId), None)
+            refseqnt_index_list=[]
+            xref_arr_length = len(query[index]["uniProtKBCrossReferences"]) # the count of cross-referenced databases
+            for i in range(xref_arr_length):
+                if query[index]["uniProtKBCrossReferences"][i]["database"] == "RefSeq":
+                    refseqnt_index_list.append(i)
+
+            if len(refseqnt_index_list) == 0:
+                rsntId = None
+            elif len(refseqnt_index_list) == 1:
+                if "properties" in query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]:
+                    rsntId=query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]["properties"][0]["value"]
+            elif len(refseqnt_index_list) > 1:
+                if any("isoformId" in query[index]["uniProtKBCrossReferences"][i].keys() for i in refseqnt_index_list):
+                    for i in refseqnt_index_list:
+                        if "-1" in query[index]["uniProtKBCrossReferences"][i].get("isoformId", ""):
+                            rsntId=query[index]["uniProtKBCrossReferences"][i]["properties"][0]["value"]
+                try: rsntId
+                except NameError:
+                    if "properties" in query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]:
+                        rsntId=query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]["properties"][0]["value"]
+                    else:
+                        rsntId = None
+                        
+            logger.info(f"uniprotId {uniprotId} -> RefSeqNTID {rsntId}")
+            return rsntId
+
         uniprot_id = uniprot_id.split(":")[1]
-        url = f"{self.base_url}search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,protein_name"
+        url = f"{self.base_url}search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,protein_name"
         for i in range(retries):
             try:
                 response = requests.get(url, timeout=timeout)
@@ -202,14 +231,39 @@ class UniProtAPI:
                 if len(results) == 0:
                     return {}
                 else:
+                    #get values!
                     full_name = results[0]["proteinDescription"]["recommendedName"]["fullName"]["value"]
                     ensembl_id = _return_ensembl_from_id_and_uniprot_query(uniprot_id, results)
-                    return {"full_name" : full_name, "ensembl_id" : ensembl_id}
+                    refseq_nt_id = _return_refseqnt_from_id_and_uniprot_query(uniprot_id, results)
+                    return {"full_name" : full_name, "ensembl_id" : ensembl_id, "refseq_nt_id": refseq_nt_id}
             except requests.exceptions.RequestException:
                 logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
             time.sleep(timeout)
         return {}
 
+class EnsemblAPI:
+    def __init__(self, retries=3, timeout=5):
+        self.retries = retries
+        self.timeout = timeout
+
+    def get_sequence(self, ensembl_id, sequence_type="cdna"):
+        """
+        Given an Ensembl ID, returns the corresponding nucleotide sequence using the Ensembl API.
+        """
+        url = f"https://rest.ensembl.org/sequence/id/{ensembl_id}?object_type=transcript;type={sequence_type}"
+        for i in range(self.retries):
+            try:
+                response = requests.get(url, headers={"Content-Type": "text/plain"}, timeout=self.timeout)
+                response.raise_for_status()
+                sequence = response.text
+                logger.info(f"Received sequence for id {ensembl_id}.")
+                return sequence
+            except requests.exceptions.RequestException:
+                logger.warning(f"Failed to fetch Ensembl sequence for {ensembl_id}. Retrying in {self.timeout} seconds.")
+                time.sleep(self.timeout)
+        logger.info(f"Failed to get sequence for id {ensembl_id} after {self.retries} retries.")
+        return None
+    
 class HumanOrthologFinder:
     def __init__(self):
         self.zfin = ZFINHumanOrthologFinder()
@@ -490,45 +544,57 @@ class GOTerm:
         return goterm
 
 class Product:
-    def __init__(self, id: str, uniprot_id: str = None, description: str = None, ensembl_id: str= None, mRNA: str = None, scores: dict = None):
+    def __init__(self, id_synonyms: List[str], uniprot_id: str = None, description: str = None, ensembl_id: str= None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None):
         """
         A class representing a product (e.g. a gene or protein).
 
         Args:
-            id (str): The ID of the product.
+            id_synonyms (str): The list of ID of the product and synonyms. -> after ortholog translation it turns out that some products are the same. 
             uniprot_id (str): The UniProt ID of the product.
             description (str): A description of the product.
             ensembl_id (str):
             mRNA (str): The mRNA sequence of the product.
             scores (dict): A dictionary of scores associated with the product (e.g. expression score, functional score).
         """
-        self.id = id
+        self.id_synonyms = id_synonyms
         self.uniprot_id = uniprot_id
         self.description = description
         self.ensembl_id = ensembl_id
+        self.refseq_nt_id = refseq_nt_id
         self.mRNA = mRNA
         self.scores = {} if scores is None else scores.copy()
     
     def fetch_UniprotID(self, human_ortolog_finder: HumanOrthologFinder, uniprot_api: UniProtAPI) -> None:
-        if 'UniProtKB' in self.id:
-            self.uniprot_id = self.id
-        else:
-            human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(self.id)
+        if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
+            self.uniprot_id = self.id_synonyms[0]
+        elif len(self.id_synonyms) == 1:
+            human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(self.id_synonyms[0])
             if human_ortholog_gene_id is not None:
                 uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
                 if uniprot_id is not None:
                     self.uniprot_id = uniprot_id
 
     def fetch_Uniprot_info(self, uniprot_api: UniProtAPI) -> None:
+        """
+        includes description, ensembl_id and refseq_nt_id
+        """
         if self.uniprot_id == None: return
         info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
         full_name = info_dict.get("full_name")
         ensembl_id = info_dict.get("ensembl_id")
+        refseq_nt_id = info_dict.get("refseq_nt_id")
         if full_name is not None:
             self.description = full_name
         if ensembl_id is not None:
             self.ensembl_id = ensembl_id
-                
+        if refseq_nt_id is not None:
+            self.refseq_nt_id = refseq_nt_id
+    
+    def fetch_mRNA_sequence(self, ensembl_api: EnsemblAPI) -> None:
+        if self.ensembl_id is None: return
+        sequence = ensembl_api.get_sequence(self.ensembl_id)    
+        if sequence is not None:
+            self.mRNA = sequence    
 
     @classmethod
     def from_dict(cls, d: dict) -> 'Product':
@@ -541,10 +607,21 @@ class Product:
         Returns:
             Product: A new Product instance created from the input dictionary.
         """
-        return cls(d['id'], d.get('uniprot_id'), d.get('description'), d.get('ensembl_id'), d.get('mRNA'), d.get('scores'))
+        return cls(d['id_synonyms'], d.get('uniprot_id'), d.get('description'), d.get('ensembl_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores'))
+
+class miRNA:
+    def __init__(self, id: str, sequence: str = None, mRNA_overlaps: Dict[str, float] = None, scores: Dict[str, float] = None) -> None:
+        self.id = id
+        self.sequence = sequence
+        self.mRNA_overlaps = {} if mRNA_overlaps is None else mRNA_overlaps.copy()
+        self.scores = {} if scores is None else scores.copy()
+
+    @classmethod
+    def from_dict(cls, d: dict) -> 'miRNA':
+        return cls(d['id'], d.get('sequence'), d.get('mRNA_overlaps'), d.get('scores'))
 
 class ReverseLookup:
-    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = []):
+    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = []):
         """
         A class representing a reverse lookup for gene products and their associated Gene Ontology terms.
 
@@ -556,6 +633,7 @@ class ReverseLookup:
         self.goterms = goterms
         self.products = products
         self.target_processes = target_processes
+        self.miRNAs = miRNAs
 
     def fetch_all_go_term_names_descriptions(self):
         """
@@ -605,7 +683,7 @@ class ReverseLookup:
         # Iterate over each product in the products_set and create a new Product object from the product ID using the
         # Product.from_dict() classmethod. Add the resulting Product objects to the ReverseLookup object's products list.
         for product in products_set:
-            self.products.append(Product.from_dict({'id':product}))
+            self.products.append(Product.from_dict({'id_synonyms':[product]}))
         logger.info(f"Created Product objects from GOTerm object definitions")
 
     def fetch_UniprotID_products(self) -> None:
@@ -625,6 +703,24 @@ class ReverseLookup:
             # Re-raise the exception so that the caller of the method can handle it.
             raise e    
 
+    def prune_products(self) -> None:
+        # Create a dictionary that maps UniProt ID to a list of products
+        reverse_uniprotid_products = {}
+        for product in self.products:
+            if product.uniprot_id is not None:
+                reverse_uniprotid_products.setdefault(product.uniprot_id, []).append(product)
+
+        # For each UniProt ID that has more than one product associated with it, create a new product with all the synonyms
+        # and remove the individual products from the list
+        for uniprot_id, product_list in reverse_uniprotid_products.items():
+            if len(product_list) > 1:
+                id_synonyms = []
+                for product in product_list:
+                    self.products.remove(product)
+                    id_synonyms.extend(product.id_synonyms)
+                # Create a new product with the collected information and add it to the product list
+                self.products.append(Product(id_synonyms, uniprot_id, product_list[0].description, product_list[0].ensembl_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
+
     def fetch_Uniprot_infos(self) -> None:
         try:   
             uniprot_api = UniProtAPI()
@@ -632,124 +728,57 @@ class ReverseLookup:
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a UniProt ID.
-                    if product.description == None and product.uniprot_id is not None:
+                    if (product.description is None or product.ensembl_id is None or product.refseq_nt_id is None) and product.uniprot_id is not None:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_Uniprot_info(uniprot_api)
         except Exception as e:
             raise e 
 
     def score_products(self) -> None:
-        def _opposite_direction(direction):
-            if direction == "0":
-                return "0"
-            elif direction == "+":
-                return "-"
-            elif direction == "-":
-                return "+"
+        scoring = Scoring(self)
+        with logging_redirect_tqdm():
+            for product in tqdm(self.products):
+                adv_score_result = scoring.adv_product_score(product)
+                dict_of_terms_per_process = scoring.nterms(product)
 
-        def adv_score(goterms_list: List[GOTerm]) -> float:
-            score = 0.0
+                product.scores = {"adv_score":adv_score_result, "nterms":dict_of_terms_per_process}
 
-            a = 10
-            b1 = 2
-            b2 = 0.5
-            c1 = 1
-            c2 = 0.1
+    def fetch_mRNA_sequences(self) -> None:
+        try:   
+            ensembl_api = EnsemblAPI()
+            # Iterate over each Product object in the ReverseLookup object.
+            with logging_redirect_tqdm():
+                for product in tqdm(self.products):
+                    # Check if the Product object doesn't have a EnsemblID
+                    if product.mRNA == None and product.ensembl_id is not None:
+                        # If it has, fetch mRNA sequence data for the Product object.
+                        product.fetch_mRNA_sequence(ensembl_api)
+        except Exception as e:
+            raise e 
 
-            # Check if all target processes are regulated in the same direction as the GOTerms in the list
-            # and none of them are regulated in the opposite direction
-            if (
-                # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
-                all(
-                    any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
-                    for process in self.target_processes
-                )
-                # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
-                and not any(
-                    any(_opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
-                    for process in self.target_processes
-                )
-            ):
-                # If all target processes are regulated in the same direction, add a points to the score
-                score += a
-
-            # Check if all target processes are regulated in the opposite direction as the GOTerms in the list
-            # and none of them are regulated in the same direction
-            if (
-                # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
-                all(
-                    any(_opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
-                    for process in self.target_processes
-                )
-                # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
-                and not any(
-                    any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
-                    for process in self.target_processes
-                )
-            ):
-                # If all target processes are regulated in the opposite direction, subtract a points from the score
-                score -= a
-
-            # Calculate the score based on the number of processes in target_processes that are regulated
-            # by GOTerms in the same direction as defined in the list
-            score += sum(
-                (b1**(b2 * sum(
-                    # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
-                    goterm.weight for goterm in goterms_list if process['direction'] == goterm.direction and process['process'] == goterm.process)))
-                    for process in self.target_processes
-            )
-            # Calculate the score based on the number of processes in target_processes that are regulated
-            # by GOTerms in the oposite direction as defined in the list
-            score -= sum(
-                (b1**(b2 * sum(
-                    # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
-                    goterm.weight for goterm in goterms_list if _opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process)))
-                    for process in self.target_processes
-            )
-
-            # Calculate the score by multiplying the current score with a factor based on the number of GOTerms with direction "0"
-            score = score * (
-                c1  # Start with a base factor of 1
-                + (c2  # Add a factor based on a constant value c
-                    * sum(  # Multiply c by the sum of weights of all GOTerms with direction "0"
-                        goterm.weight  # Get the weight of each GOTerm
-                        for goterm in goterms_list  # Iterate over all GOTerms in the list
-                        if goterm.direction == "0"  # Only consider GOTerms with direction "0"
-                    )
-                )
-            )
-
-            return score
-
-        def nterms_per_process(goterms_list: List[GOTerm]) -> dict:
-            # Create an empty dictionary to store the count of GOTerms for each process and direction
-            nterms_dict = {}
-            
-            # Iterate over each process in the target_processes list
-            for process in self.target_processes:
-                # Count the number of GOTerms that have a direction of "+" and a process matching the current process
-                nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if (goterm.direction == "+" and process['process'] == goterm.process))
-                
-                # Count the number of GOTerms that have a direction of "-" and a process matching the current process
-                nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if (goterm.direction == "-" and process['process'] == goterm.process))
-                
-                # Count the number of GOTerms that have a direction of "0" and a process matching the current process
-                nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if (goterm.direction == "0" and process['process'] == goterm.process))
-            
-            # Return the dictionary containing the count of GOTerms for each process and direction
-            return nterms_dict
-
-        for product in self.products:
-            product_id = product.id
-            goterms_list = []
-            for goterm in self.goterms:
-                if product_id in goterm.products:
-                    goterms_list.append(goterm)
-            
-            adv_score_result = adv_score(goterms_list)
-            dict_of_terms_per_process = nterms_per_process(goterms_list)
-
-            product.scores = {"adv_score":adv_score_result, "nterms":dict_of_terms_per_process}
+    def predict_miRNAs(self) -> None:
+        predictor = miRNAStrengthPrediction()
+        #start with miRDB -> for now the only one
+        with logging_redirect_tqdm():
+            for product in tqdm(self.products):
+                match_dict = predictor.miRDB60.predict_from_product(product)
+                if match_dict is not None:
+                    for miRNA_id, match in match_dict.items():
+                        for mirna in self.miRNAs:
+                            if mirna.id == miRNA_id:
+                                mirna.mRNA_overlaps[product.uniprot_id] = match
+                                break
+                        else:
+                            self.miRNAs.append(miRNA(miRNA_id, mRNA_overlaps={product.uniprot_id : match}))
+        
+    def score_miRNAs(self, overlap_treshold: float = 0.6) -> None:
+        scoring = Scoring(self)
+        with logging_redirect_tqdm():
+            for mirna in tqdm(self.miRNAs):
+                if mirna.mRNA_overlaps is not {}:
+                    basic_score_result = scoring.basic_mirna_score(mirna, overlap_treshold)
+                    #is it okay to override?
+                    mirna.scores = {"basic_score":basic_score_result}
 
     def load_go_term_datafile(self, filename: str) -> None:
         with open(filename, 'r') as f:
@@ -781,7 +810,7 @@ class ReverseLookup:
             data = json.load(f)
         for element in data['products']:
             for product in self.products:
-                if product.id in element.values():
+                if product.id_synonyms[0] in element.values():
                     product.uniprot_id = element.get('uniprot_id')
                     product.description = element.get('description')
                     product.ensembl_id = element.get('ensembl_id')
@@ -802,8 +831,47 @@ class ReverseLookup:
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
     
+    def save_model(self, filepath: str) -> None:
+        data = {}
+        #save options - currently not used
+
+        #save target_process
+        data['target_processes'] = self.target_processes
+        #save goterms
+        for goterm in self.goterms:
+            data.setdefault('goterms', []).append(goterm.__dict__)
+        #save products
+        for product in self.products:
+            data.setdefault('products', []).append(product.__dict__)
+        #save miRNAs
+        for miRNA in self.miRNAs:
+            data.setdefault('miRNAs', []).append(miRNA.__dict__)
+        #write to file
+        with open(filepath, 'w') as f:
+            json.dump(data, f, indent=4)
+
     @classmethod
-    def from_file(cls, filepath: str) -> 'ReverseLookup':
+    def load_model(cls, filepath: str) -> 'ReverseLookup':
+        with open(filepath, "r") as f:
+            data = json.load(f)
+        target_processes = data['target_processes']
+
+        goterms = []
+        for goterm_dict in data['goterms']:
+            goterms.append(GOTerm.from_dict(goterm_dict))
+
+        products = []
+        for product_dict in data.get('products', []):
+            products.append(Product.from_dict(product_dict))
+
+        miRNAs = []
+        for miRNAs_dict in data.get('miRNAs', []):
+            miRNAs.append(miRNA.from_dict(miRNAs_dict))
+        
+        return cls(goterms, target_processes, products, miRNAs)
+
+    @classmethod
+    def from_input_file(cls, filepath: str) -> 'ReverseLookup':
         """
         Creates a ReverseLookup object from a JSON file.
 
@@ -841,6 +909,8 @@ class ReverseLookup:
             section = "" #what is the current section i am reading
             for line in read_lines:
                 line = process_comment(line)
+                if line == "":
+                    continue
                 if "settings" in line:
                     section = "settings"
                     continue
@@ -879,6 +949,180 @@ class ReverseLookup:
         goterms = [GOTerm.from_dict(d) for d in data['goterms']]
         target_processes = data['target_processes']
         return cls(goterms, target_processes)
+
+class miRNAStrengthPrediction:
+    def __init__(self):
+        self.miRDB60 = miRDB60predictor()
+
+class miRDB60predictor(miRNAStrengthPrediction):
+    def __init__(self):
+        self._filepath = "src_data_files/miRNAdbs/miRDB_v6.0_prediction_result.txt.gz"
+        self._check_file()
+        with gzip.open(self._filepath, "rb") as read_content:
+            self._readlines = read_content.readlines()
+            self._readlines = [line.decode("utf-8") for line in self._readlines]
+        logger.info(self._readlines[:10])
+    
+    def _check_file(self):
+        os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
+        if not os.path.exists(self._filepath):
+            url = "https://mirdb.org/download/miRDB_v6.0_prediction_result.txt.gz"
+            response = requests.get(url)
+            with open(self._filepath, "wb") as f:
+                f.write(response.content)
+            logger.info(f"Downloaded miRDB_v6.0_prediction_result.txt.gz to {self._filepath}")
+
+    def predict_from_product(self, product: Product, treshold: float = 0.0) -> Dict[str,float]:
+        """
+        Finds all miRNAs and their match strengths (hsa-miR-xxx, 72.2) from miRDB_readlines for mRNA_refseq (eg. NM_xxxxx).
+
+        Returns: list of lists (total list contains sublists, each sublist contains 2 elements - miRNA and match_strength)
+        """
+        if product.refseq_nt_id is None:
+            return None
+        result_list = {}
+        for line in self._readlines:
+            if product.refseq_nt_id.split(".")[0] in line: # mRNA refseqs are in the format NM_xxxxxx.a, in miRDB only NM_xxxxx is valid (strip .a)
+                splitline = line.split("\t")
+                miRNA = splitline[0]
+                match_strength = float(splitline[2].replace("\n", ""))
+                if match_strength >= treshold:
+                    result_list[miRNA] = match_strength # append a sublist [miRNA, match_strength] to result_list
+        return result_list
+
+class Scoring:
+    def __init__(self, reverse_lookup: ReverseLookup) -> None:
+        self.reverse_lookup = reverse_lookup
+    
+    def _opposite_direction(self, direction: str) -> str:
+        if direction == "0":
+            return "0"
+        elif direction == "+":
+            return "-"
+        elif direction == "-":
+            return "+"
+
+    def _generate_goterms_list_of_product(self, product: Product) -> List[GOTerm]:
+        goterms_list = []
+        for goterm in self.reverse_lookup.goterms:
+            if any(product_id in goterm.products for product_id in product.id_synonyms):
+                goterms_list.append(goterm)
+        return goterms_list
+
+    def adv_product_score(self, product: Product) -> float:
+        a = 10
+        b1 = 2
+        b2 = 0.5
+        c1 = 1
+        c2 = 0.1
+
+        goterms_list = self._generate_goterms_list_of_product(product)
+        score = 0.0
+        # Check if all target processes are regulated in the same direction as the GOTerms in the list
+        # and none of them are regulated in the opposite direction
+        if (
+            # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
+            all(
+                any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+            and not any(
+                any(self._opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+        ):
+            # If all target processes are regulated in the same direction, add a points to the score
+            score += a
+
+        # Check if all target processes are regulated in the opposite direction as the GOTerms in the list
+        # and none of them are regulated in the same direction
+        if (
+            # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+            all(
+                any(self._opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
+            and not any(
+                any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+        ):
+            # If all target processes are regulated in the opposite direction, subtract a points from the score
+            score -= a
+
+        # Calculate the score based on the number of processes in target_processes that are regulated
+        # by GOTerms in the same direction as defined in the list
+        score += sum(
+            (b1**(b2 * sum(
+                # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
+                goterm.weight for goterm in goterms_list if process['direction'] == goterm.direction and process['process'] == goterm.process)))
+                for process in self.reverse_lookup.target_processes
+        )
+        # Calculate the score based on the number of processes in target_processes that are regulated
+        # by GOTerms in the oposite direction as defined in the list
+        score -= sum(
+            (b1**(b2 * sum(
+                # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
+                goterm.weight for goterm in goterms_list if self._opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process)))
+                for process in self.reverse_lookup.target_processes
+        )
+
+        # Calculate the score by multiplying the current score with a factor based on the number of GOTerms with direction "0"
+        score = score * (
+            c1  # Start with a base factor of 1
+            + (c2  # Add a factor based on a constant value c
+                * sum(  # Multiply c by the sum of weights of all GOTerms with direction "0"
+                    goterm.weight  # Get the weight of each GOTerm
+                    for goterm in goterms_list  # Iterate over all GOTerms in the list
+                    if goterm.direction == "0"  # Only consider GOTerms with direction "0"
+                )
+            )
+        )
+
+        return score
+
+    def nterms(self, product: Product) -> dict:
+
+        goterms_list = self._generate_goterms_list_of_product(product)
+
+        # Create an empty dictionary to store the count of GOTerms for each process and direction
+        nterms_dict = {}
+        
+        # Iterate over each process in the target_processes list
+        for process in self.reverse_lookup.target_processes:
+            # Count the number of GOTerms that have a direction of "+" and a process matching the current process
+            nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if (goterm.direction == "+" and process['process'] == goterm.process))
+            
+            # Count the number of GOTerms that have a direction of "-" and a process matching the current process
+            nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if (goterm.direction == "-" and process['process'] == goterm.process))
+            
+            # Count the number of GOTerms that have a direction of "0" and a process matching the current process
+            nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if (goterm.direction == "0" and process['process'] == goterm.process))
+        
+        # Return the dictionary containing the count of GOTerms for each process and direction
+        return nterms_dict
+    
+    def inhibited_products_id(self, mirna: miRNA, treshold: float = 0.6) -> List[str]:
+        inhibited_product_id = []
+        for product_id, overlap in mirna.mRNA_overlaps.items():
+            if overlap >= treshold:
+                inhibited_product_id.append(product_id)
+        return inhibited_product_id
+
+    def basic_mirna_score(self, mirna: miRNA, treshold: float = 0.6) -> float:
+        score = 0.0
+        for product_id, overlap in mirna.mRNA_overlaps.items():
+            product = next((x for x in self.reverse_lookup.products if x.uniprot_id == product_id), None)
+            if product is not None:
+                if overlap >= treshold:
+                    a = -1
+                else:
+                    a = 1
+                score += a * product.scores["adv_score"]
+        return score
+
 
 class ReportGenerator:
     def __init__(self, reverse_lookup: ReverseLookup):
