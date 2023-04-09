@@ -1123,7 +1123,6 @@ class Scoring:
                 score += a * product.scores["adv_score"]
         return score
 
-
 class ReportGenerator:
     def __init__(self, reverse_lookup: ReverseLookup):
         self.reverse_lookup = reverse_lookup
