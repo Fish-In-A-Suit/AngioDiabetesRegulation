@@ -1,0 +1,778 @@
+                       Gene Ontology Reverse Lookup Tool                        
+              Authors: Vladimir Smrkolj (SI), Aljosa Skorjanc (SI)              
+                                   March 2023                                   
+
+
+--------------------------------------------------------------------------------
+                                    GO TERMS                                    
+--------------------------------------------------------------------------------
+GO TERMS STATISTICS
+Products per GO Term (min - avg - max): 0 - 46 - 958
+
+GO TERMS PER PROCESS
++-----------+-----+-----+-----+---------+
+| Process   |   + |   - |   0 |   Total |
++===========+=====+=====+=====+=========+
+| diabetes  |  19 |  17 |  84 |     120 |
++-----------+-----+-----+-----+---------+
+| angio     |   6 |   9 |  23 |      38 |
++-----------+-----+-----+-----+---------+
+| Total     |  25 |  26 | 107 |     158 |
++-----------+-----+-----+-----+---------+
++-----------+--------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+| Process   | +                                                                                                                  | -                                                                                                                      | 0                                                                                                                                         |
++===========+====================================================================================================================+========================================================================================================================+===========================================================================================================================================+
+| diabetes  | GO:1900078 - positive regulation of cellular response to insulin stimulus                                          | GO:1900077 - negative regulation of cellular response to insulin stimulus                                              | GO:0046950 - cellular ketone body metabolic process                                                                                       |
+|           | GO:0046628 - positive regulation of insulin receptor signaling pathway                                             | GO:0046627 - negative regulation of insulin receptor signaling pathway                                                 | GO:0032869 - cellular response to insulin stimulus                                                                                        |
+|           | GO:0032024 - positive regulation of insulin secretion                                                              | GO:0046676 - negative regulation of insulin secretion                                                                  | GO:0044381 - glucose import in response to insulin stimulus                                                                               |
+|           | GO:0043568 - positive regulation of insulin-like growth factor receptor signaling pathway                          | GO:0043569 - negative regulation of insulin-like growth factor receptor signaling pathway                              | GO:0006006 - glucose metabolic process                                                                                                    |
+|           | GO:0038015 - positive regulation of insulin receptor signaling pathway by insulin receptor internalization         | GO:0061179 - negative regulation of insulin secretion involved in cellular response to glucose stimulus                | GO:0043559 - insulin binding                                                                                                              |
+|           | GO:0035774 - positive regulation of insulin secretion involved in cellular response to glucose stimulus            | GO:0038014 - negative regulation of insulin receptor signaling pathway by insulin receptor internalization             | GO:1901143 - insulin catabolic process                                                                                                    |
+|           | GO:0014858 - positive regulation of skeletal muscle cell proliferation                                             | GO:0014859 - negative regulation of skeletal muscle cell proliferation                                                 | GO:1901142 - insulin metabolic process                                                                                                    |
+|           | GO:1904206 - positive regulation of skeletal muscle hypertrophy                                                    | GO:1904205 - negative regulation of skeletal muscle hypertrophy                                                        | GO:0005899 - insulin receptor complex                                                                                                     |
+|           | GO:0048633 - positive regulation of skeletal muscle tissue growth                                                  | GO:0048632 - negative regulation of skeletal muscle tissue growth                                                      | GO:0038016 - insulin receptor internalization                                                                                             |
+|           | GO:0048743 - positive regulation of skeletal muscle fiber development                                              | GO:0048744 - negative regulation of skeletal muscle fiber development                                                  | GO:0038020 - insulin receptor recycling                                                                                                   |
+|           | GO:0048643 - positive regulation of skeletal muscle tissue development                                             | GO:0048642 - negative regulation of skeletal muscle tissue development                                                 | GO:0038028 - insulin receptor signaling pathway via phosphatidylinositol 3-kinase                                                         |
+|           | GO:0043415 - positive regulation of skeletal muscle tissue regeneration                                            | GO:0043417 - negative regulation of skeletal muscle tissue regeneration                                                | GO:0008286 - insulin receptor signaling pathway                                                                                           |
+|           | GO:2001016 - positive regulation of skeletal muscle cell differentiation                                           | GO:2001015 - negative regulation of skeletal muscle cell differentiation                                               | GO:0043560 - insulin receptor substrate binding                                                                                           |
+|           | GO:1902811 - positive regulation of skeletal muscle fiber differentiation                                          | GO:1902810 - negative regulation of skeletal muscle fiber differentiation                                              | GO:0005009 - insulin receptor activity                                                                                                    |
+|           | GO:0014718 - positive regulation of satellite cell activation involved in skeletal muscle regeneration             | GO:1901667 - negative regulation of skeletal muscle satellite cell activation involved in skeletal muscle regeneration | GO:0005520 - insulin-like growth factor binding                                                                                           |
+|           | GO:1902724 - positive regulation of skeletal muscle satellite cell proliferation                                   | GO:1902723 - negative regulation of skeletal muscle satellite cell proliferation                                       | GO:0032593 - insulin-responsive compartment                                                                                               |
+|           | GO:1902726 - positive regulation of skeletal muscle satellite cell differentiation                                 | GO:1902727 - negative regulation of growth factor dependent skeletal muscle satellite cell proliferation               | GO:0046626 - regulation of insulin receptor signaling pathway                                                                             |
+|           | GO:1902728 - positive regulation of growth factor dependent skeletal muscle satellite cell proliferation           |                                                                                                                        | GO:0014733 - regulation of skeletal muscle adaptation                                                                                     |
+|           | GO:0014896 - muscle hypertrophy                                                                                    |                                                                                                                        | GO:0014857 - regulation of skeletal muscle cell proliferation                                                                             |
+|           |                                                                                                                    |                                                                                                                        | GO:1904204 - regulation of skeletal muscle hypertrophy                                                                                    |
+|           |                                                                                                                    |                                                                                                                        | GO:0048631 - regulation of skeletal muscle tissue growth                                                                                  |
+|           |                                                                                                                    |                                                                                                                        | GO:0043501 - skeletal muscle adaptation                                                                                                   |
+|           |                                                                                                                    |                                                                                                                        | GO:0014732 - skeletal muscle atrophy                                                                                                      |
+|           |                                                                                                                    |                                                                                                                        | GO:0014856 - skeletal muscle cell proliferation                                                                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:0098528 - skeletal muscle fiber differentiation                                                                                        |
+|           |                                                                                                                    |                                                                                                                        | GO:0014734 - skeletal muscle hypertrophy                                                                                                  |
+|           |                                                                                                                    |                                                                                                                        | GO:0014841 - skeletal muscle satellite cell proliferation                                                                                 |
+|           |                                                                                                                    |                                                                                                                        | GO:0007519 - skeletal muscle tissue development                                                                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:0048630 - skeletal muscle tissue growth                                                                                                |
+|           |                                                                                                                    |                                                                                                                        | GO:0043403 - skeletal muscle tissue regeneration                                                                                          |
+|           |                                                                                                                    |                                                                                                                        | GO:0048741 - skeletal muscle fiber development                                                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:0035914 - skeletal muscle cell differentiation                                                                                         |
+|           |                                                                                                                    |                                                                                                                        | GO:0014834 - skeletal muscle satellite cell maintenance involved in skeletal muscle regeneration                                          |
+|           |                                                                                                                    |                                                                                                                        | GO:0014816 - skeletal muscle satellite cell differentiation                                                                               |
+|           |                                                                                                                    |                                                                                                                        | GO:0014813 - skeletal muscle satellite cell commitment                                                                                    |
+|           |                                                                                                                    |                                                                                                                        | GO:0014719 - skeletal muscle satellite cell activation                                                                                    |
+|           |                                                                                                                    |                                                                                                                        | GO:1902766 - skeletal muscle satellite cell migration                                                                                     |
+|           |                                                                                                                    |                                                                                                                        | GO:0014817 - skeletal muscle satellite cell fate specification                                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:0014818 - skeletal muscle satellite cell fate determination                                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:0014833 - skeletal muscle satellite stem cell asymmetric division                                                                      |
+|           |                                                                                                                    |                                                                                                                        | GO:0014815 - initiation of skeletal muscle satellite cell activation by growth factor signaling, involved in skeletal muscle regeneration |
+|           |                                                                                                                    |                                                                                                                        | GO:0014716 - skeletal muscle satellite stem cell asymmetric division involved in skeletal muscle regeneration                             |
+|           |                                                                                                                    |                                                                                                                        | GO:0098726 - symmetric division of skeletal muscle satellite stem cell                                                                    |
+|           |                                                                                                                    |                                                                                                                        | GO:0098731 - skeletal muscle satellite stem cell maintenance involved in skeletal muscle regeneration                                     |
+|           |                                                                                                                    |                                                                                                                        | GO:0014717 - regulation of satellite cell activation involved in skeletal muscle regeneration                                             |
+|           |                                                                                                                    |                                                                                                                        | GO:0014843 - growth factor dependent regulation of skeletal muscle satellite cell proliferation                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:0014842 - regulation of skeletal muscle satellite cell proliferation                                                                   |
+|           |                                                                                                                    |                                                                                                                        | GO:0014901 - satellite cell activation involved in skeletal muscle regeneration                                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:0030240 - skeletal muscle thin filament assembly                                                                                       |
+|           |                                                                                                                    |                                                                                                                        | GO:0030241 - skeletal muscle myosin thick filament assembly                                                                               |
+|           |                                                                                                                    |                                                                                                                        | GO:0048742 - regulation of skeletal muscle fiber development                                                                              |
+|           |                                                                                                                    |                                                                                                                        | GO:0048641 - regulation of skeletal muscle tissue development                                                                             |
+|           |                                                                                                                    |                                                                                                                        | GO:0051450 - myoblast proliferation                                                                                                       |
+|           |                                                                                                                    |                                                                                                                        | GO:0014872 - myoblast division                                                                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:0048627 - myoblast development                                                                                                         |
+|           |                                                                                                                    |                                                                                                                        | GO:0048626 - myoblast fate specification                                                                                                  |
+|           |                                                                                                                    |                                                                                                                        | GO:0048625 - myoblast fate commitment                                                                                                     |
+|           |                                                                                                                    |                                                                                                                        | GO:0048628 - myoblast maturation                                                                                                          |
+|           |                                                                                                                    |                                                                                                                        | GO:0051451 - myoblast migration                                                                                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:0007518 - myoblast fate determination                                                                                                  |
+|           |                                                                                                                    |                                                                                                                        | GO:0007520 - myoblast fusion                                                                                                              |
+|           |                                                                                                                    |                                                                                                                        | GO:0045661 - regulation of myoblast differentiation                                                                                       |
+|           |                                                                                                                    |                                                                                                                        | GO:0045663 - positive regulation of myoblast differentiation                                                                              |
+|           |                                                                                                                    |                                                                                                                        | GO:0045662 - negative regulation of myoblast differentiation                                                                              |
+|           |                                                                                                                    |                                                                                                                        | GO:0014839 - myoblast migration involved in skeletal muscle regeneration                                                                  |
+|           |                                                                                                                    |                                                                                                                        | GO:0014835 - myoblast differentiation involved in skeletal muscle regeneration                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:0014844 - myoblast proliferation involved in skeletal muscle regeneration                                                              |
+|           |                                                                                                                    |                                                                                                                        | GO:0014905 - myoblast fusion involved in skeletal muscle regeneration                                                                     |
+|           |                                                                                                                    |                                                                                                                        | GO:0014838 - myoblast fate specification involved in skeletal muscle regeneration                                                         |
+|           |                                                                                                                    |                                                                                                                        | GO:0014914 - myoblast maturation involved in muscle regeneration                                                                          |
+|           |                                                                                                                    |                                                                                                                        | GO:0014908 - myotube differentiation involved in skeletal muscle regeneration                                                             |
+|           |                                                                                                                    |                                                                                                                        | GO:0014906 - myotube cell development involved in skeletal muscle regeneration                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:0043416 - regulation of skeletal muscle tissue regeneration                                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:2001014 - regulation of skeletal muscle cell differentiation                                                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:1902809 - regulation of skeletal muscle fiber differentiation                                                                          |
+|           |                                                                                                                    |                                                                                                                        | GO:0014837 - myoblast fate determination involved in skeletal muscle regeneration                                                         |
+|           |                                                                                                                    |                                                                                                                        | GO:0014836 - myoblast fate commitment involved in skeletal muscle regeneration                                                            |
+|           |                                                                                                                    |                                                                                                                        | GO:0014866 - skeletal myofibril assembly                                                                                                  |
+|           |                                                                                                                    |                                                                                                                        | GO:0051371 - muscle alpha-actinin binding                                                                                                 |
+|           |                                                                                                                    |                                                                                                                        | GO:0014855 - striated muscle cell proliferation                                                                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:0014706 - striated muscle tissue development                                                                                           |
+|           |                                                                                                                    |                                                                                                                        | GO:0055002 - striated muscle cell development                                                                                             |
+|           |                                                                                                                    |                                                                                                                        | GO:0014882 - regulation of myofibril number                                                                                               |
+|           |                                                                                                                    |                                                                                                                        | GO:0014881 - regulation of myofibril size                                                                                                 |
++-----------+--------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+| angio     | GO:1903589 - positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis | GO:1903588 - negative regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis     | GO:0001525 - angiogenesis                                                                                                                 |
+|           | GO:1903672 - positive regulation of sprouting angiogenesis                                                         | GO:1903671 - negative regulation of sprouting angiogenesis                                                             | GO:1903587 - regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis                                 |
+|           | GO:0045766 - positive regulation of angiogenesis                                                                   | GO:0016525 - negative regulation of angiogenesis                                                                       | GO:1903670 - regulation of sprouting angiogenesis                                                                                         |
+|           | GO:0106090 - positive regulation of cell adhesion involved in sprouting angiogenesis                               | GO:0106089 - negative regulation of cell adhesion involved in sprouting angiogenesis                                   | GO:0045765 - regulation of angiogenesis                                                                                                   |
+|           | GO:0090050 - positive regulation of cell migration involved in sprouting angiogenesis                              | GO:0090051 - negative regulation of cell migration involved in sprouting angiogenesis                                  | GO:0060055 - angiogenesis involved in wound healing                                                                                       |
+|           | GO:0001935 - endothelial cell proliferation                                                                        | GO:0043532 - angiostatin binding                                                                                       | GO:0002040 - sprouting angiogenesis                                                                                                       |
+|           |                                                                                                                    | GO:0032311 - angiogenin-PRI complex                                                                                    | GO:0002041 - intussusceptive angiogenesis                                                                                                 |
+|           |                                                                                                                    | GO:0001937 - negative regulation of endothelial cell proliferation                                                     | GO:0002042 - cell migration involved in sprouting angiogenesis                                                                            |
+|           |                                                                                                                    | GO:1905563 - negative regulation of vascular endothelial cell proliferation                                            | GO:0002043 - blood vessel endothelial cell proliferation involved in sprouting angiogenesis                                               |
+|           |                                                                                                                    |                                                                                                                        | GO:0002044 - blood vessel endothelial cell migration involved in intussusceptive angiogenesis                                             |
+|           |                                                                                                                    |                                                                                                                        | GO:0106088 - regulation of cell adhesion involved in sprouting angiogenesis                                                               |
+|           |                                                                                                                    |                                                                                                                        | GO:0002045 - regulation of cell adhesion involved in intussusceptive angiogenesis                                                         |
+|           |                                                                                                                    |                                                                                                                        | GO:0120078 - cell adhesion involved in sprouting angiogenesis                                                                             |
+|           |                                                                                                                    |                                                                                                                        | GO:0090049 - regulation of cell migration involved in sprouting angiogenesis                                                              |
+|           |                                                                                                                    |                                                                                                                        | GO:0071116 - alpha6-beta1 integrin-CYR61 complex                                                                                          |
+|           |                                                                                                                    |                                                                                                                        | GO:0120077 - angiogenic sprout fusion                                                                                                     |
+|           |                                                                                                                    |                                                                                                                        | GO:0043534 - blood vessel endothelial cell migration                                                                                      |
+|           |                                                                                                                    |                                                                                                                        | GO:0003158 - endothelium development                                                                                                      |
+|           |                                                                                                                    |                                                                                                                        | GO:0001938 - positive regulation of endothelial cell proliferation                                                                        |
+|           |                                                                                                                    |                                                                                                                        | GO:1905564 - positive regulation of vascular endothelial cell proliferation                                                               |
+|           |                                                                                                                    |                                                                                                                        | GO:0001936 - regulation of endothelial cell proliferation                                                                                 |
+|           |                                                                                                                    |                                                                                                                        | GO:1905562 - regulation of vascular endothelial cell proliferation                                                                        |
+|           |                                                                                                                    |                                                                                                                        | GO:0101023 - vascular endothelial cell proliferation                                                                                      |
++-----------+--------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------
+                                    PRODUCTS                                    
+--------------------------------------------------------------------------------
+TOP and BOTTOM 5 PRODUCTS
++------------------+---------+----------------------------------------------------------------+
+| UniProtID        | Score   | Protein name                                                   |
++==================+=========+================================================================+
+| UniProtKB:Q16613 | 20.40   | Serotonin N-acetyltransferase                                  |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:Q15465 | 19.40   | Sonic hedgehog protein                                         |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:P01344 | 17.12   | Insulin-like growth factor II                                  |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:Q9NQB0 | 16.24   | Transcription factor 7-like 2                                  |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:Q96EB6 | 15.92   | NAD-dependent protein deacetylase sirtuin-1                    |
++------------------+---------+----------------------------------------------------------------+
+| ----             | ----    | ----                                                           |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:Q96ER9 | -12.99  | Mitochondrial potassium channel                                |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:P49815 | -12.99  | Tuberin                                                        |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:P01375 | -12.99  | Tumor necrosis factor                                          |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:O43506 | -13.20  | Disintegrin and metalloproteinase domain-containing protein 20 |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:A6NFH5 | -14.08  | Fatty acid-binding protein 12                                  |
++------------------+---------+----------------------------------------------------------------+
+| UniProtKB:O75448 | -14.08  | Mediator of RNA polymerase II transcription subunit 24         |
++------------------+---------+----------------------------------------------------------------+
+
+                                UniProtKB:Q16613 - 20.40 - Serotonin N-acetyltransferase                      
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                  | GO description                                                                                       |
++============+===========================================================+======================================================================================================+
+| GO:1903672 | positive regulation of sprouting angiogenesis             | Any process that activates or increases the frequency, rate or extent of sprouting angiogenesis.     |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001935 | endothelial cell proliferation                            | The multiplication or reproduction of endothelial cells, resulting in the expansion of a cell        |
+|            |                                                           | population. Endothelial cells are thin flattened cells which line the inside surfaces of body        |
+|            |                                                           | cavities, blood vessels, and lymph vessels, making up the endothelium.                               |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001525 | angiogenesis                                              | Blood vessel formation when new vessels emerge from the proliferation of pre-existing blood vessels. |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001938 | positive regulation of endothelial cell proliferation     | Any process that activates or increases the rate or extent of endothelial cell proliferation.        |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0014858 | positive regulation of skeletal muscle cell proliferation | Any process that activates or increases the frequency, rate or extent of skeletal muscle cell        |
+|            |                                                           | proliferation.                                                                                       |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0048643 | positive regulation of skeletal muscle tissue development | Any process that activates, maintains or increases the rate of skeletal muscle tissue development.   |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0014856 | skeletal muscle cell proliferation                        | The multiplication or reproduction of skeletal muscle cells, resulting in the expansion of a cell    |
+|            |                                                           | population.                                                                                          |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0098528 | skeletal muscle fiber differentiation                     | The process in which a relatively unspecialized cell acquires specialized features of a skeletal     |
+|            |                                                           | muscle fiber cell. Skeletal muscle fiber differentiation starts with myoblast fusion and the         |
+|            |                                                           | appearance of specific cell markers (this is the cell development step). Then individual skeletal    |
+|            |                                                           | muscle fibers fuse to form bigger myotubes and start to contract.                                    |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0007519 | skeletal muscle tissue development                        | The developmental sequence of events leading to the formation of adult skeletal muscle tissue. The   |
+|            |                                                           | main events are: the fusion of myoblasts to form myotubes that increase in size by further fusion to |
+|            |                                                           | them of myoblasts, the formation of myofibrils within their cytoplasm and the establishment of       |
+|            |                                                           | functional neuromuscular junctions with motor neurons. At this stage they can be regarded as mature  |
+|            |                                                           | muscle fibers.                                                                                       |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0051450 | myoblast proliferation                                    | The multiplication or reproduction of myoblasts, resulting in the expansion of a myoblast cell       |
+|            |                                                           | population. A myoblast is a mononucleate cell type that, by fusion with other myoblasts, gives rise  |
+|            |                                                           | to the myotubes that eventually develop into skeletal muscle fibers.                                 |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0014706 | striated muscle tissue development                        | The process whose specific outcome is the progression of a striated muscle over time, from its       |
+|            |                                                           | formation to the mature structure. Striated muscle contain fibers that are divided by transverse     |
+|            |                                                           | bands into striations, and cardiac and skeletal muscle are types of striated muscle. Skeletal muscle |
+|            |                                                           | myoblasts fuse to form myotubes and eventually multinucleated muscle fibers. The fusion of cardiac   |
+|            |                                                           | cells is very rare and can only form binucleate cells.                                               |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+                                   UniProtKB:Q15465 - 19.40 - Sonic hedgehog protein                          
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                  | GO description                                                                                       |
++============+===========================================================+======================================================================================================+
+| GO:1903672 | positive regulation of sprouting angiogenesis             | Any process that activates or increases the frequency, rate or extent of sprouting angiogenesis.     |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001525 | angiogenesis                                              | Blood vessel formation when new vessels emerge from the proliferation of pre-existing blood vessels. |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0014858 | positive regulation of skeletal muscle cell proliferation | Any process that activates or increases the frequency, rate or extent of skeletal muscle cell        |
+|            |                                                           | proliferation.                                                                                       |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0048643 | positive regulation of skeletal muscle tissue development | Any process that activates, maintains or increases the rate of skeletal muscle tissue development.   |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0014856 | skeletal muscle cell proliferation                        | The multiplication or reproduction of skeletal muscle cells, resulting in the expansion of a cell    |
+|            |                                                           | population.                                                                                          |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0098528 | skeletal muscle fiber differentiation                     | The process in which a relatively unspecialized cell acquires specialized features of a skeletal     |
+|            |                                                           | muscle fiber cell. Skeletal muscle fiber differentiation starts with myoblast fusion and the         |
+|            |                                                           | appearance of specific cell markers (this is the cell development step). Then individual skeletal    |
+|            |                                                           | muscle fibers fuse to form bigger myotubes and start to contract.                                    |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0007519 | skeletal muscle tissue development                        | The developmental sequence of events leading to the formation of adult skeletal muscle tissue. The   |
+|            |                                                           | main events are: the fusion of myoblasts to form myotubes that increase in size by further fusion to |
+|            |                                                           | them of myoblasts, the formation of myofibrils within their cytoplasm and the establishment of       |
+|            |                                                           | functional neuromuscular junctions with motor neurons. At this stage they can be regarded as mature  |
+|            |                                                           | muscle fibers.                                                                                       |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0048741 | skeletal muscle fiber development                         | The process whose specific outcome is the progression of the skeletal muscle fiber over time, from   |
+|            |                                                           | its formation to the mature structure. Muscle fibers are formed by the maturation of myotubes. They  |
+|            |                                                           | can be classed as slow, intermediate/fast or fast.                                                   |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0014706 | striated muscle tissue development                        | The process whose specific outcome is the progression of a striated muscle over time, from its       |
+|            |                                                           | formation to the mature structure. Striated muscle contain fibers that are divided by transverse     |
+|            |                                                           | bands into striations, and cardiac and skeletal muscle are types of striated muscle. Skeletal muscle |
+|            |                                                           | myoblasts fuse to form myotubes and eventually multinucleated muscle fibers. The fusion of cardiac   |
+|            |                                                           | cells is very rare and can only form binucleate cells.                                               |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0055002 | striated muscle cell development                          | The process whose specific outcome is the progression of a striated muscle cell over time, from its  |
+|            |                                                           | formation to the mature structure. Striated muscle cells contain fibers that are divided by          |
+|            |                                                           | transverse bands into striations, and cardiac and skeletal muscle are types of striated muscle.      |
++------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+                                UniProtKB:P01344 - 17.12 - Insulin-like growth factor II                      
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                             | GO description                                                                                       |
++============+======================================================================+======================================================================================================+
+| GO:0045766 | positive regulation of angiogenesis                                  | Any process that activates or increases angiogenesis.                                                |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0046628 | positive regulation of insulin receptor signaling pathway            | Any process that increases the frequency, rate or extent of insulin receptor signaling.              |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0002040 | sprouting angiogenesis                                               | The extension of new blood vessels from existing vessels into avascular tissues, this process        |
+|            |                                                                      | includes the specialization of endothelial cells into leading tip and stalk cells, proliferation and |
+|            |                                                                      | migration of the endothelial cells and cell adhesion resulting in angiogenic sprout fusion or lumen  |
+|            |                                                                      | formation.                                                                                           |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:1905564 | positive regulation of vascular endothelial cell proliferation       | Any process that activates or increases the frequency, rate or extent of vascular endothelial cell   |
+|            |                                                                      | proliferation.                                                                                       |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0006006 | glucose metabolic process                                            | The chemical reactions and pathways involving glucose, the aldohexose gluco-hexose. D-glucose is     |
+|            |                                                                      | dextrorotatory and is sometimes known as dextrose; it is an important source of energy for living    |
+|            |                                                                      | organisms and is found free as well as combined in homo- and hetero-oligosaccharides and             |
+|            |                                                                      | polysaccharides.                                                                                     |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0038028 | insulin receptor signaling pathway via phosphatidylinositol 3-kinase | An insulin receptor signaling pathway in which the signal is transmitted via the                     |
+|            |                                                                      | phosphatidylinositol 3-kinase cascade.                                                               |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0008286 | insulin receptor signaling pathway                                   | The series of molecular signals generated as a consequence of the insulin receptor binding to        |
+|            |                                                                      | insulin.                                                                                             |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0048633 | positive regulation of skeletal muscle tissue growth                 | Any process that activates, maintains or increases the rate of skeletal muscle growth.               |
++------------+----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+                                UniProtKB:Q9NQB0 - 16.24 - Transcription factor 7-like 2                      
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                         | GO description                                                                                      |
++============+==================================================+=====================================================================================================+
+| GO:0045766 | positive regulation of angiogenesis              | Any process that activates or increases angiogenesis.                                               |
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0032024 | positive regulation of insulin secretion         | Any process that activates or increases the frequency, rate or extent of the regulated release of   |
+|            |                                                  | insulin.                                                                                            |
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0006006 | glucose metabolic process                        | The chemical reactions and pathways involving glucose, the aldohexose gluco-hexose. D-glucose is    |
+|            |                                                  | dextrorotatory and is sometimes known as dextrose; it is an important source of energy for living   |
+|            |                                                  | organisms and is found free as well as combined in homo- and hetero-oligosaccharides and            |
+|            |                                                  | polysaccharides.                                                                                    |
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:1901142 | insulin metabolic process                        | The chemical reactions and pathways involving insulin.                                              |
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0048641 | regulation of skeletal muscle tissue development | Any process that modulates the frequency, rate or extent of skeletal muscle tissue development.     |
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0048625 | myoblast fate commitment                         | The process in which the developmental fate of a cell becomes restricted such that it will develop  |
+|            |                                                  | into a myoblast. A myoblast is a mononucleate cell type that, by fusion with other myoblasts, gives |
+|            |                                                  | rise to the myotubes that eventually develop into skeletal muscle fibers.                           |
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0007520 | myoblast fusion                                  | A process in which non-proliferating myoblasts fuse to existing fibers or to myotubes to form new   |
+|            |                                                  | fibers. A myoblast is a mononucleate cell type that, by fusion with other myoblasts, gives rise to  |
+|            |                                                  | the myotubes that eventually develop into skeletal muscle fibers.                                   |
++------------+--------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+                         UniProtKB:Q96EB6 - 15.92 - NAD-dependent protein deacetylase sirtuin-1               
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                                                   | GO description                                                                                       |
++============+============================================================================================+======================================================================================================+
+| GO:0045766 | positive regulation of angiogenesis                                                        | Any process that activates or increases angiogenesis.                                                |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0046628 | positive regulation of insulin receptor signaling pathway                                  | Any process that increases the frequency, rate or extent of insulin receptor signaling.              |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0035774 | positive regulation of insulin secretion involved in cellular response to glucose stimulus | Any process that increases the frequency, rate or extent of the regulated release of insulin that    |
+|            |                                                                                            | contributes to the response of a cell to glucose.                                                    |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001525 | angiogenesis                                                                               | Blood vessel formation when new vessels emerge from the proliferation of pre-existing blood vessels. |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0002042 | cell migration involved in sprouting angiogenesis                                          | The orderly movement of endothelial cells into the extracellular matrix in order to form new blood   |
+|            |                                                                                            | vessels involved in sprouting angiogenesis.                                                          |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001938 | positive regulation of endothelial cell proliferation                                      | Any process that activates or increases the rate or extent of endothelial cell proliferation.        |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0014858 | positive regulation of skeletal muscle cell proliferation                                  | Any process that activates or increases the frequency, rate or extent of skeletal muscle cell        |
+|            |                                                                                            | proliferation.                                                                                       |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+------------------------------
+
+                              UniProtKB:Q96ER9 - -12.99 - Mitochondrial potassium channel                     
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                       | GO description                                                                                      |
++============+================================================================+=====================================================================================================+
+| GO:1905563 | negative regulation of vascular endothelial cell proliferation | Any process that stops, prevents or reduces the frequency, rate or extent of vascular endothelial   |
+|            |                                                                | cell proliferation.                                                                                 |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0046627 | negative regulation of insulin receptor signaling pathway      | Any process that stops, prevents, or reduces the frequency, rate or extent of insulin receptor      |
+|            |                                                                | signaling.                                                                                          |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0032869 | cellular response to insulin stimulus                          | Any process that results in a change in state or activity of a cell (in terms of movement,          |
+|            |                                                                | secretion, enzyme production, gene expression, etc.) as a result of an insulin stimulus. Insulin is |
+|            |                                                                | a polypeptide hormone produced by the islets of Langerhans of the pancreas in mammals, and by the   |
+|            |                                                                | homologous organs of other organisms.                                                               |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0046626 | regulation of insulin receptor signaling pathway               | Any process that modulates the frequency, rate or extent of insulin receptor signaling.             |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+                                          UniProtKB:P49815 - -12.99 - Tuberin                                 
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                       | GO description                                                                                      |
++============+================================================================+=====================================================================================================+
+| GO:1905563 | negative regulation of vascular endothelial cell proliferation | Any process that stops, prevents or reduces the frequency, rate or extent of vascular endothelial   |
+|            |                                                                | cell proliferation.                                                                                 |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0046627 | negative regulation of insulin receptor signaling pathway      | Any process that stops, prevents, or reduces the frequency, rate or extent of insulin receptor      |
+|            |                                                                | signaling.                                                                                          |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0032869 | cellular response to insulin stimulus                          | Any process that results in a change in state or activity of a cell (in terms of movement,          |
+|            |                                                                | secretion, enzyme production, gene expression, etc.) as a result of an insulin stimulus. Insulin is |
+|            |                                                                | a polypeptide hormone produced by the islets of Langerhans of the pancreas in mammals, and by the   |
+|            |                                                                | homologous organs of other organisms.                                                               |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0046626 | regulation of insulin receptor signaling pathway               | Any process that modulates the frequency, rate or extent of insulin receptor signaling.             |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+                                   UniProtKB:P01375 - -12.99 - Tumor necrosis factor                          
++------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                  | GO description                                                                                      |
++============+===========================================================+=====================================================================================================+
+| GO:0001937 | negative regulation of endothelial cell proliferation     | Any process that stops, prevents, or reduces the rate or extent of endothelial cell proliferation.  |
++------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0046627 | negative regulation of insulin receptor signaling pathway | Any process that stops, prevents, or reduces the frequency, rate or extent of insulin receptor      |
+|            |                                                           | signaling.                                                                                          |
++------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0006006 | glucose metabolic process                                 | The chemical reactions and pathways involving glucose, the aldohexose gluco-hexose. D-glucose is    |
+|            |                                                           | dextrorotatory and is sometimes known as dextrose; it is an important source of energy for living   |
+|            |                                                           | organisms and is found free as well as combined in homo- and hetero-oligosaccharides and            |
+|            |                                                           | polysaccharides.                                                                                    |
++------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0045662 | negative regulation of myoblast differentiation           | Any process that stops, prevents, or reduces the frequency, rate or extent of myoblast              |
+|            |                                                           | differentiation. A myoblast is a mononucleate cell type that, by fusion with other myoblasts, gives |
+|            |                                                           | rise to the myotubes that eventually develop into skeletal muscle fibers.                           |
++------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+               UniProtKB:O43506 - -13.20 - Disintegrin and metalloproteinase domain-containing protein 20     
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                       | GO description                                                                                      |
++============+================================================================+=====================================================================================================+
+| GO:0016525 | negative regulation of angiogenesis                            | Any process that stops, prevents, or reduces the frequency, rate or extent of angiogenesis.         |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:1905563 | negative regulation of vascular endothelial cell proliferation | Any process that stops, prevents or reduces the frequency, rate or extent of vascular endothelial   |
+|            |                                                                | cell proliferation.                                                                                 |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:1900077 | negative regulation of cellular response to insulin stimulus   | Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to   |
+|            |                                                                | insulin stimulus.                                                                                   |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0046627 | negative regulation of insulin receptor signaling pathway      | Any process that stops, prevents, or reduces the frequency, rate or extent of insulin receptor      |
+|            |                                                                | signaling.                                                                                          |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| GO:0032869 | cellular response to insulin stimulus                          | Any process that results in a change in state or activity of a cell (in terms of movement,          |
+|            |                                                                | secretion, enzyme production, gene expression, etc.) as a result of an insulin stimulus. Insulin is |
+|            |                                                                | a polypeptide hormone produced by the islets of Langerhans of the pancreas in mammals, and by the   |
+|            |                                                                | homologous organs of other organisms.                                                               |
++------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+                               UniProtKB:A6NFH5 - -14.08 - Fatty acid-binding protein 12                      
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                                                   | GO description                                                                                       |
++============+============================================================================================+======================================================================================================+
+| GO:0016525 | negative regulation of angiogenesis                                                        | Any process that stops, prevents, or reduces the frequency, rate or extent of angiogenesis.          |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0061179 | negative regulation of insulin secretion involved in cellular response to glucose stimulus | Any process that decreases the frequency, rate or extent of the regulated release of insulin that    |
+|            |                                                                                            | contributes to the response of a cell to glucose.                                                    |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001525 | angiogenesis                                                                               | Blood vessel formation when new vessels emerge from the proliferation of pre-existing blood vessels. |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0045765 | regulation of angiogenesis                                                                 | Any process that modulates the frequency, rate or extent of angiogenesis.                            |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0032869 | cellular response to insulin stimulus                                                      | Any process that results in a change in state or activity of a cell (in terms of movement,           |
+|            |                                                                                            | secretion, enzyme production, gene expression, etc.) as a result of an insulin stimulus. Insulin is  |
+|            |                                                                                            | a polypeptide hormone produced by the islets of Langerhans of the pancreas in mammals, and by the    |
+|            |                                                                                            | homologous organs of other organisms.                                                                |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+                   UniProtKB:O75448 - -14.08 - Mediator of RNA polymerase II transcription subunit 24         
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO term    | GO label                                                                                   | GO description                                                                                       |
++============+============================================================================================+======================================================================================================+
+| GO:0016525 | negative regulation of angiogenesis                                                        | Any process that stops, prevents, or reduces the frequency, rate or extent of angiogenesis.          |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0061179 | negative regulation of insulin secretion involved in cellular response to glucose stimulus | Any process that decreases the frequency, rate or extent of the regulated release of insulin that    |
+|            |                                                                                            | contributes to the response of a cell to glucose.                                                    |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0001525 | angiogenesis                                                                               | Blood vessel formation when new vessels emerge from the proliferation of pre-existing blood vessels. |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0045765 | regulation of angiogenesis                                                                 | Any process that modulates the frequency, rate or extent of angiogenesis.                            |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| GO:0032869 | cellular response to insulin stimulus                                                      | Any process that results in a change in state or activity of a cell (in terms of movement,           |
+|            |                                                                                            | secretion, enzyme production, gene expression, etc.) as a result of an insulin stimulus. Insulin is  |
+|            |                                                                                            | a polypeptide hormone produced by the islets of Langerhans of the pancreas in mammals, and by the    |
+|            |                                                                                            | homologous organs of other organisms.                                                                |
++------------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+
+--------------------------------------------------------------------------------
+                                     miRNAs                                     
+--------------------------------------------------------------------------------
++ annotates Product which is in top 5, and - annotates Product which is in bottom 5
+
++-----------------+---------+-----------------------+
+| miRNA           |   score | suppressed products   |
++=================+=========+=======================+
+| hsa-miR-3617-3p | 21.249  | -UniProtKB:P01375     |
+|                 |         | UniProtKB:Q66LE6      |
+|                 |         | UniProtKB:P15169      |
+|                 |         | UniProtKB:Q93052      |
+|                 |         | UniProtKB:P08047      |
+|                 |         | UniProtKB:Q15911      |
+|                 |         | UniProtKB:P30279      |
+|                 |         | UniProtKB:O75509      |
+|                 |         | UniProtKB:O43679      |
+|                 |         | UniProtKB:P10275      |
+|                 |         | UniProtKB:Q8WX93      |
+|                 |         | UniProtKB:O14672      |
+|                 |         | UniProtKB:O95841      |
+|                 |         | UniProtKB:P14921      |
+|                 |         | UniProtKB:P62081      |
+|                 |         | UniProtKB:P49336      |
+|                 |         | UniProtKB:Q7Z6G8      |
+|                 |         | UniProtKB:P45954      |
+|                 |         | UniProtKB:P45983      |
+|                 |         | UniProtKB:P31371      |
+|                 |         | UniProtKB:P14672      |
+|                 |         | UniProtKB:O75626      |
+|                 |         | UniProtKB:P18405      |
+|                 |         | UniProtKB:Q01955      |
+|                 |         | UniProtKB:M0R2J8      |
+|                 |         | UniProtKB:Q8TF65      |
+|                 |         | UniProtKB:Q9H8X2      |
+|                 |         | UniProtKB:P43403      |
+|                 |         | UniProtKB:Q07890      |
+|                 |         | UniProtKB:P52926      |
+|                 |         | UniProtKB:Q6PCE3      |
+|                 |         | UniProtKB:Q15109      |
+|                 |         | UniProtKB:P58005      |
+|                 |         | UniProtKB:Q04771      |
+|                 |         | UniProtKB:Q99798      |
+|                 |         | UniProtKB:P12814      |
+|                 |         | UniProtKB:Q13127      |
+|                 |         | UniProtKB:Q08043      |
+|                 |         | UniProtKB:P37231      |
+|                 |         | UniProtKB:Q9UQ16      |
+|                 |         | UniProtKB:P55290      |
+|                 |         | UniProtKB:Q6NSJ0      |
+|                 |         | UniProtKB:Q8TBX8      |
+|                 |         | UniProtKB:Q15389      |
+|                 |         | UniProtKB:P78325      |
+|                 |         | UniProtKB:Q06330      |
+|                 |         | UniProtKB:P60709      |
+|                 |         | UniProtKB:P12644      |
+|                 |         | UniProtKB:Q9Y5B6      |
+|                 |         | UniProtKB:O15431      |
+|                 |         | UniProtKB:P35568      |
+|                 |         | UniProtKB:Q9H9B1      |
+|                 |         | UniProtKB:Q13873      |
++-----------------+---------+-----------------------+
+| hsa-miR-452-3p  | 19.0108 | -UniProtKB:P01375     |
+|                 |         | UniProtKB:Q66LE6      |
+|                 |         | UniProtKB:Q12797      |
+|                 |         | UniProtKB:P15169      |
+|                 |         | UniProtKB:Q8N2Q7      |
+|                 |         | UniProtKB:P25101      |
+|                 |         | UniProtKB:Q15911      |
+|                 |         | UniProtKB:Q8WWZ7      |
+|                 |         | UniProtKB:P10323      |
+|                 |         | UniProtKB:O00469      |
+|                 |         | UniProtKB:O14639      |
+|                 |         | UniProtKB:Q7L211      |
+|                 |         | UniProtKB:Q5QJU3      |
+|                 |         | UniProtKB:Q9NXU5      |
+|                 |         | UniProtKB:A6NHY2      |
+|                 |         | UniProtKB:Q8TED9      |
+|                 |         | UniProtKB:O43679      |
+|                 |         | UniProtKB:Q75V66      |
+|                 |         | UniProtKB:Q96PD2      |
+|                 |         | UniProtKB:P10275      |
+|                 |         | UniProtKB:P54105      |
+|                 |         | UniProtKB:Q9P2B4      |
+|                 |         | UniProtKB:Q99717      |
+|                 |         | UniProtKB:P23229      |
+|                 |         | UniProtKB:Q8IUR7      |
+|                 |         | UniProtKB:P35609      |
+|                 |         | UniProtKB:Q9NR19      |
+|                 |         | UniProtKB:Q8IW19      |
+|                 |         | UniProtKB:P14921      |
+|                 |         | UniProtKB:Q9UBP0      |
+|                 |         | UniProtKB:P62273      |
+|                 |         | UniProtKB:P62081      |
+|                 |         | UniProtKB:Q13554      |
+|                 |         | UniProtKB:P49336      |
+|                 |         | UniProtKB:Q96MM7      |
+|                 |         | UniProtKB:P35790      |
+|                 |         | UniProtKB:P46736      |
+|                 |         | UniProtKB:Q8N4J0      |
+|                 |         | UniProtKB:P14672      |
+|                 |         | UniProtKB:Q14721      |
+|                 |         | UniProtKB:P0C6C1      |
+|                 |         | UniProtKB:O75626      |
+|                 |         | UniProtKB:Q13489      |
+|                 |         | UniProtKB:P14735      |
+|                 |         | UniProtKB:P40933      |
+|                 |         | UniProtKB:O00231      |
+|                 |         | UniProtKB:P43403      |
+|                 |         | UniProtKB:Q9UPX6      |
+|                 |         | UniProtKB:Q9H0K1      |
+|                 |         | UniProtKB:O43557      |
+|                 |         | UniProtKB:O14523      |
+|                 |         | UniProtKB:Q96PU8      |
+|                 |         | UniProtKB:Q92539      |
+|                 |         | UniProtKB:P57105      |
+|                 |         | UniProtKB:O15041      |
+|                 |         | UniProtKB:Q15109      |
+|                 |         | UniProtKB:Q9NP98      |
+|                 |         | UniProtKB:Q04771      |
+|                 |         | UniProtKB:P13521      |
+|                 |         | UniProtKB:Q6UW88      |
+|                 |         | UniProtKB:Q13542      |
+|                 |         | UniProtKB:Q99798      |
+|                 |         | UniProtKB:P12814      |
+|                 |         | UniProtKB:Q68CP9      |
+|                 |         | UniProtKB:Q9NVD7      |
+|                 |         | UniProtKB:P52799      |
+|                 |         | UniProtKB:Q969H8      |
+|                 |         | UniProtKB:Q8IYA7      |
+|                 |         | UniProtKB:P35398      |
+|                 |         | UniProtKB:Q13127      |
+|                 |         | UniProtKB:Q9Y243      |
+|                 |         | UniProtKB:Q9HDB5      |
+|                 |         | UniProtKB:Q99759      |
+|                 |         | UniProtKB:P55290      |
+|                 |         | UniProtKB:Q9BZB8      |
+|                 |         | UniProtKB:Q9UKG1      |
+|                 |         | UniProtKB:Q8NFZ4      |
+|                 |         | UniProtKB:O15265      |
+|                 |         | UniProtKB:P51589      |
+|                 |         | UniProtKB:P36222      |
+|                 |         | UniProtKB:Q9BYT8      |
+|                 |         | UniProtKB:Q15389      |
+|                 |         | UniProtKB:P78325      |
+|                 |         | UniProtKB:Q7Z699      |
+|                 |         | UniProtKB:P61981      |
+|                 |         | UniProtKB:Q9Y5J3      |
+|                 |         | UniProtKB:Q96LR9      |
+|                 |         | UniProtKB:Q9NWT6      |
+|                 |         | UniProtKB:P12643      |
+|                 |         | UniProtKB:Q9Y466      |
+|                 |         | UniProtKB:Q8IWU6      |
+|                 |         | UniProtKB:P68133      |
+|                 |         | UniProtKB:Q13873      |
++-----------------+---------+-----------------------+
+| hsa-miR-4677-3p | 16.1291 | UniProtKB:P15169      |
+|                 |         | UniProtKB:Q96LZ3      |
+|                 |         | UniProtKB:Q93052      |
+|                 |         | UniProtKB:P51787      |
+|                 |         | UniProtKB:P19634      |
+|                 |         | UniProtKB:P07288      |
+|                 |         | UniProtKB:P35712      |
+|                 |         | UniProtKB:Q9NXU5      |
+|                 |         | UniProtKB:P30279      |
+|                 |         | UniProtKB:O43679      |
+|                 |         | UniProtKB:P54105      |
+|                 |         | UniProtKB:Q9BUJ0      |
+|                 |         | UniProtKB:P04637      |
+|                 |         | UniProtKB:Q5VUG0      |
+|                 |         | UniProtKB:P07858      |
+|                 |         | UniProtKB:P35609      |
+|                 |         | UniProtKB:Q96L91      |
+|                 |         | UniProtKB:P78504      |
+|                 |         | UniProtKB:Q96Q80      |
+|                 |         | UniProtKB:P62081      |
+|                 |         | UniProtKB:O43927      |
+|                 |         | UniProtKB:P49336      |
+|                 |         | UniProtKB:Q9BTM1      |
+|                 |         | UniProtKB:Q7LFL8      |
+|                 |         | UniProtKB:P35790      |
+|                 |         | UniProtKB:Q8N1V2      |
+|                 |         | UniProtKB:Q96QT4      |
+|                 |         | UniProtKB:P52803      |
+|                 |         | UniProtKB:P14672      |
+|                 |         | UniProtKB:O75626      |
+|                 |         | UniProtKB:P36544      |
+|                 |         | UniProtKB:Q52MB2      |
+|                 |         | UniProtKB:P01111      |
+|                 |         | UniProtKB:Q9BT81      |
+|                 |         | UniProtKB:P50148      |
+|                 |         | UniProtKB:Q13489      |
+|                 |         | UniProtKB:Q13347      |
+|                 |         | UniProtKB:Q93008      |
+|                 |         | UniProtKB:O60353      |
+|                 |         | UniProtKB:P43403      |
+|                 |         | UniProtKB:Q8IZF4      |
+|                 |         | UniProtKB:Q9UHP9      |
+|                 |         | UniProtKB:P09486      |
+|                 |         | UniProtKB:Q6UXV4      |
+|                 |         | UniProtKB:Q8N474      |
+|                 |         | UniProtKB:Q8NE79      |
+|                 |         | UniProtKB:P33151      |
+|                 |         | UniProtKB:Q9HBU9      |
+|                 |         | UniProtKB:Q8IY63      |
+|                 |         | UniProtKB:Q01543      |
+|                 |         | UniProtKB:Q9H488      |
+|                 |         | UniProtKB:Q9H1E3      |
+|                 |         | UniProtKB:Q9UPZ6      |
+|                 |         | UniProtKB:P18031      |
+|                 |         | UniProtKB:Q15109      |
+|                 |         | UniProtKB:P58005      |
+|                 |         | UniProtKB:Q04771      |
+|                 |         | UniProtKB:Q14209      |
+|                 |         | UniProtKB:Q99798      |
+|                 |         | UniProtKB:P12814      |
+|                 |         | UniProtKB:O00167      |
+|                 |         | UniProtKB:P23946      |
+|                 |         | UniProtKB:Q6UXB2      |
+|                 |         | UniProtKB:P06400      |
+|                 |         | UniProtKB:Q08043      |
+|                 |         | UniProtKB:O60343      |
+|                 |         | UniProtKB:Q92610      |
+|                 |         | UniProtKB:Q9HDB5      |
+|                 |         | UniProtKB:Q8IUK5      |
+|                 |         | UniProtKB:Q96E52      |
+|                 |         | UniProtKB:Q68D42      |
+|                 |         | UniProtKB:Q9UMS6      |
+|                 |         | UniProtKB:Q9BZB8      |
+|                 |         | UniProtKB:P25067      |
+|                 |         | UniProtKB:O95715      |
+|                 |         | UniProtKB:O15403      |
+|                 |         | UniProtKB:Q8IZQ8      |
+|                 |         | UniProtKB:P36222      |
+|                 |         | UniProtKB:Q9BYF1      |
+|                 |         | UniProtKB:Q15389      |
+|                 |         | UniProtKB:P78325      |
+|                 |         | UniProtKB:Q6R327      |
+|                 |         | UniProtKB:Q04759      |
+|                 |         | UniProtKB:Q96BA8      |
+|                 |         | UniProtKB:P60709      |
+|                 |         | UniProtKB:Q96SQ7      |
+|                 |         | UniProtKB:Q9NXF8      |
+|                 |         | UniProtKB:P12644      |
+|                 |         | UniProtKB:P35568      |
+|                 |         | UniProtKB:P68133      |
+|                 |         | UniProtKB:Q13873      |
+|                 |         | UniProtKB:O00482      |
+|                 |         | UniProtKB:Q8TD43      |
++-----------------+---------+-----------------------+
+| hsa-miR-596     | 14.1355 | UniProtKB:P15169      |
+|                 |         | UniProtKB:O43679      |
+|                 |         | UniProtKB:P61601      |
+|                 |         | UniProtKB:P62081      |
+|                 |         | UniProtKB:P29475      |
+|                 |         | UniProtKB:P14672      |
+|                 |         | UniProtKB:O75626      |
+|                 |         | UniProtKB:Q8TC90      |
+|                 |         | UniProtKB:P50993      |
+|                 |         | UniProtKB:O95870      |
+|                 |         | UniProtKB:P57105      |
+|                 |         | UniProtKB:Q9HCU8      |
+|                 |         | UniProtKB:P15336      |
+|                 |         | UniProtKB:Q9Y696      |
+|                 |         | UniProtKB:P14923      |
+|                 |         | UniProtKB:Q15109      |
+|                 |         | UniProtKB:P60484      |
+|                 |         | UniProtKB:Q04771      |
+|                 |         | UniProtKB:Q99798      |
+|                 |         | UniProtKB:P04839      |
+|                 |         | UniProtKB:Q8WTV0      |
+|                 |         | UniProtKB:Q9BZ23      |
+|                 |         | UniProtKB:Q15389      |
+|                 |         | UniProtKB:P78325      |
+|                 |         | UniProtKB:Q06945      |
+|                 |         | UniProtKB:Q13324      |
+|                 |         | UniProtKB:P12644      |
+|                 |         | UniProtKB:P68133      |
+|                 |         | UniProtKB:Q13873      |
++-----------------+---------+-----------------------+
+| hsa-miR-3914    | 13.2    | -UniProtKB:O43506     |
+|                 |         | UniProtKB:Q13936      |
+|                 |         | UniProtKB:P15169      |
+|                 |         | UniProtKB:P51787      |
+|                 |         | UniProtKB:P08047      |
+|                 |         | UniProtKB:Q9NS39      |
+|                 |         | UniProtKB:Q8TDN7      |
+|                 |         | UniProtKB:O43679      |
+|                 |         | UniProtKB:Q8IVI9      |
+|                 |         | UniProtKB:P62081      |
+|                 |         | UniProtKB:Q14938      |
+|                 |         | UniProtKB:Q15303      |
+|                 |         | UniProtKB:Q08380      |
+|                 |         | UniProtKB:P14672      |
+|                 |         | UniProtKB:P50993      |
+|                 |         | UniProtKB:P09471      |
+|                 |         | UniProtKB:O75179      |
+|                 |         | UniProtKB:P43403      |
+|                 |         | UniProtKB:Q9BYR7      |
+|                 |         | UniProtKB:Q9ULU4      |
+|                 |         | UniProtKB:Q8TD20      |
+|                 |         | UniProtKB:P01127      |
+|                 |         | UniProtKB:Q6UXV4      |
+|                 |         | UniProtKB:Q9UQP3      |
+|                 |         | UniProtKB:Q9BXY4      |
+|                 |         | UniProtKB:P11926      |
+|                 |         | UniProtKB:Q15109      |
+|                 |         | UniProtKB:P42336      |
+|                 |         | UniProtKB:Q92831      |
+|                 |         | UniProtKB:Q9UJM3      |
+|                 |         | UniProtKB:Q04771      |
+|                 |         | UniProtKB:P28356      |
+|                 |         | UniProtKB:Q99798      |
+|                 |         | UniProtKB:P12814      |
+|                 |         | UniProtKB:Q02548      |
+|                 |         | UniProtKB:P78347      |
+|                 |         | UniProtKB:Q92610      |
+|                 |         | UniProtKB:P23443      |
+|                 |         | UniProtKB:P12429      |
+|                 |         | UniProtKB:Q8IZQ8      |
+|                 |         | UniProtKB:P36222      |
+|                 |         | UniProtKB:Q15389      |
+|                 |         | UniProtKB:O94760      |
+|                 |         | UniProtKB:P12643      |
+|                 |         | UniProtKB:Q86TI0      |
+|                 |         | UniProtKB:P11166      |
+|                 |         | UniProtKB:Q13873      |
++-----------------+---------+-----------------------+
+
+

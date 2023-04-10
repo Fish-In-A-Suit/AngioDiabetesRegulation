@@ -37,9 +37,9 @@ def test_miRNA_scoring():
     model.score_miRNAs()
 
 def test_report():
-    report = ReverseLookup.ReportGenerator(model)
+    report = ReverseLookup.ReportGenerator(model, verbosity=3)
     #report.generate_detailed_design_report("diabetes_angio_1/detaileddesign.txt")
-    report.generate_summary_report("diabetes_angio_1/summary.txt")
+    report.general_report("diabetes_angio_1/general.txt")
 
 def test_prune():
     model.prune_products()
@@ -60,6 +60,6 @@ if __name__ == '__main__':
         #test_product_scoring()
         #test_mRNA()
         #test_miRNA()
-        test_miRNA_scoring()
-        #test_report()
-        test_save()
+        #test_miRNA_scoring()
+        test_report()
+        #test_save()
