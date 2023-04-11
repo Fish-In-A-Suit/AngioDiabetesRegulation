@@ -17,7 +17,7 @@
 
 ## Usage
 
-```
+```python
 import ReverseLookup
 
 # Define model from input file
@@ -63,6 +63,6 @@ model.save_model("diabetes_angio_1/data.json")
 
 In future runs, you can import the model with:
 
-```
+```python
 model = ReverseLookup.ReverseLookup.load_model("diabetes_angio_1/data.json")
 ```
