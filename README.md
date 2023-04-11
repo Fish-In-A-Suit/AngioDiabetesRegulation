@@ -67,6 +67,9 @@ report.general_report("diabetes_angio_1/general.txt")
 
 # Save model
 model.save_model("diabetes_angio_1/data.json")
+
+# Alternatively, you can use model.compute_all(str:report_filepath) to achieve all of the above steps:
+model.compute_all("diabetes_angio1/report.txt")
 ```
 
 In future runs, you can import the model with:

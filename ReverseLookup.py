@@ -640,7 +640,7 @@ class miRNA:
         return cls(d['id'], d.get('sequence'), d.get('mRNA_overlaps'), d.get('scores'))
 
 class ReverseLookup:
-    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6):
+    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, model_name: str = "model"):
         """
         A class representing a reverse lookup for gene products and their associated Gene Ontology terms.
 
@@ -654,6 +654,7 @@ class ReverseLookup:
         self.target_processes = target_processes
         self.miRNAs = miRNAs
         self.miRNA_overlap_treshold = miRNA_overlap_treshold
+        self.model_name = model_name
 
     def fetch_all_go_term_names_descriptions(self):
         """
@@ -835,6 +836,31 @@ class ReverseLookup:
                 
                 # store the score result in the miRNA object
                 mirna.scores = {"basic_score": basic_score_result}
+    
+    def compute_all(self, report_filepath: str) -> None:
+        # Fetch all GO term names and descriptions
+        self.fetch_all_go_term_names_descriptions()
+        # Fetch all GO term products
+        self.fetch_all_go_term_products()
+        # Create products from GO terms
+        self.create_products_from_goterms()
+        # Fetch UniProt ID products
+        self.fetch_UniprotID_products()
+        # Prune products
+        self.prune_products()
+        # Fetch UniProt information
+        self.fetch_Uniprot_infos()
+        # Score products
+        self.score_products()
+         # Optional: Fetch mRNA sequences
+        self.fetch_mRNA_sequences()
+        # Predict miRNAs
+        self.predict_miRNAs()
+        # Score miRNAs
+        self.score_miRNAs()
+        # Generate report
+        report = ReverseLookup.ReportGenerator(self, verbosity=3)
+        report.general_report(report_filepath)
 
 #housekeeping functions
 
@@ -900,12 +926,13 @@ class ReverseLookup:
         return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold)
 
     @classmethod
-    def from_input_file(cls, filepath: str) -> 'ReverseLookup':
+    def from_input_file(cls, filepath: str, mod_name: str = "model") -> 'ReverseLookup':
         """
         Creates a ReverseLookup object from a JSON file.
 
         Args:
             filepath (str): The path to the input file.
+            mode_name (str): An arbitrary name of this model, or leave default ('model').
 
         Returns:
             ReverseLookup: A ReverseLookup object.
@@ -961,7 +988,7 @@ class ReverseLookup:
                     else:
                         d = {"id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3]}
                     go_terms.append(GOTerm.from_dict(d))
-        return cls(go_terms, target_processes)
+        return cls(go_terms, target_processes, model_name=mod_name)
     
     @classmethod
     def from_dict(cls, data: Dict[str, List[Dict]]) -> 'ReverseLookup':

@@ -50,9 +50,55 @@ if __name__ == '__main__':
     logging.config.dictConfig(cfg.log_dict)
     logger.info("testing!")
 
-    #model = ReverseLookup.ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+    model = ReverseLookup.ReverseLookup.from_input_file("diabetes_angio_1/input.txt", mod_name="V1")
+    # model.save_model("diabetes_angio_1/data.json")
+
+    # Fetch all GO term names and descriptions
+    #model.fetch_all_go_term_names_descriptions()
+
+    # Fetch all GO term products
+    #model.fetch_all_go_term_products()
+
+    # Create products from GO terms
+    #model.create_products_from_goterms()
+
+    # Fetch UniProt ID products
+    #model.fetch_UniprotID_products()
+
+    # Prune products
+    #model.prune_products()
+
+    # Fetch UniProt information
+    #model.fetch_Uniprot_infos()
+
+    # Score products
+    #model.score_products()
+
+    # Optional: Fetch mRNA sequences
+    #model.fetch_mRNA_sequences()
+
+    # Predict miRNAs
+    #model.predict_miRNAs()
+
+    # Score miRNAs
+    #model.score_miRNAs()
+
+    # Generate report
+    #report = ReverseLookup.ReportGenerator(model, verbosity=3)
+    #report.general_report("diabetes_angio_1/general.txt")
+
+    model.compute_all("diabetes_angio_1/report.txt")
+
+    # Save model
+    model.save_model("diabetes_angio_1/data.json")
+
+    # future runs:
     model = ReverseLookup.ReverseLookup.load_model("diabetes_angio_1/data.json")
-    with keepawake(keep_screen_awake=False):
+
+
+
+    #with keepawake(keep_screen_awake=False):
+        #test_load_old()
         #test_load()
         #test_build()
         #test_prune()
@@ -61,5 +107,5 @@ if __name__ == '__main__':
         #test_mRNA()
         #test_miRNA()
         #test_miRNA_scoring()
-        test_report()
+        # test_report()
         #test_save()
