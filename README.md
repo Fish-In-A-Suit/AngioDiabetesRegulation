@@ -14,8 +14,16 @@
 | License | cc-by-nc                                                              |
 
 ## Instalation TODO
+```
+cd goreverselookup
+python setup.py sdist
+pip install dist/goreverselookup-version.tar.gz
+```
+TODO: how to publish
 
 ## Usage
+see: TestReverseLookupLibrary.py
+Currently I have to sort out the ugly imports!
 
 ```python
 import ReverseLookup
