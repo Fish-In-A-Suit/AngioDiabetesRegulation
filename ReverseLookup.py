@@ -836,6 +836,8 @@ class ReverseLookup:
                 # store the score result in the miRNA object
                 mirna.scores = {"basic_score": basic_score_result}
 
+#housekeeping functions
+
     def get_all_goterms_for_product(self, product: Product | str) -> List[GOTerm]:
         if isinstance(product, str):
             for prod in self.products:
@@ -849,56 +851,12 @@ class ReverseLookup:
                 goterms_list.append(goterm)
         return goterms_list
 
-    def load_go_term_datafile(self, filename: str) -> None:
-        with open(filename, 'r') as f:
-            data = json.load(f)
-        for element in data['goterms']:
-            for term in self.goterms:
-                if term.id in element.values():
-                    term.name = element.get('name')
-                    term.description = element.get('description')
-                    term.products = element.get('products')
-        logger.info(f"Loaded goterms from {filename}")
-
-    def save_goterms_to_datafile(self, filename: str) -> None:
+    def list_goterms_id(self) -> List[str]:
         """
-        Saves all GOTerm objects to a JSON file.
-
-        Args:
-            filename (str): The name of the file to save the data to.
+        Returns a list of all GO term IDs in the GO ontology.
         """
-        data = {'goterms': []}
-        for goterm in self.goterms:
-            data['goterms'].append(goterm.__dict__)
-        
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=4)
-
-    def load_products_datafile(self, filename: str) -> None:
-        with open(filename, 'r') as f:
-            data = json.load(f)
-        for element in data['products']:
-            for product in self.products:
-                if product.id_synonyms[0] in element.values():
-                    product.uniprot_id = element.get('uniprot_id')
-                    product.description = element.get('description')
-                    product.ensembl_id = element.get('ensembl_id')
-                    product.mRNA = element.get('mRNA')
-                    product.scores = element.get('scores')
-
-    def save_products_to_datafile(self, filename: str) -> None:
-        """
-        Saves all Product objects to a JSON file.
-
-        Args:
-            filename (str): The name of the file to save the data to.
-        """
-        data = {'products': []}
-        for product in self.products:
-            data['products'].append(product.__dict__)
-        
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=4)
+        # Use a list comprehension to extract IDs from the GO terms and return the resulting list
+        return [goterm.id for goterm in self.goterms]
     
     def save_model(self, filepath: str) -> None:
         data = {}
@@ -1023,20 +981,27 @@ class ReverseLookup:
 
 class miRDB60predictor:
     def __init__(self):
+        # set the filepath to the miRDB prediction result file
         self._filepath = "src_data_files/miRNAdbs/miRDB_v6.0_prediction_result.txt.gz"
+        # check if the file exists and download it if necessary
         self._check_file()
+        # read the file into memory and decode the bytes to utf-8
         with gzip.open(self._filepath, "rb") as read_content:
-            self._readlines = read_content.readlines()
-            self._readlines = [line.decode("utf-8") for line in self._readlines]
+            self._readlines = [line.decode("utf-8") for line in read_content.readlines()]
+        # log the first 10 lines of the file
         logger.info(self._readlines[:10])
     
     def _check_file(self):
+        # create the directory where the file will be saved if it doesn't exist
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
         if not os.path.exists(self._filepath):
+            # download the file from the miRDB website
             url = "https://mirdb.org/download/miRDB_v6.0_prediction_result.txt.gz"
             response = requests.get(url)
+            # save the file to the specified filepath
             with open(self._filepath, "wb") as f:
                 f.write(response.content)
+            # log a message indicating the file has been downloaded
             logger.info(f"Downloaded miRDB_v6.0_prediction_result.txt.gz to {self._filepath}")
 
     def predict_from_product(self, product: Product, threshold: float = 0.0) -> Dict[str, float]:
