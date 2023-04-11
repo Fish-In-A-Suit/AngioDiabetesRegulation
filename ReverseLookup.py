@@ -610,6 +610,17 @@ class Product:
 
 class miRNA:
     def __init__(self, id: str, sequence: str = None, mRNA_overlaps: Dict[str, float] = None, scores: Dict[str, float] = None) -> None:
+        """
+        Initializes an instance of miRNA class.
+
+        Args:
+        - id: a string that uniquely identifies this miRNA.
+        - sequence: an optional string that represents the sequence of this miRNA.
+        - mRNA_overlaps: an optional dictionary that represents the overlaps of this miRNA with mRNA sequences.
+        - scores: an optional dictionary that represents the scores of this miRNA.
+
+        Returns: None
+        """
         self.id = id
         self.sequence = sequence
         self.mRNA_overlaps = {} if mRNA_overlaps is None else mRNA_overlaps.copy()
@@ -617,6 +628,15 @@ class miRNA:
 
     @classmethod
     def from_dict(cls, d: dict) -> 'miRNA':
+        """
+        Creates a new instance of miRNA class based on the values in the input dictionary.
+
+        Args:
+        - d: a dictionary that represents the values of the miRNA.
+
+        Returns: 
+        - A new instance of miRNA class based on the values in the input dictionary.
+        """
         return cls(d['id'], d.get('sequence'), d.get('mRNA_overlaps'), d.get('scores'))
 
 class ReverseLookup:
@@ -735,13 +755,18 @@ class ReverseLookup:
             raise e 
 
     def score_products(self) -> None:
+        # create a Scoring object with the current instance of miRGadget as the argument
         scoring = Scoring(self)
+        # redirect the tqdm logging output to the logging module to avoid interfering with the normal output
         with logging_redirect_tqdm():
+            # iterate over each Product object in self.products and score them using the Scoring object
             for product in tqdm(self.products):
+                # calculate the advanced product score for the current Product object using the Scoring object
                 adv_score_result = scoring.adv_product_score(product)
+                # calculate the number of GO terms per process for the current Product object using the Scoring object
                 dict_of_terms_per_process = scoring.nterms(product)
-
-                product.scores = {"adv_score":adv_score_result, "nterms":dict_of_terms_per_process}
+                # add the advanced product score and GO terms per process to the Product object's scores attribute
+                product.scores = {"adv_score": adv_score_result, "nterms": dict_of_terms_per_process}
 
     def fetch_mRNA_sequences(self) -> None:
         try:   
@@ -757,23 +782,30 @@ class ReverseLookup:
             raise e 
 
     def predict_miRNAs(self, prediction_type: str = 'miRDB') -> None:
+        # check the prediction type
         if prediction_type == 'miRDB':
+            # use the miRDB60predictor to predict miRNAs
             predictor = miRDB60predictor()
+            # iterate through each product and predict miRNAs
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     match_dict = predictor.predict_from_product(product)
+                    # if there are matches, add them to the corresponding miRNA objects
                     if match_dict is not None:
                         for miRNA_id, match in match_dict.items():
+                            # check if the miRNA already exists in the list of miRNAs
                             for mirna in self.miRNAs:
                                 if mirna.id == miRNA_id:
                                     mirna.mRNA_overlaps[product.uniprot_id] = match
                                     break
+                            # if the miRNA doesn't exist in the list, create a new miRNA object
                             else:
                                 self.miRNAs.append(miRNA(miRNA_id, mRNA_overlaps={product.uniprot_id : match}))
         elif prediction_type == 'other_type':
             # do something else
             pass
         else:
+            # raise an error if the prediction type is invalid
             raise ValueError("Invalid prediction type")
 
     def change_miRNA_overlap_treshold(self, treshold: float, yes: bool = False) -> None:
@@ -788,13 +820,21 @@ class ReverseLookup:
             _miRNA.scores = {}
 
     def score_miRNAs(self) -> None:
+        # create a Scoring object to compute scores
         scoring = Scoring(self)
+        
         with logging_redirect_tqdm():
+            # iterate over miRNAs using tqdm for progress tracking
             for mirna in tqdm(self.miRNAs):
-                if mirna.mRNA_overlaps is not {}:
-                    basic_score_result = scoring.basic_mirna_score(mirna, self.miRNA_overlap_treshold)
-                    #is it okay to override?
-                    mirna.scores = {"basic_score":basic_score_result}
+                # if there is no overlap, skip the miRNA
+                if not mirna.mRNA_overlaps:
+                    continue
+                
+                # compute the basic score for the miRNA
+                basic_score_result = scoring.basic_mirna_score(mirna, self.miRNA_overlap_treshold)
+                
+                # store the score result in the miRNA object
+                mirna.scores = {"basic_score": basic_score_result}
 
     def get_all_goterms_for_product(self, product: Product | str) -> List[GOTerm]:
         if isinstance(product, str):
@@ -999,23 +1039,32 @@ class miRDB60predictor:
                 f.write(response.content)
             logger.info(f"Downloaded miRDB_v6.0_prediction_result.txt.gz to {self._filepath}")
 
-    def predict_from_product(self, product: Product, treshold: float = 0.0) -> Dict[str,float]:
+    def predict_from_product(self, product: Product, threshold: float = 0.0) -> Dict[str, float]:
         """
-        Finds all miRNAs and their match strengths (hsa-miR-xxx, 72.2) from miRDB_readlines for mRNA_refseq (eg. NM_xxxxx).
+        Finds all miRNAs and their match strengths (hsa-miR-xxx, 72.2) from miRDB_readlines for mRNA_refseq (e.g. NM_xxxxx).
 
-        Returns: list of lists (total list contains sublists, each sublist contains 2 elements - miRNA and match_strength)
+        :param product: Product object with refseq_nt_id attribute
+        :param threshold: Minimum match strength to include in result_list
+        :return: Dictionary containing miRNAs as keys and match strengths as values
         """
-        if product.refseq_nt_id is None:
+        if not product.refseq_nt_id:
             return None
-        result_list = {}
+
+        result_dict = {}
+
+        # Iterate over each line in the list of read lines
         for line in self._readlines:
-            if product.refseq_nt_id.split(".")[0] in line: # mRNA refseqs are in the format NM_xxxxxx.a, in miRDB only NM_xxxxx is valid (strip .a)
-                splitline = line.split("\t")
-                miRNA = splitline[0]
-                match_strength = float(splitline[2].replace("\n", ""))
-                if match_strength >= treshold:
-                    result_list[miRNA] = match_strength # append a sublist [miRNA, match_strength] to result_list
-        return result_list
+            # Check if product.refseq_nt_id is present in the line
+            if product.refseq_nt_id.split(".")[0] in line:
+                # Split the line by tabs to extract miRNA and match_strength
+                miRNA, _, match_strength = line.strip().split("\t")
+                # Convert match_strength to float
+                match_strength = float(match_strength)
+                # Add miRNA and match_strength to result_dict if match_strength >= threshold
+                if match_strength >= threshold:
+                    result_dict[miRNA] = match_strength
+
+        return result_dict
 
 class Scoring:
     def __init__(self, reverse_lookup: ReverseLookup) -> None:
@@ -1145,10 +1194,12 @@ class Scoring:
 
 class ReportGenerator:
     def __init__(self, reverse_lookup: ReverseLookup, verbosity: int = 1, top_n: int = 5, width: int = 80):
-        self.reverse_lookup = reverse_lookup
-        self.width = width
-        self.top_n = top_n
-        self.verbosity = verbosity
+        # initialize the report generator with a reverse lookup object and parameters for verbosity, top_n, and width
+        self.reverse_lookup = reverse_lookup  # the reverse lookup object to use for generating the report
+        self.width = width  # the width of the report output
+        self.top_n = top_n  # the number of top results to display in the report
+        self.verbosity = verbosity  # the level of detail to include in the report
+
     
     def _generate_header(self) -> str:
         header = "Gene Ontology Reverse Lookup Tool".center(self.width)+"\n"
@@ -1163,11 +1214,10 @@ class ReportGenerator:
         return string
 
     def _generate_goterm_per_process_table(self) -> str:
-        grouped_goterms = {}
-        for target in self.reverse_lookup.target_processes:
-            grouped_goterms[(target["process"], "+")] = []
-            grouped_goterms[(target["process"], "-")] = []
-            grouped_goterms[(target["process"], "0")] = []
+        # Use a dictionary comprehension for the grouped_goterms initialization
+        grouped_goterms = {(target["process"], direction): [] for target in self.reverse_lookup.target_processes for direction in ("+", "-", "0")}
+        
+        # Use a for-loop to populate the grouped_goterms dictionary
         for goterm in self.reverse_lookup.goterms:
             key = (goterm.process, goterm.direction)
             grouped_goterms[key].append(goterm)
@@ -1176,95 +1226,118 @@ class ReportGenerator:
 
         if self.verbosity >= 1:
             table = [["Process", "+", "-", "0", "Total"]]
-            table.extend([[target["process"], len(grouped_goterms[(target["process"], "+")]), 
-                           len(grouped_goterms[(target["process"], "-")]), 
-                           len(grouped_goterms[(target["process"], "0")]), 
-                           sum([len(grouped_goterms[(target["process"], "+")]), len(grouped_goterms[(target["process"], "-")]), len(grouped_goterms[(target["process"], "0")])])]
-                           for target in self.reverse_lookup.target_processes])
+            table.extend([
+                [target["process"],
+                len(grouped_goterms[(target["process"], "+")]),
+                len(grouped_goterms[(target["process"], "-")]),
+                len(grouped_goterms[(target["process"], "0")]),
+                sum([len(grouped_goterms[(target["process"], "+")]), len(grouped_goterms[(target["process"], "-")]), len(grouped_goterms[(target["process"], "0")])])
+                ]
+                for target in self.reverse_lookup.target_processes
+            ])
             table.append(["Total", sum([a[1] for a in table[1:]]), sum([a[2] for a in table[1:]]), sum([a[3] for a in table[1:]]), sum([a[4] for a in table[1:]])])
             string += tabulate(table, headers="firstrow", tablefmt="grid").center(self.width) + "\n"
-        
+
         if self.verbosity == 2:
             table = [["Process", "+", "-", "0"]]
-            table.extend([[target["process"], 
-                           '\n'.join(str(g.id) for g in grouped_goterms[(target["process"], "+")]), 
-                           '\n'.join(str(g.id) for g in grouped_goterms[(target["process"], "-")]), 
-                           '\n'.join(str(g.id) for g in grouped_goterms[(target["process"], "0")]) ]
-                           for target in self.reverse_lookup.target_processes])
+            table.extend([
+                [target["process"],
+                '\n'.join(str(g.id) for g in grouped_goterms[(target["process"], "+")]),
+                '\n'.join(str(g.id) for g in grouped_goterms[(target["process"], "-")]),
+                '\n'.join(str(g.id) for g in grouped_goterms[(target["process"], "0")]) ]
+                for target in self.reverse_lookup.target_processes
+            ])
             string += tabulate(table, headers="firstrow", tablefmt="grid").center(self.width) + "\n"
 
         if self.verbosity == 3:
             table = [["Process", "+", "-", "0"]]
-            table.extend([[target["process"], 
-                           '\n'.join(str(f"{g.id} - {g.name}") for g in grouped_goterms[(target["process"], "+")]), 
-                           '\n'.join(str(f"{g.id} - {g.name}") for g in grouped_goterms[(target["process"], "-")]), 
-                           '\n'.join(str(f"{g.id} - {g.name}") for g in grouped_goterms[(target["process"], "0")]) ]
-                           for target in self.reverse_lookup.target_processes])
+            table.extend([
+                [target["process"],
+                '\n'.join(str(f"{g.id} - {g.name}") for g in grouped_goterms[(target["process"], "+")]),
+                '\n'.join(str(f"{g.id} - {g.name}") for g in grouped_goterms[(target["process"], "-")]),
+                '\n'.join(str(f"{g.id} - {g.name}") for g in grouped_goterms[(target["process"], "0")]) ]
+                for target in self.reverse_lookup.target_processes
+            ])
             string += tabulate(table, headers="firstrow", tablefmt="grid") + "\n"
-        
+
         return string
 
     def _generate_goterms_statistics(self) -> str:
-
-        string = "GO TERMS STATISTICS" + "\n" 
-
-        if self.verbosity >= 1:
-            min_g = min([len(g.products) for g in self.reverse_lookup.goterms]) 
-            max_g = max([len(g.products) for g in self.reverse_lookup.goterms])
-            avg_g = sum([len(g.products) for g in self.reverse_lookup.goterms]) / len([len(g.products) for g in self.reverse_lookup.goterms])
-            string += f"Products per GO Term (min - avg - max): {min_g} - {avg_g:.0f} - {max_g}" + "\n" 
+        string = "GO TERMS STATISTICS\n"
         
+        # Calculate statistics and format the string
+        if self.verbosity >= 1:
+            products_per_goterm = [len(g.products) for g in self.reverse_lookup.goterms]
+            min_g, max_g, avg_g = min(products_per_goterm), max(products_per_goterm), sum(products_per_goterm) / len(products_per_goterm)
+            string += f"Products per GO Term (min - avg - max): {min_g} - {avg_g:.0f} - {max_g}\n"
+
         return string
     
     def _generate_top_bottom_products_summary(self) -> str:
+        # Initialize the summary string with the header
+        string = f"TOP and BOTTOM {self.top_n} PRODUCTS\n"
 
-        string = f"TOP and BOTTOM {self.top_n} PRODUCTS" + "\n" 
+        # Get the top and bottom products based on the advanced score
+        sorted_products = sorted(self.reverse_lookup.products, key=lambda x: x.scores["adv_score"], reverse=True)
+        top_products = sorted_products[:self.top_n]
+        bottom_products = sorted_products[-self.top_n:]
 
-        top_products = sorted(self.reverse_lookup.products, key=lambda x: x.scores["adv_score"], reverse=True)[:5]
-        bottom_products = sorted(self.reverse_lookup.products, key=lambda x: x.scores["adv_score"], reverse=True)[len(self.reverse_lookup.products) - self.top_n - 1:]
+        # If verbosity is at least 1, create a table of the top and bottom products with their scores and descriptions
         if self.verbosity >= 1:
-            table = ([["UniProtID", "Score", "Protein name"]] + 
-                        [[product.uniprot_id, f"{product.scores['adv_score']:.2f}", product.description] for product in top_products] + 
-                        [["----", "----", "----"]] + 
-                        [[product.uniprot_id, f"{product.scores['adv_score']:.2f}", product.description] for product in bottom_products])
-
+            # Create the table as a list of lists and append each row
+            table = [["UniProtID", "Score", "Protein name"]]
+            for product in top_products:
+                table.append([product.uniprot_id, f"{product.scores['adv_score']:.2f}", product.description])
+            # Add a separator row and append each row for the bottom products
+            table.append(["----", "----", "----"])
+            for product in bottom_products:
+                table.append([product.uniprot_id, f"{product.scores['adv_score']:.2f}", product.description])
+            # Add the table to the summary string
             string += tabulate(table, headers="firstrow", tablefmt="grid") + "\n\n"
 
+        # If verbosity is at least 2, add details about the GO terms for each top and bottom product
         if self.verbosity >= 2:
+            # Define a function to create the table of GO terms for a product
+            def create_go_table(product):
+                table_go = [["GO term", "GO label", "GO description"]]
+                for goterm in self.reverse_lookup.get_all_goterms_for_product(product):
+                    table_go.append([goterm.id, goterm.name, goterm.description])
+                return table_go
+
+            # Add the details for the top products
             for product in top_products:
                 string += " "*10+f"{product.uniprot_id} - {product.scores['adv_score']:.2f} - {product.description}".center(100)+"\n"
-                table_go = [["GO term", "GO label", "GO description"]]
-                for goterm in self.reverse_lookup.get_all_goterms_for_product(product):
-                    table_go.append([goterm.id, goterm.name, goterm.description])
-                string += tabulate(table_go, headers="firstrow", tablefmt="grid", maxcolwidths = 100) + "\n\n"
+                string += tabulate(create_go_table(product), headers="firstrow", tablefmt="grid", maxcolwidths=100) + "\n\n"
 
+            # Add a separator and add the details for the bottom products
             string += ("-"*30)+"\n\n"
-            
             for product in bottom_products:
                 string += " "*10+f"{product.uniprot_id} - {product.scores['adv_score']:.2f} - {product.description}".center(100)+"\n"
-                table_go = [["GO term", "GO label", "GO description"]]
-                for goterm in self.reverse_lookup.get_all_goterms_for_product(product):
-                    table_go.append([goterm.id, goterm.name, goterm.description])
-                string += tabulate(table_go, headers="firstrow", tablefmt="grid", maxcolwidths = 100) + "\n\n"
+                string += tabulate(create_go_table(product), headers="firstrow", tablefmt="grid", maxcolwidths=100) + "\n\n"
 
         return string
 
     def _generate_top_miRNAs_summary(self) -> str:
-
+        # Create the header string.
         string = f"TOP {self.top_n} miRNAs" + "\n"
-        string = f"+ annotates Product which is in top {self.top_n}, and - annotates Product which is in bottom {self.top_n}\n\n" 
+        string += f"+ annotates Product which is in top {self.top_n}, and - annotates Product which is in bottom {self.top_n}\n\n" 
 
-        top_products = sorted(self.reverse_lookup.products, key=lambda x: x.scores["adv_score"], reverse=True)[:5]
-        bottom_products = sorted(self.reverse_lookup.products, key=lambda x: x.scores["adv_score"], reverse=True)[len(self.reverse_lookup.products) - self.top_n - 1:]
+        # Get the top and bottom products based on the advanced score
+        sorted_products = sorted(self.reverse_lookup.products, key=lambda x: x.scores["adv_score"], reverse=True)
+        top_products = sorted_products[:self.top_n]
+        bottom_products = sorted_products[-self.top_n:]
 
-        top_miRNAs = sorted(self.reverse_lookup.miRNAs, key=lambda x: x.scores["basic_score"], reverse=True)[:5]
+        # Get the top miRNAs.
+        top_miRNAs = sorted(self.reverse_lookup.miRNAs, key=lambda x: x.scores["basic_score"], reverse=True)[:self.top_n]
+
+        # If verbosity is set to 1, create a table with the top miRNAs and their scores.
         if self.verbosity == 1:
             table = [["miRNA", "score"]]
             for _miRNA in top_miRNAs:
                 table.append([_miRNA.id, _miRNA.scores["basic_score"]])
             string += tabulate(table, headers="firstrow", tablefmt="grid") + "\n\n"
 
-
+        # If verbosity is set to 2 or higher, create a table with the top miRNAs, their scores, and the products they inhibit.
         if self.verbosity >= 2:
             table = [["miRNA", "score", "suppressed products"]]
 
@@ -1284,84 +1357,43 @@ class ReportGenerator:
                         temp_b_list.append(f"-{product_id}")
                     else:
                         temp_list.append(f"{product_id}")
-                temp_list = temp_t_list + temp_list
+                temp_list = temp_t_list + temp_list #To nsure the top/bottom products are displyed on top.
                 temp_list = temp_b_list + temp_list
                 table.append([_miRNA.id, _miRNA.scores["basic_score"], "\n".join(item for item in temp_list)])
             string += tabulate(table, headers="firstrow", tablefmt="grid") + "\n\n"
 
+        # Return the summary string.
         return string
 
-
     def general_report(self, filepath:str):
+        """
+        Generates the general report and writes it to a file.
+
+        Args:
+        filepath (str): The path to the output file.
+        """
+        # Generate header of the report
         report = self._generate_header()+"\n\n"
 
-        #goterm section
+        # Generate section on GOTerms
         if len(self.reverse_lookup.goterms) > 0:
             report += self._generate_section("GO TERMS")
             report += self._generate_goterms_statistics() + "\n" 
             report += self._generate_goterm_per_process_table() + "\n" 
         
+        # Generate section on Products
         if len(self.reverse_lookup.products) > 0:
             report += self._generate_section("PRODUCTS")
             report += self._generate_top_bottom_products_summary() + "\n" 
 
+        # Generate section on miRNAs
         if len(self.reverse_lookup.miRNAs) > 0:
             report += self._generate_section("miRNAs")
             report += self._generate_top_miRNAs_summary() + "\n" 
 
+        # Create directory for the report file, if it does not exist
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
-        with open(filepath, 'w') as f:
-            f.write(report)
-
-            
-        report = ""
-
-        # Generate header
-        report += self._generate_header("MODEL SUMMARY")
         
-        # Generate the Target Processes section of the report
-        target_processes_table = Texttable()
-        target_processes_table.header(["Process", "Direction"])
-        for target in self.reverse_lookup.target_processes:
-            target_processes_table.add_row([target["process"], target["direction"]])
-        report += "\nTarget Processes\n" + target_processes_table.draw() + '\n\n'
-        
-        # Generate GOTerms summary
-        goterms = self.reverse_lookup.goterms
-        goterms_table = Texttable()
-        goterms_table.header(["Process", "+", "-", "0", "Total"])
-        total_p = 0
-        total_m = 0
-        total_z = 0
-        total = 0
-        for process in self.reverse_lookup.target_processes:
-            process_goterms = [goterm for goterm in goterms if goterm.process == process['process']]
-            n_plus = len([goterm for goterm in process_goterms if goterm.direction == '+'])
-            n_minus = len([goterm for goterm in process_goterms if goterm.direction == '-'])
-            n_zero = len([goterm for goterm in process_goterms if goterm.direction == '0'])
-            n_total = n_plus + n_minus + n_zero
-            total_p += n_plus
-            total_m += n_minus
-            total_z += n_zero
-            total += n_total
-            goterms_table.add_row([f"{process['process']}", n_plus, n_minus, n_zero, n_total])
-        goterms_table.add_row(['Total', total_p, total_m, total_z, total])
-
-        report += "GOTerms Summary\n"
-        report += goterms_table.draw() + '\n\n'
-        
-        # Products
-        histogram_products_table = Texttable()
-        histogram_products_table.header(["Involved in N GOTerms", "N"])
-        num_goterms = []
-        for product in self.reverse_lookup.products:
-            num_goterms.append(len([goterm for goterm in self.reverse_lookup.goterms if product.id in goterm.products]))
-        for i in range (1,max(num_goterms)+1):
-            histogram_products_table.add_row([i, num_goterms.count(i)])
-        histogram_products_table.add_row(["Total", len(self.reverse_lookup.products)])
-        report += "\nProduct distribution\n" + histogram_products_table.draw() + '\n\n'
-
-        # Save to file
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        # Write the report to the output file
         with open(filepath, 'w') as f:
             f.write(report)
