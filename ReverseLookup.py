@@ -7,6 +7,8 @@ from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 from tabulate import tabulate, SEPARATING_LINE
 import gzip
+import time
+from datetime import timedelta
 
 import logging
 # Initialize logger
@@ -641,7 +643,7 @@ class miRNA:
         return cls(d['id'], d.get('sequence'), d.get('mRNA_overlaps'), d.get('scores'))
 
 class ReverseLookup:
-    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, model_name: str = "model"):
+    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, model_name: str = "model", execution_times: dict = {}):
         """
         A class representing a reverse lookup for gene products and their associated Gene Ontology terms.
 
@@ -656,7 +658,10 @@ class ReverseLookup:
         self.miRNAs = miRNAs
         self.miRNA_overlap_treshold = miRNA_overlap_treshold
         self.model_name = model_name # arbitrary model name
+        self.execution_times = execution_times # dict of execution times, logs of runtime for functions
 
+        self.timer = Timer()
+        
         self.save_path_root = os.path.join("program_data_files", "models", model_name) # path where model files are saved
         if not os.path.exists(self.save_path_root):
             logger.debug(f"Created directory {self.save_path_root} for model {self.model_name}.")
@@ -668,19 +673,32 @@ class ReverseLookup:
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_name_description method for each object.
         """
+        self.timer.set_start_time()
+
         api = GOApi()
         with logging_redirect_tqdm():
             for goterm in tqdm(self.goterms):
-                goterm.fetch_name_description(api)
+                if goterm.name == "":
+                    goterm.fetch_name_description(api)
+
+        if "fetch_all_go_term_names_descriptions" not in self.execution_times: # to prevent overwriting on additional runs of the same model name
+            self.execution_times["fetch_all_go_term_names_descriptions"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
     def fetch_all_go_term_products(self):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
         """
+        self.timer.set_start_time()
+
         api = GOApi()
         with logging_redirect_tqdm():
             for goterm in tqdm(self.goterms):
                 goterm.fetch_products(api)
+        
+        if "fetch_all_go_term_products" not in self.execution_times:
+            self.execution_times["fetch_all_go_term_products"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
     def create_products_from_goterms(self) -> None:
         """
@@ -701,6 +719,8 @@ class ReverseLookup:
         Returns:
             None
         """
+        self.timer.set_start_time()
+
         # Create an empty set to store unique products
         products_set = set()
         
@@ -715,7 +735,13 @@ class ReverseLookup:
             self.products.append(Product.from_dict({'id_synonyms':[product]}))
         logger.info(f"Created Product objects from GOTerm object definitions")
 
+        if "create_products_from_goterms" not in self.execution_times:
+            self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
+
     def fetch_UniprotID_products(self) -> None:
+        self.timer.set_start_time()
+
         try:   
             human_ortolog_finder = HumanOrthologFinder()
             uniprot_api = UniProtAPI()
@@ -730,9 +756,15 @@ class ReverseLookup:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
             self.save_products_to_datafile('crash_products.json')
             # Re-raise the exception so that the caller of the method can handle it.
-            raise e    
+            raise e
+        
+        if "fetch_uniprotid_products" not in self.execution_times:
+            self.execution_times["fetch_uniprotid_products"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
     def prune_products(self) -> None:
+        self.timer.set_start_time()
+
         # Create a dictionary that maps UniProt ID to a list of products
         reverse_uniprotid_products = {}
         for product in self.products:
@@ -750,7 +782,13 @@ class ReverseLookup:
                 # Create a new product with the collected information and add it to the product list
                 self.products.append(Product(id_synonyms, uniprot_id, product_list[0].description, product_list[0].ensembl_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
 
+        if "prune_products" not in self.execution_times:
+            self.execution_times["prune_products"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
+
     def fetch_Uniprot_infos(self) -> None:
+        self.timer.set_start_time()
+
         try:   
             uniprot_api = UniProtAPI()
             # Iterate over each Product object in the ReverseLookup object.
@@ -761,9 +799,15 @@ class ReverseLookup:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_Uniprot_info(uniprot_api)
         except Exception as e:
-            raise e 
+            raise e
+
+        if "fetch_uniprot_infos" not in self.execution_times:
+            self.execution_times["fetch_uniprot_infos"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
     def score_products(self) -> None:
+        self.timer.set_start_time()
+
         # create a Scoring object with the current instance of miRGadget as the argument
         scoring = Scoring(self)
         # redirect the tqdm logging output to the logging module to avoid interfering with the normal output
@@ -776,8 +820,14 @@ class ReverseLookup:
                 dict_of_terms_per_process = scoring.nterms(product)
                 # add the advanced product score and GO terms per process to the Product object's scores attribute
                 product.scores = {"adv_score": adv_score_result, "nterms": dict_of_terms_per_process}
+        
+        if "score_products" not in self.execution_times:
+            self.execution_times["score_products"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
     def fetch_mRNA_sequences(self) -> None:
+        self.timer.set_start_time()
+        
         try:   
             ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
@@ -788,9 +838,15 @@ class ReverseLookup:
                         # If it has, fetch mRNA sequence data for the Product object.
                         product.fetch_mRNA_sequence(ensembl_api)
         except Exception as e:
-            raise e 
+            raise e
+        
+        if "fetch_mRNA_sequences" not in self.execution_times:
+            self.execution_times["fetch_mRNA_sequences"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
     def predict_miRNAs(self, prediction_type: str = 'miRDB') -> None:
+        self.timer.set_start_time()
+
         # check the prediction type
         if prediction_type == 'miRDB':
             # use the miRDB60predictor to predict miRNAs
@@ -816,6 +872,10 @@ class ReverseLookup:
         else:
             # raise an error if the prediction type is invalid
             raise ValueError("Invalid prediction type")
+        
+        if "predict_miRNAs" not in self.execution_times:
+            self.execution_times["predict_miRNAs"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
     def change_miRNA_overlap_treshold(self, treshold: float, yes: bool = False) -> None:
         self.miRNA_overlap_treshold = treshold
@@ -829,6 +889,8 @@ class ReverseLookup:
             _miRNA.scores = {}
 
     def score_miRNAs(self) -> None:
+        self.timer.set_start_time()
+
         # create a Scoring object to compute scores
         scoring = Scoring(self)
         
@@ -844,28 +906,42 @@ class ReverseLookup:
                 
                 # store the score result in the miRNA object
                 mirna.scores = {"basic_score": basic_score_result}
+        
+        if "score_miRNAs" not in self.execution_times:
+            self.execution_times["score_miRNAs"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
     
     def compute_all(self, report_filepath: str = "") -> None:
         # Fetch all GO term names and descriptions
         self.fetch_all_go_term_names_descriptions() # c1-TN
+        self.save_model()
         # Fetch all GO term products
         self.fetch_all_go_term_products() # c2-TP
+        self.save_model()
         # Create products from GO terms
         self.create_products_from_goterms() # c3-P
+        self.save_model()
         # Fetch UniProt ID products
         self.fetch_UniprotID_products() # c4-UidP
+        self.save_model()
         # Prune products
         self.prune_products() # c5-Pr
+        self.save_model()
         # Fetch UniProt information
         self.fetch_Uniprot_infos() # c6-Uinf
+        self.save_model()
         # Score products
         self.score_products() # c7-SC
+        self.save_model()
          # Optional: Fetch mRNA sequences
         self.fetch_mRNA_sequences() # c8-mRNA
+        self.save_model()
         # Predict miRNAs
         self.predict_miRNAs() # c9-miRNA
+        self.save_model()
         # Score miRNAs
         self.score_miRNAs() # c10-miRNASC
+        self.save_model()
         # Generate report
         if report_filepath == "": report_filepath = os.path.join(self.save_path_root, "report.txt")
         report = ReverseLookup.ReportGenerator(self, verbosity=3)
@@ -930,6 +1006,7 @@ class ReverseLookup:
 
         #save target_process
         data['model_name'] = self.model_name
+        data['execution_times'] = self.execution_times
         data['target_processes'] = self.target_processes
         data['miRNA_overlap_treshold'] = self.miRNA_overlap_treshold
         #save goterms
@@ -984,6 +1061,7 @@ class ReverseLookup:
             data = json.load(f)
         
         model_name = data['model_name']
+        execution_times = data['execution_times']
         target_processes = data['target_processes']
         miRNA_overlap_treshold = data['miRNA_overlap_treshold']
 
@@ -1000,9 +1078,9 @@ class ReverseLookup:
             miRNAs.append(miRNA.from_dict(miRNAs_dict))
         
         if model_name:
-            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, model_name=model_name)
+            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, model_name=model_name, execution_times=execution_times)
         else:
-            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold)
+            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, execution_times=execution_times)
 
     @classmethod
     def from_input_file(cls, filepath: str, mod_name: str = "model") -> 'ReverseLookup':
@@ -1036,7 +1114,8 @@ class ReverseLookup:
                 return line.split(COMMENT_DELIMITER)[0]
             else:
                 return line
-                
+        
+        # process the input filepath
         with open(filepath, "r") as read_content:
             target_processes = []
             go_terms = []
@@ -1067,7 +1146,37 @@ class ReverseLookup:
                     else:
                         d = {"id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3]}
                     go_terms.append(GOTerm.from_dict(d))
-        return cls(go_terms, target_processes, model_name=mod_name)
+        
+        # process program_data_files/models/self.model_name/data.json if it exists
+        model_existing_data_filepath = os.path.join("program_data_files", "models", mod_name, "data.json")
+        if os.path.exists(model_existing_data_filepath):
+            with open(model_existing_data_filepath, "r") as f:
+                model_existing_data_json = json.load(f)
+        
+        if model_existing_data_json:
+            execution_times = model_existing_data_json['execution_times']
+            target_processes = model_existing_data_json['target_processes']
+            miRNA_overlap_treshold = model_existing_data_json['miRNA_overlap_treshold']
+
+            goterms = []
+            for goterm_dict in model_existing_data_json['goterms']:
+                goterms.append(GOTerm.from_dict(goterm_dict))
+
+            products = []
+            for product_dict in model_existing_data_json.get('products', []):
+                products.append(Product.from_dict(product_dict))
+
+            miRNAs = []
+            for miRNAs_dict in model_existing_data_json.get('miRNAs', []):
+                miRNAs.append(miRNA.from_dict(miRNAs_dict))
+            
+            # data.json for this model exists, use it to load the model
+            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, model_name=mod_name, execution_times=execution_times)
+        
+        else:
+            # data.json for this model doesn't exist yet
+            return cls(go_terms, target_processes, model_name=mod_name)
+        
     
     @classmethod
     def from_dict(cls, data: Dict[str, List[Dict]]) -> 'ReverseLookup':
@@ -1085,6 +1194,44 @@ class ReverseLookup:
         target_processes = data['target_processes']
         return cls(goterms, target_processes)
 
+class Timer:
+    def __init__(self):
+        self.start_time = time.time()
+    
+    def set_start_time(self):
+        """
+        Sets a new reference start time.
+        """
+        self.start_time = time.time()
+    
+    def get_elapsed_seconds(self) -> int:
+        """
+        Returns the amount of seconds unformatted (contains decimal places)
+        """
+        return time.time() - self.start_time
+    
+    def get_elapsed_time(self) -> str:
+        """
+        Gets elapsed time in hh mm ss format.
+        """
+        sec = int(self.get_elapsed_seconds())
+        td = timedelta(seconds=sec)
+        return str(td)
+    
+    def print_elapsed_time(self, useLogger: bool = True, prefix: str = "Elapsed: "):
+        """
+        Prints the elapsed time in hh mm ss format. 
+        
+        Args:
+          - useLogger: if True, then logger.info is used. If false, then print is used.
+          - prefix: the string you want to use as a prefix
+        """
+        if useLogger:
+            logger.info(f"{prefix}{self.get_elapsed_time()}")
+        else:
+            print(f"{prefix}{self.get_elapsed_time()}")
+
+    
 class miRDB60predictor:
     def __init__(self):
         # set the filepath to the miRDB prediction result file
