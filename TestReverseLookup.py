@@ -50,10 +50,14 @@ if __name__ == '__main__':
     logging.config.dictConfig(cfg.log_dict)
     logger.info("testing!")
 
-    model = ReverseLookup.ReverseLookup.from_input_file("diabetes_angio_1/input.txt", mod_name="V1")
-    # model.save_model("diabetes_angio_1/data.json")
-    model.save_model()
-    model.load_model(model_name="V1")
+    # uncomment this to start from scratch!
+    model = ReverseLookup.ReverseLookup.from_input_file("diabetes_angio_2/input.txt", mod_name="V1")
+    model.compute_all("diabetes_angio_2/report.txt")
+
+    # model = ReverseLookup.ReverseLookup.load_model(model_name="V1")
+    # model.compute_all("diabetes_angio_1/report.txt")
+    # model.save_model()
+
 
     # Fetch all GO term names and descriptions
     #model.fetch_all_go_term_names_descriptions()
@@ -89,17 +93,7 @@ if __name__ == '__main__':
     #report = ReverseLookup.ReportGenerator(model, verbosity=3)
     #report.general_report("diabetes_angio_1/general.txt")
 
-    model.compute_all("diabetes_angio_1/report.txt")
-
-    # Save model
-    model.save_model("diabetes_angio_1/data.json")
-
-    # future runs:
-    model = ReverseLookup.ReverseLookup.load_model("diabetes_angio_1/data.json")
-
-
-
-    #with keepawake(keep_screen_awake=False):
+    # with keepawake(keep_screen_awake=False):
         #test_load_old()
         #test_load()
         #test_build()

@@ -95,8 +95,7 @@ def get_GO_products_from_term_API(term):
     # --> no genes associated to the term, only to subterms --> genes array can be of 0 length (and that is not an error)
     if len(genes) == 0:
         # 0 associated gene products -> save in appropriate terms_empty.txt file
-        util.append_to_file(term, os.path.join(
-            util.filepath_striplast(current_filepath), "terms_empty.txt"))
+        util.append_to_file(term, os.path.join(util.filepath_striplast(current_filepath), "terms_empty.txt"))
         logger.info(
             f"Term {term} doesn't contain any products. Saved it in {current_filepath}")
         return []
