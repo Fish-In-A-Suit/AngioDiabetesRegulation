@@ -52,6 +52,8 @@ if __name__ == '__main__':
 
     model = ReverseLookup.ReverseLookup.from_input_file("diabetes_angio_1/input.txt", mod_name="V1")
     # model.save_model("diabetes_angio_1/data.json")
+    model.save_model()
+    model.load_model(model_name="V1")
 
     # Fetch all GO term names and descriptions
     #model.fetch_all_go_term_names_descriptions()

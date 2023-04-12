@@ -66,7 +66,8 @@ report = ReverseLookup.ReportGenerator(model, verbosity=3)
 report.general_report("diabetes_angio_1/general.txt")
 
 # Save model
-model.save_model("diabetes_angio_1/data.json")
+model.save_model("diabetes_angio_1/data.json") # save to a specific filepath
+model.save_model() # save to program_data_files/models/self.model_name/data.json
 
 # Alternatively, you can use model.compute_all(str:report_filepath) to achieve all of the above steps:
 model.compute_all("diabetes_angio1/report.txt")
@@ -76,4 +77,6 @@ In future runs, you can import the model with:
 
 ```python
 model = ReverseLookup.ReverseLookup.load_model("diabetes_angio_1/data.json")
+# or
+model = ReverseLookup.ReverseLookup.load_model(model_name="V1") # if a model with the same model_name has been saved before
 ```

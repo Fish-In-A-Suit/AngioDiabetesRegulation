@@ -572,6 +572,7 @@ class Product:
                 uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
                 if uniprot_id is not None:
                     self.uniprot_id = uniprot_id
+        # TODO: What if len(self.id_synonyms) > 1 ?
 
     def fetch_Uniprot_info(self, uniprot_api: UniProtAPI) -> None:
         """
@@ -654,7 +655,14 @@ class ReverseLookup:
         self.target_processes = target_processes
         self.miRNAs = miRNAs
         self.miRNA_overlap_treshold = miRNA_overlap_treshold
-        self.model_name = model_name
+        self.model_name = model_name # arbitrary model name
+
+        self.save_path_root = os.path.join("program_data_files", "models", model_name) # path where model files are saved
+        if not os.path.exists(self.save_path_root):
+            logger.debug(f"Created directory {self.save_path_root} for model {self.model_name}.")
+            os.makedirs(self.save_path_root)
+        else:
+            logger.debug(f"Directory {self.save_path_root} already exists. Continuing.")
 
     def fetch_all_go_term_names_descriptions(self):
         """
@@ -839,25 +847,25 @@ class ReverseLookup:
     
     def compute_all(self, report_filepath: str) -> None:
         # Fetch all GO term names and descriptions
-        self.fetch_all_go_term_names_descriptions()
+        self.fetch_all_go_term_names_descriptions() # c1-TN
         # Fetch all GO term products
-        self.fetch_all_go_term_products()
+        self.fetch_all_go_term_products() # c2-TP
         # Create products from GO terms
-        self.create_products_from_goterms()
+        self.create_products_from_goterms() # c3-P
         # Fetch UniProt ID products
-        self.fetch_UniprotID_products()
+        self.fetch_UniprotID_products() # c4-UidP
         # Prune products
-        self.prune_products()
+        self.prune_products() # c5-Pr
         # Fetch UniProt information
-        self.fetch_Uniprot_infos()
+        self.fetch_Uniprot_infos() # c6-Uinf
         # Score products
-        self.score_products()
+        self.score_products() # c7-SC
          # Optional: Fetch mRNA sequences
-        self.fetch_mRNA_sequences()
+        self.fetch_mRNA_sequences() # c8-mRNA
         # Predict miRNAs
-        self.predict_miRNAs()
+        self.predict_miRNAs() # c9-miRNA
         # Score miRNAs
-        self.score_miRNAs()
+        self.score_miRNAs() # c10-miRNASC
         # Generate report
         report = ReverseLookup.ReportGenerator(self, verbosity=3)
         report.general_report(report_filepath)
@@ -884,11 +892,18 @@ class ReverseLookup:
         # Use a list comprehension to extract IDs from the GO terms and return the resulting list
         return [goterm.id for goterm in self.goterms]
     
-    def save_model(self, filepath: str) -> None:
+    def save_model(self, filepath: str = "") -> None:
+        """
+        Saves the model as a JSON. If input filepath is not provided, model is saved to self.save_path_root, else the model
+        is saved to the input filepath.
+
+        The output JSON is saved as data.json
+        """
         data = {}
         #save options - currently not used
 
         #save target_process
+        data['model_name'] = self.model_name
         data['target_processes'] = self.target_processes
         data['miRNA_overlap_treshold'] = self.miRNA_overlap_treshold
         #save goterms
@@ -901,13 +916,22 @@ class ReverseLookup:
         for miRNA in self.miRNAs:
             data.setdefault('miRNAs', []).append(miRNA.__dict__)
         #write to file
+        if filepath == "": filepath = os.path.join(self.save_path_root, "data.json") # if filepath not provided, use self.save_path_root to compute destination json location
         with open(filepath, 'w') as f:
             json.dump(data, f, indent=4)
 
     @classmethod
-    def load_model(cls, filepath: str) -> 'ReverseLookup':
+    def load_model(cls, filepath: str = "", model_name: str = "") -> 'ReverseLookup':
+        """
+        Loads the model from filepath. If filepath is specified (eg. "diabetes_angio_1/data.json"), the model_name is ignored.
+        If filepath is left empty ("") and model_name is specified, then program_data_files/models/model_name/data.json is loaded.
+        """
+        if filepath == "" and model_name != "":
+            filepath = os.path.join("program_data_files", "models", model_name, "data.json")
         with open(filepath, "r") as f:
             data = json.load(f)
+        
+        model_name = data['model_name']
         target_processes = data['target_processes']
         miRNA_overlap_treshold = data['miRNA_overlap_treshold']
 
@@ -923,7 +947,10 @@ class ReverseLookup:
         for miRNAs_dict in data.get('miRNAs', []):
             miRNAs.append(miRNA.from_dict(miRNAs_dict))
         
-        return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold)
+        if model_name:
+            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, model_name=model_name)
+        else:
+            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold)
 
     @classmethod
     def from_input_file(cls, filepath: str, mod_name: str = "model") -> 'ReverseLookup':
