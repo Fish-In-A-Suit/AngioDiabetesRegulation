@@ -912,7 +912,7 @@ class ReverseLookup:
             self.execution_times["score_miRNAs"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
     
-    def compute_all(self, report_filepath: str) -> None:
+    def compute_all(self, report_filepath: str = "") -> None:
         # Fetch all GO term names and descriptions
         self.fetch_all_go_term_names_descriptions() # c1-TN
         self.save_model()
@@ -944,6 +944,7 @@ class ReverseLookup:
         self.score_miRNAs() # c10-miRNASC
         self.save_model()
         # Generate report
+        if report_filepath == "": report_filepath = os.path.join(self.save_path_root, "report.txt")
         report = ReverseLookup.ReportGenerator(self, verbosity=3)
         report.general_report(report_filepath)
 
@@ -968,6 +969,31 @@ class ReverseLookup:
         """
         # Use a list comprehension to extract IDs from the GO terms and return the resulting list
         return [goterm.id for goterm in self.goterms]
+    
+    @classmethod
+    def analyze_saves(self, model_name: str) -> tuple[int,List]:
+        """
+        Analyzes the amount of unique model.save jsons inside program_data_files/models/model_name/
+
+        Returns:
+          - [0]: (int) count of model save files
+          - [1]: [List] relative paths to model save files
+        
+        Returns [-1, []] if program_data_files/models/model_name/ doesn't exist
+        """
+        dirpath = os.path.join("program_data_files","models",model_name)
+        count = 0
+        saved_model_files = []
+        if os.path.exists(dirpath):
+            files = os.listdir(dirpath)
+            for filename in files:
+                if "data" in filename:
+                    count += 1
+                    saved_model_files.append(os.path.join("program_data_files", "models", model_name, filename))
+            return count, saved_model_files
+        else:
+            return -1,[]
+        
     
     def save_model(self, filepath: str = "") -> None:
         """
@@ -1003,9 +1029,35 @@ class ReverseLookup:
         """
         Loads the model from filepath. If filepath is specified (eg. "diabetes_angio_1/data.json"), the model_name is ignored.
         If filepath is left empty ("") and model_name is specified, then program_data_files/models/model_name/data.json is loaded.
+
+        If there is more than one model save file located at program_data_files/models/model_name/, then the user is given an option
+        to choose among the model save files. This function displays only the filenames with the keyword "data" as valid load files,
+        therefore make sure, to save all of the model json files with the "data" keyword in the filename.
         """
-        if filepath == "" and model_name != "":
+        save_files_analysis = cls.analyze_saves(model_name)
+        if filepath == "" and model_name != "" and save_files_analysis[0] == 1: # if there is exactly one saved version in save_files_analysis
             filepath = os.path.join("program_data_files", "models", model_name, "data.json")
+        elif filepath == "" and model_name != "" and save_files_analysis[0] > 1: # if there are more than one saved versions
+            logger.info(f"Model {model_name} has multiple save files. Type the number of the save file you wish to choose.")
+            i=0
+            for filepath in save_files_analysis[1]:
+                filename = filepath.split(os.sep)[-1]
+                logger.info(f"[{i}]: {filename}")
+                i+=1
+            user_input = -1
+            while True:
+                user_input = input("Type the number of the save file you wish to choose: ") 
+                try:
+                    user_input = int(user_input)
+                except ValueError:
+                    logger.info("Invalid input! Please enter an integer.")
+                if isinstance(user_input, int) and user_input < len(save_files_analysis[1]):
+                    break
+                else:
+                    logger.info(f"Invalid input. Please enter an integer no greater than {len(save_files_analysis[1])}.")
+            filepath = save_files_analysis[1][user_input]
+            logger.info(f"You chose: {filepath} as the model load file")
+
         with open(filepath, "r") as f:
             data = json.load(f)
         
