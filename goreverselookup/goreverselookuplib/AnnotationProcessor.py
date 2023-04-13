@@ -1,7 +1,7 @@
 import requests
 import time
 import os
-from typing import List, Dict, Set, Optional, Callable
+#from typing import List, Dict, Set, Optional, Callable
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 import logging

@@ -4,7 +4,7 @@ if TYPE_CHECKING:
     from .Metrics import Metrics
 import json
 import os
-from typing import List, Dict, Set, Optional, Callable
+from typing import List, Dict, Optional
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 import logging

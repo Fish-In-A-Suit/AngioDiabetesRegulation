@@ -1,12 +1,14 @@
+from __future__ import annotations
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from .Model import Product
 import requests
 import os
-from typing import List, Dict, Set, Optional, Callable
+from typing import Dict
 import gzip
 import logging
 
 logger = logging.getLogger(__name__)
-
-from .Model import Product
 
 class miRDB60predictor:
     def __init__(self):

@@ -1,5 +1,8 @@
-from .Model import ReverseLookup
-from .Metrics import Metrics
+from __future__ import annotations
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from .Model import ReverseLookup
+    from .Metrics import Metrics
 import os
 import tabulate
 from tabulate import tabulate, SEPARATING_LINE
