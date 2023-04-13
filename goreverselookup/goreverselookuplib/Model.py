@@ -178,19 +178,6 @@ class ReverseLookup:
         self.miRNAs = miRNAs
         self.miRNA_overlap_treshold = miRNA_overlap_treshold
 
-    def get_basepath():
-        # Get the stack trace
-        stack_trace = traceback.extract_stack()
-
-        # Find the top-level file in the stack trace
-        for frame in reversed(stack_trace):
-            if frame.filename.endswith('.py'):
-                basepath = os.path.dirname(os.path.abspath(frame.filename))
-                return basepath
-
-        # If the top-level file is not found, return the current directory
-        return os.getcwd()
-
     def fetch_all_go_term_names_descriptions(self):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_name_description method for each object.
