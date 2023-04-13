@@ -137,6 +137,9 @@ class inhibited_products_id(Metrics):
 
 class basic_mirna_score(Metrics):
     def __init__(self, model: ReverseLookup):
+        """
+        Score calculated from adv_score and overlap
+        """
         super().__init__(model)
         self.name = "basic_score"
         self.treshold = self.reverse_lookup.miRNA_overlap_treshold # it should be defined in the model, otherwise strange things happen when one mixes scores with different treshold
