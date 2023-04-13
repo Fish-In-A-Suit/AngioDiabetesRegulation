@@ -678,7 +678,7 @@ class ReverseLookup:
         api = GOApi()
         with logging_redirect_tqdm():
             for goterm in tqdm(self.goterms):
-                if goterm.name == "":
+                if goterm.name == None:
                     goterm.fetch_name_description(api)
 
         if "fetch_all_go_term_names_descriptions" not in self.execution_times: # to prevent overwriting on additional runs of the same model name
@@ -694,7 +694,8 @@ class ReverseLookup:
         api = GOApi()
         with logging_redirect_tqdm():
             for goterm in tqdm(self.goterms):
-                goterm.fetch_products(api)
+                if goterm.products == []:
+                    goterm.fetch_products(api)
         
         if "fetch_all_go_term_products" not in self.execution_times:
             self.execution_times["fetch_all_go_term_products"] = self.timer.get_elapsed_time()
@@ -1100,30 +1101,28 @@ class ReverseLookup:
         if os.path.exists(model_existing_data_filepath):
             with open(model_existing_data_filepath, "r") as f:
                 model_existing_data_json = json.load(f)
-        
-        if model_existing_data_json:
-            execution_times = model_existing_data_json['execution_times']
-            target_processes = model_existing_data_json['target_processes']
-            miRNA_overlap_treshold = model_existing_data_json['miRNA_overlap_treshold']
 
-            goterms = []
-            for goterm_dict in model_existing_data_json['goterms']:
-                goterms.append(GOTerm.from_dict(goterm_dict))
+                execution_times = model_existing_data_json['execution_times']
+                target_processes = model_existing_data_json['target_processes']
+                miRNA_overlap_treshold = model_existing_data_json['miRNA_overlap_treshold']
 
-            products = []
-            for product_dict in model_existing_data_json.get('products', []):
-                products.append(Product.from_dict(product_dict))
+                goterms = []
+                for goterm_dict in model_existing_data_json['goterms']:
+                    goterms.append(GOTerm.from_dict(goterm_dict))
 
-            miRNAs = []
-            for miRNAs_dict in model_existing_data_json.get('miRNAs', []):
-                miRNAs.append(miRNA.from_dict(miRNAs_dict))
+                products = []
+                for product_dict in model_existing_data_json.get('products', []):
+                    products.append(Product.from_dict(product_dict))
+
+                miRNAs = []
+                for miRNAs_dict in model_existing_data_json.get('miRNAs', []):
+                    miRNAs.append(miRNA.from_dict(miRNAs_dict))
             
-            # data.json for this model exists, use it to load the model
-            return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, model_name=mod_name, execution_times=execution_times)
-        
-        else:
-            # data.json for this model doesn't exist yet
-            return cls(go_terms, target_processes, model_name=mod_name)
+                # data.json for this model exists, use it to load the model
+                return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, model_name=mod_name, execution_times=execution_times)
+            
+        # data.json for this model doesn't exist yet
+        return cls(go_terms, target_processes, model_name=mod_name)
         
     
     @classmethod
