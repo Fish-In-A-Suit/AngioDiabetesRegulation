@@ -13,3 +13,6 @@ src_data_files\miRNAdbs\mirbase_miRNA_06-02-2023.dat
 src_data_files\miRNAdbs\miRDB_v6.0_prediction_result.txt
 
 test_run_2/
+
+*.egg-info/
+dist/

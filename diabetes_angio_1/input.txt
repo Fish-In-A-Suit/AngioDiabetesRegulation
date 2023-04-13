@@ -165,4 +165,3 @@ GO:0055002	diabetes	0	1	striated muscle cell development
 GO:0014882	diabetes	0	1	regulation of myofibril number
 GO:0014881	diabetes	0	1	regulation of myofibril size
 
-
