@@ -240,6 +240,41 @@ class EnsemblAPI:
         self.retries = retries
         self.timeout = timeout
 
+    def get_human_ortholog(self, id):
+        """
+        Given an source ID, detect organism and returns the corresponding human ortholog using the Ensembl API.
+        """
+        if "ZFIN" in id:
+            species = "zebrafish"
+            id_url = id.split(":")[1]
+        elif "Xenbase" in id:
+            species  = "xenopus_tropicalis"
+            id_url = id.split(":")[1]
+        elif "MGI" in id:
+            species  = "mouse"
+            id_url = id
+        elif "RGD" in id:
+            species  = "rat"
+            id_url = id.split(":")[1]
+        else:
+            logger.info(f"No predefined organism found for {id}")
+            return None
+        url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
+        for i in range(self.retries):
+            try:
+                response = requests.get(url, headers={"Content-Type": "application/json"}, timeout=self.timeout)
+                response.raise_for_status()
+                response_json = response.json()["data"][0]["homologies"]
+                best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
+                ortholog = best_ortholog_dict["target"]["id"]
+                logger.info(f"Received ortholog for id {id} -> {ortholog}.")
+                return ortholog
+            except requests.exceptions.RequestException:
+                logger.warning(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
+                time.sleep(self.timeout)
+        logger.info(f"Failed to get sequence for id {id} after {self.retries} retries.")
+        return None
+
     def get_sequence(self, ensembl_id, sequence_type="cdna"):
         """
         Given an Ensembl ID, returns the corresponding nucleotide sequence using the Ensembl API.
@@ -258,6 +293,85 @@ class EnsemblAPI:
         logger.info(f"Failed to get sequence for id {ensembl_id} after {self.retries} retries.")
         return None
     
+    def get_info(self, id: str):
+        """Can recievee Ensembl id or symbol (human)
+
+        Args:
+            id (_type_): _description_
+
+        Returns:
+            _type_: _description_
+        """
+        #some id need prefix and some don't
+        if "ENS" in id:
+            url = f"https://rest.ensembl.org/lookup/id/{id}?content-type=application/json;mane=1;expand=1"
+        else:
+            if "ZFIN" in id:
+                species = "zebrafish"
+                id_url = id.split(":")[1]
+            elif "Xenbase" in id:
+                species  = "xenopus_tropicalis"
+                id_url = id.split(":")[1]
+            elif "MGI" in id:
+                species  = "mouse"
+                id_url = id
+            elif "RGD" in id:
+                species  = "rat"
+                id_url = id.split(":")[1]
+            elif ":" in id:
+                logger.info(f"No predefined organism found for {id}")
+                return None
+            else:
+                species = "human"
+                id_url = id
+                
+            url = f"https://rest.ensembl.org/lookup/symbol/{species}/{id_url}?mane=1;expand=1"
+            altr_url = f"http://rest.ensembl.org/xrefs/symbol/{species}/{id_url}?object_type=gene"
+        
+        for i in range(self.retries):
+            try:
+                response = requests.get(url, headers={"Content-Type": "application/json"}, timeout=self.timeout)
+                response.raise_for_status()
+                response_json = response.json()
+                break
+            except requests.exceptions.RequestException:
+                try:
+                    response = requests.get(altr_url, headers={"Content-Type": "application/json"}, timeout=self.timeout)
+                    response.raise_for_status()
+                    response_json = response.json()
+                    selected_ids = [d["id"] for d in response_json if "ENS" in d["id"]]
+                    url = f"https://rest.ensembl.org/lookup/id/{selected_ids[0]}?content-type=application/json;mane=1;expand=1"
+                    response = requests.get(url, headers={"Content-Type": "application/json"}, timeout=self.timeout)
+                    response.raise_for_status()
+                    response_json = response.json()
+                    break
+                except Exception as e:
+                    logger.warning(e)
+                logger.warning(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
+                time.sleep(self.timeout)
+        if not response_json:
+            return None
+        
+        ensg_id = response_json["id"]
+        name = response_json["display_name"]
+        description = response_json["description"].split(" [")[0]
+        try:
+            selected_dicts = [d for d in response_json["Transcript"] if d["MANE"] != []]
+            if selected_dicts != []:
+                ensembl_transcript_id = selected_dicts[0]["MANE"][0]["id"]
+                refseq_id = selected_dicts[0]["MANE"][0]["refseq_match"]
+            else:
+                selected_dicts = [d for d in response_json["Transcript"] if d["is_canonical"] == 1]
+                ensembl_transcript_id = selected_dicts[0]["id"]
+                refseq_id = None
+
+        except Exception as e:
+            logger.warning(e)
+            ensembl_transcript_id = None
+            refseq_id = None
+        logger.info(f"Received sequence for id {id}.")
+        return {"ENSG_id":ensg_id, "name":name, "description":description, "ENST_id":ensembl_transcript_id, "refseq_id":refseq_id}
+
 class HumanOrthologFinder:
     def __init__(self):
         self.zfin = ZFINHumanOrthologFinder()

@@ -1,4 +1,5 @@
 from __future__ import annotations
+from .AnnotationProcessor import GOApi, EnsemblAPI, UniProtAPI, HumanOrthologFinder
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .Metrics import Metrics
@@ -12,7 +13,6 @@ import traceback
 
 logger = logging.getLogger(__name__)
 
-from .AnnotationProcessor import GOApi, EnsemblAPI, UniProtAPI, HumanOrthologFinder
 
 class GOTerm:
     def __init__(self, id: str, process: str, direction: str, name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: List[str] = []):
@@ -60,11 +60,13 @@ class GOTerm:
         Returns:
             A new instance of the GOTerm class.
         """
-        goterm = cls(d['id'], d['process'], d['direction'], d.get('name'), d.get('description'), d.get('weight', 1.0), d.get('products', []))
+        goterm = cls(d['id'], d['process'], d['direction'], d.get('name'), d.get(
+            'description'), d.get('weight', 1.0), d.get('products', []))
         return goterm
 
+
 class Product:
-    def __init__(self, id_synonyms: List[str], uniprot_id: str = None, description: str = None, ensembl_id: str= None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None):
+    def __init__(self, id_synonyms: List[str], uniprot_id: str = None, description: str = None, ensembl_id: str = None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None):
         """
         A class representing a product (e.g. a gene or protein).
 
@@ -83,12 +85,13 @@ class Product:
         self.refseq_nt_id = refseq_nt_id
         self.mRNA = mRNA
         self.scores = {} if scores is None else scores.copy()
-    
+
     def fetch_UniprotID(self, human_ortolog_finder: HumanOrthologFinder, uniprot_api: UniProtAPI) -> None:
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
             self.uniprot_id = self.id_synonyms[0]
         elif len(self.id_synonyms) == 1:
-            human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(self.id_synonyms[0])
+            human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(
+                self.id_synonyms[0])
             if human_ortholog_gene_id is not None:
                 uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
                 if uniprot_id is not None:
@@ -98,7 +101,8 @@ class Product:
         """
         includes description, ensembl_id and refseq_nt_id
         """
-        if self.uniprot_id == None: return
+        if self.uniprot_id == None:
+            return
         info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
         full_name = info_dict.get("full_name")
         ensembl_id = info_dict.get("ensembl_id")
@@ -109,12 +113,13 @@ class Product:
             self.ensembl_id = ensembl_id
         if refseq_nt_id is not None:
             self.refseq_nt_id = refseq_nt_id
-    
+
     def fetch_mRNA_sequence(self, ensembl_api: EnsemblAPI) -> None:
-        if self.ensembl_id is None: return
-        sequence = ensembl_api.get_sequence(self.ensembl_id)    
+        if self.ensembl_id is None:
+            return
+        sequence = ensembl_api.get_sequence(self.ensembl_id)
         if sequence is not None:
-            self.mRNA = sequence    
+            self.mRNA = sequence
 
     @classmethod
     def from_dict(cls, d: dict) -> 'Product':
@@ -128,6 +133,7 @@ class Product:
             Product: A new Product instance created from the input dictionary.
         """
         return cls(d['id_synonyms'], d.get('uniprot_id'), d.get('description'), d.get('ensembl_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores'))
+
 
 class miRNA:
     def __init__(self, id: str, sequence: str = None, mRNA_overlaps: Dict[str, float] = None, scores: Dict[str, float] = None) -> None:
@@ -217,20 +223,20 @@ class ReverseLookup:
         """
         # Create an empty set to store unique products
         products_set = set()
-        
+
         # Iterate over each GOTerm object in the go_term set and retrieve the set of products associated with that GOTerm
         # object. Add these products to the products_set.
         for term in self.goterms:
             products_set.update(term.products)
-        
+
         # Iterate over each product in the products_set and create a new Product object from the product ID using the
         # Product.from_dict() classmethod. Add the resulting Product objects to the ReverseLookup object's products list.
         for product in products_set:
-            self.products.append(Product.from_dict({'id_synonyms':[product]}))
+            self.products.append(Product.from_dict({'id_synonyms': [product]}))
         logger.info(f"Created Product objects from GOTerm object definitions")
 
     def fetch_UniprotID_products(self) -> None:
-        try:   
+        try:
             human_ortolog_finder = HumanOrthologFinder()
             uniprot_api = UniProtAPI()
             # Iterate over each Product object in the ReverseLookup object.
@@ -239,19 +245,21 @@ class ReverseLookup:
                     # Check if the Product object doesn't have a UniProt ID.
                     if product.uniprot_id == None:
                         # If it doesn't, fetch UniProt data for the Product object.
-                        product.fetch_UniprotID(human_ortolog_finder, uniprot_api)
+                        product.fetch_UniprotID(
+                            human_ortolog_finder, uniprot_api)
         except Exception as e:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
             self.save_products_to_datafile('crash_products.json')
             # Re-raise the exception so that the caller of the method can handle it.
-            raise e    
+            raise e
 
     def prune_products(self) -> None:
         # Create a dictionary that maps UniProt ID to a list of products
         reverse_uniprotid_products = {}
         for product in self.products:
             if product.uniprot_id is not None:
-                reverse_uniprotid_products.setdefault(product.uniprot_id, []).append(product)
+                reverse_uniprotid_products.setdefault(
+                    product.uniprot_id, []).append(product)
 
         # For each UniProt ID that has more than one product associated with it, create a new product with all the synonyms
         # and remove the individual products from the list
@@ -262,10 +270,11 @@ class ReverseLookup:
                     self.products.remove(product)
                     id_synonyms.extend(product.id_synonyms)
                 # Create a new product with the collected information and add it to the product list
-                self.products.append(Product(id_synonyms, uniprot_id, product_list[0].description, product_list[0].ensembl_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
+                self.products.append(Product(
+                    id_synonyms, uniprot_id, product_list[0].description, product_list[0].ensembl_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
 
     def fetch_Uniprot_infos(self) -> None:
-        try:   
+        try:
             uniprot_api = UniProtAPI()
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
@@ -275,7 +284,7 @@ class ReverseLookup:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_Uniprot_info(uniprot_api)
         except Exception as e:
-            raise e 
+            raise e
 
     def score_products(self, score_class: List[Metrics]) -> None:
         if not isinstance(score_class, list):
@@ -285,10 +294,11 @@ class ReverseLookup:
             # iterate over each Product object in self.products and score them using the Scoring object
             for product in tqdm(self.products):
                 for _score_class in score_class:
-                    product.scores[_score_class.name] = _score_class.metric(product)
+                    product.scores[_score_class.name] = _score_class.metric(
+                        product)
 
     def fetch_mRNA_sequences(self) -> None:
-        try:   
+        try:
             ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
@@ -298,7 +308,7 @@ class ReverseLookup:
                         # If it has, fetch mRNA sequence data for the Product object.
                         product.fetch_mRNA_sequence(ensembl_api)
         except Exception as e:
-            raise e 
+            raise e
 
     def predict_miRNAs(self, prediction_type: str = 'miRDB') -> None:
         # check the prediction type
@@ -319,7 +329,8 @@ class ReverseLookup:
                                     break
                             # if the miRNA doesn't exist in the list, create a new miRNA object
                             else:
-                                self.miRNAs.append(miRNA(miRNA_id, mRNA_overlaps={product.uniprot_id : match}))
+                                self.miRNAs.append(miRNA(miRNA_id, mRNA_overlaps={
+                                                   product.uniprot_id: match}))
         elif prediction_type == 'other_type':
             # do something else
             pass
@@ -329,7 +340,8 @@ class ReverseLookup:
 
     def change_miRNA_overlap_treshold(self, treshold: float, yes: bool = False) -> None:
         self.miRNA_overlap_treshold = treshold
-        logger.warning(f"Sorry, but changing the treshold will delete all the calculated miRNA scores. You will have to calculate them again!")
+        logger.warning(
+            f"Sorry, but changing the treshold will delete all the calculated miRNA scores. You will have to calculate them again!")
         if not yes:
             confirmation = input(f"Are you sure you want to proceed? (y/n) ")
             if confirmation.lower() != 'y':
@@ -341,7 +353,7 @@ class ReverseLookup:
     def score_miRNAs(self, score_class: List[Metrics]) -> None:
         if not isinstance(score_class, list):
             score_class = [score_class]
-        
+
         with logging_redirect_tqdm():
             # iterate over miRNAs using tqdm for progress tracking
             for mirna in tqdm(self.miRNAs):
@@ -349,9 +361,10 @@ class ReverseLookup:
                 if not mirna.mRNA_overlaps:
                     continue
                 for _score_class in score_class:
-                    mirna.scores[_score_class.name] = _score_class.metric(mirna)
+                    mirna.scores[_score_class.name] = _score_class.metric(
+                        mirna)
 
-#housekeeping functions
+# housekeeping functions
 
     def get_all_goterms_for_product(self, product: Product | str) -> List[GOTerm]:
         if isinstance(product, str):
@@ -359,7 +372,7 @@ class ReverseLookup:
                 if prod.uniprot_id == product:
                     product = prod
                     break
-        
+
         goterms_list = []
         for goterm in self.goterms:
             if any(product_id in goterm.products for product_id in product.id_synonyms):
@@ -372,33 +385,36 @@ class ReverseLookup:
         """
         # Use a list comprehension to extract IDs from the GO terms and return the resulting list
         return [goterm.id for goterm in self.goterms]
-    
+
     def save_model(self, filepath: str) -> None:
         data = {}
-        #save options - currently not used
-        current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
-        #save target_process
+        # save options - currently not used
+        current_dir = os.path.dirname(os.path.abspath(
+            traceback.extract_stack()[0].filename))
+        # save target_process
         data['target_processes'] = self.target_processes
         data['miRNA_overlap_treshold'] = self.miRNA_overlap_treshold
-        #save goterms
+        # save goterms
         for goterm in self.goterms:
             data.setdefault('goterms', []).append(goterm.__dict__)
-        #save products
+        # save products
         for product in self.products:
             data.setdefault('products', []).append(product.__dict__)
-        #save miRNAs
+        # save miRNAs
         for miRNA in self.miRNAs:
             data.setdefault('miRNAs', []).append(miRNA.__dict__)
-        #write to file
+        # write to file
         # Create directory for the report file, if it does not exist
-        os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
+        os.makedirs(os.path.dirname(os.path.join(
+            current_dir, filepath)), exist_ok=True)
 
         with open(os.path.join(current_dir, filepath), 'w') as f:
             json.dump(data, f, indent=4)
 
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
-        current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+        current_dir = os.path.dirname(os.path.abspath(
+            traceback.extract_stack()[0].filename))
         print(current_dir)
         with open(os.path.join(current_dir, filepath), "r") as f:
             data = json.load(f)
@@ -416,7 +432,7 @@ class ReverseLookup:
         miRNAs = []
         for miRNAs_dict in data.get('miRNAs', []):
             miRNAs.append(miRNA.from_dict(miRNAs_dict))
-        
+
         return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold)
 
     @classmethod
@@ -431,9 +447,9 @@ class ReverseLookup:
             ReverseLookup: A ReverseLookup object.
         """
         # Define constants used in parsing the file
-        LINE_ELEMENT_DELIMITER = '\t' # Data is tab separated
-        COMMENT_DELIMITER = "#" # Character used to denote a comment
-        LOGIC_LINE_DELIMITER = "###" # Special set of characters to denote a "logic line"
+        LINE_ELEMENT_DELIMITER = '\t'  # Data is tab separated
+        COMMENT_DELIMITER = "#"  # Character used to denote a comment
+        LOGIC_LINE_DELIMITER = "###"  # Special set of characters to denote a "logic line"
 
         def process_comment(line):
             """
@@ -445,18 +461,20 @@ class ReverseLookup:
             if LOGIC_LINE_DELIMITER in line:
                 # Logic lines should be marked with "###" at the start. For a logic line, the returned result is line without the line_keep_delimiter
                 return line.replace(LOGIC_LINE_DELIMITER, "")
-                
+
             if COMMENT_DELIMITER in line:
                 return line.split(COMMENT_DELIMITER)[0]
             else:
                 return line
 
-        current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+        current_dir = os.path.dirname(os.path.abspath(
+            traceback.extract_stack()[0].filename))
         with open(os.path.join(current_dir, filepath), "r") as read_content:
             target_processes = []
             go_terms = []
-            read_lines = read_content.read().splitlines()[2:] #skip first 2 lines
-            section = "" #what is the current section i am reading
+            read_lines = read_content.read().splitlines()[
+                2:]  # skip first 2 lines
+            section = ""  # what is the current section i am reading
             for line in read_lines:
                 line = process_comment(line)
                 if line == "":
@@ -474,16 +492,19 @@ class ReverseLookup:
                     chunks = line.split(LINE_ELEMENT_DELIMITER)
                 elif section == "process":
                     chunks = line.split(LINE_ELEMENT_DELIMITER)
-                    target_processes.append({"process":chunks[0], "direction":chunks[1]})
+                    target_processes.append(
+                        {"process": chunks[0], "direction": chunks[1]})
                 elif section == "GO":
                     chunks = line.split(LINE_ELEMENT_DELIMITER)
                     if len(chunks) == 5:
-                        d = {"id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3], "description": chunks[4]}
+                        d = {"id": chunks[0], "process": chunks[1], "direction": chunks[2],
+                             "weight": chunks[3], "description": chunks[4]}
                     else:
-                        d = {"id":chunks[0], "process":chunks[1], "direction":chunks[2], "weight":chunks[3]}
+                        d = {"id": chunks[0], "process": chunks[1],
+                             "direction": chunks[2], "weight": chunks[3]}
                     go_terms.append(GOTerm.from_dict(d))
         return cls(go_terms, target_processes)
-    
+
     @classmethod
     def from_dict(cls, data: Dict[str, List[Dict]]) -> 'ReverseLookup':
         """

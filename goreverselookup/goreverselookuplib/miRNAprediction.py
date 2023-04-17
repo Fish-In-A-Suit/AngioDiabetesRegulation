@@ -4,6 +4,7 @@ if TYPE_CHECKING:
     from .Model import Product
 import requests
 import os
+import time
 from typing import Dict
 import gzip
 import logging
@@ -23,17 +24,24 @@ class miRDB60predictor:
         logger.info(self._readlines[:10])
     
     def _check_file(self):
+        _max_retries = 5
+        _retry_delay = 2
         # create the directory where the file will be saved if it doesn't exist
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
         if not os.path.exists(self._filepath):
-            # download the file from the miRDB website
+            # download the file from the miRDB website with retries
             url = "https://mirdb.org/download/miRDB_v6.0_prediction_result.txt.gz"
-            response = requests.get(url)
-            # save the file to the specified filepath
-            with open(self._filepath, "wb") as f:
-                f.write(response.content)
-            # log a message indicating the file has been downloaded
-            logger.info(f"Downloaded miRDB_v6.0_prediction_result.txt.gz to {self._filepath}")
+            for i in range(_max_retries):
+                try:
+                    response = requests.get(url)
+                    response.raise_for_status()
+                except requests.exceptions.HTTPError as e:
+                    logger.warning(f"Error downloading file from {url}: {e}")
+                    if i < _max_retries - 1:
+                        logger.warning(f"Retrying in {_retry_delay} seconds...")
+                        time.sleep(_retry_delay)
+                    else:
+                        raise Exception(f"Failed to download file from {url} after {self._max_retries} attempts") from e
 
     def predict_from_product(self, product: Product, threshold: float = 0.0) -> Dict[str, float]:
         """

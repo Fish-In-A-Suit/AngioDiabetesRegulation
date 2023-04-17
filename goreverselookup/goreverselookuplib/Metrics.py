@@ -9,7 +9,7 @@ class Metrics:
         self.reverse_lookup = model
         self.name :str = None
 
-    def metric(self, product: Product):
+    def metric(self, product: Product | miRNA):
         raise NotImplementedError("Subclasses must implement metric()")
 
 class adv_product_score(Metrics):
