@@ -314,7 +314,7 @@ class EnsemblAPI:
             endpoint = f"id/{id}"
         else:
             prefix, id_ = id.split(":") if ":" in id else (None, id)
-            species = species_mapping.get(prefix, "human") #defaults to human
+            species = species_mapping.get(prefix, "human/") #defaults to human
             endpoint = f"symbol/{species}{id_}"
 
         # Try the request up to the specified number of retries
