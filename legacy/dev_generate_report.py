@@ -1,5 +1,5 @@
-import util
-import constants
+import util as util
+import constants as constants
 import os
 from tabulate import tabulate, SEPARATING_LINE
 import requests

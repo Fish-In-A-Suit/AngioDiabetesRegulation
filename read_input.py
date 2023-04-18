@@ -1,5 +1,5 @@
-import util
-import constants
+import legacy.util as util
+import legacy.constants as constants
 import os
 
 import logging

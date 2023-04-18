@@ -5,16 +5,17 @@ import urllib.parse
 import json
 import time
 import csv
-import util
+import util as util
 import os
 import sys
-import constants
+import constants as constants
 import atexit
 import datetime
 import threading
 #from win10toast import ToastNotifier
 import winsound
 import traceback
+from util import Timer
 
 import logging
 logger = logging.getLogger(__name__)
@@ -146,7 +147,7 @@ def get_rnacentral_sequence_API(id):
 
 def find_products_related_to_GO_terms_new(terms, destination_folder="term_products", ask_for_overrides=True):
     """
-    
+    For each term, finds associated products and saves them as terms_direct_products.json.
     """
     global FLAG_EXIT_HANDLER_CODE
     FLAG_EXIT_HANDLER_CODE = 2
@@ -190,6 +191,9 @@ def find_products_related_to_GO_terms_new(terms, destination_folder="term_produc
                 terms = util.list_directionshrink(terms, pre_last_GO_term, forward=True)
                 crash_last_product_directId, crash_last_product_uniprotId = ""
     
+    # start timer
+    timer = Timer()
+
     # check if terms file already exists
     override = 0
     if os.path.isfile(current_filepath) and ask_for_overrides == True:
@@ -203,7 +207,7 @@ def find_products_related_to_GO_terms_new(terms, destination_folder="term_produc
             return
     
     # recover crash data (todo: make code reusable?)
-    crash_filepaths = util.get_files_in_dir("term_genes_crash", "product-search-crash")
+    crash_filepaths = util.get_files_in_dir(f"{constants.ROOT_FOLDER}\\term_genes_crash", "product-search-crash")
     logger.debug(f"crash_filepaths = {crash_filepaths}")
     crash_filepath = ""
     if (isinstance(crash_filepaths, list) and len(crash_filepaths) >= 1) or crash_filepaths != "":
@@ -244,6 +248,11 @@ def find_products_related_to_GO_terms_new(terms, destination_folder="term_produc
         global temp_json_dict
         temp_json_dict = []
 
+    elapsed_time = timer.get_elapsed_time()
+    timer.print_elapsed_time()
+    runtime_dict = {}
+    runtime_dict["runtime"] = elapsed_time 
+    json_dictionaries.append(runtime_dict)
     util.store_json_dictionaries(current_filepath, json_dictionaries)
 
 
@@ -268,13 +277,11 @@ def _find_products_related_to_GO_term_new(term, crash_last_product_directId=""):
         
         def ortholog_process(gene,product):
             if "Error" in gene:
-                logger.debug(
-                    f"ERROR! human_gene_symbol for {product} was not found!")
+                logger.debug(f"ERROR! human_gene_symbol for {product} was not found!")
                 uniprot_productnames.append(None)
                 write_to_temp_dict(i)
             else:  # human ortholog exists in uniprot
-                uniprot_productnames.append(util.get_uniprotId_from_geneName_new(
-                    gene, trust_genes=FLAG_TRUST_GENES))
+                uniprot_productnames.append(util.get_uniprotId_from_geneName_new(gene, trust_genes=FLAG_TRUST_GENES))
                 write_to_temp_dict(i)
         
         def write_to_temp_dict(index):
@@ -387,7 +394,7 @@ def _find_genes_related_to_GO_term(term, filepath, ask_for_overrides):
         if ".json" in element:
             _fn = element.replace(".json", "")
 
-    crash_filepaths = util.get_files_in_dir("term_genes_crash", _fn)
+    crash_filepaths = util.get_files_in_dir(f"{constants.ROOT_FOLDER}\\term_genes_crash", _fn)
     logger.debug(f"crash_filepaths = {crash_filepaths}")
     crash_json = ""
     crash_filepath = ""
@@ -552,13 +559,13 @@ def exit_handler():
 
     if FLAG_EXIT_HANDLER_CODE == 1:
         filename = current_filepath.split("/")[len(current_filepath.split("/"))-1].replace(".json", "")  # gets the last item in path eg. GO-0001525.json
-        dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
+        dest = f"{constants.ROOT_FOLDER}\\term_genes_crash\\{filename}_{datetime.datetime.now().timestamp()}_.json"
         util.store_json_dictionaries(dest, json_dictionaries)
         logger.info("Stopping script!")
     elif FLAG_EXIT_HANDLER_CODE == 2:
         logger.debug(f"json_dict_len = {len(json_dictionaries)}, temp_dict_len = {len(temp_json_dict)}")
         filename = "product-search-crash" # maybe move in constants.py
-        dest = f"term_genes_crash/{filename}_{datetime.datetime.now().timestamp()}_.json"
+        dest = f"{constants.ROOT_FOLDER}\\term_genes_crash\\{filename}_{datetime.datetime.now().timestamp()}_.json"
         if json.dumps(temp_json_dict) != "[]": # if anything is stored in temp_json_dict
             json_dictionaries.append(temp_json_dict)
         json_dictionaries = util.merge_similar_term_products_in_json(json_dictionaries)
@@ -568,13 +575,21 @@ def exit_handler():
         logger.info("No exit handler code specified (FLAG_EXIT_HANDLER_CODE)")
 
 
-def main(terms_list=None):
+def main(terms_list=None, hsa_only=True, debug_shorten_terms_count = 5, debug=False):
+    """
+    debug_shorten_terms_count = to how many terms to shorten the terms list during debugging, must have debug=True set
+    hsa_only: If True, only orthologs / products relating to the Homo Sapiens will be saved for each term
+    """
+
     # register listeners/handlers
     atexit.register(exit_handler)
 
     # set global variables -> initialise with global keyword to refer to the global variable, then set value!
     global FLAG_HOMOSAPIENS_ONLY
-    FLAG_HOMOSAPIENS_ONLY = False
+    if hsa_only == True:
+        FLAG_HOMOSAPIENS_ONLY = True
+    else:
+        FLAG_HOMOSAPIENS_ONLY = False
 
     global FLAG_TRUST_GENES
     FLAG_TRUST_GENES = True
@@ -600,6 +615,9 @@ def main(terms_list=None):
     if terms_list is None:
         terms_list = ["GO:0016525"]
         # terms_list = util.get_array_terms("ALL")
+    
+    if debug == True:
+        terms_list = terms_list[0:debug_shorten_terms_count]
 
     find_products_related_to_GO_terms_new(terms_list, destination_folder=constants.TARGET_FOLDER)
 
