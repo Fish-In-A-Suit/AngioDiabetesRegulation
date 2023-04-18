@@ -55,6 +55,7 @@ def main():
                     predict_dict[mirna[0]] = {}
                 predict_dict[mirna[0]][mrna["UniprotID"]] = mirna[1]
     #logger.debug(predict_dict)
+    
     #for sequence_comparison_results.json:
     """input = util.read_file_as_json(os.path.join(constants.TARGET_FOLDER, "sequence_comparison_results.json"))
     #make prediction dictionary:

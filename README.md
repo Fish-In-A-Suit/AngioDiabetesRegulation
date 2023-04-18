@@ -90,3 +90,5 @@ This section explains how to use the legacy, non-class workflow.
 4. Run dev_scoring_products_basic.py using useLegacy=True -> result = product_scores.json saved to TARGET_FOLDER
 5. Run dev_mrna_download.py. Results are product_mRNA.json and product_mRNA_refseq.json saved to TARGET_FOLDER
 6. Run dev_predict_miRNA_v2.py. It expects product_mRNA_refseq.json to exist in TARGET FOLDER, result is product_mRNA_miRDB-predicted-miRNA-matching.json
+7. Run dev_scoring_miRNA_basic.py; result is mirna_scores.json.
+8. Run dev_generate_report.py; result is report.txt

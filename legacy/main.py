@@ -25,8 +25,9 @@ def main():
    run_score_products = False
    run_get_mRNA = False
    run_predict_miRNA_overlap = False # predict miRNAs based on brute-force, TODO
-   run_predict_miRNA_miRDB = True # predict miRNAs from the miRDB database
+   run_predict_miRNA_miRDB = False # predict miRNAs from the miRDB database
    run_score_miRNA = False
+   run_generate_report = False
    
    # inputs being read from file implementation
    # inputs = util.read_input_file()
@@ -50,6 +51,14 @@ def main():
    if run_predict_miRNA_miRDB:
       import dev_predict_miRNA_v2
       dev_predict_miRNA_v2.main()
+
+   if run_score_miRNA:
+      import dev_scoring_miRNA_basic
+      dev_scoring_miRNA_basic.main()
+   
+   if run_generate_report:
+      import dev_generate_report
+      dev_generate_report.main()
 
 if __name__ == '__main__':
     import logging.config
