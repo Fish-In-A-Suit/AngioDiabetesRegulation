@@ -240,6 +240,41 @@ class EnsemblAPI:
         self.retries = retries
         self.timeout = timeout
 
+    def get_human_ortholog(self, id):
+        """
+        Given an source ID, detect organism and returns the corresponding human ortholog using the Ensembl API.
+        """
+        if "ZFIN" in id:
+            species = "zebrafish"
+            id_url = id.split(":")[1]
+        elif "Xenbase" in id:
+            species  = "xenopus_tropicalis"
+            id_url = id.split(":")[1]
+        elif "MGI" in id:
+            species  = "mouse"
+            id_url = id
+        elif "RGD" in id:
+            species  = "rat"
+            id_url = id.split(":")[1]
+        else:
+            logger.info(f"No predefined organism found for {id}")
+            return None
+        url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
+        for i in range(self.retries):
+            try:
+                response = requests.get(url, headers={"Content-Type": "application/json"}, timeout=self.timeout)
+                response.raise_for_status()
+                response_json = response.json()["data"][0]["homologies"]
+                best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
+                ortholog = best_ortholog_dict["target"]["id"]
+                logger.info(f"Received ortholog for id {id} -> {ortholog}.")
+                return ortholog
+            except requests.exceptions.RequestException:
+                logger.warning(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
+                time.sleep(self.timeout)
+        logger.info(f"Failed to get sequence for id {id} after {self.retries} retries.")
+        return None
+
     def get_sequence(self, ensembl_id, sequence_type="cdna"):
         """
         Given an Ensembl ID, returns the corresponding nucleotide sequence using the Ensembl API.
@@ -258,6 +293,101 @@ class EnsemblAPI:
         logger.info(f"Failed to get sequence for id {ensembl_id} after {self.retries} retries.")
         return None
     
+    def get_info(self, id: str):
+        """Can receive Ensembl id or symbol (human)
+
+        Args:
+            id (str): Ensembl ID or symbol
+
+        Returns:
+            dict: Information about the gene
+        """
+        species_mapping = {
+            "ZFIN": "zebrafish/",
+            "Xenbase": "xenopus_tropicalis/",
+            "MGI": "mouse/MGI:",
+            "RGD": "rat/",
+        }
+
+        # Check if the ID is an Ensembl ID or symbol
+        if id.startswith("ENS"):
+            endpoint = f"id/{id}"
+        else:
+            prefix, id_ = id.split(":") if ":" in id else (None, id)
+            species = species_mapping.get(prefix, "human/") #defaults to human
+            endpoint = f"symbol/{species}{id_}"
+
+        # Try the request up to the specified number of retries
+        for i in range(self.retries):
+            try:
+                response = requests.get(
+                    f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1",
+                    headers={"Content-Type": "application/json"},
+                    timeout=self.timeout,
+                )
+                response.raise_for_status()
+                response_json = response.json()
+                break
+            except requests.exceptions.RequestException:
+                # If the request fails, try the xrefs URL instead
+                try:
+                    response = requests.get(
+                        f"https://rest.ensembl.org/xrefs/{endpoint}?mane=1;expand=1",
+                        headers={"Content-Type": "application/json"},
+                        timeout=self.timeout,
+                    )
+                    response.raise_for_status()
+                    response_json = response.json()
+                    # Use the first ENS ID in the xrefs response to make a new lookup request
+                    ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
+                    if ensembl_id:
+                        response = requests.get(
+                            f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1",
+                            headers={"Content-Type": "application/json"},
+                            timeout=self.timeout,
+                        )
+                        response.raise_for_status()
+                        response_json = response.json()
+                    break
+                except Exception as e:
+                    print(e)
+                print(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
+                time.sleep(self.timeout)
+        else:
+            # If all retries fail, return None
+            return None
+
+        # Extract gene information from API response
+        ensg_id = response_json.get("id")
+        name = response_json.get("display_name")
+        description = response_json.get("description", "").split(" [")[0]
+        
+        canonical_transcript_id = next((entry.get("id") for entry in response_json["Transcript"] if entry.get("is_canonical")), None)
+        mane_transcripts = [d for d in response_json["Transcript"] if d.get("MANE")]
+        if len(mane_transcripts) == 0:
+            ensembl_transcript_id = canonical_transcript_id
+            refseq_id = None
+        elif len(mane_transcripts) == 1:
+            ensembl_transcript_id = mane_transcripts[0]["MANE"][0].get("id")
+            refseq_id = mane_transcripts[0]["MANE"][0].get("refseq_match")
+        else:
+            selected_entry = next((entry for entry in mane_transcripts if entry.get("is_canonical")), None)
+            if not selected_entry:
+                ensembl_transcript_id = selected_entry["MANE"][0].get("id")
+                refseq_id = selected_entry["MANE"][0].get("refseq_match")
+            else:
+                ensembl_transcript_id = mane_transcripts[0]["MANE"][0].get("id")  # select the first canonical transcript with MANE
+                refseq_id = mane_transcripts[0]["MANE"][0].get("refseq_match")
+                logger.warning(f"Found non-canonical MANE transcript for {id}")
+
+        logger.info(f"Received sequence for id {id}.")
+        return {
+            "ENSG_id": ensg_id,
+            "name": name,
+            "description": description,
+            "ENST_id": ensembl_transcript_id,
+            "refseq_id": refseq_id,
+        }
 class HumanOrthologFinder:
     def __init__(self):
         self.zfin = ZFINHumanOrthologFinder()
