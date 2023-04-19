@@ -6,6 +6,7 @@ import os
 
 # Define model from input file
 model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+#model = ReverseLookup.load_model("diabetes_angio_1/data.json")
 
 # Fetch all GO term names and descriptions
 model.fetch_all_go_term_names_descriptions()
