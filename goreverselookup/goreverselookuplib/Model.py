@@ -101,48 +101,65 @@ class Product:
         elif len(self.id_synonyms) == 1:
             human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(
                 self.id_synonyms[0])
-            if human_ortholog_gene_id is not None:
-                self.name = human_ortholog_gene_id
-                uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
-                if uniprot_id is not None:
-                    self.uniprot_id = uniprot_id
+            if human_ortholog_gene_id is None:
+                logger.warning(f"file-based human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
+                human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0])
+                if human_ortholog_gene_ensg_id is not None:
+                    self.ensg_id = human_ortholog_gene_ensg_id
                 else:
-                    logger.warning(f"file-based UniprotID retrieval did not find human ortholog for {self.id_synonyms[0]}")
+                    return
+            if human_ortholog_gene_id is not None:
+                self.genename = human_ortholog_gene_id
+                uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
+            else:
+                uniprot_id = None
+            if uniprot_id is not None:
+                self.uniprot_id = uniprot_id
+            else:
+                logger.warning(f"UniprotAPI did not find uniprotID for {self.id_synonyms[0]}")
+                if human_ortholog_gene_id:
                     enst_dict = ensembl_api.get_info(human_ortholog_gene_id)
-                    self.uniprot_id = enst_dict.get("uniprot_id")
-                    self.name = enst_dict.get("genename")
-                    if self.uniprot_id or self.name:
-                        logger.warning(f"Ensembl-based ortholog finder has now found human ortholog")
+                else:
+                    enst_dict = ensembl_api.get_info(human_ortholog_gene_ensg_id)
+                self.uniprot_id = enst_dict.get("uniprot_id")
+                self.genename = enst_dict.get("genename")
+                if self.uniprot_id:
+                    logger.warning(f"EnsemblAPI has now found uniprotID")
+                
 
     def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
         """
         includes description, ensg_id, enst_id and refseq_nt_id
         """
-        if not self.uniprot_id and not self.genename:
+        if not (self.uniprot_id or self.genename or self.ensg_id):
             return
         if not uniprot_api:
             uniprot_api = UniProtAPI()
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
 
-        if self.uniprot_id:
+        required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
+
+        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
             info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             for key, value in info_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-
-        required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
-        if any(getattr(self, key) is None for key in required_keys):
-            logger.warning(f"UniprotAPI did not return all the required values for UniprorID: {self.uniprot_id}. Retrying with EnsemblAPI")
-            if self.genename:
-                enst_dict = ensembl_api.get_info(self.genename)
-            else:
-                enst_dict = ensembl_api.get_info(self.uniprot_id)
+        if any(getattr(self, key) is None for key in required_keys) and self.ensg_id:
+            enst_dict = ensembl_api.get_info(self.ensg_id)
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-            if all(enst_dict.get(key) is not None for key in required_keys):
-                logger.warning(f"EnsemblAPI now found all the required infos.")
+        if any(getattr(self, key) is None for key in required_keys) and self.genename:
+            enst_dict = ensembl_api.get_info(self.genename)
+            for key, value in enst_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
+        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
+            enst_dict = ensembl_api.get_info(self.uniprot_id)
+            for key, value in enst_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
 
     @classmethod
     def from_dict(cls, d: dict) -> 'Product':
@@ -265,28 +282,28 @@ class ReverseLookup:
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
-                    # Check if the Product object doesn't have a UniProt ID.
-                    if product.uniprot_id == None and product.genename == None:
+                    # Check if the Product object doesn't have a UniProt ID or genename or ensg_id.
+                    if product.uniprot_id == None and product.genename == None and product.ensg_id == None:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_ortholog(
                             human_ortolog_finder, uniprot_api, ensembl_api)
         except Exception as e:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
-            self.save_products_to_datafile('crash_products.json')
+            self.save_model('crash_products.json')
             # Re-raise the exception so that the caller of the method can handle it.
             raise e
 
     def prune_products(self) -> None:
-        # Create a dictionary that maps UniProt ID to a list of products
-        reverse_uniprotid_products = {}
+        # Create a dictionary that maps ENSG to a list of products
+        reverse_ensg_products = {}
         for product in self.products:
-            if product.uniprot_id is not None:
-                reverse_uniprotid_products.setdefault(
+            if product.ensg_id is not None:
+                reverse_ensg_products.setdefault(
                     product.uniprot_id, []).append(product)
 
-        # For each UniProt ID that has more than one product associated with it, create a new product with all the synonyms
+        # For each ENSG that has more than one product associated with it, create a new product with all the synonyms
         # and remove the individual products from the list
-        for uniprot_id, product_list in reverse_uniprotid_products.items():
+        for ensg_id, product_list in reverse_ensg_products.items():
             if len(product_list) > 1:
                 id_synonyms = []
                 for product in product_list:
@@ -294,7 +311,7 @@ class ReverseLookup:
                     id_synonyms.extend(product.id_synonyms)
                 # Create a new product with the collected information and add it to the product list
                 self.products.append(Product(
-                    id_synonyms, product_list[0].genename, uniprot_id, product_list[0].description, product_list[0].ensg_id, product_list[0].enst_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
+                    id_synonyms, product_list[0].genename, product_list[0].uniprot_id, product_list[0].description, product_list[0].ensg_id, product_list[0].enst_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
 
     def fetch_product_infos(self) -> None:
         try:
@@ -304,7 +321,7 @@ class ReverseLookup:
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a UniProt ID.
-                    if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and product.uniprot_id is not None:
+                    if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and (product.uniprot_id or product.genename or product.ensg_id):
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_info(uniprot_api, ensembl_api)
         except Exception as e:

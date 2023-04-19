@@ -1,4 +1,5 @@
 import requests
+from requests.adapters import HTTPAdapter, Retry
 import time
 import os
 #from typing import List, Dict, Set, Optional, Callable
@@ -10,32 +11,34 @@ logger = logging.getLogger(__name__)
 
 class GOApi:
     def __init__(self):
-        self.base_url = "http://api.geneontology.org/api/"
-        self.timeout = 5
-        self.max_retries = 3
+        # Set up a retrying session
+        retry_strategy = Retry(
+            total=3,
+            status_forcelist=[429, 500, 502, 503, 504],
+            backoff_factor=0.3
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        session = requests.Session()
+        session.mount("http://", adapter)
+        session.mount("https://", adapter)
+        self.s = session
 
     def fetch_term_data(self, term_id):
         """
         Fetches term data for a given term ID from the Gene Ontology API
         """
-        url = f"{self.base_url}ontology/term/{term_id}"
+        url = f"http://api.geneontology.org/api/ontology/term/{term_id}"
         params = {}
-        retries = self.max_retries
-        while retries > 0:
-            try:
-                response = requests.get(url, params=params, timeout=self.timeout)
-                if response.ok:
-                    data = response.json()
-                    return data
-                else:
-                    logger.warning(f"Error: {response.status_code} - {response.reason}")
-            except requests.exceptions.Timeout:
-                logger.warning("Timeout error. Retrying...")
-            except requests.exceptions.RequestException as e:
-                logger.warning(f"Error: {e}")
-            retries -= 1
-            time.sleep(2)
-        return None
+        try:
+            response = self.s.get(url, params=params, timeout=2)
+            if response.ok:
+                data = response.json()
+                return data
+            else:
+                logger.warning(f"Error: {response.status_code} - {response.reason}")
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"Error: {e}")
+            return None
 
     def fetch_term_products(self, term_id):
         """
@@ -47,32 +50,38 @@ class GOApi:
                       ["Xenbase", ["NCBITaxon:8364"]],
                       ["MGI", ["NCBITaxon:10090"]],
                       ["RGD", ["NCBITaxon:10116"]]]
-        url = f"{self.base_url}bioentity/function/{term_id}/genes"
+        url = f"http://api.geneontology.org/api/bioentity/function/{term_id}/genes"
         params = {"rows": 10000000}
-        retries = self.max_retries
         products_set = set()
-        while retries > 0:
-            try:
-                response = requests.get(url, params=params, timeout=self.timeout)
-                response.raise_for_status()
-                json = response.json()
-                for assoc in json['associations']:
-                    if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
-                        product_id = assoc['subject']['id']
-                        products_set.add(product_id)
-                products = list(products_set)
-                logger.info(f"Fetched products for GO term {term_id}")
-                return products
-            except (requests.exceptions.RequestException, ValueError):
-                retries -= 1
-                time.sleep(2)
-        return None
+        try:
+            response = self.s.get(url, params=params, timeout=2)
+            response.raise_for_status()
+        except requests.exceptions.RequestException:
+            return None
+        json = response.json()
+        for assoc in json['associations']:
+            if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                product_id = assoc['subject']['id']
+                products_set.add(product_id)
+        products = list(products_set)
+        logger.info(f"Fetched products for GO term {term_id}")
+        return products
 
 class UniProtAPI:
     def __init__(self):
-        self.base_url = "https://rest.uniprot.org/uniprotkb/"
+        # Set up a retrying session
+        retry_strategy = Retry(
+            total=3,
+            status_forcelist=[429, 500, 502, 503, 504],
+            backoff_factor=0.3
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        session = requests.Session()
+        session.mount("http://", adapter)
+        session.mount("https://", adapter)
+        self.s = session
     
-    def get_uniprot_id(self, gene_name, retries=3, timeout=5):
+    def get_uniprot_id(self, gene_name):
         """
         Given a gene name, returns the corresponding UniProt ID using the UniProt API.
 
@@ -86,79 +95,75 @@ class UniProtAPI:
         """
 
         # Define the URL to query the UniProt API
-        url = f"{self.base_url}search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl"
+        url = f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl"
 
         # Try the request up to `retries` times
-        for i in range(retries):
-            try:
-                # Make the request and raise an exception if the response status is not 200 OK
-                response = requests.get(url, timeout=timeout)
-                response.raise_for_status()
+        try:
+            # Make the request and raise an exception if the response status is not 200 OK
+            response = self.s.get(url, timeout=2)
+            response.raise_for_status()
+        except requests.exceptions.RequestException:
+            # if there was an error with the HTTP request, log a warning
+            logger.warning(f"Failed to fetch UniProt data for {gene_name}")
+            return None
 
-                # Parse the response JSON and get the list of results
-                results = response.json()["results"]
+        # Parse the response JSON and get the list of results
+        results = response.json()["results"]
 
-                # If no results were found, return None
-                if len(results) == 0:
-                    return None
+        # If no results were found, return None
+        if len(results) == 0:
+            return None
 
-                # If only one result was found, accept it automatically
-                elif len(results) == 1:
-                    uniprot_id = results[0]["primaryAccession"]
-                    logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 result.")
-                    return "UniProtKB:" + uniprot_id
+        # If only one result was found, accept it automatically
+        elif len(results) == 1:
+            uniprot_id = results[0]["primaryAccession"]
+            logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 result.")
+            return "UniProtKB:" + uniprot_id
 
-                # If multiple results were found, filter out the non-reviewed ones
-                reviewed_ids = []
-                for result in results:
-                    # Skip the result if the gene name is not a match
-                    if gene_name not in result["genes"][0]["geneName"]["value"]:
-                        continue
-                    # Skip the result if it is not reviewed
-                    if "TrEMBL" not in result["entryType"]:
-                        reviewed_ids.append(result)
+        # If multiple results were found, filter out the non-reviewed ones
+        reviewed_ids = []
+        for result in results:
+            # Skip the result if the gene name is not a match
+            if gene_name not in result["genes"][0]["geneName"]["value"]:
+                continue
+            # Skip the result if it is not reviewed
+            if "TrEMBL" not in result["entryType"]:
+                reviewed_ids.append(result)
 
-                # If no reviewed result was found, return None
-                if len(reviewed_ids) == 0:
-                    return None
+        # If no reviewed result was found, return None
+        if len(reviewed_ids) == 0:
+            return None
 
-                # If only one reviewed result was found, accept it automatically
-                elif len(reviewed_ids) == 1:
-                    uniprot_id = reviewed_ids[0]["primaryAccession"]
-                    logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 reviewed result.")
-                    return "UniProtKB:" + uniprot_id
+        # If only one reviewed result was found, accept it automatically
+        elif len(reviewed_ids) == 1:
+            uniprot_id = reviewed_ids[0]["primaryAccession"]
+            logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 reviewed result.")
+            return "UniProtKB:" + uniprot_id
 
-                # If multiple reviewed results were found, ask the user to choose one
-                logger.info(f"Multiple reviewed results found for {gene_name}. Please choose the correct UniProt ID from the following list:")
-                for i, result in enumerate(reviewed_ids):
-                    genes = result["genes"]
-                    impact_genes = set()
-                    for gene in genes:
-                        impact_genes.add(gene["geneName"]["value"])
-                        if "synonyms" in gene:
-                            for synonym in gene["synonyms"]:
-                                impact_genes.add(synonym["value"])
-                    print(f"{i + 1}. {result['primaryAccession']} ({', '.join(impact_genes)})")
-                # Get the user's choice and return the corresponding UniProt ID
-                # choice = input("> ")  # prompt the user for input, but commented out for now
-                choice = "1"  # for testing purposes, use "1" as the user's choice
-                if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):  # check if the user's choice is valid
-                    # get the UniProt ID of the chosen result and return it
-                    uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
-                    logger.warning(f"Auto-selectd first reviewed result for {gene_name}!")
-                    return "UniProtKB:" + uniprot_id
-                else:
-                    # raise an error if the user's choice is not valid
-                    raise ValueError(f"Invalid choice: {choice}")
-            except requests.exceptions.RequestException:
-                # if there was an error with the HTTP request, log a warning
-                logger.warning(f"Failed to fetch UniProt data for {gene_name}")
-            # wait for the specified timeout before retrying the request
-            time.sleep(timeout)
-            # if all retries fail, return None
-        return None
+        # If multiple reviewed results were found, ask the user to choose one
+        logger.info(f"Multiple reviewed results found for {gene_name}. Please choose the correct UniProt ID from the following list:")
+        for i, result in enumerate(reviewed_ids):
+            genes = result["genes"]
+            impact_genes = set()
+            for gene in genes:
+                impact_genes.add(gene["geneName"]["value"])
+                if "synonyms" in gene:
+                    for synonym in gene["synonyms"]:
+                        impact_genes.add(synonym["value"])
+            print(f"{i + 1}. {result['primaryAccession']} ({', '.join(impact_genes)})")
+        # Get the user's choice and return the corresponding UniProt ID
+        # choice = input("> ")  # prompt the user for input, but commented out for now
+        choice = "1"  # for testing purposes, use "1" as the user's choice
+        if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):  # check if the user's choice is valid
+            # get the UniProt ID of the chosen result and return it
+            uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
+            logger.warning(f"Auto-selectd first reviewed result for {gene_name}!")
+            return "UniProtKB:" + uniprot_id
+        else:
+            # raise an error if the user's choice is not valid
+            raise ValueError(f"Invalid choice: {choice}")
   
-    def get_uniprot_info(self, uniprot_id: str, retries: int = 3, timeout: int = 5) -> dict:
+    def get_uniprot_info(self, uniprot_id: str) -> dict:
         """
         Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
         """
@@ -181,34 +186,39 @@ class UniProtAPI:
             uniprot_id = uniprot_id.split(":")[1]
 
         # Construct UniProt API query URL
-        url = f"{self.base_url}search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
+        url = f"https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
 
-        # Retry fetching UniProt data if it fails
-        for i in range(retries):
-            try:
-                response = requests.get(url, timeout=timeout)
-                response.raise_for_status()
-                results = response.json()["results"]
-                if len(results) == 0:
-                    return {}
-                else:
-                    # Get values from the UniProt search result
-                    result = next((entry for entry in results if entry["primaryAccession"] == uniprot_id), None)
-                    name = result["genes"][0]["geneName"]["value"]
-                    description = result["proteinDescription"]["recommendedName"]["fullName"]["value"]
-                    ensg_id, enst_id, refseq_nt_id = _return_mane_select_values_from_uniprot_query(result)
-                    return {"genename": name, "description": description, "ensg_id": ensg_id, "enst_id": enst_id, "refseq_nt_id": refseq_nt_id}
-            except requests.exceptions.RequestException:
-                logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
-            time.sleep(timeout)
-
-        # Return empty dictionary if UniProt data fetching fails
-        return {}
+        try:
+            response = requests.get(url, timeout=2)
+            response.raise_for_status()
+        except requests.exceptions.RequestException:
+            logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
+            return {}
+        
+        results = response.json()["results"]
+        if len(results) == 0:
+            return {}
+        else:
+            # Get values from the UniProt search result
+            result = next((entry for entry in results if entry["primaryAccession"] == uniprot_id), None)
+            name = result["genes"][0]["geneName"]["value"]
+            description = result["proteinDescription"]["recommendedName"]["fullName"]["value"]
+            ensg_id, enst_id, refseq_nt_id = _return_mane_select_values_from_uniprot_query(result)
+            return {"genename": name, "description": description, "ensg_id": ensg_id, "enst_id": enst_id, "refseq_nt_id": refseq_nt_id}
 
 class EnsemblAPI:
-    def __init__(self, retries=3, timeout=5):
-        self.retries = retries
-        self.timeout = timeout
+    def __init__(self):
+        # Set up a retrying session
+        retry_strategy = Retry(
+            total=3,
+            status_forcelist=[429, 500, 502, 503, 504],
+            backoff_factor=0.3
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        session = requests.Session()
+        session.mount("http://", adapter)
+        session.mount("https://", adapter)
+        self.s = session
 
     def get_human_ortholog(self, id):
         """
@@ -230,38 +240,34 @@ class EnsemblAPI:
             logger.info(f"No predefined organism found for {id}")
             return None
         url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
-        for i in range(self.retries):
-            try:
-                response = requests.get(url, headers={"Content-Type": "application/json"}, timeout=self.timeout)
-                response.raise_for_status()
-                response_json = response.json()["data"][0]["homologies"]
-                best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
-                ortholog = best_ortholog_dict["target"]["id"]
-                logger.info(f"Received ortholog for id {id} -> {ortholog}.")
-                return ortholog
-            except requests.exceptions.RequestException:
-                logger.warning(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
-                time.sleep(self.timeout)
-        logger.info(f"Failed to get sequence for id {id} after {self.retries} retries.")
-        return None
+        try:
+            response = self.s.get(url, headers={"Content-Type": "application/json"}, timeout=2)
+            response.raise_for_status()
+        except requests.exceptions.RequestException:
+            return None
+                
+        response_json = response.json()["data"][0]["homologies"]
+        if response_json == []:
+            return None
+        best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
+        ortholog = best_ortholog_dict["target"].get("id")
+        logger.info(f"Received ortholog for id {id} -> {ortholog}")
+        return ortholog
 
     def get_sequence(self, ensembl_id, sequence_type="cdna"):
         """
         Given an Ensembl ID, returns the corresponding nucleotide sequence using the Ensembl API.
         """
         url = f"https://rest.ensembl.org/sequence/id/{ensembl_id}?object_type=transcript;type={sequence_type}"
-        for i in range(self.retries):
-            try:
-                response = requests.get(url, headers={"Content-Type": "text/plain"}, timeout=self.timeout)
-                response.raise_for_status()
-                sequence = response.text
-                logger.info(f"Received sequence for id {ensembl_id}.")
-                return sequence
-            except requests.exceptions.RequestException:
-                logger.warning(f"Failed to fetch Ensembl sequence for {ensembl_id}. Retrying in {self.timeout} seconds.")
-                time.sleep(self.timeout)
-        logger.info(f"Failed to get sequence for id {ensembl_id} after {self.retries} retries.")
-        return None
+        try:
+            response = self.s.get(url, headers={"Content-Type": "text/plain"}, timeout=2)
+            response.raise_for_status()
+        except requests.exceptions.RequestException:
+            logger.warning(f"Failed to fetch Ensembl sequence for {ensembl_id}")
+            return None
+        sequence = response.text
+        logger.info(f"Received sequence for id {ensembl_id}.")
+        return sequence
     
     def get_info(self, id: str) -> dict:
         """Can receive Ensembl id or symbol (human)
@@ -288,48 +294,40 @@ class EnsemblAPI:
             species = species_mapping.get(prefix, "human/") #defaults to human if not prefix "xxx:"
             endpoint = f"symbol/{species}{id_}"
 
-        # Try the request up to the specified number of retries
-        for i in range(self.retries):
+        try:
+            response = self.s.get(
+                f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1",
+                headers={"Content-Type": "application/json"},
+                timeout=2,
+            )
+            response.raise_for_status()
+            response_json = response.json()
+        except requests.exceptions.RequestException:
+            # If the request fails, try the xrefs URL instead
             try:
-                response = requests.get(
-                    f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1",
+                response = self.s.get(
+                    f"https://rest.ensembl.org/xrefs/{endpoint}?",
                     headers={"Content-Type": "application/json"},
-                    timeout=self.timeout,
+                    timeout=2,
                 )
                 response.raise_for_status()
                 response_json = response.json()
-                break
-            except requests.exceptions.RequestException:
-                # If the request fails, try the xrefs URL instead
-                try:
-                    response = requests.get(
-                        f"https://rest.ensembl.org/xrefs/{endpoint}?",
+                # Use the first ENS ID in the xrefs response to make a new lookup request
+                ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
+                if ensembl_id:
+                    response = self.s.get(
+                        f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1",
                         headers={"Content-Type": "application/json"},
-                        timeout=self.timeout,
+                        timeout=2,
                     )
                     response.raise_for_status()
                     response_json = response.json()
-                    # Use the first ENS ID in the xrefs response to make a new lookup request
-                    ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
-                    if ensembl_id:
-                        response = requests.get(
-                            f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1",
-                            headers={"Content-Type": "application/json"},
-                            timeout=self.timeout,
-                        )
-                        response.raise_for_status()
-                        response_json = response.json()
-                    else:
-                        raise Exception("no ensembl id returned")
-                    break
-                except Exception as e:
-                    logger.error(e)
-                logger.warning(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
-                time.sleep(self.timeout)
-        else:
-            # If all retries fail, return None
-            return {}
-        
+                else:
+                    raise Exception("no ensembl id returned")
+            except Exception as e:
+                logger.warning(f"Failed to fetch Ensembl info for {id}.")
+                return {}
+            
 
         # Extract gene information from API response
         ensg_id = response_json.get("id")
@@ -355,19 +353,16 @@ class EnsemblAPI:
                 logger.warning(f"Found non-canonical MANE transcript for {id}")
 
         if ensembl_transcript_id:
-            for i in range(self.retries):
-                try:
-                    response = requests.get(
-                        f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%",
-                        headers={"Content-Type": "application/json"},
-                        timeout=self.timeout,
-                    )
-                    response.raise_for_status()
-                    response_json = response.json()
-                except requests.exceptions.RequestException:
-                    time.sleep(self.timeout)
-            else:
-                uniprot_id = None
+            try:
+                response = self.s.get(
+                    f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%",
+                    headers={"Content-Type": "application/json"},
+                    timeout=2,
+                )
+                response.raise_for_status()
+                response_json = response.json()
+            except requests.exceptions.RequestException:
+                pass
             uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
 
         logger.debug(f"Received info data for id {id}.")
@@ -379,6 +374,7 @@ class EnsemblAPI:
             "refseq_nt_id": refseq_id,
             "uniprot_id": uniprot_id,
         }
+
 class HumanOrthologFinder:
     def __init__(self):
         self.zfin = ZFINHumanOrthologFinder()
