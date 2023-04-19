@@ -6,8 +6,9 @@
 #   2. Get an array of mRNAs
 #   3. Compare the mRNAs against miRNAs
 
-import util
-import constants
+import util as util
+from util import Timer
+import constants as constants
 import os
 
 from Bio import Entrez
@@ -43,6 +44,7 @@ def find_miRNAs_with_match_strengths(miRDB_readlines, mRNA_refseq):
 
 def main():
     logger.debug("Loading product mRNAs.")
+    timer = Timer()
     # handle the product_mRNAs_refseq_file initialisation
     product_mRNAs_refseq_file = constants.TARGET_FOLDER + "/product_mRNA_refseq.json" # default path
     if not os.path.exists(product_mRNAs_refseq_file): # if default path not available, try to get it from user input
@@ -103,8 +105,9 @@ def main():
         current_refseqs_to_miRNAs_dict = {} # reset current dict
     
     # save the modified product_mRNA_refseq_scored_json
-    util.save_json(product_mRNAs_refseq_scored_json, constants.TARGET_FOLDER+"/product_mRNA_miRDB-predicted-miRNA-matching")
+    util.save_json(product_mRNAs_refseq_scored_json, constants.TARGET_FOLDER+"/product_mRNA_miRDB-predicted-miRNA-matching.json")
 
+    timer.print_elapsed_time()
     return
 
 if __name__ == '__main__':

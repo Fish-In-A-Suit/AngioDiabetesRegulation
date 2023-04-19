@@ -1,8 +1,9 @@
-import util
-import constants
+import util as util
+import constants as constants
 import requests
 import jellyfish
 import os
+from util import Timer
 
 import logging
 logger = logging.getLogger(__name__)
@@ -71,6 +72,7 @@ def main():
     # manual settings
     # gene_list = ["UniProtKB:Q16613", "UniProtKB:O15530", "UniProtKB:Q9Y243"]
     # gene_list = util.get_uniprotids_from_json("gene_scores/test_score_homosapinesonly=false,v2-term_enums,cross_section_postprocess.json")[0]
+    timer = Timer()
     source_file = os.path.join(constants.TARGET_FOLDER, "product_scores.json")
     gene_list = util.get_identifier_values_from_json(source_file, "product")[0]
 
@@ -85,6 +87,8 @@ def main():
 
     # create the mRNAs file to be processed by the c++ code (for miRNA annealing)
     util.save_mRNAs_for_cpp(constants.TARGET_FOLDER + "/product_mRNA_refseq.json")
+
+    timer.print_elapsed_time()
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 # Utility functions file
 import requests
-import constants
+import constants as constants
 import json
 import os
 import collections
@@ -8,6 +8,7 @@ import shutil
 import time
 from Bio import SeqIO
 import itertools
+from datetime import timedelta
 
 import logging
 logger = logging.getLogger(__name__)
@@ -436,7 +437,7 @@ def cleanup_crash_term_jsons():
         for filename in snapshots:
             file_timestamp = get_timestamp_from_crashterm(filename)
             if file_timestamp in snapshots_timestamps and term in filename:
-                os.remove(f"term_genes_crash\\{filename}")
+                os.remove(f"{constants.ROOT_FOLDER}\\term_genes_crash\\{filename}")
                 logging.info(f"Removed {filename}")
 
 def merge_similar_term_products_in_json(crash_json):
@@ -448,20 +449,21 @@ def merge_similar_term_products_in_json(crash_json):
     previous_term_products = []
     
     for index,element in enumerate(crash_json):
-        current_term = element["GO_term"]
-        current_term_products = element["products"]
+        if "GO_term" in element:
+            current_term = element["GO_term"]
+            current_term_products = element["products"]
 
-        if current_term == previous_term: # merge term products
-            merged_products = current_term_products + previous_term_products
-            # pop TODO: POP BOTH!!! previous too
-            crash_json.pop(index)
-            # insert one index back
-            logger.debug(f"index = {index}, crash_json = {crash_json}")
-            crash_json[index-1]["GO_term"] = current_term
-            crash_json[index-1]["products"] = merged_products
+            if current_term == previous_term: # merge term products
+                merged_products = current_term_products + previous_term_products
+                # pop TODO: POP BOTH!!! previous too
+                crash_json.pop(index)
+                # insert one index back
+                logger.debug(f"index = {index}, crash_json = {crash_json}")
+                crash_json[index-1]["GO_term"] = current_term
+                crash_json[index-1]["products"] = merged_products
         
-        previous_term = current_term
-        previous_term_products = current_term_products
+            previous_term = current_term
+            previous_term_products = current_term_products
     return crash_json
 
 def get_timestamp_from_crashterm(crashfile_string):
@@ -1782,7 +1784,43 @@ def convert_linear_list_to_dictionary(linear_list, flip=False):
             temp_pair = []
         i+=1
     return result_dict
+
+class Timer:
+    def __init__(self):
+        self.start_time = time.time()
+    
+    def set_start_time(self):
+        """
+        Sets a new reference start time.
+        """
+        self.start_time = time.time()
+    
+    def get_elapsed_seconds(self) -> int:
+        """
+        Returns the amount of seconds unformatted (contains decimal places)
+        """
+        return time.time() - self.start_time
+    
+    def get_elapsed_time(self) -> str:
+        """
+        Gets elapsed time in hh mm ss format.
+        """
+        sec = int(self.get_elapsed_seconds())
+        td = timedelta(seconds=sec)
+        return str(td)
+    
+    def print_elapsed_time(self, useLogger: bool = True, prefix: str = "Elapsed: "):
+        """
+        Prints the elapsed time in hh mm ss format. 
         
+        Args:
+          - useLogger: if True, then logger.info is used. If false, then print is used.
+          - prefix: the string you want to use as a prefix
+        """
+        if useLogger:
+            logger.info(f"{prefix}{self.get_elapsed_time()}")
+        else:
+            print(f"{prefix}{self.get_elapsed_time()}")
 
 
 """ An older and recursive implementation (new is get_uniprotId_from_geneName_new). Would cause me too much pain to delete.

@@ -1,8 +1,8 @@
-import util
+import legacy.util as util
 import json
 import xml.etree.ElementTree as ET
 import sys
-import constants
+import legacy.constants as constants
 import os
 
 import logging

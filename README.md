@@ -80,3 +80,15 @@ model = ReverseLookup.ReverseLookup.load_model("diabetes_angio_1/data.json")
 # or
 model = ReverseLookup.ReverseLookup.load_model(model_name="V1") # if a model with the same model_name has been saved before
 ```
+
+### Legacy Usage
+This section explains how to use the legacy, non-class workflow.
+
+1. Create an empty folder and set constants.py -> TARGET_FOLDER to point to it's filepath. This is the folder where the results will be saved.
+2. Populate lists in constants.py with the terms you wish to analyse
+3. Run dev_go_download.py: it downloads a list of products associated with each GO term. Resulting folder is saved as terms_direct_products.json into TARGET_FOLDER. By default, it processes only homosapiens products and excludes non-homosapiens related products.
+4. Run dev_scoring_products_basic.py using useLegacy=True -> result = product_scores.json saved to TARGET_FOLDER
+5. Run dev_mrna_download.py. Results are product_mRNA.json and product_mRNA_refseq.json saved to TARGET_FOLDER
+6. Run dev_predict_miRNA_v2.py. It expects product_mRNA_refseq.json to exist in TARGET FOLDER, result is product_mRNA_miRDB-predicted-miRNA-matching.json
+7. Run dev_scoring_miRNA_basic.py; result is mirna_scores.json.
+8. Run dev_generate_report.py; result is report.txt
