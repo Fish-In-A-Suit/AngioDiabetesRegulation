@@ -145,6 +145,7 @@ class UniProtAPI:
                 if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):  # check if the user's choice is valid
                     # get the UniProt ID of the chosen result and return it
                     uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
+                    logger.warning(f"Auto-selectd first reviewed result for {gene_name}!")
                     return "UniProtKB:" + uniprot_id
                 else:
                     # raise an error if the user's choice is not valid
@@ -157,66 +158,32 @@ class UniProtAPI:
             # if all retries fail, return None
         return None
   
-    def get_uniprot_info(self, uniprot_id, retries=3, timeout=5):
+    def get_uniprot_info(self, uniprot_id: str, retries: int = 3, timeout: int = 5) -> dict:
         """
         Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
         """
-        def _return_ensembl_from_id_and_uniprot_query(uniprotId, query):
-            logger.debug(f"Starting retrival of ensemblId for uniprotId {uniprotId}")
-            index = next((index for (index, d) in enumerate(query) if d["primaryAccession"] == uniprotId), None)
-            ensembl_index_list=[]
-            xref_arr_length = len(query[index]["uniProtKBCrossReferences"]) # the count of cross-referenced databases
-            for i in range(xref_arr_length):
-                if query[index]["uniProtKBCrossReferences"][i]["database"] == "Ensembl":
-                    ensembl_index_list.append(i)
+        def _return_mane_select_values_from_uniprot_query(result: dict) -> tuple:
+            """
+            Given the UniProt search result dictionary, return Ensembl gene ID, Ensembl transcript ID, and RefSeq nucleotide ID for the MANE-select transcript.
+            """
+            mane_indices = [index for (index, d) in enumerate(result["uniProtKBCrossReferences"]) if d["database"] == "MANE-Select"]
+            if len(mane_indices) == 1:
+                i = mane_indices[0]
+                enst_id = result["uniProtKBCrossReferences"][i]["id"]
+                refseq_nt_id = next((entry["value"] for entry in result["uniProtKBCrossReferences"][i]["properties"] if entry["key"] == "RefSeqNucleotideId"), None)
+                ensg_id = next((next((sub["value"] for sub in entry["properties"] if sub["key"] == "GeneId"), None) for entry in result["uniProtKBCrossReferences"] if (entry["database"] == "Ensembl" and entry["id"] == enst_id)), None)
+            else:
+                return None, None, None
+            return ensg_id, enst_id, refseq_nt_id
 
-            if len(ensembl_index_list) == 0:
-                enId = None
-            elif len(ensembl_index_list) == 1:
-                enId=query[index]["uniProtKBCrossReferences"][ensembl_index_list[0]]["id"].split(".")[0]
-            elif len(ensembl_index_list) > 1:
-                if any("isoformId" in query[index]["uniProtKBCrossReferences"][i].keys() for i in ensembl_index_list):
-                    for i in ensembl_index_list:
-                        if "-1" in query[index]["uniProtKBCrossReferences"][i].get("isoformId", ""):
-                            enId=query[index]["uniProtKBCrossReferences"][i]["id"].split(".")[0]
-                try: enId
-                except NameError:
-                    enId=query[index]["uniProtKBCrossReferences"][ensembl_index_list[0]]["id"].split(".")[0] 
-                        
-            logger.info(f"uniprotId {uniprotId} -> ensemblId {enId}")
-            return enId
-    
-        def _return_refseqnt_from_id_and_uniprot_query(uniprotId, query):
-            logger.debug(f"Starting retrival of refseqNT for uniprotId {uniprotId}")
-            index = next((index for (index, d) in enumerate(query) if d["primaryAccession"] == uniprotId), None)
-            refseqnt_index_list=[]
-            xref_arr_length = len(query[index]["uniProtKBCrossReferences"]) # the count of cross-referenced databases
-            for i in range(xref_arr_length):
-                if query[index]["uniProtKBCrossReferences"][i]["database"] == "RefSeq":
-                    refseqnt_index_list.append(i)
+        # Extract UniProt ID if given in "database:identifier" format
+        if ":" in uniprot_id:
+            uniprot_id = uniprot_id.split(":")[1]
 
-            if len(refseqnt_index_list) == 0:
-                rsntId = None
-            elif len(refseqnt_index_list) == 1:
-                if "properties" in query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]:
-                    rsntId=query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]["properties"][0]["value"]
-            elif len(refseqnt_index_list) > 1:
-                if any("isoformId" in query[index]["uniProtKBCrossReferences"][i].keys() for i in refseqnt_index_list):
-                    for i in refseqnt_index_list:
-                        if "-1" in query[index]["uniProtKBCrossReferences"][i].get("isoformId", ""):
-                            rsntId=query[index]["uniProtKBCrossReferences"][i]["properties"][0]["value"]
-                try: rsntId
-                except NameError:
-                    if "properties" in query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]:
-                        rsntId=query[index]["uniProtKBCrossReferences"][refseqnt_index_list[0]]["properties"][0]["value"]
-                    else:
-                        rsntId = None
-                        
-            logger.info(f"uniprotId {uniprotId} -> RefSeqNTID {rsntId}")
-            return rsntId
+        # Construct UniProt API query URL
+        url = f"{self.base_url}search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
 
-        uniprot_id = uniprot_id.split(":")[1]
-        url = f"{self.base_url}search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,protein_name"
+        # Retry fetching UniProt data if it fails
         for i in range(retries):
             try:
                 response = requests.get(url, timeout=timeout)
@@ -225,14 +192,17 @@ class UniProtAPI:
                 if len(results) == 0:
                     return {}
                 else:
-                    #get values!
-                    full_name = results[0]["proteinDescription"]["recommendedName"]["fullName"]["value"]
-                    ensembl_id = _return_ensembl_from_id_and_uniprot_query(uniprot_id, results)
-                    refseq_nt_id = _return_refseqnt_from_id_and_uniprot_query(uniprot_id, results)
-                    return {"full_name" : full_name, "ensembl_id" : ensembl_id, "refseq_nt_id": refseq_nt_id}
+                    # Get values from the UniProt search result
+                    result = next((entry for entry in results if entry["primaryAccession"] == uniprot_id), None)
+                    name = result["genes"][0]["geneName"]["value"]
+                    description = result["proteinDescription"]["recommendedName"]["fullName"]["value"]
+                    ensg_id, enst_id, refseq_nt_id = _return_mane_select_values_from_uniprot_query(result)
+                    return {"genename": name, "description": description, "ensg_id": ensg_id, "enst_id": enst_id, "refseq_nt_id": refseq_nt_id}
             except requests.exceptions.RequestException:
                 logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
             time.sleep(timeout)
+
+        # Return empty dictionary if UniProt data fetching fails
         return {}
 
 class EnsemblAPI:
@@ -293,7 +263,7 @@ class EnsemblAPI:
         logger.info(f"Failed to get sequence for id {ensembl_id} after {self.retries} retries.")
         return None
     
-    def get_info(self, id: str):
+    def get_info(self, id: str) -> dict:
         """Can receive Ensembl id or symbol (human)
 
         Args:
@@ -307,6 +277,7 @@ class EnsemblAPI:
             "Xenbase": "xenopus_tropicalis/",
             "MGI": "mouse/MGI:",
             "RGD": "rat/",
+            "UniProtKB": "human/",
         }
 
         # Check if the ID is an Ensembl ID or symbol
@@ -314,7 +285,7 @@ class EnsemblAPI:
             endpoint = f"id/{id}"
         else:
             prefix, id_ = id.split(":") if ":" in id else (None, id)
-            species = species_mapping.get(prefix, "human/") #defaults to human
+            species = species_mapping.get(prefix, "human/") #defaults to human if not prefix "xxx:"
             endpoint = f"symbol/{species}{id_}"
 
         # Try the request up to the specified number of retries
@@ -332,7 +303,7 @@ class EnsemblAPI:
                 # If the request fails, try the xrefs URL instead
                 try:
                     response = requests.get(
-                        f"https://rest.ensembl.org/xrefs/{endpoint}?mane=1;expand=1",
+                        f"https://rest.ensembl.org/xrefs/{endpoint}?",
                         headers={"Content-Type": "application/json"},
                         timeout=self.timeout,
                     )
@@ -348,14 +319,17 @@ class EnsemblAPI:
                         )
                         response.raise_for_status()
                         response_json = response.json()
+                    else:
+                        raise Exception("no ensembl id returned")
                     break
                 except Exception as e:
-                    print(e)
-                print(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
+                    logger.error(e)
+                logger.warning(f"Failed to fetch Ensembl sequence for {id}. Retrying in {self.timeout} seconds.")
                 time.sleep(self.timeout)
         else:
             # If all retries fail, return None
-            return None
+            return {}
+        
 
         # Extract gene information from API response
         ensg_id = response_json.get("id")
@@ -380,13 +354,30 @@ class EnsemblAPI:
                 refseq_id = mane_transcripts[0]["MANE"][0].get("refseq_match")
                 logger.warning(f"Found non-canonical MANE transcript for {id}")
 
-        logger.info(f"Received sequence for id {id}.")
+        if ensembl_transcript_id:
+            for i in range(self.retries):
+                try:
+                    response = requests.get(
+                        f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%",
+                        headers={"Content-Type": "application/json"},
+                        timeout=self.timeout,
+                    )
+                    response.raise_for_status()
+                    response_json = response.json()
+                except requests.exceptions.RequestException:
+                    time.sleep(self.timeout)
+            else:
+                uniprot_id = None
+            uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
+
+        logger.debug(f"Received info data for id {id}.")
         return {
-            "ENSG_id": ensg_id,
-            "name": name,
+            "ensg_id": ensg_id,
+            "genename": name,
             "description": description,
-            "ENST_id": ensembl_transcript_id,
-            "refseq_id": refseq_id,
+            "enst_id": ensembl_transcript_id,
+            "refseq_nt_id": refseq_id,
+            "uniprot_id": uniprot_id,
         }
 class HumanOrthologFinder:
     def __init__(self):

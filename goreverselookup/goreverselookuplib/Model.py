@@ -64,9 +64,8 @@ class GOTerm:
             'description'), d.get('weight', 1.0), d.get('products', []))
         return goterm
 
-
 class Product:
-    def __init__(self, id_synonyms: List[str], uniprot_id: str = None, description: str = None, ensembl_id: str = None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None):
+    def __init__(self, id_synonyms: List[str], genename: str = None, uniprot_id: str = None, description: str = None, ensg_id: str = None, enst_id: str = None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None):
         """
         A class representing a product (e.g. a gene or protein).
 
@@ -74,52 +73,76 @@ class Product:
             id_synonyms (str): The list of ID of the product and synonyms. -> after ortholog translation it turns out that some products are the same. 
             uniprot_id (str): The UniProt ID of the product.
             description (str): A description of the product.
-            ensembl_id (str):
+            ensg_id (str): Ensembl gene ID (MAIN).
+            enst_id (str): Ensembl transcript ID.
+            refseq_nt_id (str): Refseq transcript ID.
             mRNA (str): The mRNA sequence of the product.
             scores (dict): A dictionary of scores associated with the product (e.g. expression score, functional score).
         """
         self.id_synonyms = id_synonyms
-        self.uniprot_id = uniprot_id
+        self.genename = genename
         self.description = description
-        self.ensembl_id = ensembl_id
+        self.uniprot_id = uniprot_id
+        self.ensg_id = ensg_id
+        self.enst_id = enst_id
         self.refseq_nt_id = refseq_nt_id
         self.mRNA = mRNA
         self.scores = {} if scores is None else scores.copy()
 
-    def fetch_UniprotID(self, human_ortolog_finder: HumanOrthologFinder, uniprot_api: UniProtAPI) -> None:
+    def fetch_ortholog(self, human_ortolog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+        if not human_ortolog_finder:
+            human_ortolog_finder = HumanOrthologFinder()
+        if not uniprot_api:
+            uniprot_api = UniProtAPI()
+        if not ensembl_api:
+            ensembl_api = EnsemblAPI()
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
             self.uniprot_id = self.id_synonyms[0]
         elif len(self.id_synonyms) == 1:
             human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(
                 self.id_synonyms[0])
             if human_ortholog_gene_id is not None:
+                self.name = human_ortholog_gene_id
                 uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
                 if uniprot_id is not None:
                     self.uniprot_id = uniprot_id
+                else:
+                    logger.warning(f"file-based UniprotID retrieval did not find human ortholog for {self.id_synonyms[0]}")
+                    enst_dict = ensembl_api.get_info(human_ortholog_gene_id)
+                    self.uniprot_id = enst_dict.get("uniprot_id")
+                    self.name = enst_dict.get("genename")
+                    if self.uniprot_id or self.name:
+                        logger.warning(f"Ensembl-based ortholog finder has now found human ortholog")
 
-    def fetch_Uniprot_info(self, uniprot_api: UniProtAPI) -> None:
+    def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
         """
-        includes description, ensembl_id and refseq_nt_id
+        includes description, ensg_id, enst_id and refseq_nt_id
         """
-        if self.uniprot_id == None:
+        if not self.uniprot_id and not self.genename:
             return
-        info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
-        full_name = info_dict.get("full_name")
-        ensembl_id = info_dict.get("ensembl_id")
-        refseq_nt_id = info_dict.get("refseq_nt_id")
-        if full_name is not None:
-            self.description = full_name
-        if ensembl_id is not None:
-            self.ensembl_id = ensembl_id
-        if refseq_nt_id is not None:
-            self.refseq_nt_id = refseq_nt_id
+        if not uniprot_api:
+            uniprot_api = UniProtAPI()
+        if not ensembl_api:
+            ensembl_api = EnsemblAPI()
 
-    def fetch_mRNA_sequence(self, ensembl_api: EnsemblAPI) -> None:
-        if self.ensembl_id is None:
-            return
-        sequence = ensembl_api.get_sequence(self.ensembl_id)
-        if sequence is not None:
-            self.mRNA = sequence
+        if self.uniprot_id:
+            info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
+            for key, value in info_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
+
+        required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
+        if any(getattr(self, key) is None for key in required_keys):
+            logger.warning(f"UniprotAPI did not return all the required values for UniprorID: {self.uniprot_id}. Retrying with EnsemblAPI")
+            if self.genename:
+                enst_dict = ensembl_api.get_info(self.genename)
+            else:
+                enst_dict = ensembl_api.get_info(self.uniprot_id)
+            for key, value in enst_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
+            if all(enst_dict.get(key) is not None for key in required_keys):
+                logger.warning(f"EnsemblAPI now found all the required infos.")
 
     @classmethod
     def from_dict(cls, d: dict) -> 'Product':
@@ -132,8 +155,7 @@ class Product:
         Returns:
             Product: A new Product instance created from the input dictionary.
         """
-        return cls(d['id_synonyms'], d.get('uniprot_id'), d.get('description'), d.get('ensembl_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores'))
-
+        return cls(d['id_synonyms'], d.get('genename'), d.get('uniprot_id'), d.get('description'), d.get('ensg_id'), d.get('enst_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores'))
 
 class miRNA:
     def __init__(self, id: str, sequence: str = None, mRNA_overlaps: Dict[str, float] = None, scores: Dict[str, float] = None) -> None:
@@ -235,18 +257,19 @@ class ReverseLookup:
             self.products.append(Product.from_dict({'id_synonyms': [product]}))
         logger.info(f"Created Product objects from GOTerm object definitions")
 
-    def fetch_UniprotID_products(self) -> None:
+    def fetch_ortholog_products(self) -> None:
         try:
             human_ortolog_finder = HumanOrthologFinder()
             uniprot_api = UniProtAPI()
+            ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a UniProt ID.
-                    if product.uniprot_id == None:
+                    if product.uniprot_id == None and product.genename == None:
                         # If it doesn't, fetch UniProt data for the Product object.
-                        product.fetch_UniprotID(
-                            human_ortolog_finder, uniprot_api)
+                        product.fetch_ortholog(
+                            human_ortolog_finder, uniprot_api, ensembl_api)
         except Exception as e:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
             self.save_products_to_datafile('crash_products.json')
@@ -271,18 +294,19 @@ class ReverseLookup:
                     id_synonyms.extend(product.id_synonyms)
                 # Create a new product with the collected information and add it to the product list
                 self.products.append(Product(
-                    id_synonyms, uniprot_id, product_list[0].description, product_list[0].ensembl_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
+                    id_synonyms, product_list[0].genename, uniprot_id, product_list[0].description, product_list[0].ensg_id, product_list[0].enst_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
 
-    def fetch_Uniprot_infos(self) -> None:
+    def fetch_product_infos(self) -> None:
         try:
             uniprot_api = UniProtAPI()
+            ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a UniProt ID.
-                    if (product.description is None or product.ensembl_id is None or product.refseq_nt_id is None) and product.uniprot_id is not None:
+                    if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and product.uniprot_id is not None:
                         # If it doesn't, fetch UniProt data for the Product object.
-                        product.fetch_Uniprot_info(uniprot_api)
+                        product.fetch_info(uniprot_api, ensembl_api)
         except Exception as e:
             raise e
 
@@ -304,7 +328,7 @@ class ReverseLookup:
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a EnsemblID
-                    if product.mRNA == None and product.ensembl_id is not None:
+                    if product.mRNA == None and product.enst_id is not None:
                         # If it has, fetch mRNA sequence data for the Product object.
                         product.fetch_mRNA_sequence(ensembl_api)
         except Exception as e:
@@ -413,10 +437,11 @@ class ReverseLookup:
 
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
-        current_dir = os.path.dirname(os.path.abspath(
-            traceback.extract_stack()[0].filename))
-        print(current_dir)
-        with open(os.path.join(current_dir, filepath), "r") as f:
+        if not os.path.isabs(filepath):
+            current_dir = os.path.dirname(os.path.abspath(
+                traceback.extract_stack()[0].filename))
+            filepath = os.path.join(current_dir, filepath)
+        with open(filepath, "r") as f:
             data = json.load(f)
         target_processes = data['target_processes']
         miRNA_overlap_treshold = data['miRNA_overlap_treshold']
@@ -467,9 +492,11 @@ class ReverseLookup:
             else:
                 return line
 
-        current_dir = os.path.dirname(os.path.abspath(
-            traceback.extract_stack()[0].filename))
-        with open(os.path.join(current_dir, filepath), "r") as read_content:
+        if not os.path.isabs(filepath):
+            current_dir = os.path.dirname(os.path.abspath(
+                traceback.extract_stack()[0].filename))
+            filepath = os.path.join(current_dir, filepath)
+        with open(filepath, "r") as read_content:
             target_processes = []
             go_terms = []
             read_lines = read_content.read().splitlines()[

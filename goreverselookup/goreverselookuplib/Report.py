@@ -208,11 +208,14 @@ class ReportGenerator:
             report += self._generate_section("miRNAs")
             report += self._generate_top_miRNAs_summary(miRNA_score.name) + "\n" 
 
-        current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+        if not os.path.isabs(filepath):
+            current_dir = os.path.dirname(os.path.abspath(
+                traceback.extract_stack()[0].filename))
+            filepath = os.path.join(current_dir, filepath)
 
         # Create directory for the report file, if it does not exist
-        os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
         
         # Write the report to the output file
-        with open(os.path.join(current_dir, filepath), 'w') as f:
+        with open(filepath, 'w') as f:
             f.write(report)
