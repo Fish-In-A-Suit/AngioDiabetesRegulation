@@ -16,14 +16,14 @@ model.fetch_all_go_term_products()
 # Create products from GO terms
 model.create_products_from_goterms()
 
-# Fetch UniProt ID products
-model.fetch_UniprotID_products()
+# Fetch human ortholog for products (either UniProtID, ENSG or genename)
+model.fetch_ortholog_products()
+
+# Fetch product information (from UniprotAPI or EnsemblAPI)
+model.fetch_product_infos
 
 # Prune products
 model.prune_products()
-
-# Fetch UniProt information
-model.fetch_Uniprot_infos()
 
 # Score products
 adv_score = adv_product_score(model)

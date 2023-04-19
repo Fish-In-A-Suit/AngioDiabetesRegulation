@@ -1,5 +1,5 @@
 .DS_Store
-__pycache__/*
+**/__pycache__/*
 src_data_files/uniprotkb_human_idmapping.dat
 out
 src_data_files/uniprot_sprot_human.xml
@@ -10,6 +10,7 @@ log_output
 .vs
 .vscode/settings.json
 temp
+*.pyc
 
 test_run_2/
 
