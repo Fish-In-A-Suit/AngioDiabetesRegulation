@@ -17,7 +17,12 @@
 ```
 cd goreverselookup
 python setup.py sdist
-pip install dist/goreverselookup-version.tar.gz
+pip install dist/goreverselookup-{VERSION}.tar.gz
+```
+For developers:
+```
+cd goreverselookup
+pip install -e .
 ```
 TODO: how to publish
 

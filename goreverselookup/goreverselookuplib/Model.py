@@ -103,11 +103,11 @@ class Product:
                 self.id_synonyms[0])
             if human_ortholog_gene_id is None:
                 logger.warning(f"file-based human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
-                human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0])
+                human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0]) # attempt ensembl search
                 if human_ortholog_gene_ensg_id is not None:
                     self.ensg_id = human_ortholog_gene_ensg_id
                 else:
-                    return
+                    return # search was unsuccessful
             if human_ortholog_gene_id is not None:
                 self.genename = human_ortholog_gene_id
                 uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
