@@ -125,7 +125,7 @@ class Product:
             ensembl_api = EnsemblAPI()
 
         required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
-
+        #Is uniprot really necessary. If it is faster, perhaps get uniprotID from genename and then first try to get info from uniprot
         if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
             info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             for key, value in info_dict.items():
@@ -146,7 +146,8 @@ class Product:
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-
+        #TODO: logger output which values are still missing
+        
     @classmethod
     def from_dict(cls, d: dict) -> 'Product':
         """
