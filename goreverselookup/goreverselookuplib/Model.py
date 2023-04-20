@@ -97,7 +97,8 @@ class Product:
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
-            self.uniprot_id = self.id_synonyms[0]
+            info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
+            self.genename = info_dict.get("genename")
         elif len(self.id_synonyms) == 1:
             human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(
                 self.id_synonyms[0])
@@ -105,28 +106,13 @@ class Product:
                 logger.warning(f"file-based human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
                 human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0]) # attempt ensembl search
                 if human_ortholog_gene_ensg_id is not None:
-                    self.ensg_id = human_ortholog_gene_ensg_id
+                    enst_dict = ensembl_api.get_info(human_ortholog_gene_ensg_id)
+                    self.genename = enst_dict.get("genename")
                 else:
                     return # search was unsuccessful
-            if human_ortholog_gene_id is not None:
+            else:
                 self.genename = human_ortholog_gene_id
-                uniprot_id = uniprot_api.get_uniprot_id(human_ortholog_gene_id)
-            else:
-                uniprot_id = None
-            if uniprot_id is not None:
-                self.uniprot_id = uniprot_id
-            else:
-                logger.warning(f"UniprotAPI did not find uniprotID for {self.id_synonyms[0]}")
-                if human_ortholog_gene_id:
-                    enst_dict = ensembl_api.get_info(human_ortholog_gene_id)
-                else:
-                    enst_dict = ensembl_api.get_info(human_ortholog_gene_ensg_id)
-                self.uniprot_id = enst_dict.get("uniprot_id")
-                self.genename = enst_dict.get("genename")
-                if self.uniprot_id:
-                    logger.warning(f"EnsemblAPI has now found uniprotID")
                 
-
     def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
         """
         includes description, ensg_id, enst_id and refseq_nt_id
@@ -139,7 +125,7 @@ class Product:
             ensembl_api = EnsemblAPI()
 
         required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
-
+        #Is uniprot really necessary. If it is faster, perhaps get uniprotID from genename and then first try to get info from uniprot
         if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
             info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             for key, value in info_dict.items():
@@ -160,7 +146,8 @@ class Product:
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-
+        #TODO: logger output which values are still missing
+        
     @classmethod
     def from_dict(cls, d: dict) -> 'Product':
         """
@@ -217,10 +204,10 @@ class ReverseLookup:
             target_processes (list): A list of dictionaries containing process names and directions.
             products (set, optional): A set of Product objects. Defaults to an empty set.
         """
-        self.goterms = goterms
-        self.products = products
+        self.goterms = goterms #TODO make a set, it is faster
+        self.products = products #TODO make a set, it is faster
         self.target_processes = target_processes
-        self.miRNAs = miRNAs
+        self.miRNAs = miRNAs #TODO make a set, it is faster
         self.miRNA_overlap_treshold = miRNA_overlap_treshold
 
     def fetch_all_go_term_names_descriptions(self):
@@ -283,7 +270,7 @@ class ReverseLookup:
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a UniProt ID or genename or ensg_id.
-                    if product.uniprot_id == None and product.genename == None and product.ensg_id == None:
+                    if product.genename == None:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_ortholog(
                             human_ortolog_finder, uniprot_api, ensembl_api)
@@ -294,16 +281,16 @@ class ReverseLookup:
             raise e
 
     def prune_products(self) -> None:
-        # Create a dictionary that maps ENSG to a list of products
-        reverse_ensg_products = {}
+        # Create a dictionary that maps genename to a list of products
+        reverse_genename_products = {}
         for product in self.products:
-            if product.ensg_id is not None:
-                reverse_ensg_products.setdefault(
-                    product.uniprot_id, []).append(product)
+            if product.genename is not None:
+                reverse_genename_products.setdefault(
+                    product.genename, []).append(product)
 
         # For each ENSG that has more than one product associated with it, create a new product with all the synonyms
         # and remove the individual products from the list
-        for ensg_id, product_list in reverse_ensg_products.items():
+        for genename, product_list in reverse_genename_products.items():
             if len(product_list) > 1:
                 id_synonyms = []
                 for product in product_list:
@@ -314,6 +301,7 @@ class ReverseLookup:
                     id_synonyms, product_list[0].genename, product_list[0].uniprot_id, product_list[0].description, product_list[0].ensg_id, product_list[0].enst_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
 
     def fetch_product_infos(self) -> None:
+        #TODO: ensembl support batch request
         try:
             uniprot_api = UniProtAPI()
             ensembl_api = EnsemblAPI()
@@ -426,6 +414,19 @@ class ReverseLookup:
         """
         # Use a list comprehension to extract IDs from the GO terms and return the resulting list
         return [goterm.id for goterm in self.goterms]
+
+    def get_goterm(self, identifier) -> GOTerm:
+        """
+        Return GOTerm based on any id
+        """
+        goterm = next(obj for obj in self.goterms if any(getattr(obj, attr) == identifier for attr in ["id", "name", "description"]))
+        return goterm
+    def get_product(self, identifier) -> Product:
+        """
+        Return GOTerm based on any id
+        """
+        product = next(obj for obj in self.products if any(getattr(obj, attr) == identifier for attr in ["genename", "description", "uniprot_id", "ensg_id", "enst_id", "refseq_nt_id", "mRNA"]) or any(id == identifier for id in obj.id_synonyms))
+        return product
 
     def save_model(self, filepath: str) -> None:
         data = {}

@@ -30,7 +30,7 @@ class GOApi:
         url = f"http://api.geneontology.org/api/ontology/term/{term_id}"
         params = {}
         try:
-            response = self.s.get(url, params=params, timeout=2)
+            response = self.s.get(url, params=params, timeout=5)
             if response.ok:
                 data = response.json()
                 return data
@@ -54,7 +54,7 @@ class GOApi:
         params = {"rows": 10000000}
         products_set = set()
         try:
-            response = self.s.get(url, params=params, timeout=2)
+            response = self.s.get(url, params=params, timeout=5)
             response.raise_for_status()
         except requests.exceptions.RequestException:
             return None
@@ -100,7 +100,7 @@ class UniProtAPI:
         # Try the request up to `retries` times
         try:
             # Make the request and raise an exception if the response status is not 200 OK
-            response = self.s.get(url, timeout=2)
+            response = self.s.get(url, timeout=5)
             response.raise_for_status()
         except requests.exceptions.RequestException:
             # if there was an error with the HTTP request, log a warning
@@ -189,7 +189,7 @@ class UniProtAPI:
         url = f"https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
 
         try:
-            response = requests.get(url, timeout=2)
+            response = requests.get(url, timeout=5)
             response.raise_for_status()
         except requests.exceptions.RequestException:
             logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
@@ -241,7 +241,7 @@ class EnsemblAPI:
             return None
         url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
         try:
-            response = self.s.get(url, headers={"Content-Type": "application/json"}, timeout=2)
+            response = self.s.get(url, headers={"Content-Type": "application/json"}, timeout=5)
             response.raise_for_status()
         except requests.exceptions.RequestException:
             return None
@@ -260,7 +260,7 @@ class EnsemblAPI:
         """
         url = f"https://rest.ensembl.org/sequence/id/{ensembl_id}?object_type=transcript;type={sequence_type}"
         try:
-            response = self.s.get(url, headers={"Content-Type": "text/plain"}, timeout=2)
+            response = self.s.get(url, headers={"Content-Type": "text/plain"}, timeout=5)
             response.raise_for_status()
         except requests.exceptions.RequestException:
             logger.warning(f"Failed to fetch Ensembl sequence for {ensembl_id}")
@@ -298,7 +298,7 @@ class EnsemblAPI:
             response = self.s.get(
                 f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1",
                 headers={"Content-Type": "application/json"},
-                timeout=2,
+                timeout=5,
             )
             response.raise_for_status()
             response_json = response.json()
@@ -308,7 +308,7 @@ class EnsemblAPI:
                 response = self.s.get(
                     f"https://rest.ensembl.org/xrefs/{endpoint}?",
                     headers={"Content-Type": "application/json"},
-                    timeout=2,
+                    timeout=5,
                 )
                 response.raise_for_status()
                 response_json = response.json()
@@ -318,7 +318,7 @@ class EnsemblAPI:
                     response = self.s.get(
                         f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1",
                         headers={"Content-Type": "application/json"},
-                        timeout=2,
+                        timeout=5,
                     )
                     response.raise_for_status()
                     response_json = response.json()
@@ -357,7 +357,7 @@ class EnsemblAPI:
                 response = self.s.get(
                     f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%",
                     headers={"Content-Type": "application/json"},
-                    timeout=2,
+                    timeout=5,
                 )
                 response.raise_for_status()
                 response_json = response.json()

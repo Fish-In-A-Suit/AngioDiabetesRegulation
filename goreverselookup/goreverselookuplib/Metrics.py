@@ -14,8 +14,8 @@ class Metrics:
 
 class adv_product_score(Metrics):
     def __init__(self, model: ReverseLookup, a: float = 10, b1: float = 2, b2: float = 0.5, c1: float = 1, c2: float = 0.1):
+        super().__init__(model)
         self.name = "adv_score"
-        super().__init__(model) 
         self.a = a
         self.b1 = b1
         self.b2 = b2
@@ -26,7 +26,7 @@ class adv_product_score(Metrics):
         goterms_list = self.reverse_lookup.get_all_goterms_for_product(product)
         score = 0.0
 
-        def _opposite_direction(self, direction: str) -> str:
+        def _opposite_direction(direction: str) -> str:
             if direction == "0":
                 return "0"
             elif direction == "+":
@@ -70,17 +70,19 @@ class adv_product_score(Metrics):
         # Calculate the score based on the number of processes in target_processes that are regulated
         # by GOTerms in the same direction as defined in the list
         score += sum(
-            (self.b1**(self.b2 * sum(
+            (self.b1 * sum(
                 # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
-                goterm.weight for goterm in goterms_list if process['direction'] == goterm.direction and process['process'] == goterm.process)))
+                goterm.weight for goterm in goterms_list if process['direction'] == goterm.direction and process['process'] == goterm.process
+                ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
         # Calculate the score based on the number of processes in target_processes that are regulated
         # by GOTerms in the oposite direction as defined in the list
         score -= sum(
-            (self.b1**(self.b2 * sum(
+            (self.b1 * sum(
                 # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
-                goterm.weight for goterm in goterms_list if _opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process)))
+                goterm.weight for goterm in goterms_list if _opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process
+                ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
 
