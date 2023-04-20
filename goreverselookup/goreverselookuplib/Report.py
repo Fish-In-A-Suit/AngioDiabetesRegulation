@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 if TYPE_CHECKING:
     from .Model import ReverseLookup
     from .Metrics import Metrics
@@ -102,13 +102,13 @@ class ReportGenerator:
         # If verbosity is at least 1, create a table of the top and bottom products with their scores and descriptions
         if self.verbosity >= 1:
             # Create the table as a list of lists and append each row
-            table = [["UniProtID", "Score", "Protein name"]]
+            table = [["Gene Name", "Score", "Description"]]
             for product in top_products:
-                table.append([product.uniprot_id, f"{product.scores[score_key]:.2f}", product.description])
+                table.append([product.genename, f"{product.scores[score_key]:.2f}", product.description])
             # Add a separator row and append each row for the bottom products
             table.append(["----", "----", "----"])
             for product in bottom_products:
-                table.append([product.uniprot_id, f"{product.scores[score_key]:.2f}", product.description])
+                table.append([product.genename, f"{product.scores[score_key]:.2f}", product.description])
             # Add the table to the summary string
             string += tabulate(table, headers="firstrow", tablefmt="grid") + "\n\n"
 
@@ -123,13 +123,13 @@ class ReportGenerator:
 
             # Add the details for the top products
             for product in top_products:
-                string += " "*10+f"{product.uniprot_id} - {product.scores[score_key]:.2f} - {product.description}".center(100)+"\n"
+                string += " "*10+f"{product.genename} - {product.scores[score_key]:.2f} - {product.description}".center(100)+"\n"
                 string += tabulate(create_go_table(product), headers="firstrow", tablefmt="grid", maxcolwidths=100) + "\n\n"
 
             # Add a separator and add the details for the bottom products
             string += ("-"*30)+"\n\n"
             for product in bottom_products:
-                string += " "*10+f"{product.uniprot_id} - {product.scores[score_key]:.2f} - {product.description}".center(100)+"\n"
+                string += " "*10+f"{product.genename} - {product.scores[score_key]:.2f} - {product.description}".center(100)+"\n"
                 string += tabulate(create_go_table(product), headers="firstrow", tablefmt="grid", maxcolwidths=100) + "\n\n"
 
         return string
@@ -182,7 +182,7 @@ class ReportGenerator:
         # Return the summary string.
         return string
 
-    def general_report(self, filepath:str, product_score: Metrics, miRNA_score: Metrics):
+    def general_report(self, filepath:str, product_score: Optional[Metrics] = None, miRNA_score: Optional[Metrics] = None):
         """
         Generates the general report and writes it to a file.
 
