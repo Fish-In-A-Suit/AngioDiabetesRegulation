@@ -10,6 +10,7 @@ from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 import logging
 import traceback
+from .FileUtil import FileUtil
 
 logger = logging.getLogger(__name__)
 
@@ -431,8 +432,9 @@ class ReverseLookup:
     def save_model(self, filepath: str) -> None:
         data = {}
         # save options - currently not used
-        current_dir = os.path.dirname(os.path.abspath(
-            traceback.extract_stack()[0].filename))
+        current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+        # TODO: also implement FileUtil saving here !!!
+
         # save target_process
         data['target_processes'] = self.target_processes
         data['miRNA_overlap_treshold'] = self.miRNA_overlap_treshold
@@ -447,8 +449,18 @@ class ReverseLookup:
             data.setdefault('miRNAs', []).append(miRNA.__dict__)
         # write to file
         # Create directory for the report file, if it does not exist
-        os.makedirs(os.path.dirname(os.path.join(
-            current_dir, filepath)), exist_ok=True)
+        try:
+            os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
+        except OSError:
+            # pass the error on the first attempt
+            pass
+
+        # if first attempt fails, try using current_dir = os.getcwd()
+        try:
+            current_dir = os.getcwd()
+            os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
+        except OSError:
+            logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
 
         with open(os.path.join(current_dir, filepath), 'w') as f:
             json.dump(data, f, indent=4)
@@ -456,9 +468,10 @@ class ReverseLookup:
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
         if not os.path.isabs(filepath):
-            current_dir = os.path.dirname(os.path.abspath(
-                traceback.extract_stack()[0].filename))
-            filepath = os.path.join(current_dir, filepath)
+            fu = FileUtil()
+            filepath = fu.find_file(filepath)
+            # current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+            # filepath = os.path.join(current_dir, filepath)
         with open(filepath, "r") as f:
             data = json.load(f)
         target_processes = data['target_processes']
@@ -565,3 +578,9 @@ class ReverseLookup:
         goterms = [GOTerm.from_dict(d) for d in data['goterms']]
         target_processes = data['target_processes']
         return cls(goterms, target_processes)
+
+
+                        
+
+
+        

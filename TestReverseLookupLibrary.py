@@ -9,30 +9,30 @@ import os
 model = ReverseLookup.load_model("diabetes_angio_1/data.json")
 
 # Fetch all GO term names and descriptions
-#model.fetch_all_go_term_names_descriptions()
+# model.fetch_all_go_term_names_descriptions()
 
 # Fetch all GO term products
-#model.fetch_all_go_term_products()
+# model.fetch_all_go_term_products()
 
 # Create products from GO terms
-#model.create_products_from_goterms()
+# model.create_products_from_goterms()
 
-#model.save_model("diabetes_angio_1/data.json")
+# model.save_model("diabetes_angio_1/data.json")
 
 # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-#model.fetch_ortholog_products()
+# model.fetch_ortholog_products()
 
-#model.prune_products()
+# model.prune_products()
 
-#model.save_model("diabetes_angio_1/data.json")
+# model.save_model("diabetes_angio_1/data.json")
 
 # Fetch product information (from UniprotAPI or EnsemblAPI)
-#model.fetch_product_infos()
+# model.fetch_product_infos()
 
 # Prune products
-#model.prune_products()
+# model.prune_products()
 
-#model.save_model("diabetes_angio_1/data.json")
+# model.save_model("diabetes_angio_1/data.json")
 
 # Score products
 adv_score = adv_product_score(model)
@@ -42,10 +42,10 @@ model.score_products([adv_score, nterms_score])
 model.save_model("diabetes_angio_1/data.json")
 
 # Optional: Fetch mRNA sequences
-#model.fetch_mRNA_sequences()
+# model.fetch_mRNA_sequences()
 
 # Predict miRNAs
-model.predict_miRNAs()
+# model.predict_miRNAs()
 
 # Score miRNAs
 model.change_miRNA_overlap_treshold(0.6, True)

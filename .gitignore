@@ -13,6 +13,7 @@ temp
 *.pyc
 
 test_run_2/
+diabetes_angio_1/
 
 *.egg-info/
 dist/
