@@ -5,14 +5,56 @@ if TYPE_CHECKING:
 from typing import List
 
 class Metrics:
+    """
+    A super-class (interface) for the scoring used in the GO Reverse Lookup. It has to be implemented by a subclass, specifically you have
+    to implement the 'metric' function. It is designed to measure the regulatory effect of Gene Ontology (GO) terms on a product.
+    """
     def __init__(self, model: ReverseLookup):
         self.reverse_lookup = model
         self.name :str = None
 
+    """
+    The 'metric' function should be implemented in the subclasses of this interface.
+    """
     def metric(self, product: Product | miRNA):
         raise NotImplementedError("Subclasses must implement metric()")
 
+
 class adv_product_score(Metrics):
+    """
+    An advanced scoring algorithm, an implementation of the Metrics interface. It takes in  a model (in the form of a ReverseLookup object) 
+    and several parameters (a, b1, b2, c1, c2) in it's constructor, which are used to tune the weights given to different aspects of the scoring algorithm.
+
+    Parameters:
+      - (ReverseLookup) model: an instance of the ReverseLookup model.
+      - (float) a: is used to give a base score to a product when all target processes are regulated in the same direction as the GOTerms in the list.
+      - (float) b1, b2: are used to calculate the score based on the number of processes in target_processes that are regulated by GOTerms in the same (b1) or opposite (b2) direction as defined in the list.
+      - (float) c1, c2: are used to adjust the score based on the number of GOTerms with direction "0"
+    
+    Scoring algorithm (explanation of the metric function):
+      1. Start with score = 0.0
+      
+      2. (a) If all GO Terms of a Product instance regulate the processes of the ReverseLookup instance (eg. angio, diabetes) positively (and none negatively), then add 'a' to score. The 'direction' value of a positive regulatory term is '+', whereas direction for a negative regulatory term is '-'.
+      
+      3. (b1) For each of the processes, compute sum(goterm.weight ** b2), for every GO Term of the product, which positively regulates the process.
+         Final equation ADDED to the score is sum(b1 * sum(goterm.weight ** b2)). The first 'sum' is the sum of processes, whereas the second 'sum' is the sum of GO Terms, which pass the positive regulation check for the current process.
+      
+      4. (b2) For each of the process, compute sum(goterm.weight ** b2), for every GO Term of the product, which negatively regulates the process.
+         Final equation SUBTRACTED from the score is sum(b1 * sum(goterm.weight ** b2)). The first 'sum' is the sum of processes, the second 'sum' is the sum of GO Terms, which pass the negative regulation check for the current process.
+      
+      5. (c1, c2): For the GO Terms of the product with "general" regulation (direction = 0), add a base score of c1 and add sum(c2 * goterm.weight) for every GO Term with direction = 0 (general regulation).
+         Final equation ADDED to the score is score * (c1 + sum(c2 * goterm.weight)), the sum relating to the number of GO Terms with direction == 0. 
+
+    Example of calling and usage:
+    1. Construct a ReverseLookup model
+    model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+
+    2. Create the scoring object
+    adv_score = adv_product_score(model)
+
+    3. Score the products
+    model.score_products(adv_score)
+    """
     def __init__(self, model: ReverseLookup, a: float = 10, b1: float = 2, b2: float = 0.5, c1: float = 1, c2: float = 0.1):
         super().__init__(model)
         self.name = "adv_score"
@@ -22,7 +64,17 @@ class adv_product_score(Metrics):
         self.c1 = c1
         self.c2 = c2
 
+    """
+    An implementation of the scoring algorithm for an input Product instance.
+
+    Parameters:
+      - (Product) product: an instance of a Product
+
+    Returns:
+      - (float) score: a score according to this class' scoring algorithm.
+    """
     def metric(self, product: Product)-> float:
+        # a list of GO Terms associated with the current Product
         goterms_list = self.reverse_lookup.get_all_goterms_for_product(product)
         score = 0.0
 
@@ -33,10 +85,12 @@ class adv_product_score(Metrics):
                 return "-"
             elif direction == "-":
                 return "+"
+            
         # Check if all target processes are regulated in the same direction as the GOTerms in the list
         # and none of them are regulated in the opposite direction
         if (
-            # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
+            # Check if all processes in target_processes of the ReverseLookup model
+            # have a GOTerm in goterms_list that regulates it (them) in the same direction
             all(
                 any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
                 for process in self.reverse_lookup.target_processes
@@ -101,14 +155,51 @@ class adv_product_score(Metrics):
         return score
 
 class nterms(Metrics):
+    """
+    An implementation of the Metrics interface, it scores the products by positive, negative or general regulation of a speciffic process.
+    It takes in a model (in the form of a ReverseLookup object) in it's constructor.
+
+    Parameters:
+      - (ReverseLookup) model: an instance of the ReverseLookup model.
+    
+    Scoring algorithm (explanation of the metric function):
+      Create an empty nterms_dict, where descriptive regulatory keys (eg. 'angio+', 'angio-', 'angio0') will be mapped to a count of terms regulating a specific process in a specific direction
+      For each process in the model's (ReverseLookup) 'target_processes':
+        a) create the following keys in nterms_dict: '{process}+', '{process}-', '{process}0'; if process is 'angio', then 'angio+', 'angio-', 'angio0' will be the keys in nterms_dict
+        b) populate each of the keys with the count of GO Terms, which positively (direction == '+'), negatively (direction == '-') or generally (direction == '0') regulate the process
+    
+    Example of calling and usage:
+    1. Create a ReverseLookup model
+    model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+
+    2. Create the scoring object
+    nterms_score = nterms(model)
+
+    3. Use the scoring object using model.score_products
+    model.score_products(nterms_score)
+    """
     def __init__(self, model: ReverseLookup):
         super().__init__(model) 
         self.name = "nterms"
+
+    """
+    An implementation of the scoring algorithm for an input Product instance.
+
+    Parameters:
+      - (Product) product: an instance of a Product
+
+    Returns:
+      - (dict) nterms_dict: a dictionary with (ReverseLookup).target_processes * 3 keys. Each process of a ReverseLookup instance has 3 keys,
+                            '{process}+', '{process}-', '{process}0'. Each key has an integer count value of the amount of GO Terms of the input Product instance,
+                            which positively (direction == '+'), negatively (direction == '-') or generally (direction == '0') regulate a speciffic process.
+
+                            For a ReverseLookup model with defined processed 'angio' and 'diabetes', the returned dictionary would have 6 keys:
+                            angio+, angio-, angio0, diabetes+, diabetes-, diabetes0
+    """
     def metric(self, product: Product) -> dict:
-
+        # A list of GO Terms associated with the current Product
         goterms_list = self.reverse_lookup.get_all_goterms_for_product(product)
-
-        # Create an empty dictionary to store the count of GOTerms for each process and direction
+        # An empty dictionary to store the count of GOTerms for each process and direction
         nterms_dict = {}
         
         # Iterate over each process in the target_processes list
@@ -126,32 +217,64 @@ class nterms(Metrics):
         return nterms_dict
 
 class inhibited_products_id(Metrics):
+    """
+    An implementation of the Metrics interface to return a list of all product ids inhibited by a specific miRNA, if the binding strength
+    between a product id and a specific miRNA is greater than (ReverseLookup).miRNA_overlap_threshold.
+    
+    WARNING: field 'miRNA_overlap_threshold' must be defined in an instance of the ReverseLookup model passed to this constructor.
+    
+    Parameters:
+      - (ReverseLookup) model: an instance of ReverseLookup
+
+    Algorithm:
+      Create an empty list.
+      For the input miRNA, loop over all miRNA-mRNA binding strengths (stored in (miRNA).mRNA_overlaps)
+        If binding strength > miRNA_overlap_threshold: append product id to list
+      Return a list of product ids
+    """
     def __init__(self, model: ReverseLookup):
         super().__init__(model)
         self.name = "inhibited_products_id"
         self.treshold = self.reverse_lookup.miRNA_overlap_treshold # it should be defined in the model, otherwise strange things happen when one mixes scores with different treshold
+    
+    """
+    An implementation of the scoring algorithm for a specific miRNA instance. It loops over all miRNA-mRNA binding strengths in (miRNA).mRNA_overlaps
+    and returns a list of mRNA product ids, whose binding strengths to this miRNA are greater than miRNA_overlap_threshold.
+    """
     def metric(self, mirna: miRNA) -> List[str]:
-        inhibited_product_id = []
+        inhibited_product_ids = []
         for product_id, overlap in mirna.mRNA_overlaps.items():
             if overlap >= self.treshold:
-                inhibited_product_id.append(product_id)
-        return inhibited_product_id
+                inhibited_product_ids.append(product_id)
+        return inhibited_product_ids
 
 class basic_mirna_score(Metrics):
+    """
+    Score calculated from adv_score and overlap
+
+    Scoring algorithm:
+        Initialise score = 0.0
+        For each product_id and it's float overlap (binding strength) value in (miRNA).mRNA_overlaps
+        [TODO]: explain why the miRNA score is decreased (a = -1) if it binds to a product with a good threshold? 
+        if miRNA binds to a product well, then it's score should be increased!
+    
+    WARNING: [TODO] need to resolve scoring issue
+    """
     def __init__(self, model: ReverseLookup):
-        """
-        Score calculated from adv_score and overlap
-        """
         super().__init__(model)
         self.name = "basic_score"
         self.treshold = self.reverse_lookup.miRNA_overlap_treshold # it should be defined in the model, otherwise strange things happen when one mixes scores with different treshold
+    
+    """
+    An implementation of the scoring algorithm for a specific miRNA instance. [TODO] explain more after the scoring issue is solved
+    """
     def metric(self, mirna: miRNA) -> float:
         score = 0.0
         for product_id, overlap in mirna.mRNA_overlaps.items():
-            product = next((x for x in self.reverse_lookup.products if x.uniprot_id == product_id), None)
-            if product is not None:
-                if overlap >= self.treshold: #inhibited
-                    a = -1 #deduct the score, since high score indicates the products is favourable for our target processes
+            product = next((x for x in self.reverse_lookup.products if x.uniprot_id == product_id), None) #  this line of code is looking through a sequence of products and finding the first product whose uniprot_id matches the value of product_id. If such a product is found, it is assigned to the variable product; otherwise, product is set to None
+            if product is not None: # each miRNA can have many products in it's 'mRNA_overlaps' field, this is a check that we are only analysing the products, which are also present in (ReverseLookup).products
+                if overlap >= self.treshold: # inhibited
+                    a = -1 # deduct the score, since high score indicates the products is favourable for our target processes
                 else:
                     a = 1
                 score += a * product.scores["adv_score"]

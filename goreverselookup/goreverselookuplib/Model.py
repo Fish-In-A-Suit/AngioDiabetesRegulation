@@ -302,7 +302,7 @@ class ReverseLookup:
                     id_synonyms, product_list[0].genename, product_list[0].uniprot_id, product_list[0].description, product_list[0].ensg_id, product_list[0].enst_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
 
     def fetch_product_infos(self) -> None:
-        #TODO: ensembl support batch request
+        # TODO: ensembl support batch request
         try:
             uniprot_api = UniProtAPI()
             ensembl_api = EnsemblAPI()
@@ -317,15 +317,37 @@ class ReverseLookup:
             raise e
 
     def score_products(self, score_class: List[Metrics]) -> None:
+        """
+        Scores the products of the current ReverseLookup model. This function allows you to pass a custom or a pre-defined scoring algorithm,
+        which is of 'Metrics' type (look in Metrics.py), or a list of scoring algorithms. Each Product class of the current ReverseLookup instance products (self.products)
+        has a member field 'scores'. For each product, score is computed and saved to the product's 'scores' dictionary as a mapping between the 
+        scoring algorithm's name (eg. "adv_score") and the corresponding product's score computed with this scoring algorithm (eg. 14.6). 
+        If multiple scoring algorithms are used, then the product's 'scores' dictionary will have multiple elements, each a mapping between
+        the scoring algorithm's name and the corresponding score.
+
+        Parameters:
+          - score_class: A subclass (implementation) of the Metrics superclass (interface). Current pre-defined Metrics implementations subclasses
+                         are 'adv_product_score', 'nterms', 'inhibited_products_id', 'basic_mirna_score'.
+        
+        Calling example:
+        (1) Construct a ReverseLookup model
+        model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+
+        (2) Create one or more Metrics scoring implementations for the model:
+        adv_score = adv_product_score(model)
+        nterms_score = nterms(model)
+
+        (3) Call the score_products on the model using the Metrics scoring implementations
+        model.score_products([adv_score, nterms_score])
+        """
         if not isinstance(score_class, list):
             score_class = [score_class]
         # redirect the tqdm logging output to the logging module to avoid interfering with the normal output
         with logging_redirect_tqdm():
             # iterate over each Product object in self.products and score them using the Scoring object
-            for product in tqdm(self.products):
+            for product in tqdm(self.products): # each Product has a field scores - a dictionary between a name of the scoring algorithm and it's corresponding score
                 for _score_class in score_class:
-                    product.scores[_score_class.name] = _score_class.metric(
-                        product)
+                    product.scores[_score_class.name] = _score_class.metric(product) # create a dictionary between the scoring algorithm name and it's score for current product
 
     def fetch_mRNA_sequences(self) -> None:
         try:
@@ -368,12 +390,20 @@ class ReverseLookup:
             # raise an error if the prediction type is invalid
             raise ValueError("Invalid prediction type")
 
-    def change_miRNA_overlap_treshold(self, treshold: float, yes: bool = False) -> None:
+    def change_miRNA_overlap_treshold(self, treshold: float, safety: bool = False) -> None:
+        """
+        Sets the model's 'miRNA_overlap_threshold' to a new 'threshold'. The threshold should be between 0.0 and 1.0.
+
+        WARNING: Changing the miRNA overlap threshold will delete all the calculated previous miRNA scores.
+
+        Parameters:
+          - (float) threshold: the new miRNA_overlap_threshold
+          - (bool) safety: if False, will ask for the user's confirmation during runtime.
+        """
         self.miRNA_overlap_treshold = treshold
-        logger.warning(
-            f"Sorry, but changing the treshold will delete all the calculated miRNA scores. You will have to calculate them again!")
-        if not yes:
-            confirmation = input(f"Are you sure you want to proceed? (y/n) ")
+        logger.warning(f"Sorry, but changing the treshold will delete all the calculated miRNA scores. You will have to calculate them again!")
+        if not safety:
+            confirmation = input(f"Are you sure you want to proceed? (y/n)")
             if confirmation.lower() != 'y':
                 print("Aborting operation.")
                 return
@@ -381,6 +411,35 @@ class ReverseLookup:
             _miRNA.scores = {}
 
     def score_miRNAs(self, score_class: List[Metrics]) -> None:
+        """
+        Performs miRNA scoring on the current ReverseLookup's 'miRNAs' using the input Metrics implementation(s). This function allows the user
+        to pass a custom or a pre-defined scoring algorithm, which is of the 'Metrics' type (look in Metrics.py), or a list of scoring algorithms.
+        Each miRNA class of the current ReverseLookup instance has a member field 'scores'. For each miRNA instance, score is computed
+        and saved to the miRNA's 'scores' dictionary as a mapping between the scoring algorithm's name (eg. "basic_miRNA_score") and the
+        corresponding miRNA's float score computed with this scoring algorithm. If multiple scoring algorithms are used, then the miRNA's 
+        'scores' dictionary will have multiple elements, each a mapping between the scoring algorithm's name and the corresponding score.
+
+        Parameters:
+          - score_class: A subclass (implementation) of the Metrics superclass (interface). Current pre-defined Metrics implementations subclasses
+                         are 'adv_product_score', 'nterms', 'inhibited_products_id', 'basic_mirna_score'. 
+
+                         If 'inhibited_products_id' are used, then the miRNA's 'scoring' field will have a key "inhibited products id", the
+                         value at this key will be a list of all the product ids (of all the current GOTerm-associated products, which satisfy
+                         the condition that the product's mRNA binding strength > miRNA_overlap_threshold)
+
+                         If 'basic_mirna_score' is used, then [TODO]
+        
+        Calling example:
+        (1) Construct a ReverseLookup model
+        model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+
+        (2) Create one or more Metrics scoring implementations for the model:
+        adv_score = adv_product_score(model)
+        nterms_score = nterms(model)
+
+        (3) Call the score_products on the model using the Metrics scoring implementations
+        model.score_products([adv_score, nterms_score])
+        """
         if not isinstance(score_class, list):
             score_class = [score_class]
 
