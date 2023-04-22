@@ -5,7 +5,7 @@ from goreverselookuplib.Report import ReportGenerator
 import os
 
 # Define model from input file
-#model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+# model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
 model = ReverseLookup.load_model("diabetes_angio_1/data.json")
 
 # Fetch all GO term names and descriptions
@@ -54,7 +54,8 @@ model.score_miRNAs(basic_score)
 
 # Generate report
 report = ReportGenerator(model, verbosity=3)
-report.general_report("diabetes_angio_1/general.txt")
+# report.general_report("diabetes_angio_1/general.txt") # this is bugged
+report.general_report("diabetes_angio_1/general.txt", product_score=adv_score)
 
 # Save model
 model.save_model("diabetes_angio_1/data.json")

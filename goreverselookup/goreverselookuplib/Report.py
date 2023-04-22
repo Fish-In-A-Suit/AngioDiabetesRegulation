@@ -7,6 +7,9 @@ import os
 import tabulate
 from tabulate import tabulate, SEPARATING_LINE
 import traceback
+import logging
+
+logger = logging.getLogger(__name__)
 
 class ReportGenerator:
     def __init__(self, reverse_lookup: ReverseLookup, verbosity: int = 1, top_n: int = 5, width: int = 80):
@@ -189,6 +192,8 @@ class ReportGenerator:
         Args:
         filepath (str): The path to the output file.
         """
+        filepath = filepath.replace("/", os.sep) # # replace any '/' to avoid having both \\ and / in a single filepath
+        
         # Generate header of the report
         report = self._generate_header()+"\n\n"
 
@@ -201,7 +206,8 @@ class ReportGenerator:
         # Generate section on Products
         if len(self.reverse_lookup.products) > 0:
             report += self._generate_section("PRODUCTS")
-            report += self._generate_top_bottom_products_summary(product_score.name) + "\n" 
+            # TODO: bottom line results in error, if no product_score is supplied !!!
+            report += self._generate_top_bottom_products_summary(product_score.name) + "\n"
 
         # Generate section on miRNAs
         if len(self.reverse_lookup.miRNAs) > 0:
@@ -209,13 +215,30 @@ class ReportGenerator:
             report += self._generate_top_miRNAs_summary(miRNA_score.name) + "\n" 
 
         if not os.path.isabs(filepath):
-            current_dir = os.path.dirname(os.path.abspath(
-                traceback.extract_stack()[0].filename))
-            filepath = os.path.join(current_dir, filepath)
+            current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+            mac_filepath = os.path.join(current_dir, filepath) # mac_filepath, since this approach works on a mac computer
 
         # Create directory for the report file, if it does not exist
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        try:
+            os.makedirs(os.path.dirname(mac_filepath), exist_ok=True) # this approach works on a mac computer
         
-        # Write the report to the output file
-        with open(filepath, 'w') as f:
-            f.write(report)
+            # Write the report to the output file
+            with open(mac_filepath, 'w') as f:
+                f.write(report)
+        except OSError:
+            # TODO
+            # first pass is allowed, on Windows 10 this tries to create a file at 
+            # 'C:\\Program Files\\Python310\\lib\\diabetes_angio_1/general.txt'
+            # which raises a permission error.
+            pass  
+
+        # fallback if the above fails
+        try:
+            current_dir = os.getcwd()
+            win_filepath = os.path.join(current_dir, filepath) # reassign filepath to absolute path
+            os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
+
+            with open(win_filepath, 'w') as f:
+                f.write(report)
+        except OSError:
+            logger.info(f"ERROR! Cannot make directory at {os.path.dirname(filepath)}")
