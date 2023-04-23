@@ -230,12 +230,6 @@ class binom_test(Metrics):
         
         if self._num_all_goterms == 0:
             self._num_all_goterms = len(self.goaf.get_all_terms())
-            if direction == "0":
-                return "0"
-            elif direction == "+":
-                return "-"
-            elif direction == "-":
-                return "+"
         
         results_dict = {}
         

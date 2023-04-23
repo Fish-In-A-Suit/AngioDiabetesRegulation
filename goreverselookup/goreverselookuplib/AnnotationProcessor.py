@@ -1,4 +1,4 @@
-from typing import Set
+from typing import Set, List
 import requests
 from requests.adapters import HTTPAdapter, Retry
 import urllib.request
@@ -119,7 +119,7 @@ class GOAnnotiationsFile:
         else:
             return False
 
-    def get_products(self, goterm_id: str) -> Set[str]:
+    def get_products(self, goterm_id: str) -> List[str]:
         """This method returns all unique products associated with the GO term id
 
         Args:
@@ -137,23 +137,23 @@ class GOAnnotiationsFile:
             chunks = line.split('\t')
             if goterm_id == chunks[4]:
                 products_set.add(chunks[2])
-        return products_set
+        return list(products_set)
                 
-    def get_all_terms_for_product(self, product: str) -> Set[str]:
+    def get_all_terms_for_product(self, product: str) -> List[str]:
         terms_set = set()
         for line in self._readlines:
             chunks = line.split('\t')
             if product == chunks[2]:
                 terms_set.add(chunks[4])
-        return terms_set
+        return list(terms_set)
         
         
-    def get_all_terms(self) -> Set[str]:
+    def get_all_terms(self) -> List[str]:
         terms_set = set()
         for line in self._readlines:
             chunks = line.split('\t')
             terms_set.add(chunks[4])
-        return terms_set
+        return list(terms_set)
         
 class UniProtAPI:
     """

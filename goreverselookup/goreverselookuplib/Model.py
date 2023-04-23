@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class GOTerm:
-    def __init__(self, id: str, processes: List[Dict], name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: Set[str] = set()):
+    def __init__(self, id: str, processes: List[Dict], name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: List[str] = []):
         """
         A class representing a Gene Ontology term.
 
@@ -28,7 +28,7 @@ class GOTerm:
             products (list): Products associated with the term (optional).
         """
         self.id = id
-        self.processes = processes
+        self.processes = processes if isinstance(processes, list) else [processes]
         self.name = name
         self.description = description
         self.weight = float(weight)
@@ -75,6 +75,9 @@ class GOTerm:
         if products:
             self.products = products
 
+    def add_process(self, process: Dict):
+        if not process in self.processes:
+            self.processes.append(process)
 
     @classmethod
     def from_dict(cls, d: dict):
@@ -88,7 +91,7 @@ class GOTerm:
             A new instance of the GOTerm class.
         """
         goterm = cls(d['id'], d['processes'], d.get('name'), d.get(
-            'description'), d.get('weight', 1.0), d.get('products', set()))
+            'description'), d.get('weight', 1.0), d.get('products', []))
         return goterm
 
 class Product:
@@ -186,7 +189,7 @@ class Product:
         Returns:
             Product: A new Product instance created from the input dictionary.
         """
-        return cls(d['id_synonyms'], d.get('genename'), d.get('uniprot_id'), d.get('description'), d.get('ensg_id'), d.get('enst_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores'))
+        return cls(d.get('id_synonyms'), d.get('genename'), d.get('uniprot_id'), d.get('description'), d.get('ensg_id'), d.get('enst_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores'))
 
 class miRNA:
     def __init__(self, id: str, sequence: str = None, mRNA_overlaps: Dict[str, float] = None, scores: Dict[str, float] = None) -> None:
@@ -307,7 +310,7 @@ class ReverseLookup:
             if ':' in product:
                 self.products.append(Product.from_dict({'id_synonyms': [product]}))
             else:
-                self.products.append(Product.from_dict({'genename': [product]}))
+                self.products.append(Product.from_dict({'id_synonyms': [product], 'genename': product}))
         logger.info(f"Created Product objects from GOTerm object definitions")
 
     def fetch_ortholog_products(self) -> None:
@@ -543,7 +546,7 @@ class ReverseLookup:
     def get_all_goterms_for_process(self, process: str) -> List[GOTerm]:
         goterms_list = []
         for goterm in self.goterms:
-            if any(process["process"] == process for process in goterm.processes):
+            if any(proc["process"] == process for proc in goterm.processes):
                 goterms_list.append(goterm)
         return goterms_list
 
@@ -693,12 +696,15 @@ class ReverseLookup:
                 elif section == "GO":
                     chunks = line.split(LINE_ELEMENT_DELIMITER)
                     if len(chunks) == 5:
-                        d = {"id": chunks[0], "process": chunks[1], "direction": chunks[2],
+                        d = {"id": chunks[0], "processes":{"process": chunks[1], "direction": chunks[2]},
                              "weight": chunks[3], "description": chunks[4]}
                     else:
-                        d = {"id": chunks[0], "process": chunks[1],
-                             "direction": chunks[2], "weight": chunks[3]}
-                    go_terms.append(GOTerm.from_dict(d))
+                        d = {"id": chunks[0], "processes": {"process": chunks[1],
+                             "direction": chunks[2]}, "weight": chunks[3]}
+                    if not any(d["id"] == goterm.id for goterm in go_terms):
+                        go_terms.append(GOTerm.from_dict(d))
+                    else:
+                        next(goterm for goterm in go_terms if d["id"] == goterm.id).add_process({"process": chunks[1], "direction": chunks[2]})
         return cls(go_terms, target_processes)
 
     @classmethod
