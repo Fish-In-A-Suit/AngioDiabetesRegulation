@@ -13,10 +13,10 @@ class Metrics:
         self.reverse_lookup = model
         self.name :str = None
 
-    """
-    The 'metric' function should be implemented in the subclasses of this interface.
-    """
     def metric(self, product: Product | miRNA):
+        """
+        The 'metric' function should be implemented in the subclasses of this interface.
+        """
         raise NotImplementedError("Subclasses must implement metric()")
 
 
@@ -64,16 +64,16 @@ class adv_product_score(Metrics):
         self.c1 = c1
         self.c2 = c2
 
-    """
-    An implementation of the scoring algorithm for an input Product instance.
-
-    Parameters:
-      - (Product) product: an instance of a Product
-
-    Returns:
-      - (float) score: a score according to this class' scoring algorithm.
-    """
     def metric(self, product: Product)-> float:
+        """
+        An implementation of the scoring algorithm for an input Product instance.
+
+        Parameters:
+          - (Product) product: an instance of a Product
+
+        Returns:
+          - (float) score: a score according to this class' scoring algorithm.
+        """
         # a list of GO Terms associated with the current Product
         goterms_list = self.reverse_lookup.get_all_goterms_for_product(product)
         score = 0.0
@@ -182,21 +182,21 @@ class nterms(Metrics):
         super().__init__(model) 
         self.name = "nterms"
 
-    """
-    An implementation of the scoring algorithm for an input Product instance.
-
-    Parameters:
-      - (Product) product: an instance of a Product
-
-    Returns:
-      - (dict) nterms_dict: a dictionary with (ReverseLookup).target_processes * 3 keys. Each process of a ReverseLookup instance has 3 keys,
-                            '{process}+', '{process}-', '{process}0'. Each key has an integer count value of the amount of GO Terms of the input Product instance,
-                            which positively (direction == '+'), negatively (direction == '-') or generally (direction == '0') regulate a speciffic process.
-
-                            For a ReverseLookup model with defined processed 'angio' and 'diabetes', the returned dictionary would have 6 keys:
-                            angio+, angio-, angio0, diabetes+, diabetes-, diabetes0
-    """
     def metric(self, product: Product) -> dict:
+        """
+        An implementation of the scoring algorithm for an input Product instance.
+
+        Parameters:
+          - (Product) product: an instance of a Product
+
+        Returns:
+          - (dict) nterms_dict: a dictionary with (ReverseLookup).target_processes * 3 keys. Each process of a ReverseLookup instance has 3 keys,
+                                '{process}+', '{process}-', '{process}0'. Each key has an integer count value of the amount of GO Terms of the input Product instance,
+                                which positively (direction == '+'), negatively (direction == '-') or generally (direction == '0') regulate a speciffic process.
+
+                                For a ReverseLookup model with defined processed 'angio' and 'diabetes', the returned dictionary would have 6 keys:
+                                angio+, angio-, angio0, diabetes+, diabetes-, diabetes0
+        """
         # A list of GO Terms associated with the current Product
         goterms_list = self.reverse_lookup.get_all_goterms_for_product(product)
         # An empty dictionary to store the count of GOTerms for each process and direction
@@ -237,11 +237,11 @@ class inhibited_products_id(Metrics):
         self.name = "inhibited_products_id"
         self.treshold = self.reverse_lookup.miRNA_overlap_treshold # it should be defined in the model, otherwise strange things happen when one mixes scores with different treshold
     
-    """
-    An implementation of the scoring algorithm for a specific miRNA instance. It loops over all miRNA-mRNA binding strengths in (miRNA).mRNA_overlaps
-    and returns a list of mRNA product ids, whose binding strengths to this miRNA are greater than miRNA_overlap_threshold.
-    """
     def metric(self, mirna: miRNA) -> List[str]:
+        """
+        An implementation of the scoring algorithm for a specific miRNA instance. It loops over all miRNA-mRNA binding strengths in (miRNA).mRNA_overlaps
+        and returns a list of mRNA product ids, whose binding strengths to this miRNA are greater than miRNA_overlap_threshold.
+        """
         inhibited_product_ids = []
         for product_id, overlap in mirna.mRNA_overlaps.items():
             if overlap >= self.treshold:
@@ -265,10 +265,10 @@ class basic_mirna_score(Metrics):
         self.name = "basic_score"
         self.treshold = self.reverse_lookup.miRNA_overlap_treshold # it should be defined in the model, otherwise strange things happen when one mixes scores with different treshold
     
-    """
-    An implementation of the scoring algorithm for a specific miRNA instance. [TODO] explain more after the scoring issue is solved
-    """
     def metric(self, mirna: miRNA) -> float:
+        """
+        An implementation of the scoring algorithm for a specific miRNA instance. [TODO] explain more after the scoring issue is solved
+        """
         score = 0.0
         for product_id, overlap in mirna.mRNA_overlaps.items():
             product = next((x for x in self.reverse_lookup.products if x.uniprot_id == product_id), None) #  this line of code is looking through a sequence of products and finding the first product whose uniprot_id matches the value of product_id. If such a product is found, it is assigned to the variable product; otherwise, product is set to None
