@@ -10,6 +10,9 @@ import logging
 logger = logging.getLogger(__name__)
 
 class GOApi:
+    """
+    This class enables the user to interact with the Gene Ontology database via http requests.
+    """
     def __init__(self):
         # Set up a retrying session
         retry_strategy = Retry(
@@ -25,7 +28,11 @@ class GOApi:
 
     def fetch_term_data(self, term_id):
         """
-        Fetches term data for a given term ID from the Gene Ontology API
+        Fetches term data for a given term ID from the Gene Ontology API using http://api.geneontology.org/api/ontology/term/{term_id}, 
+        example of a term_id is GO:1903589.
+
+        Returns:
+          - (string as json) data: a json string, representing the api request response
         """
         url = f"http://api.geneontology.org/api/ontology/term/{term_id}"
         params = {}
@@ -42,7 +49,13 @@ class GOApi:
 
     def fetch_term_products(self, term_id):
         """
-        Fetches product IDs associated with a given term ID from the Gene Ontology API
+        Fetches product IDs associated with a given term ID from the Gene Ontology API. The product IDs can be of any of the following
+        databases: UniProt, ZFIN, Xenbase, MGI, RGD [TODO: enable the user to specify databases himself]
+
+        The request uses this link: http://api.geneontology.org/api/bioentity/function/{term_id}/genes
+
+        Returns:
+          - (string as json) data: a json string, representing the api request response
         """
         APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["ZFIN", ["NCBITaxon:7955"]],
@@ -68,6 +81,9 @@ class GOApi:
         return products
 
 class UniProtAPI:
+    """
+    This class enables the user to interact with the UniProtKB database via http requests.
+    """
     def __init__(self):
         # Set up a retrying session
         retry_strategy = Retry(

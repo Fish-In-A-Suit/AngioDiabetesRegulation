@@ -38,6 +38,19 @@ class GOTerm:
         self.products = products
 
     def fetch_name_description(self, api: GOApi):
+        """
+        Sets the "name" and "description" member field of the GO Term. The link used to query for the response is http://api.geneontology.org/api/ontology/term/{term_id}.
+        This function sets the "name" field of the GO Term to response['label'] and the "description" field to response['definition']
+
+        Parameters:
+          - (GOApi) api: a GOApi instance
+        
+        Usage and calling:
+            api = GOApi()
+            goterms = ["GO:1903589", ...]
+            for goterm in goterms:
+                goterm.fetch_name_description(api)
+        """
         data = api.fetch_term_data(self.id)
         if data:
             self.name = data['label']
@@ -45,6 +58,22 @@ class GOTerm:
             logger.info(f"Fetched name and description for GO term {self.id}")
 
     def fetch_products(self, api: GOApi):
+        """
+        Fetches UniProtKB products associated with a GO Term and sets the "products" member field of the GO Term to a list of all associated products.
+        The link used to query for the response is http://api.geneontology.org/api/bioentity/function/{term_id}/genes.
+
+        The product IDs can be of any of the following databases: UniProt, ZFIN, Xenbase, MGI, RGD 
+        [TODO: enable the user to specify databases himself]
+
+        Parameters:
+          - (GOApi) api: a GOApi instance
+        
+        Usage and calling:
+            api = GOApi()
+            goterms = ["GO:1903589", ...]
+            for goterm in goterms:
+                goterm.fetch_products(api)
+        """
         products = api.fetch_term_products(self.id)
         if products:
             self.products = products
@@ -61,8 +90,7 @@ class GOTerm:
         Returns:
             A new instance of the GOTerm class.
         """
-        goterm = cls(d['id'], d['process'], d['direction'], d.get('name'), d.get(
-            'description'), d.get('weight', 1.0), d.get('products', []))
+        goterm = cls(d['id'], d['process'], d['direction'], d.get('name'), d.get('description'), d.get('weight', 1.0), d.get('products', []))
         return goterm
 
 class Product:
@@ -76,7 +104,7 @@ class Product:
             description (str): A description of the product.
             ensg_id (str): Ensembl gene ID (MAIN).
             enst_id (str): Ensembl transcript ID.
-            refseq_nt_id (str): Refseq transcript ID.
+            refseq_nt_id (str): Refseq (reference sequence) transcript ID.
             mRNA (str): The mRNA sequence of the product.
             scores (dict): A dictionary of scores associated with the product (e.g. expression score, functional score).
         """
@@ -263,8 +291,33 @@ class ReverseLookup:
         logger.info(f"Created Product objects from GOTerm object definitions")
 
     def fetch_ortholog_products(self) -> None:
-        try:
+        """
+        This function tries to find the orthologs to any non-uniprot genes (products) associated with a GO Term.
+
+        When fetching products (genes / gene products) from Gene Ontology for a specific GO Term:
+            (GOTerm).fetch_products()
+
+            api = GOApi()
+            goterms = ["GO:1903589", ...]
+            for goterm in goterms:
+                goterm.fetch_products(api)
+        
+        The resulting products can be from any of the following databases: UniProtKB, ZFIN, Xenbase, MGI, RGD. For subsequent 
+        Homo-Sapiens-only product analysis, it is important to find, if human ortholog genes exist for the products, fetched from a non-uniprot
+        databases.
+
+        Usage and calling:
+            products = ... # define a list of Product instances
             human_ortolog_finder = HumanOrthologFinder()
+            uniprot_api = UniProtAPI()
+            ensembl_api = EnsemblAPI()
+
+            for product in products:
+                product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
+        
+        """
+        try:
+            human_ortholog_finder = HumanOrthologFinder()
             uniprot_api = UniProtAPI()
             ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
@@ -273,8 +326,7 @@ class ReverseLookup:
                     # Check if the Product object doesn't have a UniProt ID or genename or ensg_id.
                     if product.genename == None:
                         # If it doesn't, fetch UniProt data for the Product object.
-                        product.fetch_ortholog(
-                            human_ortolog_finder, uniprot_api, ensembl_api)
+                        product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
         except Exception as e:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
             self.save_model('crash_products.json')
