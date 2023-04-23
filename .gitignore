@@ -11,6 +11,8 @@ log_output
 .vscode/settings.json
 temp
 *.pyc
+*.obo
+*.gaf
 
 test_run_2/
 diabetes_angio_1/

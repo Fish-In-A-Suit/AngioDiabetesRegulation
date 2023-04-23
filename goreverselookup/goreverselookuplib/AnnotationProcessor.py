@@ -1,10 +1,14 @@
+from typing import Set
 import requests
 from requests.adapters import HTTPAdapter, Retry
+import urllib.request
+import gzip
 import time
 import os
 #from typing import List, Dict, Set, Optional, Callable
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -26,7 +30,7 @@ class GOApi:
         session.mount("https://", adapter)
         self.s = session
 
-    def fetch_term_data(self, term_id):
+    def get_data(self, term_id):
         """
         Fetches term data for a given term ID from the Gene Ontology API using http://api.geneontology.org/api/ontology/term/{term_id}, 
         example of a term_id is GO:1903589.
@@ -47,7 +51,8 @@ class GOApi:
             logger.warning(f"Error: {e}")
             return None
 
-    def fetch_term_products(self, term_id):
+    def get_products(self, term_id):
+        
         """
         Fetches product IDs associated with a given term ID from the Gene Ontology API. The product IDs can be of any of the following
         databases: UniProt, ZFIN, Xenbase, MGI, RGD [TODO: enable the user to specify databases himself]
@@ -80,6 +85,76 @@ class GOApi:
         logger.info(f"Fetched products for GO term {term_id}")
         return products
 
+class GOAnnotiationsFile:
+    def __init__(self) -> None:
+        self._filepath = "src_data_files/goa_human.gaf"
+        self._check_file()
+        if self._check_file():
+            with open(self._filepath, 'r') as read_content:
+                temp_content = read_content.readlines()
+                self._readlines = []
+                for line in temp_content:
+                    if not line.startswith('!') and not line.strip() == '':
+                        self._readlines.append(line.strip())
+            
+    def _check_file(self):
+        os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
+        if os.path.exists(self._filepath):
+            return True
+        else:
+            url = "http://geneontology.org/gene-associations/goa_human.gaf.gz"
+            # download the gzip file and save it to a temporary file
+            temp_file, _ = urllib.request.urlretrieve(url)
+
+            # read the contents of the gzip file and save it to the txt file
+            with gzip.open(temp_file, 'rt') as f_in, open(self._filepath, 'w') as f_out:
+                for line in f_in:
+                    f_out.write(line)
+                    
+            # delete the temporary file
+            os.remove(temp_file)
+
+        if os.path.exists(self._filepath):
+            return True
+        else:
+            return False
+
+    def get_products(self, goterm_id: str) -> Set[str]:
+        """This method returns all unique products associated with the GO term id
+
+        Args:
+            goterm_id (str): _description_
+
+        Raises:
+            ValueError: _description_
+            Exception: _description_
+
+        Returns:
+            Set[str]: set of products' gene names
+        """
+        products_set = set()
+        for line in self._readlines:
+            chunks = line.split('\t')
+            if goterm_id == chunks[4]:
+                products_set.add(chunks[2])
+        return products_set
+                
+    def get_all_terms_for_product(self, product: str) -> Set[str]:
+        terms_set = set()
+        for line in self._readlines:
+            chunks = line.split('\t')
+            if product == chunks[2]:
+                terms_set.add(chunks[4])
+        return terms_set
+        
+        
+    def get_all_terms(self) -> Set[str]:
+        terms_set = set()
+        for line in self._readlines:
+            chunks = line.split('\t')
+            terms_set.add(chunks[4])
+        return terms_set
+        
 class UniProtAPI:
     """
     This class enables the user to interact with the UniProtKB database via http requests.

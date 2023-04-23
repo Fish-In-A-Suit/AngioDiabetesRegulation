@@ -1,11 +1,10 @@
 # --- Input file for Term Enrichment System --- #
 #[name] is the start of new section and includes description of data, data is space delimited
 ###settings
-homosapiens_only	True
 ###processes [proces name] [to be expressed + or suppressed -]
 diabetes	+
 angio	+
-###GO_terms [GO id] [process] [upregulated + or downregulated - or general 0] [weight 0-1]
+###GO_terms [GO id] [process] [upregulated + or downregulated -] [weight 0-1]
 GO:1903589	angio	+	1	positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis
 GO:1903672	angio	+	1	positive regulation of sprouting angiogenesis
 GO:0045766	angio	+	1	positive regulation of angiogenesis
@@ -33,46 +32,37 @@ GO:0032024	diabetes	-	1	positive regulation of insulin secretion
 GO:0043568	diabetes	-	1	positive regulation of insulin-like growth factor receptor signaling pathway
 GO:0038015	diabetes	-	1	positive regulation of insulin receptor signaling pathway by insulin receptor internalization
 GO:0035774	diabetes	-	1	positive regulation of insulin secretion involved in cellular response to glucose stimulus
-GO:0001525	angio	0	1	angiogenesis
-GO:1903587	angio	0	1	regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis
-GO:1903670	angio	0	1	regulation of sprouting angiogenesis
-GO:0045765	angio	0	1	regulation of angiogenesis
-GO:0060055	angio	0	1	angiogenesis involved in wound healing
-GO:0002040	angio	0	1	sprouting angiogenesis
-GO:0002041	angio	0	1	intussusceptive angiogenesis
-GO:0002042	angio	0	1	cell migration involved in sprouting angiogenesis
-GO:0002043	angio	0	1	blood vessel endothelial cell proliferation involved in sprouting angiogenesis
-GO:0002044	angio	0	1	blood vessel endothelial cell migration involved in intussusceptive angiogenesis
-GO:0106088	angio	0	1	regulation of cell adhesion involved in sprouting angiogenesis
-GO:0002045	angio	0	1	regulation of cell adhesion involved in intussusceptive angiogenesis
-GO:0120078	angio	0	1	cell adhesion involved in sprouting angiogenesis
-GO:0090049	angio	0	1	regulation of cell migration involved in sprouting angiogenesis
-GO:0071116	angio	0	1	alpha6-beta1 integrin-CYR61 complex
-GO:0120077	angio	0	1	angiogenic sprout fusion
-GO:0043534	angio	0	1	blood vessel endothelial cell migration
-GO:0003158	angio	0	1	endothelium development
-GO:0001938	angio	0	1	positive regulation of endothelial cell proliferation
-GO:1905564	angio	0	1	positive regulation of vascular endothelial cell proliferation
-GO:0001936	angio	0	1	regulation of endothelial cell proliferation
-GO:1905562	angio	0	1	regulation of vascularpositive regulation of insulin receptor signaling pathway endothelial cell proliferation
-GO:0101023	angio	0	1	vascular endothelial cell proliferation
-GO:0046950	diabetes	0	1	cellular ketone body metabolic process
-GO:0032869	diabetes	0	1	cellular response to insulin stimulus
-GO:0044381	diabetes	0	1	glucose import in response to insulin stimulus
-GO:0006006	diabetes	0	1	glucose metabolic process
-GO:0043559	diabetes	0	1	insulin binding
-GO:1901143	diabetes	0	1	insulin catabolic process
-GO:1901142	diabetes	0	1	insulin metabolic process
-GO:0005899	diabetes	0	1	insulin receptor complex
-GO:0038016	diabetes	0	1	insulin receptor internalization
-GO:0038020	diabetes	0	1	insulin receptor recycling
-GO:0038028	diabetes	0	1	insulin receptor signaling pathway via phosphatidylinositol 3-kinase
-GO:0008286	diabetes	0	1	insulin receptor signaling pathway
-GO:0043560	diabetes	0	1	insulin receptor substrate binding
-GO:0005009	diabetes	0	1	insulin-activated receptor activity
-GO:0005520	diabetes	0	1	insulin-like growth factor binding
-GO:0032593	diabetes	0	1	insulin-responsive compartment
-GO:0046626	diabetes	0	1	regulation of insulin receptor signaling pathway
+GO:0001525	angio	+	1	angiogenesis
+GO:0060055	angio	+	1	angiogenesis involved in wound healing
+GO:0002040	angio	+	1	sprouting angiogenesis
+GO:0002041	angio	+	1	intussusceptive angiogenesis
+GO:0002042	angio	+	1	cell migration involved in sprouting angiogenesis
+GO:0002043	angio	+	1	blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+GO:0002044	angio	+	1	blood vessel endothelial cell migration involved in intussusceptive angiogenesis
+GO:0120078	angio	+	1	cell adhesion involved in sprouting angiogenesis
+GO:0071116	angio	+	1	alpha6-beta1 integrin-CYR61 complex
+GO:0120077	angio	+	1	angiogenic sprout fusion
+GO:0043534	angio	+	1	blood vessel endothelial cell migration
+GO:0003158	angio	+	1	endothelium development
+GO:0001938	angio	+	1	positive regulation of endothelial cell proliferation
+GO:1905564	angio	+	1	positive regulation of vascular endothelial cell proliferation
+GO:0101023	angio	+	1	vascular endothelial cell proliferation
+GO:0046950	diabetes	+	1	cellular ketone body metabolic process
+GO:0032869	diabetes    -	1	cellular response to insulin stimulus
+GO:0044381	diabetes	-	1	glucose import in response to insulin stimulus
+GO:0006006	diabetes	+	1	glucose metabolic process
+GO:0043559	diabetes	-	1	insulin binding
+GO:1901143	diabetes	-	1	insulin catabolic process
+GO:1901142	diabetes	-	1	insulin metabolic process
+GO:0005899	diabetes    -	1	insulin receptor complex
+GO:0038016	diabetes	+	1	insulin receptor internalization
+GO:0038020	diabetes	-	1	insulin receptor recycling
+GO:0038028	diabetes	-	1	insulin receptor signaling pathway via phosphatidylinositol 3-kinase
+GO:0008286	diabetes	-	1	insulin receptor signaling pathway
+GO:0043560	diabetes	-	1	insulin receptor substrate binding
+GO:0005009	diabetes	-	1	insulin-activated receptor activity
+GO:0005520	diabetes	-	1	insulin-like growth factor binding
+GO:0032593	diabetes	-	1	insulin-responsive compartment
 #GO:0014859	diabetes	-	1	negative regulation of skeletal muscle cell proliferation
 #GO:1904205	diabetes	-	1	negative regulation of skeletal muscle hypertrophy
 #GO:0048632	diabetes	-	1	negative regulation of skeletal muscle tissue growth

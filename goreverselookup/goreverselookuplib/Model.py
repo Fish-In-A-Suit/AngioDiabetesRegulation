@@ -1,11 +1,10 @@
 from __future__ import annotations
-from .AnnotationProcessor import GOApi, EnsemblAPI, UniProtAPI, HumanOrthologFinder
-from typing import TYPE_CHECKING
+from .AnnotationProcessor import GOApi, GOAnnotiationsFile, EnsemblAPI, UniProtAPI, HumanOrthologFinder
+from typing import TYPE_CHECKING, Set, List, Dict, Optional
 if TYPE_CHECKING:
     from .Metrics import Metrics
 import json
 import os
-from typing import List, Dict, Optional
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 import logging
@@ -16,22 +15,20 @@ logger = logging.getLogger(__name__)
 
 
 class GOTerm:
-    def __init__(self, id: str, process: str, direction: str, name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: List[str] = []):
+    def __init__(self, id: str, processes: List[Dict], name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: Set[str] = set()):
         """
         A class representing a Gene Ontology term.
 
         Args:
             id (str): The ID of the GO term.
-            process (str): The name of the biological process associated with the GO term.
-            direction (str): The type of regulation associated with the GO term (e.g. positive or negative or general).
+            process (List[Dict]): [{"process" : "angio", "direction" : "+"}]
             name (str): Name (optional).
             description (str): A description of the GO term (optional).
             weight (float): The weight of the GO term.
             products (list): Products associated with the term (optional).
         """
         self.id = id
-        self.process = process
-        self.direction = direction
+        self.processes = processes
         self.name = name
         self.description = description
         self.weight = float(weight)
@@ -51,13 +48,13 @@ class GOTerm:
             for goterm in goterms:
                 goterm.fetch_name_description(api)
         """
-        data = api.fetch_term_data(self.id)
+        data = api.get_data(self.id)
         if data:
             self.name = data['label']
             self.description = data['definition']
             logger.info(f"Fetched name and description for GO term {self.id}")
 
-    def fetch_products(self, api: GOApi):
+    def fetch_products(self, source):
         """
         Fetches UniProtKB products associated with a GO Term and sets the "products" member field of the GO Term to a list of all associated products.
         The link used to query for the response is http://api.geneontology.org/api/bioentity/function/{term_id}/genes.
@@ -69,15 +66,15 @@ class GOTerm:
           - (GOApi) api: a GOApi instance
         
         Usage and calling:
-            api = GOApi()
+            api = GOApi() or goaf = GOAnnotationFile()
             goterms = ["GO:1903589", ...]
             for goterm in goterms:
                 goterm.fetch_products(api)
         """
-        products = api.fetch_term_products(self.id)
+        products = source.get_products(self.id)
         if products:
             self.products = products
-            logger.info(f"Fetched products for GO term {self.id}")
+
 
     @classmethod
     def from_dict(cls, d: dict):
@@ -90,7 +87,8 @@ class GOTerm:
         Returns:
             A new instance of the GOTerm class.
         """
-        goterm = cls(d['id'], d['process'], d['direction'], d.get('name'), d.get('description'), d.get('weight', 1.0), d.get('products', []))
+        goterm = cls(d['id'], d['processes'], d.get('name'), d.get(
+            'description'), d.get('weight', 1.0), d.get('products', set()))
         return goterm
 
 class Product:
@@ -221,6 +219,19 @@ class miRNA:
         """
         return cls(d['id'], d.get('sequence'), d.get('mRNA_overlaps'), d.get('scores'))
 
+class TargetProcess:
+    def __init__(self, name: str, direction: str) -> None:
+        """
+        A class representing a target process. NOT USED CURRENTLY
+
+        Args:
+            name (str)
+            direction (str): + or -
+            goterms (set): a set of all goterms which are 
+        """
+        self.name = name
+        self.direction = direction
+    
 from .miRNAprediction import miRDB60predictor
 
 class ReverseLookup:
@@ -252,10 +263,16 @@ class ReverseLookup:
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
         """
-        api = GOApi()
+        goaf = GOAnnotiationsFile()
+        #api = GOApi()
         with logging_redirect_tqdm():
             for goterm in tqdm(self.goterms):
-                goterm.fetch_products(api)
+                goterm.fetch_products(goaf)
+        
+        
+        #with logging_redirect_tqdm():
+        #    for goterm in tqdm(self.goterms):
+        #        goterm.fetch_products(api)
 
     def create_products_from_goterms(self) -> None:
         """
@@ -287,7 +304,10 @@ class ReverseLookup:
         # Iterate over each product in the products_set and create a new Product object from the product ID using the
         # Product.from_dict() classmethod. Add the resulting Product objects to the ReverseLookup object's products list.
         for product in products_set:
-            self.products.append(Product.from_dict({'id_synonyms': [product]}))
+            if ':' in product:
+                self.products.append(Product.from_dict({'id_synonyms': [product]}))
+            else:
+                self.products.append(Product.from_dict({'genename': [product]}))
         logger.info(f"Created Product objects from GOTerm object definitions")
 
     def fetch_ortholog_products(self) -> None:
@@ -368,7 +388,7 @@ class ReverseLookup:
         except Exception as e:
             raise e
 
-    def score_products(self, score_class: List[Metrics]) -> None:
+    def score_products(self, score_classes: List[Metrics]) -> None:
         """
         Scores the products of the current ReverseLookup model. This function allows you to pass a custom or a pre-defined scoring algorithm,
         which is of 'Metrics' type (look in Metrics.py), or a list of scoring algorithms. Each Product class of the current ReverseLookup instance products (self.products)
@@ -378,7 +398,7 @@ class ReverseLookup:
         the scoring algorithm's name and the corresponding score.
 
         Parameters:
-          - score_class: A subclass (implementation) of the Metrics superclass (interface). Current pre-defined Metrics implementations subclasses
+          - score_classes: A subclass (implementation) of the Metrics superclass (interface). Current pre-defined Metrics implementations subclasses
                          are 'adv_product_score', 'nterms', 'inhibited_products_id', 'basic_mirna_score'.
         
         Calling example:
@@ -392,13 +412,13 @@ class ReverseLookup:
         (3) Call the score_products on the model using the Metrics scoring implementations
         model.score_products([adv_score, nterms_score])
         """
-        if not isinstance(score_class, list):
-            score_class = [score_class]
+        if not isinstance(score_classes, list):
+            score_classes = [score_classes]
         # redirect the tqdm logging output to the logging module to avoid interfering with the normal output
         with logging_redirect_tqdm():
             # iterate over each Product object in self.products and score them using the Scoring object
             for product in tqdm(self.products): # each Product has a field scores - a dictionary between a name of the scoring algorithm and it's corresponding score
-                for _score_class in score_class:
+                for _score_class in score_classes:
                     product.scores[_score_class.name] = _score_class.metric(product) # create a dictionary between the scoring algorithm name and it's score for current product
 
     def fetch_mRNA_sequences(self) -> None:
@@ -517,6 +537,13 @@ class ReverseLookup:
         goterms_list = []
         for goterm in self.goterms:
             if any(product_id in goterm.products for product_id in product.id_synonyms):
+                goterms_list.append(goterm)
+        return goterms_list
+    
+    def get_all_goterms_for_process(self, process: str) -> List[GOTerm]:
+        goterms_list = []
+        for goterm in self.goterms:
+            if any(process["process"] == process for process in goterm.processes):
                 goterms_list.append(goterm)
         return goterms_list
 

@@ -1,8 +1,12 @@
 from __future__ import annotations
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Dict
 if TYPE_CHECKING:
     from .Model import ReverseLookup, Product, miRNA
+    from .AnnotationProcessor import GOAnnotiationsFile
 from typing import List
+
+from scipy.stats import binomtest, combine_pvalues
+import statistics
 
 class Metrics:
     """
@@ -181,7 +185,6 @@ class nterms(Metrics):
     def __init__(self, model: ReverseLookup):
         super().__init__(model) 
         self.name = "nterms"
-
     def metric(self, product: Product) -> dict:
         """
         An implementation of the scoring algorithm for an input Product instance.
@@ -215,6 +218,59 @@ class nterms(Metrics):
         
         # Return the dictionary containing the count of GOTerms for each process and direction
         return nterms_dict
+
+class binom_test(Metrics):
+    def __init__(self, model: ReverseLookup, goaf: GOAnnotiationsFile):
+        super().__init__(model) 
+        self.goaf = goaf
+        self.name = "overrepresentation"
+        self._num_all_goterms = 0
+    
+    def metric(self, product: Product) -> Dict:
+        
+        if self._num_all_goterms == 0:
+            self._num_all_goterms = len(self.goaf.get_all_terms())
+            if direction == "0":
+                return "0"
+            elif direction == "+":
+                return "-"
+            elif direction == "-":
+                return "+"
+        
+        results_dict = {}
+        
+        for process in self.reverse_lookup.target_processes:
+            process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"])
+            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename))
+            num_goterms_all_general = self._num_all_goterms
+            for direction in ['+', '-']:
+                num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(i['direction'] == direction for i in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
+                num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(i['direction'] == direction for i in goterm.processes))
+                
+                #time for Binomial test and "risk ratio"
+                binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
+                                  (num_goterms_product_general/num_goterms_all_general), alternative='greater')
+                binom_pvalue = binom.pvalue
+                
+                risk_ratio = (num_goterms_product_process/num_goterms_all_process) / (num_goterms_product_general/num_goterms_all_general)
+                
+                results_dict[f"{process['process']}{direction}"] = {
+                    "n_prod_process" : num_goterms_product_process,
+                    "n_all_process" : num_goterms_all_process,
+                    "n_prod_general" : num_goterms_product_general,
+                    "n_all_general" : num_goterms_all_general,
+                    "binom_pvalue" : binom_pvalue,
+                    "risk_ratio" : risk_ratio,
+                }
+        
+        all_target_pvalues = [results_dict[f"{process['process']}{process['direction']}"]['binom_pvalue'] for process in self.reverse_lookup.target_processes]
+        combined_p = combine_pvalues(all_target_pvalues)
+        results_dict["comb_binom_pvalue"] = combined_p.pvalue
+        combined_rr = statistics.mean([results_dict[f"{process['process']}{process['direction']}"]['risk_ratio'] for process in self.reverse_lookup.target_processes])
+        results_dict["comb_risk_ratio"] = combined_rr
+        
+        return results_dict
+            
 
 class inhibited_products_id(Metrics):
     """

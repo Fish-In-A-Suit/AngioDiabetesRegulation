@@ -1,0 +1,4 @@
+1. If the chosen term has child terms, choose them too
+2. Non-regulation terms and positive regulation terms both facilitate the process
+3. Only negative regulation terms suppress the process
+4. Avoid selecting "regulation of xxx", because it contains both positive and negative regulation terms
