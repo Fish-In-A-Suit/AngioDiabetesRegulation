@@ -8,6 +8,7 @@ import tabulate
 from tabulate import tabulate, SEPARATING_LINE
 import traceback
 import logging
+from .FileUtil import FileUtil
 
 logger = logging.getLogger(__name__)
 
@@ -373,8 +374,9 @@ class ReportGenerator:
 
         # fallback if the above fails
         try:
-            current_dir = os.getcwd()
-            win_filepath = os.path.join(current_dir, filepath) # reassign filepath to absolute path
+            # current_dir = os.getcwd()
+            # win_filepath = os.path.join(current_dir, filepath) # reassign filepath to absolute path
+            win_filepath = FileUtil().find_win_abs_filepath()
             os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
 
             with open(win_filepath, 'w') as f:

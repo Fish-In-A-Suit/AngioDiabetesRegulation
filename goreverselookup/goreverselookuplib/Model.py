@@ -610,28 +610,30 @@ class ReverseLookup:
         for miRNA in self.miRNAs:
             data.setdefault('miRNAs', []).append(miRNA.__dict__)
         # write to file
-        # Create directory for the report file, if it does not exist
-        try:
-            os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
+
+        
+        try: # this works on mac, not on windows
+            os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True) # Create directory for the report file, if it does not exist
+            with open(os.path.join(current_dir, filepath), 'w') as f:
+                json.dump(data, f, indent=4)
         except OSError:
             # pass the error on the first attempt
             pass
 
-        # if first attempt fails, try using current_dir = os.getcwd()
-        try:
-            current_dir = os.getcwd()
-            os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
+        try: # if first attempt fails, try using current_dir = os.getcwd(), this works on windows
+            windows_filepath = FileUtil().find_win_abs_filepath(filepath)
+            with open(windows_filepath, 'w') as f:
+                json.dump(data, f, indent=4)
+            #current_dir = os.getcwd()
+            #os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
         except OSError:
             logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
-
-        with open(os.path.join(current_dir, filepath), 'w') as f:
-            json.dump(data, f, indent=4)
 
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
         if not os.path.isabs(filepath):
-            fu = FileUtil()
-            filepath = fu.find_file(filepath)
+            fileutil = FileUtil()
+            filepath = fileutil.find_file(filepath) # attempt backtrace file search
             # current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
             # filepath = os.path.join(current_dir, filepath)
         with open(filepath, "r") as f:
@@ -656,10 +658,10 @@ class ReverseLookup:
     @classmethod
     def from_input_file(cls, filepath: str) -> 'ReverseLookup':
         """
-        Creates a ReverseLookup object from a JSON file.
+        Creates a ReverseLookup object from a text file.
 
         Args:
-            filepath (str): The path to the input file.
+            filepath (str): The path to the input text file.
 
         Returns:
             ReverseLookup: A ReverseLookup object.
@@ -671,7 +673,10 @@ class ReverseLookup:
 
         def process_comment(line):
             """
-            Processes a comment in the line: returns the part of the line before the comment.
+            Processes a comment in the line: returns the part of the line before the comment. The input file should be structured to contain
+            three sections - 'settings', 'processes' and 'GO_terms', annotated using the LOGIC_LINE_DELIMITER.
+
+            For the construction of input.txt, please refer to the Readme file. [TODO]
 
             Parameters:
             - line: the line whose comment to process
@@ -684,49 +689,67 @@ class ReverseLookup:
                 return line.split(COMMENT_DELIMITER)[0]
             else:
                 return line
+        
+        def process_file(filepath: str):
+            with open(filepath, "r") as read_content:
+                target_processes = []
+                go_terms = []
+                read_lines = read_content.read().splitlines()[2:]  # skip first 2 lines
+                section = ""  # what is the current section i am reading
+                for line in read_lines:
+                    line = process_comment(line)
+                    if line == "":
+                        continue
+                    if "settings" in line:
+                        section = "settings"
+                        continue
+                    elif "processes" in line:
+                        section = "process"
+                        continue
+                    elif "GO_terms" in line:
+                        section = "GO"
+                        continue
+                    if section == "settings":
+                        chunks = line.split(LINE_ELEMENT_DELIMITER)
+                    elif section == "process":
+                        chunks = line.split(LINE_ELEMENT_DELIMITER)
+                        target_processes.append({"process": chunks[0], "direction": chunks[1]})
+                    elif section == "GO":
+                        chunks = line.split(LINE_ELEMENT_DELIMITER)
+                        if len(chunks) == 5:
+                            d = {"id": chunks[0], "processes":{"process": chunks[1], "direction": chunks[2]},"weight": chunks[3], "description": chunks[4]}
+                        else:
+                            d = {"id": chunks[0], "processes": {"process": chunks[1], "direction": chunks[2]}, "weight": chunks[3]}
+                        if not any(d["id"] == goterm.id for goterm in go_terms): # TODO: check this !!!!!
+                            go_terms.append(GOTerm.from_dict(d))
+                        else: # TODO: check this !!!!!
+                            next(goterm for goterm in go_terms if d["id"] == goterm.id).add_process({"process": chunks[1], "direction": chunks[2]})
+            return cls(go_terms, target_processes)
 
-        if not os.path.isabs(filepath):
+
+        if not os.path.isabs(filepath): # this process with traceback.extract_stack works correctly on mac, but not on windows.
             current_dir = os.path.dirname(os.path.abspath(
                 traceback.extract_stack()[0].filename))
-            filepath = os.path.join(current_dir, filepath)
-        with open(filepath, "r") as read_content:
-            target_processes = []
-            go_terms = []
-            read_lines = read_content.read().splitlines()[
-                2:]  # skip first 2 lines
-            section = ""  # what is the current section i am reading
-            for line in read_lines:
-                line = process_comment(line)
-                if line == "":
-                    continue
-                if "settings" in line:
-                    section = "settings"
-                    continue
-                elif "processes" in line:
-                    section = "process"
-                    continue
-                elif "GO_terms" in line:
-                    section = "GO"
-                    continue
-                if section == "settings":
-                    chunks = line.split(LINE_ELEMENT_DELIMITER)
-                elif section == "process":
-                    chunks = line.split(LINE_ELEMENT_DELIMITER)
-                    target_processes.append(
-                        {"process": chunks[0], "direction": chunks[1]})
-                elif section == "GO":
-                    chunks = line.split(LINE_ELEMENT_DELIMITER)
-                    if len(chunks) == 5:
-                        d = {"id": chunks[0], "processes":{"process": chunks[1], "direction": chunks[2]},
-                             "weight": chunks[3], "description": chunks[4]}
-                    else:
-                        d = {"id": chunks[0], "processes": {"process": chunks[1],
-                             "direction": chunks[2]}, "weight": chunks[3]}
-                    if not any(d["id"] == goterm.id for goterm in go_terms):
-                        go_terms.append(GOTerm.from_dict(d))
-                    else:
-                        next(goterm for goterm in go_terms if d["id"] == goterm.id).add_process({"process": chunks[1], "direction": chunks[2]})
-        return cls(go_terms, target_processes)
+            mac_filepath = os.path.join(current_dir, filepath) 
+        
+        try:
+            os.makedirs(os.path.dirname(mac_filepath), exist_ok=True) # this approach works on a mac computer
+            process_file(mac_filepath)
+        except OSError:
+            # # first pass is allowed, on Windows 10 this tries to create a file at 
+            # 'C:\\Program Files\\Python310\\lib\\diabetes_angio_1/general.txt'
+            # which raises a permission error.
+            pass
+        
+        # fallback if the above fails
+        try:
+            #fileutil = FileUtil()
+            #win_filepath = fileutil.find_win_abs_filepath(filepath)
+            win_filepath = FileUtil.find_win_abs_filepath(filepath)
+            os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
+            process_file(win_filepath)
+        except OSError:
+            logger.error(f"ERROR while opening win filepath {win_filepath}")
 
     @classmethod
     def from_dict(cls, data: Dict[str, List[Dict]]) -> 'ReverseLookup':
