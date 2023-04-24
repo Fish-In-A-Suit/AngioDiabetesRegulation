@@ -671,6 +671,9 @@ class ReverseLookup:
         COMMENT_DELIMITER = "#"  # Character used to denote a comment
         LOGIC_LINE_DELIMITER = "###"  # Special set of characters to denote a "logic line"
 
+        target_processes = []
+        go_terms = []
+
         def process_comment(line):
             """
             Processes a comment in the line: returns the part of the line before the comment. The input file should be structured to contain
@@ -692,8 +695,8 @@ class ReverseLookup:
         
         def process_file(filepath: str):
             with open(filepath, "r") as read_content:
-                target_processes = []
-                go_terms = []
+                #target_processes = []
+                #go_terms = []
                 read_lines = read_content.read().splitlines()[2:]  # skip first 2 lines
                 section = ""  # what is the current section i am reading
                 for line in read_lines:
@@ -724,7 +727,7 @@ class ReverseLookup:
                             go_terms.append(GOTerm.from_dict(d))
                         else: # TODO: check this !!!!!
                             next(goterm for goterm in go_terms if d["id"] == goterm.id).add_process({"process": chunks[1], "direction": chunks[2]})
-            return cls(go_terms, target_processes)
+            # return cls(go_terms, target_processes)
 
 
         if not os.path.isabs(filepath): # this process with traceback.extract_stack works correctly on mac, but not on windows.
@@ -750,6 +753,8 @@ class ReverseLookup:
             process_file(win_filepath)
         except OSError:
             logger.error(f"ERROR while opening win filepath {win_filepath}")
+        
+        return cls(go_terms, target_processes)
 
     @classmethod
     def from_dict(cls, data: Dict[str, List[Dict]]) -> 'ReverseLookup':
