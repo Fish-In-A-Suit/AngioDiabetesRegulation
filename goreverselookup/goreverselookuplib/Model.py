@@ -422,7 +422,28 @@ class ReverseLookup:
             # iterate over each Product object in self.products and score them using the Scoring object
             for product in tqdm(self.products): # each Product has a field scores - a dictionary between a name of the scoring algorithm and it's corresponding score
                 for _score_class in score_classes:
+                    pass
                     product.scores[_score_class.name] = _score_class.metric(product) # create a dictionary between the scoring algorithm name and it's score for current product
+            
+        for _score_class in score_classes:
+            i = 0
+            p_values = []
+            if _score_class.name == "fisher_test" or _score_class.name == "binomial_test":   
+
+                for product in self.products:
+                    for process in self.target_processes:
+                        for direction in ['+', '-']:
+                            p_values.append(product.scores[_score_class.name][f"{process['process']}{direction}"]["pvalue"])
+                # apply Benjamini-Hochberg FDR correction
+                from statsmodels.stats.multitest import multipletests
+                reject, p_corrected, _, _ = multipletests(p_values, alpha=0.05, method='fdr_bh')
+                for product in self.products:
+                    for process in self.target_processes:
+                        for direction in ['+', '-']:
+                            product.scores[_score_class.name][f"{process['process']}{direction}"]["pvalue_corr"] = p_corrected[i]
+                            i += 1
+                            
+                        
 
     def fetch_mRNA_sequences(self) -> None:
         try:
