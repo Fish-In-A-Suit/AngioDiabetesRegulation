@@ -674,11 +674,10 @@ class ReverseLookup:
         Iterates over all GOTerm objects in the go_term set and calls the fetch_name_description method for each object.
         """
         self.timer.set_start_time()
-
         api = GOApi()
         with logging_redirect_tqdm():
             for goterm in tqdm(self.goterms):
-                if goterm.name == None:
+                if goterm.name == None: # if goterm.name already exists, don't recompute
                     goterm.fetch_name_description(api)
 
         if "fetch_all_go_term_names_descriptions" not in self.execution_times: # to prevent overwriting on additional runs of the same model name
