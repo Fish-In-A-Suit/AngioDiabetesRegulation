@@ -48,6 +48,7 @@ class GOTerm:
             for goterm in goterms:
                 goterm.fetch_name_description(api)
         """
+        logger.info("Fetching GO Term names (labels) and descriptions (definitions).")
         data = api.get_data(self.id)
         if data:
             self.name = data['label']
@@ -595,7 +596,6 @@ class ReverseLookup:
         data = {}
         # save options - currently not used
         current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
-        # TODO: also implement FileUtil saving here !!!
 
         # save target_process
         data['target_processes'] = self.target_processes
@@ -621,7 +621,7 @@ class ReverseLookup:
             pass
 
         try: # if first attempt fails, try using current_dir = os.getcwd(), this works on windows
-            windows_filepath = FileUtil().find_win_abs_filepath(filepath)
+            windows_filepath = FileUtil.find_win_abs_filepath(filepath)
             with open(windows_filepath, 'w') as f:
                 json.dump(data, f, indent=4)
             #current_dir = os.getcwd()
@@ -695,8 +695,6 @@ class ReverseLookup:
         
         def process_file(filepath: str):
             with open(filepath, "r") as read_content:
-                #target_processes = []
-                #go_terms = []
                 read_lines = read_content.read().splitlines()[2:]  # skip first 2 lines
                 section = ""  # what is the current section i am reading
                 for line in read_lines:
@@ -727,7 +725,6 @@ class ReverseLookup:
                             go_terms.append(GOTerm.from_dict(d))
                         else: # TODO: check this !!!!!
                             next(goterm for goterm in go_terms if d["id"] == goterm.id).add_process({"process": chunks[1], "direction": chunks[2]})
-            # return cls(go_terms, target_processes)
 
 
         if not os.path.isabs(filepath): # this process with traceback.extract_stack works correctly on mac, but not on windows.
@@ -746,8 +743,6 @@ class ReverseLookup:
         
         # fallback if the above fails
         try:
-            #fileutil = FileUtil()
-            #win_filepath = fileutil.find_win_abs_filepath(filepath)
             win_filepath = FileUtil.find_win_abs_filepath(filepath)
             os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
             process_file(win_filepath)

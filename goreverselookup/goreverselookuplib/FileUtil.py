@@ -107,7 +107,7 @@ class FileUtil():
     def find_win_abs_filepath(relative_filepath: str):
         """
         Finds the absolute filepath to specified 'relative_filepath' using os.getcwd(). Note, that the function does not include
-        the "self" parameter, therefore it can be statically called using FileUtil().find_win_abs_filepath(...) without instantiating
+        the "self" parameter, therefore it can be statically called using FileUtil.find_win_abs_filepath(...) without instantiating
         a FilePath instance.
 
         Parameters:
@@ -115,7 +115,7 @@ class FileUtil():
         
         Calling:
             from .FileUtil import FileUtil
-            FileUtil().find_win_abs_filepath(FILEPATH)
+            FileUtil.find_win_abs_filepath(FILEPATH)
         
         Returns:
           - an absolute filepath to the specified relative filepath: os.getcwd + relative filepath

@@ -376,7 +376,7 @@ class ReportGenerator:
         try:
             # current_dir = os.getcwd()
             # win_filepath = os.path.join(current_dir, filepath) # reassign filepath to absolute path
-            win_filepath = FileUtil().find_win_abs_filepath()
+            win_filepath = FileUtil.find_win_abs_filepath()
             os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
 
             with open(win_filepath, 'w') as f:
