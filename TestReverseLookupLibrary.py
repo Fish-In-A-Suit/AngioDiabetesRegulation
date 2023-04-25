@@ -9,7 +9,7 @@ import os
 model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
 # model = ReverseLookup.load_model("diabetes_angio_1/data.json")
 
-# model._debug_shorten_GO_terms(10)
+# model._debug_shorten_GO_terms(5)
 
 # Fetch all GO term names and descriptions
 model.fetch_all_go_term_names_descriptions()
@@ -20,17 +20,17 @@ model.fetch_all_go_term_products(web_download=True)
 # Create products from GO terms
 model.create_products_from_goterms()
 
-model.save_model("diabetes_angio_1/data.json")
+# model.save_model("diabetes_angio_1/data.json")
 
 # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-model.fetch_ortholog_products()
+model.fetch_ortholog_products(refetch=False)
 
 model.prune_products()
 
 model.save_model("diabetes_angio_1/data.json")
 
 # Fetch product information (from UniprotAPI or EnsemblAPI)
-model.fetch_product_infos()
+model.fetch_product_infos(refetch=False)
 
 # Prune products
 model.prune_products()

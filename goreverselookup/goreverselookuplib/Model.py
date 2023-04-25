@@ -125,7 +125,7 @@ class GOTerm:
         return goterm
 
 class Product:
-    def __init__(self, id_synonyms: List[str], genename: str = None, uniprot_id: str = None, description: str = None, ensg_id: str = None, enst_id: str = None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None):
+    def __init__(self, id_synonyms: List[str], genename: str = None, uniprot_id: str = None, description: str = None, ensg_id: str = None, enst_id: str = None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None, had_orthologs_computed: bool = False, had_fetch_info_computed:bool = False):
         """
         A class representing a product (e.g. a gene or protein).
 
@@ -138,9 +138,11 @@ class Product:
             refseq_nt_id (str): Refseq (reference sequence) transcript ID.
             mRNA (str): The mRNA sequence of the product.
             scores (dict): A dictionary of scores associated with the product (e.g. expression score, functional score).
+            had_orthologs_computed (bool): If this Product instance has had the fetch_ortholog function called already.
+            had_fetch_info_computed (bool): If this Product instance has had the fetch_info function called already.
         """
         self.id_synonyms = id_synonyms
-        self.genename = genename
+        self.genename = genename # NOTE: genename indicates a successful ortholog fetch operation !!!
         self.description = description
         self.uniprot_id = uniprot_id
         self.ensg_id = ensg_id
@@ -148,6 +150,8 @@ class Product:
         self.refseq_nt_id = refseq_nt_id
         self.mRNA = mRNA
         self.scores = {} if scores is None else scores.copy()
+        self.had_orthologs_computed = had_orthologs_computed
+        self.had_fetch_info_computed = had_fetch_info_computed
 
     def fetch_ortholog(self, human_ortolog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
         if not human_ortolog_finder:
@@ -156,6 +160,7 @@ class Product:
             uniprot_api = UniProtAPI()
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
+
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
             if self.uniprot_id == None:
                 info_dict = uniprot_api.get_uniprot_info(self.id_synonyms[0]) # bugfix
@@ -165,21 +170,25 @@ class Product:
         elif len(self.id_synonyms) == 1:
             human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(self.id_synonyms[0])
             if human_ortholog_gene_id is None:
-                logger.warning(f"file-based human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
+                logger.warning(f"human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
                 human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0]) # attempt ensembl search
                 if human_ortholog_gene_ensg_id is not None:
                     enst_dict = ensembl_api.get_info(human_ortholog_gene_ensg_id)
                     self.genename = enst_dict.get("genename")
-                else:
-                    return # search was unsuccessful
+                # else: # this is obsolete
+                    # return # search was unsuccessful
             else:
                 self.genename = human_ortholog_gene_id
+        
+        self.had_orthologs_computed = True
                 
     def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
         """
         includes description, ensg_id, enst_id and refseq_nt_id
         """
+        self.had_fetch_info_computed = True
         if not (self.uniprot_id or self.genename or self.ensg_id):
+            logger.debug(f"Product with id synonyms {self.id_synonyms} did not have an uniprot_id, gene name or ensg id. Aborting fetch info operation.")
             return
         if not uniprot_api:
             uniprot_api = UniProtAPI()
@@ -208,6 +217,7 @@ class Product:
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
+        
         #TODO: logger output which values are still missing
         
     @classmethod
@@ -221,7 +231,9 @@ class Product:
         Returns:
             Product: A new Product instance created from the input dictionary.
         """
-        return cls(d.get('id_synonyms'), d.get('genename'), d.get('uniprot_id'), d.get('description'), d.get('ensg_id'), d.get('enst_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores'))
+        return cls(d.get('id_synonyms'), d.get('genename'), d.get('uniprot_id'), d.get('description'), d.get('ensg_id'), d.get('enst_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores') if "scores" in d else None,
+                   d.get('had_orthologs_computed') if "had_orthologs_computed" in d else False, 
+                   d.get('had_fetch_info_computed') if "had_fetch_info_computed" in d else False)
 
 class miRNA:
     def __init__(self, id: str, sequence: str = None, mRNA_overlaps: Dict[str, float] = None, scores: Dict[str, float] = None) -> None:
@@ -379,9 +391,15 @@ class ReverseLookup:
             self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_ortholog_products(self) -> None:
+    def fetch_ortholog_products(self, refetch:bool = False) -> None:
         """
         This function tries to find the orthologs to any non-uniprot genes (products) associated with a GO Term.
+
+        Args:
+          - (bool) refetch: if True, will fetch the ortholog products for all Product instances again, even if some Product instances already have their orthologs fetched.
+
+        NOTE: This function is recalculation-optimised based on the "genename" field of the Product. If the model is loaded from data.json and a specific
+        Product already had orthologs fetched, then it is skipped during the fetch_ortholog call.
 
         When fetching products (genes / gene products) from Gene Ontology for a specific GO Term:
             (GOTerm).fetch_products()
@@ -415,10 +433,13 @@ class ReverseLookup:
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
-                    # Check if the Product object doesn't have a UniProt ID or genename or ensg_id.
-                    if product.genename == None:
+                    # Check if the Product object doesn't have a UniProt ID or genename or ensg_id -> these indicate no ortholog computation has been performed yet
+                    # if product.genename == None or refetch == True: # product.genename was still None for a lot of products, despite calling fetch_orthologs
+                    if product.had_orthologs_computed == False or refetch == True:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
+                        if product.had_orthologs_computed == False:
+                            logger.debug("BREAK!!!!")
         except Exception as e:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
             self.save_model('crash_products.json')
@@ -437,8 +458,7 @@ class ReverseLookup:
         reverse_genename_products = {}
         for product in self.products:
             if product.genename is not None:
-                reverse_genename_products.setdefault(
-                    product.genename, []).append(product)
+                reverse_genename_products.setdefault(product.genename, []).append(product)
 
         # For each ENSG that has more than one product associated with it, create a new product with all the synonyms
         # and remove the individual products from the list
@@ -449,14 +469,13 @@ class ReverseLookup:
                     self.products.remove(product)
                     id_synonyms.extend(product.id_synonyms)
                 # Create a new product with the collected information and add it to the product list
-                self.products.append(Product(
-                    id_synonyms, product_list[0].genename, product_list[0].uniprot_id, product_list[0].description, product_list[0].ensg_id, product_list[0].enst_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}))
+                self.products.append(Product(id_synonyms, product_list[0].genename, product_list[0].uniprot_id, product_list[0].description, product_list[0].ensg_id, product_list[0].enst_id, product_list[0].refseq_nt_id, product_list[0].mRNA, {}, product_list[0].had_orthologs_computed, product_list[0].had_fetch_info_computed))
 
         if "prune_products" not in self.execution_times:
             self.execution_times["prune_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_product_infos(self) -> None:
+    def fetch_product_infos(self, refetch: bool = False) -> None:
         # TODO: ensembl support batch request
 
         logger.info(f"Started fetching product infos.")
@@ -469,9 +488,12 @@ class ReverseLookup:
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a UniProt ID.
-                    if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and (product.uniprot_id or product.genename or product.ensg_id):
+                    # if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and (product.uniprot_id or product.genename or product.ensg_id): # some were still uninitialised, despite calling fetch_product_infos
+                    if product.had_fetch_info_computed == False or refetch == True:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_info(uniprot_api, ensembl_api)
+                        if product.had_fetch_info_computed == False:
+                            logger.warning(f"had_fetch_info_computed IS FALSE despite being called for {product.id_synonyms}, genename = {product.genename}")
         except Exception as e:
             raise e
         
@@ -735,6 +757,7 @@ class ReverseLookup:
 
         try: # if first attempt fails, try using current_dir = os.getcwd(), this works on windows
             windows_filepath = FileUtil.find_win_abs_filepath(filepath)
+            os.makedirs(os.path.dirname(windows_filepath), exist_ok=True) # Create directory for the report file, if it does not exist
             with open(windows_filepath, 'w') as f:
                 json.dump(data, f, indent=4)
             #current_dir = os.getcwd()
