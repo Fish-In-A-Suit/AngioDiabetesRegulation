@@ -55,8 +55,6 @@ GO:2001214	angio	+	1	positive regulation of vasculogenesis
 GO:1901343	angio	-	1	negative regulation of vasculature development
 GO:2000181	angio	-	1	negative regulation of blood vessel morphogenesis
 GO:1904018	angio	+	1	positive regulation of vasculature development
-
-diabetes
 GO:0046950	diabetes	+	1	cellular ketone body metabolic process
 GO:0046951	diabetes	+	1	ketone body biosynthetic process
 GO:0043441	diabetes	+	1	acetoacetic acid biosynthetic process
@@ -151,8 +149,6 @@ GO:0002286	diabetes	+	1	T cell activation involved in immune response
 GO:0072538	diabetes	+	1	T-helper 17 type immune response
 GO:2000317	diabetes	-	1	negative regulation of T-helper 17 type immune response
 GO:2000318	diabetes	+	1	positive regulation of T-helper 17 type immune response
-
-obesity
 GO:0019915	obesity	+	1	lipid storage
 GO:0010878	obesity	+	1	cholesterol storage
 GO:0140042	obesity	+	1	lipid droplet formation
