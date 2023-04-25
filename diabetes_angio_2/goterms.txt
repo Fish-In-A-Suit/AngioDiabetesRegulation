@@ -1,0 +1,224 @@
+angiogenesis
+GO:0035476	angioblast cell migration
+GO:0001525	angiogenesis
+GO:0060978	angiogenesis involved in coronary vascular morphogenesis
+GO:0060981	cell migration involved in coronary angiogenesis
+GO:0060055	angiogenesis involved in wound healing
+GO:0001569	branching involved in blood vessel morphogenesis
+GO:1905555	positive regulation of blood vessel branching
+GO:1905554	negative regulation of vessel branching
+GO:0002041	intussusceptive angiogenesis
+GO:0002044	blood vessel endothelial cell migration involved in intussusceptive angiogenesis
+GO:0002045	regulation of cell adhesion involved in intussusceptive angiogenesis
+GO:0016525	negative regulation of angiogenesis
+GO:0045766 	positive regulation of angiogenesis
+GO:0002040	sprouting angiogenesis
+GO:1903671	negative regulation of sprouting angiogenesis
+GO:1903672	positive regulation of sprouting angiogenesis
+GO:0120077	angiogenic sprout fusion
+GO:0120078	cell adhesion involved in sprouting angiogenesis
+GO:0106089	negative regulation of cell adhesion involved in sprouting angiogenesis
+GO:0106090	positive regulation of cell adhesion involved in sprouting angiogenesis
+GO:0002043	blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+GO:1903588	negative regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+GO:1903589	positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+GO:0002042	cell migration involved in sprouting angiogenesis
+GO:0090051	negative regulation of cell migration involved in sprouting angiogenesis
+GO:0090050	positive regulation of cell migration involved in sprouting angiogenesis
+GO:0097103	endothelial stalk cell fate specification
+GO:0097102	endothelial tip cell fate specification
+GO:0043534	blood vessel endothelial cell migration
+GO:0043537	negative regulation of blood vessel endothelial cell migration
+GO:0043536	positive regulation of blood vessel endothelial cell migration
+GO:0060846	blood vessel endothelial cell fate commitment
+GO:0097101	blood vessel endothelial cell fate specification
+GO:0043532	angiostatin binding
+GO:0032311	angiogenin-PRI complex
+GO:0071116	alpha6-beta1 integrin-CYR61 complex
+GO:0035476	angioblast cell migration
+GO:0035479	angioblast cell migration from lateral mesoderm to midline
+GO:0035475	angioblast cell migration involved in selective angioblast sprouting
+GO:0035474	selective angioblast sprouting
+GO:0035476	angioblast cell migration
+GO:1902262	apoptotic process involved in blood vessel morphogenesis
+GO:0072554	blood vessel lumenization
+GO:0001570	vasculogenesis
+GO:0035441	cell migration involved in vasculogenesis
+GO:2001213	negative regulation of vasculogenesis
+GO:2001214	positive regulation of vasculogenesis
+GO:1901343	negative regulation of vasculature development
+GO:2000181	negative regulation of blood vessel morphogenesis
+GO:1904018	positive regulation of vasculature development
+
+diabetes
+GO:0046950	cellular ketone body metabolic process
+GO:0046951	ketone body biosynthetic process
+GO:0043441	acetoacetic acid biosynthetic process
+GO:0046952	ketone body catabolic process
+GO:0043442	acetoacetic acid catabolic process
+GO:0048009	insulin-like growth factor receptor signaling pathway
+GO:1990314	cellular response to insulin-like growth factor stimulus
+GO:0031994	insulin-like growth factor I binding
+GO:0031995	insulin-like growth factor II binding
+GO:1903107	insulin receptor signaling pathway involved in dauer larval development
+GO:0044381	glucose import in response to insulin stimulus
+GO:0005158	insulin receptor binding
+GO:0005159	insulin-like growth factor receptor binding
+GO:0046628	positive regulation of insulin receptor signaling pathway
+GO:0046627	negative regulation of insulin receptor signaling pathway
+GO:0032024	positive regulation of insulin secretion
+GO:0046676	negative regulation of insulin secretion
+GO:0005360	insulin-responsive glucose:proton symporter activity
+GO:0030232	insulin control element activator complex
+GO:1900078	positive regulation of cellular response to insulin stimulus
+GO:1900077	negative regulation of cellular response to insulin stimulus
+GO:0005520	insulin-like growth factor binding
+GO:0005009	insulin receptor activity
+GO:0005010	insulin-like growth factor receptor activity
+GO:0030070	insulin processing
+GO:0030073	insulin secretion
+GO:0005899	insulin receptor complex
+GO:0042567	insulin-like growth factor ternary complex
+GO:0042568	insulin-like growth factor binary complex
+GO:0016942	insulin-like growth factor binding protein complex
+GO:1901143	insulin catabolic process
+GO:1901142	insulin metabolic process
+GO:0043559	insulin binding
+GO:0043569	negative regulation of insulin-like growth factor receptor signaling pathway
+GO:0043568	positive regulation of insulin-like growth factor receptor signaling pathway
+GO:0043560	insulin receptor substrate binding
+GO:1990418	response to insulin-like growth factor stimulus
+GO:0061179	negative regulation of insulin secretion involved in cellular response to glucose stimulus
+GO:0038020	insulin receptor recycling
+GO:0038028	insulin receptor signaling pathway via phosphatidylinositol 3-kinase
+GO:0038016	insulin receptor internalization
+GO:0038015	positive regulation of insulin receptor signaling pathway by insulin receptor internalization
+GO:0038014	negative regulation of insulin receptor signaling pathway by insulin receptor internalization
+GO:0035774	positive regulation of insulin secretion involved in cellular response to glucose stimulus
+GO:0035773	insulin secretion involved in cellular response to glucose stimulus
+GO:0032869	cellular response to insulin stimulus
+GO:0032868	response to insulin
+GO:0032593	insulin-responsive compartment
+GO:0008286	insulin receptor signaling pathway
+GO:0099011	neuronal dense core vesicle exocytosis
+GO:0047134	protein-disulfide reductase (NAD(P)) activity
+GO:0044342	type B pancreatic cell proliferation
+GO:0044343	canonical Wnt signaling pathway involved in regulation of type B pancreatic cell proliferation
+GO:0005283	amino acid:sodium symporter activity
+GO:1990504	dense core granule exocytosis
+GO:0003309	type B pancreatic cell differentiation
+GO:0003323	type B pancreatic cell development
+GO:0003327	type B pancreatic cell fate commitment
+GO:0016519	gastric inhibitory peptide receptor activity
+GO:0016521	pituitary adenylate cyclase activating polypeptide activity
+GO:0097050	type B pancreatic cell apoptotic process
+GO:0038192	gastric inhibitory peptide signaling pathway
+GO:0035867	alphav-beta3 integrin-IGF-1-IGF1R complex
+GO:0150038	postsynaptic dense core vesicle exocytosis
+GO:0031018	endocrine pancreas development
+GO:0019153	protein-disulfide reductase (glutathione) activity
+GO:0072560	type B pancreatic cell maturation
+GO:1904659	glucose transmembrane transport
+GO:0046323	glucose import
+GO:0098708	glucose import across plasma membrane
+GO:0005355	glucose transmembrane transporter activity
+GO:0010829	negative regulation of glucose transmembrane transport
+GO:0010828	positive regulation of glucose transmembrane transport
+GO:0046325	negative regulation of glucose import
+GO:0046326	positive regulation of glucose import
+GO:0015304	glucose uniporter activity
+GO:0015152	glucose-6-phosphate transmembrane transporter activity
+GO:0061513	glucose 6-phosphate:inorganic phosphate antiporter activity
+GO:0001678	intracellular glucose homeostasis
+GO:0071333	cellular response to glucose stimulus
+GO:0042593	glucose homeostasis
+GO:1990350	glucose transporter complex
+GO:1902661	positive regulation of glucose mediated signaling pathway
+GO:1902660	negative regulation of glucose mediated signaling pathway
+GO:0110033	regulation of adenylate cyclase-activating glucose-activated G protein-coupled receptor signaling pathway
+GO:0046015	regulation of transcription by glucose
+GO:0061986	negative regulation of transcription by glucose
+GO:0046016	positive regulation of transcription by glucose
+GO:0061773	eNoSc complex
+GO:0009749	response to glucose
+GO:0051594	detection of glucose
+GO:2000971	negative regulation of detection of glucose
+GO:2000972	positive regulation of detection of glucose
+GO:0009267	cellular response to starvation
+GO:0042149	cellular response to glucose starvation
+GO:0036279	positive regulation of protein export from nucleus in response to glucose starvation
+GO:0061406	positive regulation of transcription from RNA polymerase II promoter in response to glucose starvation
+GO:0042110  T cell activation
+GO:0050868	negative regulation of T cell activation
+GO:0050870	positive regulation of T cell activation
+GO:0002286	T cell activation involved in immune response
+GO:0072538	T-helper 17 type immune response
+GO:2000317	negative regulation of T-helper 17 type immune response
+GO:2000318	positive regulation of T-helper 17 type immune response
+
+obesity
+GO:0019915 lipid storage
+GO:0010878 cholesterol storage
+GO:0140042 lipid droplet formation
+GO:0010884 positive regulation of lipid storage
+GO:0010888 negative regulation of lipid storage
+GO:0030730 sequestering of triglyceride
+GO:0010891 negative regulation of sequestering of triglyceride
+GO:0010890 positive regulation of sequestering of triglyceride
+GO:0010879 cholesterol transport involved in cholesterol storage
+GO:0010887 negative regulation of cholesterol storage
+GO:0010886 positive regulation of cholesterol storage
+GO:0060612 adipose tissue development
+GO:0060613 fat pad development
+GO:0060611 mammary gland fat development
+GO:1904178 negative regulation of adipose tissue development
+GO:1904179 positive regulation of adipose tissue development
+GO:1904606 fat cell apoptotic process
+GO:1904650 negative regulation of fat cell apoptotic process
+GO:1904651 positive regulation of fat cell apoptotic process
+GO:0008610 lipid biosynthetic process
+GO:0097384 cellular lipid biosynthetic process
+GO:1900557 emericellamide biosynthetic process
+GO:0006633 fatty acid biosynthetic process
+GO:1901570 fatty acid derivative biosynthetic process
+GO:0051055 negative regulation of lipid biosynthetic process
+GO:0046460 neutral lipid biosynthetic process
+GO:0046889 positive regulation of lipid biosynthetic process
+GO:0006694 steroid biosynthetic process
+GO:0000036 acyl carrier activity
+GO:0030497 fatty acid elongation
+GO:0044578 butyryl-CoA biosynthetic process
+GO:0042759 long-chain fatty acid biosynthetic process
+GO:0009107 lipoate biosynthetic process
+GO:0051792 medium-chain fatty acid biosynthetic process
+GO:0000954 methionine catabolic process to 3-methylthiopropanoate
+GO:1902321 methyl-branched fatty acid biosynthetic process
+GO:1903966 monounsaturated fatty acid biosynthetic process
+GO:0071768 mycolic acid biosynthetic process
+GO:0045717 negative regulation of fatty acid biosynthetic process
+GO:0045723 positive regulation of fatty acid biosynthetic process
+GO:0051790 short-chain fatty acid biosynthetic process
+GO:0006636 unsaturated fatty acid biosynthetic process
+GO:0042761 very long-chain fatty acid biosynthetic process
+GO:1900495 negative regulation of butyryl-CoA biosynthetic process from acetyl-CoA
+GO:1900496 positive regulation of butyryl-CoA biosynthetic process from acetyl-CoA
+GO:1900501 negative regulation of butyryl-CoA catabolic process to butyrate
+GO:1900502 positive regulation of butyryl-CoA catabolic process to butyrate
+GO:2001280 positive regulation of unsaturated fatty acid biosynthetic process
+GO:0006869 lipid transport
+GO:1901571 fatty acid derivative transport
+GO:0015908 fatty acid transport
+GO:0140353 lipid export from cell
+GO:0140354 lipid import into cell
+GO:0034204 lipid translocation
+GO:0010877 lipid transport involved in lipid storage
+GO:0032369 negative regulation of lipid transport
+GO:0032370 positive regulation of lipid transport
+GO:2000192 negative regulation of fatty acid transport
+GO:2000193 positive regulation of fatty acid transport
+GO:0140213 negative regulation of long-chain fatty acid import into cell
+GO:0140214 positive regulation of long-chain fatty acid import into cell
+GO:0019432 triglyceride biosynthetic process
+GO:0010868 negative regulation of triglyceride biosynthetic process
+GO:0010867 positive regulation of triglyceride biosynthetic process
+GO:0046327 glycerol biosynthetic process from pyruvate
