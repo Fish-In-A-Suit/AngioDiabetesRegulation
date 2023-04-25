@@ -214,3 +214,9 @@ GO:0019432	obesity	+	1	triglyceride biosynthetic process
 GO:0010868	obesity	-	1	negative regulation of triglyceride biosynthetic process
 GO:0010867	obesity	+	1	positive regulation of triglyceride biosynthetic process
 GO:0046327	obesity	+	1	glycerol biosynthetic process from pyruvate
+# more terms
+GO:1905602	obesity	+	1	positive regulation of receptor-mediated endocytosis involved in cholesterol transport
+GO:1905601	obesity	-	1	negative regulation of receptor-mediated endocytosis involved in cholesterol transport
+GO:0090122	obesity	-	1	cholesterol ester hydrolysis involved in cholesterol transport
+GO:0090120	obesity	+	1	lysosome to ER cholesterol transport # this is a part of cholesterol synthesis
+
