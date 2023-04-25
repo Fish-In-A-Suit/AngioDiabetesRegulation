@@ -306,7 +306,7 @@ class fisher_exact_test(Metrics):
                     #"n_all_general" : num_goterms_all_general,
                     "num" : num_goterms_product_process,
                     "expected" : num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general),
-                    "fold_enrichment" : num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general)),
+                    "fold_enrichment" : num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general)), # BUGFIX: ZeroDivisionError
                     "pvalue" : fisher_pvalue,
                     "odds_ratio" : odds_ratio,
                 }

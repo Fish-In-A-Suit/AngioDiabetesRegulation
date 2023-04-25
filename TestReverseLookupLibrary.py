@@ -6,34 +6,36 @@ from goreverselookuplib.Report import ReportGenerator
 import os
 
 # Define model from input file
-#model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
-model = ReverseLookup.load_model("diabetes_angio_1/data.json")
+model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+# model = ReverseLookup.load_model("diabetes_angio_1/data.json")
+
+# model._debug_shorten_GO_terms(10)
 
 # Fetch all GO term names and descriptions
-# model.fetch_all_go_term_names_descriptions()
+model.fetch_all_go_term_names_descriptions()
 
 # Fetch all GO term products
-#model.fetch_all_go_term_products()
+model.fetch_all_go_term_products(web_download=True)
 
 # Create products from GO terms
-#model.create_products_from_goterms()
+model.create_products_from_goterms()
 
-#odel.save_model("diabetes_angio_1/data.json")
+model.save_model("diabetes_angio_1/data.json")
 
 # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-# model.fetch_ortholog_products()
+model.fetch_ortholog_products()
 
-# model.prune_products()
+model.prune_products()
 
-# model.save_model("diabetes_angio_1/data.json")
+model.save_model("diabetes_angio_1/data.json")
 
 # Fetch product information (from UniprotAPI or EnsemblAPI)
-# model.fetch_product_infos()
+model.fetch_product_infos()
 
 # Prune products
-# model.prune_products()
+model.prune_products()
 
-# model.save_model("diabetes_angio_1/data.json")
+model.save_model("diabetes_angio_1/data.json")
 
 # Score products
 #adv_score = adv_product_score(model)
@@ -57,9 +59,9 @@ model.save_model("diabetes_angio_1/data.json")
 #model.score_miRNAs(basic_score)
 
 # Generate report
-#report = ReportGenerator(model, verbosity=3)
+report = ReportGenerator(model, verbosity=3)
 # report.general_report("diabetes_angio_1/general.txt") # this is bugged
-#report.general_report("diabetes_angio_1/general.txt", product_score=binom_score)
+report.general_report("diabetes_angio_1/general.txt", product_score=fisher_score)
 
 # Save model
 #model.save_model("diabetes_angio_1/data.json")

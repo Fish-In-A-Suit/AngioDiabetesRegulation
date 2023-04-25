@@ -48,6 +48,29 @@ class GOTerm:
             goterms = ["GO:1903589", ...]
             for goterm in goterms:
                 goterm.fetch_name_description(api)
+        
+        Example api response is:
+        {
+            'goid': 'GO:1903589', 
+            'label': 'positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis', 
+            'definition': 'Any process that activates or increases the frequency, rate or extent of blood vessel endothelial cell proliferation involved in sprouting angiogenesis.', 
+            'creation_date': '2014-11-04T11:39:47Z', 
+            'synonyms': [
+                'up regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis', 
+                'up-regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis', 
+                'upregulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis'
+                ], 
+            'relatedSynonyms': [
+                'activation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
+                'positive regulation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
+                'up regulation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
+                'up-regulation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
+                'upregulation of blood vessel endothelial cell proliferation during sprouting angiogenesis'
+                ], 
+            'alternativeIds': [''], 
+            'xrefs': [''], 
+            'subsets': ['']
+        }
         """
         logger.info("Fetching GO Term names (labels) and descriptions (definitions).")
         data = api.get_data(self.id)
@@ -65,17 +88,22 @@ class GOTerm:
         [TODO: enable the user to specify databases himself]
 
         Parameters:
-          - (GOApi) api: a GOApi instance
+          - source: can either be a GOApi instance (web-based download) or a GOAnnotationFile isntance (file-based download)
         
         Usage and calling:
-            api = GOApi() or goaf = GOAnnotationFile()
+            source = GOApi() OR source = GOAnnotationFile()
             goterms = ["GO:1903589", ...]
             for goterm in goterms:
-                goterm.fetch_products(api)
+                goterm.fetch_products(source)
         """
-        products = source.get_products(self.id)
-        if products:
-            self.products = products
+        if isinstance(source, GOApi):
+            products = source.get_products(self.id)
+            if products:
+                self.products = products
+        elif isinstance(source, GOAnnotiationsFile):
+            products = source.get_products(self.id)
+            if products:
+                self.products = products
 
     def add_process(self, process: Dict):
         if not process in self.processes:
@@ -129,11 +157,13 @@ class Product:
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
-            info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
+            if self.uniprot_id == None:
+                info_dict = uniprot_api.get_uniprot_info(self.id_synonyms[0]) # bugfix
+            else:
+                info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             self.genename = info_dict.get("genename")
         elif len(self.id_synonyms) == 1:
-            human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(
-                self.id_synonyms[0])
+            human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(self.id_synonyms[0])
             if human_ortholog_gene_id is None:
                 logger.warning(f"file-based human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
                 human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0]) # attempt ensembl search
@@ -275,21 +305,27 @@ class ReverseLookup:
             self.execution_times["fetch_all_go_term_names_descriptions"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_all_go_term_products(self, recalculate: bool = False):
+    def fetch_all_go_term_products(self, web_download: bool = False, recalculate: bool = False):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
         
         Args:
           - (bool) recalculate: if set to True, will recalculate (fetch again) the term's products even if they already exist (perhaps from a model loaded from data.json)
+          - (bool) web_download: if set to True, then the products will be downloaded using https api queries. If set to False, then the products for GO Terms will be
+                                 parsed from a GOAnnotationFile (http://current.geneontology.org/products/pages/downloads.html).
         """
         logger.info(f"Started fetching all GO Term products.")
         self.timer.set_start_time()
 
-        goaf = GOAnnotiationsFile()
+        if web_download == True:
+            source = GOApi()
+        else:
+            source = GOAnnotiationsFile()
+
         with logging_redirect_tqdm():
             for goterm in tqdm(self.goterms):
                 if goterm.products == [] or recalculate == True: # to prevent recalculation of products if they are already computed
-                    goterm.fetch_products(goaf)
+                    goterm.fetch_products(source)
 
         # api = GOApi()
         # with logging_redirect_tqdm():
@@ -847,6 +883,14 @@ class ReverseLookup:
         goterms = [GOTerm.from_dict(d) for d in data['goterms']]
         target_processes = data['target_processes']
         return cls(goterms, target_processes)
+    
+    def _debug_shorten_GO_terms(self,count):
+        """
+        Shortens the amount of GO terms to the specified 'count', for debugging purposes.
+        """
+        if count < len(self.goterms):
+            self.goterms = self.goterms[0:count]
+
 
 
                         

@@ -5,9 +5,11 @@ import urllib.request
 import gzip
 import time
 import os
+from json import JSONDecodeError
 #from typing import List, Dict, Set, Optional, Callable
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
+from .FileUtil import FileUtil
 
 import logging
 
@@ -71,21 +73,54 @@ class GOApi:
         url = f"http://api.geneontology.org/api/bioentity/function/{term_id}/genes"
         params = {"rows": 10000000}
         products_set = set()
-        try:
-            response = self.s.get(url, params=params, timeout=5)
-            response.raise_for_status()
-        except requests.exceptions.RequestException:
-            return None
-        json = response.json()
-        for assoc in json['associations']:
-            if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
-                product_id = assoc['subject']['id']
-                products_set.add(product_id)
-        products = list(products_set)
-        logger.info(f"Fetched products for GO term {term_id}")
-        return products
+
+        max_retries = 5 # try api requests for max 5 times
+        for i in range(max_retries):
+            try:
+                response = self.s.get(url, params=params, timeout=5)
+                response.raise_for_status()
+
+                json = response.json()
+                for assoc in json['associations']:
+                    if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                        product_id = assoc['subject']['id']
+                        products_set.add(product_id)
+                products = list(products_set)
+                logger.info(f"Fetched products for GO term {term_id}")
+                return products
+        
+            except (requests.exceptions.RequestException, JSONDecodeError) as e :
+                if i == (max_retries - 1): # this was the last http request, it failed
+                    logger.error(f"Experienced an http exception or a JSONDecodeError while fetching products for {term_id}")
+                    error_log_filepath = FileUtil.find_win_abs_filepath("log_output/error_log")
+                    error_type = type(e).__name__
+                    error_text = str(e)
+
+                    logger.error(f"Exception type: {error_type}")
+                    logger.error(f"Exception text: {error_text}")
+                    logger.error(f"Debug report was written to: {error_log_filepath}")
+                    
+                    with open(error_log_filepath, "a+") as f:
+                        f.write(f"Fetch products error for: {term_id}\n")
+                        f.write(f"Exception: {error_type}\n")
+                        f.write(f"Cause: {error_text}\n")
+                        f.write(f"\n\n\n")
+                        f.write(f"------------------------------\n")
+                else:
+                    time.sleep(500) # sleep 500ms before trying another http request
+                return None
+
+
 
 class GOAnnotiationsFile:
+    """
+    This class provides access to a Gene Ontology Annotations File, which stores the relations between each GO Term and it's products (genes),
+    along with an evidence code, confirming the truth of the interaction. A GO Annotation comprises of a) GO Term, b) gene / gene product c) evidence code.
+    
+    See also:
+      - http://geneontology.org/docs/download-go-annotations/ 
+      - http://current.geneontology.org/products/pages/downloads.html
+    """
     def __init__(self) -> None:
         self._filepath = "src_data_files/goa_human.gaf"
         self._check_file()
