@@ -242,20 +242,29 @@ class binomial_test(Metrics):
                 num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(i['direction'] == direction for i in goterm.processes))
                 
                 #time for Binomial test and "risk ratio"
+                #binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
+                #                  (num_goterms_product_general/num_goterms_all_general), alternative='greater')
                 binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
-                                  (num_goterms_product_general/num_goterms_all_general), alternative='greater')
+                                  (num_goterms_product_general/num_goterms_all_general if num_goterms_all_general != 0 else 0), alternative='greater') # bugfix: ZeroDivisionError
                 binom_pvalue = binom.pvalue
                 
-                risk_ratio = (num_goterms_product_process/num_goterms_all_process) / (num_goterms_product_general/num_goterms_all_general)
-                
+                if num_goterms_product_general != 0 and num_goterms_all_general != 0: # bugfix: ZeroDivisionError
+                    risk_ratio = (num_goterms_product_process/num_goterms_all_process if num_goterms_all_process != 0 else 0) / (num_goterms_product_general/num_goterms_all_general)
+                else:
+                    risk_ratio = 0
+
+                fold_enrichment_score = 0
+                if num_goterms_all_process != 0 and num_goterms_product_general != 0 and num_goterms_all_general != 0:
+                    fold_enrichment_score = num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general))
+                    
                 results_dict[f"{process['process']}{direction}"] = {
                     #"n_prod_process" : num_goterms_product_process,
                     #"n_all_process" : num_goterms_all_process,
                     #"n_prod_general" : num_goterms_product_general,
                     #"n_all_general" : num_goterms_all_general,
                     "num" : num_goterms_product_process,
-                    "expected" : num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general),
-                    "fold_enrichment" : num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general)),
+                    "expected" : num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general if num_goterms_all_general != 0 else 0),
+                    "fold_enrichment" : fold_enrichment_score, # bugfix: ZeroDivisionError
                     "pvalue" : binom_pvalue,
                     "risk_ratio" : risk_ratio,
                 }
@@ -299,14 +308,18 @@ class fisher_exact_test(Metrics):
                 
                 odds_ratio = fisher.statistic
                 
+                folder_enrichment_score = 0
+                if num_goterms_all_process != 0 and num_goterms_product_general != 0 and num_goterms_all_general != 0:
+                    folder_enrichment_score = num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general))
+
                 results_dict[f"{process['process']}{direction}"] = {
                     #"n_prod_process" : num_goterms_product_process,
                     #"n_all_process" : num_goterms_all_process,
                     #"n_prod_general" : num_goterms_product_general,
                     #"n_all_general" : num_goterms_all_general,
                     "num" : num_goterms_product_process,
-                    "expected" : num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general),
-                    "fold_enrichment" : num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general)), # BUGFIX: ZeroDivisionError
+                    "expected" : num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general if num_goterms_all_general != 0 else 0),
+                    "fold_enrichment" : folder_enrichment_score, # BUGFIX: ZeroDivisionError
                     "pvalue" : fisher_pvalue,
                     "odds_ratio" : odds_ratio,
                 }
