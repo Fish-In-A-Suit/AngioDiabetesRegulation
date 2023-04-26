@@ -256,7 +256,7 @@ GO:0006114	obesity	+	1	glycerol biosynthetic process
 GO:0050872	obesity	+	1	white fat cell differentiation # this entry was also returned from the "lipid" search query
 GO:0070343	obesity	+	1	white fat cell proliferation
 GO:0070352	obesity	+	1	positive regulation of white fat cell proliferation
-GO:0070351	obesity	+	1	negative regulation of white fat cell proliferation
+GO:0070351	obesity	-	1	negative regulation of white fat cell proliferation
 GO:0045444	obesity	+	1	fat cell differentiation
 GO:0070341	obesity	+	1	fat cell proliferation
 GO:0045600	obesity	+	1	positive regulation of fat cell differentiation

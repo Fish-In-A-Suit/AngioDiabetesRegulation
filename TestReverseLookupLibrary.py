@@ -6,31 +6,31 @@ from goreverselookuplib.Report import ReportGenerator
 import os
 
 # Define model from input file
-model = ReverseLookup.from_input_file("diabetes_angio_2/input_final.txt")
-# model = ReverseLookup.load_model("diabetes_angio_1/data.json")
+# model = ReverseLookup.from_input_file("diabetes_angio_2/input_final.txt")
+model = ReverseLookup.load_model("diabetes_angio_2/data_run2.json")
 
 # model._debug_shorten_GO_terms(5)
 
 # Fetch all GO term names and descriptions
-model.fetch_all_go_term_names_descriptions()
+# model.fetch_all_go_term_names_descriptions()
 
 # Fetch all GO term products
-model.fetch_all_go_term_products(web_download=True)
+# model.fetch_all_go_term_products(web_download=True)
 
 # Create products from GO terms
-model.create_products_from_goterms()
+# model.create_products_from_goterms()
 
-model.save_model("diabetes_angio_2/data.json")
+# model.save_model("diabetes_angio_2/data.json")
 
 # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-model.fetch_ortholog_products(refetch=False)
+model.fetch_ortholog_products(refetch=True)
 
 model.prune_products()
 
 model.save_model("diabetes_angio_2/data.json")
 
 # Fetch product information (from UniprotAPI or EnsemblAPI)
-model.fetch_product_infos(refetch=False)
+model.fetch_product_infos(refetch=True)
 
 # Prune products
 model.prune_products()

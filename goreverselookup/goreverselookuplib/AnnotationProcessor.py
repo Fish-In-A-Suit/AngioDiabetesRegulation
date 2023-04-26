@@ -328,7 +328,12 @@ class UniProtAPI:
             # Get values from the UniProt search result
             result = next((entry for entry in results if entry["primaryAccession"] == uniprot_id), None)
             name = result["genes"][0]["geneName"]["value"]
-            description = result["proteinDescription"]["recommendedName"]["fullName"]["value"]
+            if "proteinDescription" in result and "recommendedName" in result["proteinDescription"] and "fullName" in result["proteinDescription"]["recommendedName"] and "value" in result["proteinDescription"]["recommendedName"]["fullName"]:
+                description = result["proteinDescription"]["recommendedName"]["fullName"]["value"]
+            else:
+                description = "ERROR: Couldn't fetch description."
+                logger.warning(f"proteinDescription, recommendedName, fullName or value not found when querying for uniprot info for the id: {uniprot_id}")
+                logger.warning(f"result: {result}")
             ensg_id, enst_id, refseq_nt_id = _return_mane_select_values_from_uniprot_query(result)
             return {"genename": name, "description": description, "ensg_id": ensg_id, "enst_id": enst_id, "refseq_nt_id": refseq_nt_id}
 
