@@ -214,9 +214,53 @@ GO:0019432	obesity	+	1	triglyceride biosynthetic process
 GO:0010868	obesity	-	1	negative regulation of triglyceride biosynthetic process
 GO:0010867	obesity	+	1	positive regulation of triglyceride biosynthetic process
 GO:0046327	obesity	+	1	glycerol biosynthetic process from pyruvate
-# more terms
+# more terms - added 26.04.2023
+# --- search query: "cholesterol" ---
 GO:1905602	obesity	+	1	positive regulation of receptor-mediated endocytosis involved in cholesterol transport
 GO:1905601	obesity	-	1	negative regulation of receptor-mediated endocytosis involved in cholesterol transport
+GO:0090118	obesity	-	1	receptor-mediated endocytosis involved in cholesterol transport
 GO:0090122	obesity	-	1	cholesterol ester hydrolysis involved in cholesterol transport
 GO:0090120	obesity	+	1	lysosome to ER cholesterol transport # this is a part of cholesterol synthesis
-
+GO:0090370	obesity	+	1	negative regulation of cholesterol efflux
+GO:0010875	obesity	-	1	positive regulation of cholesterol efflux
+GO:003344	obesity	+	1	cholesterol efflux
+GO:1904109	obesity	+	1	positive regulation of cholesterol import
+GO:0060621	obesity	-	1	negative regulation of cholesterol import
+GO:0070508	obesity	+	1	cholesterol import
+GO:0045541	obesity	-	1	negative regulation of cholesterol biosynthetic process
+GO:0045542	obesity	+	1	positive regulation of cholesterol biosynthetic process
+GO:0010879	obesity	+	1	cholesterol transport involved in cholesterol storage
+GO:0060695	obesity	-	1	negative regulation of cholesterol transporter activity
+# no term for 'positive regulation of cholesterol transporter activity' in GO
+GO:0033490	obesity	+	1	cholesterol biosynthetic process via lathosterol
+GO:0033488	obesity	+	1	cholesterol biosynthetic process via 24,25-dihydrolanosterol
+GO:0033489	obesity	+	1	cholesterol biosynthetic process via desmosterol
+GO:00067070	obesity	-	1	cholesterol catabolic process
+# --- search query: "lipid", source: "biological_process" filter -> 345 terms
+GO:1905691	obesity	-	1	lipid droplet disassembly
+GO:0046466	obesity	-	1	membrane lipid catabolic process
+GO:0046467	obesity	+	1	membrane lipid biosynthetic process
+GO:0044242	obesity	-	1	cellular lipid catabolic process
+GO:0016042	obesity	-	1	lipid catabolic process
+GO:0050996	obesity -	1	positive regulation of lipid catabolic process
+GO:0050995	obesity	+	1	negative regulation of lipid catabolic process
+GO:0044241	obesity	+	1	lipid digestion
+GO:0120323	obesity	-	1	lipid ubiquitination
+GO:0033545	obesity	+	1	myo-inositol hexakisphosphate biosynthetic process, lipid-dependent
+GO:0060192	obesity	+	1	negative regulation of lipase activity
+GO:0060193	obesity	-	1	positive regulation of lipase activity
+GO:0061724	obesity	-	1	lipophagy
+GO:0032322	obesity	-	1	ubiquinone catabolic process
+GO:0006114	obesity	+	1	glycerol biosynthetic process
+# --- search query: "fat cell", source: "biological_process" filter -> 34 terms
+GO:0050872	obesity	+	1	white fat cell differentiation # this entry was also returned from the "lipid" search query
+GO:0070343	obesity	+	1	white fat cell proliferation
+GO:0070352	obesity	+	1	positive regulation of white fat cell proliferation
+GO:0070351	obesity	+	1	negative regulation of white fat cell proliferation
+GO:0045444	obesity	+	1	fat cell differentiation
+GO:0070341	obesity	+	1	fat cell proliferation
+GO:0045600	obesity	+	1	positive regulation of fat cell differentiation
+GO:0045599	obesity	-	1	negative regulation of fat cell differentiation
+GO:0070346	obesity	+	1	positive regulation of fat cell proliferation
+GO:0070345	obesity	-	1	negative regulation of fat cell proliferation
+GO:0038021	obesity	-	1	leptin receptor activity
