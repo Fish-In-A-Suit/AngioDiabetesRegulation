@@ -293,10 +293,10 @@ class ReverseLookup:
             target_processes (list): A list of dictionaries containing process names and directions.
             products (set, optional): A set of Product objects. Defaults to an empty set.
         """
-        self.goterms = goterms #TODO make a set, it is faster
-        self.products = products #TODO make a set, it is faster
+        self.goterms = goterms
+        self.products = products
         self.target_processes = target_processes
-        self.miRNAs = miRNAs #TODO make a set, it is faster
+        self.miRNAs = miRNAs
         self.miRNA_overlap_treshold = miRNA_overlap_treshold
 
         self.execution_times = execution_times # dict of execution times, logs of runtime for functions
@@ -881,15 +881,15 @@ class ReverseLookup:
             # # first pass is allowed, on Windows 10 this tries to create a file at 
             # 'C:\\Program Files\\Python310\\lib\\diabetes_angio_1/general.txt'
             # which raises a permission error.
-            pass
-        
         # fallback if the above fails
-        try:
-            win_filepath = FileUtil.find_win_abs_filepath(filepath)
-            os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
-            process_file(win_filepath)
-        except OSError:
-            logger.error(f"ERROR while opening win filepath {win_filepath}")
+            try:
+                win_filepath = FileUtil.find_win_abs_filepath(filepath)
+                os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
+                process_file(win_filepath)
+            except OSError:
+                logger.error(f"ERROR while opening win filepath {win_filepath}")
+                return
+    
         
         return cls(go_terms, target_processes)
 
