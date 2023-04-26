@@ -767,6 +767,20 @@ class ReverseLookup:
         except OSError:
             logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
 
+    def change_products_member_field(self, member_field_name: str, value):
+        """
+        This function changes the 'member_field_name' member variable of all Product instances in self.products
+        to 'value'.
+
+        Args:
+          - (str) member_field_name: The name of the member variable / attribute of a Product instance, the value of which you want to change.
+                                     A valid member variable is any member variable of the Product class, such as 'id_synonyms', 'genename', 'had_orthologs_computed' etc 
+        """
+        for product in self.products:
+            if hasattr(product, member_field_name):
+                setattr(product, member_field_name, value)
+
+
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
         if not os.path.isabs(filepath):

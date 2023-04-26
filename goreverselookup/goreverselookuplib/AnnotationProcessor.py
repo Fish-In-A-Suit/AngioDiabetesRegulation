@@ -437,8 +437,8 @@ class EnsemblAPI:
         Returns:
             dict: Information about the gene
         """
-        if "RgdError" in id: # this is a bugfix. Older versions had a string "[RgdError_No-human-ortholog-found:product_id=RGD:1359312" for the genename field, if no ortholog was found (for example for the genename field of "RGD:1359312"). This is to be backwards compatible with any such data.json(s)
-            logger.debug(f"RGD ERROR: {id}. This means a particular RGD gene does not have a human ortholog and you are safe to ignore it.")
+        if "Error" in id: # this is a bugfix. Older versions had a string "[RgdError_No-human-ortholog-found:product_id=RGD:1359312" for the genename field, if no ortholog was found (for example for the genename field of "RGD:1359312"). This is to be backwards compatible with any such data.json(s). An error can also be an '[MgiError_No-human-ortholog-found:product_id=MGI:97618'
+            logger.debug(f"ERROR: {id}. This means a particular RGD, Zfin, MGI or Xenbase gene does not have a human ortholog and you are safe to ignore it.")
             return {}
         
         species_mapping = {
@@ -723,6 +723,9 @@ class MGIHumanOrthologFinder(HumanOrthologFinder):
                 # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
                 logger.debug(f"i = {i}, product_id_short = {product_id_short}, line = {line}")
                 human_symbol = _mgi_get_human_symbol_from_line(self._readlines[i+1], i)
+                if "MgiError" in human_symbol:
+                    logger.info(f"Couldn't find human ortholog for mgi gene {product_id}")
+                    return None
                 logger.info(f"Found human ortholog {human_symbol} for mgi gene {product_id}")
                 return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
             i += 1

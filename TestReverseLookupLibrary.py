@@ -7,7 +7,12 @@ import os
 
 # Define model from input file
 # model = ReverseLookup.from_input_file("diabetes_angio_2/input_final.txt")
-model = ReverseLookup.load_model("diabetes_angio_2/data_run2.json")
+model = ReverseLookup.load_model("diabetes_angio_2/data.json")
+
+#model.change_products_member_field("had_orthologs_computed", False)
+#model.change_products_member_field("had_fetch_info_computed", False)
+#model.save_model("diabetes_angio_2/data.json")
+#exit()
 
 # model._debug_shorten_GO_terms(5)
 
@@ -23,14 +28,14 @@ model = ReverseLookup.load_model("diabetes_angio_2/data_run2.json")
 # model.save_model("diabetes_angio_2/data.json")
 
 # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-model.fetch_ortholog_products(refetch=True)
+model.fetch_ortholog_products(refetch=False)
 
 model.prune_products()
 
 model.save_model("diabetes_angio_2/data.json")
 
 # Fetch product information (from UniprotAPI or EnsemblAPI)
-model.fetch_product_infos(refetch=True)
+model.fetch_product_infos(refetch=False)
 
 # Prune products
 model.prune_products()
@@ -65,3 +70,7 @@ model.save_model("diabetes_angio_2/data.json")
 
 # Save model
 #model.save_model("diabetes_angio_1/data.json")
+
+# -- One-time call functions for any post-processing --
+# model.change_products_member_field("had_orthologs_computed", True)
+# model.change_products_member_field("had_fetch_info_computed", False)
