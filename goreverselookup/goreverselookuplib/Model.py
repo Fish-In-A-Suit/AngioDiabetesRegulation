@@ -75,8 +75,10 @@ class GOTerm:
         logger.info("Fetching GO Term names (labels) and descriptions (definitions).")
         data = api.get_data(self.id)
         if data:
-            self.name = data['label']
-            self.description = data['definition']
+            if "label" in data:
+                self.name = data['label']
+            if "definition" in data:
+                self.description = data['definition']
             logger.info(f"Fetched name and description for GO term {self.id}")
 
     def fetch_products(self, source):

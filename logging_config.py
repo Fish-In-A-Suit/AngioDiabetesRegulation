@@ -11,7 +11,7 @@ log_dict = {
     },
     'handlers': {
         'stream': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'formatter': 'standard',
             'class': 'logging.StreamHandler',
         },

@@ -716,7 +716,11 @@ class RGDHumanOrthologFinder(HumanOrthologFinder):
             for element in linesplit: 
                 if element != "":
                     result_list.append(element)
-            return result_list[3]
+            if len(result_list) >= 4: # bugfix
+                return result_list[3]
+            else:
+                logger.warning(f"FAULTY LINE IN RGD, linesplit =: {linesplit}")
+                return None
 
         product_id_short = ""
         if ":" in product_id: product_id_short = product_id.split(":")[1]
