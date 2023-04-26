@@ -6,7 +6,7 @@ from goreverselookuplib.Report import ReportGenerator
 import os
 
 # Define model from input file
-model = ReverseLookup.from_input_file("diabetes_angio_1/input.txt")
+model = ReverseLookup.from_input_file("diabetes_angio_2/input_final.txt")
 # model = ReverseLookup.load_model("diabetes_angio_1/data.json")
 
 # model._debug_shorten_GO_terms(5)

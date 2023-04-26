@@ -242,7 +242,7 @@ GO:0046466	obesity	-	1	membrane lipid catabolic process
 GO:0046467	obesity	+	1	membrane lipid biosynthetic process
 GO:0044242	obesity	-	1	cellular lipid catabolic process
 GO:0016042	obesity	-	1	lipid catabolic process
-GO:0050996	obesity -	1	positive regulation of lipid catabolic process
+GO:0050996	obesity	-	1	positive regulation of lipid catabolic process
 GO:0050995	obesity	+	1	negative regulation of lipid catabolic process
 GO:0044241	obesity	+	1	lipid digestion
 GO:0120323	obesity	-	1	lipid ubiquitination
