@@ -131,6 +131,8 @@ class GOAnnotiationsFile:
                 for line in temp_content:
                     if not line.startswith('!') and not line.strip() == '':
                         self._readlines.append(line.strip())
+        self.terms_dict = None
+        self.products_dict = None
             
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
@@ -167,28 +169,43 @@ class GOAnnotiationsFile:
         Returns:
             Set[str]: set of products' gene names
         """
-        products_set = set()
+        
+        if self.terms_dict is None:
+            self.populate_terms_dict()
+        
+        return self.terms_dict.get(goterm_id, [])
+               
+    def populate_poducts_dict(self):
+        self.products_dict = {}
         for line in self._readlines:
             chunks = line.split('\t')
-            if goterm_id == chunks[4]:
-                products_set.add(chunks[2])
-        return list(products_set)
-                
+            self.products_dict.setdefault(chunks[2], set()).add(chunks[4])
+        for key, values in self.products_dict.items():
+            self.products_dict[key] = list(values)      
+            
+    def populate_terms_dict(self):
+        self.terms_dict = {}
+        for line in self._readlines:
+            chunks = line.split('\t')
+            self.terms_dict.setdefault(chunks[4], set()).add(chunks[2])
+        for key, values in self.terms_dict.items():
+            self.terms_dict[key] = list(values)      
+
     def get_all_terms_for_product(self, product: str) -> List[str]:
-        terms_set = set()
-        for line in self._readlines:
-            chunks = line.split('\t')
-            if product == chunks[2]:
-                terms_set.add(chunks[4])
-        return list(terms_set)
+        
+        if self.products_dict is None:
+            self.populate_poducts_dict()
+        
+        return self.products_dict.get(product, [])
         
         
     def get_all_terms(self) -> List[str]:
-        terms_set = set()
-        for line in self._readlines:
-            chunks = line.split('\t')
-            terms_set.add(chunks[4])
-        return list(terms_set)
+        
+        if not self.terms_dict:
+            self.populate_terms_dict()
+        
+        terms_list = [k for k,v in self.terms_dict.items()]
+        return terms_list
         
 class UniProtAPI:
     """
