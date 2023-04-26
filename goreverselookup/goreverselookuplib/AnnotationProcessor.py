@@ -330,6 +330,17 @@ class UniProtAPI:
             name = result["genes"][0]["geneName"]["value"]
             if "proteinDescription" in result and "recommendedName" in result["proteinDescription"] and "fullName" in result["proteinDescription"]["recommendedName"] and "value" in result["proteinDescription"]["recommendedName"]["fullName"]:
                 description = result["proteinDescription"]["recommendedName"]["fullName"]["value"]
+            elif "submissionNames" in result["proteinDescription"]:
+                # some entries, such as UniProtKB:A0A0G2JMH6 don't have recommendedName in proteinDescription, but follow this pattern: result->proteinDescription->submissionNames->List[0: fullName -> value].
+                # there can be multiple proposed descriptions, this code accounts for them all:
+                description = ""
+                submissionNames = result['proteinDescription']['submissionNames']
+                for i in range(len(submissionNames)):
+                    if i == 0:
+                        description = submissionNames[i]['fullName']['value']
+                    else:
+                        description += f", {submissionNames[i]['fullName']['value']}"
+                # resulting description is the accumulation of all comma-delimited descriptions
             else:
                 description = "ERROR: Couldn't fetch description."
                 logger.warning(f"proteinDescription, recommendedName, fullName or value not found when querying for uniprot info for the id: {uniprot_id}")
@@ -409,6 +420,10 @@ class EnsemblAPI:
         Returns:
             dict: Information about the gene
         """
+        if "RgdError" in id: # this is a bugfix. Older versions had a string "[RgdError_No-human-ortholog-found:product_id=RGD:1359312" for the genename field, if no ortholog was found (for example for the genename field of "RGD:1359312"). This is to be backwards compatible with any such data.json(s)
+            logger.debug(f"RGD ERROR: {id}. This means a particular RGD gene does not have a human ortholog and you are safe to ignore it.")
+            return {}
+        
         species_mapping = {
             "ZFIN": "zebrafish/",
             "Xenbase": "xenopus_tropicalis/",
@@ -524,17 +539,23 @@ class HumanOrthologFinder:
             The human gene symbol or None if no human ortholog was found.
         """
         if "ZFIN" in product:
-            human_gene_symbol = self.zfin.find_human_ortholog(product)[0]
-            return None if "Error" in human_gene_symbol else human_gene_symbol
+            result = self.zfin.find_human_ortholog(product) # returns [0]: gene symbol, [1]: long name of the gene
+            return result[0] if result != None else None
+            #human_gene_symbol = self.zfin.find_human_ortholog(product)[0]
+            #return None if "Error" in human_gene_symbol else human_gene_symbol
         elif "Xenbase" in product:
-            human_gene_symbol = self.xenbase.find_human_ortholog(product)[0]
-            return None if "Error" in human_gene_symbol else human_gene_symbol
+            result = self.xenbase.find_human_ortholog(product)
+            return result[0] if result != None else None
+            #human_gene_symbol = self.xenbase.find_human_ortholog(product)[0]
+            #return None if "Error" in human_gene_symbol else human_gene_symbol
         elif "MGI" in product:
             human_gene_symbol = self.mgi.find_human_ortholog(product)
-            return None if "Error" in human_gene_symbol else human_gene_symbol
+            return human_gene_symbol if (human_gene_symbol != None) else None
+            # return None if "Error" in human_gene_symbol else human_gene_symbol
         elif "RGD" in product:
             human_gene_symbol = self.rgd.find_human_ortholog(product)
-            return None if "Error" in human_gene_symbol else human_gene_symbol
+            return human_gene_symbol if (human_gene_symbol != None) else None
+            # return None if "Error" in human_gene_symbol else human_gene_symbol
         else:
             logger.info(f"No database found for {product}")
             return None
@@ -581,7 +602,8 @@ class ZFINHumanOrthologFinder(HumanOrthologFinder):
                 human_gene_name = e[1]
                 logger.info(f"[ Returning human symbol {human_symbol} and {human_gene_name}")
                 return human_symbol, human_gene_name
-        return [f"ZfinError_No-human-ortholog-found:product_id={product_id}"]
+        return None
+        # return [f"ZfinError_No-human-ortholog-found:product_id={product_id}"]
 
 class XenbaseHumanOrthologFinder(HumanOrthologFinder):
     def __init__(self):
@@ -625,7 +647,8 @@ class XenbaseHumanOrthologFinder(HumanOrthologFinder):
                 human_gene_name = e[1]
                 logger.info(f"Found human ortholog {human_symbol}, name = {human_gene_name} for xenbase gene {product_id}")
                 return human_symbol, human_gene_name
-        return [f"[XenbaseError_No-human-ortholog-found:product_id={product_id}"]
+        return None
+        # return [f"[XenbaseError_No-human-ortholog-found:product_id={product_id}"]
 
 class MGIHumanOrthologFinder(HumanOrthologFinder):
     def __init__(self):
@@ -686,7 +709,8 @@ class MGIHumanOrthologFinder(HumanOrthologFinder):
                 logger.info(f"Found human ortholog {human_symbol} for mgi gene {product_id}")
                 return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
             i += 1
-        return f"[MgiError_No-human-ortholog-found:product_id={product_id}"
+        return None
+        # return f"[MgiError_No-human-ortholog-found:product_id={product_id}"
 
 class RGDHumanOrthologFinder(HumanOrthologFinder):
     def __init__(self):
@@ -724,7 +748,7 @@ class RGDHumanOrthologFinder(HumanOrthologFinder):
             if len(result_list) >= 4: # bugfix
                 return result_list[3]
             else:
-                logger.warning(f"FAULTY LINE IN RGD, linesplit =: {linesplit}")
+                logger.warning(f"FAULTY LINE IN RGD while searching for {product_id}, linesplit =: {linesplit}")
                 return None
 
         product_id_short = ""
@@ -738,4 +762,5 @@ class RGDHumanOrthologFinder(HumanOrthologFinder):
                 human_symbol = _rgd_get_human_symbol_from_line(line)
                 logger.info(f"Found human ortholog {human_symbol} for RGD gene {product_id}")
                 return human_symbol
-        return f"[RgdError_No-human-ortholog-found:product_id={product_id}"
+        return None
+        # return f"[RgdError_No-human-ortholog-found:product_id={product_id}"
