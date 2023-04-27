@@ -28,27 +28,29 @@ model = ReverseLookup.load_model("diabetes_angio_2/data.json")
 # model.save_model("diabetes_angio_2/data.json")
 
 # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-model.fetch_ortholog_products(refetch=False)
+# model.fetch_ortholog_products(refetch=False)
 
-model.prune_products()
+# model.prune_products()
 
-model.save_model("diabetes_angio_2/data.json")
+# model.save_model("diabetes_angio_2/data.json")
 
 # Fetch product information (from UniprotAPI or EnsemblAPI)
-model.fetch_product_infos(refetch=False)
+# model.fetch_product_infos(refetch=False)
 
 # Prune products
-model.prune_products()
+# model.prune_products()
 
-model.save_model("diabetes_angio_2/data.json")
+# model.save_model("diabetes_angio_2/data.json")
 
 # Score products
-#adv_score = adv_product_score(model)
-#nterms_score = nterms(model)
+adv_score = adv_product_score(model)
+nterms_score = nterms(model)
+model.score_products([adv_score, nterms_score])
 #goaf = GOAnnotiationsFile()
 #binom_score = binomial_test(model, goaf)
 #fisher_score = fisher_exact_test(model, goaf)
-#model.score_products([fisher_score])
+#model.score_products([adv_score, nterms_score, binom_score, fisher_score])
+model.save_model("diabetes_angio_2/data.json")
 
 #model.save_model("diabetes_angio_1/data.json")
 

@@ -40,8 +40,8 @@ class adv_product_score(Metrics):
       
       2. (a) If all GO Terms of a Product instance regulate the processes of the ReverseLookup instance (eg. angio, diabetes) positively (and none negatively), then add 'a' to score. The 'direction' value of a positive regulatory term is '+', whereas direction for a negative regulatory term is '-'.
       
-      3. (b1) For each of the processes, compute sum(goterm.weight ** b2), for every GO Term of the product, which positively regulates the process.
-         Final equation ADDED to the score is sum(b1 * sum(goterm.weight ** b2)). The first 'sum' is the sum of processes, whereas the second 'sum' is the sum of GO Terms, which pass the positive regulation check for the current process.
+      3. (b1) For each of the processes, compute sum(goterm.weight) ** b2, for every GO Term of the product, which positively regulates the process.
+         Final equation ADDED to the score is sum(b1 * sum(goterm.weight) ** b2). The first 'sum' is the sum of processes, whereas the second 'sum' is the sum of GO Terms, which pass the positive regulation check for the current process.
       
       4. (b2) For each of the process, compute sum(goterm.weight ** b2), for every GO Term of the product, which negatively regulates the process.
          Final equation SUBTRACTED from the score is sum(b1 * sum(goterm.weight ** b2)). The first 'sum' is the sum of processes, the second 'sum' is the sum of GO Terms, which pass the negative regulation check for the current process.
@@ -89,7 +89,8 @@ class adv_product_score(Metrics):
                 return "-"
             elif direction == "-":
                 return "+"
-            
+        
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Check if all target processes are regulated in the same direction as the GOTerms in the list
         # and none of them are regulated in the opposite direction
         if (
@@ -104,10 +105,34 @@ class adv_product_score(Metrics):
                 any(_opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
                 for process in self.reverse_lookup.target_processes
             )
+            
         ):
             # If all target processes are regulated in the same direction, add a points to the score
             score += self.a
-
+        """
+        
+        # Check if all target processes are regulated in the same direction as the GOTerms in the list
+        # and none of them are regulated in the opposite direction
+        if (
+            # Check if all processes in target_processes of the ReverseLookup model
+            # have a GOTerm in goterms_list that regulates it (them) in the same direction
+            all(
+                any(
+                    any(process['direction'] == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+            and not any(
+                any(
+                    any(_opposite_direction(process['direction']) == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            
+        ):
+            # If all target processes are regulated in the same direction, add a points to the score
+            score += self.a
+        
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Check if all target processes are regulated in the opposite direction as the GOTerms in the list
         # and none of them are regulated in the same direction
         if (
@@ -124,7 +149,27 @@ class adv_product_score(Metrics):
         ):
             # If all target processes are regulated in the opposite direction, subtract a points from the score
             score -= self.a
+        """
+                # Check if all target processes are regulated in the opposite direction as the GOTerms in the list
+        # and none of them are regulated in the same direction
+        if (
+            # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+            all(
+                any(
+                    any(_opposite_direction(process['direction']) == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
+            and not any(
+                any(
+                    any(process['direction'] == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+        ):
+            # If all target processes are regulated in the opposite direction, subtract a points from the score
+            score -= self.a
 
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Calculate the score based on the number of processes in target_processes that are regulated
         # by GOTerms in the same direction as defined in the list
         score += sum(
@@ -134,6 +179,21 @@ class adv_product_score(Metrics):
                 ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
+        """
+
+        # Calculate the score based on the number of processes in target_processes that are regulated
+        # by GOTerms in the same direction as defined in the list
+        sum_weights = 0
+        for goterm in goterms_list:
+            for goterm_process in goterm.processes:
+                for process in self.reverse_lookup.target_processes:
+                    if goterm_process['direction'] == process['direction'] and goterm_process['process'] == process['process']:
+                        sum_weights += goterm.weight
+
+                score += self.b1 * sum_weights ** self.b2
+                sum_weights = 0
+
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Calculate the score based on the number of processes in target_processes that are regulated
         # by GOTerms in the oposite direction as defined in the list
         score -= sum(
@@ -143,7 +203,22 @@ class adv_product_score(Metrics):
                 ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
+        """
 
+        # Calculate the score based on the number of processes in target_processes that are regulated
+        # by GOTerms in the oposite direction as defined in the list
+        sum_weights = 0
+        for goterm in goterms_list:
+            for goterm_process in goterm.processes:
+                for process in self.reverse_lookup.target_processes:
+                    if goterm_process['direction'] == _opposite_direction(process['direction']) and goterm_process['process'] == process['process']:
+                        sum_weights += goterm.weight
+                
+                score -= self.b1 * sum_weights ** self.b2
+                sum_weights = 0
+
+        """
+        # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Calculate the score by multiplying the current score with a factor based on the number of GOTerms with direction "0"
         score = score * (
             self.c1  # Start with a base factor of 1
@@ -155,6 +230,16 @@ class adv_product_score(Metrics):
                 )
             )
         )
+        """
+
+        # Calculate the score by multiplying the current score with a factor based on the number of GOTerms with direction "0"
+        sum_weights = 0
+        for goterm in goterms_list:
+            for goterm_process in goterm.processes:
+                if goterm_process['direction'] == '0':
+                    sum_weights += goterm.weight
+        score *= self.c1 + self.c2 * sum_weights
+        sum_weights = 0
 
         return score
 
@@ -208,13 +293,16 @@ class nterms(Metrics):
         # Iterate over each process in the target_processes list
         for process in self.reverse_lookup.target_processes:
             # Count the number of GOTerms that have a direction of "+" and a process matching the current process
-            nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if (goterm.direction == "+" and process['process'] == goterm.process))
+            # nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if (goterm.direction == "+" and process['process'] == goterm.process)) # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
+            nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if any(goterm_process['direction'] == "+" and process['process'] == goterm_process['process'] for goterm_process in goterm.processes))
             
             # Count the number of GOTerms that have a direction of "-" and a process matching the current process
-            nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if (goterm.direction == "-" and process['process'] == goterm.process))
+            # nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if (goterm.direction == "-" and process['process'] == goterm.process)) # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
+            nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if any(goterm_process['direction'] == "-" and process['process'] == goterm_process['process'] for goterm_process in goterm.processes))
             
             # Count the number of GOTerms that have a direction of "0" and a process matching the current process
-            nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if (goterm.direction == "0" and process['process'] == goterm.process))
+            # nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if (goterm.direction == "0" and process['process'] == goterm.process)) # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
+            nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if any(goterm_process['direction'] == "0" and process['process'] == goterm_process['process'] for goterm_process in goterm.processes))
         
         # Return the dictionary containing the count of GOTerms for each process and direction
         return nterms_dict
