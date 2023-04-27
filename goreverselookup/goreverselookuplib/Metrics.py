@@ -4,6 +4,8 @@ if TYPE_CHECKING:
     from .Model import ReverseLookup, Product, miRNA
     from .AnnotationProcessor import GOAnnotiationsFile
 from typing import List
+from .Errors import StatisticsError
+import math
 
 from scipy.stats import binomtest, combine_pvalues, fisher_exact
 import statistics
@@ -332,8 +334,10 @@ class binomial_test(Metrics):
                 #time for Binomial test and "risk ratio"
                 #binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
                 #                  (num_goterms_product_general/num_goterms_all_general), alternative='greater')
+                
                 binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
                                   (num_goterms_product_general/num_goterms_all_general if num_goterms_all_general != 0 else 0), alternative='greater') # bugfix: ZeroDivisionError
+                
                 binom_pvalue = binom.pvalue
                 
                 if num_goterms_product_general != 0 and num_goterms_all_general != 0: # bugfix: ZeroDivisionError
@@ -380,22 +384,55 @@ class fisher_exact_test(Metrics):
         results_dict = {}
         
         for process in self.reverse_lookup.target_processes:
-            process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"])
-            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename))
-            num_goterms_all_general = self._num_all_goterms
+            process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"]) # all GO Term ids associated with a specific process (eg. angio, diabetes, obesity) for the current MODEL
+            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename)) # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
+            num_goterms_all_general = self._num_all_goterms # number of all GO Terms from the GO Annotations File (currently 18880)
             for direction in ['+', '-']:
-                num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(i['direction'] == direction for i in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
-                num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(i['direction'] == direction for i in goterm.processes))
+                num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(goterm_process['direction'] == direction for goterm_process in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
+                num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(goterm_process['direction'] == direction for goterm_process in goterm.processes))
                 
                 #time for Binomial test and "risk ratio"
                 cont_table = [[num_goterms_product_process, num_goterms_all_process-num_goterms_product_process],
                               [num_goterms_product_general-num_goterms_product_process, num_goterms_all_general-(num_goterms_all_process-num_goterms_product_process)]]
+                
+                # check that any contingency table element is non-negative
+                should_continue_current_loop = False
+                for x in cont_table:
+                    for y in x:
+                        if y < 0:
+                            stat_error = StatisticsError(f"Element of contingency table in class fisher_exact_test is negative. All elements must be non-negative. Contingency table: {cont_table}. This might be because a gene_name, which belongs to a certain GO Term (obtained via web-download), isn't found in the GO Annotations File.", error_code_specific=1)
+                            results_dict[f"{process['process']}{direction}"] = {
+                            #"n_prod_process" : num_goterms_product_process,
+                            #"n_all_process" : num_goterms_all_process,
+                            #"n_prod_general" : num_goterms_product_general,
+                            #"n_all_general" : num_goterms_all_general,
+                            "error": f"{stat_error.error_name}: {stat_error.error_text}",
+                            "num_terms_product_process" : num_goterms_product_process,
+                            "num_terms_all_process": num_goterms_all_process,
+                            "num_terms_product_process": num_goterms_product_process,
+                            "num_terms_product_general": num_goterms_product_general,
+                            "fold_enrichment" : None,
+                            "pvalue" : None,
+                            "odds_ratio" : None                            
+                            }
+                            should_continue_current_loop = True
+                if should_continue_current_loop:
+                    continue
+
                 fisher = fisher_exact(cont_table)
 
                 fisher_pvalue = fisher.pvalue
                 
                 odds_ratio = fisher.statistic
-                
+
+                #if odds_ratio == "NaN":
+                #    odds_ratio = None
+
+                # TODO: NaN is necessary for further calculations! Do a json postproccess. START FROM HERE.
+                # if math.isnan(odds_ratio) or math.isnan(fisher_pvalue):
+                #    fisher_pvalue = None
+                #    odds_ratio = None
+
                 folder_enrichment_score = 0
                 if num_goterms_all_process != 0 and num_goterms_product_general != 0 and num_goterms_all_general != 0:
                     folder_enrichment_score = num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general))

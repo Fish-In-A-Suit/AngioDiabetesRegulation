@@ -544,10 +544,11 @@ class ReverseLookup:
             i = 0
             p_values = []
             if _score_class.name == "fisher_test" or _score_class.name == "binomial_test":   
-
                 for product in self.products:
                     for process in self.target_processes:
                         for direction in ['+', '-']:
+                            if "error" in product.scores[_score_class.name][f"{process['process']}{direction}"]: # check if there is "error" key
+                                continue
                             p_values.append(product.scores[_score_class.name][f"{process['process']}{direction}"]["pvalue"])
                 # apply Benjamini-Hochberg FDR correction
                 from statsmodels.stats.multitest import multipletests
@@ -555,6 +556,8 @@ class ReverseLookup:
                 for product in self.products:
                     for process in self.target_processes:
                         for direction in ['+', '-']:
+                            if "error" in product.scores[_score_class.name][f"{process['process']}{direction}"]: # check if there is "error" key
+                                continue
                             product.scores[_score_class.name][f"{process['process']}{direction}"]["pvalue_corr"] = p_corrected[i]
                             i += 1
         
@@ -690,19 +693,44 @@ class ReverseLookup:
 # housekeeping functions
 
     def get_all_goterms_for_product(self, product: Product | str) -> List[GOTerm]:
+        """
+        func desc
+
+        Args:
+          - (Product) | (str): either a Product object, or a string denoting either a product's UniProtKB id (eg. 'Q8TED9') or a product's
+                               gene name (eg. 'AFAP1L1'). A UniProtKB can be input either in the 'UniProtKB:Q8TED9' or the 'Q8TED9' notation.
+        
+        Returns:
+          - List[GOTerm]: a list of GO Term objects, which are associated with the input Product or product string (UniProtKB id or gene name)
+        """
         if isinstance(product, str):
+            if ":" in product:
+                product = product.split(":")[1] # if in UniProtKB:xxxx notation, obtain only the last part of the id, eg. 'Q8TED9'
             for prod in self.products:
                 if prod.uniprot_id == product:
                     product = prod
                     break
+                if prod.genename == product:
+                    product = prod
+                    break
 
         goterms_list = []
-        for goterm in self.goterms:
-            if any(product_id in goterm.products for product_id in product.id_synonyms):
+        for goterm in self.goterms: # loop over all GO Terms
+            if any(product_id in goterm.products for product_id in product.id_synonyms): # a GOTerm has GOTerm.products stored in the full-identifier notation (eg. 'MGI:1201409', 'UniProtKB:Q02763', ...), therefore you need to use product.id_synonyms, which also contains the full-identifier notation
                 goterms_list.append(goterm)
         return goterms_list
     
     def get_all_goterms_for_process(self, process: str) -> List[GOTerm]:
+        """
+        Loops through all GO Term objects in self.goterms (initialised from input.txt or from load_model at object creation)
+        and adds each GO Term instance to a result list, if any of it's processes (goterm.processes) are involved in the parameter 'process'.
+
+        Returns:
+          - List[GOTerm]: a list of all GO Term objects, which are associated with the 'process'.
+        
+        Example: if process = "diabetes", then it will return a list of all the diabetes-associated GO Terms you specified
+        in input.txt file, irrespective of direction (either +, - or 0)
+        """
         goterms_list = []
         for goterm in self.goterms:
             if any(proc["process"] == process for proc in goterm.processes):

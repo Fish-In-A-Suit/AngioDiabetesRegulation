@@ -156,18 +156,17 @@ class GOAnnotiationsFile:
         else:
             return False
 
-    def get_products(self, goterm_id: str) -> List[str]:
-        """This method returns all unique products associated with the GO term id
+    def get_all_products_for_goterm(self, goterm_id: str) -> List[str]:
+        """
+        This method returns all unique products associated with the GO term id
 
         Args:
-            goterm_id (str): _description_
-
-        Raises:
-            ValueError: _description_
-            Exception: _description_
+            goterm_id (str): a GO Term identifier, eg. GO:0003723
 
         Returns:
-            Set[str]: set of products' gene names
+            List[str]: a List of all product (gene/gene products) gene names, eg. ['NUDT4B', ...]
+        
+        Example: for 'GO:0003723' it returns ['KMT2C', 'CLNS1A', 'ZCCHC9', 'TERT', 'BUD23', 'DDX19B', 'CCAR2', 'NAP1L4', 'SAMSN1', 'ERVK-9', 'COA6', 'RTF1', 'AHCYL1', 'SMARCA4', ... (total len = 1378)]
         """
         
         if self.terms_dict is None:
@@ -176,23 +175,45 @@ class GOAnnotiationsFile:
         return self.terms_dict.get(goterm_id, [])
                
     def populate_poducts_dict(self):
+        """
+        For each line in the readlines of the GO Annotations File, it creates a connection between a product gene name and an associated GO Term.
+
+        The result is a dictionary (self.products_dict), mapping keys (product gene names, eg. NUDT4B) to a List of all associated
+        GO Terms (eg. ['GO:0003723', ...])
+        """
         self.products_dict = {}
-        for line in self._readlines:
+        for line in self._readlines: # example line: 'UniProtKB \t A0A024RBG1 \t NUDT4B \t enables \t GO:0003723 \t GO_REF:0000043 \t IEA \t UniProtKB-KW:KW-0694 \t F \t Diphosphoinositol polyphosphate phosphohydrolase NUDT4B \t NUDT4B \t protein \t taxon:9606 \t 20230306 \t UniProt'
             chunks = line.split('\t')
-            self.products_dict.setdefault(chunks[2], set()).add(chunks[4])
-        for key, values in self.products_dict.items():
-            self.products_dict[key] = list(values)      
+            self.products_dict.setdefault(chunks[2], set()).add(chunks[4]) # create a key with the line's product gene name (if the key already exists, don't re-create the key - specified by the setdefault method) and add the associated GO Term to the value set. eg. {'NUDT4B': {'GO:0003723'}}, after first line is processed, {'NUDT4B': {'GO:0003723'}, 'NUDT4B': {'GO:0046872'}} after second line ...
+        for key, values in self.products_dict.items(): # the set() above prevents the value elements (GO Terms) in dictionary to be repeated
+            self.products_dict[key] = list(values) # converts the set to a List, eg. {'NUDT4B': ['GO:0003723']}     
             
     def populate_terms_dict(self):
+        """
+        For each line in the readlines of the GO Annotations File, it creates a connection between a GO Term and it's associated product gene name.
+
+        The result is a dictionary (self.terms_dict), mapping keys (GO Terms, eg. GO:0003723) to a List of all
+        associated product gene names (eg. ['NUDT4B', ...])
+        """
         self.terms_dict = {}
-        for line in self._readlines:
+        for line in self._readlines: # example line: 'UniProtKB \t A0A024RBG1 \t NUDT4B \t enables \t GO:0003723 \t GO_REF:0000043 \t IEA \t UniProtKB-KW:KW-0694 \t F \t Diphosphoinositol polyphosphate phosphohydrolase NUDT4B \t NUDT4B \t protein \t taxon:9606 \t 20230306 \t UniProt'
             chunks = line.split('\t')
-            self.terms_dict.setdefault(chunks[4], set()).add(chunks[2])
-        for key, values in self.terms_dict.items():
-            self.terms_dict[key] = list(values)      
+            self.terms_dict.setdefault(chunks[4], set()).add(chunks[2]) # create a key with the line's GO Term (if the key already exists, don't re-create the key - specified by the setdefault method) and add the product' gene name to the value set. eg. {'GO:0003723': {'NUDT4B'}}, after first line is processed, {'GO:0003723': {'NUDT4B'}, 'GO:0046872': {'NUDT4B'}} after second line ...
+        for key, values in self.terms_dict.items(): # the previous set() prevents the value elements (product gene names) in dictionary to be repeated
+            self.terms_dict[key] = list(values) # converts the set to a List, eg. {'NUDT4B': ['GO:0003723']}
 
     def get_all_terms_for_product(self, product: str) -> List[str]:
+        """
+        Gets all GO Terms associated to a product gene name.
+
+        Args:
+          - (str) product: must be a gene name corresponding to a specific gene/gene product, eg. NUDT4B
         
+        Returns:
+          - List[str]: a List of all GO Term ids associated with the input product's gene name
+        
+        Example: for 'NUDT4B', it returns ['GO:1901911', 'GO:0071543', 'GO:0005737', 'GO:0000298', 'GO:0005634', 'GO:0034431', 'GO:0034432', 'GO:0046872', 'GO:0008486', 'GO:1901909', 'GO:0003723', 'GO:1901907', 'GO:0005829']
+        """
         if self.products_dict is None:
             self.populate_poducts_dict()
         
@@ -200,7 +221,10 @@ class GOAnnotiationsFile:
         
         
     def get_all_terms(self) -> List[str]:
-        
+        """
+        Returns a List of all unique GO Terms read from the GO Annotations file.
+        In the current (27_04_2023) GO Annotation File, there are 18880 unique GO Terms.
+        """
         if not self.terms_dict:
             self.populate_terms_dict()
         
