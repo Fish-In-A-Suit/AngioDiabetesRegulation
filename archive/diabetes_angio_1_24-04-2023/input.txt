@@ -1,0 +1,156 @@
+# --- Input file for Term Enrichment System --- #
+#[name] is the start of new section and includes description of data, data is space delimited
+###settings
+###processes [proces name] [to be expressed + or suppressed -]
+diabetes	+
+angio	+
+###GO_terms [GO id] [process] [upregulated + or downregulated -] [weight 0-1]
+GO:1903589	angio	+	1	positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+GO:1903672	angio	+	1	positive regulation of sprouting angiogenesis
+GO:0045766	angio	+	1	positive regulation of angiogenesis
+GO:0106090	angio	+	1	positive regulation of cell adhesion involved in sprouting angiogenesis
+GO:0090050	angio	+	1	positive regulation of cell migration involved in sprouting angiogenesis
+GO:0001935	angio	+	1	endothelial cell proliferation
+GO:1903588	angio	-	1	negative regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+GO:1903671	angio	-	1	negative regulation of sprouting angiogenesis
+GO:0016525	angio	-	1	negative regulation of angiogenesis
+GO:0106089	angio	-	1	negative regulation of cell adhesion involved in sprouting angiogenesis
+GO:0090051	angio	-	1	negative regulation of cell migration involved in sprouting angiogenesis
+GO:0043532	angio	-	1	angiostatin binding
+GO:0032311	angio	-	1	angiogenin-PRI complex
+GO:0001937	angio	-	1	negative regulation of endothelial cell proliferation
+GO:1905563	angio	-	1	negative regulation of vascular endothelial cell proliferation
+GO:1900077	diabetes	+	1	negative regulation of cellular response to insulin stimulus
+GO:0046627	diabetes	+	1	negative regulation of insulin receptor signaling pathway
+GO:0046676	diabetes	+	1	negative regulation of insulin secretion
+GO:0043569	diabetes	+	1	negative regulation of insulin-like growth factor receptor signaling pathway
+GO:0061179	diabetes	+	1	negative regulation of insulin secretion involved in cellular response to glucose stimulus
+GO:0038014	diabetes	+	1	negative regulation of insulin receptor signaling pathway by insulin receptor internalization
+GO:1900078	diabetes	-	1	positive regulation of cellular response to insulin stimulus
+GO:0046628	diabetes	-	1	positive regulation of insulin receptor signaling pathway
+GO:0032024	diabetes	-	1	positive regulation of insulin secretion
+GO:0043568	diabetes	-	1	positive regulation of insulin-like growth factor receptor signaling pathway
+GO:0038015	diabetes	-	1	positive regulation of insulin receptor signaling pathway by insulin receptor internalization
+GO:0035774	diabetes	-	1	positive regulation of insulin secretion involved in cellular response to glucose stimulus
+GO:0001525	angio	+	1	angiogenesis
+GO:0060055	angio	+	1	angiogenesis involved in wound healing
+GO:0002040	angio	+	1	sprouting angiogenesis
+GO:0002041	angio	+	1	intussusceptive angiogenesis
+GO:0002042	angio	+	1	cell migration involved in sprouting angiogenesis
+GO:0002043	angio	+	1	blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+GO:0002044	angio	+	1	blood vessel endothelial cell migration involved in intussusceptive angiogenesis
+GO:0120078	angio	+	1	cell adhesion involved in sprouting angiogenesis
+GO:0071116	angio	+	1	alpha6-beta1 integrin-CYR61 complex
+GO:0120077	angio	+	1	angiogenic sprout fusion
+GO:0043534	angio	+	1	blood vessel endothelial cell migration
+GO:0003158	angio	+	1	endothelium development
+GO:0001938	angio	+	1	positive regulation of endothelial cell proliferation
+GO:1905564	angio	+	1	positive regulation of vascular endothelial cell proliferation
+GO:0101023	angio	+	1	vascular endothelial cell proliferation
+GO:0046950	diabetes	+	1	cellular ketone body metabolic process
+GO:0032869	diabetes    -	1	cellular response to insulin stimulus
+GO:0044381	diabetes	-	1	glucose import in response to insulin stimulus
+GO:0006006	diabetes	+	1	glucose metabolic process
+GO:0043559	diabetes	-	1	insulin binding
+GO:1901143	diabetes	-	1	insulin catabolic process
+GO:1901142	diabetes	-	1	insulin metabolic process
+GO:0005899	diabetes    -	1	insulin receptor complex
+GO:0038016	diabetes	+	1	insulin receptor internalization
+GO:0038020	diabetes	-	1	insulin receptor recycling
+GO:0038028	diabetes	-	1	insulin receptor signaling pathway via phosphatidylinositol 3-kinase
+GO:0008286	diabetes	-	1	insulin receptor signaling pathway
+GO:0043560	diabetes	-	1	insulin receptor substrate binding
+GO:0005009	diabetes	-	1	insulin-activated receptor activity
+GO:0005520	diabetes	-	1	insulin-like growth factor binding
+GO:0032593	diabetes	-	1	insulin-responsive compartment
+#GO:0014859	diabetes	-	1	negative regulation of skeletal muscle cell proliferation
+#GO:1904205	diabetes	-	1	negative regulation of skeletal muscle hypertrophy
+#GO:0048632	diabetes	-	1	negative regulation of skeletal muscle tissue growth
+#GO:0048744	diabetes	-	1	negative regulation of skeletal muscle fiber development
+#GO:0048642	diabetes	-	1	negative regulation of skeletal muscle tissue development
+#GO:0043417	diabetes	-	1	negative regulation of skeletal muscle tissue regeneration
+#GO:2001015	diabetes	-	1	negative regulation of skeletal muscle cell differentiation
+#GO:1902810	diabetes	-	1	negative regulation of skeletal muscle fiber differentiation
+#GO:0014858	diabetes	+	1	positive regulation of skeletal muscle cell proliferation
+#GO:1904206	diabetes	+	1	positive regulation of skeletal muscle hypertrophy
+#GO:0048633	diabetes	+	1	positive regulation of skeletal muscle tissue growth
+#GO:0048743	diabetes	+	1	positive regulation of skeletal muscle fiber development
+#GO:0048643	diabetes	+	1	positive regulation of skeletal muscle tissue development
+#GO:0043415	diabetes	+	1	positive regulation of skeletal muscle tissue regeneration
+#GO:2001016	diabetes	+	1	positive regulation of skeletal muscle cell differentiation
+#GO:1902811	diabetes	+	1	positive regulation of skeletal muscle fiber differentiation
+#GO:0014733	diabetes	0	1	regulation of skeletal muscle adaptation
+#GO:0014857	diabetes	0	1	regulation of skeletal muscle cell proliferation
+#GO:1904204	diabetes	0	1	regulation of skeletal muscle hypertrophy
+#GO:0048631	diabetes	0	1	regulation of skeletal muscle tissue growth
+#GO:0043501	diabetes	0	1	skeletal muscle adaptation
+#GO:0014732	diabetes	0	1	skeletal muscle atrophy
+#GO:0014856	diabetes	0	1	skeletal muscle cell proliferation
+#GO:0098528	diabetes	0	1	skeletal muscle fiber differentiation
+#GO:0014734	diabetes	0	1	skeletal muscle hypertrophy
+#GO:0014841	diabetes	0	1	skeletal muscle satellite cell proliferation
+#GO:0007519	diabetes	0	1	skeletal muscle tissue development
+#GO:0048630	diabetes	0	1	skeletal muscle tissue growth
+#GO:0043403	diabetes	0	1	skeletal muscle tissue regeneration
+#GO:0048741	diabetes	0	1	skeletal muscle fiber development
+#GO:0035914	diabetes	0	1	skeletal muscle cell differentiation
+#GO:0014834	diabetes	0	1	skeletal muscle satellite cell maintenance involved in skeletal muscle regeneration
+#GO:0014816	diabetes	0	1	skeletal muscle satellite cell differentiation
+#GO:0014813	diabetes	0	1	skeletal muscle satellite cell commitment
+#GO:0014719	diabetes	0	1	skeletal muscle satellite cell activation
+#GO:1902766	diabetes	0	1	skeletal muscle satellite cell migration
+#GO:0014817	diabetes	0	1	skeletal muscle satellite cell fate specification
+#GO:0014818	diabetes	0	1	skeletal muscle satellite cell fate determination
+#GO:0014833	diabetes	0	1	skeletal muscle satellite stem cell asymmetric division
+#GO:0014815	diabetes	0	1	initiation of skeletal muscle satellite cell activation by growth factor signaling, involved in skeletal muscle regeneration
+#GO:0014716	diabetes	0	1	skeletal muscle satellite stem cell asymmetric division involved in skeletal muscle regeneration
+#GO:0098726	diabetes	0	1	symmetric division of skeletal muscle satellite stem cell
+#GO:0098731	diabetes	0	1	skeletal muscle satellite stem cell maintenance involved in skeletal muscle regeneration
+#GO:1901667	diabetes	-	1	negative regulation of skeletal muscle satellite cell activation involved in skeletal muscle regeneration
+#GO:0014718	diabetes	+	1	positive regulation of satellite cell activation involved in skeletal muscle regeneration
+#GO:0014717	diabetes	0	1	regulation of satellite cell activation involved in skeletal muscle regeneration
+#GO:1902723	diabetes	-	1	negative regulation of skeletal muscle satellite cell proliferation
+#GO:1902724	diabetes	+	1	positive regulation of skeletal muscle satellite cell proliferation
+#GO:1902726	diabetes	+	1	positive regulation of skeletal muscle satellite cell differentiation
+#GO:1902727	diabetes	-	1	negative regulation of growth factor dependent skeletal muscle satellite cell proliferation
+#GO:1902728	diabetes	+	1	positive regulation of growth factor dependent skeletal muscle satellite cell proliferation
+#GO:0014843	diabetes	0	1	growth factor dependent regulation of skeletal muscle satellite cell proliferation
+#GO:0014842	diabetes	0	1	regulation of skeletal muscle satellite cell proliferation
+#GO:0014901	diabetes	0	1	satellite cell activation involved in skeletal muscle regeneration
+#GO:0030240	diabetes	0	1	skeletal muscle thin filament assembly
+#GO:0030241	diabetes	0	1	skeletal muscle myosin thick filament assembly
+#GO:0048742	diabetes	0	1	regulation of skeletal muscle fiber development
+#GO:0048641	diabetes	0	1	regulation of skeletal muscle tissue development
+#GO:0051450	diabetes	0	1	myoblast proliferation
+#GO:0014872	diabetes	0	1	myoblast division
+#GO:0048627	diabetes	0	1	myoblast development
+#GO:0048626	diabetes	0	1	myoblast fate specification
+#GO:0048625	diabetes	0	1	myoblast fate commitment
+#GO:0048628	diabetes	0	1	myoblast maturation
+#GO:0051451	diabetes	0	1	myoblast migration
+#GO:0007518	diabetes	0	1	myoblast fate determination
+#GO:0007520	diabetes	0	1	myoblast fusion
+#GO:0045661	diabetes	0	1	regulation of myoblast differentiation
+#GO:0045663	diabetes	0	1	positive regulation of myoblast differentiation
+#GO:0045662	diabetes	0	1	negative regulation of myoblast differentiation
+#GO:0014839	diabetes	0	1	myoblast migration involved in skeletal muscle regeneration
+#GO:0014835	diabetes	0	1	myoblast differentiation involved in skeletal muscle regeneration
+#GO:0014844	diabetes	0	1	myoblast proliferation involved in skeletal muscle regeneration
+#GO:0014905	diabetes	0	1	myoblast fusion involved in skeletal muscle regeneration
+#GO:0014838	diabetes	0	1	myoblast fate specification involved in skeletal muscle regeneration
+#GO:0014914	diabetes	0	1	myoblast maturation involved in muscle regeneration
+#GO:0014908	diabetes	0	1	myotube differentiation involved in skeletal muscle regeneration
+#GO:0014906	diabetes	0	1	myotube cell development involved in skeletal muscle regeneration
+#GO:0043416	diabetes	0	1	regulation of skeletal muscle tissue regeneration
+#GO:2001014	diabetes	0	1	regulation of skeletal muscle cell differentiation
+#GO:1902809	diabetes	0	1	regulation of skeletal muscle fiber differentiation
+#GO:0014837	diabetes	0	1	myoblast fate determination involved in skeletal muscle regeneration
+#GO:0014836	diabetes	0	1	myoblast fate commitment involved in skeletal muscle regeneration
+#GO:0014866	diabetes	0	1	skeletal myofibril assembly
+#GO:0014896	diabetes	+	1	muscle hypertrophy
+#GO:0051371	diabetes	0	1	muscle alpha-actinin binding
+#GO:0014855	diabetes	0	1	striated muscle cell proliferation
+#GO:0014706	diabetes	0	1	striated muscle tissue development
+#GO:0055002	diabetes	0	1	striated muscle cell development
+#GO:0014882	diabetes	0	1	regulation of myofibril number
+#GO:0014881	diabetes	0	1	regulation of myofibril size

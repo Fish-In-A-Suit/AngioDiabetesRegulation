@@ -16,6 +16,7 @@ temp
 
 test_run_2/
 diabetes_angio_1/
+src_data_files/
 
 *.egg-info/
 dist/
