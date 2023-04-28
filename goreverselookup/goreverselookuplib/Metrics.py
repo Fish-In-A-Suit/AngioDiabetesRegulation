@@ -96,12 +96,12 @@ class adv_product_score(Metrics):
             # Check if all processes in target_processes of the ReverseLookup model
             # have a GOTerm in goterms_list that regulates it (them) in the same direction
             all(
-                any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                any(any(process['direction'] == p['direction'] and process['process'] == p['process'] for p in goterm.processes) for goterm in goterms_list)
                 for process in self.reverse_lookup.target_processes
             )
             # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
             and not any(
-                any(_opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                any(any(_opposite_direction(process['direction']) == p['direction'] and process['process'] == p['process'] for p in goterm.processes) for goterm in goterms_list)
                 for process in self.reverse_lookup.target_processes
             )
         ):
@@ -113,12 +113,12 @@ class adv_product_score(Metrics):
         if (
             # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
             all(
-                any(_opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                any(any(_opposite_direction(process['direction']) == p['direction'] and process['process'] == p['process'] for p in goterm.processes) for goterm in goterms_list)
                 for process in self.reverse_lookup.target_processes
             )
             # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
             and not any(
-                any(process['direction'] == goterm.direction and process['process'] == goterm.process for goterm in goterms_list)
+                any(any(process['direction'] == p['direction'] and process['process'] == p['process'] for p in goterm.processes) for goterm in goterms_list)
                 for process in self.reverse_lookup.target_processes
             )
         ):
@@ -130,7 +130,7 @@ class adv_product_score(Metrics):
         score += sum(
             (self.b1 * sum(
                 # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
-                goterm.weight for goterm in goterms_list if process['direction'] == goterm.direction and process['process'] == goterm.process
+                goterm.weight for goterm in goterms_list if any(process['direction'] == p['direction'] and process['process'] == p['process'] for p in goterm.processes)
                 ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
@@ -139,7 +139,7 @@ class adv_product_score(Metrics):
         score -= sum(
             (self.b1 * sum(
                 # Check if the direction and process in the process dict matches with the direction and process in any GOTerm dict
-                goterm.weight for goterm in goterms_list if _opposite_direction(process['direction']) == goterm.direction and process['process'] == goterm.process
+                goterm.weight for goterm in goterms_list if any(_opposite_direction(process['direction']) == p['direction'] and process['process'] == p['process'] for p in goterm.processes)
                 ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
@@ -151,7 +151,7 @@ class adv_product_score(Metrics):
                 * sum(  # Multiply c by the sum of weights of all GOTerms with direction "0"
                     goterm.weight  # Get the weight of each GOTerm
                     for goterm in goterms_list  # Iterate over all GOTerms in the list
-                    if goterm.direction == "0"  # Only consider GOTerms with direction "0"
+                    if any(p['direction'] == 0 for p in goterm.processes)  # Only consider GOTerms with direction "0"
                 )
             )
         )
@@ -313,10 +313,10 @@ class fisher_exact_test(Metrics):
                     folder_enrichment_score = num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general))
 
                 results_dict[f"{process['process']}{direction}"] = {
-                    #"n_prod_process" : num_goterms_product_process,
-                    #"n_all_process" : num_goterms_all_process,
-                    #"n_prod_general" : num_goterms_product_general,
-                    #"n_all_general" : num_goterms_all_general,
+                    "n_prod_process" : num_goterms_product_process,
+                    "n_all_process" : num_goterms_all_process,
+                    "n_prod_general" : num_goterms_product_general,
+                    "n_all_general" : num_goterms_all_general,
                     "num" : num_goterms_product_process,
                     "expected" : num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general if num_goterms_all_general != 0 else 0),
                     "fold_enrichment" : folder_enrichment_score, # BUGFIX: ZeroDivisionError
