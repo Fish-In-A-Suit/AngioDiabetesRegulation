@@ -4,6 +4,8 @@ if TYPE_CHECKING:
     from .Model import ReverseLookup, Product, miRNA
     from .AnnotationProcessor import GOAnnotiationsFile
 from typing import List
+from .Errors import StatisticsError
+import math
 
 from scipy.stats import binomtest, combine_pvalues, fisher_exact
 import statistics
@@ -40,8 +42,8 @@ class adv_product_score(Metrics):
       
       2. (a) If all GO Terms of a Product instance regulate the processes of the ReverseLookup instance (eg. angio, diabetes) positively (and none negatively), then add 'a' to score. The 'direction' value of a positive regulatory term is '+', whereas direction for a negative regulatory term is '-'.
       
-      3. (b1) For each of the processes, compute sum(goterm.weight ** b2), for every GO Term of the product, which positively regulates the process.
-         Final equation ADDED to the score is sum(b1 * sum(goterm.weight ** b2)). The first 'sum' is the sum of processes, whereas the second 'sum' is the sum of GO Terms, which pass the positive regulation check for the current process.
+      3. (b1) For each of the processes, compute sum(goterm.weight) ** b2, for every GO Term of the product, which positively regulates the process.
+         Final equation ADDED to the score is sum(b1 * sum(goterm.weight) ** b2). The first 'sum' is the sum of processes, whereas the second 'sum' is the sum of GO Terms, which pass the positive regulation check for the current process.
       
       4. (b2) For each of the process, compute sum(goterm.weight ** b2), for every GO Term of the product, which negatively regulates the process.
          Final equation SUBTRACTED from the score is sum(b1 * sum(goterm.weight ** b2)). The first 'sum' is the sum of processes, the second 'sum' is the sum of GO Terms, which pass the negative regulation check for the current process.
@@ -89,7 +91,8 @@ class adv_product_score(Metrics):
                 return "-"
             elif direction == "-":
                 return "+"
-            
+        
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Check if all target processes are regulated in the same direction as the GOTerms in the list
         # and none of them are regulated in the opposite direction
         if (
@@ -104,10 +107,34 @@ class adv_product_score(Metrics):
                 any(any(_opposite_direction(process['direction']) == p['direction'] and process['process'] == p['process'] for p in goterm.processes) for goterm in goterms_list)
                 for process in self.reverse_lookup.target_processes
             )
+            
         ):
             # If all target processes are regulated in the same direction, add a points to the score
             score += self.a
-
+        """
+        
+        # Check if all target processes are regulated in the same direction as the GOTerms in the list
+        # and none of them are regulated in the opposite direction
+        if (
+            # Check if all processes in target_processes of the ReverseLookup model
+            # have a GOTerm in goterms_list that regulates it (them) in the same direction
+            all(
+                any(
+                    any(process['direction'] == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+            and not any(
+                any(
+                    any(_opposite_direction(process['direction']) == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            
+        ):
+            # If all target processes are regulated in the same direction, add a points to the score
+            score += self.a
+        
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Check if all target processes are regulated in the opposite direction as the GOTerms in the list
         # and none of them are regulated in the same direction
         if (
@@ -124,7 +151,27 @@ class adv_product_score(Metrics):
         ):
             # If all target processes are regulated in the opposite direction, subtract a points from the score
             score -= self.a
+        """
+                # Check if all target processes are regulated in the opposite direction as the GOTerms in the list
+        # and none of them are regulated in the same direction
+        if (
+            # Check if all processes in target_processes have a GOTerm in goterms_list that regulates it in the opposite direction
+            all(
+                any(
+                    any(_opposite_direction(process['direction']) == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+            # Check if none of the processes in target_processes have a GOTerm in goterms_list that regulates it in the same direction
+            and not any(
+                any(
+                    any(process['direction'] == goterm_process['direction'] and process['process'] == goterm_process['process'] for goterm_process in goterm.processes) for goterm in goterms_list)
+                for process in self.reverse_lookup.target_processes
+            )
+        ):
+            # If all target processes are regulated in the opposite direction, subtract a points from the score
+            score -= self.a
 
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Calculate the score based on the number of processes in target_processes that are regulated
         # by GOTerms in the same direction as defined in the list
         score += sum(
@@ -134,6 +181,21 @@ class adv_product_score(Metrics):
                 ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
+        """
+
+        # Calculate the score based on the number of processes in target_processes that are regulated
+        # by GOTerms in the same direction as defined in the list
+        sum_weights = 0
+        for goterm in goterms_list:
+            for goterm_process in goterm.processes:
+                for process in self.reverse_lookup.target_processes:
+                    if goterm_process['direction'] == process['direction'] and goterm_process['process'] == process['process']:
+                        sum_weights += goterm.weight
+
+                score += self.b1 * sum_weights ** self.b2
+                sum_weights = 0
+
+        """ These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Calculate the score based on the number of processes in target_processes that are regulated
         # by GOTerms in the oposite direction as defined in the list
         score -= sum(
@@ -143,7 +205,22 @@ class adv_product_score(Metrics):
                 ) ** self.b2)
                 for process in self.reverse_lookup.target_processes
         )
+        """
 
+        # Calculate the score based on the number of processes in target_processes that are regulated
+        # by GOTerms in the oposite direction as defined in the list
+        sum_weights = 0
+        for goterm in goterms_list:
+            for goterm_process in goterm.processes:
+                for process in self.reverse_lookup.target_processes:
+                    if goterm_process['direction'] == _opposite_direction(process['direction']) and goterm_process['process'] == process['process']:
+                        sum_weights += goterm.weight
+                
+                score -= self.b1 * sum_weights ** self.b2
+                sum_weights = 0
+
+        """
+        # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
         # Calculate the score by multiplying the current score with a factor based on the number of GOTerms with direction "0"
         score = score * (
             self.c1  # Start with a base factor of 1
@@ -155,6 +232,16 @@ class adv_product_score(Metrics):
                 )
             )
         )
+        """
+
+        # Calculate the score by multiplying the current score with a factor based on the number of GOTerms with direction "0"
+        sum_weights = 0
+        for goterm in goterms_list:
+            for goterm_process in goterm.processes:
+                if goterm_process['direction'] == '0':
+                    sum_weights += goterm.weight
+        score *= self.c1 + self.c2 * sum_weights
+        sum_weights = 0
 
         return score
 
@@ -208,13 +295,16 @@ class nterms(Metrics):
         # Iterate over each process in the target_processes list
         for process in self.reverse_lookup.target_processes:
             # Count the number of GOTerms that have a direction of "+" and a process matching the current process
-            nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if (goterm.direction == "+" and process['process'] == goterm.process))
+            # nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if (goterm.direction == "+" and process['process'] == goterm.process)) # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
+            nterms_dict[f"{process['process']}+"] = sum(1 for goterm in goterms_list if any(goterm_process['direction'] == "+" and process['process'] == goterm_process['process'] for goterm_process in goterm.processes))
             
             # Count the number of GOTerms that have a direction of "-" and a process matching the current process
-            nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if (goterm.direction == "-" and process['process'] == goterm.process))
+            # nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if (goterm.direction == "-" and process['process'] == goterm.process)) # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
+            nterms_dict[f"{process['process']}-"] = sum(1 for goterm in goterms_list if any(goterm_process['direction'] == "-" and process['process'] == goterm_process['process'] for goterm_process in goterm.processes))
             
             # Count the number of GOTerms that have a direction of "0" and a process matching the current process
-            nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if (goterm.direction == "0" and process['process'] == goterm.process))
+            # nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if (goterm.direction == "0" and process['process'] == goterm.process)) # These scorings worked, when "direction" was a direct submember of a GOTerm instance. Now, each GOTerm has a list of dictionaries, each dictionary representing one process with keys "process" and "direction"
+            nterms_dict[f"{process['process']}0"] = sum(1 for goterm in goterms_list if any(goterm_process['direction'] == "0" and process['process'] == goterm_process['process'] for goterm_process in goterm.processes))
         
         # Return the dictionary containing the count of GOTerms for each process and direction
         return nterms_dict
@@ -244,8 +334,10 @@ class binomial_test(Metrics):
                 #time for Binomial test and "risk ratio"
                 #binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
                 #                  (num_goterms_product_general/num_goterms_all_general), alternative='greater')
+                
                 binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
                                   (num_goterms_product_general/num_goterms_all_general if num_goterms_all_general != 0 else 0), alternative='greater') # bugfix: ZeroDivisionError
+                
                 binom_pvalue = binom.pvalue
                 
                 if num_goterms_product_general != 0 and num_goterms_all_general != 0: # bugfix: ZeroDivisionError
@@ -292,22 +384,55 @@ class fisher_exact_test(Metrics):
         results_dict = {}
         
         for process in self.reverse_lookup.target_processes:
-            process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"])
-            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename))
-            num_goterms_all_general = self._num_all_goterms
+            process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"]) # all GO Term ids associated with a specific process (eg. angio, diabetes, obesity) for the current MODEL
+            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename)) # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
+            num_goterms_all_general = self._num_all_goterms # number of all GO Terms from the GO Annotations File (currently 18880)
             for direction in ['+', '-']:
-                num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(i['direction'] == direction for i in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
-                num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(i['direction'] == direction for i in goterm.processes))
+                num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(goterm_process['direction'] == direction for goterm_process in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
+                num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(goterm_process['direction'] == direction for goterm_process in goterm.processes))
                 
                 #time for Binomial test and "risk ratio"
                 cont_table = [[num_goterms_product_process, num_goterms_all_process-num_goterms_product_process],
                               [num_goterms_product_general-num_goterms_product_process, num_goterms_all_general-(num_goterms_all_process-num_goterms_product_process)]]
+                
+                # check that any contingency table element is non-negative
+                should_continue_current_loop = False
+                for x in cont_table:
+                    for y in x:
+                        if y < 0:
+                            stat_error = StatisticsError(f"Element of contingency table in class fisher_exact_test is negative. All elements must be non-negative. Contingency table: {cont_table}. This might be because a gene_name, which belongs to a certain GO Term (obtained via web-download), isn't found in the GO Annotations File.", error_code_specific=1)
+                            results_dict[f"{process['process']}{direction}"] = {
+                            #"n_prod_process" : num_goterms_product_process,
+                            #"n_all_process" : num_goterms_all_process,
+                            #"n_prod_general" : num_goterms_product_general,
+                            #"n_all_general" : num_goterms_all_general,
+                            "error": f"{stat_error.error_name}: {stat_error.error_text}",
+                            "num_terms_product_process" : num_goterms_product_process,
+                            "num_terms_all_process": num_goterms_all_process,
+                            "num_terms_product_process": num_goterms_product_process,
+                            "num_terms_product_general": num_goterms_product_general,
+                            "fold_enrichment" : None,
+                            "pvalue" : None,
+                            "odds_ratio" : None                            
+                            }
+                            should_continue_current_loop = True
+                if should_continue_current_loop:
+                    continue
+
                 fisher = fisher_exact(cont_table)
 
                 fisher_pvalue = fisher.pvalue
                 
                 odds_ratio = fisher.statistic
-                
+
+                #if odds_ratio == "NaN":
+                #    odds_ratio = None
+
+                # TODO: NaN is necessary for further calculations! Do a json postproccess. START FROM HERE.
+                # if math.isnan(odds_ratio) or math.isnan(fisher_pvalue):
+                #    fisher_pvalue = None
+                #    odds_ratio = None
+
                 folder_enrichment_score = 0
                 if num_goterms_all_process != 0 and num_goterms_product_general != 0 and num_goterms_all_general != 0:
                     folder_enrichment_score = num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general))
