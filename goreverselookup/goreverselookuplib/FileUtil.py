@@ -104,7 +104,8 @@ class FileUtil():
                     # finally, append the file
                     return os.path.join(base_path, file)
     
-    def find_win_abs_filepath(relative_filepath: str):
+    @classmethod
+    def find_win_abs_filepath(cls, relative_filepath: str):
         """
         Finds the absolute filepath to specified 'relative_filepath' using os.getcwd(). Note, that the function does not include
         the "self" parameter, therefore it can be statically called using FileUtil.find_win_abs_filepath(...) without instantiating
@@ -125,8 +126,30 @@ class FileUtil():
         
         return os.path.join(os.getcwd(), relative_filepath)
     
-    def get_workspace_dir():
+    @classmethod
+    def get_workspace_dir(cls):
         """
         Returns the workspace-specific directory using os.getcwd().
         """
         return os.getcwd()
+    
+    def write_to_txt_file(self, list:list, filepath = "", filename=""):
+        """
+        Writes the input list, line by line to the specified filepath. If no filepath is specified,
+        file is written to self.project_root_path/filename.txt. If filename is also not specified, then
+        the lines are written to self.project_root_path/text.txt
+        """
+        # TODO: implement
+
+    @classmethod
+    def write_to_txt_file(cls, list:list, filepath: str):
+        """
+        Writes the input list, line by line, to the specified filepath.
+        """
+        filepath = cls.find_win_abs_filepath(filepath)
+        with open(filepath, "w") as f:
+            for element in list:
+                line = element
+                if "\n" not in line:
+                    line = f"{line}\n"
+                f.write(line)

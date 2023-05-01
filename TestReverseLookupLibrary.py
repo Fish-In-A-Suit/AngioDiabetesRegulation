@@ -5,6 +5,74 @@ from goreverselookuplib.Report import ReportGenerator
 
 import os
 
+"""
+Example usage: First workflow (only adv_score and nterms score)
+    # Pull GO data #
+    model = ReverseLookup.load_model("diabetes_angio_2/data.json")
+    model.fetch_all_go_term_names_descriptions()
+    model.fetch_all_go_term_products(web_download=True)
+    model.create_products_from_goterms()
+    model.fetch_ortholog_products(refetch=False)
+    model.fetch_product_infos(refetch=False)
+    model.prune_products()
+    model.save_model("diabetes_angio_2/data.json")
+
+    # Score GO Term products #
+    adv_score = adv_product_score(model)
+    nterms_score = nterms(model)
+    model.score_products([adv_score, nterms_score])
+    model.save_model("diabetes_angio_2/data.json")
+
+    # Score mRNA-miRNA #
+    model.fetch_mRNA_sequences()
+    model.predict_miRNAs()
+    model.change_miRNA_overlap_treshold(0.6, True)
+    basic_score = basic_mirna_score(model)
+    model.score_miRNAs(basic_score)
+    model.save_model("diabetes_angio_1/data.json")
+
+    # Generate report #
+    report = ReportGenerator(model, verbosity=3)
+    report.general_report("diabetes_angio_1/general.txt", product_score=adv_score)
+    
+    
+Example usage: Second workflow (adv_score, nterms_score, fisher_score, binomial_score)
+    # Pull GO data #
+    model = ReverseLookup.load_model("diabetes_angio_2/data.json")
+    model.fetch_all_go_term_names_descriptions()
+    model.fetch_all_go_term_products(web_download=True)
+    model.create_products_from_goterms()
+    model.fetch_ortholog_products(refetch=False)
+    model.fetch_product_infos(refetch=False)
+    model.prune_products()
+    model.save_model("diabetes_angio_2/data.json")
+
+    # Score GO Term products #
+    adv_score = adv_product_score(model)
+    nterms_score = nterms(model)
+    goaf = GOAnnotiationsFile()
+	binom_score = binomial_test(model, goaf)
+	fisher_score = fisher_exact_test(model, goaf)
+	model.score_products([adv_score, nterms_score, binom_score, fisher_score])
+    model.save_model("diabetes_angio_2/data.json")
+
+    # Score mRNA-miRNA #
+    [TODO: implement mRNA-miRNA logic only for the valid GO Term products after scoring]
+    // model.fetch_mRNA_sequences()
+    // model.predict_miRNAs()
+    // model.change_miRNA_overlap_treshold(0.6, True)
+    // basic_score = basic_mirna_score(model)
+    // model.score_miRNAs(basic_score)
+    // model.save_model("diabetes_angio_1/data.json")
+
+    # Generate report #
+    [TODO: implement]
+    // report = ReportGenerator(model, verbosity=3)
+    // report.general_report("diabetes_angio_1/general.txt", product_score=adv_score)
+"""
+
+
+
 # Define model from input file
 # model = ReverseLookup.from_input_file("diabetes_angio_2/input_final.txt")
 model = ReverseLookup.load_model("diabetes_angio_2/data.json")

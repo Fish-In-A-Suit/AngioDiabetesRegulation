@@ -169,66 +169,67 @@ class ReportGenerator:
     
     def _generate_top_bottom_products_summary(self, score_key) -> str:
         """
-    Generates (ReverseLookup).top_n (preset to 5) top-scored and bottom-scored products. The result is an overview table, where each of the
-    top and bottom products are presented with their Gene Name, Score and Description. Then, (ReverseLookup).top_n * 2 tabels are also generated,
-    one table per each presented top or bottom product, with all of it's GO Terms listed below, the GO Term Labels and GO Term Descriptions.
+        Generates (ReverseLookup).top_n (preset to 5) top-scored and bottom-scored products. The result is an overview table, where each of the
+        top and bottom products are presented with their Gene Name, Score and Description. Then, (ReverseLookup).top_n * 2 tabels are also generated,
+        one table per each presented top or bottom product, with all of it's GO Terms listed below, the GO Term Labels and GO Term Descriptions.
 
-    The score_key corresponds to a scoring algorithm's name and is obtained from the product_score parameter supplied to the 'generate_report' 
-    function of this class, which should be one of the Metrics scoring implementations that was used to score the model. 
-    [TODO]: implement this more cleanly, this can be also pulled from the model's products after they are scored 
-    (eg. score_key = self.reverse_lookup.products[0].scores <- get the key of the scores dict !!)
+        The score_key corresponds to a scoring algorithm's name and is obtained from the product_score parameter supplied to the 'generate_report' 
+        function of this class, which should be one of the Metrics scoring implementations that was used to score the model. 
+        [TODO]: implement this more cleanly, this can be also pulled from the model's products after they are scored 
+        (eg. score_key = self.reverse_lookup.products[0].scores <- get the key of the scores dict !!)
 
-    Returns:
-      - (str) string: formatted result of top and bottom products
+        Returns:
+          - (str) string: formatted result of top and bottom products
     
-    Example:
-    TOP and BOTTOM 5 PRODUCTS
-    +-------------+---------+-------------------------------------------------------------+
-    | Gene Name   | Score   | Description                                                 |
-    +=============+=========+=============================================================+
-    | LAMTOR4     | 18.20   | late endosomal/lysosomal adaptor, MAPK and MTOR activator 4 |
-    +-------------+---------+-------------------------------------------------------------+
-    | PROK1       | 18.20   | prokineticin 1                                              |
-    +-------------+---------+-------------------------------------------------------------+
-    | JCAD        | 15.46   | junctional cadherin 5 associated                            |
-    +-------------+---------+-------------------------------------------------------------+
-    | ACSBG1      | 15.40   | acyl-CoA synthetase bubblegum family member 1               |
-    +-------------+---------+-------------------------------------------------------------+
-    | TFDP2       | 15.40   | transcription factor Dp-2                                   |
-    +-------------+---------+-------------------------------------------------------------+
-    | ----        | ----    | ----                                                        |
-    +-------------+---------+-------------------------------------------------------------+
-    | GJA1        | -14.00  | gap junction protein alpha 1                                |
-    +-------------+---------+-------------------------------------------------------------+
-    | AGT         | -14.00  | angiotensinogen                                             |
-    +-------------+---------+-------------------------------------------------------------+
-    | LMNA        | -14.00  | lamin A/C                                                   |
-    +-------------+---------+-------------------------------------------------------------+
-    | C1QBP       | -15.40  | complement C1q binding protein                              |
-    +-------------+---------+-------------------------------------------------------------+
-    | ACAT2       | -15.40  | acetyl-CoA acetyltransferase 2                              |
-    +-------------+---------+-------------------------------------------------------------+
+        Example:
+        TOP and BOTTOM 5 PRODUCTS
+        +-------------+---------+-------------------------------------------------------------+
+        | Gene Name   | Score   | Description                                                 |
+        +=============+=========+=============================================================+
+        | LAMTOR4     | 18.20   | late endosomal/lysosomal adaptor, MAPK and MTOR activator 4 |
+        +-------------+---------+-------------------------------------------------------------+
+        | PROK1       | 18.20   | prokineticin 1                                              |
+        +-------------+---------+-------------------------------------------------------------+
+        | JCAD        | 15.46   | junctional cadherin 5 associated                            |
+        +-------------+---------+-------------------------------------------------------------+
+        | ACSBG1      | 15.40   | acyl-CoA synthetase bubblegum family member 1               |
+        +-------------+---------+-------------------------------------------------------------+
+        | TFDP2       | 15.40   | transcription factor Dp-2                                   |
+        +-------------+---------+-------------------------------------------------------------+
+        | ----        | ----    | ----                                                        |
+        +-------------+---------+-------------------------------------------------------------+
+        | GJA1        | -14.00  | gap junction protein alpha 1                                |
+        +-------------+---------+-------------------------------------------------------------+
+        | AGT         | -14.00  | angiotensinogen                                             |
+        +-------------+---------+-------------------------------------------------------------+
+        | LMNA        | -14.00  | lamin A/C                                                   |
+        +-------------+---------+-------------------------------------------------------------+
+        | C1QBP       | -15.40  | complement C1q binding protein                              |
+        +-------------+---------+-------------------------------------------------------------+
+        | ACAT2       | -15.40  | acetyl-CoA acetyltransferase 2                              |
+        +-------------+---------+-------------------------------------------------------------+
 
-                     LAMTOR4 - 18.20 - late endosomal/lysosomal adaptor, MAPK and MTOR activator 4            
-    +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-    | GO term    | GO label                                                  | GO description                                                                                    |
-    +============+===========================================================+===================================================================================================+
-    | GO:0045766 | positive regulation of angiogenesis                       | Any process that activates or increases angiogenesis.                                             |
-    +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-    | GO:0046627 | negative regulation of insulin receptor signaling pathway | Any process that stops, prevents, or reduces the frequency, rate or extent of insulin receptor    |
-    |            |                                                           | signaling.                                                                                        |
-    +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-    | GO:0045765 | regulation of angiogenesis                                | Any process that modulates the frequency, rate or extent of angiogenesis.                         |
-    +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-    | GO:0003158 | endothelium development                                   | The process whose specific outcome is the progression of an endothelium over time, from its       |
-    |            |                                                           | formation to the mature structure. Endothelium refers to the layer of cells lining blood vessels, |
-    |            |                                                           | lymphatics, the heart, and serous cavities, and is derived from bone marrow or mesoderm. Corneal  |
-    |            |                                                           | endothelium is a special case, derived from neural crest cells.                                   |
-    +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-    | GO:0001938 | positive regulation of endothelial cell proliferation     | Any process that activates or increases the rate or extent of endothelial cell proliferation.     |
-    +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-    / ... / 
-    """
+                         LAMTOR4 - 18.20 - late endosomal/lysosomal adaptor, MAPK and MTOR activator 4            
+        +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+        | GO term    | GO label                                                  | GO description                                                                                    |
+        +============+===========================================================+===================================================================================================+
+        | GO:0045766 | positive regulation of angiogenesis                       | Any process that activates or increases angiogenesis.                                             |
+        +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+        | GO:0046627 | negative regulation of insulin receptor signaling pathway | Any process that stops, prevents, or reduces the frequency, rate or extent of insulin receptor    |
+        |            |                                                           | signaling.                                                                                        |
+        +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+        | GO:0045765 | regulation of angiogenesis                                | Any process that modulates the frequency, rate or extent of angiogenesis.                         |
+        +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+        | GO:0003158 | endothelium development                                   | The process whose specific outcome is the progression of an endothelium over time, from its       |
+        |            |                                                           | formation to the mature structure. Endothelium refers to the layer of cells lining blood vessels, |
+        |            |                                                           | lymphatics, the heart, and serous cavities, and is derived from bone marrow or mesoderm. Corneal  |
+        |            |                                                           | endothelium is a special case, derived from neural crest cells.                                   |
+        +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+        | GO:0001938 | positive regulation of endothelial cell proliferation     | Any process that activates or increases the rate or extent of endothelial cell proliferation.     |
+        +------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+        / ... / 
+        """
+
         # Initialize the summary string with the header
         string = f"TOP and BOTTOM {self.top_n} PRODUCTS\n"
 
@@ -331,6 +332,35 @@ class ReportGenerator:
           - (str) filepath: The path to the output file.
           - (list(Metrics)) product_score: one or more Metrics implementations, which were used for the scoring of products
           - (list(Metrics)) miRNA_score: one ore more Metrics implementations, which were used for the scoring of miRNAs
+        
+        Example usage:
+            # Pull GO data #
+            model = ReverseLookup.load_model("diabetes_angio_2/data.json")
+            model.fetch_all_go_term_names_descriptions()
+            model.fetch_all_go_term_products(web_download=True)
+            model.create_products_from_goterms()
+            model.fetch_ortholog_products(refetch=False)
+            model.fetch_product_infos(refetch=False)
+            model.prune_products()
+            model.save_model("diabetes_angio_2/data.json")
+
+            # Score GO Term products #
+            adv_score = adv_product_score(model)
+            nterms_score = nterms(model)
+            model.score_products([adv_score, nterms_score])
+            model.save_model("diabetes_angio_2/data.json")
+
+            # Score mRNA-miRNA #
+            model.fetch_mRNA_sequences()
+            model.predict_miRNAs()
+            model.change_miRNA_overlap_treshold(0.6, True)
+            basic_score = basic_mirna_score(model)
+            model.score_miRNAs(basic_score)
+            model.save_model("diabetes_angio_1/data.json")
+
+            # Generate report #
+            report = ReportGenerator(model, verbosity=3)
+            report.general_report("diabetes_angio_1/general.txt", product_score=adv_score)
         """
         filepath = filepath.replace("/", os.sep) # # replace any '/' to avoid having both \\ and / in a single filepath
         
