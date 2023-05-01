@@ -99,8 +99,9 @@ class ReportGenerator:
         
         # Use a for-loop to populate the grouped_goterms dictionary
         for goterm in self.reverse_lookup.goterms:
-            key = (goterm.process, goterm.direction)
-            grouped_goterms[key].append(goterm)
+            for goterm_process in goterm.processes:
+                key = (goterm_process["process"], goterm_process["direction"])
+                grouped_goterms[key].append(goterm)
 
         string = "GO TERMS PER PROCESS" + "\n"
 
@@ -310,6 +311,8 @@ class ReportGenerator:
                 temp_t_list = []
                 temp_b_list = []
                 for product_id in inhibited_product_id:
+                    if product_id == None or product_id == 'null': # TODO: CONTINUE FROM HERE! CHECK THAT THIS DOESN'T BREAK THE REPORT / CAUSE THE REPORT GENERATOR TO REPORT 0 SUPPRESSED ELEMENTS.
+                        continue
                     if any(product_id in sub.uniprot_id for sub in top_products):
                         temp_t_list.append(f"+{product_id}")
                     if any(product_id in sub.uniprot_id for sub in bottom_products):
@@ -382,7 +385,7 @@ class ReportGenerator:
         # Generate section on miRNAs
         if len(self.reverse_lookup.miRNAs) > 0:
             report += self._generate_section("miRNAs")
-            report += self._generate_top_miRNAs_summary(miRNA_score.name) + "\n" 
+            report += self._generate_top_miRNAs_summary(product_score.name, miRNA_score.name) + "\n" 
 
         if not os.path.isabs(filepath):
             current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
@@ -406,7 +409,7 @@ class ReportGenerator:
         try:
             # current_dir = os.getcwd()
             # win_filepath = os.path.join(current_dir, filepath) # reassign filepath to absolute path
-            win_filepath = FileUtil.find_win_abs_filepath()
+            win_filepath = FileUtil.find_win_abs_filepath(filepath)
             os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
 
             with open(win_filepath, 'w') as f:

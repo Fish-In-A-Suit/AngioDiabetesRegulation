@@ -2,6 +2,7 @@ from goreverselookuplib import ReverseLookup
 from goreverselookuplib.AnnotationProcessor import GOAnnotiationsFile
 from goreverselookuplib.Metrics import Metrics, adv_product_score, nterms, basic_mirna_score, binomial_test, fisher_exact_test
 from goreverselookuplib.Report import ReportGenerator
+from goreverselookuplib.Workflows import WorkflowOne
 
 import os
 
@@ -70,6 +71,13 @@ Example usage: Second workflow (adv_score, nterms_score, fisher_score, binomial_
     // report = ReportGenerator(model, verbosity=3)
     // report.general_report("diabetes_angio_1/general.txt", product_score=adv_score)
 """
+
+test_workflow = True
+
+if test_workflow:
+    workflow_one = WorkflowOne("diabetes_angio_3/data.json", "diabetes_angio_3", debug=True)
+    workflow_one.run_workflow()
+    exit()
 
 
 

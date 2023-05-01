@@ -1,8 +1,9 @@
 from __future__ import annotations
 from .AnnotationProcessor import GOApi, GOAnnotiationsFile, EnsemblAPI, UniProtAPI, HumanOrthologFinder
 from typing import TYPE_CHECKING, Set, List, Dict, Optional
-if TYPE_CHECKING:
-    from .Metrics import Metrics
+#if TYPE_CHECKING:
+#    from .Metrics import Metrics, basic_mirna_score
+from .Metrics import Metrics,basic_mirna_score
 import json
 import os
 from tqdm import trange, tqdm
@@ -184,7 +185,7 @@ class Product:
         
         self.had_orthologs_computed = True
                 
-    def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+    def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]) -> None:
         """
         includes description, ensg_id, enst_id and refseq_nt_id
         """
@@ -197,8 +198,8 @@ class Product:
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
 
-        required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
-        #Is uniprot really necessary. If it is faster, perhaps get uniprotID from genename and then first try to get info from uniprot
+        # required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
+        # [TODO] Is uniprot really necessary. If it is faster, perhaps get uniprotID from genename and then first try to get info from uniprot
         if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
             info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             for key, value in info_dict.items():
@@ -221,6 +222,17 @@ class Product:
                     setattr(self, key, value)
         
         #TODO: logger output which values are still missing
+
+    def fetch_mRNA_sequence(self, ensembl_api: EnsemblAPI) -> None:
+        if not ensembl_api:
+            ensembl_api = EnsemblAPI()
+        
+        sequence = ensembl_api.get_sequence(self.enst_id) # enst_id because we want the mRNA transcript
+        if sequence is not None:
+            self.mRNA = sequence
+        else:
+            self.mRNA = -1
+
         
     @classmethod
     def from_dict(cls, d: dict) -> 'Product':
@@ -369,6 +381,19 @@ class ReverseLookup:
         Returns:
             None
         """
+
+        def check_exists(product_id: str) -> bool:
+            """
+            Checks if the product_id already exists among self.products. When loading using ReverseLookup.load_model(data.json),
+            check_exists has to be used in order to prevent product duplications.
+
+            Returns: True, if product_id already exists in self.products
+            """
+            for existing_product in self.products:
+                if product_id in existing_product.id_synonyms:
+                    return True
+            return False
+
         logger.info(f"Creating products from GO Terms")
         self.timer.set_start_time()
 
@@ -382,12 +407,17 @@ class ReverseLookup:
 
         # Iterate over each product in the products_set and create a new Product object from the product ID using the
         # Product.from_dict() classmethod. Add the resulting Product objects to the ReverseLookup object's products list.
-        for product in products_set:
+        i = 0
+        for product in products_set: # here, each product is a product id, eg. 'MGI:1343124'
+            if check_exists(product) == True:
+                continue
             if ':' in product:
                 self.products.append(Product.from_dict({'id_synonyms': [product]}))
             else:
                 self.products.append(Product.from_dict({'id_synonyms': [product], 'genename': product}))
-        logger.info(f"Created Product objects from GOTerm object definitions")
+            i+=1
+        
+        logger.info(f"Created {i} Product objects from GOTerm object definitions")
 
         if "create_products_from_goterms" not in self.execution_times:
             self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
@@ -440,6 +470,7 @@ class ReverseLookup:
                     if product.had_orthologs_computed == False or refetch == True:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
+                        product.had_orthologs_computed = True
                         if product.had_orthologs_computed == False:
                             logger.debug("BREAK!!!!")
         except Exception as e:
@@ -494,6 +525,7 @@ class ReverseLookup:
                     if product.had_fetch_info_computed == False or refetch == True:
                         # If it doesn't, fetch UniProt data for the Product object.
                         product.fetch_info(uniprot_api, ensembl_api)
+                        product.had_fetch_info_computed = True
                         if product.had_fetch_info_computed == False:
                             logger.warning(f"had_fetch_info_computed IS FALSE despite being called for {product.id_synonyms}, genename = {product.genename}")
         except Exception as e:
@@ -503,7 +535,7 @@ class ReverseLookup:
             self.execution_times["fetch_product_infos"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def score_products(self, score_classes: List[Metrics]) -> None:
+    def score_products(self, score_classes: List[Metrics], recalculate:bool=True) -> None:
         """
         Scores the products of the current ReverseLookup model. This function allows you to pass a custom or a pre-defined scoring algorithm,
         which is of 'Metrics' type (look in Metrics.py), or a list of scoring algorithms. Each Product class of the current ReverseLookup instance products (self.products)
@@ -512,9 +544,12 @@ class ReverseLookup:
         If multiple scoring algorithms are used, then the product's 'scores' dictionary will have multiple elements, each a mapping between
         the scoring algorithm's name and the corresponding score.
 
+        Note: if a miRNA scoring algorithm is passed, such as 'basic_miRNA_score', this function redirects to self.score_miRNAs(...)
+
         Parameters:
           - score_classes: A subclass (implementation) of the Metrics superclass (interface). Current pre-defined Metrics implementations subclasses
                          are 'adv_product_score', 'nterms', 'inhibited_products_id', 'basic_mirna_score'.
+          - (bool) recalculate: if True, will recalculate scores if they already exist. If False, will skip recalculations.
         
         Calling example:
         (1) Construct a ReverseLookup model
@@ -537,10 +572,29 @@ class ReverseLookup:
             # iterate over each Product object in self.products and score them using the Scoring object
             for product in tqdm(self.products): # each Product has a field scores - a dictionary between a name of the scoring algorithm and it's corresponding score
                 for _score_class in score_classes:
+                    # NOTE: Current miRNA scoring (self.score_miRNAs) performs miRNA scoring holistically - in one call for all miRNAs in self.miRNAs. It is pointless to call this function here, as it needs to
+                    # be called only once. Here, a function for miRNA scoring has to be called, which displays the top N miRNAs, which bind to the specific product.
+                    # 
+                    # if isinstance(_score_class, basic_mirna_score):
+                    #    self.score_miRNAs(_score_class, recalculate=recalculate)
+                    #    continue
+                    if isinstance(_score_class, basic_mirna_score):
+                        # just continue, see explanation above
+                        continue
+
                     pass
-                    product.scores[_score_class.name] = _score_class.metric(product) # create a dictionary between the scoring algorithm name and it's score for current product
-            
+
+                    if _score_class.name in product.scores and recalculate == True: # if score already exists and recalculate is set to True
+                        product.scores[_score_class.name] = _score_class.metric(product) # create a dictionary between the scoring algorithm name and it's score for current product
+                    elif _score_class.name not in product.scores: # if score doesn't exist yet
+                        product.scores[_score_class.name] = _score_class.metric(product)
+
         for _score_class in score_classes:
+            if isinstance(_score_class, basic_mirna_score):
+                # score miRNAs holistically here, see # NOTE
+                self.score_miRNAs(_score_class, recalculate=recalculate)
+                continue
+            
             i = 0
             p_values = []
             if _score_class.name == "fisher_test" or _score_class.name == "binomial_test":   
@@ -565,7 +619,7 @@ class ReverseLookup:
             self.execution_times["score_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
                             
-    def fetch_mRNA_sequences(self) -> None:
+    def fetch_mRNA_sequences(self, refetch = False) -> None:
         logger.info(f"Started fetching mRNA sequences.")
         self.timer.set_start_time()
 
@@ -575,6 +629,8 @@ class ReverseLookup:
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
                     # Check if the Product object doesn't have a EnsemblID
+                    if product.mRNA == -1 and refetch == False: # product mRNA was already fetched, but unsuccessfully
+                        continue
                     if product.mRNA == None and product.enst_id is not None:
                         # If it has, fetch mRNA sequence data for the Product object.
                         product.fetch_mRNA_sequence(ensembl_api)
@@ -591,12 +647,12 @@ class ReverseLookup:
         
         # check the prediction type
         if prediction_type == 'miRDB':
-            # use the miRDB60predictor to predict miRNAs #TODO make it so that the user submitts the predictior, like metrices
+            # use the miRDB60predictor to predict miRNAs # TODO make it so that the user submitts the predictior, like metrices
             predictor = miRDB60predictor()
             # iterate through each product and predict miRNAs
             with logging_redirect_tqdm():
                 for product in tqdm(self.products):
-                    match_dict = predictor.predict_from_product(product)
+                    match_dict = predictor.predict_from_product(product) # bottleneck operation
                     # if there are matches, add them to the corresponding miRNA objects
                     if match_dict is not None:
                         for miRNA_id, match in match_dict.items():
@@ -607,8 +663,8 @@ class ReverseLookup:
                                     break
                             # if the miRNA doesn't exist in the list, create a new miRNA object
                             else:
-                                self.miRNAs.append(miRNA(miRNA_id, mRNA_overlaps={
-                                                   product.uniprot_id: match}))
+                                self.miRNAs.append(miRNA(miRNA_id, mRNA_overlaps={product.uniprot_id: match}))
+
         elif prediction_type == 'other_type':
             # do something else
             pass
@@ -640,7 +696,7 @@ class ReverseLookup:
         for _miRNA in self.miRNAs:
             _miRNA.scores = {}
 
-    def score_miRNAs(self, score_class: List[Metrics]) -> None:
+    def score_miRNAs(self, score_class: List[Metrics], recalculate:bool=False) -> None:
         """
         Performs miRNA scoring on the current ReverseLookup's 'miRNAs' using the input Metrics implementation(s). This function allows the user
         to pass a custom or a pre-defined scoring algorithm, which is of the 'Metrics' type (look in Metrics.py), or a list of scoring algorithms.
@@ -658,6 +714,9 @@ class ReverseLookup:
                          the condition that the product's mRNA binding strength > miRNA_overlap_threshold)
 
                          If 'basic_mirna_score' is used, then [TODO]
+
+          - recalculate: If set to True, will perform score recalculations irrespective of whether a score has already been computed.
+                         If set to False, won't perform score recalculations.
         
         Calling example:
         (1) Construct a ReverseLookup model
@@ -683,8 +742,10 @@ class ReverseLookup:
                 if not mirna.mRNA_overlaps:
                     continue
                 for _score_class in score_class:
-                    mirna.scores[_score_class.name] = _score_class.metric(
-                        mirna)
+                    if _score_class.name not in mirna.scores and recalculate == True: # if score hasn't been computed, compute it
+                        mirna.scores[_score_class.name] = _score_class.metric(mirna)
+                    elif _score_class.name not in mirna.scores:
+                        mirna.scores[_score_class.name] = _score_class.metric(mirna)
         
         if "score_miRNAs" not in self.execution_times:
             self.execution_times["score_miRNAs"] = self.timer.get_elapsed_time()
