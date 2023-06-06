@@ -18,8 +18,13 @@ file_handler.setFormatter(logging.Formatter('%(asctime)s [%(filename)s:%(lineno)
 
 logger = logging.getLogger(__name__)
 
+# before 06.06.2023
+# model = ReverseLookup.load_model("diabetes_angio_2/data_web_full_scores.json")
+# 06.06.2023:
+model = ReverseLookup.load_model("diabetes_angio_2/data_06-06-2023.json")
+model.perform_statistical_analysis(filepath="diabetes_angio_2/stat_analysis_06-06-2023.json")
+exit()
 
-model = ReverseLookup.load_model("diabetes_angio_2/data_web_full_scores.json")
 
 #test execution speed
 #import timeit
@@ -49,18 +54,19 @@ if False:
     exit()
 
 if True:
+    model.pre
 
     for product in model.products:
         #processes = model.target_processes
         processes = [     
-            {
-                "process": "diabetes",
-                "direction": "+"
-            },
             #{
-            #    "process": "angio",
+            #    "process": "diabetes",
             #    "direction": "+"
             #},
+            {
+                "process": "angio",
+                "direction": "+"
+            },
             {
                 "process": "obesity",
                 "direction": "+"

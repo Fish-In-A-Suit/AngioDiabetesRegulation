@@ -856,6 +856,103 @@ class ReverseLookup:
         except OSError:
             logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
 
+
+    def perform_statistical_analysis(self, test_name = "fisher_test", filepath=""):
+        """
+        Finds the statistically relevant products.
+
+        Parameters:
+          - (str) test_name: The name of the statistical test to use for product analysis. It must be either 'fisher_test' (the results of the fisher's test are then used)
+          or 'binomial_test' (the results of the binom test are used).
+          - (str) filepath: The path to the output file
+        
+        Warning: Binomial test scoring is not yet implemented. 
+        Warning: Products in this model must be scored with the aforementioned statistical tests prior to calling this function.
+
+        Usage example:
+            model = ReverseLookup.load_model("diabetes_angio_2/data.json")
+            goaf = GOAnnotiationsFile()
+            binom_score = binomial_test(model, goaf)
+            fisher_score = fisher_exact_test(model, goaf)
+            model.score_products([binom_score, fisher_score])
+            model.perform_statistical_analysis("fisher")
+
+        TODO: implement binomial score, maybe even adv_score and nterms for backwards compatibility
+        """
+        statistically_relevant_products = [] # a list of lists; each member is [product, "process1_name_direction:process2_name_direction"]
+        for product in self.products:
+            # given three process: diabetes, angio, obesity, this code iterates through each 2-member combination possible
+            # 
+            # loop iteration \ process      diabetes    angio   obesity
+            # it. 0  (i=0,j=1)                  |         |
+            # it. 1  (i=0,j=2)                  |                  |
+            # it. 2  (i=1,j=2)                            |        |
+            # j = 3 -> loop condition not met
+            # i = 2 -> loop condition not met (i would start on 'obesity', wouldn't find matching pair with j)
+            #
+            # Each member pair is used to assess statistically relevant genes, which either positively or
+            # negatively regulate both of the processes in the pair.
+
+            for i in range(len(self.target_processes) - 1):
+                for j in range(i+1, len(self.target_processes)):
+                    process1 = self.target_processes[i]
+                    process2 = self.target_processes[j]
+                    pair = [process1, process2]
+
+                    if (
+                        all(float(product.scores[test_name][f"{process['process']}{process['direction']}"].get("pvalue_corr",1)) < 0.05 for process in pair)
+                        and
+                        all(float(product.scores[test_name][f"{process['process']}{'+' if process['direction'] == '-' else '-'}"].get("pvalue_corr",1)) >= 0.05 for process in pair)
+                       ):
+                        statistically_relevant_products.append([product, f"{process1['process']}{process1['direction']}:{process2['process']}{process2['direction']}"])
+        
+        # statistically_relevant_products stores a list of lists, each member list is a Product object bound to a specific pair code (e.g. angio+:diabetes+).
+        # statistically_relevant_products_final is a dictionary. It's keys are process pair codes (e.g. angio+:diabetes+), each key holds a list of all statistically relevant products for the process pair
+        # (eg. if angio+:diabetes+ it holds all products, which positively regulate both angiogenesis and diabetes)     
+        process_pairs = [] # each element is a code binding two processes and their direction, eg. angio+:diabetes+
+        statistically_relevant_products_final = {} # dictionary between two processes (eg. angio+:diabetes+) and all statistically relevant products
+        for i in range(len(self.target_processes)-1):
+            for j in range(i+1, len(self.target_processes)):
+                process1 = self.target_processes[i]
+                process2 = self.target_processes[j]
+                pair_code = f"{process1['process']}{process1['direction']}:{process2['process']}{process2['direction']}"
+                process_pairs.append(pair_code)
+                statistically_relevant_products_final[pair_code] = [] # initialise to empty list
+        
+        for element in statistically_relevant_products:
+            # each element is a list [product, "process1_name_direction:process2_name_direction"]
+            prod = element[0]
+            process_pair_code = element[1]
+            statistically_relevant_products_final[process_pair_code].append(prod.__dict__)
+        
+        # TODO: save statistical analysis as a part of the model's json and load it up on startup
+        
+        print(f"Finished with product statistical analysis. Found {len(statistically_relevant_products)} statistically relevant products.")
+        
+        # write to file if it is supplied as a parameter
+        if filepath != "":
+            data = statistically_relevant_products_final
+            try: # this works on mac, not on windows
+                current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+                os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True) # Create directory for the report file, if it does not exist
+                with open(os.path.join(current_dir, filepath), 'w') as f:
+                    json.dump(data, f, indent=4)
+            except OSError:
+                # pass the error on the first attempt
+                pass
+
+            try: # if first attempt fails, try using current_dir = os.getcwd(), this works on windows
+                windows_filepath = FileUtil.find_win_abs_filepath(filepath)
+                os.makedirs(os.path.dirname(windows_filepath), exist_ok=True) # Create directory for the report file, if it does not exist
+                with open(windows_filepath, 'w') as f:
+                    json.dump(data, f, indent=4)
+                #current_dir = os.getcwd()
+                #os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
+            except OSError:
+                logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
+
+        return statistically_relevant_products_final
+                        
     def change_products_member_field(self, member_field_name: str, value):
         """
         This function changes the 'member_field_name' member variable of all Product instances in self.products
