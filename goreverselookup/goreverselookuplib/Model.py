@@ -859,7 +859,7 @@ class ReverseLookup:
 
     def perform_statistical_analysis(self, test_name = "fisher_test", filepath=""):
         """
-        Finds the statistically relevant products.
+        Finds the statistically relevant products, saves them to 'filepath' (if it is provided) and returns a JSON object with the results.
 
         Parameters:
           - (str) test_name: The name of the statistical test to use for product analysis. It must be either 'fisher_test' (the results of the fisher's test are then used)
@@ -876,6 +876,17 @@ class ReverseLookup:
             fisher_score = fisher_exact_test(model, goaf)
             model.score_products([binom_score, fisher_score])
             model.perform_statistical_analysis("fisher")
+        
+        Returns a JSON with the following structure (example is also provided to the right):
+            {                           {
+            PROCESS_PAIR_CODE: [        "diabetes+:angio+": [
+                PRODUCT1_DICT               { // product info: id_synonyms, genename, description, ...},
+                PRODUCT2_DICT               { // product info: id_synonyms, genename, description, ...},
+                ...                         ...
+            ],                          ],
+            ...                         "diabetes+:obesity+": [...],
+                                        "angio+:obesity+": [...]
+            }                           }
 
         TODO: implement binomial score, maybe even adv_score and nterms for backwards compatibility
         """
