@@ -209,7 +209,7 @@ class WorkflowOne(Workflow):
         self.add_function(self.model.save_model, self.model_save_filepath)
         self.add_function(self.model.predict_miRNAs)
         self.add_function(self.model.change_miRNA_overlap_treshold, 0.6, True)
-        self.add_function(self.perform_scoring, scoring_classes=[basic_mirna_score], recalculate=False) # TODO: CONTINUE FROM HERE - RECALCULATION DOESN'T WORK YET
+        self.add_function(self.perform_scoring, scoring_classes=[basic_mirna_score], recalculate=False) 
         self.add_function(self.model.save_model, self.model_save_filepath)
 
         # Generate report #

@@ -1,5 +1,6 @@
 from goreverselookuplib import ReverseLookup
 from goreverselookuplib.AnnotationProcessor import GOAnnotiationsFile
+from goreverselookuplib.Workflows import WorkflowOne
 
 import logging
 
@@ -12,6 +13,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(fu
 file_handler = logging.FileHandler('./log_output/test_json_dump.log')
 file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(logging.Formatter('%(asctime)s [%(filename)s:%(lineno)s] - [%(funcName)s] %(message)s'))
+
+workflow_one = WorkflowOne("diabetes_angio_2\input.txt", "diabetes_angio_2", name="workflow_one")
 
 # Add handlers to the root logger
 #logging.getLogger().addHandler(file_handler)
@@ -57,10 +60,10 @@ if True:
                 "process": "diabetes",
                 "direction": "+"
             },
-            #{
-            #    "process": "angio",
-            #    "direction": "+"
-            #},
+            {
+                "process": "angio",
+                "direction": "+"
+            },
             {
                 "process": "obesity",
                 "direction": "+"
