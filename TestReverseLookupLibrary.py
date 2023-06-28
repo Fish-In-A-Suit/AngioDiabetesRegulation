@@ -38,6 +38,7 @@ Example usage: First workflow (only adv_score and nterms score)
     
     
 Example usage: Second workflow (adv_score, nterms_score, fisher_score, binomial_score)
+# TODO: implement WorkflowTwo
     # Pull GO data #
     model = ReverseLookup.load_model("diabetes_angio_2/data.json")
     model.fetch_all_go_term_names_descriptions()
@@ -72,7 +73,7 @@ Example usage: Second workflow (adv_score, nterms_score, fisher_score, binomial_
     // report.general_report("diabetes_angio_1/general.txt", product_score=adv_score)
 """
 
-test_workflow = True
+test_workflow = False
 
 if test_workflow:
     workflow_one = WorkflowOne("diabetes_angio_3/data.json", "diabetes_angio_3", debug=True)
@@ -126,7 +127,8 @@ goaf = GOAnnotiationsFile()
 binom_score = binomial_test(model, goaf)
 fisher_score = fisher_exact_test(model, goaf)
 model.score_products([adv_score, nterms_score, binom_score, fisher_score])
-model.save_model("diabetes_angio_2/data.json")
+model.save_model("diabetes_angio_2/data_06-06-2023.json")
+model.perform_statistical_analysis(filepath="diabetes_angio_2/stat_analysis")
 
 #model.save_model("diabetes_angio_1/data.json")
 

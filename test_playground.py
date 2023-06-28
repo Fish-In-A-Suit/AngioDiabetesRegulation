@@ -21,8 +21,13 @@ workflow_one = WorkflowOne("diabetes_angio_2\input.txt", "diabetes_angio_2", nam
 
 logger = logging.getLogger(__name__)
 
+# before 06.06.2023
+# model = ReverseLookup.load_model("diabetes_angio_2/data_web_full_scores.json")
+# 06.06.2023:
+model = ReverseLookup.load_model("diabetes_angio_2/data_06-06-2023.json")
+model.perform_statistical_analysis(filepath="diabetes_angio_2/stat_analysis_06-06-2023.json")
+exit()
 
-model = ReverseLookup.load_model("diabetes_angio_2/data_web_full_scores.json")
 
 #test execution speed
 #import timeit
@@ -52,6 +57,7 @@ if False:
     exit()
 
 if True:
+    model.pre
 
     for product in model.products:
         #processes = model.target_processes
@@ -65,9 +71,13 @@ if True:
                 "direction": "+"
             },
             {
-                "process": "obesity",
+                "process": "angio",
                 "direction": "+"
-            }
+            },
+            #{
+            #    "process": "obesity",
+            #    "direction": "+"
+            #}
             ]
         
     #    if (all(float(product.scores["fisher_test"][f"{process['process']}{process['direction']}"]["pvalue_corr"]) < 0.05 for process in processes)):

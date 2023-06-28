@@ -193,7 +193,7 @@ class WorkflowOne(Workflow):
         self.add_function(self.model.fetch_all_go_term_products, web_download=True, recalculate=False)
         self.add_function(self.model.create_products_from_goterms)
         self.add_function(self.model.fetch_ortholog_products, refetch=False)
-        self.add_function(self.model.save_model, self.model_save_filepath) # TODO: UNCOMMENT THESE SAVES
+        self.add_function(self.model.save_model, self.model_save_filepath)
         self.add_function(self.model.fetch_product_infos, refetch=False)
         self.add_function(self.model.save_model, self.model_save_filepath)
         self.add_function(self.model.prune_products)
