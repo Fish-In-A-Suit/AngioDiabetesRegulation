@@ -10,6 +10,7 @@ from json import JSONDecodeError
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 from .FileUtil import FileUtil
+import aiohttp, asyncio
 
 import logging
 
@@ -58,8 +59,7 @@ class GOApi:
             logger.warning(f"Error: {e}")
             return None
 
-    def get_products(self, term_id):
-        
+    def get_products(self, term_id, get_url_only=False): 
         """
         Fetches product IDs associated with a given term ID from the Gene Ontology API. The product IDs can be of any of the following
         databases: UniProt, ZFIN, Xenbase, MGI, RGD [TODO: enable the user to specify databases himself]
@@ -77,8 +77,18 @@ class GOApi:
                       ["RGD", ["NCBITaxon:10116"]]]
         url = f"http://api.geneontology.org/api/bioentity/function/{term_id}/genes"
         params = {"rows": 10000000}
-        products_set = set()
+        
+        # used in async
+        if get_url_only == True:
+            # create a request object with the base url and params
+            request = requests.Request("GET", url, params=params)
+            # prepare the request
+            prepared_request = self.s.prepare_request(request)
+            # get the fully constructed url with parameters
+            url = prepared_request.url
+            return url
 
+        products_set = set()
         max_retries = 5 # try api requests for max 5 times
         for i in range(max_retries):
             try:
@@ -112,10 +122,108 @@ class GOApi:
                         f.write(f"\n\n\n")
                         f.write(f"------------------------------\n")
                 else:
-                    time.sleep(500) # sleep 500ms before trying another http request
+                    #time.sleep(500) # sleep 500ms before trying another http request
+                    time.sleep(0.5) # time.sleep is in SECONDS !!!
                 return None
+    
+    async def get_products_async(self, term_id):
+        """
+        Fetches product IDs associated with a given term ID from the Gene Ontology API. The product IDs can be of any of the following
+        databases: UniProt, ZFIN, Xenbase, MGI, RGD [TODO: enable the user to specify databases himself]
 
+        This function works asynchronously, much faster than it's synchronous 'get_products' counterpart.
 
+        The request uses this link: http://api.geneontology.org/api/bioentity/function/{term_id}/genes
+        
+        Returns:
+          - (string as json) data: a json string, representing the api request response
+        """
+        APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
+                      ["ZFIN", ["NCBITaxon:7955"]],
+                      #["RNAcentral", ["NCBITaxon:9606"]],
+                      ["Xenbase", ["NCBITaxon:8364"]],
+                      ["MGI", ["NCBITaxon:10090"]],
+                      ["RGD", ["NCBITaxon:10116"]]]
+        MAX_RETRIES = 5
+        url = f"http://api.geneontology.org/api/bioentity/function/{term_id}/genes"
+        params = {"rows": 100000}
+
+        global request_iterations
+        request_iterations = 0 # global variable request_iterations to keep track of the amount of requests submitted to the server (maximum is MAX_RETRIES); a harsh bugfix
+        
+        # create a request object with the base url and params
+        #request = requests.Request("GET", url, params=params)
+        # prepare the request
+        #prepared_request = self.s.prepare_request(request)
+        # get the fully constructed url with parameters
+        #url = prepared_request.url
+
+        """ # this code caused timeout errors
+        async with aiohttp.ClientSession() as session:            
+            response = await session.get(url, params=params, timeout=5)
+            # DEBUG: if the above doesn't work, uncomment the request pre-process lines above and use session.get(url) only
+            if response.status == 200:
+                data = await response.json()
+                products_set = set()
+
+                for assoc in data['associations']:
+                    if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                        product_id = assoc['subject']['id']
+                        products_set.add(product_id)
+
+                products = list(products_set)
+                logger.info(f"Fetched products for GO term {term_id}")
+                return products
+            else: # warn of the error; # TODO: implement error logging to file as in 'get_products' function
+                logger.error(f"Couldn't fetch products for {term_id}")
+        """
+        #i=0
+        # TODO: PRODUCT REQUESTS START TO CAUSE TIMEOUT ERRORS AFTER ~15 ASYNC REQUESTS -> BATCH? DIFFERENT IPS?
+        async with aiohttp.ClientSession() as session:
+            #for i in range(MAX_RETRIES):
+            #while i < MAX_RETRIES: # due to the async nature, each iteration resets i; hence "i" is useless -> bugfix: global variable request_iterations
+            while request_iterations < MAX_RETRIES:
+                try:
+                    request_iterations += 1
+                    response = await session.get(url, params=params, timeout=7)
+                    response.raise_for_status() # checks for anything other than status 200
+                    data = await response.json()
+                    products_set = set()
+                    for assoc in data['associations']:
+                        if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                            product_id = assoc['subject']['id']
+                            products_set.add(product_id)
+
+                    products = list(products_set)
+                    logger.info(f"Fetched products for GO term {term_id}")
+                    request_iterations = 0 # reset
+                    return products
+                except (requests.exceptions.RequestException, JSONDecodeError, asyncio.exceptions.TimeoutError) as e :
+                    # logger.error(f"TimoutError on retry attempt {request_iterations}. Exception: {e}")
+                    # i += 1
+                    # if i == (MAX_RETRIES - 1): # this was the last http request, it failed
+                    # if request_iterations == (MAX_RETRIES - 1):
+                    if request_iterations == MAX_RETRIES: # due to while loop logic we don't substract 1
+                        error_log_filepath = FileUtil.find_win_abs_filepath("log_output/error_log")
+                        error_type = type(e).__name__
+                        error_text = str(e)
+
+                        # logger.error(f"Exception type: {error_type}")
+                        # logger.error(f"Exception text: {error_text}")
+                        # logger.error(f"Debug report was written to: {error_log_filepath}")
+                        logger.error(f"https error for {term_id}, error_type = {error_type}, error_text = {error_text}")
+
+                        with open(error_log_filepath, "a+") as f:
+                            f.write(f"Fetch products error for: {term_id}\n")
+                            f.write(f"Exception: {error_type}\n")
+                            f.write(f"Cause: {error_text}\n")
+                            f.write(f"\n\n\n")
+                            f.write(f"------------------------------\n")
+                    else:
+                        # time.sleep(0.5)
+                        time.sleep(1) # maybe with 1s the server won't start to block?
+            # reset
+            request_iterations = 0
 
 class GOAnnotiationsFile:
     """

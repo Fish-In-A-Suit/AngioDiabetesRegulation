@@ -168,15 +168,21 @@ model_async = ReverseLookup.from_input_file("diabetes_angio_4/input.txt")
 #    await asyncio.gather(*tasks)
 #asyncio.run(fetch_name_desc_test_async())
 # above async code was placed into ReverseLookup and can now be called as:
-model_async.fetch_all_go_term_names_descriptions(run_async=True)
+# model_async.fetch_all_go_term_names_descriptions(run_async=True)
 
-model_reference = ReverseLookup.load_model("diabetes_angio_2/data_06-06-2023.json")
+# model_reference = ReverseLookup.load_model("diabetes_angio_2/data_06-06-2023.json")
 
-all_diff = model_async.compare_to(model_reference, compare_field="goterms", compare_subfields=["name", "description"])
-i = 0
-for diff in all_diff:
-    print("\n")
-    i+=1
-    logger.info(f"[{i}]: difference at: {diff}, difference: {all_diff[diff]}")
-logger.info(f"total difference = {all_diff}")
+# all_diff = model_async.compare_to(model_reference, compare_field="goterms", compare_subfields=["name", "description"])
+#i = 0
+#for diff in all_diff:
+#    print("\n")
+#    i+=1
+#    logger.info(f"[{i}]: difference at: {diff}, difference: {all_diff[diff]}")
+#logger.info(f"total difference = {all_diff}")
 ### --- End of ReverseLookup model comparison testing
+
+### Start of ReverseLookup fetch_all_goterm_products async testing
+# model_async = ReverseLookup.from_input_file("diabetes_angio_4/input.txt")
+# model_async.fetch_all_go_term_names_descriptions(run_async=True)
+# model_reference = ReverseLookup.load_model("diabetes_angio_2/data_06-06-2023.json")
+model_async.fetch_all_go_term_products(web_download=True, run_async=True, recalculate=False)

@@ -191,7 +191,7 @@ class WorkflowOne(Workflow):
             self.add_function(self.model._debug_shorten_GO_terms, 5) # in debug mode, shorten the amount of GO Terms to 5
 
         self.add_function(self.model.fetch_all_go_term_names_descriptions)
-        self.add_function(self.model.fetch_all_go_term_products, web_download=True, recalculate=False)
+        self.add_function(self.model.fetch_all_go_term_products, web_download=True, run_async=False, recalculate=False)
         self.add_function(self.model.create_products_from_goterms)
         self.add_function(self.model.fetch_ortholog_products, refetch=False)
         self.add_function(self.model.save_model, self.model_save_filepath)
@@ -229,7 +229,7 @@ class WorkflowTwo(Workflow):
         # Fetch all GO term names and descriptions
         self.add_function(self.model.fetch_all_go_term_names_descriptions)
         # Fetch all GO term products
-        self.add_function(self.model.fetch_all_go_term_products, web_download=True, recalculate=False)
+        self.add_function(self.model.fetch_all_go_term_products, web_download=True, run_async=False, recalculate=False)
         # Create product instances from GO terms
         self.add_function(self.model.create_products_from_goterms)
         # Fetch human ortholog for products (either UniProtID, ENSG or genename)

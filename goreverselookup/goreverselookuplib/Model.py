@@ -127,6 +127,26 @@ class GOTerm:
             products = source.get_products(self.id)
             if products:
                 self.products = products
+    
+    async def fetch_products_async(self, api:GOApi):
+        """
+        Asynchronously queries the products using api.get_products_async, using the
+        await keyword to wait for the request to finish inside the api.
+        """
+        products = await api.get_products_async(self.id)
+        if products:
+            self.products = products
+    
+    """
+    async def fetch_products_async(self, source):
+        #Warning: this function doesn't work if source is GO Annotations File
+        if not isinstance(source, GOApi):
+            logger.warning("Cannot connect asynchronously, if GOApi is not set as source.")
+        async with aiohttp.ClientSession() as session:
+            url = source.get_products(self.id)
+            response = await session.get(url)
+            # TODO: MOVE THIS TO ANNOTATIONPROCESSOR
+    """
 
     def add_process(self, process: Dict):
         if not process in self.processes:
@@ -369,12 +389,13 @@ class ReverseLookup:
             tasks.append(task)
         await asyncio.gather(*tasks)
     
-    def fetch_all_go_term_products(self, web_download: bool = False, recalculate: bool = False):
+    def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
         
         Args:
           - (bool) recalculate: if set to True, will recalculate (fetch again) the term's products even if they already exist (perhaps from a model loaded from data.json)
+          - (bool) run_async: if True, will run web downloads asynchronously, which is 1000x faster than synchronous web downloads
           - (bool) web_download: if set to True, then the products will be downloaded using https api queries. If set to False, then the products for GO Terms will be
                                  parsed from a GOAnnotationFile (http://current.geneontology.org/products/pages/downloads.html).
         """
@@ -386,10 +407,13 @@ class ReverseLookup:
         else:
             source = GOAnnotiationsFile()
 
-        with logging_redirect_tqdm():
-            for goterm in tqdm(self.goterms, desc="Fetch term products"):
-                if goterm.products == [] or recalculate == True: # to prevent recalculation of products if they are already computed
-                    goterm.fetch_products(source)
+        if run_async == True:
+            asyncio.run(self._fetch_all_go_term_products_async(recalculate=False))
+        else:
+            with logging_redirect_tqdm():
+                for goterm in tqdm(self.goterms, desc="Fetch term products"):
+                    if goterm.products == [] or recalculate == True: # to prevent recalculation of products if they are already computed
+                        goterm.fetch_products(source)
 
         # api = GOApi()
         # with logging_redirect_tqdm():
@@ -399,6 +423,24 @@ class ReverseLookup:
         if "fetch_all_go_term_products" not in self.execution_times:
             self.execution_times["fetch_all_go_term_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
+
+    async def _fetch_all_go_term_products_async(self, recalculate: bool = False):
+        """
+        Asynchronously queries the products for all GOTerm objects. Must be a web download.
+        This function is 1000x times faster than it's synchronous 'fetch_all_go_term_products' counterpart
+
+        To call this function, call 'fetch_all_go_term_products' with run_async = True [TODO]
+
+        Args:
+          - (bool) recalculate: if set to True, will recalculate (fetch again) the term's products even if they already exist (perhaps from a model loaded from data.json)
+        """
+        tasks = []
+        api = GOApi()
+        for goterm in self.goterms:
+            if goterm.products == [] or recalculate == True:
+                task = asyncio.create_task(goterm.fetch_products_async(api))
+                tasks.append(task)
+        await asyncio.gather(*tasks)
 
     def create_products_from_goterms(self) -> None:
         """
