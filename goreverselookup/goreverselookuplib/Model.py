@@ -12,6 +12,10 @@ import logging
 import traceback
 from .FileUtil import FileUtil
 from .Timer import Timer
+import asyncio
+import aiohttp
+from .JsonUtil import JsonToClass, SimpleNamespaceUtil
+from types import SimpleNamespace
 
 logger = logging.getLogger(__name__)
 
@@ -82,6 +86,22 @@ class GOTerm:
                 self.description = data['definition']
             logger.info(f"Fetched name and description for GO term {self.id}")
 
+    async def fetch_name_description_async(self, api: GOApi):
+        async with aiohttp.ClientSession() as session:
+            url = api.get_data(self.id, get_url_only=True)
+            response = await session.get(url)
+            if response.status == 200:
+                data = await response.json()
+                if "label" in data:
+                    self.name = data['label']
+                if "definition" in data:
+                    self.description = data['definition']
+                # logger.info(f"Fetched name and description for GO term {self.id}")
+                # print out only 15 desc chars not to clutter console
+                logger.info(f"GOid {self.id}: name = {self.name}, description = {self.description[:15]}...")
+            else:
+                logger.info(f"Query for url {url} failed with response code {response.status}")
+    
     def fetch_products(self, source):
         """
         Fetches UniProtKB products associated with a GO Term and sets the "products" member field of the GO Term to a list of all associated products.
@@ -296,7 +316,7 @@ class TargetProcess:
 from .miRNAprediction import miRDB60predictor
 
 class ReverseLookup:
-    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, execution_times: dict = {}):
+    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, execution_times: dict = {}, statistically_relevant_products = {}):
         """
         A class representing a reverse lookup for gene products and their associated Gene Ontology terms.
 
@@ -314,23 +334,41 @@ class ReverseLookup:
         self.execution_times = execution_times # dict of execution times, logs of runtime for functions
         self.timer = Timer()
 
-    def fetch_all_go_term_names_descriptions(self):
+        # placeholder to populate after perform_statistical_analysis is called
+        self.statistically_relevant_products = {}
+
+    def fetch_all_go_term_names_descriptions(self, run_async = True):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_name_description method for each object.
         """
-        logger.info(f"Fetching GO term names and their ")
         self.timer.set_start_time()
+        api = GOApi()
 
-        api = GOApi()     
-        with logging_redirect_tqdm():
-            for goterm in tqdm(self.goterms):
-                 if goterm.name == None or goterm.description == None: # if goterm.name or description don't exist, then attempt fetch
-                    goterm.fetch_name_description(api)
+        if run_async == True:
+            asyncio.run(self._fetch_all_go_term_names_descriptions_async(api))
+        else:
+            logger.info(f"Fetching GO term names and their descriptions.")
+            # TODO: tqdm prevents any logger.info to be printed to console
+            # tqdm.write(f"Fetching GO term names and their descriptions.")
+            with logging_redirect_tqdm():
+                for goterm in tqdm(self.goterms, desc="Fetch term names and descs"):
+                    if goterm.name == None or goterm.description == None: # if goterm.name or description don't exist, then attempt fetch
+                        goterm.fetch_name_description(api)
         
         if "fetch_all_go_term_names_descriptions" not in self.execution_times: # to prevent overwriting on additional runs of the same model name
             self.execution_times["fetch_all_go_term_names_descriptions"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
+    async def _fetch_all_go_term_names_descriptions_async(self, api:GOApi):
+        """
+        Call fetch_all_go_term_names_descriptions with run_async == True to run this code.
+        """
+        tasks = []
+        for goterm in self.goterms:
+            task = asyncio.create_task(goterm.fetch_name_description_async(api))
+            tasks.append(task)
+        await asyncio.gather(*tasks)
+    
     def fetch_all_go_term_products(self, web_download: bool = False, recalculate: bool = False):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
@@ -349,7 +387,7 @@ class ReverseLookup:
             source = GOAnnotiationsFile()
 
         with logging_redirect_tqdm():
-            for goterm in tqdm(self.goterms):
+            for goterm in tqdm(self.goterms, desc="Fetch term products"):
                 if goterm.products == [] or recalculate == True: # to prevent recalculation of products if they are already computed
                     goterm.fetch_products(source)
 
@@ -464,7 +502,7 @@ class ReverseLookup:
             ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
-                for product in tqdm(self.products):
+                for product in tqdm(self.products, desc="Fetch ortholog products"):
                     # Check if the Product object doesn't have a UniProt ID or genename or ensg_id -> these indicate no ortholog computation has been performed yet
                     # if product.genename == None or refetch == True: # product.genename was still None for a lot of products, despite calling fetch_orthologs
                     if product.had_orthologs_computed == False or refetch == True:
@@ -519,7 +557,7 @@ class ReverseLookup:
             ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
-                for product in tqdm(self.products):
+                for product in tqdm(self.products, desc="Fetch product infos"):
                     # Check if the Product object doesn't have a UniProt ID.
                     # if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and (product.uniprot_id or product.genename or product.ensg_id): # some were still uninitialised, despite calling fetch_product_infos
                     if product.had_fetch_info_computed == False or refetch == True:
@@ -570,7 +608,7 @@ class ReverseLookup:
         # redirect the tqdm logging output to the logging module to avoid interfering with the normal output
         with logging_redirect_tqdm():
             # iterate over each Product object in self.products and score them using the Scoring object
-            for product in tqdm(self.products): # each Product has a field scores - a dictionary between a name of the scoring algorithm and it's corresponding score
+            for product in tqdm(self.products, "Scoring products"): # each Product has a field scores - a dictionary between a name of the scoring algorithm and it's corresponding score
                 for _score_class in score_classes:
                     # NOTE: Current miRNA scoring (self.score_miRNAs) performs miRNA scoring holistically - in one call for all miRNAs in self.miRNAs. It is pointless to call this function here, as it needs to
                     # be called only once. Here, a function for miRNA scoring has to be called, which displays the top N miRNAs, which bind to the specific product.
@@ -627,7 +665,7 @@ class ReverseLookup:
             ensembl_api = EnsemblAPI()
             # Iterate over each Product object in the ReverseLookup object.
             with logging_redirect_tqdm():
-                for product in tqdm(self.products):
+                for product in tqdm(self.products, desc="Fetch mRNA seqs"):
                     # Check if the Product object doesn't have a EnsemblID
                     if product.mRNA == -1 and refetch == False: # product mRNA was already fetched, but unsuccessfully
                         continue
@@ -651,7 +689,7 @@ class ReverseLookup:
             predictor = miRDB60predictor()
             # iterate through each product and predict miRNAs
             with logging_redirect_tqdm():
-                for product in tqdm(self.products):
+                for product in tqdm(self.products, desc="Predict miRNAs"):
                     match_dict = predictor.predict_from_product(product) # bottleneck operation
                     # if there are matches, add them to the corresponding miRNA objects
                     if match_dict is not None:
@@ -737,7 +775,7 @@ class ReverseLookup:
 
         with logging_redirect_tqdm():
             # iterate over miRNAs using tqdm for progress tracking
-            for mirna in tqdm(self.miRNAs):
+            for mirna in tqdm(self.miRNAs, desc="Score miRNAs"):
                 # if there is no overlap, skip the miRNA
                 if not mirna.mRNA_overlaps:
                     continue
@@ -825,6 +863,7 @@ class ReverseLookup:
         data['target_processes'] = self.target_processes
         data['miRNA_overlap_treshold'] = self.miRNA_overlap_treshold
         data['execution_times'] = self.execution_times
+        data['statistically_relevant_products'] = self.statistically_relevant_products
 
         # save goterms
         for goterm in self.goterms:
@@ -835,8 +874,8 @@ class ReverseLookup:
         # save miRNAs
         for miRNA in self.miRNAs:
             data.setdefault('miRNAs', []).append(miRNA.__dict__)
-        # write to file
 
+        # write to file
         try: # this works on mac, not on windows
             current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
             os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True) # Create directory for the report file, if it does not exist
@@ -855,6 +894,200 @@ class ReverseLookup:
             #os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
         except OSError:
             logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
+
+
+    def compare_to(self, compare_model: ReverseLookup, compare_field: str = "", compare_subfields: list = []):
+        """
+        Compares 'compare_field'(s) of this model to the same member fields of 'compare_model'.
+        Example: you want to compare if this model has the same GoTerms as the reference 'compare_model': you supply the reference model,
+        and set compare_field to "goterms".
+
+        Params:
+          - compare_model: a reference ReverseLookup model, against which to compare
+          - compare_field: a member field of a ReverseLookup model. Possible options are:
+                - 'goterms' - to compare go terms
+                - 'products' - to compare products
+                - "" (empty) - compare go terms and products in a single function call
+                - [TODO]: miRNAs
+          - compare_subfields: a list of subfields to compare. For example, if you choose 'goterms' as compare field,
+                               you may choose 'name' to compare if the newly server-queried name of a specific go term equals the name of that go term in the reference model.
+                - if you choose 'goterms' as compare_field, the options are:
+                    - 'name'
+                    - 'description'
+                    - 'weight'
+                    - 'products'
+                    note: 'id' (eg. GO:00008286) is not an option, since it is used to carry out comparisons between this model and reference model.
+                - if you choose 'products' as compare_field, the options are:
+                    - 'id_synonms'
+                    - 'description'
+                    - 'uniprot_id'
+                    - 'ensg_id'
+                    - 'enst_id'
+                    - 'refseq_nt_id'
+                    - 'mRNA'
+                    - 'scores_adv-score'
+                    - 'scores_nterms'
+                    - 'scores_binomial-test'
+                    - 'scores_fisher-test'
+                    note: 'genename' is not an option, since it is used to carry out comparisons between this model and the reference model.
+        
+        Returns:
+
+        
+        """
+        def compare_json_elements(src_json, reference_json, _compare_subfields:list, json_type: str):
+            """
+            Compares source json ('src_json') to reference json ('reference_json'). All compare_fields are compared.
+            'json_type' must be either 'goterms' or 'products'.
+
+            Returns a dictionary of result differences between src_json and reference_json.
+            """
+            result_diff = {} # a list of differences
+            # if we are looping over go terms, then go terms from src and ref are compared with their 'id' field. If we are doing product comparisons, then products are compared using 'genename'.
+            element_identifier = 'id' if json_type == "goterms" else 'genename'
+
+            count = len(reference_json)
+            i = 0
+            for ref_element in reference_json:
+                logger.debug(f"{i}/{count}")
+                i+=1
+                # ref_element = json.dumps(ref_element.__dict__) # json conversion, so we can access elements using ['id'] etc.
+                current_mismatches = []
+                ref_element_id = getattr(ref_element, element_identifier)
+                src_element = None
+                # find the source element with the same id as reference element
+                for src_el in src_json:
+                    if getattr(src_el, element_identifier) == ref_element_id:
+                        src_element = src_el
+                        # src_element = json.dumps(src_el.__dict__)
+                        break
+
+                # if no source element is found, note the difference
+                if src_element == None:
+                    result_diff[ref_element_id] = {'mismatches': ["No source element with same id found."]}
+                    continue
+                
+                # compare all compare_fields, if any are different between ref_element and src_element, note the difference
+                for _compare_subfield in _compare_subfields:
+                    # copy ref_element and src_element to preserve original ref_element and src_element for further comparisons. this copy is made, because in case of comparing score fields (eg adv_score), which are nested twice, _ref_element is reassigned the product.scores json "subelement", so inidividual scores, such as adv_score are computed on a one-nested json.
+                    if "scores" in _compare_subfield:
+                        #_ref_element = ref_element['scores'] #JSON-like approach, this was superseded by the class-based approach
+                        #_src_element = src_element['scores']
+                        _ref_element = getattr(ref_element, "scores") # WARNING: _ref_element is now a JSON
+                        _src_element = getattr(src_element, "scores") # WARNING: _src_element is now a JSON
+                        # convert to class
+                        _ref_element_class_placeholder = JsonToClass(str(_ref_element))
+                        _src_element_class_placeholder = JsonToClass(str(_src_element))
+                        _ref_element = _ref_element_class_placeholder.object_representation
+                        _src_element = _src_element_class_placeholder.object_representation
+                        # score-related comparison subfields are sent in the format 'scores_binomial-test'. To convert to the correct one-nested comparison subfield, choose the exact score (the element after _) and replace '-' by '_'
+                        # 'scores_adv-score' -> 'adv_score'
+                        _compare_subfield = _compare_subfield.split("_")[1].replace("-","_")
+                    else:
+                        _ref_element = ref_element
+                        _src_element = src_element
+                    
+                    
+                    if hasattr(_ref_element, _compare_subfield) and hasattr(_src_element, _compare_subfield):
+                        _ref_element_attr_value = getattr(_ref_element, _compare_subfield)
+                        _src_element_attr_value = getattr(_src_element, _compare_subfield)
+                        
+                        # if ref or src element attr value are classes (namespaces), convert them back to json form; SimpleNamespace is used for type check, since that is the placeholder class used for JSON->class conversion for score jsons
+                        # TODO: find out a way how to convert a SimpleNamespace back to JSON. I've tried creating a JsonToClass custom class, which holds the source json, but
+                        # _ref_element_attr_value can take up only a specific json segment (eg. when _compare_subfield == fisher_test), _ref_element_attr_value corresponds only to the segment of the json, which is encoded by the "fisher_test".
+                        # I cannot obtain such fidelity with access to just source_json.
+                        """
+                        if isinstance(_ref_element_attr_value, SimpleNamespace):
+                            # error: SimpleNamespace is not JSON serializable
+                            #_ref_element_attr_value = json.dumps(_ref_element_attr_value.__dict__)
+                            #_ref_element_attr_value = json.dumps(vars(_ref_element_attr_value))
+                            # test = SimpleNamespaceUtil.simpleNamespace_to_json(_ref_element_attr_value) # TODO: finish this                 
+                        if isinstance(_src_element_attr_value, SimpleNamespace):
+                            # error: SimpleNamespace is not JSON serializable
+                            #_src_element_attr_value = json.dumps(_src_element_attr_value.__dict__)
+                            _src_element_attr_value = json.dumps(vars(_src_element_attr_value))
+                        """
+                        if _ref_element_attr_value == _src_element_attr_value:
+                            continue # no mismatch, both are same values
+                        else: # compare field mismatch, values are different
+                            current_mismatches.append(f"Compare field mismatch for '{_compare_subfield}': ref = '{_ref_element_attr_value}', src = '{_src_element_attr_value}'")
+                    elif not(hasattr(_ref_element, _compare_subfield) and hasattr(_src_element, _compare_subfield)):
+                        continue # no mismatch, neither element has this _compare_subfield
+                    else: # one element has _compare_subfield, other doesn't find out which.
+                        compare_field_in_ref_element = hasattr(_ref_element, _compare_subfield)
+                        compare_field_in_src_element = hasattr(_src_element, _compare_subfield)
+                        current_mismatches.append(f"Compare field '{_compare_subfield}' doesn't exist in reference or source element. Source element: '{compare_field_in_src_element}', Reference element: '{compare_field_in_ref_element}'")
+                    
+                    """ # A JSON-like approach to solving the above class-based approach (which uses hasattr and getattr)
+                    if _compare_subfield in _ref_element and _compare_subfield in _src_element: # check if compare_field is equal in ref and src element
+                        if _ref_element[_compare_subfield] == _src_element[_compare_subfield]:
+                            continue
+                        else: # compare field mismatch
+                            current_mismatches.append(f"Compare field mismatch for '{_compare_subfield}': ref = {_ref_element[_compare_subfield]} --- src = {_src_element[_compare_subfield]}")
+                    elif (_compare_subfield in _ref_element and _compare_subfield not in _src_element) or (_compare_subfield not in _ref_element and _compare_subfield in _src_element): # compare_field is not in ref_element or src_element, find out where
+                        compare_field_in_ref_element = _compare_subfield in _ref_element
+                        compare_field_in_src_element = _compare_subfield in _src_element
+                        current_mismatches.append(f"Compare field '{_compare_subfield}' doesn't exist in reference or source element. Source element: {compare_field_in_src_element}, Reference element: {compare_field_in_ref_element}")
+                    """
+                    if current_mismatches != []: # append mismatches, if any are found, to result_diff
+                        result_diff[ref_element_id] = {'mismatches':current_mismatches}
+            # return
+            return result_diff
+
+        logger.info(f"Comparing src json to reference json.")
+
+        allowed_goterms_subfields = ['name','description','weight','products']
+        allowed_products_subfields = ['id_synonyms','description','uniprot_id','ensg_id','enst_id','refseq_nt_id','mRNA','scores_adv-score','scores_nterms','scores_binomial-test','scores_fisher-test']
+
+        if compare_field == "goterms":
+            # if all compare_subfields are from allowed_goterms_subfields
+            if all(compare_subfield for compare_subfield in compare_subfields if compare_subfield in allowed_goterms_subfields):
+                src_json = self.goterms
+                ref_json = compare_model.goterms
+                _cs = ['name','description','weight','products'] if compare_subfields == [] else compare_subfields
+                goterms_diff = compare_json_elements(src_json, ref_json, _compare_subfields=_cs, json_type="goterms")
+                return goterms_diff # the difference in all _compare_subfields across src_json and ref_json goterms
+            else:
+                logger.error(f"Error: one of the supplied compare_subfields ({compare_subfields}) is not allowed for compare field '{compare_field}'. Allowed compare subfields for '{compare_field}' are {allowed_goterms_subfields}")
+        elif compare_field == "products":
+            # if all compare_subfields are from allowed_products_subfields
+            if all(compare_subfield for compare_subfield in compare_subfields if compare_subfield in allowed_products_subfields):
+                src_json = self.products
+                ref_json = compare_model.products
+                # if compare_fields parameter is empty, then use all allowed compare fields, otherwise use parameter
+                _cs = ['id_synonyms','description','uniprot_id','ensg_id','enst_id','refseq_nt_id','mRNA','scores_adv-score','scores_nterms','scores_binomial-test','scores_fisher-test'] if compare_subfields == [] else compare_subfields
+                products_diff = compare_json_elements(src_json, ref_json, _compare_subfields=_cs, json_type="products")
+                return products_diff # the difference in all _compare_subfields across src_json and ref_json products
+            else:
+                logger.error(f"Error: one of the supplied compare_subfields ({compare_subfields}) is not allowed for compare field '{compare_field}'. Allowed compare subfields for '{compare_field}' are {allowed_products_subfields}")
+        elif compare_field == "": # If compare_field wasn't set, perform comparison on both goterms and products.
+            # deduce which compare subfields should be analysed for goterms and which for products
+            analysis_goterms_subfields = [] # comparisons will be performed on these
+            analysis_products_subfields = [] # comparisons will be performed on these
+            for compare_subfield in compare_subfields:
+                if compare_subfield in allowed_goterms_subfields:
+                    analysis_goterms_subfields.append(compare_subfield)
+                elif compare_subfield in allowed_products_subfields:
+                    analysis_products_subfields.append(compare_subfield)
+                elif compare_subfield in allowed_goterms_subfields and compare_subfield in allowed_products_subfields:
+                    analysis_goterms_subfields.append(compare_subfield)
+                    analysis_products_subfields.append(compare_subfield)
+            
+            goterms_src_json = self.goterms
+            goterms_ref_json = compare_model.goterms
+            # use all allowed_goterms_subfields if analysis_goterms_subfields is empty, else use anaylsis_goterms_subfields
+            _cs = allowed_goterms_subfields if analysis_goterms_subfields == [] else analysis_goterms_subfields
+            goterms_diff = compare_json_elements(goterms_src_json, goterms_ref_json, _compare_subfields=_cs, json_type="goterms")
+
+            products_src_json = self.products
+            products_ref_json = compare_model.products
+            # use all allowed_products_subfields if analysis_products_subfields is empty, else use anaylsis_products_subfields
+            _cs = _cs = allowed_products_subfields if analysis_products_subfields == [] else analysis_products_subfields
+            products_diff = compare_json_elements(products_src_json, products_ref_json, _compare_subfields=_cs, json_type="products")
+
+            # merge both dictionaries
+            return {**goterms_diff, **products_diff}
+            
 
 
     def perform_statistical_analysis(self, test_name = "fisher_test", filepath=""):
@@ -937,6 +1170,7 @@ class ReverseLookup:
             statistically_relevant_products_final[process_pair_code].append(prod.__dict__)
         
         # TODO: save statistical analysis as a part of the model's json and load it up on startup
+        self.statistically_relevant_products = statistically_relevant_products_final
         
         print(f"Finished with product statistical analysis. Found {len(statistically_relevant_products)} statistically relevant products.")
         
@@ -993,6 +1227,11 @@ class ReverseLookup:
         execution_times = {}
         if "execution_times" in data:
             execution_times = data['execution_times']
+        
+        if "statistically_relevant_products" in data:
+            statistically_relevant_products = data['statistically_relevant_products']
+        else:
+            statistically_relevant_products = {}
 
         goterms = []
         for goterm_dict in data['goterms']:
@@ -1006,7 +1245,7 @@ class ReverseLookup:
         for miRNAs_dict in data.get('miRNAs', []):
             miRNAs.append(miRNA.from_dict(miRNAs_dict))
 
-        return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, execution_times=execution_times)
+        return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, execution_times=execution_times, statistically_relevant_products=statistically_relevant_products)
 
     @classmethod
     def from_input_file(cls, filepath: str) -> 'ReverseLookup':

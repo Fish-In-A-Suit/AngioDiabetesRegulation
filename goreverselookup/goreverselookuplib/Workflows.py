@@ -52,6 +52,7 @@ class Workflow:
         self.input_file_fpath = input_file_fpath
         self.save_folder_dir = save_folder_dir
         self.model_save_filepath = os.path.join(save_folder_dir, "data.json")
+        self.model_statistically_relevant_products_filepath = os.path.join(save_folder_dir, "statistically_relevant_data.json")
         self.name = name
 
         if model == None:
@@ -101,7 +102,7 @@ class Workflow:
             self.perform_scoring([adv_score, nterms_score])
         """
         if delete_previous == True:
-            self.scores = [] # clear scores
+            self.scores = [] # clear previous scores
         
         if not isinstance(scoring_classes, list):
             scoring_classes = [scoring_classes]
@@ -217,3 +218,51 @@ class WorkflowOne(Workflow):
 
     #def run_workflow(self):
     #    self.run_workflow()
+
+class WorkflowTwo(Workflow):
+    def __init__(self, input_file_fpath: str = "", save_folder_dir: str = "", model: ReverseLookup = None, name: str = "", debug: bool = False):
+        # constructor chooses appropriate method to initialise the Model based on supplied parameters. A ReverseLookup 'model' instance takes precedence over input_file_fpath.
+        super().__init__(input_file_fpath, save_folder_dir, model, name)
+        self.create_workflow(debug=debug)
+    
+    def create_workflow(self, debug:bool = False, fetch_mirna = False):
+        # Fetch all GO term names and descriptions
+        self.add_function(self.model.fetch_all_go_term_names_descriptions)
+        # Fetch all GO term products
+        self.add_function(self.model.fetch_all_go_term_products, web_download=True, recalculate=False)
+        # Create product instances from GO terms
+        self.add_function(self.model.create_products_from_goterms)
+        # Fetch human ortholog for products (either UniProtID, ENSG or genename)
+        self.add_function(self.model.fetch_ortholog_products, refetch=False)
+        self.add_function(self.model.prune_products)
+        self.add_function(self.model.save_model, self.model_save_filepath)
+        # Fetch product information (from UniprotAPI or EnsemblAPI)
+        self.add_function(self.model.fetch_product_infos, refetch=False)
+        self.add_function(self.model.prune_products)
+        self.add_function(self.model.save_model, self.model_save_filepath)
+
+        # Score products with the scores supplied in scoring_classes
+        self.add_function(self.perform_scoring, scoring_classes=[adv_product_score, nterms, binomial_test, fisher_exact_test])
+        self.add_function(self.model.save_model, self.model_save_filepath)
+
+        # Pull mRNA, perform mRNA-miRNA scoring 
+        if fetch_mirna == True:
+            # Fetch mRNA sequences
+            self.add_function(self.model.fetch_mRNA_sequences)
+            self.add_function(self.model.save_model, self.model_save_filepath)
+            # Predict miRNAs
+            self.add_function(self.model.predict_miRNAs)
+            # Score miRNAs
+            self.add_function(self.model.change_miRNA_overlap_treshold, 0.6, True)
+            self.add_function(self.perform_scoring, scoring_classes=[basic_mirna_score], recalculate=False) 
+            self.add_function(self.model.save_model, self.model_save_filepath)
+        
+        # Perform statistical analysis of relevant products according to the chosen statistical test score
+        # TODO: allow the user to choose which statistical test to use
+        self.add_function(self.model.perform_statistical_analysis, test_name="fisher_test", filepath=self.model_statistically_relevant_products_filepath)
+
+        # TODO: generate report
+        
+
+            
+        

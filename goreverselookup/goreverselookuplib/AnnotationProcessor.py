@@ -32,16 +32,21 @@ class GOApi:
         session.mount("https://", adapter)
         self.s = session
 
-    def get_data(self, term_id):
+    def get_data(self, term_id, get_url_only = False):
         """
         Fetches term data for a given term ID from the Gene Ontology API using http://api.geneontology.org/api/ontology/term/{term_id}, 
         example of a term_id is GO:1903589.
+
+        If get_url_only == True, this will only return the url.
 
         Returns:
           - (string as json) data: a json string, representing the api request response
         """
         url = f"http://api.geneontology.org/api/ontology/term/{term_id}"
         params = {}
+        if get_url_only:
+            return url
+        logger.debug(f"Querying: {url}")
         try:
             response = self.s.get(url, params=params, timeout=5)
             if response.ok:

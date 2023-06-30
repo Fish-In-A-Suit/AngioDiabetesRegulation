@@ -2,7 +2,7 @@ from goreverselookuplib import ReverseLookup
 from goreverselookuplib.AnnotationProcessor import GOAnnotiationsFile
 from goreverselookuplib.Metrics import Metrics, adv_product_score, nterms, basic_mirna_score, binomial_test, fisher_exact_test
 from goreverselookuplib.Report import ReportGenerator
-from goreverselookuplib.Workflows import WorkflowOne
+from goreverselookuplib.Workflows import WorkflowOne,WorkflowTwo
 
 import os
 
@@ -73,13 +73,18 @@ Example usage: Second workflow (adv_score, nterms_score, fisher_score, binomial_
     // report.general_report("diabetes_angio_1/general.txt", product_score=adv_score)
 """
 
-test_workflow = False
+test_workflow = True
+
+# # WorkflowOne process
+#if test_workflow:
+#    workflow_one = WorkflowOne("diabetes_angio_3/data.json", "diabetes_angio_3", debug=True)
+#    workflow_one.run_workflow()
+#    exit()
 
 if test_workflow:
-    workflow_one = WorkflowOne("diabetes_angio_3/data.json", "diabetes_angio_3", debug=True)
-    workflow_one.run_workflow()
+    workflow_two = WorkflowTwo(input_file_fpath="diabetes_angio_4/input.txt", save_folder_dir="diabetes_angio_4", debug=True)
+    workflow_two.run_workflow()
     exit()
-
 
 
 # Define model from input file
@@ -128,7 +133,7 @@ binom_score = binomial_test(model, goaf)
 fisher_score = fisher_exact_test(model, goaf)
 model.score_products([adv_score, nterms_score, binom_score, fisher_score])
 model.save_model("diabetes_angio_2/data_06-06-2023.json")
-model.perform_statistical_analysis(filepath="diabetes_angio_2/stat_analysis")
+model.perform_statistical_analysis(filepath="diabetes_angio_2/stat_analysis.json")
 
 #model.save_model("diabetes_angio_1/data.json")
 
