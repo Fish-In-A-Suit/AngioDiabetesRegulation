@@ -109,3 +109,8 @@ This section explains how to use the legacy, non-class workflow.
 6. Run dev_predict_miRNA_v2.py. It expects product_mRNA_refseq.json to exist in TARGET FOLDER, result is product_mRNA_miRDB-predicted-miRNA-matching.json
 7. Run dev_scoring_miRNA_basic.py; result is mirna_scores.json.
 8. Run dev_generate_report.py; result is report.txt
+
+
+### Useful websites
+  - GO Annotations File explanation: http://geneontology.org/docs/go-annotation-file-gaf-format-2.1/
+  - GO Annotations File download: http://geneontology.org/docs/download-go-annotations/
