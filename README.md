@@ -86,6 +86,10 @@ model = ReverseLookup.ReverseLookup.load_model("diabetes_angio_1/data.json")
 model = ReverseLookup.ReverseLookup.load_model(model_name="V1") # if a model with the same model_name has been saved before
 ```
 
+### TODO: Future additions:
+mogoče bi se dal sparsat iz GAF (Gene Association File-a) podobno kar parsava na internetu. Ker trenutno se mi zdi, da je parsing za GAF napisan tko, da samo uposteva prvi in drugi column (kar predstavlja uniprotkb kodo) in pol isce katermu GOTermu to pripada. Sm pa lihkar opazu, da je v GAF tut dodatn column, kjer zgleda so zapisani tudi vsi analogi, kot npr. zfin in drugi: 
+https://i.ibb.co/M8ks35R/todo1.png
+
 ### Legacy Usage
 This section explains how to use the legacy, non-class workflow.
 
