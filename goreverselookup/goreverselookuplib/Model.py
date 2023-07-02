@@ -9,6 +9,7 @@ import os
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 import logging
+import time
 import traceback
 from .FileUtil import FileUtil
 from .Timer import Timer
@@ -128,11 +129,14 @@ class GOTerm:
             if products:
                 self.products = products
     
-    async def fetch_products_async(self, api:GOApi):
+    async def fetch_products_async(self, api:GOApi, delay = 0.0):
         """
         Asynchronously queries the products using api.get_products_async, using the
         await keyword to wait for the request to finish inside the api.
+        
+        delay is in seconds
         """
+        await asyncio.sleep(delay)
         products = await api.get_products_async(self.id)
         if products:
             self.products = products
@@ -389,7 +393,7 @@ class ReverseLookup:
             tasks.append(task)
         await asyncio.gather(*tasks)
     
-    def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False):
+    def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False, delay:float = 0.0):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
         
@@ -398,6 +402,7 @@ class ReverseLookup:
           - (bool) run_async: if True, will run web downloads asynchronously, which is 1000x faster than synchronous web downloads
           - (bool) web_download: if set to True, then the products will be downloaded using https api queries. If set to False, then the products for GO Terms will be
                                  parsed from a GOAnnotationFile (http://current.geneontology.org/products/pages/downloads.html).
+          - (float) delay: the delay between async requests
         """
         logger.info(f"Started fetching all GO Term products.")
         self.timer.set_start_time()
@@ -408,7 +413,7 @@ class ReverseLookup:
             source = GOAnnotiationsFile()
 
         if run_async == True:
-            asyncio.run(self._fetch_all_go_term_products_async(recalculate=False))
+            asyncio.run(self._fetch_all_go_term_products_async(recalculate=False, delay=delay))
         else:
             with logging_redirect_tqdm():
                 for goterm in tqdm(self.goterms, desc="Fetch term products"):
@@ -424,7 +429,7 @@ class ReverseLookup:
             self.execution_times["fetch_all_go_term_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    async def _fetch_all_go_term_products_async(self, recalculate: bool = False):
+    async def _fetch_all_go_term_products_async(self, recalculate: bool = False, delay:float = 0.0):
         """
         Asynchronously queries the products for all GOTerm objects. Must be a web download.
         This function is 1000x times faster than it's synchronous 'fetch_all_go_term_products' counterpart
@@ -433,12 +438,14 @@ class ReverseLookup:
 
         Args:
           - (bool) recalculate: if set to True, will recalculate (fetch again) the term's products even if they already exist (perhaps from a model loaded from data.json)
+          - (float) delay: the delay between asyncio requests
         """
         tasks = []
         api = GOApi()
         for goterm in self.goterms:
             if goterm.products == [] or recalculate == True:
-                task = asyncio.create_task(goterm.fetch_products_async(api))
+                # sleeping here doesnt fix the server blocking issue!
+                task = asyncio.create_task(goterm.fetch_products_async(api, delay=delay))
                 tasks.append(task)
         await asyncio.gather(*tasks)
 
@@ -1346,6 +1353,7 @@ class ReverseLookup:
                         continue
                     if section == "settings":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
+                        # TODO WARNING: NO LOGIC HERE TO PROCESS HOMO SAPIENS ONLY !?!?!?
                     elif section == "process":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
                         target_processes.append({"process": chunks[0], "direction": chunks[1]})
@@ -1362,8 +1370,7 @@ class ReverseLookup:
 
 
         if not os.path.isabs(filepath): # this process with traceback.extract_stack works correctly on mac, but not on windows.
-            current_dir = os.path.dirname(os.path.abspath(
-                traceback.extract_stack()[0].filename))
+            current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
             mac_filepath = os.path.join(current_dir, filepath) 
         
         try:
@@ -1407,6 +1414,21 @@ class ReverseLookup:
         """
         if count < len(self.goterms):
             self.goterms = self.goterms[0:count]
+
+class ModelSettings:
+    """
+    Represents user-defined settings, which can be set for the model, to change the course of data processing.
+    """
+    def __init__(self) -> ModelSettings:
+        self.homosapiens_only = False
+        self.require_product_evidence_codes = False
+    
+    def set_setting(self, setting_name:str, setting_value:bool):
+        if hasattr(self, setting_name):
+            setattr(self, setting_name, setting_value)
+        else:
+            logger.warning(f"ModelSettings has no attribute {setting_name}! Make sure to programmatically define the attribute.")
+
 
 
 

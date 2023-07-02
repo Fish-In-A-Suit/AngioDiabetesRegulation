@@ -1,6 +1,7 @@
 # --- Input file for Term Enrichment System --- #
 #[name] is the start of new secretion and includes description of data, data is space delimited
 ###settings
+homosapiens_only	False
 ###processes [proces name] [to be expressed + or suppressed -]
 diabetes	+
 angio	+
