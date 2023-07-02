@@ -92,10 +92,10 @@ mogoče bi se dal sparsat iz GAF (Gene Association File-a) podobno kar parsava n
 ![todo1 image](https://i.ibb.co/M8ks35R/todo1.png)
 
   - [ ] input file parse for homo sapiens only has no logic
-Classmethod _from_input_file_ in ReverseLookup class has no logic specified for parsing HomoSapiens_only = True from input.txt. Fix this!
+Classmethod _from_input_file_ in ReverseLookup class has no logic specified for parsing HomoSapiens_only = True from input.txt. Fix this! Groundwork done in ModelSettings class inside Model.py.
 
   - [ ] add setting: require_product_evidence_code
-Setting _require_product_evidence_code_ would allow the user to fine tune the inclusion criteria for GO Terms into the analysis - if set to True, it would only parse the products for GO Terms, which are supported by an evidence code. An evidence code is included in the GAF, I don't know if it's included in the server-request.
+Setting _require_product_evidence_code_ would allow the user to fine tune the inclusion criteria for GO Terms into the analysis - if set to True, it would only parse the products for GO Terms, which are supported by an evidence code. An evidence code is included in the GAF, I don't know if it's included in the server-request. Groundwork done in ModelSettings class inside Model.py.
 
 
 ### Legacy Usage
