@@ -17,159 +17,9 @@ import asyncio
 import aiohttp
 from .JsonUtil import JsonToClass, SimpleNamespaceUtil
 from types import SimpleNamespace
+from .GOTerm import GOTerm # to avoid circular imports, as AnnotationProcessor now uses GOTerm.
 
 logger = logging.getLogger(__name__)
-
-
-class GOTerm:
-    def __init__(self, id: str, processes: List[Dict], name: Optional[str] = None, description: Optional[str] = None, weight: float = 1.0, products: List[str] = []):
-        """
-        A class representing a Gene Ontology term.
-
-        Args:
-            id (str): The ID of the GO term.
-            process (List[Dict]): [{"process" : "angio", "direction" : "+"}]
-            name (str): Name (optional).
-            description (str): A description of the GO term (optional).
-            weight (float): The weight of the GO term.
-            products (list): Products associated with the term (optional).
-        """
-        self.id = id
-        self.processes = processes if isinstance(processes, list) else [processes]
-        self.name = name
-        self.description = description
-        self.weight = float(weight)
-        self.products = products
-
-    def fetch_name_description(self, api: GOApi):
-        """
-        Sets the "name" and "description" member field of the GO Term. The link used to query for the response is http://api.geneontology.org/api/ontology/term/{term_id}.
-        This function sets the "name" field of the GO Term to response['label'] and the "description" field to response['definition']
-
-        Parameters:
-          - (GOApi) api: a GOApi instance
-        
-        Usage and calling:
-            api = GOApi()
-            goterms = ["GO:1903589", ...]
-            for goterm in goterms:
-                goterm.fetch_name_description(api)
-        
-        Example api response is:
-        {
-            'goid': 'GO:1903589', 
-            'label': 'positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis', 
-            'definition': 'Any process that activates or increases the frequency, rate or extent of blood vessel endothelial cell proliferation involved in sprouting angiogenesis.', 
-            'creation_date': '2014-11-04T11:39:47Z', 
-            'synonyms': [
-                'up regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis', 
-                'up-regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis', 
-                'upregulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis'
-                ], 
-            'relatedSynonyms': [
-                'activation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
-                'positive regulation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
-                'up regulation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
-                'up-regulation of blood vessel endothelial cell proliferation during sprouting angiogenesis', 
-                'upregulation of blood vessel endothelial cell proliferation during sprouting angiogenesis'
-                ], 
-            'alternativeIds': [''], 
-            'xrefs': [''], 
-            'subsets': ['']
-        }
-        """
-        logger.info("Fetching GO Term names (labels) and descriptions (definitions).")
-        data = api.get_data(self.id)
-        if data:
-            if "label" in data:
-                self.name = data['label']
-            if "definition" in data:
-                self.description = data['definition']
-            logger.info(f"Fetched name and description for GO term {self.id}")
-
-    async def fetch_name_description_async(self, api: GOApi):
-        async with aiohttp.ClientSession() as session:
-            url = api.get_data(self.id, get_url_only=True)
-            response = await session.get(url)
-            if response.status == 200:
-                data = await response.json()
-                if "label" in data:
-                    self.name = data['label']
-                if "definition" in data:
-                    self.description = data['definition']
-                # logger.info(f"Fetched name and description for GO term {self.id}")
-                # print out only 15 desc chars not to clutter console
-                logger.info(f"GOid {self.id}: name = {self.name}, description = {self.description[:15]}...")
-            else:
-                logger.info(f"Query for url {url} failed with response code {response.status}")
-    
-    def fetch_products(self, source):
-        """
-        Fetches UniProtKB products associated with a GO Term and sets the "products" member field of the GO Term to a list of all associated products.
-        The link used to query for the response is http://api.geneontology.org/api/bioentity/function/{term_id}/genes.
-
-        The product IDs can be of any of the following databases: UniProt, ZFIN, Xenbase, MGI, RGD 
-        [TODO: enable the user to specify databases himself]
-
-        Parameters:
-          - source: can either be a GOApi instance (web-based download) or a GOAnnotationFile isntance (file-based download)
-        
-        Usage and calling:
-            source = GOApi() OR source = GOAnnotationFile()
-            goterms = ["GO:1903589", ...]
-            for goterm in goterms:
-                goterm.fetch_products(source)
-        """
-        if isinstance(source, GOApi):
-            products = source.get_products(self.id)
-            if products:
-                self.products = products
-        elif isinstance(source, GOAnnotiationsFile):
-            products = source.get_products(self.id)
-            if products:
-                self.products = products
-    
-    async def fetch_products_async(self, api:GOApi, delay = 0.0):
-        """
-        Asynchronously queries the products using api.get_products_async, using the
-        await keyword to wait for the request to finish inside the api.
-        
-        delay is in seconds
-        """
-        await asyncio.sleep(delay)
-        products = await api.get_products_async(self.id)
-        if products:
-            self.products = products
-    
-    """
-    async def fetch_products_async(self, source):
-        #Warning: this function doesn't work if source is GO Annotations File
-        if not isinstance(source, GOApi):
-            logger.warning("Cannot connect asynchronously, if GOApi is not set as source.")
-        async with aiohttp.ClientSession() as session:
-            url = source.get_products(self.id)
-            response = await session.get(url)
-            # TODO: MOVE THIS TO ANNOTATIONPROCESSOR
-    """
-
-    def add_process(self, process: Dict):
-        if not process in self.processes:
-            self.processes.append(process)
-
-    @classmethod
-    def from_dict(cls, d: dict):
-        """
-        Creates a GOTerm object from a dictionary.
-
-        Args:
-            d (dict): A dictionary containing the GO term data.
-
-        Returns:
-            A new instance of the GOTerm class.
-        """
-        goterm = cls(d['id'], d['processes'], d.get('name'), d.get(
-            'description'), d.get('weight', 1.0), d.get('products', []))
-        return goterm
 
 class Product:
     def __init__(self, id_synonyms: List[str], genename: str = None, uniprot_id: str = None, description: str = None, ensg_id: str = None, enst_id: str = None, refseq_nt_id: str = None, mRNA: str = None, scores: dict = None, had_orthologs_computed: bool = False, had_fetch_info_computed:bool = False):
@@ -361,6 +211,25 @@ class ReverseLookup:
         # placeholder to populate after perform_statistical_analysis is called
         self.statistically_relevant_products = {}
 
+        self.model_settings = ModelSettings()
+    
+    def set_model_settings(self, model_settings: ModelSettings):
+        """
+        Sets self.model_settings to the model settings supplied in the parameter.
+        """
+        self.model_settings = model_settings
+    
+    def set_model_setting(self, setting:str, value):
+        """
+        If the attribute 'setting' in self.model_settings (ModelSettings) exists, sets its value
+        to 'value'
+        """
+        if hasattr(self.model_settings, setting):
+            setattr(self.model_settings, setting, value)
+        else:
+            logger.warning(f"ModelSettings object has no attribute {setting}!")
+
+    
     def fetch_all_go_term_names_descriptions(self, run_async = True):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_name_description method for each object.
@@ -393,7 +262,7 @@ class ReverseLookup:
             tasks.append(task)
         await asyncio.gather(*tasks)
     
-    def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False, delay:float = 0.0):
+    def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False, delay:float = 0.0, run_async_options:str="v1", request_params={"rows":20000}, max_connections = 100):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
         
@@ -403,6 +272,14 @@ class ReverseLookup:
           - (bool) web_download: if set to True, then the products will be downloaded using https api queries. If set to False, then the products for GO Terms will be
                                  parsed from a GOAnnotationFile (http://current.geneontology.org/products/pages/downloads.html).
           - (float) delay: the delay between async requests
+          - (str) run_async_options: either v1 or v2 (for development purposes)
+                - v1 created as many ClientSession objects as there are goterms -> result is roughly 20 async threads in call stack, and there is no control
+                  over the amount of requests sent to the server, since each ClientSession is sending only one request, but they simultaneously clutter the server.
+                  The result are 504 bad gateway requests
+                - v2 creates only one ClientSession object for all goterms (further divisions could be possible for maybe 2 or 4 ClientSessions to segment the goterms),
+                  which allows us to control the amount of requests sent to the server. The result is that the server doesn't detect us as bots and doesn't block our requests.
+                  v2 should be used. [TODO: FIRST: FINE TUNE RESPONSE ROW COUNT TO GATHER ALL INFO, THEN speed up the entire process of v2 !!!]
+                - v3 is a speed up of v2
         """
         logger.info(f"Started fetching all GO Term products.")
         self.timer.set_start_time()
@@ -413,7 +290,12 @@ class ReverseLookup:
             source = GOAnnotiationsFile()
 
         if run_async == True:
-            asyncio.run(self._fetch_all_go_term_products_async(recalculate=False, delay=delay))
+            if run_async_options == "v1":
+                asyncio.run(self._fetch_all_go_term_products_async(recalculate=False, delay=delay))
+            elif run_async_options == "v2":
+                asyncio.run(self._fetch_all_goterm_products_async_v2(max_connections=max_connections, request_params=request_params, req_delay=delay))
+            elif run_async_options == "v3":
+                asyncio.run(self._fetch_all_goterm_products_async_v3(max_connections=max_connections, request_params=request_params, req_delay=delay))
         else:
             with logging_redirect_tqdm():
                 for goterm in tqdm(self.goterms, desc="Fetch term products"):
@@ -448,6 +330,56 @@ class ReverseLookup:
                 task = asyncio.create_task(goterm.fetch_products_async(api, delay=delay))
                 tasks.append(task)
         await asyncio.gather(*tasks)
+
+    async def _fetch_all_goterm_products_async_v2(self, max_connections = 100, request_params = {"rows":20000}, req_delay = 0.5):
+        """
+        In comparison to _fetch_all_go_term_products_async, this function doesn't overload the server and cause the server to block our requests.
+        """
+        APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
+                      ["ZFIN", ["NCBITaxon:7955"]],
+                      #["RNAcentral", ["NCBITaxon:9606"]],
+                      ["Xenbase", ["NCBITaxon:8364"]],
+                      ["MGI", ["NCBITaxon:10090"]],
+                      ["RGD", ["NCBITaxon:10116"]]]
+        api = GOApi()
+
+        connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections) # default is 100
+        async with aiohttp.ClientSession(connector=connector) as session:
+            for goterm in self.goterms:
+                url = api.get_products(goterm.id,get_url_only=True, request_params=request_params)
+                await asyncio.sleep(req_delay) # request delay
+                response = await session.get(url)
+
+                if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
+                    logger.warning(f"HTTP Error when parsing {goterm.id}. Response status = {response.status}")
+                    goterm.http_error_codes["products"] = f"HTTP Error: status = {response.status}, reason = {response.reason}"
+                
+                data = await response.json()
+                products_set = set()
+                for assoc in data['associations']:
+                    if assoc['object']['id'] == goterm.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                        product_id = assoc['subject']['id']
+                        products_set.add(product_id)
+
+                products = list(products_set)
+                logger.info(f"Fetched products for GO term {goterm.id}")
+                goterm.products = products
+    
+    # TODO: IMPROVE SPEED UP USING ASYNCIO.GATHER: Instead of awaiting each request individually in a loop, you can use asyncio.gather() 
+    # to concurrently execute multiple requests. This allows the requests to be made in parallel, which can significantly improve performance.
+    async def _fetch_all_goterm_products_async_v3(self, max_connections = 100, request_params = {"rows":20000}, req_delay = 0.5):
+        """
+        In comparison to (GOApi)._fetch_all_go_term_products_async, this function doesn't overload the server and cause the server to block our requests.
+        In comparison to the v2 version of this function (inside GOApi), v3 uses asyncio.gather, which speeds up the async requests.
+        """
+        connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections) # default is 100
+        async with aiohttp.ClientSession(connector=connector) as session:
+            tasks = []
+            for goterm in self.goterms:
+                task = goterm.fetch_products_async_v3(session, request_params=request_params, req_delay=req_delay)
+                tasks.append(task)
+            # perform multiple tasks at once asynchronously
+            await asyncio.gather(*tasks)
 
     def create_products_from_goterms(self) -> None:
         """
@@ -945,7 +877,7 @@ class ReverseLookup:
             logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
 
 
-    def compare_to(self, compare_model: ReverseLookup, compare_field: str = "", compare_subfields: list = []):
+    def compare_to(self, compare_model: ReverseLookup, compare_field: str = "", compare_subfields: list = [], exclude_http_errors=True):
         """
         Compares 'compare_field'(s) of this model to the same member fields of 'compare_model'.
         Example: you want to compare if this model has the same GoTerms as the reference 'compare_model': you supply the reference model,
@@ -979,9 +911,9 @@ class ReverseLookup:
                     - 'scores_binomial-test'
                     - 'scores_fisher-test'
                     note: 'genename' is not an option, since it is used to carry out comparisons between this model and the reference model.
+          - exclude_http_errors: If true, will exclude goterms from comparison, which had known http errors [TODO]
         
         Returns:
-
         
         """
         def compare_json_elements(src_json, reference_json, _compare_subfields:list, json_type: str):
@@ -1056,8 +988,29 @@ class ReverseLookup:
                             #_src_element_attr_value = json.dumps(_src_element_attr_value.__dict__)
                             _src_element_attr_value = json.dumps(vars(_src_element_attr_value))
                         """
-                        if _ref_element_attr_value == _src_element_attr_value:
+                        if isinstance (_ref_element_attr_value, list) and isinstance(_src_element_attr_value, list):
+                            """
+                            We are dealing with two lists. Check if all elements from _ref_element_attr_value list can be found in _src_element_attr_value
+                            """
+                            missing_ref_elements_in_src = []
+                            missing_src_elements_in_ref = []
+
+                            # check for reference elements in src
+                            for ref_e in _ref_element_attr_value:
+                                if ref_e not in _src_element_attr_value:
+                                    missing_ref_elements_in_src.append(ref_e)
+                            
+                            # check for src elements in ref
+                            for src_e in _src_element_attr_value:
+                                if src_e not in _ref_element_attr_value:
+                                    missing_src_elements_in_ref.append(src_e)
+                            
+                            if missing_ref_elements_in_src != [] or missing_src_elements_in_ref != []:
+                                current_mismatches.append(f"Compare field array mismatch for '{_compare_subfield}'\\n   - missing reference elements in src: {missing_ref_elements_in_src}\\n    - missing source elements in reference: {missing_src_elements_in_ref}\\n    - ref = {_ref_element_attr_value}\\n    - src = {_src_element_attr_value}")
+                        
+                        elif _ref_element_attr_value == _src_element_attr_value:
                             continue # no mismatch, both are same values
+                        
                         else: # compare field mismatch, values are different
                             current_mismatches.append(f"Compare field mismatch for '{_compare_subfield}': ref = '{_ref_element_attr_value}', src = '{_src_element_attr_value}'")
                     elif not(hasattr(_ref_element, _compare_subfield) and hasattr(_src_element, _compare_subfield)):

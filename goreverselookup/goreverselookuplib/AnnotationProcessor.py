@@ -59,7 +59,7 @@ class GOApi:
             logger.warning(f"Error: {e}")
             return None
 
-    def get_products(self, term_id, get_url_only=False): 
+    def get_products(self, term_id, get_url_only=False, request_params = {"rows": 10000000}): 
         """
         Fetches product IDs associated with a given term ID from the Gene Ontology API. The product IDs can be of any of the following
         databases: UniProt, ZFIN, Xenbase, MGI, RGD [TODO: enable the user to specify databases himself]
@@ -76,7 +76,7 @@ class GOApi:
                       ["MGI", ["NCBITaxon:10090"]],
                       ["RGD", ["NCBITaxon:10116"]]]
         url = f"http://api.geneontology.org/api/bioentity/function/{term_id}/genes"
-        params = {"rows": 10000000}
+        params = request_params
         
         # used in async
         if get_url_only == True:
@@ -179,7 +179,9 @@ class GOApi:
         """
         #i=0
         # TODO: PRODUCT REQUESTS START TO CAUSE TIMEOUT ERRORS AFTER ~15 ASYNC REQUESTS -> BATCH? DIFFERENT IPS?
-        async with aiohttp.ClientSession() as session:
+        # as per: https://stackoverflow.com/questions/51248714/aiohttp-client-exception-serverdisconnectederror-is-this-the-api-servers-issu
+        connector = aiohttp.TCPConnector(limit=20) # default limit is 100
+        async with aiohttp.ClientSession(connector=connector) as session:
             #for i in range(MAX_RETRIES):
             #while i < MAX_RETRIES: # due to the async nature, each iteration resets i; hence "i" is useless -> bugfix: global variable request_iterations
             while request_iterations < MAX_RETRIES:
@@ -224,6 +226,105 @@ class GOApi:
                         time.sleep(1) # maybe with 1s the server won't start to block?
             # reset
             request_iterations = 0
+    
+    async def get_products_async_notimeout(self, term_id):
+        """
+        A testing variant of get_products_async. Doesn't include timeout in the url request, no retries.
+        """
+        APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
+                      ["ZFIN", ["NCBITaxon:7955"]],
+                      #["RNAcentral", ["NCBITaxon:9606"]],
+                      ["Xenbase", ["NCBITaxon:8364"]],
+                      ["MGI", ["NCBITaxon:10090"]],
+                      ["RGD", ["NCBITaxon:10116"]]]
+        url = f"http://api.geneontology.org/api/bioentity/function/{term_id}/genes"
+        params = {"rows": 20000} # 10k rows resulted in 56 mismatches for querying products for 200 goterms (compared to reference model, loaded from synchronous query data)
+        # DELAY = 1 # 1 second delay between requests
+
+        # as per: https://stackoverflow.com/questions/51248714/aiohttp-client-exception-serverdisconnectederror-is-this-the-api-servers-issu
+        connector = aiohttp.TCPConnector(limit=20, limit_per_host=20) # default limit is 100
+        # as per: https://stackoverflow.com/questions/64534844/python-asyncio-aiohttp-timeout; DOESNT WORK!
+        # session_timeout =   aiohttp.ClientTimeout(total=None,sock_connect=10,sock_read=10) -> async with aiohttp.ClientSession(connector=connector, timeout=session_timeout) as session; 
+        # https://github.com/aio-libs/aiohttp/issues/3187 -> 504 gateways are server-limited !
+
+        ### POSSIBLE ERROR SOLUTION ### [TODO: continue from here]
+        # Current algorithm creates one aiohttp.ClientSession FOR EACH GOTERM. Therefore, each ClientSession only has one connection,
+        # and the checks for connection limiting aren't enforeced. During runtime, there can be as many as 200 (as many as there are goterms)
+        # active ClientSessions, each with only one request. You should code in the following manner:
+        #
+        # async def make_requests():
+        #    connector = aiohttp.TCPConnector(limit=20, limit_per_host=20)
+        #    async with aiohttp.ClientSession(connector=connector) as session:
+        #        urls = [...]  # List of URLs to request
+        #        for url in urls:
+        #            await asyncio.sleep(1)  # Introduce a 1-second delay between requests
+        #            response = await session.get(url)
+        #            # Process the response
+
+        async with aiohttp.ClientSession(connector=connector) as session:
+            response = await session.get(url, params=params)
+            # response.raise_for_status() # checks for anything other than status 200
+            if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
+                logger.warning(f"HTTP Error when parsing {term_id}. Response status = {response.status}")
+                return f"HTTP Error: status = {response.status}, reason = {response.reason}"
+                     
+            data = await response.json()
+            products_set = set()
+            for assoc in data['associations']:
+                if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                    product_id = assoc['subject']['id']
+                    products_set.add(product_id)
+
+            products = list(products_set)
+            logger.info(f"Fetched products for GO term {term_id}")
+            return products
+        
+    """ THIS CAUSED CIRCULAR IMPORT DUE TO GOTerm -> was moved into the GOTerm class
+    async def get_products_async_v3(self, goterm:GOTerm, session:aiohttp.ClientSession, request_params = {"rows":20000}, req_delay=0.5):
+        
+        #A testing variant of get_products_async. Doesn't include timeout in the url request, no retries.
+        #Doesn't create own ClientSession, but relies on external ClientSession, hence doesn't overload the server as does the get_products_async_notimeout function.
+        
+        # Previous algorithm created one aiohttp.ClientSession FOR EACH GOTERM. Therefore, each ClientSession only had one connection,
+        # and the checks for connection limiting weren't enforeced. During runtime, there could be as many as 200 (as many as there are goterms)
+        # active ClientSessions, each with only one request. You should code in the following manner:
+        #
+        # async def make_requests():
+        #    connector = aiohttp.TCPConnector(limit=20, limit_per_host=20)
+        #    async with aiohttp.ClientSession(connector=connector) as session:
+        #        urls = [...]  # List of URLs to request
+        #        for url in urls:
+        #            await asyncio.sleep(1)  # Introduce a 1-second delay between requests
+        #            response = await session.get(url)
+        #            # Process the response
+        
+        APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
+                      ["ZFIN", ["NCBITaxon:7955"]],
+                      #["RNAcentral", ["NCBITaxon:9606"]],
+                      ["Xenbase", ["NCBITaxon:8364"]],
+                      ["MGI", ["NCBITaxon:10090"]],
+                      ["RGD", ["NCBITaxon:10116"]]]
+        url = f"http://api.geneontology.org/api/bioentity/function/{goterm.id}/genes"
+        params = request_params # 10k rows resulted in 56 mismatches for querying products for 200 goterms (compared to reference model, loaded from synchronous query data)
+        
+        asyncio.sleep(req_delay)
+        response = await session.get(url, params=params)
+        if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
+            logger.warning(f"HTTP Error when parsing {goterm.id}. Response status = {response.status}")
+            return f"HTTP Error: status = {response.status}, reason = {response.reason}"
+        
+        data = await response.json()
+        products_set = set()
+        for assoc in data['associations']:
+            if assoc['object']['id'] == goterm.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                product_id = assoc['subject']['id']
+                products_set.add(product_id)
+
+        products = list(products_set)
+        goterm.products = products
+        logger.info(f"Fetched products for GO term {goterm.id}")
+        return products      
+    """      
 
 class GOAnnotiationsFile:
     """
