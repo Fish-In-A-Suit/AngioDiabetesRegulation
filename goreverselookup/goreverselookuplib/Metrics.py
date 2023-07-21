@@ -372,6 +372,24 @@ class binomial_test(Metrics):
         return results_dict
             
 class fisher_exact_test(Metrics):
+    """
+    Recimo da imaš 3 processe, katere zelis da se skupaj zgodijo: za vsak process določiš 
+    dva seta, enega z gotermi, ki sprožajo proces in enega z gotermi, ki zavirajo process 
+    (negative regulation + posredno zaviralci prek nasprotujočih se procesov). 
+    Nato določiš še splošni set (vsebuje vse goterme, ki se pojavljajo v tvojem tarčnem 
+    "organizmu", to ubistu pomeni kar vsi gotermi v GO, izjemno redko bi ožal, če bi imel 
+    kak specifičen primer), s katerim boš primerjal vsakega od prej definiranih dveh setov 
+    za vsak proces. Nato za vsak gen "nardis" kontingencno tabelco in izračunaš p-vrednost 
+    po Fischer's exact test in s tem dobimo p vrednost.
+    
+    In gen je kandidatni samo ce je p vrednost recmo manjsa od 0.05 v vseh procesih in ni 
+    manjsa od 0.05 v nobenem od setov gotermov, ki zavirajo proces. Aha pa se to: 
+    ker ubistu vsakemu genu izracunava 2*N(processov) p-vrednosti, je to treba upostevat, 
+    recimo bonferoni popravek za p vrednost je (target p-value)/number of test. No cisto 
+    nakoncu lahko iz Nprocessov p-vrednosti za sete, ki pospesujejo process izracunava neko 
+    meta-p vrednost, ki bi bla recmo povprecje al pa neki tazga (to morm se preucit), in nato 
+    bi za razvrstitev kandidatnih genov zracunala se -log(p-value) in risk ratio.
+    """
     def __init__(self, model: ReverseLookup, goaf: GOAnnotiationsFile):
         super().__init__(model) 
         self.goaf = goaf
