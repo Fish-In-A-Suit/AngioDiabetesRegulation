@@ -317,18 +317,20 @@ class binomial_test(Metrics):
         self._num_all_goterms = 0
     
     def metric(self, product: Product) -> Dict:
-        
+        # get the count of all GO terms from the GOAF
         if self._num_all_goterms == 0:
             self._num_all_goterms = len(self.goaf.get_all_terms())
         
         results_dict = {}
         
         for process in self.reverse_lookup.target_processes:
-            process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"])
-            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename))
+            process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"]) # get all (positive, negative, neutral) GO terms for this process from the input file
+            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename)) # get all GO terms associated with this product from the GOAF
             num_goterms_all_general = self._num_all_goterms
             for direction in ['+', '-']:
+                # num goterms associated with input Product p AND the current process (including process direction)
                 num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(i['direction'] == direction for i in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
+                # num goterms associated with this process (incl. direction)
                 num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(i['direction'] == direction for i in goterm.processes))
                 
                 #time for Binomial test and "risk ratio"
