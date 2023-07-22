@@ -373,19 +373,33 @@ class binomial_test(Metrics):
             
 class fisher_exact_test(Metrics):
     """
-    Each process can have 2 sets of GO terms - one set includes GO terms which promote, 
-    and the other set includes GO terms which inhibit the process. The “general” set 
-    contains all GO terms in existence (found in the GOAF).
+    Each process can have 2 sets of GO terms - one set includes GO terms, which promote, and the other set includes GO terms which inhibit the process. The “general” set contains all GO terms in existence (found in the GOAF).
 
-    For each gene, we construct a contingency table (todo: give example with absolute 
-    values) and calculate the p values according to Fischer’s exact test.
+    For each gene, we construct a contingency table (todo: give example with absolute values) and calculate the p values according to Fischer’s exact test.
 
-    The gene is a candidate gene for a “positive” (stimulatory) cross section 
-    (eg angiogenesis + diabetes) only if p<0.05 for all stimulatory processes (
-    angio+, diab+) and p>0.05 for all inhibitory processes (angio-,diab-). 
-    Because we calculate 2*n_processes (each process has + or - direction) p values 
-    for each gene, we need to calculate the final overall p value using BH correction.
+    The gene is a candidate gene for a “positive” (stimulatory) cross section (eg angiogenesis + diabetes) only if p<0.05 for all stimulatory processes (angio+, diab+) and p>0.05 for all inhibitory processes (angio-,diab-). Because we calculate 2*n_processes (each process has + or - direction) p values for each gene, we need to calculate the final overall p value using BH correction.
+
+    Example: consider process “angiogenesis+”. Let there exist 100 GO terms, which stimulate angiogenesis. The gene in question is SOX2, which is associated in 10 of the 100 GO terms of angiogenesis+. Gene SOX2 is also associated with 100 GO terms in the “general” set (containing all existing GO terms - 10000 GO terms).
+	                              | n GOt (contains SOX2)	   | n GOt (doesnt contain SOX2)  | total
+    --------------------------------------------------------------------------------------------------
+    set of GOt for angio+         | 10	                      | 100-10=90	                   | 100
+    --------------------------------------------------------------------------------------------------
+    general set of GOt (all)      |                         |                              |
+    MINUS set of GOt for angio+   | (100-10)=90	          | (9900-(100-10))=9810	       | 9900
+    --------------------------------------------------------------------------------------------------
+    total	                       | 100	                  | 9900	                      | 10000
     
+    The same table with filled out base code variables for the Fisher's test:
+                                  | n GOt (contains SOX2) 	    | n GOt (doesnt contain SOX2)  | total
+    --------------------------------------------------------------------------------------------------
+    set of GOt for angio+         | num_goterms_product_process  | ?                             | a
+    --------------------------------------------------------------------------------------------------
+    general set of GOt (all)      |                              |                              |
+    MINUS set of GOt for angio+   | ?                            | ? 
+    --------------------------------------------------------------------------------------------------
+    total	                       | num_goterms_product_general  |
+
+
     Ladi original:
     Recimo da imaš 3 processe, katere zelis da se skupaj zgodijo: za vsak process določiš 
     dva seta, enega z gotermi, ki sprožajo proces in enega z gotermi, ki zavirajo process 
