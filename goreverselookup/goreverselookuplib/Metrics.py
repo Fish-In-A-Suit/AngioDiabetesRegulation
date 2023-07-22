@@ -373,13 +373,24 @@ class binomial_test(Metrics):
             
 class fisher_exact_test(Metrics):
     """
-    Each process can have 2 sets of GO terms - one set includes GO terms, which promote, and the other set includes GO terms which inhibit the process. The “general” set contains all GO terms in existence (found in the GOAF).
+    Each process can have 2 sets of GO terms - one set includes GO terms, which promote, 
+    and the other set includes GO terms which inhibit the process. The “general” set 
+    contains all GO terms in existence (found in the GOAF).
 
-    For each gene, we construct a contingency table (todo: give example with absolute values) and calculate the p values according to Fischer’s exact test.
+    For each gene, we construct a contingency table and calculate the p values according 
+    to Fischer’s exact test.
 
-    The gene is a candidate gene for a “positive” (stimulatory) cross section (eg angiogenesis + diabetes) only if p<0.05 for all stimulatory processes (angio+, diab+) and p>0.05 for all inhibitory processes (angio-,diab-). Because we calculate 2*n_processes (each process has + or - direction) p values for each gene, we need to calculate the final overall p value using BH correction.
+    The gene is a candidate gene for a “positive” (stimulatory) cross section 
+    (eg angiogenesis + diabetes) only if p<0.05 for all stimulatory processes 
+    (angio+, diab+) and p>0.05 for all inhibitory processes (angio-,diab-). 
+    Because we calculate 2*n_processes (each process has + or - direction) p values 
+    for each gene, we need to calculate the final overall p value using BH correction.
 
-    Example: consider process “angiogenesis+”. Let there exist 100 GO terms, which stimulate angiogenesis. The gene in question is SOX2, which is associated in 10 of the 100 GO terms of angiogenesis+. Gene SOX2 is also associated with 100 GO terms in the “general” set (containing all existing GO terms - 10000 GO terms).
+    Example: consider process “angiogenesis+”. Let there exist 100 GO terms, which 
+    stimulate angiogenesis. The gene in question is SOX2, which is associated in 10 
+    of the 100 GO terms of angiogenesis+. Gene SOX2 is also associated with 100 GO 
+    terms in the “general” set (containing all existing GO terms - 10000 GO terms).
+    
 	                              | n GOt (contains SOX2)	   | n GOt (doesnt contain SOX2)  | total
     --------------------------------------------------------------------------------------------------
     set of GOt for angio+         | 10	                      | 100-10=90	                   | 100
@@ -392,12 +403,22 @@ class fisher_exact_test(Metrics):
     The same table with filled out base code variables for the Fisher's test:
                                   | n GOt (contains SOX2) 	    | n GOt (doesnt contain SOX2)  | total
     --------------------------------------------------------------------------------------------------
-    set of GOt for angio+         | num_goterms_product_process  | ?                             | a
+    set of GOt for angio+         | num_goterms_product_process  | ?                            | num_goterms_all_process
     --------------------------------------------------------------------------------------------------
-    general set of GOt (all)      |                              |                              |
-    MINUS set of GOt for angio+   | ?                            | ? 
+    general set of GOt (all)      |                              |                              | 
+    MINUS set of GOt for angio+   | ?                            | ?                            | num_goterms_all_general
     --------------------------------------------------------------------------------------------------
-    total	                       | num_goterms_product_general  |
+    total	                       | num_goterms_product_general  | num_goterms_all_general      |
+
+    The complete table can now be calculated:
+                                  | n GOt (contains SOX2) 	     | n GOt (doesnt contain SOX2)                              | total
+    -------------------------------------------------------------------------------------------------------------------------------------------------------
+    set of GOt for angio+         | num_goterms_product_process   | num_goterms_all_process - num_goterms_product_process    |  num_goterms_all_process
+    -------------------------------------------------------------------------------------------------------------------------------------------------------
+    general set of GOt (all)      | num_goterms_product_general - | num_goterms_all_general -                                | 
+    MINUS set of GOt for angio+   | num_goterms_product_process   | (num_goterms_all_process - num_goterms_product_process)  | num_goterms_all_general
+    -------------------------------------------------------------------------------------------------------------------------------------------------------
+    total	                       | num_goterms_product_general   | num_goterms_all_general                                  |
 
 
     Ladi original:
