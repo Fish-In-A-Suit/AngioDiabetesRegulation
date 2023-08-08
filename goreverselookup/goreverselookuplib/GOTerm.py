@@ -129,7 +129,7 @@ class GOTerm:
             if products:
                 self.products = products
     
-    async def fetch_products_async(self, api:GOApi, delay = 0.0):
+    async def fetch_products_async_v1(self, api:GOApi, delay = 0.0):
         """
         Asynchronously queries the products using api.get_products_async, using the
         await keyword to wait for the request to finish inside the api.
@@ -149,7 +149,7 @@ class GOTerm:
     
     async def fetch_products_async_v3(self, session:aiohttp.ClientSession, request_params = {"rows":20000}, req_delay=0.5):
         """
-        A testing variant of get_products_async. Doesn't include timeout in the url request, no retries.
+        A better variant of get_products_async. Doesn't include timeout in the url request, no retries.
         Doesn't create own ClientSession, but relies on external ClientSession, hence doesn't overload the server as does the get_products_async_notimeout function.
         
         # Previous algorithm created one aiohttp.ClientSession FOR EACH GOTERM. Therefore, each ClientSession only had one connection,

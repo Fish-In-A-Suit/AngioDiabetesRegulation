@@ -273,13 +273,80 @@ class ReverseLookup:
                                  parsed from a GOAnnotationFile (http://current.geneontology.org/products/pages/downloads.html).
           - (float) delay: the delay between async requests
           - (str) run_async_options: either v1 or v2 (for development purposes)
-                - v1 created as many ClientSession objects as there are goterms -> result is roughly 20 async threads in call stack, and there is no control
+                - v1 created as many ClientSession objects as there are goterms -> there is no control
                   over the amount of requests sent to the server, since each ClientSession is sending only one request, but they simultaneously clutter the server.
                   The result are 504 bad gateway requests
                 - v2 creates only one ClientSession object for all goterms (further divisions could be possible for maybe 2 or 4 ClientSessions to segment the goterms),
                   which allows us to control the amount of requests sent to the server. The result is that the server doesn't detect us as bots and doesn't block our requests.
                   v2 should be used. [TODO: FIRST: FINE TUNE RESPONSE ROW COUNT TO GATHER ALL INFO, THEN speed up the entire process of v2 !!!]
                 - v3 is a speed up of v2
+        
+        Developer explanation for v1, v2 and v3 versions of async:
+          - *** async version 1 ***
+            code:
+                tasks = []
+                api = GOApi()
+                for goterm in self.goterms:
+                    if goterm.products == [] or recalculate == True:
+                        task = asyncio.create_task(goterm.fetch_products_async_v1(api, delay=delay))
+                            --- ---
+                            await asyncio.sleep(delay)
+                            # products = await api.get_products_async(self.id)
+                            products = await api.get_products_async_notimeout(self.id)
+                                --- ---
+                                url = f"http://api.geneontology.org/api/bioentity/function/{term_id}/genes"
+                                connector = aiohttp.TCPConnector(limit=20, limit_per_host=20)
+                                async with aiohttp.ClientSession(connector=connector) as session:
+                                    response = await session.get(url, params=params)
+                                    ...
+                                --- ---
+                            --- ---
+                        tasks.append(task)
+                await asyncio.gather(*tasks)
+            
+            explanation: 
+                The connector object is created for each GO Term object. There is no single "master" connector,
+                hence connections to the server aren't controlled. The server is overloaded with connections and blocks incoming
+                connections.
+          
+          - *** async version 2 ***
+            code:
+                api = GOApi()
+                connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections) # default is 100
+                async with aiohttp.ClientSession(connector=connector) as session:
+                    for goterm in self.goterms:
+                        url = api.get_products(goterm.id,get_url_only=True, request_params=request_params)
+                        await asyncio.sleep(req_delay) # request delay
+                        response = await session.get(url)
+                        ...
+
+            explanation:
+                In contrast to v1, this code uses a master connector for the ClientSession, but is much slower, as the
+                requests are actually sent synchronously (each response is awaited inside the for loop). Thus, this function
+                doesn't achieve the purpose of async requests, but demonstrates how to limit server connections using a master ClientSession.
+
+          - *** async version 3 *** 
+            code:
+                connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections) # default is 100
+                async with aiohttp.ClientSession(connector=connector) as session:
+                    tasks = []
+                    for goterm in self.goterms:
+                        task = goterm.fetch_products_async_v3(session, request_params=request_params, req_delay=req_delay)
+                            --- ---
+                            url = f"http://api.geneontology.org/api/bioentity/function/{self.id}/genes"
+                            asyncio.sleep(req_delay)
+                            response = await session.get(url, params=params)
+                            ...
+                            --- ---
+                        tasks.append(task)
+                    # perform multiple tasks at once asynchronously
+                    await asyncio.gather(*tasks)
+
+            explanation:
+                The v3 version of the code uses asyncio.gather, which concurrently runs the list of awaitable
+                objects in the supplied parameter list. First, all execution tasks are gathered in a list, which is
+                then supplied to asyncio.gather. The code also uses a master ClientSession with a custom TCPConnector object,
+                which limits the maximum server connections.
         """
         logger.info(f"Started fetching all GO Term products.")
         self.timer.set_start_time()
@@ -291,7 +358,7 @@ class ReverseLookup:
 
         if run_async == True:
             if run_async_options == "v1":
-                asyncio.run(self._fetch_all_go_term_products_async(recalculate=False, delay=delay))
+                asyncio.run(self._fetch_all_go_term_products_async_v1(recalculate=False, delay=delay))
             elif run_async_options == "v2":
                 asyncio.run(self._fetch_all_goterm_products_async_v2(max_connections=max_connections, request_params=request_params, req_delay=delay))
             elif run_async_options == "v3":
@@ -311,7 +378,7 @@ class ReverseLookup:
             self.execution_times["fetch_all_go_term_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    async def _fetch_all_go_term_products_async(self, recalculate: bool = False, delay:float = 0.0):
+    async def _fetch_all_go_term_products_async_v1(self, recalculate: bool = False, delay:float = 0.0):
         """
         Asynchronously queries the products for all GOTerm objects. Must be a web download.
         This function is 1000x times faster than it's synchronous 'fetch_all_go_term_products' counterpart
@@ -327,7 +394,7 @@ class ReverseLookup:
         for goterm in self.goterms:
             if goterm.products == [] or recalculate == True:
                 # sleeping here doesnt fix the server blocking issue!
-                task = asyncio.create_task(goterm.fetch_products_async(api, delay=delay))
+                task = asyncio.create_task(goterm.fetch_products_async_v1(api, delay=delay))
                 tasks.append(task)
         await asyncio.gather(*tasks)
 
@@ -365,7 +432,7 @@ class ReverseLookup:
                 logger.info(f"Fetched products for GO term {goterm.id}")
                 goterm.products = products
     
-    # TODO: IMPROVE SPEED UP USING ASYNCIO.GATHER: Instead of awaiting each request individually in a loop, you can use asyncio.gather() 
+    # IMPROVE SPEED UP USING ASYNCIO.GATHER: Instead of awaiting each request individually in a loop, you can use asyncio.gather() 
     # to concurrently execute multiple requests. This allows the requests to be made in parallel, which can significantly improve performance.
     async def _fetch_all_goterm_products_async_v3(self, max_connections = 100, request_params = {"rows":20000}, req_delay = 0.5):
         """
