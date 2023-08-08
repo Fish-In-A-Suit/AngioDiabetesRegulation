@@ -391,34 +391,34 @@ class fisher_exact_test(Metrics):
     of the 100 GO terms of angiogenesis+. Gene SOX2 is also associated with 100 GO 
     terms in the “general” set (containing all existing GO terms - 10000 GO terms).
     
-	                              | n GOt (contains SOX2)	   | n GOt (doesnt contain SOX2)  | total
+	                            | n GOt (contains SOX2) | n GOt (doesnt contain SOX2)  | total
     --------------------------------------------------------------------------------------------------
-    set of GOt for angio+         | 10	                      | 100-10=90	                   | 100
+    set of GOt for angio+       | 10	                | 100-10=90	                   | 100
     --------------------------------------------------------------------------------------------------
-    general set of GOt (all)      |                         |                              |
-    MINUS set of GOt for angio+   | (100-10)=90	          | (9900-(100-10))=9810	       | 9900
+    general set of GOt (all)    |                       |                              |
+    MINUS set of GOt for angio+ | (100-10)=90	        | (9900-(100-10))=9810	       | 9900
     --------------------------------------------------------------------------------------------------
-    total	                       | 100	                  | 9900	                      | 10000
+    total	                    | 100	                | 9900	                       | 10000
     
     The same table with filled out base code variables for the Fisher's test:
-                                  | n GOt (contains SOX2) 	    | n GOt (doesnt contain SOX2)  | total
+                                | n GOt (contains SOX2)         | n GOt (doesnt contain SOX2)  | total
     --------------------------------------------------------------------------------------------------
-    set of GOt for angio+         | num_goterms_product_process  | ?                            | num_goterms_all_process
+    set of GOt for angio+       | num_goterms_product_process   | ?                            | num_goterms_all_process
     --------------------------------------------------------------------------------------------------
-    general set of GOt (all)      |                              |                              | 
-    MINUS set of GOt for angio+   | ?                            | ?                            | num_goterms_all_general
+    general set of GOt (all)    |                               |                              | 
+    MINUS set of GOt for angio+ | ?                             | ?                            | num_goterms_all_general
     --------------------------------------------------------------------------------------------------
-    total	                       | num_goterms_product_general  | num_goterms_all_general      |
+    total                       | num_goterms_product_general   | num_goterms_all_general      |
 
     The complete table can now be calculated:
-                                  | n GOt (contains SOX2) 	     | n GOt (doesnt contain SOX2)                              | total
+                                    | n GOt (contains SOX2)         | n GOt (doesnt contain SOX2)                               | total
     -------------------------------------------------------------------------------------------------------------------------------------------------------
-    set of GOt for angio+         | num_goterms_product_process   | num_goterms_all_process - num_goterms_product_process    |  num_goterms_all_process
+    set of GOt for angio+           | num_goterms_product_process   | num_goterms_all_process - num_goterms_product_process     |  num_goterms_all_process
     -------------------------------------------------------------------------------------------------------------------------------------------------------
-    general set of GOt (all)      | num_goterms_product_general - | num_goterms_all_general -                                | 
-    MINUS set of GOt for angio+   | num_goterms_product_process   | (num_goterms_all_process - num_goterms_product_process)  | num_goterms_all_general
+    general set of GOt (all)        | num_goterms_product_general - | num_goterms_all_general -                                 | 
+    MINUS set of GOt for angio+     | num_goterms_product_process   | (num_goterms_all_process - num_goterms_product_process)   | num_goterms_all_general
     -------------------------------------------------------------------------------------------------------------------------------------------------------
-    total	                       | num_goterms_product_general   | num_goterms_all_general                                  |
+    total                           | num_goterms_product_general   | num_goterms_all_general                                   |
 
 
     Ladi original:
