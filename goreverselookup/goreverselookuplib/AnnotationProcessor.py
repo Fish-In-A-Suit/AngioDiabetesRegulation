@@ -461,6 +461,7 @@ class UniProtAPI:
         session.mount("http://", adapter)
         session.mount("https://", adapter)
         self.s = session
+        self.uniprot_query_exceptions = []
     
     def get_uniprot_id(self, gene_name):
         """
@@ -548,20 +549,6 @@ class UniProtAPI:
         """
         Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
         """
-        def _return_mane_select_values_from_uniprot_query(result: dict) -> tuple:
-            """
-            Given the UniProt search result dictionary, return Ensembl gene ID, Ensembl transcript ID, and RefSeq nucleotide ID for the MANE-select transcript.
-            """
-            mane_indices = [index for (index, d) in enumerate(result["uniProtKBCrossReferences"]) if d["database"] == "MANE-Select"]
-            if len(mane_indices) == 1:
-                i = mane_indices[0]
-                enst_id = result["uniProtKBCrossReferences"][i]["id"]
-                refseq_nt_id = next((entry["value"] for entry in result["uniProtKBCrossReferences"][i]["properties"] if entry["key"] == "RefSeqNucleotideId"), None)
-                ensg_id = next((next((sub["value"] for sub in entry["properties"] if sub["key"] == "GeneId"), None) for entry in result["uniProtKBCrossReferences"] if (entry["database"] == "Ensembl" and entry["id"] == enst_id)), None)
-            else:
-                return None, None, None
-            return ensg_id, enst_id, refseq_nt_id
-
         # Extract UniProt ID if given in "database:identifier" format
         if ":" in uniprot_id:
             uniprot_id = uniprot_id.split(":")[1]
@@ -577,6 +564,26 @@ class UniProtAPI:
             return {}
         
         results = response.json()["results"]
+        return self._process_uniprot_info_query_results(results, uniprot_id)
+        
+    def _return_mane_select_values_from_uniprot_query(self, result: dict) -> tuple:
+        """
+        Given the UniProt search result dictionary, return Ensembl gene ID, Ensembl transcript ID, and RefSeq nucleotide ID for the MANE-select transcript.
+        """
+        mane_indices = [index for (index, d) in enumerate(result["uniProtKBCrossReferences"]) if d["database"] == "MANE-Select"]
+        if len(mane_indices) == 1:
+            i = mane_indices[0]
+            enst_id = result["uniProtKBCrossReferences"][i]["id"]
+            refseq_nt_id = next((entry["value"] for entry in result["uniProtKBCrossReferences"][i]["properties"] if entry["key"] == "RefSeqNucleotideId"), None)
+            ensg_id = next((next((sub["value"] for sub in entry["properties"] if sub["key"] == "GeneId"), None) for entry in result["uniProtKBCrossReferences"] if (entry["database"] == "Ensembl" and entry["id"] == enst_id)), None)
+            return ensg_id, enst_id, refseq_nt_id
+        else:
+            return None, None, None
+    
+    def _process_uniprot_info_query_results(self, results:str, uniprot_id:str) -> dict:
+        """
+        Processes the results obtained from the get_uniprot_info query.
+        """
         if len(results) == 0:
             return {}
         else:
@@ -600,9 +607,48 @@ class UniProtAPI:
                 description = "ERROR: Couldn't fetch description."
                 logger.warning(f"proteinDescription, recommendedName, fullName or value not found when querying for uniprot info for the id: {uniprot_id}")
                 logger.warning(f"result: {result}")
-            ensg_id, enst_id, refseq_nt_id = _return_mane_select_values_from_uniprot_query(result)
+            ensg_id, enst_id, refseq_nt_id = self._return_mane_select_values_from_uniprot_query(result)
             return {"genename": name, "description": description, "ensg_id": ensg_id, "enst_id": enst_id, "refseq_nt_id": refseq_nt_id}
+    
+    async def get_uniprot_info_async(self, uniprot_id: str, session: aiohttp.ClientSession) -> dict:
+        # Extract UniProt ID if given in "database:identifier" format
+        logger.info(f"querying info for {uniprot_id}")
 
+        if ":" in uniprot_id:
+            uniprot_id = uniprot_id.split(":")[1]
+        # Construct UniProt API query URL
+        url = f"https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
+        
+        # async with session.get(url) as response:
+        #    results = await response.json()["results"]
+        #    return self._process_uniprot_info_query_results(results, uniprot_id)
+
+        QUERY_RETRIES = 3 # TODO: make parameter
+        i = 0
+        for _ in range (QUERY_RETRIES):
+            if i == (QUERY_RETRIES-1):
+                return None
+            i += 1
+            try:
+                response = await session.get(url, timeout=5)
+            except(requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ServerDisconnectedError) as e:
+                logger.warning(f"Exception when querying info for {uniprot_id}. Exception: {str(e)}")
+                self.uniprot_query_exceptions.append({f"{uniprot_id}": f"{str(e)}"})
+                await asyncio.sleep(2) # sleep before retrying
+                continue
+            
+        # single query retry
+        #try:
+        #    response = await session.get(url, timeout=5)
+        #except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError) as e:
+        #    logger.warning(f"Exception when querying info for {uniprot_id}. Exception: {str(e)}")
+        #    self.uniprot_query_exceptions.append({f"{uniprot_id}": f"{str(e)}"})
+        #    return None
+        
+        response_json = await response.json()
+        results = response_json["results"]
+        return self._process_uniprot_info_query_results(results, uniprot_id)
+        
 class EnsemblAPI:
     def __init__(self):
         # Set up a retrying session
@@ -616,6 +662,7 @@ class EnsemblAPI:
         session.mount("http://", adapter)
         session.mount("https://", adapter)
         self.s = session
+        self.ortholog_query_exceptions = [] # the list of exceptions during the ortholog query
 
     def get_human_ortholog(self, id):
         """
@@ -650,6 +697,47 @@ class EnsemblAPI:
         ortholog = best_ortholog_dict["target"].get("id")
         logger.info(f"Received ortholog for id {id} -> {ortholog}")
         return ortholog
+
+    async def get_human_ortholog_async(self, id, session: aiohttp.ClientSession):
+        if "ZFIN" in id:
+            species = "zebrafish"
+            id_url = id.split(":")[1]
+        elif "Xenbase" in id:
+            species  = "xenopus_tropicalis"
+            id_url = id.split(":")[1]
+        elif "MGI" in id:
+            species  = "mouse"
+            id_url = id
+        elif "RGD" in id:
+            species  = "rat"
+            id_url = id.split(":")[1]
+        else:
+            logger.info(f"No predefined organism found for {id}")
+            return None
+        url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
+        try:
+            response = await session.get(url, headers={"Content-Type": "application/json"}, timeout=10)
+            # response.raise_for_status()
+        except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError) as e:
+            logger.warning(f"Exception for {id_url} for request: https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none. Exception: {str(e)}")
+            self.ortholog_query_exceptions.append({f"{id}": f"{str(e)}"})
+            return None
+
+        # TODO: implement this safety check, server may send text only, which causes error (content_type == "text/plain")
+        #if response.content_type == "application/json":
+        #    response_json = await response.json()
+        response_json = await response.json()
+        logger.info(f"response_json: {response_json}; expr = {response_json==[]}")
+        if response_json == [] or "error" in response_json:
+            return None
+        elif response_json != [] or "error" not in response_json:
+            response_json = response_json["data"][0]["homologies"]
+            if response_json == []: # if there are no homologies, return None
+                return None
+            best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
+            ortholog = best_ortholog_dict["target"].get("id")
+            logger.info(f"Received ortholog for id {id} -> {ortholog}")
+            return ortholog
 
     def get_sequence(self, ensembl_id, sequence_type="cdna"):
         """
@@ -727,9 +815,7 @@ class EnsemblAPI:
                     raise Exception("no ensembl id returned")
             except Exception as e:
                 logger.warning(f"Failed to fetch Ensembl info for {id}.")
-                return {}
-            
-
+                return {}          
         # Extract gene information from API response
         ensg_id = response_json.get("id")
         name = response_json.get("display_name")
@@ -775,6 +861,116 @@ class EnsemblAPI:
             "refseq_nt_id": refseq_id,
             "uniprot_id": uniprot_id,
         }
+    
+    async def get_info_async(self, id:str, session:aiohttp.ClientSession):
+        """Can receive Ensembl id or symbol (human)
+
+        Args:
+            id (str): Ensembl ID or symbol
+
+        Returns:
+            dict: Information about the gene
+        """
+        if "Error" in id: # this is a bugfix. Older versions had a string "[RgdError_No-human-ortholog-found:product_id=RGD:1359312" for the genename field, if no ortholog was found (for example for the genename field of "RGD:1359312"). This is to be backwards compatible with any such data.json(s). An error can also be an '[MgiError_No-human-ortholog-found:product_id=MGI:97618'
+            logger.debug(f"ERROR: {id}. This means a particular RGD, Zfin, MGI or Xenbase gene does not have a human ortholog and you are safe to ignore it.")
+            return {}
+        
+        species_mapping = {
+            "ZFIN": "zebrafish/",
+            "Xenbase": "xenopus_tropicalis/",
+            "MGI": "mouse/MGI:",
+            "RGD": "rat/",
+            "UniProtKB": "human/",
+        }
+
+        # Check if the ID is an Ensembl ID or symbol
+        if id.startswith("ENS"):
+            endpoint = f"id/{id}"
+        else:
+            prefix, id_ = id.split(":") if ":" in id else (None, id)
+            species = species_mapping.get(prefix, "human/") #defaults to human if not prefix "xxx:"
+            endpoint = f"symbol/{species}{id_}"
+
+        try:
+            response = await session.get(
+                f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1",
+                headers={"Content-Type": "application/json"},
+                timeout=5
+                )
+            response.raise_for_status()
+            response_json = await response.json()
+        except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
+            # If the request fails, try the xrefs URL instead
+            try:
+                response = await session.get(
+                    f"https://rest.ensembl.org/xrefs/{endpoint}?",
+                    headers={"Content-Type": "application/json"},
+                    timeout=5
+                )
+                response.raise_for_status()
+                response_json = await response.json()
+                # Use the first ENS ID in the xrefs response to make a new lookup request
+                ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
+                if ensembl_id:
+                    response = await session.get(
+                        f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1",
+                        headers={"Content-Type": "application/json"},
+                        timeout=5
+                    )
+                    response.raise_for_status()
+                    response_json = await response.json()
+                else:
+                    raise Exception("no ensembl id returned")
+            except Exception as e:
+                logger.warning(f"Failed to fetch Ensembl info for {id}.")
+                return {}
+                 
+        # Extract gene information from API response
+        ensg_id = response_json.get("id")
+        name = response_json.get("display_name")
+        description = response_json.get("description", "").split(" [")[0]
+        
+        canonical_transcript_id = next((entry.get("id") for entry in response_json["Transcript"] if entry.get("is_canonical")), None)
+        mane_transcripts = [d for d in response_json["Transcript"] if d.get("MANE")]
+        if len(mane_transcripts) == 0:
+            ensembl_transcript_id = canonical_transcript_id
+            refseq_id = None
+        elif len(mane_transcripts) == 1:
+            ensembl_transcript_id = mane_transcripts[0]["MANE"][0].get("id")
+            refseq_id = mane_transcripts[0]["MANE"][0].get("refseq_match")
+        else:
+            selected_entry = next((entry for entry in mane_transcripts if entry.get("is_canonical")), None)
+            if not selected_entry:
+                ensembl_transcript_id = selected_entry["MANE"][0].get("id")
+                refseq_id = selected_entry["MANE"][0].get("refseq_match")
+            else:
+                ensembl_transcript_id = mane_transcripts[0]["MANE"][0].get("id")  # select the first canonical transcript with MANE
+                refseq_id = mane_transcripts[0]["MANE"][0].get("refseq_match")
+                logger.warning(f"Found non-canonical MANE transcript for {id}")
+
+        if ensembl_transcript_id:
+            try:
+                response = await session.get(
+                    f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%",
+                    headers={"Content-Type": "application/json"},
+                    timeout=5
+                )
+                response.raise_for_status() # TODO: solve Too Many Requests error (429) -> aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url=URL('https://rest.ensembl.org/xrefs/id/ENST00000301012?all_levels=1;external_db=UniProt%25')
+                response_json = await response.json()
+            except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
+                pass
+            uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
+
+        logger.debug(f"Received info data for id {id}.")
+        return {
+            "ensg_id": ensg_id,
+            "genename": name,
+            "description": description,
+            "enst_id": ensembl_transcript_id,
+            "refseq_nt_id": refseq_id,
+            "uniprot_id": uniprot_id,
+        }
+
 
 class HumanOrthologFinder:
     def __init__(self):
@@ -809,6 +1005,30 @@ class HumanOrthologFinder:
             # return None if "Error" in human_gene_symbol else human_gene_symbol
         elif "RGD" in product:
             human_gene_symbol = self.rgd.find_human_ortholog(product)
+            return human_gene_symbol if (human_gene_symbol != None) else None
+            # return None if "Error" in human_gene_symbol else human_gene_symbol
+        else:
+            logger.info(f"No database found for {product}")
+            return None
+    
+    async def find_human_ortholog_async(self, product):
+        # TODO: START FROM HERE. Create async file browsing for all other ortholog finders.
+        if "ZFIN" in product:
+            result = await self.zfin.find_human_ortholog_async(product) # returns [0]: gene symbol, [1]: long name of the gene
+            return result[0] if result != None else None
+            #human_gene_symbol = self.zfin.find_human_ortholog(product)[0]
+            #return None if "Error" in human_gene_symbol else human_gene_symbol
+        elif "Xenbase" in product:
+            result = await self.xenbase.find_human_ortholog_async(product)
+            return result[0] if result != None else None
+            #human_gene_symbol = self.xenbase.find_human_ortholog(product)[0]
+            #return None if "Error" in human_gene_symbol else human_gene_symbol
+        elif "MGI" in product:
+            human_gene_symbol = await self.mgi.find_human_ortholog_async(product)
+            return human_gene_symbol if (human_gene_symbol != None) else None
+            # return None if "Error" in human_gene_symbol else human_gene_symbol
+        elif "RGD" in product:
+            human_gene_symbol = await self.rgd.find_human_ortholog_async(product)
             return human_gene_symbol if (human_gene_symbol != None) else None
             # return None if "Error" in human_gene_symbol else human_gene_symbol
         else:
@@ -859,6 +1079,35 @@ class ZFINHumanOrthologFinder(HumanOrthologFinder):
                 return human_symbol, human_gene_name
         return None
         # return [f"ZfinError_No-human-ortholog-found:product_id={product_id}"]
+    
+    async def find_human_ortholog_async(self, product_id):
+        """
+        If product_id is from the ZFIN database, searches through the zebrafish-human orthologs and returns the name of the
+        symbol of the human gene ortholog.
+
+        Returns:
+        - [0]: gene symbol
+        - [1]: long name of the gene
+        """
+        def _zfin_get_human_gene_symbol_from_line(line):
+            """
+            Splits zfin line and retrieves human gene symbol (full caps of zebrafish gene symbol)
+            """
+            # better, as zfin human ortholog sometimes has different name than the zebrafish gene
+            human_symbol = line.split("\t")[3]
+            human_gene_name = line.split("\t")[4]
+            return human_symbol, human_gene_name # look at zfin orthologs txt file (in src_data_files) -> when you higlight a row, you see a TAB as '->' and a SPACEBAR as '.' -> splitting at \t means every [3] linesplit element is the human gene name
+
+        product_id=product_id.split(":")[1] # eliminates 'ZFIN:' 
+        for line in self._readlines:
+            if product_id in line:
+                e = _zfin_get_human_gene_symbol_from_line(line)
+                human_symbol = e[0]
+                human_gene_name = e[1]
+                logger.info(f"[ Returning human symbol {human_symbol} and {human_gene_name}")
+                return human_symbol, human_gene_name
+        return None
+        # return [f"ZfinError_No-human-ortholog-found:product_id={product_id}"]
 
 class XenbaseHumanOrthologFinder(HumanOrthologFinder):
     def __init__(self):
@@ -877,6 +1126,35 @@ class XenbaseHumanOrthologFinder(HumanOrthologFinder):
             logger.info(f"Downloaded xenbase_human_ortholog_mapping.txt to {self._filepath}")
 
     def find_human_ortholog(self, product_id):
+        """
+        Attempts to find a human ortholog from the xenbase database.
+        Parameters:
+        - product_id: eg. Xenbase:XB-GENE-495335 or XB-GENE-495335
+        Returns: 
+        - [0]: symbol of the human ortholog gene (eg. rsu1) or 'XenbaseError_no-human-ortholog-found'
+        - [1]: long name of the gene
+        """
+        def _xenbase_get_human_symbol_from_line(line):
+            """Splits xenbase line at tabs and gets human gene symbol (in full caps)"""
+            symbol = str(line.split("\t")[2]).upper()
+            name = str(line.split("\t")[3])
+            return symbol, name
+
+        product_id_short = ""
+        if ":" in product_id: product_id_short = product_id.split(":")[1]
+        else: product_id_short = product_id
+        
+        for line in self._readlines:
+            if product_id_short in line:
+                e = _xenbase_get_human_symbol_from_line(line)
+                human_symbol = e[0]
+                human_gene_name = e[1]
+                logger.info(f"Found human ortholog {human_symbol}, name = {human_gene_name} for xenbase gene {product_id}")
+                return human_symbol, human_gene_name
+        return None
+        # return [f"[XenbaseError_No-human-ortholog-found:product_id={product_id}"]
+    
+    async def find_human_ortholog_async(self, product_id):
         """
         Attempts to find a human ortholog from the xenbase database.
         Parameters:
@@ -969,6 +1247,55 @@ class MGIHumanOrthologFinder(HumanOrthologFinder):
             i += 1
         return None
         # return f"[MgiError_No-human-ortholog-found:product_id={product_id}"
+    
+    async def find_human_ortholog_async(self, product_id):
+        """
+        Attempts to find a human ortholog from the mgi database.
+        Parameters: gene-id eg. MGI:MGI:98480
+        Returns: symbol of the human ortholog gene or "MgiError_no-human-ortholog-found".
+        
+        Note: Cannot return longer gene name from the MGI .txt file, since it doesn't contain the longer name
+        """
+        def _mgi_get_human_symbol_from_line(line, line_index):
+            """
+            Splits mgi line at tabs and gets human gene symbol
+            """
+            split = line.split("\t")
+            if split[1] != "human":
+                # try i+2 to check one line further down
+                line = self._readlines[line_index+2]
+                second_split = line.split("\t")
+                if second_split[1] == "human":
+                    logger.debug(f"Found keyword 'human' on secondpass line querying.")
+                    return second_split[3]
+                else:
+                    # this still means no human ortholog!
+                    # example: MGI:2660935 (Prl3d2) contains no "human" (neither i+1 nor i+2), also checked uniprot and no human gene for prl3d2 exists
+                    return f"[MgiError_No-human-ortholog-found:product_id={product_id}"
+            else: return split[3]
+
+        logger.debug(f"Starting MGI search for {product_id}")
+        product_id_short = ""
+        if ":" in product_id:
+            split = product_id.split(":")
+            if len(split) == 3: product_id_short = split[2] # in case of MGI:xxx:xxxxx
+            elif len(split) == 2: product_id_short = split[1] # in case of MGI:xxxxx
+        else: product_id_short = product_id
+
+        i = 0
+        for line in self._readlines:
+            if product_id_short in line:
+                # if "mouse" gene smybol is found at line i, then human gene symbol will be found at line i+1
+                logger.debug(f"i = {i}, product_id_short = {product_id_short}, line = {line}")
+                human_symbol = _mgi_get_human_symbol_from_line(self._readlines[i+1], i)
+                if "MgiError" in human_symbol:
+                    logger.info(f"Couldn't find human ortholog for mgi gene {product_id}")
+                    return None
+                logger.info(f"Found human ortholog {human_symbol} for mgi gene {product_id}")
+                return human_symbol # return here doesnt affect line counter 'i', since if gene is found i is no longer needed
+            i += 1
+        return None
+        # return f"[MgiError_No-human-ortholog-found:product_id={product_id}"
 
 class RGDHumanOrthologFinder(HumanOrthologFinder):
     def __init__(self):
@@ -988,6 +1315,42 @@ class RGDHumanOrthologFinder(HumanOrthologFinder):
             logger.info(f"Downloaded rgd_human_ortholog_mapping.txt to {self._filepath}")
 
     def find_human_ortholog(self, product_id):
+        """ 
+        Attempts to find a human ortholog from the RGD (rat genome database) 
+        Returns: human gene symbol
+
+        Note: longer name of the gene cannot be returned, since it is not specified in the rgd txt file
+        """
+        def _rgd_get_human_symbol_from_line(line):
+            """ Splits rgd line at tabs and gets human gene smybol """
+            # also clears whitespace from linesplit (which is split at tab). Some lines in RGD db text file had whitespace instead of \t -> clear whitespace from array to resolve
+            # example: linesplit = ['Ang2', '1359373', '497229', '', '', '', '', 'Ang2', '1624110', '11731', 'MGI:104984', 'RGD', '\n']
+            linesplit = line.split("\t")
+            result_list = [] 
+            for element in linesplit: 
+                if element != "":
+                    result_list.append(element)
+            if len(result_list) >= 4: # bugfix
+                return result_list[3]
+            else:
+                logger.warning(f"FAULTY LINE IN RGD while searching for {product_id}, linesplit =: {linesplit}")
+                return None
+
+        product_id_short = ""
+        if ":" in product_id: product_id_short = product_id.split(":")[1]
+        else: product_id_short = product_id
+
+        i = 0
+        for line in self._readlines:
+            if product_id_short in line:
+                splitline_debug = line.split("\t")
+                human_symbol = _rgd_get_human_symbol_from_line(line)
+                logger.info(f"Found human ortholog {human_symbol} for RGD gene {product_id}")
+                return human_symbol
+        return None
+        # return f"[RgdError_No-human-ortholog-found:product_id={product_id}"
+    
+    async def find_human_ortholog_async(self, product_id):
         """ 
         Attempts to find a human ortholog from the RGD (rat genome database) 
         Returns: human gene symbol

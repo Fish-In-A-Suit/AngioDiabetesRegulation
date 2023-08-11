@@ -18,6 +18,7 @@ import aiohttp
 from .JsonUtil import JsonToClass, SimpleNamespaceUtil
 from types import SimpleNamespace
 from .GOTerm import GOTerm # to avoid circular imports, as AnnotationProcessor now uses GOTerm.
+from contextlib import asynccontextmanager
 
 logger = logging.getLogger(__name__)
 
@@ -50,9 +51,9 @@ class Product:
         self.had_orthologs_computed = had_orthologs_computed
         self.had_fetch_info_computed = had_fetch_info_computed
 
-    def fetch_ortholog(self, human_ortolog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
-        if not human_ortolog_finder:
-            human_ortolog_finder = HumanOrthologFinder()
+    def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+        if not human_ortholog_finder:
+            human_ortholog_finder = HumanOrthologFinder()
         if not uniprot_api:
             uniprot_api = UniProtAPI()
         if not ensembl_api:
@@ -65,7 +66,7 @@ class Product:
                 info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             self.genename = info_dict.get("genename")
         elif len(self.id_synonyms) == 1:
-            human_ortholog_gene_id = human_ortolog_finder.find_human_ortholog(self.id_synonyms[0])
+            human_ortholog_gene_id = human_ortholog_finder.find_human_ortholog(self.id_synonyms[0])
             if human_ortholog_gene_id is None:
                 logger.warning(f"human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
                 human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0]) # attempt ensembl search
@@ -79,6 +80,43 @@ class Product:
         
         self.had_orthologs_computed = True
                 
+    async def fetch_ortholog_async(self, session: aiohttp.ClientSession, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+        logger.info(f"Async fetch orthologs for: {self.id_synonyms}")
+        
+        if not human_ortholog_finder:
+            human_ortholog_finder = HumanOrthologFinder()
+        if not uniprot_api:
+            uniprot_api = UniProtAPI()
+        if not ensembl_api:
+            ensembl_api = EnsemblAPI()
+        
+        if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
+            if self.uniprot_id == None:
+                info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session) # bugfix
+            else:
+                info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session)
+            if info_dict != None:
+                self.genename = info_dict.get("genename")
+        elif len(self.id_synonyms) == 1:
+            human_ortholog_gene_id = await human_ortholog_finder.find_human_ortholog_async(self.id_synonyms[0])
+            if human_ortholog_gene_id is None:
+                logger.warning(f"human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
+                human_ortholog_gene_ensg_id = await ensembl_api.get_human_ortholog_async(self.id_synonyms[0], session) # attempt ensembl search
+                if human_ortholog_gene_ensg_id is not None:
+                    enst_dict = await ensembl_api.get_info_async(human_ortholog_gene_ensg_id, session)
+                    self.genename = enst_dict.get("genename")
+                # else: # this is obsolete
+                    # return # search was unsuccessful
+            else:
+                self.genename = human_ortholog_gene_id
+        
+        self.had_orthologs_computed = True
+    
+    async def fetch_ortholog_async_semaphore(self, session: aiohttp.ClientSession, semaphore:asyncio.Semaphore, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+        async with semaphore:
+            await self.fetch_ortholog_async(session=session, human_ortholog_finder=human_ortholog_finder, uniprot_api=uniprot_api, ensembl_api=ensembl_api)
+        
+
     def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]) -> None:
         """
         includes description, ensg_id, enst_id and refseq_nt_id
@@ -262,7 +300,7 @@ class ReverseLookup:
             tasks.append(task)
         await asyncio.gather(*tasks)
     
-    def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False, delay:float = 0.0, run_async_options:str="v1", request_params={"rows":20000}, max_connections = 100):
+    def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False, delay:float = 0.0, run_async_options:str="v3", request_params={"rows":20000}, max_connections = 100):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_products method for each object.
         
@@ -278,8 +316,8 @@ class ReverseLookup:
                   The result are 504 bad gateway requests
                 - v2 creates only one ClientSession object for all goterms (further divisions could be possible for maybe 2 or 4 ClientSessions to segment the goterms),
                   which allows us to control the amount of requests sent to the server. The result is that the server doesn't detect us as bots and doesn't block our requests.
-                  v2 should be used. [TODO: FIRST: FINE TUNE RESPONSE ROW COUNT TO GATHER ALL INFO, THEN speed up the entire process of v2 !!!]
-                - v3 is a speed up of v2
+                  v2 should be used. 
+                - v3 is the best working function and should be always used.
         
         Developer explanation for v1, v2 and v3 versions of async:
           - *** async version 1 ***
@@ -467,6 +505,29 @@ class ReverseLookup:
         Returns:
             None
         """
+        logger.info(f"Creating products from GO Terms. Num goterms = {len(self.goterms)}")
+        self.timer.set_start_time()
+
+        # Create an empty set to store unique products
+        products_set = set()
+
+        # Iterate over each GOTerm object in the go_term set and retrieve the set of products associated with that GOTerm
+        # object. Add these products to the products_set.
+        for term in self.goterms:
+            products_set.update(term.products)
+
+        # Iterate over each product in the products_set and create a new Product object from the product ID using the
+        # Product.from_dict() classmethod. Add the resulting Product objects to the ReverseLookup object's products list.
+        for product in products_set:
+            if ':' in product:
+                self.products.append(Product.from_dict({'id_synonyms': [product]}))
+            else:
+                self.products.append(Product.from_dict({'id_synonyms': [product], 'genename': product}))
+        logger.info(f"Created Product objects from GOTerm object definitions")
+
+        if "create_products_from_goterms" not in self.execution_times:
+            self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
+        self.timer.print_elapsed_time()
 
         def check_exists(product_id: str) -> bool:
             """
@@ -509,12 +570,15 @@ class ReverseLookup:
             self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_ortholog_products(self, refetch:bool = False) -> None:
+    def fetch_ortholog_products(self, refetch:bool = False, run_async = False, max_connections=100, req_delay=0.5, semaphore_connections = 10) -> None:
         """
         This function tries to find the orthologs to any non-uniprot genes (products) associated with a GO Term.
 
         Args:
           - (bool) refetch: if True, will fetch the ortholog products for all Product instances again, even if some Product instances already have their orthologs fetched.
+          - (bool) run_async: if True, will send requests asynchronously
+          - (int) max_connections: the maximum amount of connections the asynchronous client session will send to the server
+          - (float) req_delay: the delay between connections in seconds
 
         NOTE: This function is recalculation-optimised based on the "genename" field of the Product. If the model is loaded from data.json and a specific
         Product already had orthologs fetched, then it is skipped during the fetch_ortholog call.
@@ -533,7 +597,7 @@ class ReverseLookup:
 
         Usage and calling:
             products = ... # define a list of Product instances
-            human_ortolog_finder = HumanOrthologFinder()
+            human_ortholog_finder = HumanOrthologFinder()
             uniprot_api = UniProtAPI()
             ensembl_api = EnsemblAPI()
 
@@ -545,20 +609,21 @@ class ReverseLookup:
         self.timer.set_start_time()
 
         try:
-            human_ortholog_finder = HumanOrthologFinder()
-            uniprot_api = UniProtAPI()
-            ensembl_api = EnsemblAPI()
-            # Iterate over each Product object in the ReverseLookup object.
-            with logging_redirect_tqdm():
-                for product in tqdm(self.products, desc="Fetch ortholog products"):
-                    # Check if the Product object doesn't have a UniProt ID or genename or ensg_id -> these indicate no ortholog computation has been performed yet
-                    # if product.genename == None or refetch == True: # product.genename was still None for a lot of products, despite calling fetch_orthologs
-                    if product.had_orthologs_computed == False or refetch == True:
-                        # If it doesn't, fetch UniProt data for the Product object.
-                        product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
-                        product.had_orthologs_computed = True
-                        if product.had_orthologs_computed == False:
-                            logger.debug("BREAK!!!!")
+            if run_async == True:
+                asyncio.run(self._fetch_ortholog_products_async(refetch=refetch, max_connections=max_connections, req_delay=req_delay, semaphore_connections=semaphore_connections))
+            else:
+                human_ortholog_finder = HumanOrthologFinder()
+                uniprot_api = UniProtAPI()
+                ensembl_api = EnsemblAPI()
+
+                with logging_redirect_tqdm():
+                    for product in tqdm(self.products, desc="Fetch ortholog products"):  # Iterate over each Product object in the ReverseLookup object.
+                        # Check if the Product object doesn't have a UniProt ID or genename or ensg_id -> these indicate no ortholog computation has been performed yet
+                        # if product.genename == None or refetch == True: # product.genename was still None for a lot of products, despite calling fetch_orthologs
+                        if product.had_orthologs_computed == False or refetch == True:
+                            # If it doesn't, fetch UniProt data for the Product object.
+                            product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
+                            product.had_orthologs_computed = True
         except Exception as e:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
             self.save_model('crash_products.json')
@@ -568,6 +633,60 @@ class ReverseLookup:
         if "fetch_ortholog_products" not in self.execution_times:
             self.execution_times["fetch_ortholog_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
+    
+    async def _fetch_ortholog_products_async(self, refetch:bool = True, max_connections = 100, req_delay = 0.5, semaphore_connections = 10):
+        """
+        code: [TODO: delete this after testing is done]
+        connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections) # default is 100
+        async with aiohttp.ClientSession(connector=connector) as session:
+            tasks = []
+            for goterm in self.goterms:
+                task = goterm.fetch_products_async_v3(session, request_params=request_params, req_delay=req_delay)
+                    --- ---
+                    url = f"http://api.geneontology.org/api/bioentity/function/{self.id}/genes"
+                    asyncio.sleep(req_delay)
+                    response = await session.get(url, params=params)
+                    ...
+                    --- ---
+                tasks.append(task)
+            # perform multiple tasks at once asynchronously
+            await asyncio.gather(*tasks)
+        """
+        @asynccontextmanager
+        async def create_session():
+            connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections)
+            session = aiohttp.ClientSession(connector=connector)
+            try:
+                yield session
+            finally:
+                await session.close()
+
+        human_ortholog_finder = HumanOrthologFinder()
+        uniprot_api = UniProtAPI()
+        ensembl_api = EnsemblAPI()
+
+        connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections)
+        semaphore = asyncio.Semaphore(semaphore_connections)
+        async with aiohttp.ClientSession(connector=connector) as session:
+        # async with create_session() as session:
+            tasks = []
+            for product in self.products:
+                if product.had_orthologs_computed == False or refetch == True:
+                    # task = product.fetch_ortholog_async(session, human_ortholog_finder, uniprot_api, ensembl_api)
+                    task = product.fetch_ortholog_async_semaphore(session, semaphore, human_ortholog_finder, uniprot_api, ensembl_api)
+                    tasks.append(task)
+                    product.had_orthologs_computed = True
+            await asyncio.gather(*tasks)
+        
+        logger.info(f"During ortholog query, there were {len(ensembl_api.ortholog_query_exceptions)} ensembl api exceptions and {len(uniprot_api.uniprot_query_exceptions)} uniprot api exceptions.")
+        
+        #logger.debug(f"Printing exceptions:")
+        #i = 0
+        #for exception_dict in ensembl_api.ortholog_query_exceptions:
+        #    product_id = exception_dict.keys()[0]
+        #    exception = exception_dict[product_id]
+        #    logger.debug(f"[{i}] :: {product_id} : {exception}")
+        #    i += 1
 
     def prune_products(self) -> None:
         logger.info(f"Started pruning products.")
