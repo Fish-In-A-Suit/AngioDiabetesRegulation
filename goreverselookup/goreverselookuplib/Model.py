@@ -639,7 +639,7 @@ class ReverseLookup:
             self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_ortholog_products(self, refetch:bool = False, run_async = False, use_goaf = False, max_connections=100, req_delay=0.5, semaphore_connections = 10) -> None:
+    def fetch_ortholog_products(self, refetch:bool = False, run_async = False, use_goaf = False, max_connections=100, req_delay=0.5, semaphore_connections = 10, use_request_caching:bool = True) -> None:
         """
         This function tries to find the orthologs to any non-uniprot genes (products) associated with a GO Term.
 
@@ -647,7 +647,12 @@ class ReverseLookup:
           - (bool) refetch: if True, will fetch the ortholog products for all Product instances again, even if some Product instances already have their orthologs fetched.
           - (bool) run_async: if True, will send requests asynchronously
           - (int) max_connections: the maximum amount of connections the asynchronous client session will send to the server
-          - (float) req_delay: the delay between connections in seconds
+          - (float) req_delay: the delay between connections in secondsž
+          - (bool) use_request_caching: If set to True, will cache the http requests to the server. When using async requests with ortholog fetch, the first full run of all products is successful, but if
+                                        the user decides to run async ortholog query for the same products again, the server will start sending 429:TooManyRequests error. Therefore, this option saves (caches)
+                                        the requests in a dictionary, where the key is the request url and the value is a dictionary with request info (response, query timestamp, ...). When using async requests,
+                                        the responses of the previous cached requests are used, if the request urls are the same. TODO: daj userju možnost, da selecta "starost" requesta aka da lahko v funkcijo poslje "7 dni"
+                                        in bo potem uporabilo requeste, ki so "mlajsi" od 7 dni.
 
         NOTE: This function is recalculation-optimised based on the "genename" field of the Product. If the model is loaded from data.json and a specific
         Product already had orthologs fetched, then it is skipped during the fetch_ortholog call.
@@ -674,6 +679,7 @@ class ReverseLookup:
                 product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
         
         """
+        # TODO: START FROM HERE !!! Implement request caching.
         logger.info(f"Started fetching ortholog products.")
         self.timer.set_start_time()
 
