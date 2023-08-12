@@ -122,7 +122,7 @@
 4005	XB-GENEPAGE-479143	lmo2	LIM domain only 2
 351	XB-GENEPAGE-479153	app	amyloid beta precursor protein
 80737	XB-GENEPAGE-479163	vwa7	von Willebrand factor A domain containing 7
-282617	XB-GENEPAGE-479168	ifnl3	type III intron-containing interferon 3 (provisional)
+282617	XB-GENEPAGE-479168	ifnl3.4	interferon lambda 3 gene 4
 4681	XB-GENEPAGE-479180	nbl1	NBL1, DAN family BMP antagonist
 649	XB-GENEPAGE-479190	bmp1	bone morphogenetic protein 1
 1591	XB-GENEPAGE-479200	cyp24a1	cytochrome P450 family 24 subfamily A member 1
@@ -138,7 +138,7 @@
 51684	XB-GENEPAGE-479288	sufu	SUFU negative regulator of hedgehog signaling
 9210	XB-GENEPAGE-479298	bmp15	bone morphogenetic protein 15
 931	XB-GENEPAGE-479305	ms4a1	membrane spanning 4-domains A1
-6559	XB-GENEPAGE-479311	slc12a3	solute carrier family 12 member 3
+6559	XB-GENEPAGE-479311	slc12a3l	solute carrier family 12 member 3 like
 4851	XB-GENEPAGE-479317	notch1	notch 1 receptor
 8543	XB-GENEPAGE-479326	lmo4.2	LIM domain only 4, gene 2
 27314	XB-GENEPAGE-479336	rab30	RAB30, member RAS oncogene family
@@ -175,7 +175,7 @@
 5511	XB-GENEPAGE-479607	ppp1r8	protein phosphatase 1 regulatory subunit 8
 6689	XB-GENEPAGE-479614	spib	Spi-B transcription factor
 4783	XB-GENEPAGE-479623	nfil3	nuclear factor, interleukin 3 regulated
-160728	XB-GENEPAGE-479633	slc5a8.1	solute carrier family 5 member 8, gene 1
+160728	XB-GENEPAGE-479633	slc5a8	solute carrier family 5 member 8, gene 1
 4607	XB-GENEPAGE-479642	mybpc3	myosin binding protein C3
 11270	XB-GENEPAGE-479651	nrm	nurim
 81030	XB-GENEPAGE-479660	zbp1	Z-DNA binding protein 1
@@ -196,7 +196,6 @@
 1636	XB-GENEPAGE-479788	ace	angiotensin I converting enzyme
 3827	XB-GENEPAGE-479794	kng1	kininogen 1
 7291	XB-GENEPAGE-479801	twist1	twist family bHLH transcription factor 1
-5469	XB-GENEPAGE-479808	med1	mediator complex subunit 1
 2306	XB-GENEPAGE-479817	foxd2	forkhead box D2
 6886	XB-GENEPAGE-479826	tal1	T-cell acute lymphocytic leukemia 1
 51621	XB-GENEPAGE-479836	klf13	KLF transcription factor 13
@@ -258,7 +257,7 @@
 70	XB-GENEPAGE-480346	actc1	actin, alpha, cardiac muscle 1
 4439	XB-GENEPAGE-480354	msh5	mutS homolog 5
 9908	XB-GENEPAGE-480360	g3bp2	G3BP stress granule assembly factor 2
-7884	XB-GENEPAGE-480368	slbp	stem-loop binding protein
+7884	XB-GENEPAGE-480368	slbp	stem-loop histone mRNA binding protein
 11211	XB-GENEPAGE-480378	fzd10	frizzled class receptor 10
 26998	XB-GENEPAGE-480388	fetub	fetuin B
 81029	XB-GENEPAGE-480395	wnt5b	Wnt family member 5B
@@ -305,7 +304,7 @@
 8325	XB-GENEPAGE-480799	fzd8	frizzled class receptor 8
 199699	XB-GENEPAGE-480808	dand5	DAN domain family member 5, BMP antagonist
 2063	XB-GENEPAGE-480817	nr2f6	nuclear receptor subfamily 2 group F member 6
-11254	XB-GENEPAGE-480826	slc6a14.1	solute carrier family 6 member 14, gene 1
+11254	XB-GENEPAGE-480826	slc6a14	solute carrier family 6 member 14, gene 1
 5914	XB-GENEPAGE-480835	rara	retinoic acid receptor alpha
 607	XB-GENEPAGE-480845	bcl9	BCL9 transcription coactivator
 324	XB-GENEPAGE-480854	apc	adenomatous polyposis coli
@@ -323,13 +322,13 @@
 85403	XB-GENEPAGE-480963	eaf1	ELL associated factor 1
 7484	XB-GENEPAGE-480973	wnt9b.2	wingless-type MMTV integration site family member 9B
 2253	XB-GENEPAGE-480982	fgf8	fibroblast growth factor 8
-6474	XB-GENEPAGE-480992	shox2	short stature homeobox 2
+6474	XB-GENEPAGE-480992	shox2	SHOX homeobox 2
 3224	XB-GENEPAGE-480998	hoxc8	homeobox C8
 5915	XB-GENEPAGE-481008	rarb	retinoic acid receptor beta
 5698	XB-GENEPAGE-481017	psmb9	proteasome subunit beta 9
 2018	XB-GENEPAGE-481027	emx2	empty spiracles homeobox 2
 2705	XB-GENEPAGE-481037	gjb1	gap junction protein beta 1
-6774	XB-GENEPAGE-481046	stat3.1	signal transducer and activator of transcription 3, gene 1
+6774	XB-GENEPAGE-481046	stat3	signal transducer and activator of transcription 3 gene 1
 1797	XB-GENEPAGE-481056	dxo	decapping exoribonuclease
 26056	XB-GENEPAGE-481065	rab11fip5	RAB11 family interacting protein 5 (class 1)
 6097	XB-GENEPAGE-481074	rorc	RAR related orphan receptor C
@@ -356,7 +355,7 @@
 54704	XB-GENEPAGE-481256	pdp1	pyruvate dehydrogenase phosphatase catalytic subunit 1
 7918	XB-GENEPAGE-481265	gpank1	G-patch domain and ankyrin repeats 1
 4233	XB-GENEPAGE-481271	met	MET proto-oncogene, receptor tyrosine kinase
-9351	XB-GENEPAGE-481281	slc9a3r2	SLC9A3 regulator 2
+9351	XB-GENEPAGE-481281	nherf2	NHERF family PDZ scaffold protein 2
 2794	XB-GENEPAGE-481291	gnl1	G protein nucleolar 1 (putative)
 3398	XB-GENEPAGE-481296	id2	inhibitor of DNA binding 2
 4091	XB-GENEPAGE-481306	smad6	SMAD family member 6
@@ -379,7 +378,6 @@
 83999	XB-GENEPAGE-481464	kremen1	kringle containing transmembrane protein 1
 282679	XB-GENEPAGE-481473	aqp11	aquaporin 11
 1454	XB-GENEPAGE-481479	csnk1e	casein kinase 1 epsilon
-102800317	XB-GENEPAGE-481479	csnk1e	casein kinase 1 epsilon
 5287	XB-GENEPAGE-481488	pik3c2b	phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 beta
 5467	XB-GENEPAGE-481494	ppard	peroxisome proliferator activated receptor delta
 10736	XB-GENEPAGE-481503	six2	SIX homeobox 2
@@ -483,7 +481,7 @@
 3172	XB-GENEPAGE-482418	hnf4a	hepatocyte nuclear factor 4 alpha
 8027	XB-GENEPAGE-482428	stam	signal transducing adaptor molecule
 1876	XB-GENEPAGE-482438	e2f6	E2F transcription factor 6
-6997	XB-GENEPAGE-482447	tdgf1.3	teratocarcinoma-derived growth factor 1, member 3
+6997	XB-GENEPAGE-482447	cripto.3	cripto, EGF-CFC family member gene 3
 54756	XB-GENEPAGE-482454	il17rd	interleukin 17 receptor D
 7058	XB-GENEPAGE-482461	thbs2	thrombospondin 2
 53834	XB-GENEPAGE-482471	fgfrl1	fibroblast growth factor receptor like 1
@@ -609,7 +607,7 @@
 1009	XB-GENEPAGE-483598	cdh11	cadherin 11
 5163	XB-GENEPAGE-483608	pdk1	pyruvate dehydrogenase kinase 1
 25769	XB-GENEPAGE-483617	slc24a2	solute carrier family 24 member 2
-8809	XB-GENEPAGE-483623	il18r1.1	interleukin 18 receptor 1, gene 1
+8809	XB-GENEPAGE-483623	il18r1	interleukin 18 receptor 1, gene 1
 733	XB-GENEPAGE-483629	c8g	complement component 8, gamma polypeptide
 9104	XB-GENEPAGE-483636	rgn	regucalcin
 55810	XB-GENEPAGE-483645	foxj2	forkhead box J2
@@ -691,7 +689,7 @@
 7779	XB-GENEPAGE-484356	slc30a1	solute carrier family 30 member 1
 4782	XB-GENEPAGE-484366	nfic	nuclear factor I C
 10265	XB-GENEPAGE-484375	irx5	iroquois homeobox 5
-93035	XB-GENEPAGE-484384	pkhd1l1.1	PKHD1 like 1, gene 1
+93035	XB-GENEPAGE-484384	pkhd1l1	PKHD1 like 1, gene 1
 5214	XB-GENEPAGE-484390	pfkp	phosphofructokinase, platelet
 80863	XB-GENEPAGE-484399	prrt1	proline rich transmembrane protein 1
 6584	XB-GENEPAGE-484415	slc22a5	solute carrier family 22 member 5
@@ -755,7 +753,7 @@
 151449	XB-GENEPAGE-484924	gdf7	growth differentiation factor 7
 51463	XB-GENEPAGE-484934	gpr89b	G protein-coupled receptor 89B
 4676	XB-GENEPAGE-484942	nap1l4	nucleosome assembly protein 1like 4
-207	XB-GENEPAGE-484952	akt1	v-akt murine thymoma viral oncogene homolog 1
+207	XB-GENEPAGE-484952	akt1	AKT serine/threonine kinase 1
 4286	XB-GENEPAGE-484961	mitf	melanocyte inducing transcription factor
 9350	XB-GENEPAGE-484970	cer1	cerberus 1, DAN family BMP antagonist
 283150	XB-GENEPAGE-484979	foxr1	forkhead box R1
@@ -770,7 +768,7 @@
 2627	XB-GENEPAGE-485062	gata6	GATA binding protein 6
 3488	XB-GENEPAGE-485072	igfbp5	insulin like growth factor binding protein 5
 51311	XB-GENEPAGE-485082	tlr8	toll like receptor 8
-55182	XB-GENEPAGE-485088	rnf220.1	ring finger protein 220, gene 1
+55182	XB-GENEPAGE-485088	rnf220	ring finger protein 220, gene 1
 4843	XB-GENEPAGE-485092	nos2	nitric oxide synthase 2
 7827	XB-GENEPAGE-485100	nphs2	NPHS2 podocin
 58508	XB-GENEPAGE-485110	kmt2c	lysine methyltransferase 2C
@@ -832,7 +830,7 @@
 182	XB-GENEPAGE-485661	jag1	jagged 1
 3222	XB-GENEPAGE-485671	hoxc5	homeobox C5
 54769	XB-GENEPAGE-485681	diras2	DIRAS family GTP binding RAS like 2
-4089	XB-GENEPAGE-485690	smad4	SMAD family member 4, gene 1
+4089	XB-GENEPAGE-485690	smad4	SMAD family member 4
 51540	XB-GENEPAGE-485700	scly	selenocysteine lyase
 7135	XB-GENEPAGE-485709	tnni1.2	troponin I type 1 (skeletal, slow), gene 2
 7024	XB-GENEPAGE-485719	tfcp2	transcription factor CP2
@@ -882,7 +880,7 @@
 3273	XB-GENEPAGE-486130	hrg	histidine rich glycoprotein
 54626	XB-GENEPAGE-486137	hes2	hes family bHLH transcription factor 2
 4481	XB-GENEPAGE-486146	msr1	macrophage scavenger receptor 1
-79849	XB-GENEPAGE-486152	pdzd3	PDZ domain containing 3
+79849	XB-GENEPAGE-486152	nherf4	NHERF family PDZ scaffold protein 4
 5309	XB-GENEPAGE-486161	pitx3	paired like homeodomain 3
 2104	XB-GENEPAGE-486171	esrrg	estrogen related receptor gamma
 7057	XB-GENEPAGE-486188	thbs1	thrombospondin 1
@@ -944,7 +942,7 @@
 375616	XB-GENEPAGE-486712	kcp	kielin/chordin-like protein
 269	XB-GENEPAGE-486736	amhr2	anti-Mullerian hormone receptor type II
 127343	XB-GENEPAGE-486745	dmbx1	diencephalon/mesencephalon homeobox 1
-23564	XB-GENEPAGE-486752	ddah2	dimethylarginine dimethylaminohydrolase 2
+23564	XB-GENEPAGE-486752	ddah2	DDAH family member 2, ADMA-independent
 6890	XB-GENEPAGE-486761	tap1	transporter 1, ATP-binding cassette, sub-family B (MDR/TAP)
 145258	XB-GENEPAGE-486770	gsc	goosecoid homeobox
 8312	XB-GENEPAGE-486780	axin1	axin 1
@@ -985,7 +983,7 @@
 2932	XB-GENEPAGE-487097	gsk3b	glycogen synthase kinase 3 beta
 130399	XB-GENEPAGE-487107	acvr1c	activin A receptor type 1C
 59272	XB-GENEPAGE-487116	ace2	angiotensin converting enzyme 2
-7494	XB-GENEPAGE-487123	xbp1	X-box binding protein 1
+7494	XB-GENEPAGE-487123	XBP1	X-box binding protein 1
 10156	XB-GENEPAGE-487133	rasa4	RAS p21 protein activator 4
 5081	XB-GENEPAGE-487139	pax7	paired box 7
 283349	XB-GENEPAGE-487149	rassf3	Ras association (RalGDS/AF-6) domain family member 3
@@ -1010,8 +1008,8 @@
 57057	XB-GENEPAGE-487333	tbx20	T-box 20
 7407	XB-GENEPAGE-487343	vars1	valyl-tRNA synthetase 1
 3169	XB-GENEPAGE-487351	foxa1	forkhead box A1
-9368	XB-GENEPAGE-487361	slc9a3r1	SLC9A3 regulator 1
-6591	XB-GENEPAGE-487370	snai2	snail family zinc finger 2
+9368	XB-GENEPAGE-487361	nherf1	NHERF family PDZ scaffold protein 1
+6591	XB-GENEPAGE-487370	snai2	snail family transcriptional repressor 2
 123722	XB-GENEPAGE-487380	fsd2	fibronectin type 3 and SPRY domain containing 2
 10919	XB-GENEPAGE-487386	ehmt2	euchromatic histone-lysine N-methyltransferase 2
 4205	XB-GENEPAGE-487393	mef2a	myocyte enhancer factor 2A
@@ -1029,7 +1027,7 @@
 9050	XB-GENEPAGE-487517	pstpip2	proline-serine-threonine phosphatase interacting protein 2
 3174	XB-GENEPAGE-487526	hnf4g	hepatocyte nuclear factor 4 gamma
 261734	XB-GENEPAGE-487535	nphp4.2	nephronophthisis 4, gene 2
-221545	XB-GENEPAGE-487541	c6orf136	chromosome 6 open reading frame 136
+221545	XB-GENEPAGE-487541	c8h6orf136	chromosome 8 C6orf136 homolog
 960	XB-GENEPAGE-487546	cd44	CD44 molecule (Indian blood group)
 64843	XB-GENEPAGE-487555	isl2	ISL LIM homeobox 2
 4891	XB-GENEPAGE-487562	slc11a2	solute carrier family 11 member 2
@@ -1092,6 +1090,7 @@
 7040	XB-GENEPAGE-488110	tgfb1	transforming growth factor beta 1
 196403	XB-GENEPAGE-488120	dtx3	deltex E3 ubiquitin ligase 3
 284	XB-GENEPAGE-488129	angpt1	angiopoietin 1
+654231	XB-GENEPAGE-488139	ocm	oncomodulin
 3458	XB-GENEPAGE-488148	ifng	interferon gamma
 6965	XB-GENEPAGE-488155	trg	T-cell receptor gamma locus
 23452	XB-GENEPAGE-488163	angptl2	angiopoietin like 2
@@ -1150,7 +1149,6 @@
 7112	XB-GENEPAGE-488987	tmpo	thymopoietin
 10097	XB-GENEPAGE-488997	actr2	ARP2 actin-related protein 2 homolog
 5879	XB-GENEPAGE-489007	rac1	Rac family small GTPase 1
-11021	XB-GENEPAGE-489017	rab35l	RAB35, member RAS oncogene family like
 57826	XB-GENEPAGE-489026	rap2c	RAP2C, member of RAS oncogene family
 4858	XB-GENEPAGE-489036	nova2	neuro-oncological ventral antigen 2
 51256	XB-GENEPAGE-489045	tbc1d7	TBC1 domain family member 7
@@ -1193,7 +1191,7 @@
 148014	XB-GENEPAGE-489382	ttc9b	tetratricopeptide repeat domain 9B
 84068	XB-GENEPAGE-489388	slc10a7	solute carrier family 10 member 7
 3728	XB-GENEPAGE-489396	jup	junction plakoglobin
-54443	XB-GENEPAGE-489406	anln	anillin actin binding protein
+54443	XB-GENEPAGE-489406	anln	anillin, actin binding protein
 23589	XB-GENEPAGE-489415	carhsp1	calcium regulated heat stable protein 1
 28951	XB-GENEPAGE-489425	trib2	tribbles pseudokinase 2
 171177	XB-GENEPAGE-489434	rhov	ras homolog family member V
@@ -1267,7 +1265,7 @@
 3770	XB-GENEPAGE-490026	kcnj14	potassium inwardly rectifying channel subfamily J member 14
 23650	XB-GENEPAGE-490035	trim29	tripartite motif containing 29
 27289	XB-GENEPAGE-490044	rnd1	Rho family GTPase 1
-79861	XB-GENEPAGE-490054	tubal3.1	tubulin alpha like 3, gene 1
+79861	XB-GENEPAGE-490054	tubal3	tubulin alpha like 3 gene 1
 56288	XB-GENEPAGE-490064	pard3	par-3 family cell polarity regulator
 8022	XB-GENEPAGE-490074	lhx3	LIM homeobox 3
 65985	XB-GENEPAGE-490084	aacs	acetoacetyl-CoA synthetase
@@ -1293,7 +1291,6 @@
 55207	XB-GENEPAGE-490245	arl8b	ADP ribosylation factor like GTPase 8B
 50615	XB-GENEPAGE-490255	il21r	interleukin 21 receptor
 238	XB-GENEPAGE-490261	alk	ALK receptor tyrosine kinase
-50616	XB-GENEPAGE-490271	il22	interleukin 22
 9079	XB-GENEPAGE-490278	ldb2	LIM domain binding 2
 6892	XB-GENEPAGE-490288	tapbp	TAP binding protein (tapasin)
 7923	XB-GENEPAGE-490295	hsd17b8	hydroxysteroid (17-beta) dehydrogenase 8
@@ -1315,7 +1312,7 @@
 81493	XB-GENEPAGE-490428	sync	syncoilin, intermediate filament protein
 113452	XB-GENEPAGE-490433	tmem54	transmembrane protein 54
 84823	XB-GENEPAGE-490442	lmnb2	lamin B2
-10844	XB-GENEPAGE-490452	tubgcp2	tubulin gamma complex associated protein 2
+10844	XB-GENEPAGE-490452	tubgcp2	tubulin gamma complex component 2
 58528	XB-GENEPAGE-490462	rragd	Ras related GTP binding D
 9508	XB-GENEPAGE-490471	adamts3	ADAM metallopeptidase with thrombospondin type 1 motif 3
 2702	XB-GENEPAGE-490480	gja5	gap junction protein alpha 5
@@ -1331,7 +1328,7 @@
 128674	XB-GENEPAGE-490580	prokr2	prokineticin receptor 2
 688	XB-GENEPAGE-490586	klf5	KLF transcription factor 5
 4440	XB-GENEPAGE-490595	msi1	musashi RNA binding protein 1
-85378	XB-GENEPAGE-490605	tubgcp6	tubulin gamma complex associated protein 6
+85378	XB-GENEPAGE-490605	tubgcp6	tubulin gamma complex component 6
 84254	XB-GENEPAGE-490614	camkk1	calcium/calmodulin-dependent protein kinase kinase 1
 672	XB-GENEPAGE-490623	brca1	breast cancer 1
 2651	XB-GENEPAGE-490632	gcnt2.2	glucosaminyl (N-acetyl) transferase 2 (I blood group), gene 2
@@ -1373,7 +1370,7 @@
 54674	XB-GENEPAGE-490954	lrrn3	leucine rich repeat neuronal 3
 79913	XB-GENEPAGE-490963	actr5	ARP5 actin related protein 5 homolog
 64710	XB-GENEPAGE-490973	nucks1	nuclear casein kinase and cyclin-dependent kinase substrate 1
-10426	XB-GENEPAGE-490982	tubgcp3	tubulin gamma complex associated protein 3
+10426	XB-GENEPAGE-490982	tubgcp3	tubulin gamma complex component 3
 3181	XB-GENEPAGE-490992	hnrnpa2b1	heterogeneous nuclear ribonucleoprotein A2/B1
 3624	XB-GENEPAGE-491001	inhba	inhibin subunit beta A
 58155	XB-GENEPAGE-491011	ptbp2	polypyrimidine tract binding protein 2
@@ -1396,7 +1393,7 @@
 55576	XB-GENEPAGE-491155	stab2	stabilin 2
 9180	XB-GENEPAGE-491161	osmr	oncostatin M receptor
 29882	XB-GENEPAGE-491167	anapc2	anaphase promoting complex subunit 2
-9230	XB-GENEPAGE-491173	rab11b.1	RAB11B, member RAS oncogene family, gene 1
+9230	XB-GENEPAGE-491173	rab11b	RAB11B, member RAS oncogene family gene 1
 6293	XB-GENEPAGE-491182	vps52	VPS52, GARP complex subunit
 58480	XB-GENEPAGE-491189	rhou	ras homolog family member U
 6882	XB-GENEPAGE-491198	taf11	TATA-box binding protein associated factor 11
@@ -1455,7 +1452,7 @@
 6236	XB-GENEPAGE-491670	rrad	Ras-related associated with diabetes
 9670	XB-GENEPAGE-491679	ipo13	importin 13
 6576	XB-GENEPAGE-491685	slc25a1	solute carrier family 25 member 1
-27229	XB-GENEPAGE-491695	tubgcp4	tubulin gamma complex associated protein 4
+27229	XB-GENEPAGE-491695	tubgcp4	tubulin gamma complex component 4
 214	XB-GENEPAGE-491703	alcam	activated leukocyte cell adhesion molecule
 1272	XB-GENEPAGE-491713	cntn1	contactin 1
 54329	XB-GENEPAGE-491723	gpr85	G protein-coupled receptor 85
@@ -1479,7 +1476,7 @@
 5252	XB-GENEPAGE-491883	phf1	PHD finger protein 1
 221504	XB-GENEPAGE-491892	zbtb9	zinc finger and BTB domain containing 9
 10121	XB-GENEPAGE-491901	actr1a	ARP1 actin related protein 1 homolog A
-27190	XB-GENEPAGE-491910	il17b	interleukin 17B
+27190	XB-GENEPAGE-491910	il17bl	interleukin 17B like
 3208	XB-GENEPAGE-491919	hpca	hippocalcin
 84335	XB-GENEPAGE-491928	akt1s1	AKT1 substrate 1 (proline rich)
 58	XB-GENEPAGE-491937	acta1	actin, alpha 1, skeletal muscle
@@ -1669,7 +1666,6 @@
 11030	XB-GENEPAGE-493492	rbpms	RNA binding protein with multiple splicing
 8036	XB-GENEPAGE-493501	shoc2	SHOC2 leucine-rich repeat scaffold protein
 84940	XB-GENEPAGE-493510	coro6	coronin 6
-8313	XB-GENEPAGE-493519	axin2	axin 2 (conductin, axil)
 28954	XB-GENEPAGE-493529	rem1	RAS (RAD and GEM)-like GTP-binding 1
 4116	XB-GENEPAGE-493539	magoh	mago homolog, exon junction complex subunit
 4617	XB-GENEPAGE-493549	myf5	myogenic factor 5
@@ -1702,7 +1698,7 @@
 8932	XB-GENEPAGE-493775	mbd2	methyl-CpG binding domain protein 2
 23013	XB-GENEPAGE-493785	spen	spen family transcriptional repressor
 3842	XB-GENEPAGE-493791	tnpo1	transportin 1
-55323	XB-GENEPAGE-493800	larp6	La ribonucleoprotein domain family member 6
+55323	XB-GENEPAGE-493800	larp6	La ribonucleoprotein 6, translational regulator
 472	XB-GENEPAGE-493809	atm	ATM serine/threonine kinase
 7070	XB-GENEPAGE-493819	thy1	Thy-1 cell surface antigen
 51560	XB-GENEPAGE-493828	rab6b	RAB6B, member RAS oncogene family
@@ -1731,7 +1727,7 @@
 6497	XB-GENEPAGE-494027	ski	SKI proto-oncogene
 133	XB-GENEPAGE-494036	adm	adrenomedullin
 2342	XB-GENEPAGE-494042	fntb	farnesyltransferase, CAAX box, beta
-114791	XB-GENEPAGE-494052	tubgcp5	tubulin gamma complex associated protein 5
+114791	XB-GENEPAGE-494052	tubgcp5	tubulin gamma complex component 5
 4647	XB-GENEPAGE-494059	myo7a	myosin 7a
 5034	XB-GENEPAGE-494069	p4hb	prolyl 4-hydroxylase subunit beta
 6596	XB-GENEPAGE-494078	hltf	helicase-like transcription factor
@@ -1851,7 +1847,7 @@
 7525	XB-GENEPAGE-495081	yes1	YES proto-oncogene 1, Src family tyrosine kinase
 6631	XB-GENEPAGE-495091	snrpc	small nuclear ribonucleoprotein polypeptide C
 64766	XB-GENEPAGE-495101	s100pbp	S100P binding protein
-6997	XB-GENEPAGE-495110	tdgf1.1	teratocarcinoma-derived growth factor 1, member 1
+6997	XB-GENEPAGE-495110	tdgf1	teratocarcinoma-derived growth factor 1, member 1
 2521	XB-GENEPAGE-495118	fus	FUS RNA binding protein
 401409	XB-GENEPAGE-495127	rab19	RAB19, member RAS oncogene family
 3399	XB-GENEPAGE-495260	id3	inhibitor of DNA binding 3, HLH protein
@@ -2081,8 +2077,8 @@
 347240	XB-GENEPAGE-855670	kif24	kinesin family member 24
 2963	XB-GENEPAGE-855678	gtf2f2	general transcription factor IIF subunit 2
 89932	XB-GENEPAGE-855686	papln	papilin, proteoglycan-like sulfated glycoprotein
-282617	XB-GENEPAGE-855696	il28b.1	interleukin 28B (interferon, lambda 3), gene 1
-6523	XB-GENEPAGE-855698	slc5a1.1	solute carrier family 5 member 1, gene 1
+282617	XB-GENEPAGE-855696	ifnl3	interferon lambda 3 gene 1
+6523	XB-GENEPAGE-855698	slc5a1	solute carrier family 5 member 1, gene 1
 11254	XB-GENEPAGE-855703	slc6a14.2	solute carrier family 6 member 14, gene 2
 2660	XB-GENEPAGE-855712	mstn.2	myostatin, gene 2
 7369	XB-GENEPAGE-855714	umod.3	uromodulin (uromucoid, Tamm-Horsfall glycoprotein), gene 3
@@ -2110,7 +2106,7 @@
 655	XB-GENEPAGE-855953	bmp7.2	bone morphogenetic protein 7, gene 2
 5479	XB-GENEPAGE-855963	ppib	peptidylprolyl isomerase B
 126961	XB-GENEPAGE-855977	h3c14	H3 clustered histone 14
-25776	XB-GENEPAGE-856224	cby1	chibby homolog 1
+25776	XB-GENEPAGE-856224	cby1	chibby 1, beta catenin antagonist
 5203	XB-GENEPAGE-856230	pfdn4	prefoldin subunit 4
 10765	XB-GENEPAGE-856239	kdm5b	lysine demethylase 5B
 5300	XB-GENEPAGE-856253	pin1	peptidylprolyl cis/trans isomerase, NIMA-interacting 1
@@ -2258,7 +2254,7 @@
 138805	XB-GENEPAGE-877116	or13f1	olfactory receptor family 13 subfamily F member 1
 220213	XB-GENEPAGE-877119	otud1	OTU deubiquitinase 1
 168620	XB-GENEPAGE-877126	bhlha15	basic helix-loop-helix family member a15
-285600	XB-GENEPAGE-877129	kiaa0825	KIAA0825
+285600	XB-GENEPAGE-877129	KIAA0825	KIAA0825
 390598	XB-GENEPAGE-877132	skor1	SKI family transcriptional corepressor 1
 23113	XB-GENEPAGE-877135	cul9	cullin 9
 222484	XB-GENEPAGE-877143	lnx2	ligand of numb-protein X 2
@@ -2274,14 +2270,14 @@
 388364	XB-GENEPAGE-877201	tmigd1	transmembrane and immunoglobulin domain containing 1
 54812	XB-GENEPAGE-877204	aftph	aftiphilin
 80320	XB-GENEPAGE-877210	sp6	Sp6 transcription factor
-283951	XB-GENEPAGE-877213	c16orf91	chromosome 16 open reading frame 91
+283951	XB-GENEPAGE-877213	uqcc4	ubiquinol-cytochrome c reductase complex assembly factor 4
 22843	XB-GENEPAGE-877219	ppm1e	protein phosphatase, Mg2+/Mn2+ dependent 1E
 84859	XB-GENEPAGE-877224	lrch3	leucine-rich repeats and calponin homology (CH) domain containing 3
 55636	XB-GENEPAGE-877229	chd7	chromodomain helicase DNA binding protein 7
 22868	XB-GENEPAGE-877243	fastkd2	FAST kinase domains 2
 55922	XB-GENEPAGE-877250	nkrf	NFKB repressing factor
 25917	XB-GENEPAGE-877263	thumpd3	THUMP domain containing 3
-80007	XB-GENEPAGE-877271	c10orf88	chromosome 10 open reading frame 88
+80007	XB-GENEPAGE-877271	c7h10orf88	chromosome 7 C10orf88 homolog
 54931	XB-GENEPAGE-877278	trmt10c	tRNA methyltransferase 10C, mitochondrial RNase P subunit
 259266	XB-GENEPAGE-877287	aspm	abnormal spindle microtubule assembly
 9639	XB-GENEPAGE-877295	arhgef10	Rho guanine nucleotide exchange factor 10
@@ -2373,7 +2369,7 @@
 4000	XB-GENEPAGE-920721	lmna	lamin A/C
 3643	XB-GENEPAGE-920732	insr	insulin receptor
 339302	XB-GENEPAGE-920746	cplx4	complexin 4
-6473	XB-GENEPAGE-920751	shox	short stature homeobox
+6473	XB-GENEPAGE-920751	shox	SHOX homeobox
 22821	XB-GENEPAGE-920755	rasa3	RAS p21 protein activator 3
 3708	XB-GENEPAGE-920764	itpr1	inositol 1,4,5-trisphosphate receptor type 1
 54887	XB-GENEPAGE-920776	bltp3a	bridge-like lipid transfer protein family member 3A
@@ -2562,7 +2558,7 @@
 51099	XB-GENEPAGE-939788	abhd5	abhydrolase domain containing 5
 5013	XB-GENEPAGE-939803	otx1	orthodenticle homeobox 1
 642658	XB-GENEPAGE-939815	scx	scleraxis bHLH transcription factor
-79074	XB-GENEPAGE-939821	c2orf49	chromosome 2 open reading frame 49
+79074	XB-GENEPAGE-939821	c2h2orf49	chromosome 2 C2orf49 homolog
 6950	XB-GENEPAGE-939842	tcp1	t-complex 1
 57007	XB-GENEPAGE-939860	ackr3	atypical chemokine receptor 3
 152573	XB-GENEPAGE-939877	shisa3	shisa family member 3
@@ -2573,7 +2569,7 @@
 7311	XB-GENEPAGE-939924	uba52	ubiquitin A-52 residue ribosomal protein fusion product 1
 128209	XB-GENEPAGE-939940	klf17	Kruppel-like factor 17
 64793	XB-GENEPAGE-939966	cep85	centrosomal protein 85kDa
-64149	XB-GENEPAGE-939976	c17orf75	chromosome 17 open reading frame 75
+64149	XB-GENEPAGE-939976	c10h17orf75	chromosome 10 C17orf75 homolog
 140731	XB-GENEPAGE-939979	ankrd60	ankyrin repeat domain 60
 131408	XB-GENEPAGE-939985	fam131a	family with sequence similarity 131 member A
 2863	XB-GENEPAGE-939994	gpr39	G protein-coupled receptor 39
@@ -2617,7 +2613,7 @@
 54103	XB-GENEPAGE-940199	gsap	gamma-secretase activating protein
 9002	XB-GENEPAGE-940202	f2rl3	F2R like thrombin or trypsin receptor 3
 145814	XB-GENEPAGE-940207	pgpep1l	pyroglutamyl-peptidase I like
-51207	XB-GENEPAGE-940214	dusp13	dual specificity phosphatase 13
+51207	XB-GENEPAGE-940214	dusp13b	dual specificity phosphatase 13b
 2829	XB-GENEPAGE-940217	xcr1	chemokine (C motif) receptor 1
 283807	XB-GENEPAGE-940222	fbxl22	F-box and leucine-rich repeat protein 22
 256586	XB-GENEPAGE-940229	lysmd2	LysM, putative peptidoglycan-binding, domain containing 2
@@ -2704,7 +2700,7 @@
 11066	XB-GENEPAGE-940852	snrnp35	small nuclear ribonucleoprotein U11/U12 subunit 35
 8399	XB-GENEPAGE-940862	pla2g10	phospholipase A2 group X
 83597	XB-GENEPAGE-940865	rtp3	receptor transporter protein 3
-64776	XB-GENEPAGE-940868	c11orf1	chromosome 11 open reading frame 1
+64776	XB-GENEPAGE-940868	cfap68	cilia and flagella associated protein 68
 400506	XB-GENEPAGE-940871	knop1	lysine-rich nucleolar protein 1
 9048	XB-GENEPAGE-940875	artn	artemin
 200010	XB-GENEPAGE-940878	slc5a9	solute carrier family 5 member 9
@@ -2715,7 +2711,7 @@
 51097	XB-GENEPAGE-940935	sccpdh	saccharopine dehydrogenase (putative)
 6716	XB-GENEPAGE-940948	srd5a2	steroid 5 alpha-reductase 2
 55274	XB-GENEPAGE-940957	phf10	PHD finger protein 10
-128061	XB-GENEPAGE-940971	c1orf131	chromosome 1 open reading frame 131
+128061	XB-GENEPAGE-940971	c5h1orf131	chromosome 5 C1orf131 homolog
 6801	XB-GENEPAGE-940979	strn	striatin
 55892	XB-GENEPAGE-941009	mynn	myoneurin
 7095	XB-GENEPAGE-941019	sec62	SEC62 homolog, preprotein translocation factor
@@ -3024,7 +3020,7 @@
 57128	XB-GENEPAGE-944548	lyrm4	LYR motif containing 4
 10667	XB-GENEPAGE-944559	fars2	phenylalanyl-tRNA synthetase 2, mitochondrial
 498	XB-GENEPAGE-944566	atp5f1a	ATP synthase F1 subunit alpha
-497661	XB-GENEPAGE-944581	c18orf32	chromosome 18 open reading frame 32
+497661	XB-GENEPAGE-944581	c1h18orf32	chromosome 1 C18orf32 homolog
 10152	XB-GENEPAGE-944588	abi2	abl-interactor 2
 79731	XB-GENEPAGE-944602	nars2	asparaginyl-tRNA synthetase 2, mitochondrial
 28971	XB-GENEPAGE-944609	aamdc	adipogenesis associated, Mth938 domain containing
@@ -3097,7 +3093,7 @@
 51434	XB-GENEPAGE-945411	anapc7	anaphase promoting complex subunit 7
 55759	XB-GENEPAGE-945425	wdr12	WD repeat domain 12
 11222	XB-GENEPAGE-945434	mrpl3	mitochondrial ribosomal protein L3
-57456	XB-GENEPAGE-945447	kiaa1143	KIAA1143
+57456	XB-GENEPAGE-945447	KIAA1143	KIAA1143
 222166	XB-GENEPAGE-945482	mturn	maturin, neural progenitor differentiation regulator homolog (Xenopus)
 254773	XB-GENEPAGE-945497	lyg2	lysozyme G-like 2
 51263	XB-GENEPAGE-945511	mrpl30	mitochondrial ribosomal protein L30
@@ -3141,7 +3137,7 @@
 9982	XB-GENEPAGE-945937	fgfbp1	fibroblast growth factor binding protein 1
 952	XB-GENEPAGE-945948	cd38	CD38 molecule
 83940	XB-GENEPAGE-945961	tatdn1	TatD DNase domain containing 1
-3123	XB-GENEPAGE-945970	mhc2-dcb (provisional)	major histocompatibility complex, class II, DC beta  (provisional)
+3123	XB-GENEPAGE-945970	mhc2-dcb	major histocompatibility complex, class II, DC beta
 1407	XB-GENEPAGE-946006	cry1	cryptochrome circadian regulator  1
 6450	XB-GENEPAGE-946019	sh3bgr	SH3 domain binding glutamate-rich protein
 57185	XB-GENEPAGE-946029	nipal3	NIPA-like domain containing 3
@@ -3204,7 +3200,7 @@
 55040	XB-GENEPAGE-946744	epn3	epsin 3
 29880	XB-GENEPAGE-946753	alg5	ALG5, dolichyl-phosphate beta-glucosyltransferase
 54495	XB-GENEPAGE-946767	tmx3	thioredoxin-related transmembrane protein 3
-123207	XB-GENEPAGE-946778	c15orf40	chromosome 15 open reading frame 40
+123207	XB-GENEPAGE-946778	c3h15orf40	chromosome 3 C15orf40 homolog
 51706	XB-GENEPAGE-946787	cyb5r1	cytochrome b5 reductase 1
 4194	XB-GENEPAGE-946790	mdm4	MDM4, p53 regulator
 54810	XB-GENEPAGE-946802	gipc2	GIPC PDZ domain containing family member 2
@@ -3225,7 +3221,7 @@
 27131	XB-GENEPAGE-947017	snx5	sorting nexin 5
 50810	XB-GENEPAGE-947031	hdgfl3	HDGF like 3
 3241	XB-GENEPAGE-947039	hpcal1	hippocalcin-like 1
-6241	XB-GENEPAGE-947051	rrm2.1	ribonucleotide reductase M2, gene 1
+6241	XB-GENEPAGE-947051	rrm2	ribonucleotide reductase M2, gene 1
 124995	XB-GENEPAGE-947065	mrpl10	mitochondrial ribosomal protein L10
 56899	XB-GENEPAGE-947074	anks1b	ankyrin repeat and sterile alpha motif domain containing 1B
 28992	XB-GENEPAGE-947079	macrod1	MACRO domain containing 1
@@ -3273,7 +3269,7 @@
 51643	XB-GENEPAGE-947554	tmbim4	transmembrane BAX inhibitor motif containing 4
 5270	XB-GENEPAGE-947566	serpine2	serpin peptidase inhibitor, clade E (nexin, plasminogen activator inhibitor type 1), member 2
 100129354	XB-GENEPAGE-947582	nradd	neurotrophin receptor associated death domain
-54438	XB-GENEPAGE-947601	gfod1	glucose-fructose oxidoreductase domain containing 1
+54438	XB-GENEPAGE-947601	gfod1	Gfo/Idh/MocA-like oxidoreductase domain containing 1
 22882	XB-GENEPAGE-947610	zhx2	zinc fingers and homeoboxes 2
 84985	XB-GENEPAGE-947618	fam83a	family with sequence similarity 83 member A
 9219	XB-GENEPAGE-947629	mta2	metastasis associated 1 family member 2
@@ -3293,7 +3289,7 @@
 6683	XB-GENEPAGE-947838	spast	spastin
 91039	XB-GENEPAGE-947853	dpp9	dipeptidyl-peptidase 9
 1510	XB-GENEPAGE-947863	ctse	cathepsin E
-55798	XB-GENEPAGE-947876	mettl2b	methyltransferase 2B, methylcytidine
+55798	XB-GENEPAGE-947876	mettl2b	methyltransferase 2B, tRNA N3-cytidine
 55251	XB-GENEPAGE-947887	pcmtd2	protein-L-isoaspartate (D-aspartate) O-methyltransferase domain containing 2
 29780	XB-GENEPAGE-947899	parvb	parvin beta
 57222	XB-GENEPAGE-947912	ergic1	endoplasmic reticulum-golgi intermediate compartment 1
@@ -3327,7 +3323,7 @@
 91408	XB-GENEPAGE-948235	btf3l4	basic transcription factor 3-like 4
 55268	XB-GENEPAGE-948249	echdc2	enoyl-CoA hydratase domain containing 2
 54432	XB-GENEPAGE-948256	yipf1	Yip1 domain family member 1
-51668	XB-GENEPAGE-948263	hspb11	heat shock protein family B (small) member 11
+51668	XB-GENEPAGE-948263	ift25	intraflagellar transport 25
 55001	XB-GENEPAGE-948277	ttc22	tetratricopeptide repeat domain 22
 7809	XB-GENEPAGE-948282	bsnd	barttin CLCNK-type chloride channel accessory beta subunit
 7143	XB-GENEPAGE-948285	tnr	tenascin R
@@ -3507,7 +3503,7 @@
 6263	XB-GENEPAGE-949979	ryr3	ryanodine receptor 3
 55197	XB-GENEPAGE-949982	rprd1a	regulation of nuclear pre-mRNA domain containing 1A
 26013	XB-GENEPAGE-949998	l3mbtl1	L3MBTL1, histone methyl-lysine binding protein
-7150	XB-GENEPAGE-950001	top1.1	DNA topoisomerase I, gene 1
+7150	XB-GENEPAGE-950001	top1	DNA topoisomerase I gene 1
 58476	XB-GENEPAGE-950011	tp53inp2	tumor protein p53 inducible nuclear protein 2
 191	XB-GENEPAGE-950016	ahcy	adenosylhomocysteinase
 9139	XB-GENEPAGE-950033	cbfa2t2	CBFA2/RUNX1 translocation partner 2
@@ -3523,7 +3519,6 @@
 11160	XB-GENEPAGE-950143	erlin2	ER lipid raft associated 2
 78986	XB-GENEPAGE-950156	dusp26	dual specificity phosphatase 26
 55233	XB-GENEPAGE-950159	mob1a	MOB kinase activator 1A
-491	XB-GENEPAGE-950176	atp2b2	ATPase, Ca++ transporting, plasma membrane 2
 284612	XB-GENEPAGE-950183	sypl2	synaptophysin like 2
 10542	XB-GENEPAGE-950194	lamtor5	late endosomal/lysosomal adaptor, MAPK and MTOR activator 5
 79774	XB-GENEPAGE-950225	grtp1	growth hormone regulated TBC protein 1
@@ -3535,7 +3530,7 @@
 200942	XB-GENEPAGE-950278	klhdc8b	kelch domain containing 8B
 54681	XB-GENEPAGE-950281	p4htm	prolyl 4-hydroxylase, transmembrane (endoplasmic reticulum)
 131149	XB-GENEPAGE-950284	otol1	otolin 1
-54149	XB-GENEPAGE-950287	c21orf91	chromosome 21 open reading frame 91
+54149	XB-GENEPAGE-950287	c2h21orf91	chromosome 2 C21orf91 homolog
 1371	XB-GENEPAGE-950296	cpox	coproporphyrinogen oxidase
 222234	XB-GENEPAGE-950333	fam185a	family with sequence similarity 185 member A
 26959	XB-GENEPAGE-950342	hbp1	HMG-box transcription factor 1
@@ -3547,7 +3542,7 @@
 374308	XB-GENEPAGE-950406	ptchd3	patched domain containing 3
 54518	XB-GENEPAGE-950409	apbb1ip	amyloid beta (A4) precursor protein-binding, family B, member 1 interacting protein
 57512	XB-GENEPAGE-950419	gpr158	G protein-coupled receptor 158
-256815	XB-GENEPAGE-950425	c10orf67	chromosome 10 open reading frame 67
+256815	XB-GENEPAGE-950425	c6h10orf67	chromosome 6 C10orf67 homolog
 64215	XB-GENEPAGE-950430	dnajc1	DnaJ heat shock protein family (Hsp40) member C1
 5770	XB-GENEPAGE-950441	ptpn1	protein tyrosine phosphatase non-receptor type 1
 7335	XB-GENEPAGE-950452	ube2v1	ubiquitin conjugating enzyme E2 variant 1
@@ -3572,7 +3567,7 @@
 78990	XB-GENEPAGE-950642	otub2	OTU deubiquitinase, ubiquitin aldehyde binding 2
 165679	XB-GENEPAGE-950652	sptssb	serine palmitoyltransferase small subunit B
 151742	XB-GENEPAGE-950663	ppm1l	protein phosphatase, Mg2+/Mn2+ dependent 1L
-401097	XB-GENEPAGE-950675	c3orf80	chromosome 3 open reading frame 80
+401097	XB-GENEPAGE-950675	c5h3orf80	chromosome 5 C3orf80 homolog
 4291	XB-GENEPAGE-950678	mlf1	myeloid leukemia factor 1
 7881	XB-GENEPAGE-950687	kcnab1	potassium channel, voltage gated subfamily A regulatory beta subunit 1
 8833	XB-GENEPAGE-950695	gmps	guanine monophosphate synthase
@@ -3615,7 +3610,7 @@
 27236	XB-GENEPAGE-951004	arfip1	ADP ribosylation factor interacting protein 1
 729830	XB-GENEPAGE-951016	fhip1a	FHF complex subunit HOOK interacting protein 1A
 987	XB-GENEPAGE-951019	lrba	LPS-responsive vesicle trafficking, beach and anchor containing
-148304	XB-GENEPAGE-951024	c1orf74	chromosome 1 open reading frame 74
+148304	XB-GENEPAGE-951024	c2h1orf74	chromosome 2  C1orf74 homolog
 51003	XB-GENEPAGE-951033	med31	mediator complex subunit 31
 167	XB-GENEPAGE-951047	crisp1.3	cysteine-rich secretory protein 1 gene 3
 83648	XB-GENEPAGE-951059	fam167a	family with sequence similarity 167 member A
@@ -3764,12 +3759,12 @@
 321	XB-GENEPAGE-952382	apba2	amyloid beta (A4) precursor protein-binding, family A, member 2
 10413	XB-GENEPAGE-952393	yap1	Yes associated protein 1
 4317	XB-GENEPAGE-952401	mmp8	matrix metallopeptidase 8
-160140	XB-GENEPAGE-952410	c11orf65	chromosome 11 open reading frame 65
+160140	XB-GENEPAGE-952410	c2h11orf65	chromosome 2 C11orf65 homolog
 11345	XB-GENEPAGE-952420	gabarapl2	GABA(A) receptor-associated protein like 2
 5336	XB-GENEPAGE-952430	plcg2	phospholipase C gamma 2
 3281	XB-GENEPAGE-952435	hsbp1	heat shock factor binding protein 1
 3751	XB-GENEPAGE-952448	kcnd2	potassium channel, voltage gated Shal related subfamily D, member 2
-537	XB-GENEPAGE-952451	atp6ap1.1	ATPase, H+ transporting, lysosomal accessory protein 1, gene 1
+537	XB-GENEPAGE-952451	atp6ap1	ATPase, H+ transporting, lysosomal accessory protein 1, gene 1
 51023	XB-GENEPAGE-952458	mrps18c	mitochondrial ribosomal protein S18C
 80010	XB-GENEPAGE-952468	rmi1	RecQ mediated genome instability 1
 375748	XB-GENEPAGE-952479	ercc6l2	excision repair cross-complementation group 6 like 2
@@ -3805,7 +3800,7 @@
 3308	XB-GENEPAGE-952768	hspa4	heat shock protein family A (Hsp70) member 4
 54819	XB-GENEPAGE-952784	zcchc10	zinc finger CCHC-type containing 10
 92293	XB-GENEPAGE-952798	tmem132c	transmembrane protein 132C
-79066	XB-GENEPAGE-952801	mettl16	methyltransferase 16, N6-methyladenosine
+79066	XB-GENEPAGE-952801	mettl16	methyltransferase 16, RNA N6-adenosine
 5621	XB-GENEPAGE-952813	prnp	prion protein
 10987	XB-GENEPAGE-952826	cops5	COP9 signalosome subunit 5
 51134	XB-GENEPAGE-952838	cep83	centrosomal protein 83kDa
@@ -3845,7 +3840,7 @@
 23583	XB-GENEPAGE-953120	smug1	single-strand-selective monofunctional uracil-DNA glycosylase 1
 123	XB-GENEPAGE-953134	plin2	perilipin 2
 54875	XB-GENEPAGE-953150	cntln	centlein
-54796	XB-GENEPAGE-953156	bnc2	basonuclin 2
+54796	XB-GENEPAGE-953156	bnc2	basonuclin zinc finger protein 2
 54148	XB-GENEPAGE-953159	mrpl39	mitochondrial ribosomal protein L39
 51225	XB-GENEPAGE-953170	abi3	ABI family member 3
 11248	XB-GENEPAGE-953176	nxph3	neurexophilin 3
@@ -3948,7 +3943,7 @@
 201501	XB-GENEPAGE-954048	zbtb7c	zinc finger and BTB domain containing 7C
 81543	XB-GENEPAGE-954051	lrrc3	leucine rich repeat containing 3
 7327	XB-GENEPAGE-954054	ube2g2	ubiquitin conjugating enzyme E2 G2
-754	XB-GENEPAGE-954065	pttg1ip.1	pituitary tumor-transforming 1 interacting protein, gene 1
+754	XB-GENEPAGE-954065	pttg1ip	pituitary tumor-transforming 1 interacting protein, gene 1
 85395	XB-GENEPAGE-954074	slx9	SLX9 ribosome biogenesis factor
 104	XB-GENEPAGE-954084	adarb1	adenosine deaminase, RNA-specific, B1
 57558	XB-GENEPAGE-954094	usp35	ubiquitin specific peptidase 35
@@ -4042,7 +4037,7 @@
 8504	XB-GENEPAGE-954957	pex3	peroxisomal biogenesis factor 3
 51390	XB-GENEPAGE-954970	aig1	androgen-induced 1
 3298	XB-GENEPAGE-954976	hsf2	heat shock transcription factor 2
-57515	XB-GENEPAGE-954989	serinc1.1	serine incorporator 1, gene 1
+57515	XB-GENEPAGE-954989	serinc1	serine incorporator 1, gene 1
 10924	XB-GENEPAGE-955001	smpdl3a	sphingomyelin phosphodiesterase acid-like 3A
 5956	XB-GENEPAGE-955008	opn1lw	opsin 1 (cone pigments), long-wave-sensitive
 8269	XB-GENEPAGE-955020	tmem187	transmembrane protein 187
@@ -4087,7 +4082,7 @@
 10066	XB-GENEPAGE-955376	scamp2	secretory carrier membrane protein 2
 219854	XB-GENEPAGE-955388	tmem218	transmembrane protein 218
 54538	XB-GENEPAGE-955395	robo4	roundabout guidance receptor 4
-90231	XB-GENEPAGE-955402	kiaa2013	KIAA2013
+90231	XB-GENEPAGE-955402	KIAA2013	KIAA2013
 5351	XB-GENEPAGE-955413	plod1	procollagen-lysine, 2-oxoglutarate 5-dioxygenase 1
 3312	XB-GENEPAGE-955425	hspa8	heat shock protein family A (Hsp70) member 8
 55800	XB-GENEPAGE-955440	scn3b	sodium channel, voltage gated, type III beta subunit
@@ -4148,7 +4143,7 @@
 23085	XB-GENEPAGE-956038	erc1	ELKS/RAB6-interacting/CAST family member 1
 55752	XB-GENEPAGE-956043	septin11	septin 11
 2653	XB-GENEPAGE-956060	gcsh	glycine cleavage system protein H (aminomethyl carrier)
-339778	XB-GENEPAGE-956072	fam166c	family with sequence similarity 166 member C.
+339778	XB-GENEPAGE-956072	cimip2c	ciliary microtubule inner protein 2C
 3777	XB-GENEPAGE-956080	kcnk3	potassium channel, two pore domain subfamily K, member 3
 51435	XB-GENEPAGE-956083	scara3	scavenger receptor class A member 3
 55100	XB-GENEPAGE-956086	wdr70	WD repeat domain 70
@@ -4231,7 +4226,7 @@
 6167	XB-GENEPAGE-956872	rpl37	ribosomal protein L37
 23548	XB-GENEPAGE-956882	ttc33	tetratricopeptide repeat domain 33
 8424	XB-GENEPAGE-956891	bbox1	butyrobetaine (gamma), 2-oxoglutarate dioxygenase (gamma-butyrobetaine hydroxylase) 1
-81532	XB-GENEPAGE-956897	mob2.1	MOB kinase activator 2
+81532	XB-GENEPAGE-956897	mob2	MOB kinase activator 2
 10077	XB-GENEPAGE-956911	tspan32	tetraspanin 32
 201161	XB-GENEPAGE-956916	cenpv	centromere protein V
 92521	XB-GENEPAGE-956923	specc1	sperm antigen with calponin homology and coiled-coil domains 1
@@ -4284,7 +4279,7 @@
 55140	XB-GENEPAGE-957347	elp3	elongator acetyltransferase complex subunit 3
 84033	XB-GENEPAGE-957360	obscn	obscurin, cytoskeletal calmodulin and titin-interacting RhoGEF
 29094	XB-GENEPAGE-957365	lgalsl	lectin, galactoside-binding-like
-83638	XB-GENEPAGE-957379	c11orf68	chromosome 11 open reading frame 68
+83638	XB-GENEPAGE-957379	c4h11orf68	chromosome 4 C11orf68 homolog
 539	XB-GENEPAGE-957387	atp5po	ATP synthase peripheral stalk subunit OSCP
 9698	XB-GENEPAGE-957400	pum1	pumilio RNA binding family member 1
 9410	XB-GENEPAGE-957414	snrnp40	small nuclear ribonucleoprotein, U5 40kDa subunit
@@ -4332,7 +4327,7 @@
 11318	XB-GENEPAGE-957937	gpr182	G protein-coupled receptor 182
 9880	XB-GENEPAGE-957945	zbtb39	zinc finger and BTB domain containing 39
 4665	XB-GENEPAGE-957952	nab2	NGFI-A binding protein 2 (EGR1 binding protein 2)
-4361	XB-GENEPAGE-957955	mre11	MRE11 homolog , double strand break repair nuclease
+4361	XB-GENEPAGE-957955	mre11	MRE11 homolog, double strand break repair nuclease
 1983	XB-GENEPAGE-957968	eif5	eukaryotic translation initiation factor 5
 115708	XB-GENEPAGE-957979	trmt61a	tRNA methyltransferase 61A
 9529	XB-GENEPAGE-957991	bag5	BAG cochaperone 5
@@ -4495,7 +4490,7 @@
 374378	XB-GENEPAGE-959490	galnt18	polypeptide N-acetylgalactosaminyltransferase 18
 1621	XB-GENEPAGE-959494	dbh	dopamine beta-hydroxylase (dopamine beta-monooxygenase)
 51067	XB-GENEPAGE-959497	yars2	tyrosyl-tRNA synthetase 2
-55356	XB-GENEPAGE-959502	slc22a15.1	solute carrier family 22 member 15
+55356	XB-GENEPAGE-959502	slc22a15	solute carrier family 22 member 15 gene 1
 10286	XB-GENEPAGE-959513	bcas2	breast carcinoma amplified sequence 2
 286097	XB-GENEPAGE-959525	micu3	mitochondrial calcium uptake family member 3
 1788	XB-GENEPAGE-959528	dnmt3a	DNA (cytosine-5-)-methyltransferase 3 alpha
@@ -4627,7 +4622,6 @@
 57486	XB-GENEPAGE-960644	nln	neurolysin (metallopeptidase M3 family)
 100132916	XB-GENEPAGE-960649	shisal2b	shisa like 2B
 4958	XB-GENEPAGE-960654	omd	osteomodulin
-493	XB-GENEPAGE-960657	atp2b4	ATPase, Ca++ transporting, plasma membrane 4
 7368	XB-GENEPAGE-960666	ugt8	UDP glycosyltransferase 8
 54532	XB-GENEPAGE-960674	usp53	ubiquitin specific peptidase 53
 115811	XB-GENEPAGE-960681	iqcd	IQ motif containing D
@@ -4664,7 +4658,6 @@
 8453	XB-GENEPAGE-960930	cul2	cullin 2
 10771	XB-GENEPAGE-960938	zmynd11	zinc finger MYND-type containing 11
 256714	XB-GENEPAGE-960946	map7d2	MAP7 domain containing 2
-8843	XB-GENEPAGE-960953	hcar3	hydroxycarboxylic acid receptor 3
 23545	XB-GENEPAGE-960956	atp6v0a2	ATPase H+ transporting V0 subunit a2
 138311	XB-GENEPAGE-960963	dipk1b	divergent protein kinase domain 1B
 29058	XB-GENEPAGE-960970	tmem230	transmembrane protein 230
@@ -4741,12 +4734,12 @@
 26235	XB-GENEPAGE-961512	fbxl4	F-box and leucine-rich repeat protein 4
 11060	XB-GENEPAGE-961515	wwp2	WW domain containing E3 ubiquitin protein ligase 2
 1845	XB-GENEPAGE-961522	dusp3	dual specificity phosphatase 3
-220004	XB-GENEPAGE-961527	ppp1r32	protein phosphatase 1 regulatory subunit 32
+220004	XB-GENEPAGE-961527	saxo4	stabilizer of axonemal microtubules 4
 60482	XB-GENEPAGE-961534	slc5a7	solute carrier family 5 (sodium/choline cotransporter), member 7
 347404	XB-GENEPAGE-961537	lancl3	LanC like family member 3
 2710	XB-GENEPAGE-961540	gk	glycerol kinase
 283385	XB-GENEPAGE-961552	morn3	MORN repeat containing 3
-205327	XB-GENEPAGE-961561	c2orf69	chromosome 2 open reading frame 69
+205327	XB-GENEPAGE-961561	c9h2orf69	chromosome 9 C2orf69 homolog
 8419	XB-GENEPAGE-961571	bfsp2	beaded filament structural protein 2
 255239	XB-GENEPAGE-961576	ankk1	ankyrin repeat and kinase domain containing 1
 80235	XB-GENEPAGE-961579	pigz	phosphatidylinositol glycan anchor biosynthesis class Z
@@ -4834,7 +4827,7 @@
 85300	XB-GENEPAGE-962244	atcay	ataxia, cerebellar, Cayman type
 130013	XB-GENEPAGE-962247	acmsd	aminocarboxymuconate semialdehyde decarboxylase
 286133	XB-GENEPAGE-962255	scara5	scavenger receptor class A member 5
-60686	XB-GENEPAGE-962260	c14orf93	chromosome 14 open reading frame 93
+60686	XB-GENEPAGE-962260	c1h14orf93	chromosome 1 C14orf93 homolog
 1024	XB-GENEPAGE-962266	cdk8	cyclin-dependent kinase 8
 114899	XB-GENEPAGE-962277	c1qtnf3	C1q and TNF related 3
 7275	XB-GENEPAGE-962280	tub	TUB bipartite transcription factor
@@ -4953,14 +4946,14 @@
 126917	XB-GENEPAGE-963324	iffo2	intermediate filament family orphan 2
 153733	XB-GENEPAGE-963336	ccdc112	coiled-coil domain containing 112
 64598	XB-GENEPAGE-963345	mospd3	motile sperm domain containing 3
-128637	XB-GENEPAGE-963354	tbc1d20.1	TBC1 domain family member 20
+128637	XB-GENEPAGE-963354	tbc1d20	TBC1 domain family member 20
 143570	XB-GENEPAGE-963365	xrra1	X-ray radiation resistance associated 1
 7388	XB-GENEPAGE-963372	uqcrh	ubiquinol-cytochrome c reductase hinge protein
 127435	XB-GENEPAGE-963381	podn	podocan
 1580	XB-GENEPAGE-963386	cyp4b1.2	cytochrome P450 family 4 subfamily B member 1
 1376	XB-GENEPAGE-963399	cpt2	carnitine palmitoyltransferase 2
 3336	XB-GENEPAGE-963411	hspe1	heat shock protein family E (Hsp10) member 1
-387263	XB-GENEPAGE-963424	c6orf120	chromosome 6 open reading frame 120
+387263	XB-GENEPAGE-963424	c5h6orf120	chromosome 5 C6orf120 homolog
 30061	XB-GENEPAGE-963434	slc40a1	solute carrier family 40 (iron-regulated transporter), member 1
 9551	XB-GENEPAGE-963445	atp5mf	ATP synthase membrane subunit f
 26986	XB-GENEPAGE-963456	pabpc1	poly(A) binding protein, cytoplasmic 1
@@ -4969,14 +4962,14 @@
 112950	XB-GENEPAGE-963497	med8	mediator complex subunit 8
 5142	XB-GENEPAGE-963511	pde4b	phosphodiesterase 4B
 16	XB-GENEPAGE-963522	aars1	alanyl-tRNA synthetase 1
-6483	XB-GENEPAGE-963531	st3gal2.1	ST3 beta-galactoside alpha-2,3-sialyltransferase 2, gene 1
+6483	XB-GENEPAGE-963531	st3gal2	ST3 beta-galactoside alpha-2,3-sialyltransferase 2 gene 1
 23594	XB-GENEPAGE-963540	orc6	origin recognition complex subunit 6
 57567	XB-GENEPAGE-963552	znf319	zinc finger protein 319
 2787	XB-GENEPAGE-963559	gng5	guanine nucleotide binding protein (G protein), gamma 5
 90624	XB-GENEPAGE-963574	lyrm7	LYR motif containing 7
 140862	XB-GENEPAGE-963584	ism1	isthmin 1, angiogenesis inhibitor
 6782	XB-GENEPAGE-963594	hspa13	heat shock protein family A (Hsp70) member 13
-285237	XB-GENEPAGE-963602	c3orf38	chromosome 3 open reading frame 38
+285237	XB-GENEPAGE-963602	c2h3orf38	chromosome 2 C3orf38 homolog
 8450	XB-GENEPAGE-963627	cul4b	cullin 4B
 10659	XB-GENEPAGE-963639	celf2	CUGBP, Elav-like family member 2
 5209	XB-GENEPAGE-963651	pfkfb3	6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 3
@@ -5014,7 +5007,7 @@
 84516	XB-GENEPAGE-963960	dctn5	dynactin subunit 5
 8506	XB-GENEPAGE-963971	cntnap1	contactin associated protein 1
 10005	XB-GENEPAGE-963978	acot8	acyl-CoA thioesterase 8
-2538	XB-GENEPAGE-963988	g6pc1.1	glucose-6-phosphatase, catalytic subunit 1, gene 1
+2538	XB-GENEPAGE-963988	g6pc1	glucose-6-phosphatase, catalytic subunit 1, gene 1
 1329	XB-GENEPAGE-964001	cox5b.1	cytochrome c oxidase subunit Vb, gene 1
 29881	XB-GENEPAGE-964010	npc1l1	NPC1 like 1
 94239	XB-GENEPAGE-964015	h2az2	H2A.Z variant histone 2
@@ -5030,7 +5023,7 @@
 83877	XB-GENEPAGE-964282	tm2d2	TM2 domain containing 2
 23221	XB-GENEPAGE-964294	rhobtb2	Rho related BTB domain containing 2
 10159	XB-GENEPAGE-964300	atp6ap2	ATPase, H+ transporting, lysosomal accessory protein 2
-159013	XB-GENEPAGE-964314	cxorf38	chromosome X open reading frame 38
+159013	XB-GENEPAGE-964314	c2hxorf38	chromosome 2 Cxorf38 homolog
 139341	XB-GENEPAGE-964322	fundc1	FUN14 domain containing 1
 112399	XB-GENEPAGE-964333	egln3	egl-9 family hypoxia-inducible factor 3
 26133	XB-GENEPAGE-964342	trpc4ap	transient receptor potential cation channel, subfamily C, member 4 associated protein
@@ -5118,7 +5111,7 @@
 1629	XB-GENEPAGE-965455	dbt	dihydrolipoamide branched chain transacylase E2
 51611	XB-GENEPAGE-965467	dph5	diphthamide biosynthesis 5
 51430	XB-GENEPAGE-965478	suco	SUN domain containing ossification factor
-51603	XB-GENEPAGE-965487	mettl13	methyltransferase 13, eEF1A lysine and N-terminal methyltransferase
+51603	XB-GENEPAGE-965487	mettl13	methyltransferase 13, eEF1A N-terminus and K55
 64105	XB-GENEPAGE-965497	cenpk	centromere protein K
 115795	XB-GENEPAGE-965506	fancd2os	FANCD2 opposite strand
 10369	XB-GENEPAGE-965515	cacng2	calcium channel, voltage-dependent, gamma subunit 2
@@ -5144,7 +5137,7 @@
 129880	XB-GENEPAGE-965963	bbs5	Bardet-Biedl syndrome 5
 83442	XB-GENEPAGE-965975	sh3bgrl3	SH3 domain binding glutamate-rich protein like 3
 55650	XB-GENEPAGE-965985	pigv	phosphatidylinositol glycan anchor biosynthesis class V
-10606	XB-GENEPAGE-965994	paics.1	phosphoribosylaminoimidazole carboxylase; phosphoribosylaminoimidazolesuccinocarboxamide synthase
+10606	XB-GENEPAGE-965994	paics	phosphoribosylaminoimidazole carboxylase and phosphoribosylaminoimidazolesuccinocarboxamide synthase
 132299	XB-GENEPAGE-966005	ociad2	OCIA domain containing 2
 9662	XB-GENEPAGE-966018	cep135	centrosomal protein 135kDa
 154791	XB-GENEPAGE-966027	fmc1	formation of mitochondrial complex V assembly factor 1 homolog
@@ -5247,7 +5240,7 @@
 79053	XB-GENEPAGE-967046	alg8	ALG8, alpha-1,3-glucosyltransferase
 51501	XB-GENEPAGE-967058	hikeshi	heat shock protein nuclear import factor hikeshi
 80031	XB-GENEPAGE-967069	sema6d	semaphorin 6D
-79029	XB-GENEPAGE-967078	spata5l1	spermatogenesis associated 5-like 1
+79029	XB-GENEPAGE-967078	afg2b	AFG2 AAA ATPase homolog B
 57596	XB-GENEPAGE-967085	begain	brain enriched guanylate kinase associated
 23585	XB-GENEPAGE-967090	tmem50a	transmembrane protein 50A
 130367	XB-GENEPAGE-967103	sgpp2	sphingosine-1-phosphate phosphatase 2
@@ -5290,7 +5283,6 @@
 998	XB-GENEPAGE-967584	cdc42	cell division cycle 42
 10994	XB-GENEPAGE-967602	ilvbl	ilvB (bacterial acetolactate synthase)-like
 27334	XB-GENEPAGE-967609	p2ry10	P2Y receptor family member 10
-1068	XB-GENEPAGE-967616	cetn1	centrin 1
 3358	XB-GENEPAGE-967633	htr2c	5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled
 5357	XB-GENEPAGE-967637	pls1	plastin 1
 6229	XB-GENEPAGE-967644	rps24	ribosomal protein S24
@@ -5604,12 +5596,12 @@
 8858	XB-GENEPAGE-971424	proz	protein Z, vitamin K-dependent plasma glycoprotein
 2159	XB-GENEPAGE-971432	f10	coagulation factor 10
 26272	XB-GENEPAGE-971442	fbxo4	F-box protein 4
-788	XB-GENEPAGE-971450	slc25a20.2	solute carrier family 25 (carnitine/acylcarnitine translocase), member 20, gene 2
+788	XB-GENEPAGE-971450	slc25a20l	solute carrier family 25 (carnitine/acylcarnitine translocase), member 20, gene 2
 51447	XB-GENEPAGE-971465	ip6k2	inositol hexaphosphate kinase 2
 29927	XB-GENEPAGE-971479	sec61a1	Sec61 translocon alpha 1 subunit
 219681	XB-GENEPAGE-971491	armc3	armadillo repeat containing 3
 4287	XB-GENEPAGE-971500	atxn3	ataxin 3
-26175	XB-GENEPAGE-971512	tmem251	transmembrane protein 251
+26175	XB-GENEPAGE-971512	lyset	lysosomal enzyme trafficking factor
 9197	XB-GENEPAGE-971527	slc33a1	solute carrier family 33 (acetyl-CoA transporter), member 1
 151531	XB-GENEPAGE-971536	upp2	uridine phosphorylase 2
 10551	XB-GENEPAGE-971547	agr2	anterior gradient 2, protein disulphide isomerase family member
@@ -5645,12 +5637,12 @@
 8543	XB-GENEPAGE-971938	lmo4.1	LIM domain only 4, gene 1
 2315	XB-GENEPAGE-971950	mlana	melan-A
 7436	XB-GENEPAGE-971957	vldlr	very low density lipoprotein receptor
-84645	XB-GENEPAGE-971970	c22orf23	chromosome 22 open reading frame 23
+84645	XB-GENEPAGE-971970	c4h22orf23	chromosome 4 C22orf23 homolog
 3956	XB-GENEPAGE-971977	lgals1.1	lectin, galactoside-binding, soluble, 1, gene 1
 1635	XB-GENEPAGE-971991	dctd	dCMP deaminase
 90809	XB-GENEPAGE-972002	pip4p1	phosphatidylinositol-4,5-bisphosphate 4-phosphatase 1
 5439	XB-GENEPAGE-972011	polr2j	polymerase (RNA) II (DNA directed) polypeptide J, 13.3kDa
-27430	XB-GENEPAGE-972022	mat2b	methionine adenosyltransferase II, beta
+27430	XB-GENEPAGE-972022	mat2b	methionine adenosyltransferase 2 non-catalytic beta subunit
 55850	XB-GENEPAGE-972032	use1	unconventional SNARE in the ER 1 homolog
 898	XB-GENEPAGE-972041	ccne1	cyclin E1
 80323	XB-GENEPAGE-972059	ccdc68	coiled-coil domain containing 68
@@ -5694,7 +5686,7 @@
 55837	XB-GENEPAGE-972551	eapp	E2F-associated phosphoprotein
 79068	XB-GENEPAGE-972563	fto	FTO alpha-ketoglutarate dependent dioxygenase
 11036	XB-GENEPAGE-972574	gtf2a1l	general transcription factor IIA 1-like
-84933	XB-GENEPAGE-972588	c8orf76	chromosome 8 open reading frame 76
+84933	XB-GENEPAGE-972588	c7h8orf76	chromosome 7 C8orf76 homolog
 134430	XB-GENEPAGE-972601	wdr36	WD repeat domain 36
 2733	XB-GENEPAGE-972612	gle1	GLE1, RNA export mediator
 8243	XB-GENEPAGE-972619	smc1a	structural maintenance of chromosomes 1A
@@ -5733,7 +5725,7 @@
 79016	XB-GENEPAGE-973044	dda1	DET1 and DDB1 associated 1
 79176	XB-GENEPAGE-973057	fbxl15	F-box and leucine-rich repeat protein 15
 22888	XB-GENEPAGE-973069	ubox5	U-box domain containing 5
-81688	XB-GENEPAGE-973082	c6orf62	chromosome 6 open reading frame 62
+81688	XB-GENEPAGE-973082	c6h6orf62	chromosome 6 C6orf62 homolog
 4709	XB-GENEPAGE-973091	ndufb3	NADH:ubiquinone oxidoreductase subunit B3
 1207	XB-GENEPAGE-973103	clns1a	chloride channel, nucleotide-sensitive, 1A
 10873	XB-GENEPAGE-973119	me3	malic enzyme 3, NADP(+)-dependent, mitochondrial
@@ -5756,7 +5748,7 @@
 51605	XB-GENEPAGE-973292	trmt6	tRNA methyltransferase 6
 6620	XB-GENEPAGE-973306	sncb	synuclein beta
 81614	XB-GENEPAGE-973320	nipa2	NIPA magnesium transporter 2
-5957	XB-GENEPAGE-973334	rcvrn.1	recoverin, gene 1
+5957	XB-GENEPAGE-973334	rcvrn	recoverin, gene 1
 51490	XB-GENEPAGE-973340	spout1	SPOUT domain containing methyltransferase 1
 51616	XB-GENEPAGE-973352	taf9b	TATA-box binding protein associated factor 9b
 55847	XB-GENEPAGE-973365	cisd1	CDGSH iron sulfur domain 1
@@ -5802,12 +5794,12 @@
 51185	XB-GENEPAGE-973906	crbn	cereblon
 54962	XB-GENEPAGE-973966	tipin	timeless interacting protein
 10302	XB-GENEPAGE-973981	snapc5	small nuclear RNA activating complex polypeptide 5
-6400	XB-GENEPAGE-973991	sel1l	SEL1L adaptor subunit of ERAD E3 ubiquitin ligase
+6400	XB-GENEPAGE-973991	sel1l	SEL1L adaptor subunit of SYVN1 ubiquitin ligase
 9861	XB-GENEPAGE-974001	psmd6	proteasome 26S subunit, non-ATPase 6
 7329	XB-GENEPAGE-974016	ube2i	ubiquitin conjugating enzyme E2 I
 9553	XB-GENEPAGE-974029	mrpl33	mitochondrial ribosomal protein L33
 94104	XB-GENEPAGE-974035	paxbp1	PAX3 and PAX7 binding protein 1
-56245	XB-GENEPAGE-974042	c21orf62	chromosome 21 open reading frame 62
+56245	XB-GENEPAGE-974042	c2h21orf62	chromosome 2 C21orf62 homolog
 79002	XB-GENEPAGE-974049	trir	telomerase RNA component interacting RNase
 54886	XB-GENEPAGE-974060	plppr1	phospholipid phosphatase related 1
 400569	XB-GENEPAGE-974068	med11	mediator complex subunit 11
@@ -5824,7 +5816,7 @@
 54939	XB-GENEPAGE-974194	commd4	COMM domain containing 4
 4736	XB-GENEPAGE-974205	rpl10a	ribosomal protein L10a
 57708	XB-GENEPAGE-974217	mier1	mesoderm induction early response 1, transcriptional regulator
-168090	XB-GENEPAGE-974227	c6orf118	chromosome 6 open reading frame 118
+168090	XB-GENEPAGE-974227	c5h6orf118	chromosome 5 C6orf118 homolog
 9069	XB-GENEPAGE-974235	cldn12	claudin 12
 79178	XB-GENEPAGE-974250	thtpa	thiamine triphosphatase
 5106	XB-GENEPAGE-974261	pck2	phosphoenolpyruvate carboxykinase 2 (mitochondrial)
@@ -5871,7 +5863,7 @@
 90417	XB-GENEPAGE-974811	knstrn	kinetochore localized astrin (SPAG5) binding protein
 54555	XB-GENEPAGE-974821	ddx49	DEAD-box helicase 49
 2962	XB-GENEPAGE-974833	gtf2f1	general transcription factor IIF subunit 1
-401565	XB-GENEPAGE-974848	fam166a	family with sequence similarity 166 member A
+401565	XB-GENEPAGE-974848	cimip2a	ciliary microtubule inner protein 2A
 389792	XB-GENEPAGE-974857	ier5l	immediate early response 5-like
 140459	XB-GENEPAGE-974869	asb6	ankyrin repeat and SOCS box containing 6
 54585	XB-GENEPAGE-974885	lztfl1	leucine zipper transcription factor like 1
@@ -5899,7 +5891,7 @@
 51608	XB-GENEPAGE-975152	get4	golgi to ER traffic protein 4
 10885	XB-GENEPAGE-975166	wdr3	WD repeat domain 3
 211	XB-GENEPAGE-975178	alas1	5'-aminolevulinate synthase 1
-56654	XB-GENEPAGE-975196	npdc1.1	neural proliferation, differentiation and control, 1, gene 1
+56654	XB-GENEPAGE-975196	npdc1	neural proliferation, differentiation and control, 1, gene 1
 8721	XB-GENEPAGE-975204	edf1	endothelial differentiation related factor 1
 4597	XB-GENEPAGE-975217	mvd	mevalonate diphosphate decarboxylase
 92691	XB-GENEPAGE-975222	tmem169	transmembrane protein 169
@@ -5940,7 +5932,7 @@
 23041	XB-GENEPAGE-975875	mon2	MON2 homolog, regulator of endosome-to-Golgi trafficking
 55117	XB-GENEPAGE-975884	slc6a15	solute carrier family 6 (neutral amino acid transporter), member 15
 1486	XB-GENEPAGE-975890	ctbs	chitobiase
-148423	XB-GENEPAGE-975904	c1orf52	chromosome 1 open reading frame 52
+148423	XB-GENEPAGE-975904	c4h1orf52	chromosome 4 C1orf52 homolog
 55697	XB-GENEPAGE-975920	vac14	Vac14 homolog
 79726	XB-GENEPAGE-975929	wdr59	WD repeat domain 59
 8195	XB-GENEPAGE-975936	mkks	MKKS centrosomal shuttling protein
@@ -5970,7 +5962,7 @@
 6175	XB-GENEPAGE-976210	rplp0	ribosomal protein, large, P0
 79632	XB-GENEPAGE-976221	fam184a	family with sequence similarity 184 member A
 83479	XB-GENEPAGE-976228	ddx59	DEAD-box helicase 59
-284611	XB-GENEPAGE-976235	fam102b	family with sequence similarity 102 member B
+284611	XB-GENEPAGE-976235	eeig2	EEIG family member 2
 29957	XB-GENEPAGE-976242	slc25a24	solute carrier family 25 (mitochondrial carrier; phosphate carrier), member 24
 23209	XB-GENEPAGE-976257	mlc1	megalencephalic leukoencephalopathy with subcortical cysts 1
 84920	XB-GENEPAGE-976266	alg10	ALG10, alpha-1,2-glucosyltransferase
@@ -6066,7 +6058,7 @@
 6670	XB-GENEPAGE-977157	sp3	Sp3 transcription factor
 83879	XB-GENEPAGE-977166	cdca7	cell division cycle associated 7
 23038	XB-GENEPAGE-977178	wdtc1	WD and tetratricopeptide repeats 1
-51441	XB-GENEPAGE-977190	ythdf2	YTH N(6)-methyladenosine RNA binding protein 2
+51441	XB-GENEPAGE-977190	ythdf2	YTH N6-methyladenosine RNA binding protein F2
 57117	XB-GENEPAGE-977202	ints12	integrator complex subunit 12
 128	XB-GENEPAGE-977213	adh5	alcohol dehydrogenase 5 (class III), chi polypeptide
 55326	XB-GENEPAGE-977227	agpat5	1-acylglycerol-3-phosphate O-acyltransferase 5
@@ -6099,7 +6091,7 @@
 246175	XB-GENEPAGE-977550	cnot6l	CCR4-NOT transcription complex subunit 6-like
 4957	XB-GENEPAGE-977563	odf2	outer dense fiber of sperm tails 2
 492	XB-GENEPAGE-977574	atp2b3	ATPase, Ca++ transporting, plasma membrane 3
-92579	XB-GENEPAGE-977582	g6pc3.1	glucose 6 phosphatase, catalytic, 3, gene 1
+92579	XB-GENEPAGE-977582	g6pc3	glucose 6 phosphatase, catalytic 3
 84336	XB-GENEPAGE-977589	tmem101	transmembrane protein 101
 51751	XB-GENEPAGE-977603	higd1b	HIG1 hypoxia inducible domain family member 1B
 4635	XB-GENEPAGE-977610	myl4	myosin light chain 4
@@ -6289,7 +6281,7 @@
 51400	XB-GENEPAGE-979837	ppme1	protein phosphatase methylesterase 1
 8645	XB-GENEPAGE-979846	kcnk5	potassium channel, two pore domain subfamily K, member 5
 51035	XB-GENEPAGE-979856	ubxn1	UBX domain protein 1
-23313	XB-GENEPAGE-979871	kiaa0930	KIAA0930
+23313	XB-GENEPAGE-979871	KIAA0930	KIAA0930
 4718	XB-GENEPAGE-979880	ndufc2	NADH:ubiquinone oxidoreductase subunit C2
 3835	XB-GENEPAGE-979887	kif22	kinesin family member 22
 1718	XB-GENEPAGE-979904	dhcr24	24-dehydrocholesterol reductase
@@ -6312,7 +6304,7 @@
 80028	XB-GENEPAGE-980051	fbxl18	F-box and leucine-rich repeat protein 18
 3329	XB-GENEPAGE-980058	hspd1	heat shock protein family D (Hsp60) member 1
 2590	XB-GENEPAGE-980076	galnt2	polypeptide N-acetylgalactosaminyltransferase 2
-84498	XB-GENEPAGE-980081	fam120b	family with sequence similarity 120B
+84498	XB-GENEPAGE-980081	fam120b	family with sequence similarity 120 member B
 8871	XB-GENEPAGE-980086	synj2	synaptojanin 2
 55780	XB-GENEPAGE-980089	ermard	ER membrane-associated RNA degradation
 23586	XB-GENEPAGE-980096	rigi	RNA sensor RIG-I
@@ -6333,7 +6325,7 @@
 2122	XB-GENEPAGE-980194	mecom	MDS1 and EVI1 complex locus
 55074	XB-GENEPAGE-980205	oxr1	oxidation resistance 1
 114034	XB-GENEPAGE-980215	toe1	target of EGR1, exonuclease
-127795	XB-GENEPAGE-980222	c1orf87	chromosome 1 open reading frame 87
+127795	XB-GENEPAGE-980222	c4h1orf87	chromosome 4 C1orf87 homolog
 148581	XB-GENEPAGE-980225	ube2u	ubiquitin conjugating enzyme E2 U
 731	XB-GENEPAGE-980230	c8a	complement C8 alpha chain
 163782	XB-GENEPAGE-980241	kank4	KN motif and ankyrin repeat domains 4
@@ -6509,7 +6501,7 @@
 8850	XB-GENEPAGE-981665	kat2b	K(lysine) acetyltransferase 2B
 131096	XB-GENEPAGE-981672	kcnh8	potassium channel, voltage gated eag related subfamily H, member 8
 64343	XB-GENEPAGE-981675	azi2	5-azacytidine induced 2
-57465	XB-GENEPAGE-981680	tbc1d24.1	TBC1 domain family member 24
+57465	XB-GENEPAGE-981680	tbc1d24	TBC1 domain family member 24
 84326	XB-GENEPAGE-981692	mettl26	methyltransferase like 26
 7249	XB-GENEPAGE-981705	tsc2	TSC complex subunit 2
 27327	XB-GENEPAGE-981713	tnrc6a	trinucleotide repeat containing 6A
@@ -6528,7 +6520,7 @@
 199223	XB-GENEPAGE-981815	ttc21a	tetratricopeptide repeat domain 21A
 3361	XB-GENEPAGE-981824	htr5a	5-hydroxytryptamine (serotonin) receptor 5A, G protein-coupled
 63917	XB-GENEPAGE-981829	galnt11	polypeptide N-acetylgalactosaminyltransferase 11
-9941	XB-GENEPAGE-981838	exog	endo/exonuclease (5'-3'), endonuclease G-like
+9941	XB-GENEPAGE-981838	exog	exo/endonuclease G
 64327	XB-GENEPAGE-981845	lmbr1	limb development membrane protein 1
 349136	XB-GENEPAGE-981852	wdr86	WD repeat domain 86
 9942	XB-GENEPAGE-981855	xylb	xylulokinase homolog (H. influenzae)
@@ -6542,7 +6534,7 @@
 51125	XB-GENEPAGE-981928	golga7	golgin A7
 4144	XB-GENEPAGE-981937	mat2a	methionine adenosyltransferase II, alpha
 26505	XB-GENEPAGE-981952	cnnm3	cyclin and CBS domain divalent metal cation transport mediator 3
-388969	XB-GENEPAGE-981959	c2orf68	chromosome 2 open reading frame 68
+388969	XB-GENEPAGE-981959	c3h2orf68	chromosome 3 C2orf68 homolog
 284948	XB-GENEPAGE-981968	sh2d6	SH2 domain containing 6
 150763	XB-GENEPAGE-981971	gpat2	glycerol-3-phosphate acyltransferase 2, mitochondrial
 23020	XB-GENEPAGE-981974	snrnp200	small nuclear ribonucleoprotein, U5 200kDa subunit
@@ -6685,7 +6677,7 @@
 80017	XB-GENEPAGE-983039	dglucy	D-glutamate cyclase
 79882	XB-GENEPAGE-983047	zc3h14	zinc finger CCCH-type containing 14
 10516	XB-GENEPAGE-983055	fbln5	fibulin 5
-285315	XB-GENEPAGE-983061	c3orf33	chromosome 3 open reading frame 33
+285315	XB-GENEPAGE-983061	c5h3orf33	chromosome 5 C3orf33 homolog
 344758	XB-GENEPAGE-983068	gpr149	G protein-coupled receptor 149
 85476	XB-GENEPAGE-983071	gfm1	G elongation factor, mitochondrial 1
 9936	XB-GENEPAGE-983079	cd302	CD302 molecule
@@ -6817,7 +6809,7 @@
 3104	XB-GENEPAGE-984068	zbtb48	zinc finger and BTB domain containing 48
 79707	XB-GENEPAGE-984092	nol9	nucleolar protein 9
 8718	XB-GENEPAGE-984097	tnfrsf25	TNF receptor superfamily member 25
-128178	XB-GENEPAGE-984100	edaradd	EDAR-associated death domain
+128178	XB-GENEPAGE-984100	edaradd	EDAR associated via death domain
 26575	XB-GENEPAGE-984103	rgs17	regulator of G-protein signaling 17
 51534	XB-GENEPAGE-984111	vta1	vesicle (multivesicular body) trafficking 1
 84624	XB-GENEPAGE-984125	fndc1	fibronectin type III domain containing 1
@@ -6945,7 +6937,7 @@
 284434	XB-GENEPAGE-985039	nwd1	NACHT and WD repeat domain containing 1
 4650	XB-GENEPAGE-985042	myo9b	myosin IXB
 3818	XB-GENEPAGE-985050	klkb1	kallikrein B1
-55322	XB-GENEPAGE-985059	c5orf22	chromosome 5 open reading frame 22
+55322	XB-GENEPAGE-985059	c6h5orf22	chromosome 6 C5orf22 homolog
 57614	XB-GENEPAGE-985070	relch	RAB11 binding and LisH
 56897	XB-GENEPAGE-985079	wrnip1	Werner helicase interacting protein 1
 2531	XB-GENEPAGE-985088	kdsr	3-ketodihydrosphingosine reductase
@@ -6955,7 +6947,7 @@
 115111	XB-GENEPAGE-985131	slc26a7	solute carrier family 26 (anion exchanger), member 7
 54845	XB-GENEPAGE-985137	esrp1	epithelial splicing regulatory protein 1
 91147	XB-GENEPAGE-985148	tmem67	transmembrane protein 67
-84886	XB-GENEPAGE-985153	c1orf198	chromosome 1 open reading frame 198
+84886	XB-GENEPAGE-985153	c5h1orf198	chromosome 5 C1orf198 homolog
 575	XB-GENEPAGE-985156	adgrb1	adhesion G protein-coupled receptor B1
 23237	XB-GENEPAGE-985163	arc	activity-regulated cytoskeleton-associated protein
 4148	XB-GENEPAGE-985171	matn3	matrilin 3
@@ -7359,7 +7351,7 @@
 8418	XB-GENEPAGE-988334	cmah	cytidine monophospho-N-acetylneuraminic acid hydroxylase
 10590	XB-GENEPAGE-988343	scgn	secretagogin, EF-hand calcium binding protein
 55604	XB-GENEPAGE-988354	carmil1	capping protein regulator and myosin 1 linker 1
-80148	XB-GENEPAGE-988362	slc66a2.1	solute carrier family 66 member 2, gene 1
+80148	XB-GENEPAGE-988362	slc66a2	solute carrier family 66 member 2, gene 1
 3184	XB-GENEPAGE-988374	hnrnpd	heterogeneous nuclear ribonucleoprotein D
 2044	XB-GENEPAGE-988386	epha5	EPH receptor A5
 339967	XB-GENEPAGE-988394	tmprss11a	transmembrane serine protease 11A
@@ -7370,7 +7362,7 @@
 91683	XB-GENEPAGE-988425	syt12	synaptotagmin 12
 81490	XB-GENEPAGE-988428	ptdss2	phosphatidylserine synthase 2
 4645	XB-GENEPAGE-988438	myo5b	myosin VB
-147339	XB-GENEPAGE-988445	c18orf25	chromosome 18 open reading frame 25
+147339	XB-GENEPAGE-988445	ark2n	arkadia (RNF111) N-terminal like PKA signaling regulator 2N
 29906	XB-GENEPAGE-988458	st8sia5	ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 5
 220136	XB-GENEPAGE-988465	cfap53	cilia and flagella associated protein 53
 9063	XB-GENEPAGE-988473	pias2	protein inhibitor of activated STAT 2
@@ -7378,7 +7370,7 @@
 23355	XB-GENEPAGE-988493	vps8	VPS8, CORVET complex subunit
 8837	XB-GENEPAGE-988501	cflar	CASP8 and FADD like apoptosis regulator
 3689	XB-GENEPAGE-988512	itgb2	integrin subunit beta 2
-285382	XB-GENEPAGE-988518	c3orf70	chromosome 3 open reading frame 70
+285382	XB-GENEPAGE-988518	c9h3orf70	chromosome 9 C3orf70 homolog
 90407	XB-GENEPAGE-988523	tmem41a	transmembrane protein 41A
 58538	XB-GENEPAGE-988528	mpp4	MAGUK p55 scaffold protein 4
 57404	XB-GENEPAGE-988531	cyp20a1	cytochrome P450 family 20 subfamily A member 1
@@ -7549,10 +7541,9 @@
 7844	XB-GENEPAGE-989823	rnf103	ring finger protein 103
 10989	XB-GENEPAGE-989838	immt	inner membrane protein, mitochondrial
 9451	XB-GENEPAGE-989848	eif2ak3	eukaryotic translation initiation factor 2 alpha kinase 3
-926	XB-GENEPAGE-989856	cd8b	CD8beta receptor
+926	XB-GENEPAGE-989856	cd8b	CD8 subunit beta
 143458	XB-GENEPAGE-989859	ldlrad3	low density lipoprotein receptor class A domain containing 3
 55761	XB-GENEPAGE-989866	ttc17	tetratricopeptide repeat domain 17
-84680	XB-GENEPAGE-989872	accs	1-aminocyclopropane-1-carboxylate synthase homolog (inactive)
 4884	XB-GENEPAGE-989879	nptx1	neuronal pentraxin 1
 79092	XB-GENEPAGE-989886	card14	caspase recruitment domain family member 14
 256933	XB-GENEPAGE-989889	npb	neuropeptide B
@@ -7618,7 +7609,7 @@
 9618	XB-GENEPAGE-990353	traf4	TNF receptor associated factor 4
 6830	XB-GENEPAGE-990368	supt6h	SPT6 homolog, histone chaperone
 284086	XB-GENEPAGE-990377	nek8	NIMA-related kinase 8
-23410	XB-GENEPAGE-990388	sirt3.1	sirtuin 3
+23410	XB-GENEPAGE-990388	sirt3	sirtuin 3
 7439	XB-GENEPAGE-990391	best1	bestrophin 1
 5866	XB-GENEPAGE-990394	rab3il1	RAB3A interacting protein (rabin3)-like 1
 3619	XB-GENEPAGE-990397	incenp	inner centromere protein
@@ -7703,7 +7694,7 @@
 6586	XB-GENEPAGE-991049	slit3	slit guidance ligand 3
 3274	XB-GENEPAGE-991058	hrh2	histamine receptor H2
 79646	XB-GENEPAGE-991061	pank3	pantothenate kinase 3
-57179	XB-GENEPAGE-991068	kiaa1191	KIAA1191
+57179	XB-GENEPAGE-991068	KIAA1191	KIAA1191
 29915	XB-GENEPAGE-991079	hcfc2	host cell factor C2
 5053	XB-GENEPAGE-991084	pah	phenylalanine hydroxylase
 83468	XB-GENEPAGE-991091	glt8d2	glycosyltransferase 8 domain containing 2
@@ -7744,7 +7735,7 @@
 54776	XB-GENEPAGE-991365	ppp1r12c	protein phosphatase 1 regulatory subunit 12C
 54869	XB-GENEPAGE-991372	eps8l1	EPS8 like 1
 79622	XB-GENEPAGE-991380	snrnp25	small nuclear ribonucleoprotein, U11/U12 25kDa subunit
-6098	XB-GENEPAGE-991393	ros1	ROS proto-oncogene 1 , receptor tyrosine kinase
+6098	XB-GENEPAGE-991393	ros1	ROS proto-oncogene 1, receptor tyrosine kinase
 441168	XB-GENEPAGE-991399	calhm6	calcium homeostasis modulator family member 6
 54878	XB-GENEPAGE-991408	dpp8	dipeptidyl-peptidase 8
 10260	XB-GENEPAGE-991417	dennd4a	DENN domain containing 4A
@@ -7808,7 +7799,7 @@
 145483	XB-GENEPAGE-991868	fam161b	FAM161B, centrosomal protein
 6339	XB-GENEPAGE-991875	scnn1d	sodium channel, non voltage gated 1 delta subunit
 126789	XB-GENEPAGE-991884	pusl1	pseudouridine synthase like 1
-441869	XB-GENEPAGE-991891	ankrd65	Putative ortholog of dystrophin-like protein , 1 of 1
+441869	XB-GENEPAGE-991891	ankrd65	Putative ortholog of dystrophin-like protein, 1 of 1
 9429	XB-GENEPAGE-991894	abcg2	ATP binding cassette subfamily G member 2 (Junior blood group)
 10144	XB-GENEPAGE-991905	fam13a	family with sequence similarity 13 member A
 94031	XB-GENEPAGE-991913	htra3	HtrA serine peptidase 3
@@ -7892,7 +7883,6 @@
 27065	XB-GENEPAGE-992526	nsg1	neuronal vesicle trafficking associated 1
 55646	XB-GENEPAGE-992531	lyar	Ly1 antibody reactive
 2121	XB-GENEPAGE-992543	evc	EvC ciliary complex subunit 1
-56606	XB-GENEPAGE-992549	slc2a9	solute carrier family 2 (facilitated glucose transporter), member 9
 166793	XB-GENEPAGE-992552	zbtb49	zinc finger and BTB domain containing 49
 1400	XB-GENEPAGE-992562	crmp1	collapsin response mediator protein 1
 26683	XB-GENEPAGE-992570	or4f3.4	Putative ortholog of olfactory receptor 4F3, 4 of 18
@@ -7911,7 +7901,7 @@
 886	XB-GENEPAGE-992614	cckar	cholecystokinin A receptor
 57572	XB-GENEPAGE-992619	dock6	dedicator of cytokinesis 6
 1777	XB-GENEPAGE-992624	dnase2	deoxyribonuclease II, lysosomal
-90480	XB-GENEPAGE-992636	gadd45gip1	GADD45G interacting protein 1
+90480	XB-GENEPAGE-992636	gadd45gip1	growth arrest and DNA damage-inducible proteins-interacting protein 1
 256126	XB-GENEPAGE-992646	syce2	synaptonemal complex central element protein 2
 4784	XB-GENEPAGE-992649	nfix	nuclear factor I/X (CCAAT-binding transcription factor)
 199731	XB-GENEPAGE-992658	cadm4	cell adhesion molecule 4
@@ -7920,7 +7910,7 @@
 56911	XB-GENEPAGE-992683	map3k7cl	MAP3K7 C-terminal like
 85444	XB-GENEPAGE-992686	lrrcc1	leucine rich repeat and coiled-coil centrosomal protein 1
 11059	XB-GENEPAGE-992696	wwp1	WW domain containing E3 ubiquitin protein ligase 1
-377677	XB-GENEPAGE-992706	ca13	carbonic anhydrase XIII
+377677	XB-GENEPAGE-992706	ca13	carbonic anhydrase 13 gene 1
 4261	XB-GENEPAGE-992717	ciita	class II, major histocompatibility complex, transactivator
 28955	XB-GENEPAGE-992722	dexi	Dexi homolog
 4682	XB-GENEPAGE-992725	nubp1	nucleotide binding protein 1
@@ -7967,7 +7957,7 @@
 259173	XB-GENEPAGE-993048	als2cl	ALS2 C-terminal like
 611	XB-GENEPAGE-993051	opn1sw	opsin 1 (cone pigments), short-wave-sensitive
 29781	XB-GENEPAGE-993062	ncaph2	non-SMC condensin II complex subunit H2
-6415	XB-GENEPAGE-993074	selenow1	selenoprotein W1
+6415	XB-GENEPAGE-993074	selenow	selenoprotein W1
 57579	XB-GENEPAGE-993078	fam135a	family with sequence similarity 135 member A
 85464	XB-GENEPAGE-993092	ssh2	slingshot protein phosphatase 2
 6723	XB-GENEPAGE-993101	srm	spermidine synthase
@@ -7978,7 +7968,7 @@
 22864	XB-GENEPAGE-993137	r3hdm2	R3H domain containing 2
 11247	XB-GENEPAGE-993145	nxph4	neurexophilin 4
 3642	XB-GENEPAGE-993148	insm1	insulinoma associated 1
-22803	XB-GENEPAGE-993156	xrn2	5'-3' exoribonuclease 2
+22803	XB-GENEPAGE-993156	xrn2	5'-3' exoribonuclease
 23	XB-GENEPAGE-993167	abcf1	ATP binding cassette subfamily F member 1
 122876	XB-GENEPAGE-993176	gphb5	glycoprotein hormone beta 5
 6617	XB-GENEPAGE-993179	snapc1	small nuclear RNA activating complex polypeptide 1
@@ -8084,7 +8074,7 @@
 120103	XB-GENEPAGE-994061	slc36a4	solute carrier family 36 (proton/amino acid symporter), member 4
 3837	XB-GENEPAGE-994067	kpnb1	karyopherin (importin) beta 1
 440435	XB-GENEPAGE-994076	gpr179	G protein-coupled receptor 179
-388381	XB-GENEPAGE-994081	c17orf98	chromosome 17 open reading frame 98
+388381	XB-GENEPAGE-994081	spmap1	spmap1
 80725	XB-GENEPAGE-994085	srcin1	SRC kinase signaling inhibitor 1
 8549	XB-GENEPAGE-994090	lgr5	leucine-rich repeat containing G protein-coupled receptor 5
 2172	XB-GENEPAGE-994093	fabp6	fatty acid binding protein 6, ileal
@@ -8114,7 +8104,7 @@
 65109	XB-GENEPAGE-994257	upf3b	UPF3B, regulator of nonsense mediated mRNA decay
 93627	XB-GENEPAGE-994265	tbck	TBC1 domain containing kinase
 154141	XB-GENEPAGE-994273	mboat1	membrane bound O-acyltransferase domain containing 1
-57102	XB-GENEPAGE-994281	c12orf4	chromosome 12 open reading frame 4
+57102	XB-GENEPAGE-994281	c3h12orf4	chromosome 3 C12orf4 homolog
 6749	XB-GENEPAGE-994293	ssrp1	structure specific recognition protein 1
 60468	XB-GENEPAGE-994312	bach2	BTB domain and CNC homolog 2
 84109	XB-GENEPAGE-994315	qrfpr	pyroglutamylated RFamide peptide receptor
@@ -8132,12 +8122,12 @@
 390928	XB-GENEPAGE-994432	acp7	acid phosphatase 7, tartrate resistant (putative)
 126433	XB-GENEPAGE-994437	fbxo27	F-box protein 27
 55331	XB-GENEPAGE-994449	acer3	alkaline ceramidase 3
-2615	XB-GENEPAGE-994458	lrrc32.1	leucine rich repeat containing 32, gene 1
+2615	XB-GENEPAGE-994458	lrrc32	leucine rich repeat containing 32, gene 1
 22806	XB-GENEPAGE-994461	ikzf3	IKAROS family zinc finger 3
 387357	XB-GENEPAGE-994468	themis	thymocyte selection associated
 84870	XB-GENEPAGE-994473	rspo3	R-spondin 3
 387104	XB-GENEPAGE-994479	soga3	SOGA family member 3
-352999	XB-GENEPAGE-994482	c6orf58	chromosome 6 open reading frame 58
+352999	XB-GENEPAGE-994482	c5h6orf58	chromosome 5 C6orf58 homolog
 84443	XB-GENEPAGE-994485	frmpd3	FERM and PDZ domain containing 3
 5256	XB-GENEPAGE-994490	phka2	phosphorylase kinase, alpha 2 (liver)
 1821	XB-GENEPAGE-994501	drp2	dystrophin related protein 2
@@ -8148,7 +8138,7 @@
 84636	XB-GENEPAGE-994528	gpr174	G protein-coupled receptor 174
 100287932	XB-GENEPAGE-994531	timm23	translocase of inner mitochondrial membrane 23 homolog
 219654	XB-GENEPAGE-994545	zcchc24	zinc finger, CCHC domain containing 24
-6542	XB-GENEPAGE-994548	slc7a2.1	solute carrier family 7 (cationic amino acid transporter, y+ system), member 2, gene 1
+6542	XB-GENEPAGE-994548	slc7a2	solute carrier family 7 member 2 gene 1
 25996	XB-GENEPAGE-994554	rexo2	RNA exonuclease 2
 23584	XB-GENEPAGE-994564	vsig2	V-set and immunoglobulin domain containing 2
 51205	XB-GENEPAGE-994567	acp6	acid phosphatase 6, lysophosphatidic
@@ -8201,7 +8191,7 @@
 54836	XB-GENEPAGE-994899	bspry	B-box and SPRY domain containing
 11228	XB-GENEPAGE-994902	rassf8	Ras association (RalGDS/AF-6) domain family (N-terminal) member 8
 26524	XB-GENEPAGE-994906	lats2	large tumor suppressor kinase 2
-81570	XB-GENEPAGE-994912	clpb	caseinolytic mitochondrial matrix peptidase chaperone subunit B
+81570	XB-GENEPAGE-994912	clpb	ClpB family mitochondrial disaggregase
 221150	XB-GENEPAGE-994917	ska3	spindle and kinetochore associated complex subunit 3
 221154	XB-GENEPAGE-994924	micu2	mitochondrial calcium uptake 2
 28989	XB-GENEPAGE-994934	ntmt1	N-terminal Xaa-Pro-Lys N-methyltransferase 1
@@ -8229,7 +8219,7 @@
 10950	XB-GENEPAGE-995110	btg3	BTG family member 3
 58524	XB-GENEPAGE-995120	dmrt3	doublesex and mab-3 related transcription factor 3
 92359	XB-GENEPAGE-995123	crb3	crumbs 3, cell polarity complex component
-28974	XB-GENEPAGE-995128	c19orf53	chromosome 19 open reading frame 53
+28974	XB-GENEPAGE-995128	c3h19orf53	chromosome 3 C19orf53 homolog
 55203	XB-GENEPAGE-995133	lgi2	leucine-rich repeat LGI family member 2
 91050	XB-GENEPAGE-995139	ccdc149	coiled-coil domain containing 149
 602	XB-GENEPAGE-995146	bcl3	BCL3, transcription coactivator
@@ -8248,7 +8238,7 @@
 54505	XB-GENEPAGE-995259	dhx29	DEAH-box helicase 29
 55280	XB-GENEPAGE-995268	cwf19l1	CWF19 like cell cycle control factor 1
 84939	XB-GENEPAGE-995280	pwwp3a	PWWP domain containing 3A, DNA repair factor
-148223	XB-GENEPAGE-995285	c19orf25	chromosome 19 open reading frame 25
+148223	XB-GENEPAGE-995285	c1h19orf25	chromosome 1 C19orf25 homolog
 10297	XB-GENEPAGE-995290	apc2	adenomatosis polyposis coli 2
 5586	XB-GENEPAGE-995297	pkn2	protein kinase N2
 2052	XB-GENEPAGE-995305	ephx1	epoxide hydrolase 1, microsomal (xenobiotic)
@@ -8264,12 +8254,12 @@
 83461	XB-GENEPAGE-995403	cdca3	cell division cycle associated 3
 716	XB-GENEPAGE-995409	c1s	complement C1s
 93100	XB-GENEPAGE-995435	naprt	nicotinate phosphoribosyltransferase
-10734	XB-GENEPAGE-995438	stag3	stromal antigen 3
+10734	XB-GENEPAGE-995438	stag3	STAG3 cohesin complex component
 84918	XB-GENEPAGE-995443	lrp11	LDL receptor related protein 11
 49854	XB-GENEPAGE-995448	zbtb21	zinc finger and BTB domain containing 21
 158135	XB-GENEPAGE-995458	ttll11	tubulin tyrosine ligase like11
 2040	XB-GENEPAGE-995462	stom	stomatin
-83608	XB-GENEPAGE-995469	c18orf21	chromosome 18 open reading frame 21
+83608	XB-GENEPAGE-995469	c6h18orf21	chromosome 6 C18orf21 homolog
 64147	XB-GENEPAGE-995480	kif9	kinesin family member 9
 29072	XB-GENEPAGE-995487	setd2	SET domain containing 2
 63933	XB-GENEPAGE-995494	mcur1	mitochondrial calcium uniporter regulator 1
@@ -8284,7 +8274,7 @@
 340351	XB-GENEPAGE-995569	agbl3	AGBL carboxypeptidase 3
 401494	XB-GENEPAGE-995574	hacd4	3-hydroxyacyl-CoA dehydratase 4
 22934	XB-GENEPAGE-995579	rpia	ribose 5-phosphate isomerase A
-23626	XB-GENEPAGE-995589	spo11	SPO11 meiotic protein covalently bound to DSB
+23626	XB-GENEPAGE-995589	spo11	SPO11 initiator of meiotic double strand breaks
 8480	XB-GENEPAGE-995594	rae1	ribonucleic acid export 1
 79026	XB-GENEPAGE-995616	ahnak	AHNAK nucleoprotein
 2890	XB-GENEPAGE-995620	gria1	glutamate receptor, ionotropic, AMPA 1
@@ -8292,7 +8282,7 @@
 345275	XB-GENEPAGE-995634	hsd17b13	hydroxysteroid (17-beta) dehydrogenase 13
 90990	XB-GENEPAGE-995644	kifc2	kinesin family member C2
 23144	XB-GENEPAGE-995649	zc3h3	zinc finger CCCH-type containing 3
-4061	XB-GENEPAGE-995657	ly6e	llymphocyte antigen 6 family member E
+4061	XB-GENEPAGE-995657	ly6e	lymphocyte antigen 6 family member E
 54930	XB-GENEPAGE-995660	haus4	HAUS augmin like complex subunit 4
 84502	XB-GENEPAGE-995669	jph4	junctophilin 4
 122704	XB-GENEPAGE-995672	mrpl52	mitochondrial ribosomal protein L52
@@ -8300,7 +8290,7 @@
 64403	XB-GENEPAGE-995689	cdh24	cadherin 24
 7267	XB-GENEPAGE-995694	ttc3	tetratricopeptide repeat domain 3
 23562	XB-GENEPAGE-995699	cldn14	claudin 14
-2835	XB-GENEPAGE-995706	gpr12	G protein-coupled receptor 12
+2835	XB-GENEPAGE-995706	gpr12l	G protein-coupled receptor 12 like
 2896	XB-GENEPAGE-995709	grn	granulin
 11104	XB-GENEPAGE-995719	katna1	katanin p60 (ATPase containing) subunit A 1
 149371	XB-GENEPAGE-995730	exoc8	exocyst complex component 8
@@ -8409,12 +8399,12 @@
 8208	XB-GENEPAGE-996577	chaf1b	chromatin assembly factor 1 subunit B
 10331	XB-GENEPAGE-996588	b3gnt3.2	UDP-GlcNAc:betaGal beta-1,3-N-acetylglucosaminyltransferase 3, gene 2
 55471	XB-GENEPAGE-996598	ndufaf7	NADH:ubiquinone oxidoreductase complex assembly factor 7
-55017	XB-GENEPAGE-996610	c14orf119	chromosome 14 open reading frame 119
+55017	XB-GENEPAGE-996610	c1h14orf119	chromosome 1 C14orf119 homolog
 5018	XB-GENEPAGE-996615	oxa1l	oxidase (cytochrome c) assembly 1-like
 388394	XB-GENEPAGE-996623	rprml	reprimo-like
 23473	XB-GENEPAGE-996629	capn7	calpain 7
 55852	XB-GENEPAGE-996638	tex2.2	testis expressed 2, gene 2
-10825	XB-GENEPAGE-996644	neu3.1	sialidase 3 (membrane sialidase) gene 1
+10825	XB-GENEPAGE-996644	neu3	sialidase 3 (membrane sialidase) gene 1
 10622	XB-GENEPAGE-996649	polr3g	polymerase (RNA) III (DNA directed) polypeptide G (32kD)
 9507	XB-GENEPAGE-996658	adamts4	ADAM metallopeptidase with thrombospondin type 1 motif 4
 64098	XB-GENEPAGE-996661	parvg	parvin gamma
@@ -8434,7 +8424,7 @@
 80222	XB-GENEPAGE-996800	tars2	threonyl-tRNA synthetase 2, mitochondrial
 84951	XB-GENEPAGE-996803	tns4	tensin 4
 9696	XB-GENEPAGE-996806	crocc	ciliary rootlet coiled-coil, rootletin
-11240	XB-GENEPAGE-996813	padi2	peptidyl arginine deiminase, type II
+11240	XB-GENEPAGE-996813	padi2	peptidyl arginine deiminase 2
 25977	XB-GENEPAGE-996830	necap1	NECAP endocytosis associated 1
 23400	XB-GENEPAGE-996839	atp13a2	ATPase cation transporting 13A2
 8723	XB-GENEPAGE-996844	snx4	sorting nexin 4
@@ -8607,12 +8597,12 @@
 84937	XB-GENEPAGE-998324	znrf1	zinc and ring finger 1, E3 ubiquitin protein ligase
 10294	XB-GENEPAGE-998336	dnaja2	DnaJ heat shock protein family (Hsp40) member A2
 2875	XB-GENEPAGE-998351	gpt	glutamic-pyruvate transaminase (alanine aminotransferase)
-388272	XB-GENEPAGE-998358	c16orf87	chromosome 16 open reading frame 87
-8216	XB-GENEPAGE-998505	lztr1	leucine-zipper-like transcription regulator 1
+388272	XB-GENEPAGE-998358	c4h16orf87	chromosome 4 C16orf87 homolog
+8216	XB-GENEPAGE-998505	lztr1	leucine zipper like post translational regulator 1
 1036	XB-GENEPAGE-998512	cdo1	cysteine dioxygenase type 1
 56929	XB-GENEPAGE-998528	fem1c	fem-1 homolog c
 253559	XB-GENEPAGE-998535	cadm2	cell adhesion molecule 2
-10735	XB-GENEPAGE-998551	stag2	stromal antigen 2
+10735	XB-GENEPAGE-998551	stag2	STAG2 cohesin complex component
 2021	XB-GENEPAGE-998564	endog	endonuclease G
 139596	XB-GENEPAGE-998573	uprt	uracil phosphoribosyltransferase homolog
 28985	XB-GENEPAGE-998580	mcts1	malignant T-cell amplified sequence 1
@@ -8667,7 +8657,7 @@
 4130	XB-GENEPAGE-999070	map1a	microtubule associated protein 1A
 22989	XB-GENEPAGE-999077	myh15	myosin  heavy chain 15
 55081	XB-GENEPAGE-999088	ift57	intraflagellar transport 57
-11148	XB-GENEPAGE-999097	hhla2	HERV-H LTR-associating 2
+11148	XB-GENEPAGE-999097	hhla2	HHLA2 member of B7 family
 10514	XB-GENEPAGE-999105	mybbp1a	MYB binding protein 1a
 5982	XB-GENEPAGE-999113	rfc2	replication factor C subunit 2
 653361	XB-GENEPAGE-999122	ncf1	neutrophil cytosolic factor 1
@@ -8787,7 +8777,7 @@
 9227	XB-GENEPAGE-1000464	lrat	lecithin retinol acyltransferase
 1161	XB-GENEPAGE-1000475	ercc8	excision repair cross-complementation group 8
 55294	XB-GENEPAGE-1000485	fbxw7	F-box and WD repeat domain containing 7
-9851	XB-GENEPAGE-1000496	kiaa0753	KIAA0753
+9851	XB-GENEPAGE-1000496	KIAA0753	KIAA0753
 1508	XB-GENEPAGE-1000504	ctsb	cathepsin B
 252969	XB-GENEPAGE-1000518	neil2	nei-like DNA glycosylase 2
 66036	XB-GENEPAGE-1000524	mtmr9	myotubularin related protein 9
@@ -8810,7 +8800,7 @@
 22863	XB-GENEPAGE-1000726	atg14	autophagy related 14
 112849	XB-GENEPAGE-1000731	l3hypdh	L-3-hydroxyproline dehydratase (trans-)
 729665	XB-GENEPAGE-1000738	ccdc175	coiled-coil domain containing 175
-317761	XB-GENEPAGE-1000743	c14orf39	chromosome 14 open reading frame 39
+317761	XB-GENEPAGE-1000743	c8h14orf39	chromosome 8 C14orf39 homolog
 54471	XB-GENEPAGE-1000746	mief1	mitochondrial elongation factor 1
 10521	XB-GENEPAGE-1000757	ddx17	DEAD-box helicase 17
 646851	XB-GENEPAGE-1000772	fam227a	family with sequence similarity 227 member A
@@ -8820,8 +8810,8 @@
 24	XB-GENEPAGE-1000809	abca4	ATP binding cassette subfamily A member 4
 1810	XB-GENEPAGE-1000820	dr1	down-regulator of transcription 1
 343099	XB-GENEPAGE-1000839	ccdc18	coiled-coil domain containing 18
-284697	XB-GENEPAGE-1000850	btbd8	BTB domain containing 8
 23285	XB-GENEPAGE-1000850	btbd8	BTB domain containing 8
+284697	XB-GENEPAGE-1000850	btbd8	BTB domain containing 8
 57337	XB-GENEPAGE-1000859	senp7	SUMO specific peptidase 7
 286464	XB-GENEPAGE-1000866	cfap47	chromosome X open reading frame 22
 57414	XB-GENEPAGE-1000873	rhbdd2	rhomboid domain containing 2
@@ -8943,7 +8933,7 @@
 27042	XB-GENEPAGE-1002186	utp25	UTP25, small subunit processor component
 343035	XB-GENEPAGE-1002199	rd3	retinal degeneration 3, GUCY2D regulator
 1063	XB-GENEPAGE-1002204	cenpf	centromere protein F
-79989	XB-GENEPAGE-1002213	ttc26	tetratricopeptide repeat domain 26
+79989	XB-GENEPAGE-1002213	ift56	intraflagellar transport 56
 4627	XB-GENEPAGE-1002221	myh9	myosin, heavy chain 9, non-muscle
 3162	XB-GENEPAGE-1002242	hmox1	heme oxygenase 1
 4700	XB-GENEPAGE-1002261	ndufa6	NADH:ubiquinone oxidoreductase subunit A6
@@ -9085,7 +9075,7 @@
 9806	XB-GENEPAGE-1003766	spock2	SPARC (osteonectin), cwcv and kazal like domains proteoglycan 2
 9801	XB-GENEPAGE-1003775	mrpl19	mitochondrial ribosomal protein L19
 55532	XB-GENEPAGE-1003782	slc30a10	solute carrier family 30 member 10
-5441	XB-GENEPAGE-1003787	polr2l.1	polymerase (RNA) II subunit L
+5441	XB-GENEPAGE-1003787	polr2l	RNA polymerase II, I and III subunit L gene 1
 7443	XB-GENEPAGE-1003795	vrk1	VRK serine/threonine kinase 1
 56984	XB-GENEPAGE-1003807	psmg2	proteasome (prosome, macropain) assembly chaperone 2
 11238	XB-GENEPAGE-1003818	ca5b	carbonic anhydrase VB, mitochondrial
@@ -9124,7 +9114,7 @@
 2162	XB-GENEPAGE-1004149	f13a1	coagulation factor XIII, A1 polypeptide
 10907	XB-GENEPAGE-1004156	txnl4a	thioredoxin like 4A
 55856	XB-GENEPAGE-1004167	acot13	acyl-CoA thioesterase 13
-91746	XB-GENEPAGE-1004177	ythdc1	YTH domain containing 1
+91746	XB-GENEPAGE-1004177	ythdc1	YTH N6-methyladenosine RNA binding protein C1
 51170	XB-GENEPAGE-1004189	hsd17b11	hydroxysteroid (17-beta) dehydrogenase 11
 10855	XB-GENEPAGE-1004200	hpse	heparanase
 130540	XB-GENEPAGE-1004205	flacc1	flagellum associated containing coiled-coil domains 1
@@ -9180,7 +9170,7 @@
 10558	XB-GENEPAGE-1004879	sptlc1	serine palmitoyltransferase, long chain base subunit 1
 5875	XB-GENEPAGE-1004891	rabggta	Rab geranylgeranyltransferase subunit alpha
 728621	XB-GENEPAGE-1004903	ccdc30	coiled-coil domain containing 30
-79078	XB-GENEPAGE-1004911	c1orf50	chromosome 1 open reading frame 50
+79078	XB-GENEPAGE-1004911	c7h1orf50	chromosome 7 C1orf50 homolog
 50814	XB-GENEPAGE-1004922	nsdhl	NAD(P) dependent steroid dehydrogenase-like
 4060	XB-GENEPAGE-1004933	lum	lumican
 8989	XB-GENEPAGE-1004944	trpa1	transient receptor potential cation channel, subfamily A, member 1
@@ -9287,7 +9277,7 @@
 1716	XB-GENEPAGE-1006118	dguok	deoxyguanosine kinase
 6996	XB-GENEPAGE-1006127	tdg	thymine DNA glycosylase
 529	XB-GENEPAGE-1006141	atp6v1e1	ATPase, H+ transporting, lysosomal 31kDa, V1 subunit E1
-10274	XB-GENEPAGE-1006154	stag1	stromal antigen 1
+10274	XB-GENEPAGE-1006154	stag1	STAG1 cohesin complex component
 6655	XB-GENEPAGE-1006169	sos2	SOS Ras/Rho guanine nucleotide exchange factor 2
 23588	XB-GENEPAGE-1006176	klhdc2	kelch domain containing 2
 122769	XB-GENEPAGE-1006186	lrr1	leucine rich repeat protein 1
@@ -9311,7 +9301,7 @@
 2957	XB-GENEPAGE-1006403	gtf2a1	general transcription factor IIA 1
 113419	XB-GENEPAGE-1006422	tex261	testis expressed 261
 55079	XB-GENEPAGE-1006431	fezf2	FEZ family zinc finger 2
-57415	XB-GENEPAGE-1006443	c3orf14	Putative ortholog of hT021 (Chromosome 3 open reading frame 14), 1 of 1
+57415	XB-GENEPAGE-1006443	cep15	centrosomal protein 15
 5352	XB-GENEPAGE-1006448	plod2	procollagen-lysine, 2-oxoglutarate 5-dioxygenase 2
 197370	XB-GENEPAGE-1006455	nsmce1	NSE1 homolog, SMC5-SMC6 complex component
 115939	XB-GENEPAGE-1006467	tsr3	TSR3, 20S rRNA accumulation, homolog (S. cerevisiae)
@@ -9353,7 +9343,7 @@
 645	XB-GENEPAGE-1006836	blvrb	biliverdin reductase B
 57716	XB-GENEPAGE-1006846	prx	periaxin
 8907	XB-GENEPAGE-1006855	ap1m1	adaptor related protein complex 1 subunit mu 1
-127703	XB-GENEPAGE-1006871	c1orf216	chromosome 1 open reading frame 216
+127703	XB-GENEPAGE-1006871	c2h1orf216	chromosome 2 C1orf216 homolog
 192670	XB-GENEPAGE-1006881	ago4	argonaute 4, RISC catalytic component
 984	XB-GENEPAGE-1006891	cdk11b	cyclin-dependent kinase 11B
 29954	XB-GENEPAGE-1006905	pomt2	protein-O-mannosyltransferase 2
@@ -9553,7 +9543,7 @@
 5105	XB-GENEPAGE-1009229	pck1	phosphoenolpyruvate carboxykinase 1
 6520	XB-GENEPAGE-1009244	slc3a2	solute carrier family 3 (amino acid transporter heavy chain), member 2
 57530	XB-GENEPAGE-1009256	cgn	cingulin
-25912	XB-GENEPAGE-1009267	c1orf43	chromosome 1 open reading frame 43
+25912	XB-GENEPAGE-1009267	c8h1orf43	chromosome 8 C1orf43 homolog
 56949	XB-GENEPAGE-1009275	xab2	XPA binding protein 2
 57127	XB-GENEPAGE-1009285	rhbg	Rh family B glycoprotein
 3141	XB-GENEPAGE-1009303	hlcs	holocarboxylase synthetase (biotin-(proprionyl-CoA-carboxylase (ATP-hydrolysing)) ligase)
@@ -9575,7 +9565,7 @@
 387712	XB-GENEPAGE-1009719	eno4	enolase 4
 4983	XB-GENEPAGE-1009724	ophn1	oligophrenin 1
 286451	XB-GENEPAGE-1009735	yipf6	Yip1 domain family member 6
-83636	XB-GENEPAGE-1009747	c19orf12	chromosome 19 open reading frame 12
+83636	XB-GENEPAGE-1009747	c4h19orf12	chromosome 4 C19orf12 homolog
 10775	XB-GENEPAGE-1009756	pop4	POP4 homolog, ribonuclease P/MRP subunit
 29090	XB-GENEPAGE-1009767	timm21	translocase of inner mitochondrial membrane 21 homolog
 3978	XB-GENEPAGE-1009778	lig1	ligase I, DNA, ATP-dependent
@@ -9669,7 +9659,7 @@
 11057	XB-GENEPAGE-1010609	abhd2	abhydrolase domain containing 2
 7158	XB-GENEPAGE-1010614	tp53bp1	tumor protein p53 binding protein 1
 7461	XB-GENEPAGE-1010625	clip2	CAP-Gly domain containing linker protein 2
-28970	XB-GENEPAGE-1010633	c11orf54	chromosome 11 open reading frame 54
+28970	XB-GENEPAGE-1010633	c2h11orf54	chromosome 2 C11orf54 homolog
 391189	XB-GENEPAGE-1010645	or11l1.1	conserved hypothetical olfactory receptor, 1 of 17
 3736	XB-GENEPAGE-1010661	kcna1	potassium channel, voltage gated shaker related subfamily A, member 1
 3742	XB-GENEPAGE-1010668	kcna6	potassium channel, voltage gated shaker related subfamily A, member 6
@@ -9745,9 +9735,8 @@
 166863	XB-GENEPAGE-1011215	rbm46	RNA binding motif protein 46
 9288	XB-GENEPAGE-1011222	taar3	trace amine associated receptor 3
 4594	XB-GENEPAGE-1011225	mmut	methylmalonyl-CoA mutase
-112744	XB-GENEPAGE-1011233	il17f	interleukin 17F
 114327	XB-GENEPAGE-1011236	efhc1	EF-hand domain (C-terminal) containing 1
-4482	XB-GENEPAGE-1011249	msra.1	methionine sulfoxide reductase A, gene 1
+4482	XB-GENEPAGE-1011249	msra	methionine sulfoxide reductase A, gene 1
 3984	XB-GENEPAGE-1011257	limk1	LIM domain kinase 1
 123920	XB-GENEPAGE-1011269	cmtm3	CKLF-like MARVEL transmembrane domain containing 3
 29123	XB-GENEPAGE-1011276	ankrd11	ankyrin repeat domain 11
@@ -9807,7 +9796,7 @@
 23304	XB-GENEPAGE-1011724	ubr2	ubiquitin protein ligase E3 component n-recognin 2
 2743	XB-GENEPAGE-1011733	glrb	glycine receptor beta
 64116	XB-GENEPAGE-1011740	slc39a8	solute carrier family 39 (zinc transporter), member 8
-4547	XB-GENEPAGE-1011747	mttp.1	microsomal triglyceride transfer protein, gene 1
+4547	XB-GENEPAGE-1011747	mttp	microsomal triglyceride transfer protein, gene 1
 2769	XB-GENEPAGE-1011752	gna15	guanine nucleotide binding protein (G protein), alpha 15 (Gq class)
 221184	XB-GENEPAGE-1011757	cpne2	copine II
 4671	XB-GENEPAGE-1011762	naip	NLR family, apoptosis inhibitory protein
@@ -9829,7 +9818,7 @@
 59285	XB-GENEPAGE-1011865	cacng6	calcium channel, voltage-dependent, gamma subunit 6
 114902	XB-GENEPAGE-1011869	c1qtnf5	C1q and TNF related 5
 2900	XB-GENEPAGE-1011874	grik4	glutamate receptor, ionotropic, kainate 4
-7007	XB-GENEPAGE-1011877	tecta.1	tectorin alpha, gene 1
+7007	XB-GENEPAGE-1011877	tecta	tectorin alpha gene 1
 246243	XB-GENEPAGE-1011882	rnaseh1	ribonuclease H1
 112	XB-GENEPAGE-1011901	adcy6	adenylate cyclase 6
 784	XB-GENEPAGE-1011905	cacnb3	calcium channel, voltage-dependent, beta 3 subunit
@@ -9875,7 +9864,7 @@
 114818	XB-GENEPAGE-1012232	klhl29	kelch like family member 29
 50618	XB-GENEPAGE-1012237	itsn2	intersectin 2
 5251	XB-GENEPAGE-1012246	phex	phosphate regulating endopeptidase X-linked
-646780	XB-GENEPAGE-1012251	phka1p1	phosphorylase kinase, alpha 1 pseudogene 1
+646780	XB-GENEPAGE-1012251	phka1	phosphorylase kinase, alpha 1
 1005	XB-GENEPAGE-1012258	cdh7	cadherin 7
 3613	XB-GENEPAGE-1012261	impa2	inositol(myo)-1(or 4)-monophosphatase 2
 157777	XB-GENEPAGE-1012269	mcmdc2	minichromosome maintenance domain containing 2
@@ -10012,14 +10001,14 @@
 116983	XB-GENEPAGE-1013300	acap3	ArfGAP with coiled-coil, ankyrin repeat and PH domains 3
 8615	XB-GENEPAGE-1013305	uso1	USO1 vesicle transport factor
 83888	XB-GENEPAGE-1013317	fgfbp2	fibroblast growth factor binding protein 2
-9788	XB-GENEPAGE-1013321	mtss1.1	metastasis suppressor 1, gene 1
+9788	XB-GENEPAGE-1013321	mtss1	metastasis suppressor 1, gene 1
 10165	XB-GENEPAGE-1013330	slc25a13	solute carrier family 25 member 13
 10317	XB-GENEPAGE-1013343	b3galt5.4	beta-1,3-galactosyltransferase 5 gene 4
 7224	XB-GENEPAGE-1013347	trpc5	transient receptor potential cation channel, subfamily C, member 5
 29933	XB-GENEPAGE-1013354	gpr132	G protein-coupled receptor 132
 57731	XB-GENEPAGE-1013359	sptbn4	spectrin, beta, non-erythrocytic 4
 58512	XB-GENEPAGE-1013366	dlgap3	discs, large homolog-associated protein 3
-79932	XB-GENEPAGE-1013369	kiaa0319l	kiaa0319 like
+79932	XB-GENEPAGE-1013369	KIAA0319l	KIAA0319 like
 8120	XB-GENEPAGE-1013376	ap3b2	adaptor related protein complex 3 subunit beta 2
 79661	XB-GENEPAGE-1013383	neil1	nei-like DNA glycosylase 1
 136	XB-GENEPAGE-1013394	adora2b	adenosine A2b receptor
@@ -10088,7 +10077,7 @@
 5150	XB-GENEPAGE-1013812	pde7a	phosphodiesterase 7A
 9810	XB-GENEPAGE-1013820	rnf40	ring finger protein 40, E3 ubiquitin protein ligase
 773	XB-GENEPAGE-1013830	cacna1a	calcium channel, voltage-dependent, P/Q type, alpha 1A subunit
-3636	XB-GENEPAGE-1013836	inppl1	inositol polyphosphate phosphatase like 1
+3636	XB-GENEPAGE-1013836	inppl1a	inositol polyphosphate phosphatase-like 1a
 778	XB-GENEPAGE-1013839	cacna1f	calcium channel, voltage-dependent, L type, alpha 1F subunit
 6595	XB-GENEPAGE-1013842	smarca2	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2
 2674	XB-GENEPAGE-1013854	gfra1	GDNF family receptor alpha 1
@@ -10169,7 +10158,7 @@
 84709	XB-GENEPAGE-1014554	mgarp	mitochondria localized glutamic acid rich protein
 6566	XB-GENEPAGE-1014565	slc16a1	solute carrier family 16 member 1
 722	XB-GENEPAGE-1014580	c4bpa	complement component 4 binding protein, alpha
-79098	XB-GENEPAGE-1014589	c1orf116	chromosome 1 open reading frame 116
+79098	XB-GENEPAGE-1014589	c2h1orf116	chromosome 2 C1orf116 homolog
 51512	XB-GENEPAGE-1014599	gtse1	G2 and S-phase expressed 1
 55501	XB-GENEPAGE-1014615	chst12	carbohydrate (chondroitin 4) sulfotransferase 12
 79003	XB-GENEPAGE-1014627	mis12	MIS12 kinetochore complex component
@@ -10224,7 +10213,7 @@
 56948	XB-GENEPAGE-1015180	sdr39u1	short chain dehydrogenase/reductase family 39U, member 1
 5889	XB-GENEPAGE-1015190	rad51c	RAD51 paralog C
 115098	XB-GENEPAGE-1015197	ccdc124	coiled-coil domain containing 124
-162681	XB-GENEPAGE-1015210	c18orf54	chromosome 18 open reading frame 54
+162681	XB-GENEPAGE-1015210	c1h18orf54	chromosome 1 C18orf54 homolog
 55520	XB-GENEPAGE-1015216	elac1	elaC ribonuclease Z 1
 54108	XB-GENEPAGE-1015223	chrac1	chromatin accessibility complex subunit 1
 967	XB-GENEPAGE-1015226	cd63	CD63 molecule
@@ -10250,7 +10239,7 @@
 25792	XB-GENEPAGE-1015494	ciz1	CDKN1A interacting zinc finger protein 1
 5355	XB-GENEPAGE-1015502	plp2	proteolipid protein 2
 78995	XB-GENEPAGE-1015518	hrob	homologous recombination factor with OB-fold
-138241	XB-GENEPAGE-1015526	c9orf85	chromosome 9 open reading frame 85
+138241	XB-GENEPAGE-1015526	c1h9orf85	chromosome 1 C9orf85 homolog
 51368	XB-GENEPAGE-1015535	tex264	testis expressed 264
 79022	XB-GENEPAGE-1015541	tmem106c	transmembrane protein 106C
 340485	XB-GENEPAGE-1015551	acer2	alkaline ceramidase 2
@@ -10319,7 +10308,7 @@
 7103	XB-GENEPAGE-1016290	tspan8	tetraspanin 8
 27345	XB-GENEPAGE-1016302	kcnmb4	potassium channel subfamily M regulatory beta subunit 4
 1743	XB-GENEPAGE-1016309	dlst	dihydrolipoamide S-succinyltransferase (E2 component of 2-oxo-glutarate complex)
-55640	XB-GENEPAGE-1016321	flvcr2	FLVCR heme transporter 2
+55640	XB-GENEPAGE-1016321	flvcr2	FLVCR choline and putative heme transporter 2
 744	XB-GENEPAGE-1016331	mpped2	metallophosphoesterase domain containing 2
 120526	XB-GENEPAGE-1016342	dnajc24	DnaJ heat shock protein family (Hsp40) member C24
 7979	XB-GENEPAGE-1016349	sem1	SEM1 26S proteasome subunit
@@ -10343,7 +10332,7 @@
 23032	XB-GENEPAGE-1016673	usp33	ubiquitin specific peptidase 33
 26574	XB-GENEPAGE-1016682	aatf	apoptosis antagonizing transcription factor
 26287	XB-GENEPAGE-1016693	ankrd2	ankyrin repeat domain 2 (stretch responsive muscle)
-84193	XB-GENEPAGE-1016706	setd3	SET domain containing 3
+84193	XB-GENEPAGE-1016706	setd3	SET domain containing 3, actin N3(tau)-histidine methyltransferase
 84971	XB-GENEPAGE-1016716	atg4d	autophagy related 4D, cysteine peptidase
 60491	XB-GENEPAGE-1016728	nif3l1	NGG1 interacting factor 3 like 1
 7517	XB-GENEPAGE-1016740	xrcc3	X-ray repair complementing defective repair in Chinese hamster cells 3
@@ -10579,7 +10568,7 @@
 2641	XB-GENEPAGE-1217631	gcg.2	glucagon, gene 2
 9716	XB-GENEPAGE-1217635	aqr	aquarius intron-binding spliceosomal factor
 57713	XB-GENEPAGE-1217644	sfmbt2	Scm like with four mbt domains 2
-646	XB-GENEPAGE-1217654	bnc1	basonuclin 1
+646	XB-GENEPAGE-1217654	bnc1	basonuclin zinc finger protein 1
 23515	XB-GENEPAGE-1217660	morc3	MORC family CW-type zinc finger 3
 84467	XB-GENEPAGE-1217675	fbn3	fibrillin 3
 57795	XB-GENEPAGE-1217684	brinp2	BMP/retinoic acid inducible neural specific 2
@@ -10599,7 +10588,7 @@
 554	XB-GENEPAGE-1219041	avpr2c	arginine vasopressin receptor 2C
 57829	XB-GENEPAGE-1219043	zp4.2	zona pellucida glycoprotein 4, gene 2
 23351	XB-GENEPAGE-1219051	khnyn	KH and NYN domain containing
-57732	XB-GENEPAGE-1219056	zfyve28	zinc finger FYVE-type containing 28
+57732	XB-GENEPAGE-1219056	zfyve28a	zinc finger FYVE-type containing 28a
 10472	XB-GENEPAGE-1219065	znf238.2	zinc finger protein 238, gene 2
 7027	XB-GENEPAGE-1219072	tfdp1	transcription factor Dp-1
 147658	XB-GENEPAGE-1219091	znf534	zinc finger protein 534
@@ -10615,7 +10604,7 @@
 3859	XB-GENEPAGE-1219320	krt12.5	keratin 12, gene 5
 27130	XB-GENEPAGE-1221136	invs	inversin
 9742	XB-GENEPAGE-1221148	ift140	intraflagellar transport 140
-92104	XB-GENEPAGE-1221158	ttc30a	tetratricopeptide repeat domain 30a
+92104	XB-GENEPAGE-1221158	ift70a	intraflagellar transport 70a
 26160	XB-GENEPAGE-1221170	ift172	intraflagellar transport 172
 54903	XB-GENEPAGE-1221179	mks1	Meckel syndrome, type 1
 80184	XB-GENEPAGE-1221197	cep290	centrosomal protein 290
@@ -10626,7 +10615,7 @@
 8875	XB-GENEPAGE-5471071	vnn2	vanin 2
 494551	XB-GENEPAGE-5560749	wee2	WEE2 oocyte meiosis inhibiting kinase
 284161	XB-GENEPAGE-5612386	gdpd1	glycerophosphodiester phosphodiesterase domain containing 1
-254158	XB-GENEPAGE-5614417	cxorf58	chromosome X open reading frame 58
+254158	XB-GENEPAGE-5614417	c2hxorf58	chromosome 2 Cxorf58 homolog
 9344	XB-GENEPAGE-5714820	taok2	TAO kinase 2
 124535	XB-GENEPAGE-5714872	hsf5	heat shock transcription factor family member 5
 9518	XB-GENEPAGE-5714901	gdf15	growth differentiation factor 15
@@ -10664,7 +10653,7 @@
 51106	XB-GENEPAGE-5721419	tfb1m	transcription factor B1, mitochondrial
 23410	XB-GENEPAGE-5721493	sirt3.2	sirtuin (silent mating type information regulation 2 homolog) 3, gene 2
 28	XB-GENEPAGE-5721533	abo.1	ABO blood group (transferase A, alpha 1-3-N-acetylgalactosaminyltransferase; transferase B, alpha 1-3-galactosyltransferase) gene 1
-10944	XB-GENEPAGE-5721735	c11orf58	chromosome 11 open reading frame 58
+10944	XB-GENEPAGE-5721735	c4h11orf58	chromosome 4 C11orf58 homolog
 339896	XB-GENEPAGE-5721902	gadl1	glutamate decarboxylase like 1
 10312	XB-GENEPAGE-5721916	tcirg1	T cell immune regulator 1, ATPase H+ transporting V0 subunit a3
 56655	XB-GENEPAGE-5722001	pole4	polymerase (DNA-directed), epsilon 4, accessory subunit
@@ -10686,7 +10675,7 @@
 54868	XB-GENEPAGE-5725014	tmem104	transmembrane protein 104
 2219	XB-GENEPAGE-5725056	fcn1	ficolin 1
 10562	XB-GENEPAGE-5725071	olfm4	olfactomedin 4
-79169	XB-GENEPAGE-5725223	c1orf35	chromosome 1 open reading frame 35
+79169	XB-GENEPAGE-5725223	c6h1orf35	chromosome 6  C1orf35 homolog
 55755	XB-GENEPAGE-5725314	cdk5rap2	CDK5 regulatory subunit associated protein 2
 221061	XB-GENEPAGE-5725403	fam171a1	family with sequence similarity 171 member A1
 280	XB-GENEPAGE-5725536	amy2b	amylase, alpha 2B (pancreatic)
@@ -10735,7 +10724,7 @@
 203547	XB-GENEPAGE-5730848	vma21	VMA21, vacuolar ATPase assembly factor
 29086	XB-GENEPAGE-5731068	babam1	BRISC and BRCA1 A complex member 1
 254531	XB-GENEPAGE-5731126	lpcat4	lysophosphatidylcholine acyltransferase 4
-441054	XB-GENEPAGE-5731259	c4orf47	chromosome 4 open reading frame 47
+441054	XB-GENEPAGE-5731259	cfap96	cilia and flagella associated protein 96
 2326	XB-GENEPAGE-5731296	fmo1	flavin containing monooxygenase 1
 255967	XB-GENEPAGE-5731377	pan3	poly(A) specific ribonuclease subunit PAN3
 152559	XB-GENEPAGE-5731647	paqr3	progestin and adipoQ receptor family member 3
@@ -10806,9 +10795,8 @@
 117584	XB-GENEPAGE-5739973	rffl	ring finger and FYVE-like domain containing E3 ubiquitin protein ligase
 2907	XB-GENEPAGE-5740103	grina	glutamate receptor, ionotropic, N-methyl D-aspartate-associated protein 1 (glutamate binding)
 22884	XB-GENEPAGE-5740159	wdr37	WD repeat domain 37
-81577	XB-GENEPAGE-5740206	gfod2	glucose-fructose oxidoreductase domain containing 2
+81577	XB-GENEPAGE-5740206	gfod2	Gfo/Idh/MocA-like oxidoreductase domain containing 2
 126119	XB-GENEPAGE-5740259	josd2	Josephin domain containing 2
-105371184	XB-GENEPAGE-5740333	linc02867	long intergenic non-protein coding RNA 2867
 84179	XB-GENEPAGE-5740365	slc49a3	solute carrier family 49 member 3
 157807	XB-GENEPAGE-5740433	clvs1	clavesin 1
 414149	XB-GENEPAGE-5740465	acbd7	acyl-CoA binding domain containing 7
@@ -10846,7 +10834,7 @@
 83850	XB-GENEPAGE-5746164	esyt3	extended synaptotagmin protein 3
 55093	XB-GENEPAGE-5746197	ntaq1	N-terminal glutamine amidase 1
 7386	XB-GENEPAGE-5746218	uqcrfs1	ubiquinol-cytochrome c reductase, Rieske iron-sulfur polypeptide 1
-399947	XB-GENEPAGE-5746919	c11orf87	chromosome 11 open reading frame 87
+399947	XB-GENEPAGE-5746919	c2h11orf87	chromosome 2 C11orf87 homolog
 56254	XB-GENEPAGE-5746935	rnf20	ring finger protein 20
 202915	XB-GENEPAGE-5747152	tmem184a	transmembrane protein 184A
 9306	XB-GENEPAGE-5747204	socs6	suppressor of cytokine signaling 6
@@ -10867,7 +10855,7 @@
 415117	XB-GENEPAGE-5749238	stx19	syntaxin 19
 8301	XB-GENEPAGE-5749320	picalm	phosphatidylinositol binding clathrin assembly protein
 9814	XB-GENEPAGE-5749439	sfi1	SFI1 centrin binding protein
-51108	XB-GENEPAGE-5749472	mettl9	methyltransferase like 9
+51108	XB-GENEPAGE-5749472	mettl9	methyltransferase 9, His-X-His N1(pi)-histidine
 79781	XB-GENEPAGE-5749594	iqca1	IQ motif containing with AAA domain 1
 3600	XB-GENEPAGE-5749620	il15	interleukin 15
 221	XB-GENEPAGE-5749634	aldh3b1	aldehyde dehydrogenase 3 family member B1
@@ -10912,7 +10900,7 @@
 66005	XB-GENEPAGE-5752788	chid1	chitinase domain containing 1
 144363	XB-GENEPAGE-5752832	etfrf1	electron transfer flavoprotein regulatory factor 1
 29965	XB-GENEPAGE-5752850	cdip1	cell death-inducing p53 target 1
-253943	XB-GENEPAGE-5752936	ythdf3	YTH N6-methyladenosine RNA binding protein 3
+253943	XB-GENEPAGE-5752936	ythdf3	YTH N6-methyladenosine RNA binding protein F3
 51026	XB-GENEPAGE-5753085	golt1b	golgi transport 1B
 57226	XB-GENEPAGE-5753219	lyrm2	LYR motif containing 2
 64773	XB-GENEPAGE-5753235	pced1a	PC-esterase domain containing 1A
@@ -10966,7 +10954,7 @@
 27044	XB-GENEPAGE-5756795	snd1	staphylococcal nuclease and tudor domain containing protein 1
 65009	XB-GENEPAGE-5757268	ndrg4	NDRG family member 4
 65267	XB-GENEPAGE-5757376	wnk3	WNK lysine deficient protein kinase 3
-79669	XB-GENEPAGE-5757390	c3orf52	chromosome 3 open reading frame 52
+79669	XB-GENEPAGE-5757390	c2h3orf52	chromosome 2 C3orf52 homolog
 10930	XB-GENEPAGE-5757447	apobec2	apolipoprotein B mRNA editing enzyme, catalytic polypeptide-like 2
 57531	XB-GENEPAGE-5757511	hace1	HECT domain and ankyrin repeat containing E3 ubiquitin protein ligase 1
 9263	XB-GENEPAGE-5757565	stk17a	serine/threonine kinase 17a
@@ -10981,7 +10969,6 @@
 5652	XB-GENEPAGE-5758111	prss8	serine protease 8
 122622	XB-GENEPAGE-5758190	adss1	adenylosuccinate synthase 1
 152007	XB-GENEPAGE-5758335	glipr2	GLI pathogenesis-related 2
-143503	XB-GENEPAGE-5758460	or51e1	olfactory receptor family 51 subfamily E member 1
 5774	XB-GENEPAGE-5758497	ptpn3	protein tyrosine phosphatase non-receptor type 3
 4257	XB-GENEPAGE-5758552	mgst1	microsomal glutathione S-transferase 1
 7414	XB-GENEPAGE-5759105	vcl	vinculin
@@ -11023,7 +11010,6 @@
 2048	XB-GENEPAGE-5762964	ephb2	EPH receptor B2
 28905	XB-GENEPAGE-5762972	igkv7-3	immunoglobulin kappa variable 7-3 (pseudogene)
 150209	XB-GENEPAGE-5763103	aifm3	apoptosis inducing factor, mitochondria associated 3
-654231	XB-GENEPAGE-5763129	ocm4.5	oncomodulin 4 gene 5
 51059	XB-GENEPAGE-5763430	fam135b	family with sequence similarity 135 member B
 389206	XB-GENEPAGE-5763563	bend4	BEN domain containing 4
 153769	XB-GENEPAGE-5763587	sh3rf2	SH3 domain containing ring finger 2
@@ -11042,7 +11028,7 @@
 341418	XB-GENEPAGE-5764811	or6c4	olfactory receptor family 6 subfamily C member 4
 494188	XB-GENEPAGE-5764933	fbxo47	F-box protein 47
 80168	XB-GENEPAGE-5764956	mogat2.2	monoacylglycerol O-acyltransferase 2, gene 2
-4056	XB-GENEPAGE-5765040	ltc4s.1	leukotriene C4 synthase, gene 1
+4056	XB-GENEPAGE-5765040	ltc4s	leukotriene C4 synthase, gene 1
 64849	XB-GENEPAGE-5765053	slc13a3	solute carrier family 13 (sodium-dependent dicarboxylate transporter), member 3
 165918	XB-GENEPAGE-5765248	rnf168	ring finger protein 168, E3 ubiquitin protein ligase
 11200	XB-GENEPAGE-5765420	chek2	checkpoint kinase 2
@@ -11057,7 +11043,7 @@
 259282	XB-GENEPAGE-5767012	bod1l1	biorientation of chromosomes in cell division 1-like 1
 138046	XB-GENEPAGE-5767074	ralyl	RALY RNA binding protein like
 25886	XB-GENEPAGE-5767104	poc1a	POC1 centriolar protein A
-23196	XB-GENEPAGE-5767696	fam120a	family with sequence similarity 120A
+23196	XB-GENEPAGE-5767696	fam120a	amily with sequence similarity 120 member A
 417	XB-GENEPAGE-5767812	art1	ADP-ribosyltransferase 1
 255231	XB-GENEPAGE-5767907	mcoln2	mucolipin TRP cation channel 2
 10587	XB-GENEPAGE-5767948	txnrd2	thioredoxin reductase 2
@@ -11139,7 +11125,6 @@
 255252	XB-GENEPAGE-5779275	lrrc57	leucine rich repeat containing 57
 91582	XB-GENEPAGE-5779331	rps19bp1	ribosomal protein S19 binding protein 1
 55676	XB-GENEPAGE-5779444	slc30a6	solute carrier family 30 (zinc transporter), member 6
-11033	XB-GENEPAGE-5779569	adap1l	ArfGAP with dual PH domains 1-like
 836	XB-GENEPAGE-5779642	casp3	caspase 3, gene 1
 387885	XB-GENEPAGE-5779652	cfap73	cilia and flagella associated protein 73
 9978	XB-GENEPAGE-5779766	rbx1	ring-box 1, E3 ubiquitin protein ligase
@@ -11216,7 +11201,7 @@
 728116	XB-GENEPAGE-5788420	zbtb8b	zinc finger and BTB domain containing 8B
 730222	XB-GENEPAGE-5788468	tuba5	tubulin alpha 5
 5141	XB-GENEPAGE-5789472	pde4a	phosphodiesterase 4A
-22949	XB-GENEPAGE-5789487	ptgr1.1	prostaglandin reductase 1, gene 1
+22949	XB-GENEPAGE-5789487	ptgr1	prostaglandin reductase 1, gene 1
 81790	XB-GENEPAGE-5789581	rnf170	ring finger protein 170
 2220	XB-GENEPAGE-5789612	fcn2	ficolin 2
 81544	XB-GENEPAGE-5789659	gdpd5	glycerophosphodiester phosphodiesterase domain containing 5
@@ -11233,7 +11218,7 @@
 55066	XB-GENEPAGE-5791460	pdpr	pyruvate dehydrogenase phosphatase regulatory subunit
 6643	XB-GENEPAGE-5791487	snx2	sorting nexin 2
 55304	XB-GENEPAGE-5791606	sptlc3	serine palmitoyltransferase, long chain base subunit 3
-2835	XB-GENEPAGE-5793162	gpr185a	G protein-coupled receptor 185 a
+2835	XB-GENEPAGE-5793162	gpr12	G protein-coupled receptor 12
 122060	XB-GENEPAGE-5793177	slain1	SLAIN motif family member 1
 222967	XB-GENEPAGE-5793211	rsph10b	radial spoke head 10 homolog B (Chlamydomonas)
 65999	XB-GENEPAGE-5793224	lrrc61	leucine rich repeat containing 61
@@ -11259,7 +11244,6 @@
 10613	XB-GENEPAGE-5794200	erlin1	ER lipid raft associated 1
 284369	XB-GENEPAGE-5794231	siglecl1	siglec-like 1
 7738	XB-GENEPAGE-5794875	znf184	zinc finger protein 184
-8707	XB-GENEPAGE-5795333	b3galt2l	Beta-1,3-galactosyltransferase 2 like
 391189	XB-GENEPAGE-5795350	or11l1.18	olfactory receptor class II (xb178 gene)
 222537	XB-GENEPAGE-5795357	hs3st5	heparan sulfate-glucosamine 3-sulfotransferase 5
 2209	XB-GENEPAGE-5795655	fcgr1a	Fc gamma receptor Ia
@@ -11284,9 +11268,9 @@
 29	XB-GENEPAGE-5797082	abr	ABR, RhoGEF and GTPase activating protein
 157378	XB-GENEPAGE-5797145	tmem65	transmembrane protein 65
 93323	XB-GENEPAGE-5797182	haus8	HAUS augmin like complex subunit 8
-129852	XB-GENEPAGE-5797227	c2orf73	chromosome 2 open reading frame 73
+129852	XB-GENEPAGE-5797227	c5h2orf73	chromosome 5 C2orf73 homolog
 2587	XB-GENEPAGE-5797253	galr1	galanin receptor 1
-113246	XB-GENEPAGE-5797259	c12orf57	chromosome 12 open reading frame 57
+113246	XB-GENEPAGE-5797259	c7h12orf57	chromosome 7 C12orf57 homolog
 93082	XB-GENEPAGE-5797364	neurl3	neuralized E3 ubiquitin protein ligase 3
 30834	XB-GENEPAGE-5797379	polr1h	RNA polymerase I subunit H
 64123	XB-GENEPAGE-5797448	adgrl4	adhesion G protein-coupled receptor L4
@@ -11299,13 +11283,13 @@
 6005	XB-GENEPAGE-5797750	rhagl	Rh associated glycoprotein like
 170960	XB-GENEPAGE-5797916	znf721	zinc finger protein 721
 24140	XB-GENEPAGE-5798520	ftsj1	FtsJ RNA methyltransferase homolog 1
-130355	XB-GENEPAGE-5798590	c2orf76	chromosome 2 open reading frame 76
+130355	XB-GENEPAGE-5798590	c9h2orf76	chromosome 9 C2orf76 homolog
 23091	XB-GENEPAGE-5798640	zc3h13	zinc finger CCCH-type containing 13
 7113	XB-GENEPAGE-5798773	tmprss2.6	transmembrane serine protease 2 gene 6
 51087	XB-GENEPAGE-5798906	ybx2	Y-box binding protein 2
 54862	XB-GENEPAGE-5799123	cc2d1a	coiled-coil and C2 domain containing 1A
 57704	XB-GENEPAGE-5799149	gba2	glucosidase, beta (bile acid) 2
-57536	XB-GENEPAGE-5799168	kiaa1328	KIAA1328
+57536	XB-GENEPAGE-5799168	KIAA1328	KIAA1328
 2116	XB-GENEPAGE-5799179	etv2	ETS variant transcription factor 2
 8771	XB-GENEPAGE-5799206	tnfrsf6b	TNF receptor superfamily member 6b
 10948	XB-GENEPAGE-5799233	stard3	StAR related lipid transfer domain containing 3
@@ -11319,7 +11303,7 @@
 57451	XB-GENEPAGE-5799893	tenm2	teneurin transmembrane protein 2
 55703	XB-GENEPAGE-5799939	polr3b	polymerase (RNA) III (DNA directed) polypeptide B
 79954	XB-GENEPAGE-5799992	nol10	nucleolar protein 10
-152940	XB-GENEPAGE-5800172	c4orf45	chromosome 4 open reading frame 45
+152940	XB-GENEPAGE-5800172	spmip2	sperm microtubule inner protein 2
 6238	XB-GENEPAGE-5800191	rrbp1	ribosome binding protein 1
 222171	XB-GENEPAGE-5800342	prr15	proline rich 15
 55854	XB-GENEPAGE-5800359	zc3h15	zinc finger CCCH-type containing 15
@@ -11338,7 +11322,7 @@
 10858	XB-GENEPAGE-5802443	cyp46a1.2	cytochrome P450 family 46 subfamily A member 1, gene 2
 164781	XB-GENEPAGE-5802527	daw1	dynein assembly factor with WDR repeat domains 1
 23302	XB-GENEPAGE-5802594	wscd1	WSC domain containing 1
-25840	XB-GENEPAGE-5802613	mettl7a	methyltransferase like 7A
+25840	XB-GENEPAGE-5802613	tmt1a	thiol methyltransferase 1A gene 1
 9903	XB-GENEPAGE-5802686	klhl21	kelch like family member 21
 80006	XB-GENEPAGE-5802752	trappc13	trafficking protein particle complex subunit 13
 79041	XB-GENEPAGE-5802847	tmem38a	transmembrane protein 38A
@@ -11357,8 +11341,8 @@
 51734	XB-GENEPAGE-5804220	msrb1	methionine sulfoxide reductase B1
 5265	XB-GENEPAGE-5804365	serpina1	serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 1
 10650	XB-GENEPAGE-5804615	prelid3a	PRELI domain containing 3A
-54991	XB-GENEPAGE-5804717	c1orf159	chromosome 1 open reading frame 159
-84267	XB-GENEPAGE-5804787	c9orf64	chromosome 9 open reading frame 64
+54991	XB-GENEPAGE-5804717	c7h1orf159	chromosome 7 C1orf159 homolog
+84267	XB-GENEPAGE-5804787	qng1	Q-nucleotide N-glycosylase 1
 55219	XB-GENEPAGE-5804806	maco1	macoilin 1
 2790	XB-GENEPAGE-5804908	gng10	guanine nucleotide binding protein (G protein), gamma 10
 84306	XB-GENEPAGE-5805050	pdcd2l	programmed cell death 2-like
@@ -11390,7 +11374,7 @@
 9456	XB-GENEPAGE-5807409	homer1	homer scaffold protein 1
 58504	XB-GENEPAGE-5807513	arhgap22	Rho GTPase activating protein 22
 157697	XB-GENEPAGE-5807532	erich1	glutamate rich 1
-6836	XB-GENEPAGE-5807554	surf4.1	surfeit 4, gene 1
+6836	XB-GENEPAGE-5807554	surf4	surfeit 4 gene 1
 79801	XB-GENEPAGE-5807674	shcbp1	SHC SH2-domain binding protein 1
 53829	XB-GENEPAGE-5807785	p2ry13	purinergic receptor P2Y, G-protein coupled, 13
 163859	XB-GENEPAGE-5807808	sde2	SDE2 telomere maintenance homolog (S. pombe)
@@ -11405,7 +11389,7 @@
 22809	XB-GENEPAGE-5808897	atf5	activating transcription factor 5
 130733	XB-GENEPAGE-5809006	tmem178.2	transmembrane protein 178, gene 2
 10362	XB-GENEPAGE-5809047	hmg20b	high mobility group 20B
-131965	XB-GENEPAGE-5809154	mettl6	methyltransferase 6, methylcytidine
+131965	XB-GENEPAGE-5809154	mettl6	methyltransferase 6, tRNA N3-cytidine
 84942	XB-GENEPAGE-5809222	wdr73	WD repeat domain 73
 9021	XB-GENEPAGE-5809272	socs3l	suppressor of cytokine signaling 3-Like
 993	XB-GENEPAGE-5809291	cdc25a	cell division cycle 25A
@@ -11427,7 +11411,7 @@
 822	XB-GENEPAGE-5811031	capg	capping protein (actin filament), gelsolin-like
 391051	XB-GENEPAGE-5811052	uox	urate oxidase
 613212	XB-GENEPAGE-5811088	ctxn3	cortexin 3
-92342	XB-GENEPAGE-5811218	mettl18	methyltransferase like 18
+92342	XB-GENEPAGE-5811218	mettl18	methyltransferase 18, RPL3 N3(tau)-histidine
 146183	XB-GENEPAGE-5811282	otoa	otoancorin
 55192	XB-GENEPAGE-5811331	dnajc17	DnaJ heat shock protein family (Hsp40) member C17
 155184	XB-GENEPAGE-5811421	slc2a7	solute carrier family 2 member 7
@@ -11457,7 +11441,7 @@
 115761	XB-GENEPAGE-5813136	arl11l.1	ADP-ribosylation factor-like 11 like gene 1
 56658	XB-GENEPAGE-5813157	trim39	tripartite motif containing 39
 148534	XB-GENEPAGE-5813219	tlcd4	TLC domain containing 4
-1756	XB-GENEPAGE-5813242	dmd.3	LOC105946662
+1756	XB-GENEPAGE-5813242	dmd	dystrophin
 1756	XB-GENEPAGE-5813246	dmd.1	dystrophin, gene 1
 3965	XB-GENEPAGE-5813326	lgals9	galectin 9
 8518	XB-GENEPAGE-5813350	elp1	elongator acetyltransferase complex subunit 1
@@ -11487,7 +11471,7 @@
 10331	XB-GENEPAGE-5815507	b3gnt3.1	UDP-GlcNAc:betaGal beta-1,3-N-acetylglucosaminyltransferase 3, gene 1
 10815	XB-GENEPAGE-5815522	cplx1	complexin 1
 9380	XB-GENEPAGE-5815682	grhpr.2	glyoxylate reductase/hydroxypyruvate reductase, gene 2
-134553	XB-GENEPAGE-5815812	c5orf24	chromosome 5 open reading frame 24
+134553	XB-GENEPAGE-5815812	c3h5orf24	chromosome 3 C5orf24 homolog
 56985	XB-GENEPAGE-5815850	adprm	ADP-ribose/CDP-alcohol diphosphatase, manganese-dependent
 51747	XB-GENEPAGE-5815903	luc7l3	LUC7-like 3 pre-mRNA splicing factor
 388228	XB-GENEPAGE-5816217	sbk1	SH3 domain binding kinase 1
@@ -11563,7 +11547,7 @@
 8644	XB-GENEPAGE-5821908	akr1c3	aldo-keto reductase family 1, member C3
 57132	XB-GENEPAGE-5822035	chmp1b	charged multivesicular body protein 1B
 23314	XB-GENEPAGE-5822251	satb2	SATB homeobox 2
-196074	XB-GENEPAGE-5822279	mettl15	methyltransferase like 15
+196074	XB-GENEPAGE-5822279	mettl15	methyltransferase 15, mitochondrial 12S rRNA N4-cytidine
 55291	XB-GENEPAGE-5822317	ppp6r3	protein phosphatase 6 regulatory subunit 3
 54474	XB-GENEPAGE-5822410	krt20	keratin 20
 64853	XB-GENEPAGE-5822442	aida	axin interactor, dorsalization associated
@@ -11615,7 +11599,7 @@
 10592	XB-GENEPAGE-5826168	smc2	structural maintenance of chromosomes 2
 9789	XB-GENEPAGE-5826458	spcs2	signal peptidase complex subunit 2
 340371	XB-GENEPAGE-5826616	nrbp2	nuclear receptor binding protein 2
-100290036	XB-GENEPAGE-5826965	LOC100290036	immunglobulin heavy chain variable region
+100290036	XB-GENEPAGE-5826965	LOC373730	immunglobulin heavy chain variable region
 54867	XB-GENEPAGE-5827025	tmem214	transmembrane protein 214
 55327	XB-GENEPAGE-5827097	lin7c	lin-7 homolog C
 22924	XB-GENEPAGE-5827216	mapre3	microtubule associated protein RP/EB family member 3
@@ -11648,7 +11632,7 @@
 1233	XB-GENEPAGE-5830001	ccr4	C-C motif chemokine receptor 4
 342527	XB-GENEPAGE-5830017	smtnl2	smoothelin-like 2
 25895	XB-GENEPAGE-5830043	eef1akmt3	EEF1A lysine methyltransferase 3
-81563	XB-GENEPAGE-5830150	c1orf21	chromosome 1 open reading frame 21
+81563	XB-GENEPAGE-5830150	c4h1orf21	chromosome 4  C1orf21 homolog
 375346	XB-GENEPAGE-5830207	stimate	STIM activating enhancer
 2571	XB-GENEPAGE-5830281	gad1.2	glutamate decarboxylase 1 (brain, 67kDa), gene 2
 81857	XB-GENEPAGE-5830876	med25	mediator complex subunit 25
@@ -11662,7 +11646,7 @@
 79895	XB-GENEPAGE-5831430	atp8b4	ATPase, class I, type 8B, member 4
 57606	XB-GENEPAGE-5831455	slain2l	SLAIN motif family, member 2 like
 1558	XB-GENEPAGE-5831570	cyp2c8.1	cytochrome P450, family 2, subfamily C, polypeptide 8, gene 1
-339448	XB-GENEPAGE-5831586	c1orf174	chromosome 1 open reading frame 174
+339448	XB-GENEPAGE-5831586	c7h1orf174	chromosome 7 C1orf174 homolog
 10004	XB-GENEPAGE-5831736	naaladl1	N-acetylated alpha-linked acidic dipeptidase-like 1
 152002	XB-GENEPAGE-5831760	xxylt1	xyloside xylosyltransferase 1
 10636	XB-GENEPAGE-5831783	rgs14	regulator of G-protein signaling 14
@@ -11782,7 +11766,7 @@
 51585	XB-GENEPAGE-5846363	pcf11	PCF11, cleavage and polyadenylation factor subunit
 642968	XB-GENEPAGE-5846538	fam163b	family with sequence similarity 163 member B
 81855	XB-GENEPAGE-5846620	sfxn3	sideroflexin 3
-54955	XB-GENEPAGE-5846659	c1orf109	chromosome 1 open reading frame 109
+54955	XB-GENEPAGE-5846659	airim	AFG2 interacting ribosome maturation factor
 57628	XB-GENEPAGE-5846743	dpp10	dipeptidyl-peptidase 10 (inactive)
 7582	XB-GENEPAGE-5846793	znf33b	zinc finger protein 33B
 5754	XB-GENEPAGE-5846943	ptk7	protein tyrosine kinase 7 (inactive)
@@ -11794,7 +11778,7 @@
 200879	XB-GENEPAGE-5847664	liph	lipase, member H
 23630	XB-GENEPAGE-5847706	kcne5	potassium channel, voltage gated subfamily E regulatory beta subunit 5
 79861	XB-GENEPAGE-5847736	tubal3.2	tubulin alpha like 3, gene 2
-132321	XB-GENEPAGE-5847980	c4orf33.1	chromosome 4 open reading frame 33, gene 1
+132321	XB-GENEPAGE-5847980	c1h4orf33	chromosome 1 C4orf33 homolog gene 1
 10467	XB-GENEPAGE-5848027	znhit1	zinc finger, HIT-type containing 1
 79823	XB-GENEPAGE-5848105	camkmt	calmodulin-lysine N-methyltransferase
 150483	XB-GENEPAGE-5848467	tekt4	tektin 4
@@ -11804,7 +11788,7 @@
 4935	XB-GENEPAGE-5848648	gpr143	G protein-coupled receptor 143
 114926	XB-GENEPAGE-5848730	smim19	small integral membrane protein 19
 9805	XB-GENEPAGE-5848776	scrn1	secernin 1
-79020	XB-GENEPAGE-5848799	c7orf25	chromosome 7 open reading frame 25
+79020	XB-GENEPAGE-5848799	c6h7orf25	chromosome 6 C7orf25 homolog
 6247	XB-GENEPAGE-5848873	rs1	retinoschisin 1
 353	XB-GENEPAGE-5848952	aprt	adenine phosphoribosyltransferase
 51651	XB-GENEPAGE-5849008	ptrh2	peptidyl-tRNA hydrolase 2
@@ -11848,7 +11832,7 @@
 26227	XB-GENEPAGE-5854282	phgdh	phosphoglycerate dehydrogenase
 8908	XB-GENEPAGE-5854707	gyg2	glycogenin 2
 9918	XB-GENEPAGE-5854775	ncapd2	non-SMC condensin I complex subunit D2
-84167	XB-GENEPAGE-5854936	c19orf44	chromosome 19 open reading frame 44
+84167	XB-GENEPAGE-5854936	c1h19orf44	chromosome 1 C19orf44 homolog
 51507	XB-GENEPAGE-5854990	rtf2	replication termination factor 2
 80339	XB-GENEPAGE-5855122	pnpla3	patatin like phospholipase domain containing 3
 6392	XB-GENEPAGE-5855161	sdhd	succinate dehydrogenase complex subunit D, integral membrane protein
@@ -11890,7 +11874,7 @@
 114792	XB-GENEPAGE-5858955	klhl32	kelch like family member 32
 55716	XB-GENEPAGE-5859051	lmbr1l	limb development membrane protein 1-like
 79962	XB-GENEPAGE-5859097	dnajc22	DnaJ heat shock protein family (Hsp40) member C22
-54980	XB-GENEPAGE-5859115	c2orf42	chromosome 2 open reading frame 42
+54980	XB-GENEPAGE-5859115	c3h2orf42	chromosome 3 C2orf42 homolog
 23476	XB-GENEPAGE-5859146	brd4	bromodomain containing 4
 5585	XB-GENEPAGE-5859254	pkn1	protein kinase N1
 26022	XB-GENEPAGE-5859300	tmem98	transmembrane protein 98
@@ -11923,7 +11907,7 @@
 92482	XB-GENEPAGE-5863746	bbip1	BBSome interacting protein 1
 4697	XB-GENEPAGE-5863762	ndufa4	NDUFA4, mitochondrial complex associated
 149041	XB-GENEPAGE-5864195	rc3h1	ring finger and CCCH-type domains 1
-163747	XB-GENEPAGE-5864225	lexm	lymphocyte expansion molecule
+163747	XB-GENEPAGE-5864225	cimap2	ciliary microtubule associated protein 2
 26027	XB-GENEPAGE-5864265	acot11	acyl-CoA thioesterase 11
 1281	XB-GENEPAGE-5864291	col3a1	collagen, type III, alpha 1 (Ehlers-Danlos syndrome type IV, autosomal dominant)
 84128	XB-GENEPAGE-5864414	wdr75	WD repeat domain 75
@@ -11932,8 +11916,8 @@
 27094	XB-GENEPAGE-5864897	kcnmb3	potassium channel subfamily M regulatory beta subunit 3
 84190	XB-GENEPAGE-5864939	mettl25	methyltransferase like 25
 148418	XB-GENEPAGE-5864958	samd13	sterile alpha motif domain containing 13
-374739	XB-GENEPAGE-5864984	tepp	testis, prostate and placenta expressed
-389320	XB-GENEPAGE-5865160	tex43	testis expressed 43
+374739	XB-GENEPAGE-5864984	spmip8	sperm microtubule inner protein 8
+389320	XB-GENEPAGE-5865160	spmip10	sperm associated microtubule inner protein 10
 200728	XB-GENEPAGE-5865172	tmem17	transmembrane protein 17
 140733	XB-GENEPAGE-5865179	macrod2	MACRO domain containing 2
 130074	XB-GENEPAGE-5865192	fam168b	family with sequence similarity 168 member B
@@ -11995,7 +11979,7 @@
 4175	XB-GENEPAGE-5870536	mcm6.2	minichromosome maintenance complex component 6 gene 2
 285527	XB-GENEPAGE-5870590	fryl	FRY like transcription coactivator
 389610	XB-GENEPAGE-5870730	xkr5	X-linked Kx blood group related 5
-85379	XB-GENEPAGE-5870966	kiaa1671	KIAA1671
+85379	XB-GENEPAGE-5870966	KIAA1671	KIAA1671
 55534	XB-GENEPAGE-5871019	maml3	mastermind like transcriptional coactivator 3
 2968	XB-GENEPAGE-5871041	gtf2h4	general transcription factor IIH subunit 4
 57228	XB-GENEPAGE-5871172	smagp	small cell adhesion glycoprotein
@@ -12004,9 +11988,9 @@
 26146	XB-GENEPAGE-5871493	traf3ip1	TRAF3 interacting protein 1
 729967	XB-GENEPAGE-5871526	morn2	MORN repeat containing 2
 339745	XB-GENEPAGE-5871531	spopl	speckle type POZ protein like
-1593	XB-GENEPAGE-5871551	cyp27a1	cytochrome P450 family 27 subfamily A member 1
+1593	XB-GENEPAGE-5871551	cyp27a1.5 (prov)	cytochrome P450 family 27 subfamily A member 1
 5798	XB-GENEPAGE-5871634	ptprn	protein tyrosine phosphatase receptor type N
-203228	XB-GENEPAGE-5871696	c9orf72	C9orf72-SMCR8 complex subunit
+203228	XB-GENEPAGE-5871696	c1h9orf72	chromosome 1 C9orf72 homolog
 2683	XB-GENEPAGE-5871723	b4galt1.1	UDP-Gal:betaGlcNAc beta 1,4- galactosyltransferase, polypeptide 1, gene 1
 9793	XB-GENEPAGE-5871814	ckap5	cytoskeleton associated protein 5
 120071	XB-GENEPAGE-5871952	large2	LARGE xylosyl- and glucuronyltransferase 2
@@ -12026,7 +12010,7 @@
 203062	XB-GENEPAGE-5872659	tsnare1	t-SNARE domain containing 1
 338	XB-GENEPAGE-5872779	apob	apolipoprotein B
 130827	XB-GENEPAGE-5872788	tmem182	transmembrane protein 182
-57481	XB-GENEPAGE-5872816	kiaa1210	KIAA1210
+57481	XB-GENEPAGE-5872816	KIAA1210	KIAA1210
 114294	XB-GENEPAGE-5872865	lactb	lactamase beta
 6822	XB-GENEPAGE-5872896	sult2a1	sulfotransferase family 2A member 1
 154043	XB-GENEPAGE-5872972	cnksr3	CNKSR family member 3
@@ -12068,7 +12052,7 @@
 57407	XB-GENEPAGE-5876797	nmral1	NmrA-like family domain containing 1
 6810	XB-GENEPAGE-5876948	stx4	syntaxin 4
 1513	XB-GENEPAGE-5876966	ctsk	cathepsin K
-51759	XB-GENEPAGE-5877134	c9orf78	chromosome 9 open reading frame 78
+51759	XB-GENEPAGE-5877134	c8h9orf78	chromosome 8 C9orf78 homolog
 4642	XB-GENEPAGE-5877219	myo1d	myosin ID
 6628	XB-GENEPAGE-5877282	snrpb	small nuclear ribonucleoprotein polypeptides B and B1
 343641	XB-GENEPAGE-5878273	tgm6	transglutaminase 6
@@ -12086,7 +12070,7 @@
 54806	XB-GENEPAGE-5879818	ahi1	Abelson helper integration site 1
 80003	XB-GENEPAGE-5879834	pcnx2	pecanex 2
 56953	XB-GENEPAGE-5879842	nt5m	5',3'-nucleotidase, mitochondrial
-55852	XB-GENEPAGE-5879888	tex2.1	testis expressed 2, gene 1
+55852	XB-GENEPAGE-5879888	tex2	testis expressed 2 gene 1
 10528	XB-GENEPAGE-5879909	nop56	NOP56 ribonucleoprotein
 340061	XB-GENEPAGE-5880491	sting1	stimulator of interferon response cGAMP interactor 1
 23099	XB-GENEPAGE-5880503	zbtb43	zinc finger and BTB domain containing 43
@@ -12108,7 +12092,7 @@
 2050	XB-GENEPAGE-5881603	ephb4	EPH receptor B4
 116115	XB-GENEPAGE-5881672	znf526	zinc finger protein 526
 22895	XB-GENEPAGE-5881708	rph3a	rabphilin 3A
-64848	XB-GENEPAGE-5881730	ythdc2	YTH domain containing 2
+64848	XB-GENEPAGE-5881730	ythdc2	YTH N6-methyladenosine RNA binding protein C2
 29894	XB-GENEPAGE-5881750	cpsf1	cleavage and polyadenylation specific factor 1
 55118	XB-GENEPAGE-5881784	crtac1	cartilage acidic protein 1
 116092	XB-GENEPAGE-5881807	dnttip1	deoxynucleotidyltransferase, terminal, interacting protein 1
@@ -12120,7 +12104,7 @@
 653808	XB-GENEPAGE-5882323	zg16	zymogen granule protein 16
 388566	XB-GENEPAGE-5883471	znf470	zinc finger protein 470
 8909	XB-GENEPAGE-5883500	endoul	endonuclease, poly(U) specific like
-56606	XB-GENEPAGE-5883702	slc2a15a	solute carrier family 2 (facilitated glucose transporter), member 15a
+56606	XB-GENEPAGE-5883702	slc2a9	solute carrier family 2 member 9
 51780	XB-GENEPAGE-5883748	kdm3b	lysine (K)-specific demethylase 3B
 3070	XB-GENEPAGE-5883771	hells	helicase, lymphoid specific
 55704	XB-GENEPAGE-5883976	ccdc88a	coiled-coil domain containing 88A
@@ -12153,7 +12137,7 @@
 387778	XB-GENEPAGE-5886094	spdyc	speedy/RINGO cell cycle regulator family member C
 23063	XB-GENEPAGE-5886235	wapl	WAPL cohesin release factor
 10381	XB-GENEPAGE-5886291	tubb3	tubulin beta 3 class III
-55028	XB-GENEPAGE-5886445	c17orf80	chromosome 17 open reading frame 80
+55028	XB-GENEPAGE-5886445	c10h17orf80	chromosome 10 C17orf80 homolog
 55731	XB-GENEPAGE-5886454	fam222b	family with sequence similarity 222 member B
 2527	XB-GENEPAGE-5886481	fut5	fucosyltransferase 5
 23436	XB-GENEPAGE-5886492	cela3b	chymotrypsin like elastase 3B
@@ -12163,7 +12147,7 @@
 26156	XB-GENEPAGE-5886691	rsl1d1	ribosomal L1 domain containing 1
 79600	XB-GENEPAGE-5886875	tctn1	tectonic family member 1
 84519	XB-GENEPAGE-5887088	acrbp.2	acrosin-binding protein, gene 2
-339210	XB-GENEPAGE-5887100	c17orf67	chromosome 17 open reading frame 67
+339210	XB-GENEPAGE-5887100	c10h17orf67	chromosome 10 C17orf67 homolog
 375337	XB-GENEPAGE-5887134	topaz1	testis and ovary specific TOPAZ 1
 9245	XB-GENEPAGE-5887145	gcnt3	glucosaminyl (N-acetyl) transferase 3, mucin type
 27324	XB-GENEPAGE-5887159	tox3	TOX high mobility group box family member 3
@@ -12181,9 +12165,9 @@
 933	XB-GENEPAGE-5887759	cd22	CD22 molecule
 4716	XB-GENEPAGE-5887771	ndufb10	NADH:ubiquinone oxidoreductase subunit B10
 5100	XB-GENEPAGE-5887885	pcdh8.2	protocadherin 8, gene 2
-130813	XB-GENEPAGE-5887993	c2orf50	chromosome 2 open reading frame 50
+130813	XB-GENEPAGE-5887993	c5h2orf50	chromosome 5 C2orf50 homolog
 338699	XB-GENEPAGE-5888010	ankrd42	ankyrin repeat domain 42
-9778	XB-GENEPAGE-5888040	kiaa0232	KIAA0232
+9778	XB-GENEPAGE-5888040	KIAA0232	KIAA0232
 3050	XB-GENEPAGE-5888072	hbz	hemoglobin subunit zeta
 10299	XB-GENEPAGE-5888571	marchf6	membrane associated ring-CH-type finger 6
 1501	XB-GENEPAGE-5888636	ctnnd2	catenin delta 2
@@ -12195,10 +12179,10 @@
 387911	XB-GENEPAGE-5889141	c1qtnf9b	C1q and TNF related 9B
 23093	XB-GENEPAGE-5889202	ttll5	tubulin tyrosine ligase like 5
 91750	XB-GENEPAGE-5889226	lin52	lin-52 DREAM MuvB core complex component
-3118	XB-GENEPAGE-5889258	mhc2-daa (provisional)	major histocompatibility complex, class II, DA alpha (provisional)
+3118	XB-GENEPAGE-5889258	mhc2-daa	major histocompatibility complex, class II, DA alpha
 2525	XB-GENEPAGE-5889326	fut3	fucosyltransferase 3 (Lewis blood group)
 57412	XB-GENEPAGE-5889368	as3mt.1	arsenite methyltransferase, gene 1
-113746	XB-GENEPAGE-5889413	odf3	outer dense fiber of sperm tails 3
+113746	XB-GENEPAGE-5889413	cimap1a	ciliary microtubule associated protein 1A
 79729	XB-GENEPAGE-5889543	sh3d21	SH3 domain containing 21
 126410	XB-GENEPAGE-5889577	cyp4f22	cytochrome P450 family 4 subfamily F member 22
 727936	XB-GENEPAGE-5889628	gxylt2	glucoside xylosyltransferase 2
@@ -12228,12 +12212,12 @@
 9601	XB-GENEPAGE-5892156	pdia4	protein disulfide isomerase family A member 4
 197135	XB-GENEPAGE-5892250	patl2	protein associated with topoisomerase II homolog 2
 1553	XB-GENEPAGE-5892285	cyp2a13l	cytochrome P450 family 2 subfamily A member 13 like
-1548	XB-GENEPAGE-5892299	cyp2a6.2	cytochrome P450 family 2 subfamily a member 6 gene 2 [provisional]
+1548	XB-GENEPAGE-5892299	cyp2a6.2	cytochrome P450 family 2 subfamily a member 6 gene 2
 55857	XB-GENEPAGE-5892316	kiz	kizuna centrosomal protein
 23408	XB-GENEPAGE-5892371	sirt5	sirtuin 5
 25906	XB-GENEPAGE-5892494	anapc15	anaphase promoting complex subunit 15
 55177	XB-GENEPAGE-5892548	rmdn3	regulator of microtubule dynamics 3
-399665	XB-GENEPAGE-5892602	fam102a	family with sequence similarity 102 member A
+399665	XB-GENEPAGE-5892602	eeig1	EEIG family member 1
 134510	XB-GENEPAGE-5892708	ublcp1	ubiquitin like domain containing CTD phosphatase 1
 25914	XB-GENEPAGE-5892771	rttn	rotatin
 342898	XB-GENEPAGE-5892880	sycn	syncollin
@@ -12312,7 +12296,7 @@
 54726	XB-GENEPAGE-5900160	otud4	OTU deubiquitinase 4
 5998	XB-GENEPAGE-5900211	rgs3	regulator of G-protein signaling 3
 146198	XB-GENEPAGE-5900237	zfp90	ZFP90 zinc finger protein
-124944	XB-GENEPAGE-5900246	c17orf49	chromosome 17 open reading frame 49
+124944	XB-GENEPAGE-5900246	c3h17orf49	chromosome 3 C17orf49 homolog
 9772	XB-GENEPAGE-5900316	tmem94	transmembrane protein 94
 153657	XB-GENEPAGE-5900387	ttc23l	tetratricopeptide repeat domain 23-like
 79852	XB-GENEPAGE-5900413	ephx3	epoxide hydrolase 3
@@ -12342,7 +12326,7 @@
 5094	XB-GENEPAGE-5903796	pcbp2	poly(rC) binding protein 2
 246329	XB-GENEPAGE-5903817	stac3	SH3 and cysteine rich domain 3
 10279	XB-GENEPAGE-5903843	prss16	serine protease 16
-1548	XB-GENEPAGE-5903933	cyp2a6.1	cytochrome P450 family 2 subfamily A member 6 gene 1
+1548	XB-GENEPAGE-5903933	cyp2a6	cytochrome P450 family 2 subfamily A member 6 gene 1
 1548	XB-GENEPAGE-5903983	cyp2a6.3	cytochrome P450 family 2 subfamily A member 6 gene 3 [provisional]
 58509	XB-GENEPAGE-5904056	cactin	cactin, spliceosome C complex subunit
 219959	XB-GENEPAGE-5904136	or1s1	olfactory receptor family 1 subfamily S member 1
@@ -12375,8 +12359,8 @@
 55223	XB-GENEPAGE-5907196	trim62	tripartite motif containing 62
 1514	XB-GENEPAGE-5907228	ctsl	cathepsin L
 100506144	XB-GENEPAGE-5907244	tmem35b	transmembrane protein 35B
-284325	XB-GENEPAGE-5907399	c19orf54	chromosome 19 open reading frame 54
-126526	XB-GENEPAGE-5907419	c19orf47	chromosome 19 open reading frame 47
+284325	XB-GENEPAGE-5907399	actmap	actin maturation protease
+126526	XB-GENEPAGE-5907419	c8h19orf47	chromosome 8 C19orf47 homolog
 2664	XB-GENEPAGE-5907770	gdi1	GDP dissociation inhibitor 1
 516	XB-GENEPAGE-5907813	atp5mc1	ATP synthase membrane subunit c locus 1
 28392	XB-GENEPAGE-5908088	ighv4-59	similar to Ig heavy chain V-II region ARH-77 precursor
@@ -12515,13 +12499,12 @@
 1580	XB-GENEPAGE-5924258	cyp4b1	cytochrome P450, family 4, subfamily B, polypeptide 1
 80119	XB-GENEPAGE-5924612	pif1	PIF1 5'-to-3' DNA helicase
 142689	XB-GENEPAGE-5924778	asb12	ankyrin repeat and SOCS box-containing 12
-84790	XB-GENEPAGE-5924997	tuba1cl.1	tubulin alpha 1c like, gene 1
-64897	XB-GENEPAGE-5925281	c12orf43	chromosome 12 open reading frame 43
+64897	XB-GENEPAGE-5925281	c1h12orf43	chromosome 1 C12orf43 homolog
 22894	XB-GENEPAGE-5925330	dis3	DIS3 homolog, exosome endoribonuclease and 3'-5' exoribonuclease
 229	XB-GENEPAGE-5925392	aldob	aldolase, fructose-bisphosphate B
 10985	XB-GENEPAGE-5926091	gcn1	GCN1, eIF2 alpha kinase activator homolog
 57650	XB-GENEPAGE-5926362	cip2a	cellular inhibitor of PP2A
-65265	XB-GENEPAGE-5926432	c8orf33	chromosome 8 open reading frame 33
+65265	XB-GENEPAGE-5926432	c9h8orf33	chromosome 9 C8orf33 homolog
 197342	XB-GENEPAGE-5926459	eme2	essential meiotic structure-specific endonuclease subunit 2
 6650	XB-GENEPAGE-5926483	capn15	calpain 15
 4833	XB-GENEPAGE-5926499	nme4	NME/NM23 nucleoside diphosphate kinase 4
@@ -12546,7 +12529,7 @@
 83659	XB-GENEPAGE-5929241	tekt1	tektin 1
 56105	XB-GENEPAGE-5929298	pcdhga11	protocadherin gamma subfamily A, 11
 91862	XB-GENEPAGE-5929350	marveld3	MARVEL domain containing 3
-9786	XB-GENEPAGE-5929457	kiaa0586	KIAA0586
+9786	XB-GENEPAGE-5929457	KIAA0586	KIAA0586
 124	XB-GENEPAGE-5929484	adh1a	alcohol dehydrogenase 1A (class I), alpha polypeptide
 10487	XB-GENEPAGE-5929501	cap1	cyclase associated actin cytoskeleton regulatory protein 1
 39	XB-GENEPAGE-5929869	acat2	acetyl-CoA acetyltransferase 2
@@ -12603,7 +12586,7 @@
 91703	XB-GENEPAGE-5934781	acy3	aminoacylase 3
 6202	XB-GENEPAGE-5934817	rps8	ribosomal protein S8
 613227	XB-GENEPAGE-5935686	higd1c	HIG1 hypoxia inducible domain family member 1C
-136288	XB-GENEPAGE-5935826	c7orf57	chromosome 7 open reading frame 57
+136288	XB-GENEPAGE-5935826	c6h7orf57	chromosome 6 C7orf57 homolog
 84869	XB-GENEPAGE-5935856	cbr4	carbonyl reductase 4
 9321	XB-GENEPAGE-5935910	trip11	thyroid hormone receptor interactor 11
 140876	XB-GENEPAGE-5935938	ripor3	RIPOR family member 3
@@ -12627,7 +12610,7 @@
 56143	XB-GENEPAGE-5938551	pcdha5	protocadherin alpha 5
 2064	XB-GENEPAGE-5938587	erbb2	erb-b2 receptor tyrosine kinase 2
 84196	XB-GENEPAGE-5938601	usp48	ubiquitin specific peptidase 48
-3105	XB-GENEPAGE-5938650	mhc1-uaa (provisional)	major histocompatibility complex, class I, UA alpha chain (provisional)
+3105	XB-GENEPAGE-5938650	mhc1-uaa	major histocompatibility complex, class I, UA alpha chain
 58515	XB-GENEPAGE-5939195	selenok	selenoprotein K
 23399	XB-GENEPAGE-5939295	ctdnep1	CTD nuclear envelope phosphatase 1
 84826	XB-GENEPAGE-5939529	sft2d3	SFT2 domain containing 3
@@ -12667,7 +12650,7 @@
 54856	XB-GENEPAGE-5943330	gon4l	gon-4-like
 283638	XB-GENEPAGE-5943416	cep170b	centrosomal protein 170B
 401262	XB-GENEPAGE-5943479	crip3	cysteine-rich protein 3
-54915	XB-GENEPAGE-5943529	ythdf1	YTH N(6)-methyladenosine RNA binding protein 1
+54915	XB-GENEPAGE-5943529	ythdf1	YTH N6-methyladenosine RNA binding protein F1
 54757	XB-GENEPAGE-5943783	fam20a	family with sequence similarity 20 member A
 51754	XB-GENEPAGE-5943809	tmem8b	transmembrane protein 8B
 144568	XB-GENEPAGE-5943820	a2ml1	alpha-2-macroglobulin-like 1
@@ -12729,17 +12712,17 @@
 207063	XB-GENEPAGE-5952438	dhrsx	dehydrogenase/reductase (SDR family) X-linked
 10956	XB-GENEPAGE-5952459	os9	osteosarcoma amplified 9, endoplasmic reticulum lectin
 4141	XB-GENEPAGE-5952508	mars1	methionyl-tRNA synthetase 1
-55732	XB-GENEPAGE-5952632	c1orf112	chromosome 1 open reading frame 112
+55732	XB-GENEPAGE-5952632	firrm	FIGNL1 interacting regulator of recombination and mitosis
 762	XB-GENEPAGE-5952676	ca4.2	carbonic anhydrase IV gene 2
 94056	XB-GENEPAGE-5952690	syap1	synapse associated protein 1
 388585	XB-GENEPAGE-5952809	hes5.4	hairy and enhancer of split 5 gene 4
 203859	XB-GENEPAGE-5952826	ano5	anoctamin 5
 29127	XB-GENEPAGE-5952944	racgap1.2	Rac GTPase activating protein 1 gene2
-57604	XB-GENEPAGE-5952996	kiaa1456l	kiaa1456 like
+57604	XB-GENEPAGE-5952996	trmt9b	tRNA methyltransferase 9B (putative)
 220064	XB-GENEPAGE-5953069	lto1	lto1
 5932	XB-GENEPAGE-5953133	rbbp8	retinoblastoma binding protein 8
 9653	XB-GENEPAGE-5953191	hs2st1	heparan sulfate 2-O-sulfotransferase 1
-158358	XB-GENEPAGE-5953233	kiaa2026	KIAA2026
+158358	XB-GENEPAGE-5953233	KIAA2026	KIAA2026
 3426	XB-GENEPAGE-5953275	cfi	complement factor I
 55435	XB-GENEPAGE-5953378	ap1ar	adaptor related protein complex 1 associated regulatory protein
 128876	XB-GENEPAGE-5953444	fam83c	family with sequence similarity 83 member C
@@ -12783,11 +12766,11 @@
 201140	XB-GENEPAGE-5956200	dhrs7c	dehydrogenase/reductase (SDR family) member 7C
 127396	XB-GENEPAGE-5956223	znf684	zinc finger protein 684
 54454	XB-GENEPAGE-5956275	atad2b	ATPase family, AAA domain containing 2B
-9764	XB-GENEPAGE-5956310	kiaa0513	KIAA0513
+9764	XB-GENEPAGE-5956310	KIAA0513	KIAA0513
 84726	XB-GENEPAGE-5956341	prrc2b	proline-rich coiled-coil 2B
 27087	XB-GENEPAGE-5956385	b3gat1l	beta-1,3-glucuronyltransferase 1 like
 92241	XB-GENEPAGE-5956404	rcsd1	RCSD domain containing 1
-54976	XB-GENEPAGE-5956503	c20orf27	chromosome 20 open reading frame 27
+54976	XB-GENEPAGE-5956503	adissp	adipose secreted signaling protein
 25956	XB-GENEPAGE-5956590	sec31b	SEC31 homolog B, COPII coat complex component
 23345	XB-GENEPAGE-5956641	syne1	spectrin repeat containing, nuclear envelope 1
 148398	XB-GENEPAGE-5956758	samd11	sterile alpha motif domain containing 11
@@ -12806,7 +12789,7 @@
 1418	XB-GENEPAGE-5957665	cryga.3	crystallin gamma a gene 3
 151195	XB-GENEPAGE-5957671	ccnyl1	cyclin Y like 1
 64318	XB-GENEPAGE-5957760	noc3l	NOC3-like DNA replication regulator
-26509	XB-GENEPAGE-5957841	myof.1	myoferlin, gene 1
+26509	XB-GENEPAGE-5957841	myof	myoferlin, gene 1
 22889	XB-GENEPAGE-5957981	khdc4	KH domain containing 4, pre-mRNA splicing factor
 129563	XB-GENEPAGE-5958093	dis3l2	DIS3 like 3'-5' exoribonuclease 2
 5064	XB-GENEPAGE-5958238	palm	paralemmin
@@ -12820,7 +12803,7 @@
 115196	XB-GENEPAGE-5959178	znf554	zinc finger protein 554
 3217	XB-GENEPAGE-5959292	hoxb7	homeobox B7
 221692	XB-GENEPAGE-5959315	phactr1	phosphatase and actin regulator 1
-728568	XB-GENEPAGE-5959348	c12orf73	chromosome 12 open reading frame 73
+728568	XB-GENEPAGE-5959348	uqcc6	ubiquinol-cytochrome c reductase complex assembly factor 6
 54621	XB-GENEPAGE-5959352	vsig10	V-set and immunoglobulin domain containing 10
 100507290	XB-GENEPAGE-5959427	znf865	zinc finger protein 865
 196483	XB-GENEPAGE-5959442	eef2kmt	eukaryotic elongation factor 2 lysine methyltransferase
@@ -12905,18 +12888,17 @@
 1796	XB-GENEPAGE-5968249	dok1	docking protein 1
 11188	XB-GENEPAGE-5968393	nisch	nischarin
 6421	XB-GENEPAGE-5968415	sfpq	splicing factor proline and glutamine rich
-654780	XB-GENEPAGE-5968415	sfpq	splicing factor proline and glutamine rich
 387597	XB-GENEPAGE-5969005	ildr2	immunoglobulin-like domain containing receptor 2
 23072	XB-GENEPAGE-5969055	hecw1	HECT, C2 and WW domain containing E3 ubiquitin protein ligase 1
 4942	XB-GENEPAGE-5969094	oat	ornithine aminotransferase
 203286	XB-GENEPAGE-5969670	anks6	ankyrin repeat and sterile alpha motif domain containing 6
 493856	XB-GENEPAGE-5969736	cisd2	CDGSH iron sulfur domain 2
 5255	XB-GENEPAGE-5969936	phka1	phosphorylase kinase, alpha 1 (muscle)
-158405	XB-GENEPAGE-5969965	kiaa1958	KIAA1958
+158405	XB-GENEPAGE-5969965	KIAA1958	KIAA1958
 221400	XB-GENEPAGE-5969987	tdrd6	tudor domain containing 6
 6862	XB-GENEPAGE-5981735	tbxt.2	T, brachyury homolog, gene 2
 7433	XB-GENEPAGE-5991266	vipr1	vasoactive intestinal peptide receptor 1
-3140	XB-GENEPAGE-5991272	mhc1b-uba7.3 (provisional)	major histocompatibility complex, class 1b, UB alpha chain, subfamily 7, member 3 (provisional)
+3140	XB-GENEPAGE-5991272	mhc1-uba7.3	major histocompatibility complex, class 1, UB alpha chain, subfamily 7, member 3
 402569	XB-GENEPAGE-5991710	kpna7	karyopherin alpha 7 (importin alpha 8)
 4013	XB-GENEPAGE-5991891	vwa5a.2	von Willebrand factor A domain containing 5A, gene 2
 2002	XB-GENEPAGE-5992133	elk1	ELK1, member of ETS oncogene family
@@ -12937,8 +12919,8 @@
 1137	XB-GENEPAGE-5994597	chrna4	cholinergic receptor, nicotinic alpha 4
 130617	XB-GENEPAGE-5994974	zfand2b	zinc finger, AN1-type domain 2B
 7732	XB-GENEPAGE-5995129	rnf112.2	ring finger protein 112, gene 2
-114821	XB-GENEPAGE-5995139	zbed9	zinc finger, BED-type containing 9
-4089	XB-GENEPAGE-5995151	smad4.2	SMAD family member 4, gene 2
+114821	XB-GENEPAGE-5995139	scand3	SCAN domain containing 3
+4089	XB-GENEPAGE-5995151	smad10	SMAD family member 10
 23515	XB-GENEPAGE-5995235	morc3.2	MORC family CW-type zinc finger 3, gene 2
 1628	XB-GENEPAGE-5995285	dbp	D site of albumin promoter (albumin D-box) binding protein
 54870	XB-GENEPAGE-5995296	qrich1l	glutamine-rich 1 like
@@ -12950,7 +12932,7 @@
 29121	XB-GENEPAGE-5995429	clec2d	C-type lectin domain family 2 member D
 84458	XB-GENEPAGE-5995436	lcor	ligand dependent nuclear receptor corepressor
 64761	XB-GENEPAGE-5995485	parp12	poly(ADP-ribose) polymerase family member 12
-85508	XB-GENEPAGE-5995511	scrt2	scratch family zinc finger 2
+83482	XB-GENEPAGE-5995511	scrt1	scratch family transcriptional repressor 1
 57459	XB-GENEPAGE-5995516	gatad2b	GATA zinc finger domain containing 2B
 3196	XB-GENEPAGE-5995962	tlx2	T cell leukemia, homeobox 2
 5457	XB-GENEPAGE-5996033	pou4f4	POU class 4 homeobox 4
@@ -12979,7 +12961,7 @@
 3875	XB-GENEPAGE-5999300	krt18.2	keratin 18, gene 2
 439996	XB-GENEPAGE-5999397	ifit1b	interferon induced protein with tetratricopeptide repeats 1B
 6936	XB-GENEPAGE-5999583	gcfc2	GC-rich sequence DNA-binding factor 2
-3117	XB-GENEPAGE-5999631	mhc2-daa (provisional)	major histocompatibility complex, class II, DA alpha  (provisional)
+3117	XB-GENEPAGE-5999631	mhc2-daa	major histocompatibility complex, class II, DA alpha
 50940	XB-GENEPAGE-5999892	pde11a	phosphodiesterase 11A
 1755	XB-GENEPAGE-6000360	dmbt1	deleted in malignant brain tumors 1
 11273	XB-GENEPAGE-6000371	atxn2l	ataxin 2-like
@@ -13029,8 +13011,8 @@
 2358	XB-GENEPAGE-6031740	fpr2	formyl peptide receptor 2
 7273	XB-GENEPAGE-6031745	ttn	titin
 64409	XB-GENEPAGE-6032436	galnt17	polypeptide N-acetylgalactosaminyltransferase 17
-128602	XB-GENEPAGE-6032449	c20orf85	chromosome 20 open reading frame 85
-128977	XB-GENEPAGE-6032456	c22orf39	chromosome 22 open reading frame 39
+128602	XB-GENEPAGE-6032449	cimip1	ciliary microtubule inner protein 1 homolog
+128977	XB-GENEPAGE-6032456	c1h22orf39	chromosome 1 C22orf39 homolog
 1290	XB-GENEPAGE-6032475	col5a2	collagen, type V, alpha 2
 149465	XB-GENEPAGE-6032537	cfap57	cilia and flagella associated protein 57
 285220	XB-GENEPAGE-6032563	epha6	EPH receptor A6
@@ -13057,7 +13039,7 @@
 84628	XB-GENEPAGE-6032765	ntng2	netrin G2
 114801	XB-GENEPAGE-6032774	tmem200a	transmembrane protein 200A
 200726	XB-GENEPAGE-6032778	fam237a	to family with sequence similarity 237 member A
-647166	XB-GENEPAGE-6032782	c13orf42	chromosome 13 open reading frame 42
+647166	XB-GENEPAGE-6032782	c2h13orf42	chromosome 2 C13orf42 homolog
 10798	XB-GENEPAGE-6032786	or5i1	olfactory receptor family 5 subfamily I member 1
 113278	XB-GENEPAGE-6032790	slc52a3	solute carrier family 52 (riboflavin transporter), member 3
 2026	XB-GENEPAGE-6032794	eno2	enolase 2 (gamma, neuronal)
@@ -13130,8 +13112,8 @@
 9907	XB-GENEPAGE-6034869	ap5z1	adaptor related protein complex 5 subunit zeta 1
 1129	XB-GENEPAGE-6034895	chrm2	cholinergic receptor, muscarinic 2
 57555	XB-GENEPAGE-6034905	nlgn2	neuroligin 2
-145853	XB-GENEPAGE-6034916	c15orf61	chromosome 15 open reading frame 61
-124512	XB-GENEPAGE-6034942	mettl23	methyltransferase like 23
+145853	XB-GENEPAGE-6034916	c3h15orf61	chromosome 3 C15orf61 homolog
+124512	XB-GENEPAGE-6034942	mettl23	methyltransferase 23, arginine
 374654	XB-GENEPAGE-6034961	kif7	kinesin family member 7
 390261	XB-GENEPAGE-6034985	or6m1	olfactory receptor family 6 subfamily M member 1
 256158	XB-GENEPAGE-6034989	hmcn2	hemicentin 2
@@ -13229,7 +13211,7 @@
 8082	XB-GENEPAGE-6037272	sspn	sarcospan
 55083	XB-GENEPAGE-6037304	kif26b	kinesin family member 26B
 254827	XB-GENEPAGE-6037321	naaladl2	N-acetylated alpha-linked acidic dipeptidase-like 2
-54954	XB-GENEPAGE-6037326	fam120c	family with sequence similarity 120C
+54954	XB-GENEPAGE-6037326	fam120c	family with sequence similarity 120 member C
 10277	XB-GENEPAGE-6037351	ube4b	ubiquitination factor E4B
 283463	XB-GENEPAGE-6037381	muc19	mucin 19, oligomeric
 79785	XB-GENEPAGE-6037389	rergl	RERG/RAS-like
@@ -13262,7 +13244,7 @@
 780776	XB-GENEPAGE-6037667	tvp23a	trans-golgi network vesicle protein 23 homolog A (S. cerevisiae)
 10082	XB-GENEPAGE-6037688	gpc6	glypican 6
 57705	XB-GENEPAGE-6037699	wdfy4	WDFY family member 4
-161753	XB-GENEPAGE-6037716	odf3l1	outer dense fiber of sperm tails 3-like 1
+161753	XB-GENEPAGE-6037716	cimap1c	ciliary microtubule associated protein 1C
 147929	XB-GENEPAGE-6037721	znf565	zinc finger protein 565
 23101	XB-GENEPAGE-6037883	mcf2l2	MCF.2 cell line derived transforming sequence-like 2
 22883	XB-GENEPAGE-6037891	clstn1	calsyntenin 1
@@ -13338,7 +13320,7 @@
 91978	XB-GENEPAGE-6040242	tpgs1	tubulin polyglutamylase complex subunit 1
 2843	XB-GENEPAGE-6040268	gpr20	G protein-coupled receptor 20
 8621	XB-GENEPAGE-6040278	cdk13	cyclin-dependent kinase 13
-80168	XB-GENEPAGE-6040329	mogat2.1	monoacylglycerol O-acyltransferase 2, gene 1
+80168	XB-GENEPAGE-6040329	mogat2	monoacylglycerol O-acyltransferase 2, gene 1
 57494	XB-GENEPAGE-6040525	rimklb	ribosomal modification protein rimK-like family member B
 84067	XB-GENEPAGE-6040538	fhip1b	FHF complex subunit HOOK interacting protein 1B
 23333	XB-GENEPAGE-6040558	dpy19l1	dpy-19 like C-mannosyltransferase 1
@@ -13366,13 +13348,13 @@
 149297	XB-GENEPAGE-6041513	fam78b	family with sequence similarity 78 member B
 347344	XB-GENEPAGE-6041520	znf81	zinc finger protein 81
 84986	XB-GENEPAGE-6041528	arhgap19	Rho GTPase activating protein 19
-122525	XB-GENEPAGE-6041561	c14orf28	chromosome 14 open reading frame 28
+122525	XB-GENEPAGE-6041561	c8h14orf28	chromosome 8 C14orf28 homolog
 27284	XB-GENEPAGE-6041572	sult1b1	sulfotransferase family 1B member 1
 1195	XB-GENEPAGE-6041599	clk1	CDC like kinase 1
 348378	XB-GENEPAGE-6041728	shisal2a	shisa like 2A
 84947	XB-GENEPAGE-6041737	serac1	serine active site containing 1
 22871	XB-GENEPAGE-6041752	nlgn1	neuroligin 1
-23334	XB-GENEPAGE-6041757	c1orf84	chromosome 1 open reading frame 84
+23334	XB-GENEPAGE-6041757	szt2	SZT2 subunit of KICSTOR complex
 200403	XB-GENEPAGE-6041761	vwa3b	von Willebrand factor A domain containing 3B
 2567	XB-GENEPAGE-6041773	gabrg3	gamma-aminobutyric acid (GABA) A receptor, gamma 3
 8499	XB-GENEPAGE-6041781	ppfia2	protein tyrosine phosphatase, receptor type, f polypeptide (PTPRF), interacting protein (liprin), alpha 2
@@ -13416,7 +13398,7 @@
 255189	XB-GENEPAGE-6042176	pla2g4f	phospholipase A2 group IVF
 23387	XB-GENEPAGE-6042191	sik3	SIK family kinase 3
 130271	XB-GENEPAGE-6042214	plekhh2	pleckstrin homology, MyTH4 and FERM domain containing H2
-128344	XB-GENEPAGE-6042222	pifo	primary cilia formation
+128344	XB-GENEPAGE-6042222	cimap3	ciliary microtubule associated protein 3
 5292	XB-GENEPAGE-6042230	pim1	Pim-1 proto-oncogene, serine/threonine kinase
 222235	XB-GENEPAGE-6042354	fbxl13	F-box and leucine-rich repeat protein 13
 54491	XB-GENEPAGE-6042363	otulinl	OTU deubiquitinase with linear linkage specificity like
@@ -13440,7 +13422,7 @@
 129049	XB-GENEPAGE-6043599	sgsm1	small G protein signaling modulator 1
 65012	XB-GENEPAGE-6043615	slc26a10	solute carrier family 26 member 10
 51332	XB-GENEPAGE-6043624	sptbn5	spectrin, beta, non-erythrocytic 5
-388649	XB-GENEPAGE-6043628	c1orf146	chromosome 1 open reading frame 146
+388649	XB-GENEPAGE-6043628	c4h1orf146	chromosome 4 C1orf146 homolog
 23261	XB-GENEPAGE-6043632	camta1	calmodulin binding transcription activator 1
 388591	XB-GENEPAGE-6043643	rnf207	ring finger protein 207
 10332	XB-GENEPAGE-6043649	clec4m	C-type lectin domain family 4 member M
@@ -13467,7 +13449,7 @@
 55260	XB-GENEPAGE-6044160	tmem143	transmembrane protein 143
 23379	XB-GENEPAGE-6044165	ice1	interactor of little elongation complex ELL subunit 1
 100288842	XB-GENEPAGE-6044170	b3galt9	beta-1,3-galactosyltransferase 9
-116328	XB-GENEPAGE-6044174	c8orf34	chromosome 8 open reading frame 34
+116328	XB-GENEPAGE-6044174	c6h8orf34	chromosome 6 C8orf34 homolog
 440107	XB-GENEPAGE-6044181	plekhg7	pleckstrin homology and RhoGEF domain containing G7
 27429	XB-GENEPAGE-6044195	htra2	HtrA serine peptidase 2
 51148	XB-GENEPAGE-6044220	cercam	cerebral endothelial cell adhesion molecule
@@ -13495,7 +13477,7 @@
 79747	XB-GENEPAGE-6044561	adgb	androglobin
 389362	XB-GENEPAGE-6044569	psmg4	proteasome (prosome, macropain) assembly chaperone 4
 441027	XB-GENEPAGE-6044591	tmem150c	transmembrane protein 150C
-494470	XB-GENEPAGE-6044598	rnf165	ring finger protein 165
+494470	XB-GENEPAGE-6044598	ark2c	arkadia (RNF111) C-terminal like ring finger ubiquitin ligase 2C
 114784	XB-GENEPAGE-6044603	csmd2	CUB and Sushi multiple domains 2
 9828	XB-GENEPAGE-6044613	arhgef17	Rho guanine nucleotide exchange factor 17
 23037	XB-GENEPAGE-6044664	pdzd2	PDZ domain containing 2
@@ -13506,7 +13488,7 @@
 9340	XB-GENEPAGE-6044799	glp2r	glucagon-like peptide 2 receptor
 389161	XB-GENEPAGE-6044804	ankub1	ankyrin repeat and ubiquitin domain containing 1
 7401	XB-GENEPAGE-6044812	clrn1	clarin 1
-84519	XB-GENEPAGE-6044818	acrbpl	acrosin binding protein-like
+84519	XB-GENEPAGE-6044818	acrbpl	acrosin binding protein like gene 1
 84435	XB-GENEPAGE-6044827	adgra1	adhesion G protein-coupled receptor A1
 84752	XB-GENEPAGE-6044832	b3gnt9	UDP-GlcNAc:betaGal beta-1,3-N-acetylglucosaminyltransferase 9
 2316	XB-GENEPAGE-6044837	flna	filamin A
@@ -13576,7 +13558,7 @@
 80022	XB-GENEPAGE-6045938	myo15b	myosin XVB
 10961	XB-GENEPAGE-6045949	erp29	endoplasmic reticulum protein 29
 23120	XB-GENEPAGE-6045963	atp10b	ATPase, class V, type 10B
-57622	XB-GENEPAGE-6045968	lrfn1.1	leucine rich repeat and fibronectin type III domain containing 1, gene 1
+57622	XB-GENEPAGE-6045968	lrfn1	leucine rich repeat and fibronectin type III domain containing 1, gene 1
 401612	XB-GENEPAGE-6045974	slc25a53	solute carrier family 25 member 53
 9015	XB-GENEPAGE-6045984	taf1a	TATA-box binding protein associated factor, RNA polymerase I, A
 5330	XB-GENEPAGE-6045996	plcb2	phospholipase C beta 2
@@ -13620,7 +13602,7 @@
 3633	XB-GENEPAGE-6046791	inpp5b	inositol polyphosphate-5-phosphatase B
 283953	XB-GENEPAGE-6046818	tmem114	transmembrane protein 114
 390151	XB-GENEPAGE-6046826	or8h2	olfactory receptor family 8 subfamily H member 2
-23569	XB-GENEPAGE-6046830	padi4	peptidyl arginine deiminase, type IV
+23569	XB-GENEPAGE-6046830	padi4	peptidyl arginine deiminase 4
 4992	XB-GENEPAGE-6046841	or1f1	olfactory receptor family 1 subfamily F member 1
 55188	XB-GENEPAGE-6046845	ric8b	RIC8 guanine nucleotide exchange factor B
 126326	XB-GENEPAGE-6046858	gipc3	GIPC PDZ domain containing family member 3
@@ -13636,10 +13618,10 @@
 54932	XB-GENEPAGE-6046955	exd3	exonuclease 3'-5' domain containing 3
 219699	XB-GENEPAGE-6046962	unc5b	unc-5 netrin receptor B
 81797	XB-GENEPAGE-6046981	or12d3	olfactory receptor family 12 subfamily D member 3
-146556	XB-GENEPAGE-6046989	c16orf89	chromosome 16 open reading frame 89
+146556	XB-GENEPAGE-6046989	cxh16orf89	C16orf89 homolog
 81697	XB-GENEPAGE-6046993	or2b2	olfactory receptor family 2 subfamily B member 2
 219968	XB-GENEPAGE-6046997	or5b21	olfactory receptor family 5 subfamily B member 21
-26492	XB-GENEPAGE-6047001	or8g2p	olfactory receptor family 8 subfamily G member 2 pseudogene
+26492	XB-GENEPAGE-6047001	or8g2	olfactory receptor family 8 subfamily G member 2
 8348	XB-GENEPAGE-6047005	h2bc17	H2B clustered histone 17
 9896	XB-GENEPAGE-6047254	fig4	FIG4 phosphoinositide 5-phosphatase
 433	XB-GENEPAGE-6047270	asgr2	asialoglycoprotein receptor 2
@@ -13651,7 +13633,7 @@
 3785	XB-GENEPAGE-6047372	kcnq2	potassium channel, voltage gated KQT-like subfamily Q, member 2
 89849	XB-GENEPAGE-6047386	atg16l2	autophagy related 16 like 2
 9719	XB-GENEPAGE-6047392	adamtsl2	ADAMTS like 2
-116969	XB-GENEPAGE-6047397	art5l1	ADP-ribosyltransferase 5 like 1
+116969	XB-GENEPAGE-6047397	art5l	ADP ribosyltransferase 5 like gene 1
 138639	XB-GENEPAGE-6047402	ptpdc1	protein tyrosine phosphatase domain containing 1
 50506	XB-GENEPAGE-6047410	duox2	dual oxidase 2
 81628	XB-GENEPAGE-6047443	tsc22d4	TSC22 domain family member 4
@@ -13677,7 +13659,7 @@
 3263	XB-GENEPAGE-6047736	hpx	hemopexin
 23166	XB-GENEPAGE-6047818	stab1	stabilin 1
 7755	XB-GENEPAGE-6047829	znf205	zinc finger protein 205
-387763	XB-GENEPAGE-6047839	c11orf96	chromosome 11 open reading frame 96
+387763	XB-GENEPAGE-6047839	c4h11orf96	chromosome 4 C11orf96 homolog
 138799	XB-GENEPAGE-6047878	or13c5	olfactory receptor family 13 subfamily C member 5
 26330	XB-GENEPAGE-6047882	gapdhs	glyceraldehyde-3-phosphate dehydrogenase, spermatogenic
 85441	XB-GENEPAGE-6047888	helz2	helicase with zinc finger 2, transcriptional coactivator
@@ -13701,7 +13683,7 @@
 57644	XB-GENEPAGE-6048376	myh7b	myosin, heavy chain 7B, cardiac muscle, beta
 148	XB-GENEPAGE-6048409	adra1a	adrenoceptor alpha 1A
 79154	XB-GENEPAGE-6048419	dhrs11	dehydrogenase/reductase (SDR family) member 11
-56243	XB-GENEPAGE-6048492	kiaa1217	KIAA1217
+56243	XB-GENEPAGE-6048492	KIAA1217	KIAA1217
 135112	XB-GENEPAGE-6048550	ncoa7	nuclear receptor coactivator 7
 9881	XB-GENEPAGE-6048564	trank1	tetratricopeptide repeat and ankyrin repeat containing 1
 54941	XB-GENEPAGE-6048592	rnf125	ring finger protein 125, E3 ubiquitin protein ligase
@@ -13807,7 +13789,7 @@
 26166	XB-GENEPAGE-6050478	rgs22	regulator of G-protein signaling 22
 57480	XB-GENEPAGE-6050488	plekhg1	pleckstrin homology and RhoGEF domain containing G1
 163351	XB-GENEPAGE-6050517	gbp6	guanylate binding protein family member 6
-28982	XB-GENEPAGE-6050556	flvcr1	FLVCR heme transporter 1
+28982	XB-GENEPAGE-6050556	flvcr1	FLVCR choline and heme transporter 1
 150356	XB-GENEPAGE-6050563	chadl	chondroadherin like
 4319	XB-GENEPAGE-6050578	mmp10	matrix metallopeptidase 10
 29948	XB-GENEPAGE-6050586	osgin1	oxidative stress induced growth inhibitor 1
@@ -13900,7 +13882,7 @@
 55683	XB-GENEPAGE-6054063	kansl3	KAT8 regulatory NSL complex subunit 3
 2548	XB-GENEPAGE-6054130	gaa	alpha glucosidase
 9442	XB-GENEPAGE-6054174	med27	mediator complex subunit 27
-166378	XB-GENEPAGE-6054425	spata5	spermatogenesis associated 5
+166378	XB-GENEPAGE-6054425	afg2a	AFG2 AAA ATPase homolog A
 2186	XB-GENEPAGE-6054433	bptf	bromodomain PHD finger transcription factor
 5781	XB-GENEPAGE-6054494	ptpn11	protein tyrosine phosphatase, non-receptor type 11
 8547	XB-GENEPAGE-6054552	fcn3	ficolin 3
@@ -13945,10 +13927,10 @@
 3635	XB-GENEPAGE-6071357	inpp5d	inositol polyphosphate-5-phosphatase D
 7169	XB-GENEPAGE-6071380	tpm2	tropomyosin 2
 57657	XB-GENEPAGE-6071709	hcn3	hyperpolarization activated cyclic nucleotide gated potassium channel 3
-100130873	XB-GENEPAGE-6072890	carm1	coactivator associated arginine methyltransferase 1
+100130873	XB-GENEPAGE-6072890	carm1l	coactivator associated arginine methyltransferase 1 like
 80206	XB-GENEPAGE-6072904	fhod3	formin-like 3
 126669	XB-GENEPAGE-6072914	she	Src homology 2 domain containing E
-5156	XB-GENEPAGE-6072919	pdgfra	platelet-derived growth factor receptor, alpha polypeptide
+5156	XB-GENEPAGE-6072919	pdgfra	platelet derived growth factor receptor alpha
 9270	XB-GENEPAGE-6072965	itgb1bp1	integrin subunit beta 1 binding protein 1
 285313	XB-GENEPAGE-6072997	igsf10	immunoglobulin superfamily member 10
 84301	XB-GENEPAGE-6073015	ddi2	DNA damage inducible 1 homolog 2
@@ -14076,7 +14058,6 @@
 6911	XB-GENEPAGE-6257418	tbx6	T-box 6
 149951	XB-GENEPAGE-6257431	commd7	COMM domain containing 7
 10943	XB-GENEPAGE-6257453	msl3	MSL complex subunit 3
-7726	XB-GENEPAGE-6257460	trim26	tripartite motif containing 26
 84619	XB-GENEPAGE-6257471	zgpat	zinc finger, CCCH-type with G-patch domain
 9744	XB-GENEPAGE-6257485	acap1	ArfGAP with coiled-coil, ankyrin repeat and PH domains 1
 338567	XB-GENEPAGE-6257491	kcnk18	potassium channel, two pore domain subfamily K, member 18
@@ -14093,7 +14074,7 @@
 23248	XB-GENEPAGE-6257582	rprd2	regulation of nuclear pre-mRNA domain containing 2
 79825	XB-GENEPAGE-6257589	efcc1	EF-hand and coiled-coil domain containing 1
 79832	XB-GENEPAGE-6257597	qser1	glutamine and serine rich 1
-3576	XB-GENEPAGE-6257607	cxcl8a.1	C-X-C motif chemokine ligand 8a gene 1
+3576	XB-GENEPAGE-6257607	cxcl8a	C-X-C motif chemokine ligand 8a gene 1
 4237	XB-GENEPAGE-6257613	mfap2	microfibril associated protein 2
 4794	XB-GENEPAGE-6257624	nfkbie	nuclear factor of kappa light polypeptide gene enhancer in B-cells inhibitor, epsilon
 339761	XB-GENEPAGE-6257634	cyp27c1	cytochrome P450 family 27 subfamily C member 1
@@ -14118,7 +14099,7 @@
 9994	XB-GENEPAGE-6257800	casp8ap2	caspase 8 associated protein 2
 10263	XB-GENEPAGE-6257812	cdk2ap2	cyclin-dependent kinase 2 associated protein 2
 56676	XB-GENEPAGE-6257823	ascl3	achaete-scute family bHLH transcription factor 3
-57670	XB-GENEPAGE-6257827	kiaa1549	KIAA1549
+57670	XB-GENEPAGE-6257827	KIAA1549	KIAA1549
 58473	XB-GENEPAGE-6257834	plekhb1	pleckstrin homology domain containing B1
 166752	XB-GENEPAGE-6257843	frem3	FRAS1 related extracellular matrix 3
 1436	XB-GENEPAGE-6257850	csf1r	colony stimulating factor 1 receptor
@@ -14147,12 +14128,12 @@
 90135	XB-GENEPAGE-6258081	btbd6	BTB (POZ) domain containing 6
 2355	XB-GENEPAGE-6258092	fosl2	FOS-like antigen 2
 65992	XB-GENEPAGE-6258098	ddrgk1	DDRGK domain containing 1
-132200	XB-GENEPAGE-6258106	c3orf49	chromosome 3 open reading frame 49
+132200	XB-GENEPAGE-6258106	c4h3orf49	chromosome 4 C3orf49 homolog
 352909	XB-GENEPAGE-6258113	dnaaf3	dynein, axonemal, assembly factor 3
 54902	XB-GENEPAGE-6258120	ttc19	tetratricopeptide repeat domain 19
 51393	XB-GENEPAGE-6258126	trpv2	transient receptor potential cation channel, subfamily V, member 2
 4350	XB-GENEPAGE-6258134	mpg	N-methylpurine DNA glycosylase
-25758	XB-GENEPAGE-6258145	kiaa1549l	KIAA1549-like
+25758	XB-GENEPAGE-6258145	KIAA1549l	KIAA1549 like
 51816	XB-GENEPAGE-6258150	ada2	adenosine deaminase 2
 9669	XB-GENEPAGE-6258155	eif5b	eukaryotic translation initiation factor 5B
 92797	XB-GENEPAGE-6258165	helb	helicase (DNA) B
@@ -14167,7 +14148,7 @@
 120863	XB-GENEPAGE-6258253	depdc4	DEP domain containing 4
 253314	XB-GENEPAGE-6258260	eif4e1b	eukaryotic translation initiation factor 4E family member 1B
 84108	XB-GENEPAGE-6258270	pcgf6	polycomb group ring finger 6
-9856	XB-GENEPAGE-6258278	kiaa0319	KIAA0319
+9856	XB-GENEPAGE-6258278	KIAA0319	KIAA0319
 3508	XB-GENEPAGE-6258281	ighmbp2	immunoglobulin mu DNA binding protein 2
 6461	XB-GENEPAGE-6258290	shb	Src homology 2 domain containing adaptor protein B
 60493	XB-GENEPAGE-6258296	fastkd5	FAST kinase domains 5
@@ -14237,7 +14218,7 @@
 100289017	XB-GENEPAGE-6258849	moxd2	monooxygenase, DBH-like 2
 9217	XB-GENEPAGE-6258853	vapb	VAMP (vesicle-associated membrane protein)-associated protein B and C
 143241	XB-GENEPAGE-6258871	dydc1	DPY30 domain containing 1
-286464	XB-GENEPAGE-6258879	cxorf30	chromosome X open reading frame 30
+286464	XB-GENEPAGE-6258879	cxhxorf30	Cxorf30 homolog
 23544	XB-GENEPAGE-6258882	sez6l	seizure related 6 homolog-like
 151987	XB-GENEPAGE-6258888	ppp4r2	protein phosphatase 4 regulatory subunit 2
 51322	XB-GENEPAGE-6258901	wac	WW domain containing adaptor with coiled-coil
@@ -14265,7 +14246,6 @@
 57048	XB-GENEPAGE-6449809	plscr3	phospholipid scramblase 3
 57088	XB-GENEPAGE-6449819	plscr4	phospholipid scramblase 4
 5116	XB-GENEPAGE-6449943	pcnt	pericentrin
-79441	XB-GENEPAGE-6449958	haus3	HAUS augmin like complex subunit 3
 23354	XB-GENEPAGE-6449993	haus5	HAUS augmin like complex subunit 5
 4854	XB-GENEPAGE-6450007	notch3	notch 3
 387751	XB-GENEPAGE-6450014	gvin1	GTPase, very large interferon inducible 1
@@ -14363,7 +14343,7 @@
 2998	XB-GENEPAGE-6456619	gys2	glycogen synthase 2
 5930	XB-GENEPAGE-6456652	rbbp6	RB binding protein 6, ubiquitin ligase
 57099	XB-GENEPAGE-6456682	aven	apoptosis, caspase activation inhibitor
-730112	XB-GENEPAGE-6456700	fam166b	family with sequence similarity 166 member B
+730112	XB-GENEPAGE-6456700	cimip2b	ciliary microtubule inner protein 2B
 79811	XB-GENEPAGE-6456755	sltm	SAFB-like, transcription modulator
 6579	XB-GENEPAGE-6456767	slco1a2	solute carrier organic anion transporter family member 1A2
 56938	XB-GENEPAGE-6456788	bmal2	basic helix-loop-helix ARNT like 2
@@ -14430,7 +14410,7 @@
 65005	XB-GENEPAGE-6457566	mrpl9	mitochondrial ribosomal protein L9
 57408	XB-GENEPAGE-6457574	lrtm1	leucine-rich repeats and transmembrane domains 1
 10785	XB-GENEPAGE-6457579	wdr4	WD repeat domain 4
-284018	XB-GENEPAGE-6457586	c17orf58	chromosome 17 open reading frame 58
+284018	XB-GENEPAGE-6457586	c9h17orf58	chromosome 9 c17orf58 homolog
 1537	XB-GENEPAGE-6457591	cyc1	cytochrome c-1
 55593	XB-GENEPAGE-6457599	otud5	OTU deubiquitinase 5
 84314	XB-GENEPAGE-6457607	tmem107	transmembrane protein 107
@@ -14529,7 +14509,7 @@
 84881	XB-GENEPAGE-6459028	rpusd4	RNA pseudouridylate synthase domain containing 4
 7511	XB-GENEPAGE-6459035	xpnpep1	X-prolyl aminopeptidase 1
 84787	XB-GENEPAGE-6459062	kmt5c	lysine (K)-specific methyltransferase 5C
-374920	XB-GENEPAGE-6459080	zswim9	zinc finger SWIM-type containing 9
+374920	XB-GENEPAGE-6459080	zswim9	zinc finger SWIM-type containing 9 gene 1
 8021	XB-GENEPAGE-6459156	nup214	nucleoporin 214
 10345	XB-GENEPAGE-6459210	trdn	triadin
 3431	XB-GENEPAGE-6459217	sp110	SP110 nuclear body protein
@@ -14602,7 +14582,7 @@
 729330	XB-GENEPAGE-6461029	oc90	otoconin 90
 796	XB-GENEPAGE-6461041	calca	calcitonin-related polypeptide alpha
 84283	XB-GENEPAGE-6461061	tmem79	transmembrane protein 79
-100130988	XB-GENEPAGE-6461105	spata48	spermatogenesis associated 48
+100130988	XB-GENEPAGE-6461105	spmip7	sperm microtubule inner protein 7
 144203	XB-GENEPAGE-6461108	ovos2	alpha-2-macroglobulin like 1
 161779	XB-GENEPAGE-6461116	pgbd4	piggyBac transposable element derived 4
 10940	XB-GENEPAGE-6461128	pop1	POP1 homolog, ribonuclease P/MRP subunit
@@ -14613,7 +14593,7 @@
 326	XB-GENEPAGE-6461261	aire	autoimmune regulator
 128308	XB-GENEPAGE-6461297	mrpl55	mitochondrial ribosomal protein L55
 256643	XB-GENEPAGE-6461329	bclaf3	BCLAF1 and THRAP3 family member 3
-401207	XB-GENEPAGE-6461374	c5orf63	chromosome 5 open reading frame 63
+401207	XB-GENEPAGE-6461374	c1h5orf63	chromosome 1 C5orf63 homolog
 55345	XB-GENEPAGE-6461442	zgrf1	zinc finger, GRF-type containing 1
 84153	XB-GENEPAGE-6461968	rnaseh2c	ribonuclease H2 subunit C
 10194	XB-GENEPAGE-6461980	tshz1	teashirt zinc finger homeobox 1
@@ -14623,17 +14603,17 @@
 171024	XB-GENEPAGE-6462046	synpo2	synaptopodin 2
 386679	XB-GENEPAGE-6462055	krtap10-2	keratin associated protein 10-2
 51285	XB-GENEPAGE-6462073	rasl12	RAS-like family 12
-84310	XB-GENEPAGE-6462091	c7orf50	chromosome 7 open reading frame 50
+84310	XB-GENEPAGE-6462091	c9h7orf50	chromosome 9 C7orf50 homolog
 163702	XB-GENEPAGE-6462097	ifnlr1	interferon, lambda receptor 1
 7033	XB-GENEPAGE-6462248	tff3.7	Skin secretory protein xP2
-140691	XB-GENEPAGE-6462278	trim69.1	tripartite motif-containing 69, gene 1
+140691	XB-GENEPAGE-6462278	trim69	tripartite motif-containing 69 gene 1
 790955	XB-GENEPAGE-6462292	uqcc3	ubiquinol-cytochrome c reductase complex assembly factor 3
 84934	XB-GENEPAGE-6462301	rita1	RBPJ interacting and tubulin associated 1
 1346	XB-GENEPAGE-6462309	cox7a1	cytochrome c oxidase subunit 7A1
 1351	XB-GENEPAGE-6462315	cox8a	cytochrome c oxidase subunit 8A
 8629	XB-GENEPAGE-6462334	jrk	Jrk helix-turn-helix protein
 4519	XB-GENEPAGE-6462343	mt-cyb	mitochondrially encoded cytochrome b
-157773	XB-GENEPAGE-6462368	c8orf48	chromosome 8 open reading frame 48
+157773	XB-GENEPAGE-6462368	c8h8orf48	chromosome 8 C8orf48 homolog
 100129278	XB-GENEPAGE-6462375	tdrd15	tudor domain containing 15
 11138	XB-GENEPAGE-6462380	tbc1d8	TBC1 domain family member 8
 26692	XB-GENEPAGE-6462388	or2w1	olfactory receptor family 2 subfamily W member 1
@@ -14676,7 +14656,7 @@
 388795	XB-GENEPAGE-6462841	efcab8	EF-hand calcium binding domain 8
 222865	XB-GENEPAGE-6462847	tmem130	transmembrane protein 130
 3080	XB-GENEPAGE-6462851	cfhr2	complement factor H-related 2
-400935	XB-GENEPAGE-6462861	il17rel	interleukin 17 receptor E-like
+400935	XB-GENEPAGE-6462861	il17rel	interleukin 17 receptor E like gene 1
 132014	XB-GENEPAGE-6462866	il17re	interleukin 17 receptor E
 84818	XB-GENEPAGE-6462903	il17rc	interleukin 17 receptor C
 56964	XB-GENEPAGE-6462909	wdr93	WD repeat domain 93
@@ -14690,7 +14670,7 @@
 81786	XB-GENEPAGE-6463893	trim7	tripartite motif containing 7
 157869	XB-GENEPAGE-6463897	sbspon	somatomedin B and thrombospondin type 1 domain containing
 131831	XB-GENEPAGE-6463903	erich6	glutamate rich 6
-440044	XB-GENEPAGE-6463909	slc22a20.1	solute carrier family 22 member 20, gene1
+440044	XB-GENEPAGE-6463909	slc22a20	solute carrier family 22 member 20
 1370	XB-GENEPAGE-6463913	cpn2.2	carboxypeptidase N subunit 2 gene 2
 285848	XB-GENEPAGE-6464188	pnpla1	patatin like phospholipase domain containing 1
 339398	XB-GENEPAGE-6464194	lingo4	leucine rich repeat and Ig domain containing 4
@@ -14703,7 +14683,7 @@
 91056	XB-GENEPAGE-6464233	ap5b1	adaptor related protein complex 5 subunit beta 1
 254050	XB-GENEPAGE-6464238	lrrc43	leucine rich repeat containing 43
 80217	XB-GENEPAGE-6464244	cfap43	cilia and flagella associated protein 43
-126402	XB-GENEPAGE-6464249	ccdc105	coiled-coil domain containing 105
+126402	XB-GENEPAGE-6464249	tektl1	tektin like 1
 9027	XB-GENEPAGE-6464257	nat8.5	N-acetyltransferase 8 gene 5
 50837	XB-GENEPAGE-6464261	tas2r7	taste 2 receptor member 7
 22861	XB-GENEPAGE-6464265	nlrp1	NLR family, pyrin domain containing 1
@@ -14745,13 +14725,13 @@
 56342	XB-GENEPAGE-6465744	ppan	peter pan homolog
 5032	XB-GENEPAGE-6465756	p2ry11	purinergic receptor P2Y, G-protein coupled, 11
 5212	XB-GENEPAGE-6466688	vit	vitrin
-4535	XB-GENEPAGE-6466715	nd1	mitochondrially encoded NADH dehydrogenase 1
+4535	XB-GENEPAGE-6466715	mt-nd1	mitochondrially encoded NADH dehydrogenase 1
 115004	XB-GENEPAGE-6466734	cgas	cyclic GMP-AMP synthase
 79933	XB-GENEPAGE-6467117	synpo2l	synaptopodin 2-like
-221223	XB-GENEPAGE-6467132	ces3.5	carboxylesterase 3, gene 5
-23491	XB-GENEPAGE-6467139	ces3.1	carboxylesterase 3, gene 1
+23491	XB-GENEPAGE-6467132	ces3.5	carboxylesterase 3, gene 5
+23491	XB-GENEPAGE-6467139	ces3	carboxylesterase 3 gene 1
 146310	XB-GENEPAGE-6467160	rnf151	ring finger protein 151
-56951	XB-GENEPAGE-6467179	c5orf15	chromosome 5 open reading frame 15
+56951	XB-GENEPAGE-6467179	c3h5orf15	chromosome 3 C5orf15 homolog
 222611	XB-GENEPAGE-6467195	adgrf2	adhesion G protein-coupled receptor F2
 154215	XB-GENEPAGE-6467216	nkain2	Sodium/potassium transporting ATPase interacting 2
 866	XB-GENEPAGE-6467220	serpina6	serpin family A member 6
@@ -14775,7 +14755,7 @@
 347902	XB-GENEPAGE-6467797	amigo2	adhesion molecule with Ig-like domain 2
 1308	XB-GENEPAGE-6467920	col17a1	collagen, type XVII, alpha 1
 6554	XB-GENEPAGE-6467942	slc10a1	solute carrier family 10 (sodium/bile acid cotransporter), member 1
-57710	XB-GENEPAGE-6467980	kiaa1614	KIAA1614
+57710	XB-GENEPAGE-6467980	KIAA1614	KIAA1614
 8427	XB-GENEPAGE-6467989	znf282	zinc finger protein 282
 149478	XB-GENEPAGE-6468015	btbd19	BTB domain containing 19
 222256	XB-GENEPAGE-6468060	cdhr3	cadherin related family member 3
@@ -14783,7 +14763,7 @@
 83593	XB-GENEPAGE-6468138	rassf5	Ras association domain family member 5
 390205	XB-GENEPAGE-6468149	lrrc10b	leucine rich repeat containing 10B
 5334	XB-GENEPAGE-6468166	plcl1	phospholipase C like 1 (inactive)
-144535	XB-GENEPAGE-6468174	c12orf63	chromosome 12 open reading frame 63
+144535	XB-GENEPAGE-6468174	cfap54	CFAP54 cilia and flagella associated protein 54
 84125	XB-GENEPAGE-6468254	lrriq1	leucine-rich repeats and IQ motif containing 1
 6550	XB-GENEPAGE-6468279	slc9a3	solute carrier family 9 member A3
 55695	XB-GENEPAGE-6468311	nsun5	NOP2/Sun RNA methyltransferase 5
@@ -14802,7 +14782,7 @@
 64857	XB-GENEPAGE-6468885	plekhg2	pleckstrin homology and RhoGEF domain containing G2
 26030	XB-GENEPAGE-6468931	plekhg3	pleckstrin homology and RhoGEF domain containing G3
 285513	XB-GENEPAGE-6468966	gprin3	GPRIN family member 3
-56905	XB-GENEPAGE-6468985	c15orf39	chromosome 15 open reading frame 39
+56905	XB-GENEPAGE-6468985	c3h15orf39	chromosome 3 C15orf39 homolog
 402778	XB-GENEPAGE-6468992	ifitm10	interferon induced transmembrane protein 10
 9047	XB-GENEPAGE-6469022	sh2d2a	SH2 domain containing 2A
 90673	XB-GENEPAGE-6469037	ppp1r3e	protein phosphatase 1 regulatory subunit 3E
@@ -14810,11 +14790,11 @@
 431704	XB-GENEPAGE-6469072	rgs21	regulator of G-protein signaling 21
 9024	XB-GENEPAGE-6469080	brsk2	BR serine/threonine kinase 2
 56154	XB-GENEPAGE-6469125	tex15	testis expressed 15, meiosis and synapsis associated
-148345	XB-GENEPAGE-6469131	c1orf127	chromosome 1 open reading frame 127
+148345	XB-GENEPAGE-6469131	c7h1orf127	chromosome 7 C1orf127 homolog
 9656	XB-GENEPAGE-6469177	mdc1	mediator of DNA damage checkpoint 1
-10086	XB-GENEPAGE-6469233	hhla1	HERV-H LTR-associating 1
+10086	XB-GENEPAGE-6469233	hhla1	HHLA1 neighbor of OC90
 338667	XB-GENEPAGE-6469253	vsig10l2	V-set and immunoglobulin domain containing 10 like 2
-57648	XB-GENEPAGE-6469275	kiaa1522	KIAA1522
+57648	XB-GENEPAGE-6469275	KIAA1522	KIAA1522
 58506	XB-GENEPAGE-6469311	scaf1	SR-related CTD-associated factor 1
 223075	XB-GENEPAGE-6469356	itprid1	ITPR interacting domain containing 1
 9721	XB-GENEPAGE-6469400	gprin2	G protein regulated inducer of neurite outgrowth 2
@@ -14825,7 +14805,7 @@
 64319	XB-GENEPAGE-6469613	fbrs	fibrosin
 22901	XB-GENEPAGE-6469645	arsg	arylsulfatase G
 3681	XB-GENEPAGE-6469651	itgad	integrin subunit alpha D
-63920	XB-GENEPAGE-6469664	zbed8	zinc finger, BED-type containing 8
+63920	XB-GENEPAGE-6469664	fam200c	family with sequence similarity 200 member C
 54492	XB-GENEPAGE-6469686	neurl1b	neuralized E3 ubiquitin protein ligase 1B
 100507050	XB-GENEPAGE-6469692	tpbgl	trophoblast glycoprotein like
 65998	XB-GENEPAGE-6469697	zfta	zinc finger translocation associated
@@ -14834,14 +14814,13 @@
 26471	XB-GENEPAGE-6485390	nupr1	nuclear protein 1, transcriptional regulator
 7012	XB-GENEPAGE-6485440	terc	telomerase RNA component
 4508	XB-GENEPAGE-6485444	mt-atp6	mitochondrially encoded ATP synthase 6
-4509	XB-GENEPAGE-6485448	mt-atp8	mitochondrially encoded ATP synthase 8
 4514	XB-GENEPAGE-6485457	mt-co3	mitochondrially encoded cytochrome c oxidase III
-4540	XB-GENEPAGE-6485476	nd5	NADH dehydrogenase subunit 5
-4536	XB-GENEPAGE-6485486	nd2	NADH dehydrogenase subunit 2
-4537	XB-GENEPAGE-6485495	nd3	mitochondrially encoded NADH dehydrogenase subunit 3
+4540	XB-GENEPAGE-6485476	mt-nd5	mitochondrially encoded NADH dehydrogenase subunit 5
+4536	XB-GENEPAGE-6485486	mt-nd2	mitochondrially encoded NADH dehydrogenase subunit 2
+4537	XB-GENEPAGE-6485495	mt-nd3	mitochondrially encoded NADH dehydrogenase subunit 3
 4538	XB-GENEPAGE-6485500	mt-nd4	mitochondrially encoded NADH dehydrogenase 4
-4541	XB-GENEPAGE-6485504	nd6	NADH dehydrogenase subunit 6
-4539	XB-GENEPAGE-6485508	nd4l	NADH dehydrogenase subunit 4L
+4541	XB-GENEPAGE-6485504	mt-nd6	mitochondrially encoded NADH dehydrogenase subunit 6
+4539	XB-GENEPAGE-6485508	mt-nd4l	mitochondrially encoded NADH dehydrogenase subunit 4L
 79142	XB-GENEPAGE-6485525	phf23	PHD finger protein 23
 7305	XB-GENEPAGE-6489425	tyrobp	transmembrane immune signaling adaptor TYROBP
 10870	XB-GENEPAGE-6489432	hcst	hematopoietic cell signal transducer
@@ -14857,7 +14836,7 @@
 2321	XB-GENEPAGE-6495120	flt1	fms-related tyrosine kinase 1
 1270	XB-GENEPAGE-6499404	cntf	ciliary neurotrophic factor
 440093	XB-GENEPAGE-6500120	h3-5	H3.5 histone
-282966	XB-GENEPAGE-6500287	c10orf53	chromosome 10 open reading frame 53
+282966	XB-GENEPAGE-6500287	c7h10orf53	chromosome 7 C10orf53 homolog
 345757	XB-GENEPAGE-6538611	fam174a	family with sequence similarity 174 member A
 80331	XB-GENEPAGE-6538668	dnajc5	DnaJ heat shock protein family (Hsp40) member C5
 100130519	XB-GENEPAGE-6538800	tmem221	transmembrane protein 221
@@ -14881,13 +14860,13 @@
 84662	XB-GENEPAGE-12564474	glis2	GLIS family zinc finger 2
 2844	XB-GENEPAGE-12564490	gpr21	G protein-coupled receptor 21
 54566	XB-GENEPAGE-12564494	epb41l4b	erythrocyte membrane protein band 4.1 like 4B
-1302	XB-GENEPAGE-12564498	col11a2	collagen, type XI, alpha 2
+1302	XB-GENEPAGE-12564498	col11a2	collagen type XI alpha 2 chain
 169044	XB-GENEPAGE-12565045	col22a1	collagen, type XXII, alpha 1
 5799	XB-GENEPAGE-12565069	ptprn2	protein tyrosine phosphatase receptor type N2
 56257	XB-GENEPAGE-12565188	mepce	methylphosphate capping enzyme
 8409	XB-GENEPAGE-12565221	uxt	ubiquitously expressed prefoldin like chaperone
 29886	XB-GENEPAGE-12565249	snx8	sorting nexin 8
-414152	XB-GENEPAGE-12565256	c10orf105	chromosome 10 open reading frame 105
+414152	XB-GENEPAGE-12565256	c7h10orf105	chromosome 7 C10orf105 homolog
 400120	XB-GENEPAGE-12565260	sertm1	serine-rich and transmembrane domain-containing 1
 5121	XB-GENEPAGE-12565266	pcp4	Purkinje cell protein 4
 124923	XB-GENEPAGE-12565273	rskr	ribosomal protein S6 kinase related
@@ -14904,9 +14883,9 @@
 25970	XB-GENEPAGE-13579826	sh2b1	SH2B adaptor protein 1
 374354	XB-GENEPAGE-13579832	nhlrc2	NHL repeat containing 2
 91574	XB-GENEPAGE-13579838	mtrfr	mitochondrial translation release factor in rescue
-401115	XB-GENEPAGE-13579844	c4orf48	chromosome 4 open reading frame 48
+401115	XB-GENEPAGE-13579844	nicol1	NELL2 interacting cell ontogeny regulator 1
 387890	XB-GENEPAGE-13579853	tmem233	transmembrane protein 233
-201725	XB-GENEPAGE-13579858	c4orf46	chromosome 4 open reading frame 46
+201725	XB-GENEPAGE-13579858	c1h4orf46	chromosome 1 C4orf46 homolog
 100188893	XB-GENEPAGE-13579867	tomm6	translocase of outer mitochondrial membrane 6
 344387	XB-GENEPAGE-13579891	cdkl4	cyclin dependent kinase like 4
 640	XB-GENEPAGE-13579896	blk	BLK proto-oncogene, Src family tyrosine kinase
@@ -14918,7 +14897,7 @@
 6010	XB-GENEPAGE-18034121	rho.2	rhodopsin, gene2
 8646	XB-GENEPAGE-18034129	chrd.2	chordin, gene 2
 55885	XB-GENEPAGE-18386057	lmo3	LIM domain only 3
-1593	XB-GENEPAGE-18386060	cyp27a1.3	cytochrome P450 family 27 subfamily A member 1, gene3
+1593	XB-GENEPAGE-18386060	cyp27a1.3	cytochrome P450 family 27 subfamily A member 1 gene 3
 65010	XB-GENEPAGE-18386064	slc26a6.2	solute carrier family 26 member 6, gene 2
 55327	XB-GENEPAGE-19756999	lin7c.2	lin-7 homolog C, gene 2
 345643	XB-GENEPAGE-22041447	mcidas	multiciliate differentiation and DNA synthesis associated cell cycle protein
@@ -14937,7 +14916,7 @@
 22905	XB-GENEPAGE-22060524	epn2	epsin2
 2538	XB-GENEPAGE-22060528	g6pc1.3	glucose-6-phosphatase, catalytic subunit 1, gene 3
 79690	XB-GENEPAGE-22060536	gal3st4.6	galactose-3-O-sulfotransferase 4, gene 6
-55718	XB-GENEPAGE-22060540	polr3e.1	polymerase (RNA) III (DNA directed) polypeptide E (80kD) gene1
+55718	XB-GENEPAGE-22060540	polr3e	polymerase (RNA) III (DNA directed) polypeptide E (80kD) gene1
 3859	XB-GENEPAGE-22060943	krt12.3	keratin 12, gene 3
 3875	XB-GENEPAGE-22060947	krt18.3	keratin 18, gene 3
 25984	XB-GENEPAGE-22060951	krt23	keratin 23
@@ -14948,7 +14927,7 @@
 1128	XB-GENEPAGE-22061117	chrm1	cholinergic receptor, muscarinic 1
 283310	XB-GENEPAGE-22061121	otogl	otogelin like
 9376	XB-GENEPAGE-22061133	slc22a8	solute carrier family 22 (organic anion transporter), member 8
-192683	XB-GENEPAGE-22061153	scamp5.1	secretory carrier membrane protein 5 gene 1
+192683	XB-GENEPAGE-22061153	scamp5	secretory carrier membrane protein 5 gene 1
 79874	XB-GENEPAGE-22061164	rabep2	rabaptin, RAB GTPase binding effector protein 2
 26123	XB-GENEPAGE-22061168	tctn3	tectonic family member 3
 192666	XB-GENEPAGE-22061191	krt24	keratin 24
@@ -14982,7 +14961,7 @@
 391365	XB-GENEPAGE-22063269	sult6b1.3	sulfotransferase family 6B member 1 gene 3
 391365	XB-GENEPAGE-22063273	sult6b1.5	sulfotransferase family 6B member 1 gene 5
 391365	XB-GENEPAGE-22063277	sult6b1.6	sulfotransferase family 6B member 1 gene 6
-389677	XB-GENEPAGE-22063326	rbm12b.1	RNA binding motif protein 12B gene 1
+389677	XB-GENEPAGE-22063326	rbm12b	RNA binding motif protein 12B gene 1
 389677	XB-GENEPAGE-22063330	rbm12b.3	RNA binding motif protein 12B gene 3
 389677	XB-GENEPAGE-22063334	rbm12b.4	RNA binding motif protein 12B gene 4
 389677	XB-GENEPAGE-22063338	rbm12b.5	RNA binding motif protein 12B gene 5
@@ -14996,7 +14975,7 @@
 7846	XB-GENEPAGE-22063821	tuba1a	tubulin alpha 1a
 4855	XB-GENEPAGE-22063924	notch4.2	notch 4 gene 2
 4855	XB-GENEPAGE-22063928	notch4	notch 4
-389073	XB-GENEPAGE-22063937	c2orf80	Chromosome 2 Open Reading Frame 80
+389073	XB-GENEPAGE-22063937	c9h2orf80	chromosome 9 C2orf80 homolog
 388585	XB-GENEPAGE-22064036	hes5.6	hairy and enhancer of split 5, gene 6
 388585	XB-GENEPAGE-22064039	hes5.8	hairy and enhancer of split 5, gene 8
 388585	XB-GENEPAGE-22064043	hes5.9	hairy and enhancer of split 5, gene 9
@@ -15007,7 +14986,7 @@
 80131	XB-GENEPAGE-22064202	lrrc8e.2	volume-regulated anion channel subunit LRRC8E gene 2
 6085	XB-GENEPAGE-22064206	rny3	Ro-associated Y3 (rny3), small cytoplasmic RNA
 728492	XB-GENEPAGE-22064210	serf1b	small EDRK-rich factor 1 b
-1548	XB-GENEPAGE-22064220	cyp2a6.12	cytochrome P450 family 2 subfamily A member 6 gene 12 [provisional] 
+1548	XB-GENEPAGE-22064220	cyp2a6.12	cytochrome P450 family 2 subfamily A member 6 gene 12
 1990	XB-GENEPAGE-22064317	cela1.2	chymotrypsin like elastase 1, gene 2
 1990	XB-GENEPAGE-22064319	cela1.3	chymotrypsin like elastase 1, gene 3
 1990	XB-GENEPAGE-22064323	cela1.4	chymotrypsin like elastase 1, gene 4
@@ -15024,14 +15003,14 @@
 28	XB-GENEPAGE-22064552	abo.5	ABO blood group (transferase A, alpha 1-3-N-acetylgalactosaminyltransferase; transferase B, alpha 1-3-galactosyltransferase) gene 5
 28	XB-GENEPAGE-22064556	abo.6	ABO blood group (transferase A, alpha 1-3-N-acetylgalactosaminyltransferase; transferase B, alpha 1-3-galactosyltransferase) gene 6
 2495	XB-GENEPAGE-22064560	fth1.2	ferritin, heavy polypeptide 1, gene 2
-150248	XB-GENEPAGE-22064755	c22orf15	chromosome 1 open reading frame 15 
+150248	XB-GENEPAGE-22064755	c1h22orf15	chromosome 1 C22orf15 homolog
 8218	XB-GENEPAGE-22064759	cltcl1	clathrin heavy chain like 1
 2928	XB-GENEPAGE-22064767	gsc2	goosecoid2
 10317	XB-GENEPAGE-22064802	b3galt5.3	Beta-1,3-galactosyltransferase 5 gene 3
 55165	XB-GENEPAGE-22064806	cep55	centrosomal protein 55kDa 
 205147	XB-GENEPAGE-22064851	amer3	APC membrane recruitment protein 3
 93650	XB-GENEPAGE-22064891	acp4	acid phosphatase 4
-414919	XB-GENEPAGE-22064962	c8orf82	Homo sapiens chromosome 8 open reading frame 82
+414919	XB-GENEPAGE-22064962	c6h8orf82	chromosome 6 C8orf82 homolog
 401720	XB-GENEPAGE-22064970	fignl2	fidgetin like2
 389643	XB-GENEPAGE-22064974	nuggc	nuclear GTPase, germinal center associated
 151871	XB-GENEPAGE-22065083	dppa2	developmental pluripotency associated 2
@@ -15040,18 +15019,18 @@
 6373	XB-GENEPAGE-22065254	cxcl11	C-X-C motif chemokine ligand 11
 4283	XB-GENEPAGE-22065259	cxcl9	C-X-C motif chemokine ligand 9
 113230	XB-GENEPAGE-22065326	misp3	MISP family member 3
-100130310	XB-GENEPAGE-22065331	msantdl.1 [provisional]	Myb/SANT DNA-binding domain containing like gene 1 [provisional]
+100130310	XB-GENEPAGE-22065331	msantdl	Myb/SANT DNA-binding domain containing like gene 1
 1179	XB-GENEPAGE-22065378	clca1.2	chloride channel accessory 1 gene 2
 22802	XB-GENEPAGE-22065382	clca4.1	chloride channel accessory 4 gene 1
 22802	XB-GENEPAGE-22065387	clca4.2	chloride channel accessory 4 gene 2
 942	XB-GENEPAGE-22065592	cd86	T-lymphocyte activation antigen CD86
 100130097	XB-GENEPAGE-22065597	kif28	kinesin-like protein 28
-113763	XB-GENEPAGE-22065649	zbed6cl	ZBED6 C-terminal like
-64073	XB-GENEPAGE-22065703	c19orf33	chromosome 19 open reading frame 33
+113763	XB-GENEPAGE-22065649	zbed10	zinc finger BED-type containing 10
+64073	XB-GENEPAGE-22065703	c8h19orf33	chromosome 8 C19orf33 homolog
 53349	XB-GENEPAGE-22065724	zfyve1l	zinc finger FYVE domain-containing protein 1-like
 5319	XB-GENEPAGE-22065803	pla2g1bl	phospholipase A2 group IB like
 7113	XB-GENEPAGE-22065810	tmprss2.3	transmembrane serine protease 2
-7113	XB-GENEPAGE-22065906	tmprss2.1	transmembrane serine protease 2 gene 1
+7113	XB-GENEPAGE-22065906	tmprss2	transmembrane serine protease 2 gene 1
 7113	XB-GENEPAGE-22065912	tmprss2.10	transmembrane serine protease 2 gene 10
 7113	XB-GENEPAGE-22065918	tmprss2.11	transmembrane serine protease 2 gene 11
 7113	XB-GENEPAGE-22065924	tmprss2.12	transmembrane serine protease 2 gene 12
@@ -15065,18 +15044,17 @@
 7113	XB-GENEPAGE-22065972	tmprss2.8	transmembrane serine protease 2 gene 8
 7113	XB-GENEPAGE-22065978	tmprss2.9	transmembrane serine protease 2 gene 9
 55129	XB-GENEPAGE-22066157	ano10l	anoctamin 10 like
-132321	XB-GENEPAGE-22066164	c4orf33.2	chromosome 4 open reading frame 33, gene 2
+132321	XB-GENEPAGE-22066164	c1h4orf33.2	chromosome 1 C4orf33.2 homolog
 51029	XB-GENEPAGE-22066170	desi2l	desumoylating isopeptidase 2 like
 1880	XB-GENEPAGE-22066177	gpr183.2	G protein-coupled receptor 183, gene 2
 3014	XB-GENEPAGE-22066184	h2ax	H2A.X variant histone
 3014	XB-GENEPAGE-22066189	h2ax.2	H2A.X variant histone, gene 2
-79625	XB-GENEPAGE-22066195	ndnfl1.1	neuron-derived neurotrophic factor like 1, gene 1
-79625	XB-GENEPAGE-22066202	ndnfl1.2	neuron-derived neurotrophic factor like 1, gene 2
-79625	XB-GENEPAGE-22066209	ndnfl2	neuron-derived neurotrophic factor like 2
+79625	XB-GENEPAGE-22066195	ndnf	neuron-derived neurotrophic factor
+79625	XB-GENEPAGE-22066209	ndnf	neuron derived neurotrophic factor
 56729	XB-GENEPAGE-22066220	retn.1	resistin, gene 1
 56729	XB-GENEPAGE-22066226	retn.2	resistin, gene 2
 161145	XB-GENEPAGE-22066232	tmem229bl	transmembrane protein 229B like
-59341	XB-GENEPAGE-22066239	trpv4l.1	transient receptor potential cation channel, subfamily V, member 4 like, gene 1
+59341	XB-GENEPAGE-22066239	trpv4l	transient receptor potential cation channel, subfamily V, member 4 like, gene 1
 59341	XB-GENEPAGE-22066246	trpv4l.2	transient receptor potential cation channel, subfamily V, member 4 like, gene 2
 59341	XB-GENEPAGE-22066253	trpv4l.3	transient receptor potential cation channel, subfamily V, member 4 like, gene 3
 59341	XB-GENEPAGE-22066260	trpv4l.4	transient receptor potential cation channel, subfamily V, member 4 like, gene 4
@@ -15093,21 +15071,21 @@
 139105	XB-GENEPAGE-22068019	bend2	BEN domain containing 2
 388553	XB-GENEPAGE-22068025	meiosin	meiosis initiator
 636	XB-GENEPAGE-22068031	bicd1	BICD cargo adaptor 1
-118461	XB-GENEPAGE-22068037	c10orf71	chromosome 10 open reading frame 71
-118611	XB-GENEPAGE-22068045	c10orf90	chromosome 10 open reading frame 90
-53838	XB-GENEPAGE-22068053	c11orf24	chromosome 11 open reading frame 24
-283461	XB-GENEPAGE-22068060	c12orf40	chromosome 12 open reading frame 40
-374470	XB-GENEPAGE-22068066	c12orf42	chromosome 12 open reading frame 42
+118461	XB-GENEPAGE-22068037	c7h10orf71	chromosome 7 C10orf71 homolog
+118611	XB-GENEPAGE-22068045	c7h10orf90	chromosome 7 C10orf90 homolog
+53838	XB-GENEPAGE-22068053	c4h11orf24	chromosome 4 C11orf24 homolog
+283461	XB-GENEPAGE-22068060	c3h12orf40	chromosome 3 C12orf40 homolog
+374470	XB-GENEPAGE-22068066	c3h12orf42	chromosome 3 C12orf42 homolog
 388701	XB-GENEPAGE-22068072	cfap141	cilia and flagella associated protein 141
-84970	XB-GENEPAGE-22068078	c1orf94	chromosome 1 open reading frame 94
+84970	XB-GENEPAGE-22068078	c2h1orf94	chromosome 2 C1orf94 homolog
 114905	XB-GENEPAGE-22068085	c1qtnf7	C1q and TNF related 7
-257407	XB-GENEPAGE-22068093	c2orf72	chromosome 2 open reading frame 72
-388963	XB-GENEPAGE-22068100	c2orf81	chromosome 2 open reading frame 81
-375341	XB-GENEPAGE-22068108	c3orf62	chromosome 3 open reading frame 62
-401152	XB-GENEPAGE-22068114	c4orf3	chromosome 4 open reading frame 3
-285556	XB-GENEPAGE-22068120	c4orf54	chromosome 4 open reading frame 54
-136895	XB-GENEPAGE-22068128	c7orf31	chromosome 7 open reading frame 31
-100127983	XB-GENEPAGE-22068136	c8orf88	chromosome 8 open reading frame 88
+257407	XB-GENEPAGE-22068093	c5h2orf72	chromosome 5 C2orf72 homolog
+388963	XB-GENEPAGE-22068100	c1h2orf81	chromosome 1 C2orf81 homolog
+375341	XB-GENEPAGE-22068108	c4h3orf62	chromosome 4 C3orf62 homolog
+401152	XB-GENEPAGE-22068114	c1h4orf3	chromosome 1 C4orf3 homolog
+285556	XB-GENEPAGE-22068120	c1h4orf54	chromosome 1 C4orf54 homolog
+136895	XB-GENEPAGE-22068128	spmip4	sperm microtubule inner protein 4 homolog
+100127983	XB-GENEPAGE-22068136	c6h8orf88	chromosome 6 C8orf88 homolog
 51475	XB-GENEPAGE-22068144	cabp2	calcium binding protein 2
 440854	XB-GENEPAGE-22068149	capn14	calpain 14
 2694	XB-GENEPAGE-22068155	cblif	cobalamin binding intrinsic factor
@@ -15169,17 +15147,17 @@
 3597	XB-GENEPAGE-22068537	il13ra1	interleukin 13 receptor subunit alpha 1
 55721	XB-GENEPAGE-22068545	iqcc	IQ motif containing C
 57608	XB-GENEPAGE-22068552	jcad	junctional cadherin 5 associated
-100652824	XB-GENEPAGE-22068567	kiaa2012	KIAA2012
+100652824	XB-GENEPAGE-22068567	KIAA2012	KIAA2012
 3854	XB-GENEPAGE-22068574	krt6b	keratin 6B
 138307	XB-GENEPAGE-22068580	lcn8	lipocalin 8
 104909134	XB-GENEPAGE-22068586	linc02210-crhr1	LINC02210-CRHR1 readthrough
 348801	XB-GENEPAGE-22068591	lnp1	leukemia NUP98 fusion partner 1
 100130370	XB-GENEPAGE-22068599	linc03048	long intergenic non-protein coding RNA 3048
-10606	XB-GENEPAGE-22068604	XB22068604 [provisional]	uncharacterized XB22068604
 100506514	XB-GENEPAGE-22068604	XB22068604 [provisional]	uncharacterized XB22068604
-105379282	XB-GENEPAGE-22068614	XB22068614 [provisional:relt]	provisional ortholog of RELT TNF receptor
-107984974	XB-GENEPAGE-22068619	XB22068619 [provisional]	uncharacterized XB22068619
-107987098	XB-GENEPAGE-22068624	XB22068624 [provisional]	fibroin heavy chain-like
+10606	XB-GENEPAGE-22068604	XB22068604 [provisional]	uncharacterized XB22068604
+105379282	XB-GENEPAGE-22068614	relt	RELT TNF receptor
+107984974	XB-GENEPAGE-22068619	LOC107984974	uncharacterized LOC107984974
+107987098	XB-GENEPAGE-22068624	fnd3c1l	fibronectin type III domain containing 3C1 like
 55791	XB-GENEPAGE-22068629	lrif1	ligand dependent nuclear receptor interacting factor 1
 100505591	XB-GENEPAGE-22068637	lrrc3c	leucine rich repeat containing 3C
 90506	XB-GENEPAGE-22068644	lrrc46	leucine rich repeat containing 46
@@ -15265,7 +15243,7 @@
 84690	XB-GENEPAGE-22069179	spata22	spermatogenesis associated 22
 54558	XB-GENEPAGE-22069187	spata6	spermatogenesis associated 6
 26010	XB-GENEPAGE-22069195	spats2l	spermatogenesis associated serine rich 2 like
-6707	XB-GENEPAGE-22069202	sprr3	small proline rich protein 3
+7425	XB-GENEPAGE-22069202	vgf	VGF nerve growth factor inducible
 401236	XB-GENEPAGE-22069207	stmnd1	stathmin domain containing 1
 647087	XB-GENEPAGE-22069215	stmp1	short transmembrane mitochondrial protein 1
 100130302	XB-GENEPAGE-22069222	supt20hl1	SUPT20H like 1
@@ -15313,9 +15291,9 @@
 22949	XB-GENEPAGE-22069529	ptgr1.4	prostaglandin reductase 1, gene 4
 10858	XB-GENEPAGE-22069536	cyp46a1.1	cytochrome P450 family 46 subfamily A member 1, gene 1
 1582	XB-GENEPAGE-22069543	cyp8b1.2	cytochrome P450 family 8 subfamily B member 1, gene 2
-25840	XB-GENEPAGE-22069550	mettl7a.2	methyltransferase like 7A, gene 2
-25840	XB-GENEPAGE-22069556	mettl7a.3	methyltransferase like 7A, gene 3
-5037	XB-GENEPAGE-22069562	pebp1.1	phosphatidylethanolamine binding protein 1, gene 1
+25840	XB-GENEPAGE-22069550	tmt1a.2	thiol methyltransferase 1A gene 2
+25840	XB-GENEPAGE-22069556	tmt1a.3	thiol methyltransferase 1A gene 3
+5037	XB-GENEPAGE-22069562	pebp1	phosphatidylethanolamine binding protein 1, gene 1
 6919	XB-GENEPAGE-22164370	tcea2	transcription elongation factor A2
 388743	XB-GENEPAGE-22164411	capn8.2	calpain 8 gene 2
 388743	XB-GENEPAGE-22164416	capn8.4	calpain 8 gene 4
@@ -15384,7 +15362,7 @@
 27348	XB-GENEPAGE-22168616	tor1b.2	torsin family 1, member B gene 2
 2038	XB-GENEPAGE-22168628	epb42	Erythrocyte Membrane Protein Band 4.2
 116179	XB-GENEPAGE-22168655	tgm7	transglutaminase 7
-84519	XB-GENEPAGE-22168683	acrbp.1	acrosin-binding protein, gene 1
+84519	XB-GENEPAGE-22168683	acrbp	acrosin binding protein, gene 1
 84519	XB-GENEPAGE-22168687	acrbp.3	acrosin-binding protein, gene 3
 23624	XB-GENEPAGE-22169403	cblc	Cbl proto-oncogene C
 80233	XB-GENEPAGE-22169432	faap100	FA core complex associated protein 100
@@ -15420,7 +15398,7 @@
 167	XB-GENEPAGE-22169839	crisp1.9	cysteine-rich secretory protein 1 gene 9
 79868	XB-GENEPAGE-22172431	alg13	ALG13 UDP-N-acetylglucosaminyltransferase subunit
 79725	XB-GENEPAGE-22172554	thap9	THAP domain containing 9
-1056	XB-GENEPAGE-22172574	cel.1	carboxyl ester lipase, gene 1 
+1056	XB-GENEPAGE-22172574	cel	carboxyl ester lipase, gene 1
 2979	XB-GENEPAGE-22172598	guca1b	guanylate cyclase activator 1B
 132671	XB-GENEPAGE-22172606	spata18a	spermatogenesis associated 18a
 8707	XB-GENEPAGE-22172613	b3galt2	Beta-1,3-galactosyltransferase 2
@@ -15428,7 +15406,7 @@
 11282	XB-GENEPAGE-22172621	mgat4b	alpha-1,3-mannosyl-glycoprotein 4-beta-N-acetylglucosaminyltransferase B
 3570	XB-GENEPAGE-22194349	il6r	interleukin 6 receptor
 920	XB-GENEPAGE-22201033	cd4	cd4 receptor
-925	XB-GENEPAGE-22201039	cd8a	CD8a molecule
+925	XB-GENEPAGE-22201039	cd8a	CD8 subunit alpha
 3902	XB-GENEPAGE-22201045	lag3	lymphocyte activating 3
 2323	XB-GENEPAGE-22201451	flt3lg	fms-related tyrosine kinase 3 ligand
 59067	XB-GENEPAGE-22201457	il21	interleukin 21
@@ -15439,7 +15417,7 @@
 151636	XB-GENEPAGE-22251723	dtx3l	deltex E3 ubiquitin ligase 3L
 4549	XB-GENEPAGE-22251884	mt-rnr1	mitochondrially encoded 12S RNA
 4550	XB-GENEPAGE-22251889	mt-rnr2	mitochondrially encoded 16S RNA
-4553	XB-GENEPAGE-22251894	mt-ta	mitochondrially encoded tRNA alanine
+4553	XB-GENEPAGE-22251894	trna	mitochondrially encoded tRNA alanine
 4573	XB-GENEPAGE-22251899	mt-tr	mitochondrially encoded tRNA arginine
 4570	XB-GENEPAGE-22251904	mt-tn	mitochondrially encoded tRNA asparagine
 4555	XB-GENEPAGE-22251909	mt-td	mitochondrially encoded tRNA aspartic acid
@@ -15461,7 +15439,7 @@
 4577	XB-GENEPAGE-22251989	mt-tv	mitochondrially encoded tRNA valine
 8703	XB-GENEPAGE-22252018	b4galt3	beta-1,4-galactosyltransferase 3
 165257	XB-GENEPAGE-23659518	c1ql2	complement C1q-like protein 2
-8685	XB-GENEPAGE-23659530	marco	Macrophage receptor with collagenous structure
+8685	XB-GENEPAGE-23659530	marco	macrophage receptor with collagenous structure
 1580	XB-GENEPAGE-23659627	cyp4b1.4	cytochrome P450 family 4 subfamily B member 1 gene 4
 3576	XB-GENEPAGE-23659672	cxc8b.1	C-X-C motif chemokine ligand 8b gene 1
 3576	XB-GENEPAGE-23659677	cxcl8a.2	C-X-C motif chemokine ligand 8a gene 2
@@ -15469,16 +15447,28 @@
 671	XB-GENEPAGE-25874511	bpi5	bactericidal permeability increasing protein 5 (provisional)
 548411	XB-GENEPAGE-25874511	bpi5	bactericidal permeability increasing protein 5 (provisional)
 63940	XB-GENEPAGE-25874515	gpsm3	G protein signaling modulator 3 (provisional)
-79441	XB-GENEPAGE-25874530	haus3.1	HAUS augmin like complex subunit 3 gene 1
-3109	XB-GENEPAGE-25874540	mhc2-dmb (provisional)	major histocompatibility complex, class II, DM beta (provisonal)
+79441	XB-GENEPAGE-25874530	haus3	HAUS augmin like complex subunit 3 gene 1
+3109	XB-GENEPAGE-25874540	mhc2-dmb	major histocompatibility complex, class II, DM beta
 671	XB-GENEPAGE-25874647	bpi	bactericidal permeability increasing protein (provisional)
 548411	XB-GENEPAGE-25874647	bpi	bactericidal permeability increasing protein (provisional)
 941	XB-GENEPAGE-25874656	cd80	CD80 molecule
 29851	XB-GENEPAGE-25874663	icos	inducible T-cell costimulator
 23308	XB-GENEPAGE-25874670	icoslg	inducible T cell costimulator ligand
 3578	XB-GENEPAGE-25874677	il9	interleukin 9
-50852	XB-GENEPAGE-25874688	trat1l [provisional]	T-cell receptor-associated transmembrane adapter 1-like
+50852	XB-GENEPAGE-25874688	trat1l	T-cell receptor-associated transmembrane adapter 1-like
  79679	XB-GENEPAGE-25874694	vtcn1.2	V-set domain containing T cell activation inhibitor 1 gene 2
 3765	XB-GENEPAGE-25875120	kcnj9	potassium inwardly rectifying channel subfamily J member 9
 3359	XB-GENEPAGE-25875133	htr3a.2	5-hydroxytryptamine receptor 3A gene 2
 374383	XB-GENEPAGE-25875147	ncr3lg1l	natural cytotoxicity triggering receptor 3 ligand 1-like (provisonal)
+401207	XB-GENEPAGE-25919034	c6h5orf63	chromosome 6 C5orf63 homolog
+123207	XB-GENEPAGE-25919039	c1h15orf40	chromosome 1 C15orf40 homolog
+255043	XB-GENEPAGE-29072295	tmem86b	transmembrane protein 86B
+8313	XB-GENEPAGE-29072347	axin2	axin 2
+85508	XB-GENEPAGE-29072461	scrt2	scratch family transcriptional repressor 2
+100129094	XB-GENEPAGE-29079666	btnl10	butyrophilin-like protein 10 gene 1
+29943	XB-GENEPAGE-29098506	padi1	protein-arginine deiminase type-1
+170954	XB-GENEPAGE-29099294	ppp1r18	protein phosphatase 1 regulatory subunit 18
+3605	XB-GENEPAGE-29208203	il17a	interleukin 17a gene 1
+149233	XB-GENEPAGE-29208207	il23r	interleukin 23 receptor
+400935	XB-GENEPAGE-29208227	il17rel.2	interleukin 17 receptor E-like gene 2
+50616	XB-GENEPAGE-29208234	il22	interleukin 22

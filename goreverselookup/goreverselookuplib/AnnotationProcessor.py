@@ -327,16 +327,27 @@ class GOApi:
     """      
 
 class GOAnnotiationsFile:
-    """
-    This class provides access to a Gene Ontology Annotations File, which stores the relations between each GO Term and it's products (genes),
-    along with an evidence code, confirming the truth of the interaction. A GO Annotation comprises of a) GO Term, b) gene / gene product c) evidence code.
-    
-    See also:
-      - http://geneontology.org/docs/download-go-annotations/ 
-      - http://current.geneontology.org/products/pages/downloads.html
-    """
-    def __init__(self) -> None:
-        self._filepath = "src_data_files/goa_human.gaf"
+    def __init__(self, filepath:str="") -> None:
+        """
+        This class provides access to a Gene Ontology Annotations File, which stores the relations between each GO Term and it's products (genes),
+        along with an evidence code, confirming the truth of the interaction. A GO Annotation comprises of a) GO Term, b) gene / gene product c) evidence code.
+
+        Parameters:
+          - (str) filepath: the filepath to the GO Annotations File downloaded file from http://current.geneontology.org/products/pages/downloads.html -> Homo Sapiens (EBI Gene Ontology Database) - protein = goa_human.gaf; link = http://geneontology.org/gene-associations/goa_human.gaf.gz
+                            if left to default value, self._filepath will be set to 'src_data_files/goa_human.gaf'. The file should reside in root/src_data_files/ and the parameter filepath should be the file name of the downloaded file inside src_data_files/
+
+        See also:
+          - http://geneontology.org/docs/download-go-annotations/ 
+          - http://current.geneontology.org/products/pages/downloads.html
+        """
+        if filepath == "":
+            self._filepath = "src_data_files/goa_human.gaf"
+        else:
+            if "src_data_files/" not in filepath:
+                self._filepath = f"src_data_files/{filepath}"
+            else: # 'src_data_files/' is already in the filepath
+                self._filepath = filepath
+
         self._check_file()
         if self._check_file():
             with open(self._filepath, 'r') as read_content:
@@ -444,6 +455,96 @@ class GOAnnotiationsFile:
         
         terms_list = [k for k,v in self.terms_dict.items()]
         return terms_list
+
+    """ # THIS IS INVALID, orthologs cannot be queried from the GOAF !!!
+    def get_all_product_orthologs(self, product_id:str):
+        #""
+        #Gets all orthologs in line for a specific product (gene) id. This function uses GOAF for the ortholog query.
+        #TODO: check if this is actually even valid.
+        #""
+        # if a user sends a uniprotkb product_id here, default to get_uniprotkb_genename
+        if "UniProtKB" in product_id:
+            genename =  self.get_uniprotkb_genename(product_id)
+            if genename != None:
+                return genename
+        
+        possible_orthologs = {} # a dict between possible orthologs and the readlines where they are found
+        for line in self._readlines:
+            if product_id in line:
+                line_elements = line.split("\t")
+                if line_elements[1] != product_id:
+                    # query the 8th line element With (or) From
+                    # GOAF line elements: (1) DB (2) DB Object Id (3) DB Object Symbol (4) Qualifier (optional) (5) GO ID (6) DB:Reference (7) Evidence Code (8) With (or) from (optional) (9) Aspect ...
+                    # We are interested in the 8th line element, but it is optional. Furthermore, Qualifier (4th line element) is also optional.
+                    # However, we are certain that the "With or from" line element will appear after the Evidence Code (which is always a 3-character code - http://geneontology.org/docs/guide-go-evidence-codes/) and before the
+                    # Aspect, which can be either "P" (biological process), "F" (biological function) or "C" (cellular component). If the difference between the evidence code index and the aspect index (index = position in the array) is
+                    # greater than 1, then we are sure that the element between them is a "With or from" element.
+                    evidence_code = ""
+                    aspect = ""
+                    evidence_code_index = -1
+                    aspect_index = -1
+                    i=0
+                    for line_element in line_elements:
+                        if len(line_element) == 3: # this is the Evidence Code
+                            evidence_code = line_element
+                            evidence_code_index = i
+                        if len(line_element) == 1 and i > evidence_code_index: # this is the Aspect
+                            aspect = line_element
+                            aspect_index = i
+                        i+=1
+                    if aspect_index - evidence_code_index > 1:
+                        # orthologs exist
+                        orthologs = 
+        """
+    
+    def get_uniprotkb_genename(self, product_id:str):
+        """
+        Gets the gene name (DB Object Symbol) for the supplied UniProtKB product_id.
+
+        Parameters:
+          - product_id: must be in the format UniProtKB:XXXXX 
+        
+        Algorithm:
+            If the product_id is a UniProtKB, then the GOAF is browsed to obtain the gene name, which
+            is the third line element (DB Object Symbol) in the GOAF. If the parse doesnt find the uniprot id
+            (XXXXX) in the GOAF as the second line element, then the supplied UniProtKB may be an animal protein.
+            In this case, the program also records any lines that don't have (XXXXX) as the second line element, but still
+            contain the (XXXXX) in the line. The program reverts to these lines and attempts to find a human ortholog. If
+            all lines result in the same human ortholog, then the search was successful. TODO: implement logic if multiple different
+            orthologs are found.
+        """
+        if "UniProtKB" in product_id:
+            product_id = product_id.split(":")[1] # gets the raw id; UniProtKB:XXXXX -> XXXXX
+        else:
+            logger.warning(f"get_uniprotkb_genename unsucessful for {product_id}. Product id must be supplied in the UniProtKB:XXXXX format!")
+            return None
+        
+        gene_name = ""
+        ortholog_lines = [] # lines which contain product_id, but not as the second element
+        for line in self._readlines:
+            if product_id in line:
+                line_elements = line.split("\t")
+                if line_elements[1] == product_id:
+                    gene_name = line_elements[2]
+                    return gene_name
+                elif line_elements[1] != product_id:
+                    ortholog_lines.append(line)
+        
+        if gene_name == "" and len(ortholog_lines) > 0:
+            # goaf file was read, but product_id was never the second line element,
+            # but was found in some lines to be an ortholog to some genes? or is maybe involved in some genes?
+            # TODO: implement logic
+
+            # for ortho_line in ortholog_lines:
+            #   ...
+
+            gene_name = "" # delete this
+        
+        if gene_name == "":
+            # if gene_name is still not found, return None
+            
+            return None
+
         
 class UniProtAPI:
     """
@@ -973,11 +1074,25 @@ class EnsemblAPI:
 
 
 class HumanOrthologFinder:
-    def __init__(self):
-        self.zfin = ZFINHumanOrthologFinder()
-        self.xenbase = XenbaseHumanOrthologFinder()
-        self.mgi = MGIHumanOrthologFinder()
-        self.rgd = RGDHumanOrthologFinder()
+    def __init__(self, zfin_filepath:str = "", xenbase_filepath:str = "", mgi_filepath:str = "", rgd_filepath:str="", goaf_filepath:str = ""):
+        """
+        Constructs the HumanOrthologFinder, which uses file-based search on pre-downloaded 3rd party database ortholog mappings to find
+        ortholog genes.
+
+        Parameters:
+          - (str) zfin_filepath: Filepath to the Zebrafish Information Network human ortholog mapping file, found at https://zfin.org/downloads -> Orthology Data -> Human and Zebrafish Orthology -> link = https://zfin.org/downloads/human_orthos.txt
+          - (str) xenbase_filepath: Filepath to the Xenbase human ortholog mapping file, found at https://www.xenbase.org/ -> Download -> Data Download (https://www.xenbase.org/xenbase/static-xenbase/ftpDatafiles.jsp) -> Data Reports -> Orthology -> Xenbase genes to Human Entrez Genes -> link: https://download.xenbase.org/xenbase/GenePageReports/XenbaseGeneHumanOrthologMapping.txt
+          - (str) mgi_filepath: Filepath to the Mouse Genome Informatics human ortholog mapping file, found at: https://www.informatics.jax.org/ -> Download (https://www.informatics.jax.org/downloads/reports/index.html) -> Vertebrate homology -> Human and Mouse Homology Classes with Sequence information (tab-delimited) -> link = https://www.informatics.jax.org/downloads/reports/HOM_MouseHumanSequence.rpt
+          - (str) rgd_filepath: Filepath to the Rat Genoma Database human ortholog mapping file, found at: https://rgd.mcw.edu/ -> Data -> Download -> data/release -> RGD_ORTHOLOGS.txt -> link = https://download.rgd.mcw.edu/data_release/RGD_ORTHOLOGS.txt
+                                TODO: RGD also offers various other ortholog files, of use may be the Ensembl ortholog file, which also offers some ensembl ids: RGD_ORTHOLOGS_Ensembl.txt (https://download.rgd.mcw.edu/data_release/RGD_ORTHOLOGS_Ensembl.txt)
+          
+        The files are expected to reside in root/src_data_files/ folder.
+        """ 
+        self.zfin = ZFINHumanOrthologFinder(filepath=zfin_filepath)
+        self.xenbase = XenbaseHumanOrthologFinder(filepath=xenbase_filepath)
+        self.mgi = MGIHumanOrthologFinder(filepath=mgi_filepath)
+        self.rgd = RGDHumanOrthologFinder(filepath=rgd_filepath)
+        self.goaf = GOAnnotiationsFile()
 
     def find_human_ortholog(self, product):
         """
@@ -985,31 +1100,32 @@ class HumanOrthologFinder:
 
         Args:
             product (str): The product (id) for which to find the human ortholog.
-
+        
         Returns:
             The human gene symbol or None if no human ortholog was found.
         """
         if "ZFIN" in product:
             result = self.zfin.find_human_ortholog(product) # returns [0]: gene symbol, [1]: long name of the gene
-            return result[0] if result != None else None
+            human_gene_symbol = result[0] if result != None else None
             #human_gene_symbol = self.zfin.find_human_ortholog(product)[0]
             #return None if "Error" in human_gene_symbol else human_gene_symbol
         elif "Xenbase" in product:
             result = self.xenbase.find_human_ortholog(product)
-            return result[0] if result != None else None
+            human_gene_symbol = result[0] if result != None else None
             #human_gene_symbol = self.xenbase.find_human_ortholog(product)[0]
             #return None if "Error" in human_gene_symbol else human_gene_symbol
         elif "MGI" in product:
             human_gene_symbol = self.mgi.find_human_ortholog(product)
-            return human_gene_symbol if (human_gene_symbol != None) else None
+            human_gene_symbol = human_gene_symbol if (human_gene_symbol != None) else None
             # return None if "Error" in human_gene_symbol else human_gene_symbol
         elif "RGD" in product:
             human_gene_symbol = self.rgd.find_human_ortholog(product)
-            return human_gene_symbol if (human_gene_symbol != None) else None
+            human_gene_symbol = human_gene_symbol if (human_gene_symbol != None) else None
             # return None if "Error" in human_gene_symbol else human_gene_symbol
         else:
             logger.info(f"No database found for {product}")
-            return None
+        
+        return human_gene_symbol
     
     async def find_human_ortholog_async(self, product):
         # TODO: START FROM HERE. Create async file browsing for all other ortholog finders.
@@ -1036,11 +1152,26 @@ class HumanOrthologFinder:
             return None
 
 class ZFINHumanOrthologFinder(HumanOrthologFinder):
-    def __init__(self):
-        self._filepath = "src_data_files/zfin_human_ortholog_mapping.txt"
+    def __init__(self, filepath:str=""):
+        """
+        This class allows the user to search Zebrafish human orthologs. The human orthologs mapping file should be downloaded
+        from the ZFIN webpage: https://zfin.org/downloads -> Orthology Data -> Human and Zebrafish Orthology -> link = https://zfin.org/downloads/human_orthos.txt
+
+        Parameters:
+          - (str) filepath: if left to default value, self._filepath will be set to "src_data_files/zfin_human_ortholog_mapping.txt", else
+                            self._filepath will be set to src_data_files/{filepath}
+        """
+        if filepath == "":
+            self._filepath = "src_data_files/zfin_human_ortholog_mapping.txt"
+        else:
+            if "src_data_files/" not in filepath:
+                self._filepath = f"src_data_files/{filepath}"
+            else:
+                self._filepath = filepath
         self._check_file()
         with open(self._filepath, "r") as read_content:
             self._readlines = read_content.readlines()
+        logger.info(f"ZFINHumanOrthologFinder setup ok: {len(self._readlines)} readlines.")
     
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
@@ -1110,11 +1241,27 @@ class ZFINHumanOrthologFinder(HumanOrthologFinder):
         # return [f"ZfinError_No-human-ortholog-found:product_id={product_id}"]
 
 class XenbaseHumanOrthologFinder(HumanOrthologFinder):
-    def __init__(self):
-        self._filepath = "src_data_files/xenbase_human_ortholog_mapping.txt"
+    def __init__(self, filepath:str=""):
+        """
+        This class allows the user to search Xenbase human orthologs. The human orthologs mapping file should be downloaded
+        from the Xenbase webpage: https://www.xenbase.org/ -> Download -> Data Download (https://www.xenbase.org/xenbase/static-xenbase/ftpDatafiles.jsp) -> Data Reports -> Orthology -> Xenbase genes to Human Entrez Genes -> link: https://download.xenbase.org/xenbase/GenePageReports/XenbaseGeneHumanOrthologMapping.txt
+        
+        Parameters:
+          - (str) filepath: if left to default value, self._filepath will be set to "src_data_files/xenbase_human_ortholog_mapping.txt", else
+                            self._filepath will be set to src_data_files/{filepath}
+        """
+        if filepath == "":
+            self._filepath = "src_data_files/xenbase_human_ortholog_mapping.txt"
+        else:
+            if "src_data_files/" not in filepath:
+                self._filepath = f"src_data_files/{filepath}"
+            else:
+                self._filepath = filepath
+
         self._check_file()
         with open(self._filepath, "r") as read_content:
             self._readlines = read_content.readlines()
+        logger.info(f"XenbaseHumanOrthologFinder setup ok: {len(self._readlines)} readlines.")
     
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
@@ -1184,11 +1331,28 @@ class XenbaseHumanOrthologFinder(HumanOrthologFinder):
         # return [f"[XenbaseError_No-human-ortholog-found:product_id={product_id}"]
 
 class MGIHumanOrthologFinder(HumanOrthologFinder):
-    def __init__(self):
-        self._filepath = "src_data_files/mgi_human_ortholog_mapping.txt"
+    def __init__(self, filepath:str=""):
+        """
+        This class allows the user to search MGI human orthologs. The human orthologs mapping file should be downloaded
+        from the MGI webpage: Filepath to the Mouse Genome Informatics human ortholog mapping file, found at: 
+        https://www.informatics.jax.org/ -> Download (https://www.informatics.jax.org/downloads/reports/index.html) -> Vertebrate homology -> Human and Mouse Homology Classes with Sequence information (tab-delimited) -> link = https://www.informatics.jax.org/downloads/reports/HOM_MouseHumanSequence.rpt
+        
+        Parameters:
+          - (str) filepath: if left to default value, self._filepath will be set to "src_data_files/mgi_human_ortholog_mapping.txt", else
+                            self._filepath will be set to src_data_files/{filepath}
+        """
+        if filepath == "":
+            self._filepath = "src_data_files/mgi_human_ortholog_mapping.txt"
+        else:
+            if "src_data_files/" not in filepath:
+                self._filepath = f"src_data_files/{filepath}"
+            else:
+                self._filepath = filepath
+
         self._check_file()
         with open(self._filepath, "r") as read_content:
             self._readlines = read_content.readlines()
+        logger.info(f"MGIHumanOrthologFinder setup ok: {len(self._readlines)} readlines.")
     
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
@@ -1298,11 +1462,28 @@ class MGIHumanOrthologFinder(HumanOrthologFinder):
         # return f"[MgiError_No-human-ortholog-found:product_id={product_id}"
 
 class RGDHumanOrthologFinder(HumanOrthologFinder):
-    def __init__(self):
-        self._filepath = "src_data_files/rgd_human_ortholog_mapping.txt"
+    def __init__(self, filepath:str=""):
+        """
+        This class allows the user to search RGD human orthologs. The human orthologs mapping file should be downloaded
+        from the RGD webpage: https://rgd.mcw.edu/ -> Data -> Download -> data/release -> RGD_ORTHOLOGS.txt -> link = https://download.rgd.mcw.edu/data_release/RGD_ORTHOLOGS.txt
+                              TODO: RGD also offers various other ortholog files, of use may be the Ensembl ortholog file, which also offers some ensembl ids: RGD_ORTHOLOGS_Ensembl.txt (https://download.rgd.mcw.edu/data_release/RGD_ORTHOLOGS_Ensembl.txt)
+        
+        Parameters:
+          - (str) filepath: if left to default value, self._filepath will be set to "src_data_files/rgd_human_ortholog_mapping.txt", else
+                            self._filepath will be set to src_data_files/{filepath}
+        """
+        if filepath == "":
+            self._filepath = "src_data_files/rgd_human_ortholog_mapping.txt"
+        else:
+            if "src_data_files/" not in filepath:
+                self._filepath = f"src_data_files/{filepath}"
+            else:
+                self._filepath = filepath
+
         self._check_file()
         with open(self._filepath, "r") as read_content:
             self._readlines = read_content.readlines()
+        logger.info(f"RGDHumanOrthologFinder setup ok: {len(self._readlines)} readlines.")
     
 
     def _check_file(self):

@@ -28,7 +28,7 @@ class Product:
         A class representing a product (e.g. a gene or protein).
 
         Args:
-            id_synonyms (str): The list of ID of the product and synonyms. -> after ortholog translation it turns out that some products are the same. 
+            id_synonyms (str): The list of ID of the product and synonyms. -> after ortholog translation it turns out that some products are the same. Example: RGD:3774, Xenbase:XB-GENE-5818802, UniProtKB:Q9NTG7
             uniprot_id (str): The UniProt ID of the product.
             description (str): A description of the product.
             ensg_id (str): Ensembl gene ID (MAIN).
@@ -50,33 +50,102 @@ class Product:
         self.scores = {} if scores is None else scores.copy()
         self.had_orthologs_computed = had_orthologs_computed
         self.had_fetch_info_computed = had_fetch_info_computed
+        self._d_offline_online_ortholog_mismatch = False # if fetch_ortholog is queried with _d_compare_goaf set to True, this variable will be set to True if there is a mismatch in the gene names returned from the online and offline query algorithms.
+        self._d_offline_online_ortholog_mismatch_values = ""
 
-    def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+    def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, goaf: Optional[GOAnnotiationsFile] = None, prefer_goaf = True, _d_compare_goaf = False) -> None:
+        """
+        Fetches the ortholog for this product. If the ortholog query was successful, then self.genename is updated to the correct human ortholog gene name.
+
+        Parameters:
+          - (HumanOrthologFinder) human_ortholog_finder
+          - (UniProtAPI) uniprot_api
+          - (EnsemblAPI) ensembl_api
+          - (GOAnnotationsFile) goaf
+          - (bool) prefer_goaf: see explanation in the Algorithm section
+          - (bool) _d_compare_goaf: if true, will attempt ortholog search both from offline and online algorithms and report if the results are the same
+
+        Algorithm:
+            If there is only one id_synonym (eg. UniProtKB:Q9NTG7) and that id_synonym is of type UniProtKB, then
+            UniProtAPI is used to obtained information about this gene. A successful query returns a dictionary, which also
+            contains the genename field (which updates self.genename to the queried genename)
+
+            If there is only one id_synonym and it is not of type UniProtKB, then HumanOrthologFinder is used to attempt a file-based
+            search for the ortholog (files from all the third party databases are used). 
+            
+            The user also has an option to supply a GO Annotations File and direct the program to first browse the GOAF and the 3rd party
+            database files for orthologs ("offline" approach) using the prefer_goaf parameter. By default, if a GOAF is provided, it will be preferably used.
+
+            If the file-based search doesn't work, then EnsemblAPI is used as a final attempt to find a human ortholog. The first call (ensembl_api.get_human_ortholog)
+            returns an ensg_id, which is then used in another call to ensembl_api.get_info in order to obtain the gene name from the ensg_id.
+        
+            TODO: If there are multiple id_synonym(s), currently only the first is browsed. Implement logic for many id_synonyms / check if there are any products with multiple id synonyms.
+        """
+        DROP_MIRNA_FROM_ENSEMBL_QUERY = True # returns None if Ensembl query returns a miRNA (MIRxxx) as the gene name.
+
         if not human_ortholog_finder:
             human_ortholog_finder = HumanOrthologFinder()
         if not uniprot_api:
             uniprot_api = UniProtAPI()
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
+        
+        # *** offline (GOAF) and 3rd-party-database-file based analysis ***
+        offline_queried_ortholog = None
+        if prefer_goaf == True or _d_compare_goaf == True:
+            if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
+                # find the DB Object Symbol in the GOAF. This is the third line element. Example: UniProtKB	Q8NI77	KIF18A	located_in	GO:0005737	PMID:18680169	IDA		C	Kinesin-like protein KIF18A	KIF18A|OK/SW-cl.108	protein	taxon:9606	20090818	UniProt -> KIF18A
+                self.genename = goaf.get_uniprotkb_genename(self.id_synonyms[0])
+            elif len(self.id_synonyms) == 1 and 'UniProtKB' not in self.id_synonyms[0]:
+                # do a file-based ortholog search using HumanOrthologFinder
+                human_ortholog_gene_id = human_ortholog_finder.find_human_ortholog(self.id_synonyms[0])
+                offline_queried_ortholog = human_ortholog_gene_id # this is used for acceleration so as not to repeat find_human_ortholog in the online algorithm section
+                if human_ortholog_gene_id != None:
+                    self.genename = human_ortholog_gene_id
 
-        if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
-            if self.uniprot_id == None:
-                info_dict = uniprot_api.get_uniprot_info(self.id_synonyms[0]) # bugfix
-            else:
-                info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
-            self.genename = info_dict.get("genename")
-        elif len(self.id_synonyms) == 1:
-            human_ortholog_gene_id = human_ortholog_finder.find_human_ortholog(self.id_synonyms[0])
-            if human_ortholog_gene_id is None:
-                logger.warning(f"human ortholog finder did not find ortholog for {self.id_synonyms[0]}")
-                human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0]) # attempt ensembl search
-                if human_ortholog_gene_ensg_id is not None:
-                    enst_dict = ensembl_api.get_info(human_ortholog_gene_ensg_id)
-                    self.genename = enst_dict.get("genename")
-                # else: # this is obsolete
-                    # return # search was unsuccessful
-            else:
-                self.genename = human_ortholog_gene_id
+        # *** online and 3rd-party-database-file based analysis ***
+        if _d_compare_goaf == True or prefer_goaf == False:
+            if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
+                if self.uniprot_id == None:
+                    info_dict = uniprot_api.get_uniprot_info(self.id_synonyms[0]) # bugfix
+                else:
+                    info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
+                # if compare is set to True, then only log the comparison between
+                if _d_compare_goaf == True:
+                    if self.genename != info_dict.get("genename"):
+                        logger.warning(f"GOAF-obtained genename ({self.genename}) is not the same as UniProtKB-obtained genename ({info_dict.get('genename')}) for {self.id_synonyms}")
+                        self._d_offline_online_ortholog_mismatch = True
+                        self._d_offline_online_ortholog_mismatch_values = f"[{self.id_synonyms[0]}]: online = {info_dict.get('genename')}, offline = {self.genename}; type = uniprot query"
+                else:
+                    self.genename = info_dict.get("genename")
+
+            elif len(self.id_synonyms) == 1 and 'UniProtKB' not in self.id_synonyms[0]:
+                if offline_queried_ortholog == None: # if algorithm enters this section due to _d_compare_goaf == True, then this accelerates code, as it prevents double calculations
+                    human_ortholog_gene_id = human_ortholog_finder.find_human_ortholog(self.id_synonyms[0]) # file-based search; alternative spot for GOAF analysis
+                else:
+                    human_ortholog_gene_id = offline_queried_ortholog
+                if human_ortholog_gene_id is None: # if file-based search finds no ortholog
+                    logger.warning(f"human ortholog finder did not find ortholog for {self.id_synonyms[0]}")                    
+                    human_ortholog_gene_ensg_id = ensembl_api.get_human_ortholog(self.id_synonyms[0]) # attempt ensembl search
+                    if human_ortholog_gene_ensg_id is not None:
+                        enst_dict = ensembl_api.get_info(human_ortholog_gene_ensg_id)
+                        human_ortholog_gene_id = enst_dict.get("genename")
+                        if human_ortholog_gene_id != None:
+                            if DROP_MIRNA_FROM_ENSEMBL_QUERY == True and "MIR" in human_ortholog_gene_id:
+                                human_ortholog_gene_id = None # Ensembl query returned a miRNA, return None
+                        if _d_compare_goaf == True:
+                            if self.genename != human_ortholog_gene_id:
+                                logger.warning(f"GOAF-obtained genename ({self.genename}) is not the same as Ensembl-obtained genename ({human_ortholog_gene_id}) for {self.id_synonyms}")
+                                self._d_offline_online_ortholog_mismatch = True
+                                self._d_offline_online_ortholog_mismatch_values = f"[{self.id_synonyms[0]}]: online = {human_ortholog_gene_id}, offline = {self.genename}, type = ensembl query"
+                        else:
+                            self.genename = enst_dict.get("genename")
+                else:
+                    if _d_compare_goaf == True:
+                        if self.genename != human_ortholog_gene_id: # with the current workflow, these will always be the same
+                            logger.warning(f"GOAF-obtained genename ({self.genename}) is not the same as file-search-obtained-genename ({human_ortholog_gene_id}) for {self.id_synonyms}")
+                    else: 
+                        self.genename = human_ortholog_gene_id
         
         self.had_orthologs_computed = True
                 
@@ -570,7 +639,7 @@ class ReverseLookup:
             self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_ortholog_products(self, refetch:bool = False, run_async = False, max_connections=100, req_delay=0.5, semaphore_connections = 10) -> None:
+    def fetch_ortholog_products(self, refetch:bool = False, run_async = False, use_goaf = False, max_connections=100, req_delay=0.5, semaphore_connections = 10) -> None:
         """
         This function tries to find the orthologs to any non-uniprot genes (products) associated with a GO Term.
 
@@ -609,7 +678,14 @@ class ReverseLookup:
         self.timer.set_start_time()
 
         try:
-            if run_async == True:
+            if use_goaf == True:
+                """
+                Use the GO Annotations File to query orthologs.
+                # TODO: implement async goaf parsing
+                """
+                # TODO: with logging_redirect_tqdm
+
+            elif run_async == True:
                 asyncio.run(self._fetch_ortholog_products_async(refetch=refetch, max_connections=max_connections, req_delay=req_delay, semaphore_connections=semaphore_connections))
             else:
                 human_ortholog_finder = HumanOrthologFinder()
@@ -633,6 +709,9 @@ class ReverseLookup:
         if "fetch_ortholog_products" not in self.execution_times:
             self.execution_times["fetch_ortholog_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
+    
+    def fetch_ortholog_products_goaf(goaf:GOAnnotiationsFile, ):
+        return 0
     
     async def _fetch_ortholog_products_async(self, refetch:bool = True, max_connections = 100, req_delay = 0.5, semaphore_connections = 10):
         """
