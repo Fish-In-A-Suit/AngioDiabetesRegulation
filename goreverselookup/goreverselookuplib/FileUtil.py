@@ -153,3 +153,10 @@ class FileUtil():
                 if "\n" not in line:
                     line = f"{line}\n"
                 f.write(line)
+    
+    @classmethod
+    def is_file_empty(cls, filepath:str):
+        """
+        Checks if 'filepath' is an empty file. Returns True if the file is empty.
+        """
+        return True if os.path.getsize(filepath) == 0 else False

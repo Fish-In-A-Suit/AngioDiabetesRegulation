@@ -1,5 +1,5 @@
 import time
-from datetime import timedelta
+from datetime import datetime, timedelta
 import logging
 logger = logging.getLogger(__name__)
 
@@ -39,3 +39,26 @@ class Timer:
             logger.info(f"{prefix}{self.get_elapsed_time()}")
         else:
             print(f"{prefix}{self.get_elapsed_time()}")
+    
+    @classmethod
+    def get_current_time(cls):
+        """
+        Gets the current time and returns it in the format "%Y-%m-%d %H:%M:%S"
+        """
+        current_time = datetime.now()
+        formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+        return formatted_time
+    
+    @classmethod
+    def compare_time(cls, timestamp_one:str, timestamp_two:str) -> bool:
+        """
+        Compares timestamp_two against timestamp_one. If timestamp_two is greater than timestamp_one
+        (aka timestamp_two was recorded at a time later than timestamp_one), the function returns True.
+        
+        The input timestamps must be supplied in the format "%Y-%m-%d %H:%M:%S"
+        """
+        format_str = "%Y-%m-%d %H:%M:%S"
+        time_one = datetime.strptime(timestamp_one, format_str)
+        time_two = datetime.strptime(timestamp_two, format_str)
+    
+        return time_two > time_one

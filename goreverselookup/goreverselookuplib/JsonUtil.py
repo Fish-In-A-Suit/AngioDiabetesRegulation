@@ -10,10 +10,39 @@ logger = logging.getLogger(__name__)
 
 class JsonUtil():
     @classmethod
-    def save_json(self, data_dictionary:dict, filepath:str):
+    def load_json(cls, filepath:str):
+        """
+        Loads a json file and returns the json object (a dictionary).
+
+        Parameters:
+          - (str) filepath
+        """
+        if not os.path.isabs(filepath):
+            fileutil = FileUtil()
+            filepath = fileutil.find_file(filepath) # attempt backtrace file search
+            # current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
+            # filepath = os.path.join(current_dir, filepath)
+        
+        # bugfix: if filepath is empty, I want load_json to return {} instead of JSONDecodeError
+        if FileUtil.is_file_empty(filepath):
+            return {}
+        
+        with open(filepath, "r") as f:
+            data = json.load(f)
+            return data
+        
+    @classmethod
+    def save_json(cls, data_dictionary:dict, filepath:str):
         """
         Saves the data_dictionary as json to the filepath.
+
+        Parameters:
+          - (dict) data_dictionary: the data to be saved as the json
+          - (str) filepath: the filepath where the json is to be stored
         """
+        if ".json" not in filepath:
+            filepath = f"{filepath}.json"
+
         # write to file
         try: # this works on mac, not on windows
             current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))

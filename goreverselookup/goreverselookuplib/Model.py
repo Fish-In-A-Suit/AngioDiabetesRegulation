@@ -19,6 +19,7 @@ import aiohttp
 from .JsonUtil import JsonToClass, SimpleNamespaceUtil
 from types import SimpleNamespace
 from .GOTerm import GOTerm # to avoid circular imports, as AnnotationProcessor now uses GOTerm.
+from .CacheUtils import ConnectionCacher
 from contextlib import asynccontextmanager
 
 logger = logging.getLogger(__name__)
@@ -54,7 +55,7 @@ class Product:
         self._d_offline_online_ortholog_mismatch = False # if fetch_ortholog is queried with _d_compare_goaf set to True, this variable will be set to True if there is a mismatch in the gene names returned from the online and offline query algorithms.
         self._d_offline_online_ortholog_mismatch_values = ""
 
-    def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, goaf: Optional[GOAnnotiationsFile] = None, prefer_goaf = True, _d_compare_goaf = False) -> None:
+    def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, goaf: Optional[GOAnnotiationsFile] = None, prefer_goaf = False, _d_compare_goaf = False) -> None:
         """
         Fetches the ortholog for this product. If the ortholog query was successful, then self.genename is updated to the correct human ortholog gene name.
 
@@ -96,7 +97,10 @@ class Product:
         if prefer_goaf == True or _d_compare_goaf == True:
             if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
                 # find the DB Object Symbol in the GOAF. This is the third line element. Example: UniProtKB	Q8NI77	KIF18A	located_in	GO:0005737	PMID:18680169	IDA		C	Kinesin-like protein KIF18A	KIF18A|OK/SW-cl.108	protein	taxon:9606	20090818	UniProt -> KIF18A
-                self.genename = goaf.get_uniprotkb_genename(self.id_synonyms[0])
+                if goaf != None:
+                    self.genename = goaf.get_uniprotkb_genename(self.id_synonyms[0])
+                else:
+                    logger.warning(f"GOAF wasn't supplied as parameter to the (Product).fetch_ortholog function!")
             elif len(self.id_synonyms) == 1 and 'UniProtKB' not in self.id_synonyms[0]:
                 # do a file-based ortholog search using HumanOrthologFinder
                 human_ortholog_gene_id = human_ortholog_finder.find_human_ortholog(self.id_synonyms[0])
@@ -107,9 +111,9 @@ class Product:
         # *** online and 3rd-party-database-file based analysis ***
         if _d_compare_goaf == True or prefer_goaf == False:
             if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
-                if self.uniprot_id == None:
+                if self.uniprot_id == None: # TODO: REPLACE THESE TWO WITH THE goaf.get_uniprotkb_genename, as it is more successful and does the same as the uniprot query !!!
                     info_dict = uniprot_api.get_uniprot_info(self.id_synonyms[0]) # bugfix
-                else:
+                else: # self.uniprot_id exists
                     info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
                 # if compare is set to True, then only log the comparison between
                 if _d_compare_goaf == True:
@@ -640,7 +644,7 @@ class ReverseLookup:
             self.execution_times["create_products_from_goterms"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_ortholog_products(self, refetch:bool = False, run_async = False, use_goaf = False, max_connections=100, req_delay=0.5, semaphore_connections = 10, use_request_caching:bool = True) -> None:
+    def fetch_ortholog_products(self, refetch:bool = False, run_async = False, use_goaf = False, max_connections=100, req_delay=0.5, semaphore_connections = 10) -> None:
         """
         This function tries to find the orthologs to any non-uniprot genes (products) associated with a GO Term.
 
@@ -649,11 +653,12 @@ class ReverseLookup:
           - (bool) run_async: if True, will send requests asynchronously
           - (int) max_connections: the maximum amount of connections the asynchronous client session will send to the server
           - (float) req_delay: the delay between connections in secondsž
-          - (bool) use_request_caching: If set to True, will cache the http requests to the server. When using async requests with ortholog fetch, the first full run of all products is successful, but if
-                                        the user decides to run async ortholog query for the same products again, the server will start sending 429:TooManyRequests error. Therefore, this option saves (caches)
-                                        the requests in a dictionary, where the key is the request url and the value is a dictionary with request info (response, query timestamp, ...). When using async requests,
-                                        the responses of the previous cached requests are used, if the request urls are the same. TODO: daj userju možnost, da selecta "starost" requesta aka da lahko v funkcijo poslje "7 dni"
-                                        in bo potem uporabilo requeste, ki so "mlajsi" od 7 dni.
+        
+        This function relies on request caching. It will cache the http requests to the server. When using async requests with ortholog fetch, the first full run of all products is successful, but if
+        the user decides to run async ortholog query for the same products again, the server will start sending 429:TooManyRequests error. Therefore, this option saves (caches)
+        the requests in a dictionary, where the key is the request url and the value is a dictionary with request info (response, query timestamp, ...). When using async requests,
+        the responses of the previous cached requests are used, if the request urls are the same. TODO: daj userju možnost, da selecta "starost" requesta aka da lahko v funkcijo poslje "7 dni"
+        in bo potem uporabilo requeste, ki so "mlajsi" od 7 dni.
 
         NOTE: This function is recalculation-optimised based on the "genename" field of the Product. If the model is loaded from data.json and a specific
         Product already had orthologs fetched, then it is skipped during the fetch_ortholog call.
@@ -1469,13 +1474,7 @@ class ReverseLookup:
 
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
-        if not os.path.isabs(filepath):
-            fileutil = FileUtil()
-            filepath = fileutil.find_file(filepath) # attempt backtrace file search
-            # current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
-            # filepath = os.path.join(current_dir, filepath)
-        with open(filepath, "r") as f:
-            data = json.load(f)
+        data = JsonUtil.load_json(filepath)
         target_processes = data['target_processes']
         miRNA_overlap_treshold = data['miRNA_overlap_treshold']
 

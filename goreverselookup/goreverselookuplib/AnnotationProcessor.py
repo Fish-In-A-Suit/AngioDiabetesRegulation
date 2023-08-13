@@ -10,6 +10,7 @@ from json import JSONDecodeError
 from tqdm import trange, tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 from .FileUtil import FileUtil
+from .CacheUtils import ConnectionCacher, Cacher
 import aiohttp, asyncio
 
 import logging
@@ -364,7 +365,7 @@ class GOAnnotiationsFile:
         if os.path.exists(self._filepath):
             return True
         else:
-            url = "http://geneontology.org/gene-associations/goa_human.gaf.gz"
+            url = f"http://geneontology.org/gene-associations/goa_human.gaf.gz"
             # download the gzip file and save it to a temporary file
             temp_file, _ = urllib.request.urlretrieve(url)
 
@@ -564,21 +565,30 @@ class UniProtAPI:
         self.s = session
         self.uniprot_query_exceptions = []
     
-    def get_uniprot_id(self, gene_name):
+    def get_uniprot_id(self, gene_name, get_url_only = False):
         """
         Given a gene name, returns the corresponding UniProt ID using the UniProt API.
 
         Parameters:
         - gene_name (str): name of the gene to search for.
-        - retries (int): maximum number of times to retry the request in case of network errors.
-        - timeout (int): timeout in seconds for the request.
+        - TODO: retries (int): maximum number of times to retry the request in case of network errors.
+        - TODO: timeout (int): timeout in seconds for the request.
+        - get_url_only: only return the query url without performing the query
+        
+        This function uses request caching. It will use previously saved url request responses instead of performing new (the same as before) connections
 
         Returns:
-        - str: UniProt ID if found, None otherwise.
+        - str: UniProt ID if found, None otherwise OR the query url, if get_url_only is True
         """
 
         # Define the URL to query the UniProt API
         url = f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl"
+
+        # Check if the url is cached
+        # previous_response = ConnectionCacher.get_url_response(url)
+        previous_response = Cacher.get_data("url", url)
+        if previous_response != None:
+            return previous_response
 
         # Try the request up to `retries` times
         try:
@@ -601,7 +611,10 @@ class UniProtAPI:
         elif len(results) == 1:
             uniprot_id = results[0]["primaryAccession"]
             logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 result.")
-            return "UniProtKB:" + uniprot_id
+            return_value = "UniProtKB:" + uniprot_id
+            # ConnectionCacher.store_url(url, return_value)
+            Cacher.store_data("url", url, return_value)
+            return return_value
 
         # If multiple results were found, filter out the non-reviewed ones
         reviewed_ids = []
@@ -621,7 +634,10 @@ class UniProtAPI:
         elif len(reviewed_ids) == 1:
             uniprot_id = reviewed_ids[0]["primaryAccession"]
             logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 reviewed result.")
-            return "UniProtKB:" + uniprot_id
+            return_value = "UniProtKB:" + uniprot_id
+            # ConnectionCacher.store_url(url, return_value)
+            Cacher.store_data("url", url, return_value)
+            return return_value
 
         # If multiple reviewed results were found, ask the user to choose one
         logger.info(f"Multiple reviewed results found for {gene_name}. Please choose the correct UniProt ID from the following list:")
@@ -640,8 +656,11 @@ class UniProtAPI:
         if choice.isdigit() and 1 <= int(choice) <= len(reviewed_ids):  # check if the user's choice is valid
             # get the UniProt ID of the chosen result and return it
             uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
-            logger.warning(f"Auto-selectd first reviewed result for {gene_name}!")
-            return "UniProtKB:" + uniprot_id
+            logger.warning(f"Auto-selected first reviewed result for {gene_name}!")
+            return_value = "UniProtKB:" + uniprot_id
+            # ConnectionCacher.store_url(url, return_value)
+            Cacher.store_data("url", url, return_value)
+            return return_value
         else:
             # raise an error if the user's choice is not valid
             raise ValueError(f"Invalid choice: {choice}")
@@ -649,6 +668,11 @@ class UniProtAPI:
     def get_uniprot_info(self, uniprot_id: str) -> dict:
         """
         Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
+        
+        Parameters:
+          - (str) uniprot_id
+        
+        This function automatically uses request caching. It will use previously saved url request responses instead of performing new (the same as before) connections
         """
         # Extract UniProt ID if given in "database:identifier" format
         if ":" in uniprot_id:
@@ -656,6 +680,12 @@ class UniProtAPI:
 
         # Construct UniProt API query URL
         url = f"https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
+
+        # Check if the url is cached
+        # previous_response = ConnectionCacher.get_url_response(url)
+        previous_response = Cacher.get_data("url", url)
+        if previous_response != None:
+            return previous_response
 
         try:
             response = requests.get(url, timeout=5)
@@ -665,7 +695,10 @@ class UniProtAPI:
             return {}
         
         results = response.json()["results"]
-        return self._process_uniprot_info_query_results(results, uniprot_id)
+        return_value = self._process_uniprot_info_query_results(results, uniprot_id)
+        # ConnectionCacher.store_url(url, return_value)
+        Cacher.store_data("url", url, return_value)
+        return return_value
         
     def _return_mane_select_values_from_uniprot_query(self, result: dict) -> tuple:
         """
@@ -720,6 +753,12 @@ class UniProtAPI:
         # Construct UniProt API query URL
         url = f"https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
         
+        # Check if the url is cached
+        # previous_response = ConnectionCacher.get_url_response(url)
+        previous_response = Cacher.get_data("url", url)
+        if previous_response != None:
+            return previous_response
+
         # async with session.get(url) as response:
         #    results = await response.json()["results"]
         #    return self._process_uniprot_info_query_results(results, uniprot_id)
@@ -748,7 +787,11 @@ class UniProtAPI:
         
         response_json = await response.json()
         results = response_json["results"]
-        return self._process_uniprot_info_query_results(results, uniprot_id)
+
+        return_value = self._process_uniprot_info_query_results(results, uniprot_id)
+        # ConnectionCacher.store_url(url, return_value)
+        Cacher.store_data("url", url, return_value)
+        return return_value
         
 class EnsemblAPI:
     def __init__(self):
@@ -765,9 +808,14 @@ class EnsemblAPI:
         self.s = session
         self.ortholog_query_exceptions = [] # the list of exceptions during the ortholog query
 
-    def get_human_ortholog(self, id):
+    def get_human_ortholog(self, id:str):
         """
         Given an source ID, detect organism and returns the corresponding human ortholog using the Ensembl API.
+        
+        Parameters:
+          - (str) id
+        
+        This function uses request caching. It will use previously saved url request responses instead of performing new (the same as before) connections
         """
         if "ZFIN" in id:
             species = "zebrafish"
@@ -785,13 +833,22 @@ class EnsemblAPI:
             logger.info(f"No predefined organism found for {id}")
             return None
         url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
-        try:
-            response = self.s.get(url, headers={"Content-Type": "application/json"}, timeout=5)
-            response.raise_for_status()
-        except requests.exceptions.RequestException:
-            return None
-                
-        response_json = response.json()["data"][0]["homologies"]
+        
+        # Check if the url is cached
+        # previous_response = ConnectionCacher.get_url_response(url)
+        previous_response = Cacher.get_data("url", url)
+        if previous_response != None:
+            response_json = previous_response
+        else:
+            try:
+                response = self.s.get(url, headers={"Content-Type": "application/json"}, timeout=5)
+                response.raise_for_status()
+                response_json = response.json()["data"][0]["homologies"]
+                # ConnectionCacher.store_url(url, response=response_json)
+                Cacher.store_data("url", url, response_json)
+            except requests.exceptions.RequestException:
+                return None
+            
         if response_json == []:
             return None
         best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
@@ -816,19 +873,27 @@ class EnsemblAPI:
             logger.info(f"No predefined organism found for {id}")
             return None
         url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
-        try:
-            response = await session.get(url, headers={"Content-Type": "application/json"}, timeout=10)
-            # response.raise_for_status()
-        except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError) as e:
-            logger.warning(f"Exception for {id_url} for request: https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none. Exception: {str(e)}")
-            self.ortholog_query_exceptions.append({f"{id}": f"{str(e)}"})
-            return None
+        
+        # Check if the url is cached
+        # previous_response = ConnectionCacher.get_url_response(url)
+        previous_response = Cacher.get_data("url", url)
+        if previous_response != None:
+            response_json = previous_response
+        else:
+            try:
+                response = await session.get(url, headers={"Content-Type": "application/json"}, timeout=10)
+                # response.raise_for_status()
+                response_json = await response.json()
+                Cacher.store_data("url", url, response_json)
+            except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError) as e:
+                logger.warning(f"Exception for {id_url} for request: https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none. Exception: {str(e)}")
+                self.ortholog_query_exceptions.append({f"{id}": f"{str(e)}"})
+                return None
 
         # TODO: implement this safety check, server may send text only, which causes error (content_type == "text/plain")
         #if response.content_type == "application/json":
         #    response_json = await response.json()
-        response_json = await response.json()
-        logger.info(f"response_json: {response_json}; expr = {response_json==[]}")
+        
         if response_json == [] or "error" in response_json:
             return None
         elif response_json != [] or "error" not in response_json:
@@ -884,39 +949,69 @@ class EnsemblAPI:
             species = species_mapping.get(prefix, "human/") #defaults to human if not prefix "xxx:"
             endpoint = f"symbol/{species}{id_}"
 
+        url = f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1"
+        
         try:
-            response = self.s.get(
-                f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1",
-                headers={"Content-Type": "application/json"},
-                timeout=5,
-            )
-            response.raise_for_status()
-            response_json = response.json()
+            # Check if the url is cached
+            # previous_response = ConnectionCacher.get_url_response(url)
+            previous_response = Cacher.get_data("url", url)
+            if previous_response != None:
+                response_json = previous_response
+            else:
+                response = self.s.get(
+                    url,
+                    headers={"Content-Type": "application/json"},
+                    timeout=5,
+                    )
+                response.raise_for_status()
+                response_json = response.json()
+                # ConnectionCacher.store_url(url, response_json)
+                Cacher.store_data("url", url, response_json)
         except requests.exceptions.RequestException:
             # If the request fails, try the xrefs URL instead
             try:
-                response = self.s.get(
-                    f"https://rest.ensembl.org/xrefs/{endpoint}?",
-                    headers={"Content-Type": "application/json"},
-                    timeout=5,
-                )
-                response.raise_for_status()
-                response_json = response.json()
+                url = f"https://rest.ensembl.org/xrefs/{endpoint}?"
+                # Check if the url is cached
+                # previous_response = ConnectionCacher.get_url_response(url)
+                previous_response = Cacher.get_data("url", url)
+                if previous_response != None:
+                    response_json = previous_response
+                else: 
+                    response = self.s.get(
+                        url,
+                        headers={"Content-Type": "application/json"},
+                        timeout=5,
+                        )
+                    response.raise_for_status()
+                    response_json = response.json()
+                    # ConnectionCacher.store_url(url, response_json)
+                    Cacher.store_data("url", url, response_json)
+
                 # Use the first ENS ID in the xrefs response to make a new lookup request
                 ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
                 if ensembl_id:
-                    response = self.s.get(
-                        f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1",
-                        headers={"Content-Type": "application/json"},
-                        timeout=5,
-                    )
-                    response.raise_for_status()
-                    response_json = response.json()
+                    url = f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1"
+                    # Check if the url is cached
+                    # previous_response = ConnectionCacher.get_url_response(url)
+                    previous_response = Cacher.get_data("url", url)
+                    if previous_response != None:
+                        response_json = previous_response
+                    else:
+                        response = self.s.get(
+                            url,
+                            headers={"Content-Type": "application/json"},
+                            timeout=5,
+                            )
+                        response.raise_for_status()
+                        response_json = response.json()
+                        # ConnectionCacher.store_url(url, response_json)
+                        Cacher.store_data("url", url, response_json)
                 else:
                     raise Exception("no ensembl id returned")
             except Exception as e:
                 logger.warning(f"Failed to fetch Ensembl info for {id}.")
                 return {}          
+        
         # Extract gene information from API response
         ensg_id = response_json.get("id")
         name = response_json.get("display_name")
@@ -942,17 +1037,29 @@ class EnsemblAPI:
 
         if ensembl_transcript_id:
             try:
-                response = self.s.get(
-                    f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%",
-                    headers={"Content-Type": "application/json"},
-                    timeout=5,
-                )
-                response.raise_for_status()
-                response_json = response.json()
+                url = f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%"
+                # previous_response = ConnectionCacher.get_url_response(url)
+                previous_response = Cacher.get_data("url", url)
+                if previous_response != None:
+                    response_json = previous_response
+                else:
+                    response = self.s.get(
+                        url,
+                        headers={"Content-Type": "application/json"},
+                        timeout=5,
+                        )
+                    response.raise_for_status()
+                    response_json = response.json()
+                    # ConnectionCacher.store_url(url, response_json)
+                    Cacher.store_data("url", url, response_json)
             except requests.exceptions.RequestException:
                 pass
+            uniprot_id = ""
             uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
-
+            # this response: {'biotype': 'protein_coding', 'id': 'ENSG00000184895', 'display_name': 'SRY', 'species': 'homo_sapiens', 'strand': -1, 'db_type': 'core', 'canonical_transcript': 'ENST00000383070.2', 'start': 2786855, 'seq_region_name': 'Y', 'Transcript': [{'source': 'ensembl_havana', 'MANE': [{'type': 'MANE_Select', 'id': 'ENST00000383070', 'Parent': 'ENSG00000184895', 'species': 'homo_sapiens', 'start': 2786855, 'strand': -1, 'seq_region_name': 'Y', 'refseq_match': 'NM_003140.3', 'end': 2787682, 'db_type': 'core', 'object_type': 'mane', 'assembly_name': 'GRCh38', 'version': 2}], 'end': 2787682, 'Translation': {'id': 'ENSP00000372547', 'Parent': 'ENST00000383070', 'species': 'homo_sapiens', 'start': 2786989, 'end': 2787603, 'length': 204, 'db_type': 'core', 'version': 1, 'object_type': 'Translation'}, 'assembly_name': 'GRCh38', 'version': 2, 'logic_name': 'ensembl_havana_transcript_homo_sapiens', 'is_canonical': 1, 'object_type': 'Transcript', 'Parent': 'ENSG00000184895', 'Exon': [{'end': 2787682, 'db_type': 'core', 'object_type': 'Exon', 'version': 2, 'assembly_name': 'GRCh38', 'id': 'ENSE00001494622', 'start': 2786855, 'species': 'homo_sapiens', 'strand': -1, 'seq_region_name': 'Y'}], 'seq_region_name': 'Y', 'start': 2786855, 'db_type': 'core', 'display_name': 'SRY-201', 'id': 'ENST00000383070', 'biotype': 'protein_coding', 'strand': -1, 'species': 'homo_sapiens'}], 'end': 2787682, 'description': 'sex determining region Y [Source:HGNC Symbol;Acc:HGNC:11311]', 'source': 'ensembl_havana', 'object_type': 'Gene', 'version': 8, 'assembly_name': 'GRCh38', 'logic_name': 'ensembl_havana_gene_homo_sapiens'}
+            # throws an attribute error on the above line
+            # bugfix: TODO! Fix this bug if it ever happens again!
+               
         logger.debug(f"Received info data for id {id}.")
         return {
             "ensg_id": ensg_id,
@@ -993,33 +1100,58 @@ class EnsemblAPI:
             endpoint = f"symbol/{species}{id_}"
 
         try:
-            response = await session.get(
-                f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1",
-                headers={"Content-Type": "application/json"},
-                timeout=5
-                )
-            response.raise_for_status()
-            response_json = await response.json()
+            url = f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1"
+            # previous_response = ConnectionCacher.get_url_response(url)
+            previous_response = Cacher.get_data("url", url)
+            if previous_response != None:
+                response_json = previous_response
+            else:
+                response = await session.get(
+                    url,
+                    headers={"Content-Type": "application/json"},
+                    timeout=5
+                    )
+                response.raise_for_status()
+                response_json = await response.json()
+                # ConnectionCacher.store_url(url, response_json)
+                Cacher.store_data("url", url, response_json)
         except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
             # If the request fails, try the xrefs URL instead
             try:
-                response = await session.get(
-                    f"https://rest.ensembl.org/xrefs/{endpoint}?",
-                    headers={"Content-Type": "application/json"},
-                    timeout=5
-                )
-                response.raise_for_status()
-                response_json = await response.json()
-                # Use the first ENS ID in the xrefs response to make a new lookup request
-                ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
-                if ensembl_id:
+                url = f"https://rest.ensembl.org/xrefs/{endpoint}?"
+                # previous_response = ConnectionCacher.get_url_response(url)
+                previous_response = Cacher.get_data("url", url)
+                if previous_response != None:
+                    response_json = previous_response
+                else:
                     response = await session.get(
-                        f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1",
+                        f"https://rest.ensembl.org/xrefs/{endpoint}?",
                         headers={"Content-Type": "application/json"},
                         timeout=5
                     )
                     response.raise_for_status()
                     response_json = await response.json()
+                    # ConnectionCacher.store_url(url, response_json)
+                    Cacher.store_data("url", url, response_json)
+
+                # Use the first ENS ID in the xrefs response to make a new lookup request
+                ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
+                if ensembl_id:
+                    url = f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1"
+                    # previous_response = ConnectionCacher.get_url_response(url)
+                    previous_response = Cacher.get_data("url", url)
+                    if previous_response != None:
+                        response_json = previous_response
+                    else:
+                        response = await session.get(
+                            url,
+                            headers={"Content-Type": "application/json"},
+                            timeout=5
+                        )
+                        response.raise_for_status()
+                        response_json = await response.json()
+                        # ConnectionCacher.store_url(url, response_json)
+                        Cacher.store_data("url", url, response_json)
                 else:
                     raise Exception("no ensembl id returned")
             except Exception as e:
@@ -1051,13 +1183,21 @@ class EnsemblAPI:
 
         if ensembl_transcript_id:
             try:
-                response = await session.get(
-                    f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%",
-                    headers={"Content-Type": "application/json"},
-                    timeout=5
-                )
+                url = f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%"
+                # previous_response = ConnectionCacher.get_url_response(url)
+                previous_response = Cacher.get_data("url", url)
+                if previous_response != None:
+                    response_json = previous_response
+                else:
+                    response = await session.get(
+                        url,
+                        headers={"Content-Type": "application/json"},
+                        timeout=5
+                    )
                 response.raise_for_status() # TODO: solve Too Many Requests error (429) -> aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url=URL('https://rest.ensembl.org/xrefs/id/ENST00000301012?all_levels=1;external_db=UniProt%25')
                 response_json = await response.json()
+                # ConnectionCacher.store_url(url, response_json)
+                Cacher.store_data("url", url, response_json)
             except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
                 pass
             uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
@@ -1071,7 +1211,6 @@ class EnsemblAPI:
             "refseq_nt_id": refseq_id,
             "uniprot_id": uniprot_id,
         }
-
 
 class HumanOrthologFinder:
     def __init__(self, zfin_filepath:str = "", xenbase_filepath:str = "", mgi_filepath:str = "", rgd_filepath:str="", goaf_filepath:str = ""):
@@ -1176,7 +1315,7 @@ class ZFINHumanOrthologFinder(HumanOrthologFinder):
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
         if not os.path.exists(self._filepath):
-            url = "https://zfin.org/downloads/human_orthos.txt"
+            url = f"https://zfin.org/downloads/human_orthos.txt"
             response = requests.get(url)
             with open(self._filepath, "wb") as f:
                 f.write(response.content)
@@ -1266,7 +1405,7 @@ class XenbaseHumanOrthologFinder(HumanOrthologFinder):
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
         if not os.path.exists(self._filepath):
-            url = "https://download.xenbase.org/xenbase/GenePageReports/XenbaseGeneHumanOrthologMapping.txt"
+            url = f"https://download.xenbase.org/xenbase/GenePageReports/XenbaseGeneHumanOrthologMapping.txt"
             response = requests.get(url)
             with open(self._filepath, "wb") as f:
                 f.write(response.content)
@@ -1357,7 +1496,7 @@ class MGIHumanOrthologFinder(HumanOrthologFinder):
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
         if not os.path.exists(self._filepath):
-            url = "https://www.informatics.jax.org/downloads/reports/HOM_MouseHumanSequence.rpt"
+            url = f"https://www.informatics.jax.org/downloads/reports/HOM_MouseHumanSequence.rpt"
             response = requests.get(url)
             with open(self._filepath, "wb") as f:
                 f.write(response.content)
@@ -1489,7 +1628,7 @@ class RGDHumanOrthologFinder(HumanOrthologFinder):
     def _check_file(self):
         os.makedirs(os.path.dirname(self._filepath), exist_ok=True)
         if not os.path.exists(self._filepath):
-            url = "https://download.rgd.mcw.edu/pub/data_release/orthologs/RGD_ORTHOLOGS_Ortholog.txt"
+            url = f"https://download.rgd.mcw.edu/pub/data_release/orthologs/RGD_ORTHOLOGS_Ortholog.txt"
             response = requests.get(url)
             with open(self._filepath, "wb") as f:
                 f.write(response.content)
