@@ -12,6 +12,7 @@ import logging
 import time
 import traceback
 from .FileUtil import FileUtil
+from .JsonUtil import JsonUtil
 from .Timer import Timer
 import asyncio
 import aiohttp
@@ -1127,26 +1128,7 @@ class ReverseLookup:
         for miRNA in self.miRNAs:
             data.setdefault('miRNAs', []).append(miRNA.__dict__)
 
-        # write to file
-        try: # this works on mac, not on windows
-            current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
-            os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True) # Create directory for the report file, if it does not exist
-            with open(os.path.join(current_dir, filepath), 'w') as f:
-                json.dump(data, f, indent=4)
-        except OSError:
-            # pass the error on the first attempt
-            pass
-
-        try: # if first attempt fails, try using current_dir = os.getcwd(), this works on windows
-            windows_filepath = FileUtil.find_win_abs_filepath(filepath)
-            os.makedirs(os.path.dirname(windows_filepath), exist_ok=True) # Create directory for the report file, if it does not exist
-            with open(windows_filepath, 'w') as f:
-                json.dump(data, f, indent=4)
-            #current_dir = os.getcwd()
-            #os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
-        except OSError:
-            logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
-
+        JsonUtil.save_json(data, filepath)
 
     def compare_to(self, compare_model: ReverseLookup, compare_field: str = "", compare_subfields: list = [], exclude_http_errors=True):
         """
