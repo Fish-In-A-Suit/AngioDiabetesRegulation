@@ -111,10 +111,18 @@ class Product:
         # *** online and 3rd-party-database-file based analysis ***
         if _d_compare_goaf == True or prefer_goaf == False:
             if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
-                if self.uniprot_id == None: # TODO: REPLACE THESE TWO WITH THE goaf.get_uniprotkb_genename, as it is more successful and does the same as the uniprot query !!!
-                    info_dict = uniprot_api.get_uniprot_info(self.id_synonyms[0]) # bugfix
+                if self.uniprot_id == None: 
+                    # 14.08.2023: replaced online uniprot info query with goaf.get_uniprotkb_genename, as it is more successful and does the same as the uniprot query
+                    # online uniprot info query is performed only for debugging purposes with _d_compare_goaf
+                    if _d_compare_goaf == True:
+                        info_dict = uniprot_api.get_uniprot_info(self.id_synonyms[0]) # bugfix
+                    else:
+                        info_dict = {"genename": goaf.get_uniprotkb_genename(self.id_synonyms[0])}
                 else: # self.uniprot_id exists
-                    info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
+                    if _d_compare_goaf == True:
+                        info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
+                    else:
+                        info_dict = {"genename": goaf.get_uniprotkb_genename(self.uniprot_id)}
                 # if compare is set to True, then only log the comparison between
                 if _d_compare_goaf == True:
                     if self.genename != info_dict.get("genename"):
@@ -154,7 +162,7 @@ class Product:
         
         self.had_orthologs_computed = True
                 
-    async def fetch_ortholog_async(self, session: aiohttp.ClientSession, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+    async def fetch_ortholog_async(self, session: aiohttp.ClientSession, goaf: GOAnnotiationsFile, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
         logger.info(f"Async fetch orthologs for: {self.id_synonyms}")
         
         if not human_ortholog_finder:
@@ -166,9 +174,12 @@ class Product:
         
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
             if self.uniprot_id == None:
-                info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session) # bugfix
+                # 14.08.2023: replaced online uniprot info query with goaf.get_uniprotkb_genename, as it is more successful and does the same as the uniprot query
+                # info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session) # bugfix
+                info_dict = {"genename": goaf.get_uniprotkb_genename(self.id_synonyms[0])}
             else:
-                info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session)
+                # info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session)
+                info_dict = {"genename": goaf.get_uniprotkb_genename(self.uniprot_id)}
             if info_dict != None:
                 self.genename = info_dict.get("genename")
         elif len(self.id_synonyms) == 1:
@@ -186,9 +197,9 @@ class Product:
         
         self.had_orthologs_computed = True
     
-    async def fetch_ortholog_async_semaphore(self, session: aiohttp.ClientSession, semaphore:asyncio.Semaphore, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+    async def fetch_ortholog_async_semaphore(self, session: aiohttp.ClientSession, semaphore:asyncio.Semaphore, goaf: GOAnnotiationsFile, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
         async with semaphore:
-            await self.fetch_ortholog_async(session=session, human_ortholog_finder=human_ortholog_finder, uniprot_api=uniprot_api, ensembl_api=ensembl_api)
+            await self.fetch_ortholog_async(session=session, goaf=goaf, human_ortholog_finder=human_ortholog_finder, uniprot_api=uniprot_api, ensembl_api=ensembl_api)
         
 
     def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]) -> None:
@@ -755,6 +766,8 @@ class ReverseLookup:
         human_ortholog_finder = HumanOrthologFinder()
         uniprot_api = UniProtAPI()
         ensembl_api = EnsemblAPI()
+        ensembl_api.async_request_sleep_delay = req_delay
+        goaf = GOAnnotiationsFile()
 
         connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections)
         semaphore = asyncio.Semaphore(semaphore_connections)
@@ -764,7 +777,7 @@ class ReverseLookup:
             for product in self.products:
                 if product.had_orthologs_computed == False or refetch == True:
                     # task = product.fetch_ortholog_async(session, human_ortholog_finder, uniprot_api, ensembl_api)
-                    task = product.fetch_ortholog_async_semaphore(session, semaphore, human_ortholog_finder, uniprot_api, ensembl_api)
+                    task = product.fetch_ortholog_async_semaphore(session, semaphore, goaf, human_ortholog_finder, uniprot_api, ensembl_api)
                     tasks.append(task)
                     product.had_orthologs_computed = True
             await asyncio.gather(*tasks)

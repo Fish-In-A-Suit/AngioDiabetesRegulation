@@ -807,6 +807,7 @@ class EnsemblAPI:
         session.mount("https://", adapter)
         self.s = session
         self.ortholog_query_exceptions = [] # the list of exceptions during the ortholog query
+        self.async_request_sleep_delay = 0.5
 
     def get_human_ortholog(self, id:str):
         """
@@ -856,7 +857,7 @@ class EnsemblAPI:
         logger.info(f"Received ortholog for id {id} -> {ortholog}")
         return ortholog
 
-    async def get_human_ortholog_async(self, id, session: aiohttp.ClientSession):
+    async def get_human_ortholog_async(self, id, session: aiohttp.ClientSession):      
         if "ZFIN" in id:
             species = "zebrafish"
             id_url = id.split(":")[1]
@@ -885,6 +886,7 @@ class EnsemblAPI:
                 # response.raise_for_status()
                 response_json = await response.json()
                 Cacher.store_data("url", url, response_json)
+                await asyncio.sleep(self.async_request_sleep_delay)
             except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError) as e:
                 logger.warning(f"Exception for {id_url} for request: https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none. Exception: {str(e)}")
                 self.ortholog_query_exceptions.append({f"{id}": f"{str(e)}"})
@@ -1115,6 +1117,7 @@ class EnsemblAPI:
                 response_json = await response.json()
                 # ConnectionCacher.store_url(url, response_json)
                 Cacher.store_data("url", url, response_json)
+                await asyncio.sleep(self.async_request_sleep_delay)
         except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
             # If the request fails, try the xrefs URL instead
             try:
@@ -1133,6 +1136,7 @@ class EnsemblAPI:
                     response_json = await response.json()
                     # ConnectionCacher.store_url(url, response_json)
                     Cacher.store_data("url", url, response_json)
+                    await asyncio.sleep(self.async_request_sleep_delay)
 
                 # Use the first ENS ID in the xrefs response to make a new lookup request
                 ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
@@ -1152,6 +1156,7 @@ class EnsemblAPI:
                         response_json = await response.json()
                         # ConnectionCacher.store_url(url, response_json)
                         Cacher.store_data("url", url, response_json)
+                        await asyncio.sleep(self.async_request_sleep_delay)
                 else:
                     raise Exception("no ensembl id returned")
             except Exception as e:
@@ -1194,10 +1199,11 @@ class EnsemblAPI:
                         headers={"Content-Type": "application/json"},
                         timeout=5
                     )
-                response.raise_for_status() # TODO: solve Too Many Requests error (429) -> aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url=URL('https://rest.ensembl.org/xrefs/id/ENST00000301012?all_levels=1;external_db=UniProt%25')
-                response_json = await response.json()
-                # ConnectionCacher.store_url(url, response_json)
-                Cacher.store_data("url", url, response_json)
+                    response.raise_for_status() # TODO: solve Too Many Requests error (429) -> aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url=URL('https://rest.ensembl.org/xrefs/id/ENST00000301012?all_levels=1;external_db=UniProt%25')
+                    response_json = await response.json()
+                    # ConnectionCacher.store_url(url, response_json)
+                    Cacher.store_data("url", url, response_json)
+                    await asyncio.sleep(self.async_request_sleep_delay)
             except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
                 pass
             uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)

@@ -7,6 +7,7 @@ from .JsonUtil import JsonUtil
 from .Timer import Timer
 import asyncio
 import aiohttp
+import atexit
 
 logger = logging.getLogger(__name__)
 
@@ -19,23 +20,39 @@ class Cacher():
     cached_ensembl = {}
     
     @classmethod
-    def init(cls):
+    def init(cls, store_data_atexit:bool = True):
         """
         Initialises ConnectionCacher. This function must be called at the program startup in order to read
         old urls into the cls.cached_urls dictionary.
+
+        Parameters:
+          - (bool) store_data_atexit: if True, will only store data at program exit. If False, will store data each time store_data is called.
 
         Usage:
             model = ReverseLookup.load_model("diabetes_angio_4/model_async_test.json") # make sure that model products are already computed
             Cacher.init()
             fetch_ortholog_products(refetch=True, run_async=False)
+        
+        NOTE: WARNING !! In order for the atexit storage to work, you mustn't run the Python program in VSCode in Debug mode. Run
+        it in normal mode and finish the program execution with CTRL + C to test the functionality.
         """
+        cls.store_data_atexit = store_data_atexit
         cls.CACHE_FILEPATH_URLS = "cache/connection_cache.json"
         cls.CACHE_FILEPATH_UNIPROT = "cache/uniprot_cache.json"
         cls.CACHE_FILEPATH_ENSEMBL = "cache/ensembl_cache.json"
         cls.cached_urls = JsonUtil.load_json(cls.CACHE_FILEPATH_URLS)
         cls.cached_uniprot = JsonUtil.load_json(cls.CACHE_FILEPATH_UNIPROT)
         cls.cached_ensembl = JsonUtil.load_json(cls.CACHE_FILEPATH_ENSEMBL)
+        
+        logger.info(f"Cacher load dictionary response counts:")
+        logger.info(f"  - urls: {len(cls.cached_urls)}")
+        logger.info(f"  - uniprot: {len(cls.cached_uniprot)}")
+        logger.info(f"  - ensembl: {len(cls.cached_ensembl)}")
 
+        if store_data_atexit: # register the save_data function to be called on program exit
+            logger.info(f"Register at exit save data for Cacher.")
+            atexit.register(cls.save_data)
+            
     @classmethod
     def store_data(cls, data_location:str, data_key:str, data_value, timestamp:str=""):
         """
@@ -111,16 +128,17 @@ class Cacher():
                     cached_data[data_key] = {"data_value": data_value, "timestamp": timestamp}
         
         # update class values with new cached data and save
-        match data_location:
-            case "url":
-                cls.cached_urls = cached_data
-                JsonUtil.save_json(cls.cached_urls, cls.CACHE_FILEPATH_URLS)
-            case "uniprot":
-                cls.cached_uniprot = cached_data
-                JsonUtil.save_json(cls.cached_uniprot, cls.CACHE_FILEPATH_UNIPROT)
-            case "ensembl":
-                cls.cached_ensembl = cached_data
-                JsonUtil.save_json(cls.cached_ensembl, cls.CACHE_FILEPATH_ENSEMBL)
+        if not cls.store_data_atexit:
+            match data_location:
+                case "url":
+                    cls.cached_urls = cached_data
+                    JsonUtil.save_json(cls.cached_urls, cls.CACHE_FILEPATH_URLS)
+                case "uniprot":
+                    cls.cached_uniprot = cached_data
+                    JsonUtil.save_json(cls.cached_uniprot, cls.CACHE_FILEPATH_UNIPROT)
+                case "ensembl":
+                    cls.cached_ensembl = cached_data
+                    JsonUtil.save_json(cls.cached_ensembl, cls.CACHE_FILEPATH_ENSEMBL)
     
     @classmethod
     def get_data(cls, data_location:str, data_key:str):
@@ -142,6 +160,17 @@ class Cacher():
                 return None
         else:
             return None
+    
+    @classmethod
+    def save_data(cls):
+        """
+        Saves 'cached_urls', 'cached_uniprot' and 'cached_ensembl' to their respective
+        cache filepaths (CACHE_FILEPATH_URLS, CACHE_FILEPATH_UNIPROT, CACHE_FILEPATH_ENSEMBL)
+        """
+        JsonUtil.save_json(cls.cached_urls, cls.CACHE_FILEPATH_URLS)
+        JsonUtil.save_json(cls.cached_uniprot, cls.CACHE_FILEPATH_UNIPROT)
+        JsonUtil.save_json(cls.cached_ensembl, cls.CACHE_FILEPATH_ENSEMBL)
+        logger.info(f"Successfully saved url, uniprot and ensembl cache.")
 
 
 class ConnectionCacher(Cacher):

@@ -111,7 +111,7 @@ Cacher.init()
 
 # ortholog product fetch
 # model_async.fetch_ortholog_products(refetch=True, run_async=False) # connection cache test on sync mode
-model_async.fetch_ortholog_products(refetch=True, run_async=True, max_connections=15, req_delay=0.5, semaphore_connections=5) # semaphore_connections=10 works in 3min40s, semaphore_connections=15 results in 429:TooManyRequests errors
+# model_async.fetch_ortholog_products(refetch=True, run_async=True, max_connections=15, req_delay=0.1, semaphore_connections=5) # semaphore_connections=10 works in 3min40s, semaphore_connections=15 results in 429:TooManyRequests errors
 # model_async.save_model("diabetes_angio_4/model_async_test_ortholog_query.json")
 
 
