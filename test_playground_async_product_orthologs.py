@@ -1,7 +1,13 @@
-# This test file shows how to query product orthologs for a ReverseLookup model.
+# This test file shows how to query product orthologs for a ReverseLookup model. You can also see the url response and ensembl/uniprot api function result caching by running in normal Run mode and either force stopping using CTRL-C or waiting for the program to finish.
+# Make sure to run this file in normal Run (not in debug mode)
+# Use CTRL-C if you wish to stop the program manually to test the atexit save of uniprot and ensembl cache.
 
 from goreverselookuplib.Model import ReverseLookup
 from goreverselookuplib.CacheUtils import Cacher
+
+import logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(levelname)s] %(funcName)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 Cacher.init()
 model_async = ReverseLookup.load_model("diabetes_angio_4/model_async_test.json") # or use a pre-computed async model

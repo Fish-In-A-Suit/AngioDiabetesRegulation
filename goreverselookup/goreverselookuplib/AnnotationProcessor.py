@@ -580,28 +580,40 @@ class UniProtAPI:
         Returns:
         - str: UniProt ID if found, None otherwise OR the query url, if get_url_only is True
         """
+        # data key is in the format [class_name][function_name][function_params]
+        uniprot_data_key = f"[{self.__class__.__name__}][{self.get_uniprot_id.__name__}][gene_name={gene_name}]"
+        previous_uniprot_id = Cacher.get_data("uniprot", uniprot_data_key)
+        if previous_uniprot_id != None:
+            logger.debug(f"Cached uniprot id {previous_uniprot_id} for gene name {gene_name}")
+            return previous_uniprot_id
 
         # Define the URL to query the UniProt API
         url = f"https://rest.uniprot.org/uniprotkb/search?query=gene:{gene_name}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl"
+
+        if get_url_only:
+            return url
 
         # Check if the url is cached
         # previous_response = ConnectionCacher.get_url_response(url)
         previous_response = Cacher.get_data("url", url)
         if previous_response != None:
-            return previous_response
-
-        # Try the request up to `retries` times
-        try:
-            # Make the request and raise an exception if the response status is not 200 OK
-            response = self.s.get(url, timeout=5)
-            response.raise_for_status()
-        except requests.exceptions.RequestException:
-            # if there was an error with the HTTP request, log a warning
-            logger.warning(f"Failed to fetch UniProt data for {gene_name}")
-            return None
+            response_json = previous_response
+        else: 
+            # Try the request up to `retries` times
+            try:
+                # Make the request and raise an exception if the response status is not 200 OK
+                response = self.s.get(url, timeout=5)
+                response.raise_for_status()
+                response_json = response.json()
+                Cacher.store_data("url", url, response_json)
+            except requests.exceptions.RequestException:
+                # if there was an error with the HTTP request, log a warning
+                logger.warning(f"Failed to fetch UniProt data for {gene_name}")
+                return None
 
         # Parse the response JSON and get the list of results
-        results = response.json()["results"]
+        # results = response.json()["results"]
+        results = response_json["results"]
 
         # If no results were found, return None
         if len(results) == 0:
@@ -612,8 +624,7 @@ class UniProtAPI:
             uniprot_id = results[0]["primaryAccession"]
             logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 result.")
             return_value = "UniProtKB:" + uniprot_id
-            # ConnectionCacher.store_url(url, return_value)
-            Cacher.store_data("url", url, return_value)
+            Cacher.store_data("uniprot", uniprot_data_key, return_value)
             return return_value
 
         # If multiple results were found, filter out the non-reviewed ones
@@ -635,8 +646,7 @@ class UniProtAPI:
             uniprot_id = reviewed_ids[0]["primaryAccession"]
             logger.info(f"Auto accepted {gene_name} -> {uniprot_id}. Reason: Only 1 reviewed result.")
             return_value = "UniProtKB:" + uniprot_id
-            # ConnectionCacher.store_url(url, return_value)
-            Cacher.store_data("url", url, return_value)
+            Cacher.store_data("uniprot", uniprot_data_key, return_value)
             return return_value
 
         # If multiple reviewed results were found, ask the user to choose one
@@ -658,8 +668,7 @@ class UniProtAPI:
             uniprot_id = reviewed_ids[int(choice) - 1]["primaryAccession"]
             logger.warning(f"Auto-selected first reviewed result for {gene_name}!")
             return_value = "UniProtKB:" + uniprot_id
-            # ConnectionCacher.store_url(url, return_value)
-            Cacher.store_data("url", url, return_value)
+            Cacher.store_data("uniprot", uniprot_data_key, return_value)
             return return_value
         else:
             # raise an error if the user's choice is not valid
@@ -677,6 +686,13 @@ class UniProtAPI:
         # Extract UniProt ID if given in "database:identifier" format
         if ":" in uniprot_id:
             uniprot_id = uniprot_id.split(":")[1]
+        
+        # Attempt to return previously cached function return value
+        uniprot_data_key = f"[{self.__class__.__name__}][{self.get_uniprot_info.__name__}][uniprot_id={uniprot_id}]"
+        previous_info = Cacher.get_data("uniprot", uniprot_data_key)
+        if previous_info != None:
+            logger.debug(f"Returning cached info for uniprot id {uniprot_id}: {previous_info}")
+            return previous_info
 
         # Construct UniProt API query URL
         url = f"https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
@@ -685,19 +701,23 @@ class UniProtAPI:
         # previous_response = ConnectionCacher.get_url_response(url)
         previous_response = Cacher.get_data("url", url)
         if previous_response != None:
-            return previous_response
-
-        try:
-            response = requests.get(url, timeout=5)
-            response.raise_for_status()
-        except requests.exceptions.RequestException:
-            logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
-            return {}
+            response_json = previous_response
+        else:
+            try:
+                response = requests.get(url, timeout=5)
+                response.raise_for_status()
+                response_json = response.json()
+                Cacher.store_data("url", url, response_json)
+            except requests.exceptions.RequestException:
+                logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
+                return {}
         
-        results = response.json()["results"]
+        results = response_json["results"]
         return_value = self._process_uniprot_info_query_results(results, uniprot_id)
-        # ConnectionCacher.store_url(url, return_value)
-        Cacher.store_data("url", url, return_value)
+        
+        # cache function result
+        if return_value != None:      
+            Cacher.store_data("uniprot", uniprot_data_key, return_value)
         return return_value
         
     def _return_mane_select_values_from_uniprot_query(self, result: dict) -> tuple:
@@ -746,10 +766,16 @@ class UniProtAPI:
     
     async def get_uniprot_info_async(self, uniprot_id: str, session: aiohttp.ClientSession) -> dict:
         # Extract UniProt ID if given in "database:identifier" format
-        logger.info(f"querying info for {uniprot_id}")
-
         if ":" in uniprot_id:
             uniprot_id = uniprot_id.split(":")[1]
+
+        # Attempt to cache previous function result
+        uniprot_data_key = f"[{self.__class__.__name__}][{self.get_uniprot_info_async.__name__}][uniprot_id={uniprot_id}]"
+        previous_result = Cacher.get_data("uniprot", uniprot_data_key)
+        if previous_result != None:
+            logger.debug(f"Returning cached info for uniprot id {uniprot_id}: {previous_result}")
+            return previous_result
+
         # Construct UniProt API query URL
         url = f"https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name"
         
@@ -757,25 +783,23 @@ class UniProtAPI:
         # previous_response = ConnectionCacher.get_url_response(url)
         previous_response = Cacher.get_data("url", url)
         if previous_response != None:
-            return previous_response
-
-        # async with session.get(url) as response:
-        #    results = await response.json()["results"]
-        #    return self._process_uniprot_info_query_results(results, uniprot_id)
-
-        QUERY_RETRIES = 3 # TODO: make parameter
-        i = 0
-        for _ in range (QUERY_RETRIES):
-            if i == (QUERY_RETRIES-1):
-                return None
-            i += 1
-            try:
-                response = await session.get(url, timeout=5)
-            except(requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ServerDisconnectedError) as e:
-                logger.warning(f"Exception when querying info for {uniprot_id}. Exception: {str(e)}")
-                self.uniprot_query_exceptions.append({f"{uniprot_id}": f"{str(e)}"})
-                await asyncio.sleep(2) # sleep before retrying
-                continue
+            response_json = previous_response
+        else: 
+            QUERY_RETRIES = 3 # TODO: make parameter
+            i = 0
+            for _ in range (QUERY_RETRIES):
+                if i == (QUERY_RETRIES-1):
+                    return None
+                i += 1
+                try:
+                    response = await session.get(url, timeout=5)
+                    response_json = await response.json()
+                    Cacher.store_data("url", url, response_json)
+                except(requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ServerDisconnectedError) as e:
+                    logger.warning(f"Exception when querying info for {uniprot_id}. Exception: {str(e)}")
+                    self.uniprot_query_exceptions.append({f"{uniprot_id}": f"{str(e)}"})
+                    await asyncio.sleep(2) # sleep before retrying
+                    continue
             
         # single query retry
         #try:
@@ -785,12 +809,12 @@ class UniProtAPI:
         #    self.uniprot_query_exceptions.append({f"{uniprot_id}": f"{str(e)}"})
         #    return None
         
-        response_json = await response.json()
         results = response_json["results"]
-
         return_value = self._process_uniprot_info_query_results(results, uniprot_id)
-        # ConnectionCacher.store_url(url, return_value)
-        Cacher.store_data("url", url, return_value)
+        
+        if return_value != None:
+            Cacher.store_data("uniprot", uniprot_data_key, return_value)
+
         return return_value
         
 class EnsemblAPI:
@@ -811,13 +835,19 @@ class EnsemblAPI:
 
     def get_human_ortholog(self, id:str):
         """
-        Given an source ID, detect organism and returns the corresponding human ortholog using the Ensembl API.
+        Given a source ID, detect organism and returns the corresponding human ortholog using the Ensembl API.
         
         Parameters:
           - (str) id
         
         This function uses request caching. It will use previously saved url request responses instead of performing new (the same as before) connections
         """
+        ensembl_data_key = f"[{self.__class__.__name__}][{self.get_human_ortholog.__name__}][id={id}]"
+        previous_result = Cacher.get_data("ensembl", ensembl_data_key)
+        if previous_result != None:
+            logger.debug(f"Returning cached ortholog for id {id}: {previous_result}")
+            return previous_result
+
         if "ZFIN" in id:
             species = "zebrafish"
             id_url = id.split(":")[1]
@@ -833,6 +863,7 @@ class EnsemblAPI:
         else:
             logger.info(f"No predefined organism found for {id}")
             return None
+        
         url = f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none"
         
         # Check if the url is cached
@@ -854,10 +885,17 @@ class EnsemblAPI:
             return None
         best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
         ortholog = best_ortholog_dict["target"].get("id")
+        Cacher.store_data("ensembl", ensembl_data_key, ortholog)
         logger.info(f"Received ortholog for id {id} -> {ortholog}")
         return ortholog
 
     async def get_human_ortholog_async(self, id, session: aiohttp.ClientSession):      
+        ensembl_data_key = f"[{self.__class__.__name__}][{self.get_human_ortholog_async.__name__}][id={id}]"
+        previous_result = Cacher.get_data("ensembl", ensembl_data_key)
+        if previous_result != None:
+            logger.debug(f"Returning cached ortholog for id {id}: {previous_result}")
+            return previous_result
+        
         if "ZFIN" in id:
             species = "zebrafish"
             id_url = id.split(":")[1]
@@ -898,12 +936,13 @@ class EnsemblAPI:
         
         if response_json == [] or "error" in response_json:
             return None
-        elif response_json != [] or "error" not in response_json:
+        elif response_json != [] and "error" not in response_json:
             response_json = response_json["data"][0]["homologies"]
             if response_json == []: # if there are no homologies, return None
                 return None
             best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
             ortholog = best_ortholog_dict["target"].get("id")
+            Cacher.store_data("ensembl", ensembl_data_key, ortholog)
             logger.info(f"Received ortholog for id {id} -> {ortholog}")
             return ortholog
 
@@ -934,6 +973,12 @@ class EnsemblAPI:
         if "Error" in id: # this is a bugfix. Older versions had a string "[RgdError_No-human-ortholog-found:product_id=RGD:1359312" for the genename field, if no ortholog was found (for example for the genename field of "RGD:1359312"). This is to be backwards compatible with any such data.json(s). An error can also be an '[MgiError_No-human-ortholog-found:product_id=MGI:97618'
             logger.debug(f"ERROR: {id}. This means a particular RGD, Zfin, MGI or Xenbase gene does not have a human ortholog and you are safe to ignore it.")
             return {}
+        
+        ensembl_data_key = f"[{self.__class__.__name__}][{self.get_info.__name__}][id={id}]"
+        previous_result = Cacher.get_data("ensembl", ensembl_data_key)
+        if previous_result != None:
+            logger.debug(f"Returning cached ortholog for id {id}: {previous_result}")
+            return previous_result
         
         species_mapping = {
             "ZFIN": "zebrafish/",
@@ -1063,7 +1108,7 @@ class EnsemblAPI:
             # bugfix: TODO! Fix this bug if it ever happens again!
                
         logger.debug(f"Received info data for id {id}.")
-        return {
+        return_value = {
             "ensg_id": ensg_id,
             "genename": name,
             "description": description,
@@ -1071,6 +1116,8 @@ class EnsemblAPI:
             "refseq_nt_id": refseq_id,
             "uniprot_id": uniprot_id,
         }
+        Cacher.store_data("ensembl", ensembl_data_key, return_value)
+        return return_value
     
     async def get_info_async(self, id:str, session:aiohttp.ClientSession):
         """Can receive Ensembl id or symbol (human)
@@ -1084,6 +1131,12 @@ class EnsemblAPI:
         if "Error" in id: # this is a bugfix. Older versions had a string "[RgdError_No-human-ortholog-found:product_id=RGD:1359312" for the genename field, if no ortholog was found (for example for the genename field of "RGD:1359312"). This is to be backwards compatible with any such data.json(s). An error can also be an '[MgiError_No-human-ortholog-found:product_id=MGI:97618'
             logger.debug(f"ERROR: {id}. This means a particular RGD, Zfin, MGI or Xenbase gene does not have a human ortholog and you are safe to ignore it.")
             return {}
+        
+        ensembl_data_key = f"[{self.__class__.__name__}][{self.get_info_async.__name__}][id={id}]"
+        previous_result = Cacher.get_data("ensembl", ensembl_data_key)
+        if previous_result != None:
+            logger.debug(f"Returning cached ortholog for id {id}: {previous_result}")
+            return previous_result
         
         species_mapping = {
             "ZFIN": "zebrafish/",
@@ -1209,7 +1262,7 @@ class EnsemblAPI:
             uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
 
         logger.debug(f"Received info data for id {id}.")
-        return {
+        return_value = {
             "ensg_id": ensg_id,
             "genename": name,
             "description": description,
@@ -1217,6 +1270,8 @@ class EnsemblAPI:
             "refseq_nt_id": refseq_id,
             "uniprot_id": uniprot_id,
         }
+        Cacher.store_data("ensembl", ensembl_data_key, return_value)
+        return return_value
 
 class HumanOrthologFinder:
     def __init__(self, zfin_filepath:str = "", xenbase_filepath:str = "", mgi_filepath:str = "", rgd_filepath:str="", goaf_filepath:str = ""):
