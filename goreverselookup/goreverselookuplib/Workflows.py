@@ -233,11 +233,11 @@ class WorkflowTwo(Workflow):
         # Create product instances from GO terms
         self.add_function(self.model.create_products_from_goterms)
         # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-        self.add_function(self.model.fetch_ortholog_products, refetch=True, max_connections=15, req_delay=0.1, semaphore_connections=5)
+        self.add_function(self.model.fetch_ortholog_products, refetch=False, max_connections=15, req_delay=0.1, semaphore_connections=5)
         self.add_function(self.model.prune_products)
         self.add_function(self.model.save_model, self.model_save_filepath)
         # Fetch product information (from UniprotAPI or EnsemblAPI)
-        self.add_function(self.model.fetch_product_infos, refetch=False)
+        self.add_function(self.model.fetch_product_infos, refetch=False, run_async=True, max_connections=15, semaphore_connections=10, req_delay=0.1)
         self.add_function(self.model.prune_products)
         self.add_function(self.model.save_model, self.model_save_filepath)
 

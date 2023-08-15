@@ -201,7 +201,7 @@ class GOApi:
                     logger.info(f"Fetched products for GO term {term_id}")
                     request_iterations = 0 # reset
                     return products
-                except (requests.exceptions.RequestException, JSONDecodeError, asyncio.exceptions.TimeoutError) as e :
+                except (requests.exceptions.RequestException, JSONDecodeError, asyncio.exceptions.TimeoutError, aiohttp.ClientResponseError) as e :
                     # logger.error(f"TimoutError on retry attempt {request_iterations}. Exception: {e}")
                     # i += 1
                     # if i == (MAX_RETRIES - 1): # this was the last http request, it failed
@@ -564,6 +564,7 @@ class UniProtAPI:
         session.mount("https://", adapter)
         self.s = session
         self.uniprot_query_exceptions = []
+        self.async_request_sleep_delay = 0.5
     
     def get_uniprot_id(self, gene_name, get_url_only = False):
         """
@@ -596,7 +597,7 @@ class UniProtAPI:
         # Check if the url is cached
         # previous_response = ConnectionCacher.get_url_response(url)
         previous_response = Cacher.get_data("url", url)
-        if previous_response != None:
+        if previous_response != None: 
             response_json = previous_response
         else: 
             # Try the request up to `retries` times
@@ -784,7 +785,8 @@ class UniProtAPI:
         previous_response = Cacher.get_data("url", url)
         if previous_response != None:
             response_json = previous_response
-        else: 
+        else:
+            asyncio.sleep(self.async_request_sleep_delay)
             QUERY_RETRIES = 3 # TODO: make parameter
             i = 0
             for _ in range (QUERY_RETRIES):
@@ -795,7 +797,8 @@ class UniProtAPI:
                     response = await session.get(url, timeout=5)
                     response_json = await response.json()
                     Cacher.store_data("url", url, response_json)
-                except(requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ServerDisconnectedError) as e:
+                # except(requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ServerDisconnectedError, aiohttp.ClientResponseError) as e:
+                except Exception as e:
                     logger.warning(f"Exception when querying info for {uniprot_id}. Exception: {str(e)}")
                     self.uniprot_query_exceptions.append({f"{uniprot_id}": f"{str(e)}"})
                     await asyncio.sleep(2) # sleep before retrying
@@ -869,7 +872,7 @@ class EnsemblAPI:
         # Check if the url is cached
         # previous_response = ConnectionCacher.get_url_response(url)
         previous_response = Cacher.get_data("url", url)
-        if previous_response != None:
+        if previous_response != None: # "error" check is a bugfix for this response: {'error': 'No valid lookup found for symbol Oxct2a'}
             response_json = previous_response
         else:
             try:
@@ -925,7 +928,8 @@ class EnsemblAPI:
                 response_json = await response.json()
                 Cacher.store_data("url", url, response_json)
                 await asyncio.sleep(self.async_request_sleep_delay)
-            except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError) as e:
+            # except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ClientResponseError) as e:
+            except Exception as e:
                 logger.warning(f"Exception for {id_url} for request: https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none. Exception: {str(e)}")
                 self.ortholog_query_exceptions.append({f"{id}": f"{str(e)}"})
                 return None
@@ -1102,10 +1106,12 @@ class EnsemblAPI:
             except requests.exceptions.RequestException:
                 pass
             uniprot_id = ""
-            uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
-            # this response: {'biotype': 'protein_coding', 'id': 'ENSG00000184895', 'display_name': 'SRY', 'species': 'homo_sapiens', 'strand': -1, 'db_type': 'core', 'canonical_transcript': 'ENST00000383070.2', 'start': 2786855, 'seq_region_name': 'Y', 'Transcript': [{'source': 'ensembl_havana', 'MANE': [{'type': 'MANE_Select', 'id': 'ENST00000383070', 'Parent': 'ENSG00000184895', 'species': 'homo_sapiens', 'start': 2786855, 'strand': -1, 'seq_region_name': 'Y', 'refseq_match': 'NM_003140.3', 'end': 2787682, 'db_type': 'core', 'object_type': 'mane', 'assembly_name': 'GRCh38', 'version': 2}], 'end': 2787682, 'Translation': {'id': 'ENSP00000372547', 'Parent': 'ENST00000383070', 'species': 'homo_sapiens', 'start': 2786989, 'end': 2787603, 'length': 204, 'db_type': 'core', 'version': 1, 'object_type': 'Translation'}, 'assembly_name': 'GRCh38', 'version': 2, 'logic_name': 'ensembl_havana_transcript_homo_sapiens', 'is_canonical': 1, 'object_type': 'Transcript', 'Parent': 'ENSG00000184895', 'Exon': [{'end': 2787682, 'db_type': 'core', 'object_type': 'Exon', 'version': 2, 'assembly_name': 'GRCh38', 'id': 'ENSE00001494622', 'start': 2786855, 'species': 'homo_sapiens', 'strand': -1, 'seq_region_name': 'Y'}], 'seq_region_name': 'Y', 'start': 2786855, 'db_type': 'core', 'display_name': 'SRY-201', 'id': 'ENST00000383070', 'biotype': 'protein_coding', 'strand': -1, 'species': 'homo_sapiens'}], 'end': 2787682, 'description': 'sex determining region Y [Source:HGNC Symbol;Acc:HGNC:11311]', 'source': 'ensembl_havana', 'object_type': 'Gene', 'version': 8, 'assembly_name': 'GRCh38', 'logic_name': 'ensembl_havana_gene_homo_sapiens'}
-            # throws an attribute error on the above line
-            # bugfix: TODO! Fix this bug if it ever happens again!
+            # bugfix: attribute error, because some 'entry' objects in loop were read as strings
+            # uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
+            for entry in response_json:
+                if isinstance(entry, dict):
+                    if entry.get("dbname") == "Uniprot/SWISSPROT":
+                        uniprot_id = entry.get("primary_id")
                
         logger.debug(f"Received info data for id {id}.")
         return_value = {
@@ -1166,16 +1172,15 @@ class EnsemblAPI:
                     headers={"Content-Type": "application/json"},
                     timeout=5
                     )
-                response.raise_for_status()
+                # response.raise_for_status()
                 response_json = await response.json()
                 # ConnectionCacher.store_url(url, response_json)
                 Cacher.store_data("url", url, response_json)
                 await asyncio.sleep(self.async_request_sleep_delay)
-        except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
+        except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ClientResponseError):
             # If the request fails, try the xrefs URL instead
             try:
                 url = f"https://rest.ensembl.org/xrefs/{endpoint}?"
-                # previous_response = ConnectionCacher.get_url_response(url)
                 previous_response = Cacher.get_data("url", url)
                 if previous_response != None:
                     response_json = previous_response
@@ -1185,9 +1190,8 @@ class EnsemblAPI:
                         headers={"Content-Type": "application/json"},
                         timeout=5
                     )
-                    response.raise_for_status()
+                    # response.raise_for_status()
                     response_json = await response.json()
-                    # ConnectionCacher.store_url(url, response_json)
                     Cacher.store_data("url", url, response_json)
                     await asyncio.sleep(self.async_request_sleep_delay)
 
@@ -1195,7 +1199,6 @@ class EnsemblAPI:
                 ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
                 if ensembl_id:
                     url = f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1"
-                    # previous_response = ConnectionCacher.get_url_response(url)
                     previous_response = Cacher.get_data("url", url)
                     if previous_response != None:
                         response_json = previous_response
@@ -1205,9 +1208,8 @@ class EnsemblAPI:
                             headers={"Content-Type": "application/json"},
                             timeout=5
                         )
-                        response.raise_for_status()
+                        # response.raise_for_status()
                         response_json = await response.json()
-                        # ConnectionCacher.store_url(url, response_json)
                         Cacher.store_data("url", url, response_json)
                         await asyncio.sleep(self.async_request_sleep_delay)
                 else:
@@ -1215,12 +1217,16 @@ class EnsemblAPI:
             except Exception as e:
                 logger.warning(f"Failed to fetch Ensembl info for {id}.")
                 return {}
+        
+        if "error" in response_json or response_json == None:
+            logger.warning(f"Failed to fetch Ensembl info for {id}.")
+            return {}
                  
         # Extract gene information from API response
         ensg_id = response_json.get("id")
         name = response_json.get("display_name")
         description = response_json.get("description", "").split(" [")[0]
-        
+
         canonical_transcript_id = next((entry.get("id") for entry in response_json["Transcript"] if entry.get("is_canonical")), None)
         mane_transcripts = [d for d in response_json["Transcript"] if d.get("MANE")]
         if len(mane_transcripts) == 0:
@@ -1242,7 +1248,6 @@ class EnsemblAPI:
         if ensembl_transcript_id:
             try:
                 url = f"https://rest.ensembl.org/xrefs/id/{ensembl_transcript_id}?all_levels=1;external_db=UniProt%"
-                # previous_response = ConnectionCacher.get_url_response(url)
                 previous_response = Cacher.get_data("url", url)
                 if previous_response != None:
                     response_json = previous_response
@@ -1254,12 +1259,21 @@ class EnsemblAPI:
                     )
                     response.raise_for_status() # TODO: solve Too Many Requests error (429) -> aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url=URL('https://rest.ensembl.org/xrefs/id/ENST00000301012?all_levels=1;external_db=UniProt%25')
                     response_json = await response.json()
-                    # ConnectionCacher.store_url(url, response_json)
                     Cacher.store_data("url", url, response_json)
                     await asyncio.sleep(self.async_request_sleep_delay)
-            except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError):
+            # except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ClientResponseError):
+            #    pass
+            except Exception as e:
+                logger.warning(f"Exception: {e}")
                 pass
-            uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
+
+            uniprot_id = ""
+            # bugfix: attribute error, because some 'entry' objects in loop were read as strings
+            # uniprot_id = next((entry.get("primary_id") for entry in response_json if entry.get("dbname") =="Uniprot/SWISSPROT"), None)
+            for entry in response_json:
+                if isinstance(entry, dict):
+                    if entry.get("dbname") == "Uniprot/SWISSPROT":
+                        uniprot_id = entry.get("primary_id")
 
         logger.debug(f"Received info data for id {id}.")
         return_value = {

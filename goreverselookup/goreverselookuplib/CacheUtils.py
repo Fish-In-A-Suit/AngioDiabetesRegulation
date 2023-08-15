@@ -118,6 +118,12 @@ class Cacher():
         if timestamp == "":
             timestamp = Timer.get_current_time()
         
+        # bugfix: some urls return the following response: {'error': 'No valid lookup found for symbol Oxct2a'}
+        # if this happens, do not store data
+        if data_location == "url" and "error" in data_value:
+            logger.warning(f"Error in data value, aborting cache store. data_value: {data_value}")
+            return
+        
         # update cached_data
         if data_key not in cached_data:
             cached_data[data_key] = {"data_value": data_value, "timestamp": timestamp}
@@ -155,7 +161,14 @@ class Cacher():
         if cached_data != {}:
             if data_key in cached_data:
                 logger.info(f"Successfully cached old data for {data_key}.")
-                return cached_data[data_key]["data_value"]
+                return_value = cached_data[data_key]["data_value"]
+                
+                # bugfix: some urls return the following response: {'error': 'No valid lookup found for symbol Oxct2a'}
+                # if such a stored url response is read, return None
+                if "error" in return_value:
+                    return None
+                # return_value doesn't contain error -> return it
+                return return_value
             else:
                 return None
         else:

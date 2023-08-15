@@ -7,6 +7,7 @@ import aiohttp
 from goreverselookuplib.JsonUtil import SimpleNamespaceUtil, JsonToClass
 from goreverselookuplib.AnnotationProcessor import HumanOrthologFinder, UniProtAPI, EnsemblAPI, GOAnnotiationsFile
 from goreverselookuplib.CacheUtils import ConnectionCacher, Cacher
+from goreverselookuplib.Metrics import fisher_exact_test
 
 import logging
 
@@ -100,8 +101,8 @@ api = GOApi()
 ### Async ortholog query testing
 # load the existing model
 # model_async = ReverseLookup.from_input_file("diabetes_angio_4/input.txt") # use this to work from the ground up
-model_async = ReverseLookup.load_model("diabetes_angio_4/model_async_test.json") # or use a pre-computed async model
-Cacher.init()
+model_async = ReverseLookup.load_model("diabetes_angio_4/model_async_post_ortholog.json") # or use a pre-computed async model
+# Cacher.init()
 # ConnectionCacher.init()
 
 # if products for GO Terms have not been computed and saved yet, compute them:
@@ -110,8 +111,26 @@ Cacher.init()
 # model_async.save_model("diabetes_angio_4/model_async_test.json")
 
 # ortholog product fetch
-# model_async.fetch_ortholog_products(refetch=True, run_async=False) # connection cache test on sync mode
 # model_async.fetch_ortholog_products(refetch=True, run_async=True, max_connections=15, req_delay=0.1, semaphore_connections=5) # semaphore_connections=10 works in 3min40s, semaphore_connections=15 results in 429:TooManyRequests errors
-# model_async.save_model("diabetes_angio_4/model_async_test_ortholog_query.json")
+# model_async.save_model("diabetes_angio_4/model_async_post_ortholog.json")
+
+# test model.fetch_product_infos
+# model_async.fetch_product_infos(refetch=True, run_async=True, max_connections=15, semaphore_connections=10, req_delay=0.1)
+# model_async.save_model("diabetes_angio_4/model_async_post_infos.json")
+
+# test model scoring
+model_async_queried = ReverseLookup.load_model("diabetes_angio_4/model_async_post_infos.json")
+goaf = GOAnnotiationsFile()
+fisher_test = fisher_exact_test(model_async_queried, goaf)
+model_async_queried.score_products(score_classes=[fisher_test])
+model_async_queried.save_model("diabetes_angio_4/model_async_scored.json")
+
+# test model statistical analysis
+model_async_scored = ReverseLookup.load_model("diabetes_angio_4/model_async_scored.json")
+model_async_scored.perform_statistical_analysis(test_name="fisher_test", filepath="diabetes_angio_4/statistical_analysis.json")
+model_async_scored.save_model("diabetes_angio_4/model_async_scored.json")
+
+
+
 
 

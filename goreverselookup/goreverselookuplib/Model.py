@@ -240,6 +240,46 @@ class Product:
         
         #TODO: logger output which values are still missing
 
+    async def fetch_info_async(self, client_session: aiohttp.ClientSession, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]) -> None:
+        """
+        required_keys correspond to the Product's attributes (class variables) that are checked. If any are None, then API requests
+        are made so as to populate these variables with correct data.
+        """
+        self.had_fetch_info_computed = True
+        if not (self.uniprot_id or self.genename or self.ensg_id):
+            logger.debug(f"Product with id synonyms {self.id_synonyms} did not have an uniprot_id, gene name or ensg id. Aborting fetch info operation.")
+            return
+        if not uniprot_api:
+            uniprot_api = UniProtAPI()
+        if not ensembl_api:
+            ensembl_api = EnsemblAPI()
+
+        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
+            info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session=client_session)
+            for key, value in info_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
+        if any(getattr(self, key) is None for key in required_keys) and self.ensg_id:
+            enst_dict = await ensembl_api.get_info_async(self.ensg_id, session=client_session)
+            for key, value in enst_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
+        if any(getattr(self, key) is None for key in required_keys) and self.genename:
+            enst_dict = await ensembl_api.get_info_async(self.genename, session=client_session)
+            for key, value in enst_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
+        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
+            enst_dict = await ensembl_api.get_info_async(self.uniprot_id, session=client_session)
+            for key, value in enst_dict.items():
+                if value is not None:
+                    setattr(self, key, value)
+    
+    async def fetch_info_async_semaphore(self, session: aiohttp.ClientSession, semaphore: asyncio.Semaphore, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]):
+        async with semaphore:
+            await self.fetch_info_async(session, uniprot_api, ensembl_api, required_keys)
+        
+    
     def fetch_mRNA_sequence(self, ensembl_api: EnsemblAPI) -> None:
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
@@ -332,7 +372,7 @@ class ReverseLookup:
         self.timer = Timer()
 
         # placeholder to populate after perform_statistical_analysis is called
-        self.statistically_relevant_products = {}
+        self.statistically_relevant_products = statistically_relevant_products
 
         self.model_settings = ModelSettings()
     
@@ -817,33 +857,58 @@ class ReverseLookup:
             self.execution_times["prune_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    def fetch_product_infos(self, refetch: bool = False) -> None:
+    def fetch_product_infos(self, refetch: bool = False, run_async = True, max_connections = 15, semaphore_connections = 5, req_delay = 0.1, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]) -> None:
         # TODO: ensembl support batch request
 
         logger.info(f"Started fetching product infos.")
         self.timer.set_start_time()
 
-        try:
+        if run_async: 
+            # async mode
+            asyncio.run(self._fetch_product_infos_async(required_keys=required_keys, refetch=refetch, max_connections=max_connections, req_delay=req_delay, semaphore_connections=semaphore_connections))
+        else: 
+            # sync mode
             uniprot_api = UniProtAPI()
             ensembl_api = EnsemblAPI()
-            # Iterate over each Product object in the ReverseLookup object.
-            with logging_redirect_tqdm():
-                for product in tqdm(self.products, desc="Fetch product infos"):
-                    # Check if the Product object doesn't have a UniProt ID.
-                    # if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and (product.uniprot_id or product.genename or product.ensg_id): # some were still uninitialised, despite calling fetch_product_infos
-                    if product.had_fetch_info_computed == False or refetch == True:
-                        # If it doesn't, fetch UniProt data for the Product object.
-                        product.fetch_info(uniprot_api, ensembl_api)
-                        product.had_fetch_info_computed = True
-                        if product.had_fetch_info_computed == False:
-                            logger.warning(f"had_fetch_info_computed IS FALSE despite being called for {product.id_synonyms}, genename = {product.genename}")
-        except Exception as e:
-            raise e
+            try:
+                # Iterate over each Product object in the ReverseLookup object.
+                with logging_redirect_tqdm():
+                    for product in tqdm(self.products, desc="Fetch product infos"):
+                        # Check if the Product object doesn't have a UniProt ID.
+                        # if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and (product.uniprot_id or product.genename or product.ensg_id): # some were still uninitialised, despite calling fetch_product_infos
+                        if product.had_fetch_info_computed == False or refetch == True:
+                            # If it doesn't, fetch UniProt data for the Product object.
+                            product.fetch_info(uniprot_api, ensembl_api)
+                            product.had_fetch_info_computed = True
+                            if product.had_fetch_info_computed == False:
+                                logger.warning(f"had_fetch_info_computed IS FALSE despite being called for {product.id_synonyms}, genename = {product.genename}")
+            except Exception as e:
+                raise e
         
         if "fetch_product_infos" not in self.execution_times:
             self.execution_times["fetch_product_infos"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
+    async def _fetch_product_infos_async(self, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"], refetch:bool = False, max_connections = 50, req_delay = 0.1, semaphore_connections = 5):
+        uniprot_api = UniProtAPI()
+        ensembl_api = EnsemblAPI()
+        uniprot_api.async_request_sleep_delay = req_delay
+        ensembl_api.async_request_sleep_delay = req_delay
+
+        connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections)
+        semaphore = asyncio.Semaphore(semaphore_connections)
+
+        async with aiohttp.ClientSession(connector=connector) as session:
+        # async with create_session() as session:
+            tasks = []
+            for product in self.products:
+                if product.had_fetch_info_computed == False or refetch == True:
+                    # task = product.fetch_ortholog_async(session, human_ortholog_finder, uniprot_api, ensembl_api)
+                    task = product.fetch_info_async_semaphore(session, semaphore, uniprot_api, ensembl_api, required_keys)
+                    tasks.append(task)
+                    product.had_fetch_info_computed = True
+            await asyncio.gather(*tasks)
+    
     def score_products(self, score_classes: List[Metrics], recalculate:bool=True) -> None:
         """
         Scores the products of the current ReverseLookup model. This function allows you to pass a custom or a pre-defined scoring algorithm,
@@ -1445,7 +1510,7 @@ class ReverseLookup:
         # TODO: save statistical analysis as a part of the model's json and load it up on startup
         self.statistically_relevant_products = statistically_relevant_products_final
         
-        print(f"Finished with product statistical analysis. Found {len(statistically_relevant_products)} statistically relevant products.")
+        logger.info(f"Finished with product statistical analysis. Found {len(statistically_relevant_products)} statistically relevant products.")
         
         # write to file if it is supplied as a parameter
         if filepath != "":
