@@ -339,7 +339,6 @@ class binomial_test(Metrics):
                 
                 binom = binomtest(num_goterms_product_process, num_goterms_all_process, 
                                   (num_goterms_product_general/num_goterms_all_general if num_goterms_all_general != 0 else 0), alternative='greater') # bugfix: ZeroDivisionError
-                
                 binom_pvalue = binom.pvalue
                 
                 if num_goterms_product_general != 0 and num_goterms_all_general != 0: # bugfix: ZeroDivisionError

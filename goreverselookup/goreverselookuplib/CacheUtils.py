@@ -180,6 +180,7 @@ class Cacher():
         Saves 'cached_urls', 'cached_uniprot' and 'cached_ensembl' to their respective
         cache filepaths (CACHE_FILEPATH_URLS, CACHE_FILEPATH_UNIPROT, CACHE_FILEPATH_ENSEMBL)
         """
+        logger.info(f"Cacher is saving data. Please, be patient.")
         JsonUtil.save_json(cls.cached_urls, cls.CACHE_FILEPATH_URLS)
         JsonUtil.save_json(cls.cached_uniprot, cls.CACHE_FILEPATH_UNIPROT)
         JsonUtil.save_json(cls.cached_ensembl, cls.CACHE_FILEPATH_ENSEMBL)

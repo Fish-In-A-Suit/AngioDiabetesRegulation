@@ -2,7 +2,7 @@
 
 from goreverselookuplib import ReverseLookup
 from goreverselookuplib.AnnotationProcessor import GOAnnotiationsFile
-from goreverselookuplib.Workflows import WorkflowOne
+from goreverselookuplib.Workflows import WorkflowOne, WorkflowTwo
 from goreverselookuplib.AnnotationProcessor import GOApi
 import asyncio
 import aiohttp
@@ -23,3 +23,5 @@ file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(logging.Formatter('%(asctime)s [%(filename)s:%(lineno)s] - [%(funcName)s] %(message)s'))
 logger = logging.getLogger(__name__)
 
+model = ReverseLookup.load_model("diabetes_angio_4/model_async_scored.json")
+t = ""

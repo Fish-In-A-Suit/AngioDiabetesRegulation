@@ -113,7 +113,17 @@ class Workflow:
             if isinstance(scoring_class, fisher_exact_test) or isinstance(scoring_class, binomial_test):
                 scoring_instance = scoring_class(self.model, self.goaf)
             else: # if adv_product_score or nterms
-                scoring_instance = scoring_class(self.model)
+                try:
+                    scoring_instance = scoring_class(self.model)
+                except TypeError as e:
+                    # bugfix: binomial_test and fisher_exact are thrown into this clause somehow; maybe naming confusion error? TODO
+                    if "missing" in str(e) and "positional argument" in str(e):
+                        # missing positional argument -> supply goaf
+                        scoring_instance = scoring_class(self.model, self.goaf)
+                    else:
+                        # raise other TypeErrors
+                        raise e
+
             self.scores.append(scoring_instance)
             self.computed_scores[scoring_class] = scoring_instance
 
@@ -227,13 +237,13 @@ class WorkflowTwo(Workflow):
     
     def create_workflow(self, debug:bool = False, fetch_mirna = False):
         # Fetch all GO term names and descriptions
-        self.add_function(self.model.fetch_all_go_term_names_descriptions)
+        self.add_function(self.model.fetch_all_go_term_names_descriptions, run_async=True)
         # Fetch all GO term products
         self.add_function(self.model.fetch_all_go_term_products, web_download=True, run_async=True, recalculate=False, max_connections = 60, request_params={"rows":50000}, delay = 0.0)
         # Create product instances from GO terms
         self.add_function(self.model.create_products_from_goterms)
         # Fetch human ortholog for products (either UniProtID, ENSG or genename)
-        self.add_function(self.model.fetch_ortholog_products, refetch=False, max_connections=15, req_delay=0.1, semaphore_connections=5)
+        self.add_function(self.model.fetch_ortholog_products, refetch=False, run_async = True, max_connections=15, req_delay=0.1, semaphore_connections=5)
         self.add_function(self.model.prune_products)
         self.add_function(self.model.save_model, self.model_save_filepath)
         # Fetch product information (from UniprotAPI or EnsemblAPI)

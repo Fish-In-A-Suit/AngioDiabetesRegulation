@@ -3,7 +3,7 @@
 
 from goreverselookuplib import ReverseLookup
 from goreverselookuplib.AnnotationProcessor import GOAnnotiationsFile
-from goreverselookuplib.Workflows import WorkflowOne
+from goreverselookuplib.Workflows import WorkflowOne, WorkflowTwo
 from goreverselookuplib.AnnotationProcessor import GOApi
 import asyncio
 import aiohttp
@@ -59,3 +59,20 @@ model.save_model("diabetes_angio_4/model_scored.json")
 # Perform statistical analysis of the scored products
 model.perform_statistical_analysis(test_name="fisher_test", filepath="diabetes_angio_4/results.json")
 model.save_model("diabetes_angio_4/model_analysed.json")
+
+
+# Alternatively, use workflows:
+use_workflows = False
+if use_workflows:
+    Cacher.init()
+    workflow = WorkflowTwo(
+        input_file_fpath="diabetes_angio_5/input.txt", 
+        save_folder_dir="diabetes_angio_5",
+        name="diabetes-angiogenesis"
+    )
+    # workflow = WorkflowTwo(
+    #    input_file_fpath="diabetes_angio_5/data.json", 
+    #    save_folder_dir="diabetes_angio_5",
+    #    name="diabetes-angiogenesis"
+    #    )
+    workflow.run_workflow()

@@ -87,12 +87,13 @@ class GOTerm:
                 self.description = data['definition']
             logger.info(f"Fetched name and description for GO term {self.id}")
 
-    async def fetch_name_description_async(self, api: GOApi):
+    async def fetch_name_description_async(self, api: GOApi, req_delay=0.1):
         async with aiohttp.ClientSession() as session:
             url = api.get_data(self.id, get_url_only=True)
             response = await session.get(url)
             if response.status == 200:
                 data = await response.json()
+                await asyncio.sleep(req_delay)
                 if "label" in data:
                     self.name = data['label']
                 if "definition" in data:
@@ -174,7 +175,7 @@ class GOTerm:
         url = f"http://api.geneontology.org/api/bioentity/function/{self.id}/genes"
         params = request_params # 10k rows resulted in 56 mismatches for querying products for 200 goterms (compared to reference model, loaded from synchronous query data)
         
-        asyncio.sleep(req_delay)
+        await asyncio.sleep(req_delay)
         response = await session.get(url, params=params)
         if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
             logger.warning(f"HTTP Error when parsing {self.id}. Response status = {response.status}")

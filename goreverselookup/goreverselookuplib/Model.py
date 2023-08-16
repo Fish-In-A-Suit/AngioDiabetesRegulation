@@ -393,7 +393,7 @@ class ReverseLookup:
             logger.warning(f"ModelSettings object has no attribute {setting}!")
 
     
-    def fetch_all_go_term_names_descriptions(self, run_async = True):
+    def fetch_all_go_term_names_descriptions(self, run_async = True, req_delay=0.1):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_name_description method for each object.
         """
@@ -401,7 +401,7 @@ class ReverseLookup:
         api = GOApi()
 
         if run_async == True:
-            asyncio.run(self._fetch_all_go_term_names_descriptions_async(api))
+            asyncio.run(self._fetch_all_go_term_names_descriptions_async(api, req_delay=req_delay))
         else:
             logger.info(f"Fetching GO term names and their descriptions.")
             # TODO: tqdm prevents any logger.info to be printed to console
@@ -415,14 +415,15 @@ class ReverseLookup:
             self.execution_times["fetch_all_go_term_names_descriptions"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
 
-    async def _fetch_all_go_term_names_descriptions_async(self, api:GOApi):
+    async def _fetch_all_go_term_names_descriptions_async(self, api:GOApi, req_delay = 0.1):
         """
         Call fetch_all_go_term_names_descriptions with run_async == True to run this code.
         """
         tasks = []
         for goterm in self.goterms:
-            task = asyncio.create_task(goterm.fetch_name_description_async(api))
-            tasks.append(task)
+            if goterm.name == None or goterm.description == None: 
+                task = asyncio.create_task(goterm.fetch_name_description_async(api, req_delay=req_delay))
+                tasks.append(task)
         await asyncio.gather(*tasks)
     
     def fetch_all_go_term_products(self, web_download: bool = False, run_async = True, recalculate: bool = False, delay:float = 0.0, run_async_options:str="v3", request_params={"rows":20000}, max_connections = 100):
@@ -597,7 +598,7 @@ class ReverseLookup:
     
     # IMPROVE SPEED UP USING ASYNCIO.GATHER: Instead of awaiting each request individually in a loop, you can use asyncio.gather() 
     # to concurrently execute multiple requests. This allows the requests to be made in parallel, which can significantly improve performance.
-    async def _fetch_all_goterm_products_async_v3(self, max_connections = 100, request_params = {"rows":20000}, req_delay = 0.5):
+    async def _fetch_all_goterm_products_async_v3(self, max_connections = 100, request_params = {"rows":20000}, req_delay = 0.5, recalculate:bool = False):
         """
         In comparison to (GOApi)._fetch_all_go_term_products_async, this function doesn't overload the server and cause the server to block our requests.
         In comparison to the v2 version of this function (inside GOApi), v3 uses asyncio.gather, which speeds up the async requests.
@@ -606,8 +607,9 @@ class ReverseLookup:
         async with aiohttp.ClientSession(connector=connector) as session:
             tasks = []
             for goterm in self.goterms:
-                task = goterm.fetch_products_async_v3(session, request_params=request_params, req_delay=req_delay)
-                tasks.append(task)
+                if goterm.products == [] or recalculate == True:
+                    task = goterm.fetch_products_async_v3(session, request_params=request_params, req_delay=req_delay)
+                    tasks.append(task)
             # perform multiple tasks at once asynchronously
             await asyncio.gather(*tasks)
 
@@ -747,6 +749,7 @@ class ReverseLookup:
                 # TODO: implement async goaf parsing
                 """
                 # TODO: with logging_redirect_tqdm
+                # TODO: remove this and use_goaf
 
             elif run_async == True:
                 asyncio.run(self._fetch_ortholog_products_async(refetch=refetch, max_connections=max_connections, req_delay=req_delay, semaphore_connections=semaphore_connections))
@@ -754,6 +757,7 @@ class ReverseLookup:
                 human_ortholog_finder = HumanOrthologFinder()
                 uniprot_api = UniProtAPI()
                 ensembl_api = EnsemblAPI()
+                goaf = GOAnnotiationsFile()
 
                 with logging_redirect_tqdm():
                     for product in tqdm(self.products, desc="Fetch ortholog products"):  # Iterate over each Product object in the ReverseLookup object.
@@ -761,7 +765,7 @@ class ReverseLookup:
                         # if product.genename == None or refetch == True: # product.genename was still None for a lot of products, despite calling fetch_orthologs
                         if product.had_orthologs_computed == False or refetch == True:
                             # If it doesn't, fetch UniProt data for the Product object.
-                            product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
+                            product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api, goaf=goaf)
                             product.had_orthologs_computed = True
         except Exception as e:
             # If there was an exception while fetching UniProt data, save all the Product objects to a JSON file.
@@ -772,9 +776,6 @@ class ReverseLookup:
         if "fetch_ortholog_products" not in self.execution_times:
             self.execution_times["fetch_ortholog_products"] = self.timer.get_elapsed_time()
         self.timer.print_elapsed_time()
-    
-    def fetch_ortholog_products_goaf(goaf:GOAnnotiationsFile, ):
-        return 0
     
     async def _fetch_ortholog_products_async(self, refetch:bool = True, max_connections = 100, req_delay = 0.5, semaphore_connections = 10):
         """
@@ -807,6 +808,7 @@ class ReverseLookup:
         uniprot_api = UniProtAPI()
         ensembl_api = EnsemblAPI()
         ensembl_api.async_request_sleep_delay = req_delay
+        uniprot_api.async_request_sleep_delay = req_delay
         goaf = GOAnnotiationsFile()
 
         connector = aiohttp.TCPConnector(limit=max_connections,limit_per_host=max_connections)

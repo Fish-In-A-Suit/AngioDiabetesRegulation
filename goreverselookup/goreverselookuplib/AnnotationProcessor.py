@@ -886,8 +886,20 @@ class EnsemblAPI:
             
         if response_json == []:
             return None
-        best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
-        ortholog = best_ortholog_dict["target"].get("id")
+
+        max_perc_id = 0.0
+        ortholog = ""
+        for ortholog_dict in response_json:
+            if ortholog_dict["target"]["species"] == "homo_sapiens":
+                current_perc_id = ortholog_dict["target"]["perc_id"]
+                if current_perc_id > max_perc_id:
+                    ortholog = ortholog_dict["target"]["id"]
+                    max_perc_id = current_perc_id
+
+        # above code also accounts for the homo sapiens species
+        # best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
+        # ortholog = best_ortholog_dict["target"].get("id")
+        
         Cacher.store_data("ensembl", ensembl_data_key, ortholog)
         logger.info(f"Received ortholog for id {id} -> {ortholog}")
         return ortholog
@@ -944,8 +956,21 @@ class EnsemblAPI:
             response_json = response_json["data"][0]["homologies"]
             if response_json == []: # if there are no homologies, return None
                 return None
-            best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
-            ortholog = best_ortholog_dict["target"].get("id")
+            
+            
+            max_perc_id = 0.0
+            ortholog = ""
+            for ortholog_dict in response_json:
+                if ortholog_dict["target"]["species"] == "homo_sapiens":
+                    current_perc_id = ortholog_dict["target"]["perc_id"]
+                    if current_perc_id > max_perc_id:
+                        ortholog = ortholog_dict["target"]["id"]
+                        max_perc_id = current_perc_id
+
+            # Above code is better, because it accounts for if the "species" in the response is "homo_sapiens"
+            # best_ortholog_dict = max(response_json, key=lambda x: int(x["target"]["perc_id"]))
+            # ortholog = best_ortholog_dict["target"].get("id")
+            
             Cacher.store_data("ensembl", ensembl_data_key, ortholog)
             logger.info(f"Received ortholog for id {id} -> {ortholog}")
             return ortholog
@@ -996,8 +1021,17 @@ class EnsemblAPI:
         if id.startswith("ENS"):
             endpoint = f"id/{id}"
         else:
+            # TODO: Check if this is ever even queried. I am trying to see if any such urls are stored in connection_cache.json, but I see none.
+            #
+            # One of the following links is used:
+            #   rest.ensembl.org/lookup/symbol/zebrafish/{ZFIN_ID}
+            #   rest.ensembl.org/lookup/symbol/xenopus_tropicalis/{XENBASE_ID}
+            #   rest.ensembl.org/lookup/symbol/mouse/{MGI_ID}
+            #   rest.ensembl.org/lookup/symbol/rat/{RGD_ID}
+            #   rest.ensembl.org/lookup/symbol/human/{UNIPROT_ID}
+        
             prefix, id_ = id.split(":") if ":" in id else (None, id)
-            species = species_mapping.get(prefix, "human/") #defaults to human if not prefix "xxx:"
+            species = species_mapping.get(prefix, "human/") # defaults to human if not prefix "xxx:"
             endpoint = f"symbol/{species}{id_}"
 
         url = f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1"

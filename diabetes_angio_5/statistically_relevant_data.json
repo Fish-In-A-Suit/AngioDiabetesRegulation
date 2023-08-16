@@ -1,0 +1,2147 @@
+{
+    "diabetes+:angio+": [
+        {
+            "id_synonyms": [
+                "RGD:708557",
+                "RGD:3395",
+                "UniProtKB:Q96GR2",
+                "RGD:3205",
+                "MGI:2385656",
+                "ZFIN:ZDB-GENE-110914-219",
+                "UniProtKB:Q96GR2",
+                "ZFIN:ZDB-GENE-110914-219",
+                "MGI:2385656",
+                "RGD:3205",
+                "RGD:708557",
+                "RGD:3395",
+                "RGD:708557",
+                "UniProtKB:Q96GR2",
+                "RGD:3395",
+                "ZFIN:ZDB-GENE-110914-219",
+                "MGI:2385656",
+                "RGD:3205"
+            ],
+            "genename": "ACSBG1",
+            "description": "acyl-CoA synthetase bubblegum family member 1",
+            "uniprot_id": "Q96GR2",
+            "ensg_id": "ENSG00000103740",
+            "enst_id": "ENST00000258873",
+            "refseq_nt_id": "NM_015162.5",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 22.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 0,
+                    "diabetes0": 0,
+                    "angio+": 3,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 1,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.023728813559322035,
+                        "fold_enrichment": 84.28571428571428,
+                        "pvalue": 0.000267517476162914,
+                        "risk_ratio": 84.28571428571428,
+                        "pvalue_corr": 0.004064314562339632
+                    },
+                    "diabetes-": {
+                        "num": 0,
+                        "expected": 0.05593220338983051,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "num": 3,
+                        "expected": 0.030508474576271184,
+                        "fold_enrichment": 98.33333333333334,
+                        "pvalue": 4.255458343827353e-06,
+                        "risk_ratio": 98.33333333333333,
+                        "pvalue_corr": 8.039081171362372e-05
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.009322033898305085,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 1,
+                        "expected": 0.06271186440677966,
+                        "fold_enrichment": 15.945945945945947,
+                        "pvalue": 0.0608109156428214,
+                        "risk_ratio": 15.945945945945947,
+                        "pvalue_corr": 0.34853147683765423
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.029661016949152543,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 16,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.023728813559322035,
+                        "fold_enrichment": 84.28571428571428,
+                        "pvalue": 0.0002508467846249677,
+                        "odds_ratio": 103.5934065934066,
+                        "pvalue_corr": 0.010824173620430057
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 66,
+                        "n_prod_general": 16,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.05593220338983051,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 36,
+                        "n_prod_general": 16,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "expected": 0.030508474576271184,
+                        "fold_enrichment": 98.33333333333334,
+                        "pvalue": 3.496212961995041e-06,
+                        "odds_ratio": 131.7972027972028,
+                        "pvalue_corr": 0.0003493021398295294
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 16,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.009322033898305085,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 74,
+                        "n_prod_general": 16,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.06271186440677966,
+                        "fold_enrichment": 15.945945945945947,
+                        "pvalue": 0.06087506510056629,
+                        "odds_ratio": 17.175342465753424,
+                        "pvalue_corr": 0.4446972654629445
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 16,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.029661016949152543,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963",
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963",
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963"
+            ],
+            "genename": "AADACL2",
+            "description": "arylacetamide deacetylase like 2",
+            "uniprot_id": "Q6P093",
+            "ensg_id": "ENSG00000197953",
+            "enst_id": "ENST00000356517",
+            "refseq_nt_id": "NM_207365.4",
+            "mRNA": null,
+            "scores": {
+                "adv_score": -4.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 8,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 2,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.004449152542372881,
+                        "fold_enrichment": 449.5238095238096,
+                        "pvalue": 9.51775045744598e-06,
+                        "risk_ratio": 449.5238095238095,
+                        "pvalue_corr": 0.00017342691173618282
+                    },
+                    "diabetes-": {
+                        "num": 8,
+                        "expected": 0.01048728813559322,
+                        "fold_enrichment": 762.8282828282829,
+                        "pvalue": 2.3151457914145205e-21,
+                        "risk_ratio": 762.8282828282829,
+                        "pvalue_corr": 5.333943396102512e-20
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 349.6296296296296,
+                        "pvalue": 1.5849484511364298e-05,
+                        "risk_ratio": 349.6296296296296,
+                        "pvalue_corr": 0.00028146806697121
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.0017478813559322032,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 2,
+                        "expected": 0.011758474576271185,
+                        "fold_enrichment": 170.09009009009011,
+                        "pvalue": 6.767871135713404e-05,
+                        "risk_ratio": 170.09009009009011,
+                        "pvalue_corr": 0.0011286657678114898
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.005561440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.004449152542372881,
+                        "fold_enrichment": 449.5238095238096,
+                        "pvalue": 6.355140919727338e-06,
+                        "odds_ratio": 1450.3076923076924,
+                        "pvalue_corr": 0.0005709667278552046
+                    },
+                    "diabetes-": {
+                        "error": "StatisticsError: Element of contingency table in class fisher_exact_test is negative. All elements must be non-negative. Contingency table: [[8, 58], [-5, 18822]]. This might be because a gene_name, which belongs to a certain GO Term (obtained via web-download), isn't found in the GO Annotations File.",
+                        "num_terms_product_process": 8,
+                        "num_terms_all_process": 66,
+                        "num_terms_product_general": 3,
+                        "fold_enrichment": null,
+                        "pvalue": null,
+                        "odds_ratio": null
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 349.6296296296296,
+                        "pvalue": 1.058890687958551e-05,
+                        "odds_ratio": 1108.5882352941176,
+                        "pvalue_corr": 0.0008527080262430097
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.0017478813559322032,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.011758474576271185,
+                        "fold_enrichment": 170.09009009009011,
+                        "pvalue": 4.53368521089994e-05,
+                        "odds_ratio": 522.4444444444445,
+                        "pvalue_corr": 0.0028207253878048777
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.005561440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:2927",
+                "MGI:88335",
+                "RGD:2927",
+                "MGI:88335",
+                "MGI:88335",
+                "RGD:2927"
+            ],
+            "genename": "ACTC1",
+            "description": "actin alpha cardiac muscle 1",
+            "uniprot_id": "P68032",
+            "ensg_id": "ENSG00000159251",
+            "enst_id": "ENST00000290378",
+            "refseq_nt_id": "NM_005159.5",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 8.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 0,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 0,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.04300847457627119,
+                        "fold_enrichment": 46.50246305418719,
+                        "pvalue": 0.0008684277177744622,
+                        "risk_ratio": 46.50246305418719,
+                        "pvalue_corr": 0.011852979289429001
+                    },
+                    "diabetes-": {
+                        "num": 0,
+                        "expected": 0.1013771186440678,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.05529661016949153,
+                        "fold_enrichment": 36.16858237547893,
+                        "pvalue": 0.001435609504105185,
+                        "risk_ratio": 36.16858237547893,
+                        "pvalue_corr": 0.018692615580339588
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.016896186440677967,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 0,
+                        "expected": 0.11366525423728814,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.053760593220338986,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 29,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.04300847457627119,
+                        "fold_enrichment": 46.50246305418719,
+                        "pvalue": 0.0008375086662766148,
+                        "odds_ratio": 53.71509971509972,
+                        "pvalue_corr": 0.026851576120650242
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 66,
+                        "n_prod_general": 29,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.1013771186440678,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 29,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.05529661016949153,
+                        "fold_enrichment": 36.16858237547893,
+                        "pvalue": 0.001385276984565499,
+                        "odds_ratio": 41.05882352941177,
+                        "pvalue_corr": 0.04004414023342708
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 29,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.016896186440677967,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 0,
+                        "n_all_process": 74,
+                        "n_prod_general": 29,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.11366525423728814,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 29,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.053760593220338986,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:2280",
+                "RGD:2595",
+                "RGD:2280",
+                "RGD:2595",
+                "RGD:2280",
+                "RGD:2595"
+            ],
+            "genename": "AFTPH",
+            "description": "aftiphilin",
+            "uniprot_id": "Q6ULP2",
+            "ensg_id": "ENSG00000119844",
+            "enst_id": "ENST00000409933",
+            "refseq_nt_id": "NM_203437.4",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 6.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 1,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 1,
+                    "obesity-": 1,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.016313559322033898,
+                        "fold_enrichment": 122.5974025974026,
+                        "pvalue": 0.00012702497561805354,
+                        "risk_ratio": 122.59740259740258,
+                        "pvalue_corr": 0.0020413164875646614
+                    },
+                    "diabetes-": {
+                        "num": 1,
+                        "expected": 0.03845338983050848,
+                        "fold_enrichment": 26.005509641873275,
+                        "pvalue": 0.03773422797648515,
+                        "risk_ratio": 26.005509641873278,
+                        "pvalue_corr": 0.25481987903026254
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.020974576271186443,
+                        "fold_enrichment": 95.35353535353535,
+                        "pvalue": 0.0002110522767867358,
+                        "risk_ratio": 95.35353535353535,
+                        "pvalue_corr": 0.00326858452278203
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.006408898305084746,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 1,
+                        "expected": 0.04311440677966102,
+                        "fold_enrichment": 23.194103194103192,
+                        "pvalue": 0.042210229630499904,
+                        "risk_ratio": 23.194103194103196,
+                        "pvalue_corr": 0.2718511515486569
+                    },
+                    "obesity-": {
+                        "num": 1,
+                        "expected": 0.020391949152542374,
+                        "fold_enrichment": 49.038961038961034,
+                        "pvalue": 0.020191262236477218,
+                        "risk_ratio": 49.038961038961034,
+                        "pvalue_corr": 0.17205839607567555
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.016313559322033898,
+                        "fold_enrichment": 122.5974025974026,
+                        "pvalue": 0.00011556072878433277,
+                        "odds_ratio": 161.14529914529913,
+                        "pvalue_corr": 0.006009657079199059
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 66,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.03845338983050848,
+                        "fold_enrichment": 26.005509641873275,
+                        "pvalue": 0.03777647477561909,
+                        "odds_ratio": 28.946153846153845,
+                        "pvalue_corr": 0.34525524824422915
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.020974576271186443,
+                        "fold_enrichment": 95.35353535353535,
+                        "pvalue": 0.00019211232926353794,
+                        "odds_ratio": 123.17647058823529,
+                        "pvalue_corr": 0.008694888466179449
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.006408898305084746,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 74,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.04311440677966102,
+                        "fold_enrichment": 23.194103194103192,
+                        "pvalue": 0.04226616299912986,
+                        "odds_ratio": 25.763013698630136,
+                        "pvalue_corr": 0.36229429430154814
+                    },
+                    "obesity-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 35,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.020391949152542374,
+                        "fold_enrichment": 49.038961038961034,
+                        "pvalue": 0.020197623308590675,
+                        "odds_ratio": 55.42941176470588,
+                        "pvalue_corr": 0.26083416512080704
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "ZFIN:ZDB-GENE-040718-48",
+                "UniProtKB:Q96E22",
+                "MGI:1333787",
+                "MGI:1196365",
+                "RGD:1307879",
+                "MGI:1333787",
+                "ZFIN:ZDB-GENE-040718-48",
+                "RGD:1307879",
+                "UniProtKB:Q96E22",
+                "MGI:1196365",
+                "ZFIN:ZDB-GENE-040718-48",
+                "RGD:1307879",
+                "UniProtKB:Q96E22",
+                "MGI:1333787",
+                "MGI:1196365"
+            ],
+            "genename": "NUS1",
+            "description": "NUS1 dehydrodolichyl diphosphate synthase subunit",
+            "uniprot_id": "Q96E22",
+            "ensg_id": "ENSG00000153989",
+            "enst_id": "ENST00000368494",
+            "refseq_nt_id": "NM_138459.5",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 8.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 1,
+                    "diabetes0": 0,
+                    "angio+": 3,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 0,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.025211864406779663,
+                        "fold_enrichment": 79.32773109243696,
+                        "pvalue": 0.00030172536064998896,
+                        "risk_ratio": 79.32773109243696,
+                        "pvalue_corr": 0.004528038159647212
+                    },
+                    "diabetes-": {
+                        "num": 1,
+                        "expected": 0.059427966101694915,
+                        "fold_enrichment": 16.8270944741533,
+                        "pvalue": 0.05772181736510606,
+                        "risk_ratio": 16.8270944741533,
+                        "pvalue_corr": 0.3351512116412499
+                    },
+                    "angio+": {
+                        "num": 3,
+                        "expected": 0.03241525423728814,
+                        "fold_enrichment": 92.54901960784314,
+                        "pvalue": 5.097582514270188e-06,
+                        "risk_ratio": 92.54901960784314,
+                        "pvalue_corr": 9.48760701214722e-05
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.009904661016949153,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 0,
+                        "expected": 0.06663135593220339,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.031514830508474576,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.025211864406779663,
+                        "fold_enrichment": 79.32773109243696,
+                        "pvalue": 0.00028400263333747274,
+                        "odds_ratio": 96.68717948717949,
+                        "pvalue_corr": 0.011913267256968063
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 66,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.059427966101694915,
+                        "fold_enrichment": 16.8270944741533,
+                        "pvalue": 0.057767925392882266,
+                        "odds_ratio": 18.091346153846153,
+                        "pvalue_corr": 0.43023077872249277
+                    },
+                    "angio+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 36,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "expected": 0.03241525423728814,
+                        "fold_enrichment": 92.54901960784314,
+                        "pvalue": 4.239174239507402e-06,
+                        "odds_ratio": 122.38311688311688,
+                        "pvalue_corr": 0.0004050430053129334
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.009904661016949153,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 0,
+                        "n_all_process": 74,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.06663135593220339,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.031514830508474576,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        }
+    ],
+    "diabetes+:obesity+": [
+        {
+            "id_synonyms": [
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963",
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963",
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963"
+            ],
+            "genename": "AADACL2",
+            "description": "arylacetamide deacetylase like 2",
+            "uniprot_id": "Q6P093",
+            "ensg_id": "ENSG00000197953",
+            "enst_id": "ENST00000356517",
+            "refseq_nt_id": "NM_207365.4",
+            "mRNA": null,
+            "scores": {
+                "adv_score": -4.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 8,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 2,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.004449152542372881,
+                        "fold_enrichment": 449.5238095238096,
+                        "pvalue": 9.51775045744598e-06,
+                        "risk_ratio": 449.5238095238095,
+                        "pvalue_corr": 0.00017342691173618282
+                    },
+                    "diabetes-": {
+                        "num": 8,
+                        "expected": 0.01048728813559322,
+                        "fold_enrichment": 762.8282828282829,
+                        "pvalue": 2.3151457914145205e-21,
+                        "risk_ratio": 762.8282828282829,
+                        "pvalue_corr": 5.333943396102512e-20
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 349.6296296296296,
+                        "pvalue": 1.5849484511364298e-05,
+                        "risk_ratio": 349.6296296296296,
+                        "pvalue_corr": 0.00028146806697121
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.0017478813559322032,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 2,
+                        "expected": 0.011758474576271185,
+                        "fold_enrichment": 170.09009009009011,
+                        "pvalue": 6.767871135713404e-05,
+                        "risk_ratio": 170.09009009009011,
+                        "pvalue_corr": 0.0011286657678114898
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.005561440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.004449152542372881,
+                        "fold_enrichment": 449.5238095238096,
+                        "pvalue": 6.355140919727338e-06,
+                        "odds_ratio": 1450.3076923076924,
+                        "pvalue_corr": 0.0005709667278552046
+                    },
+                    "diabetes-": {
+                        "error": "StatisticsError: Element of contingency table in class fisher_exact_test is negative. All elements must be non-negative. Contingency table: [[8, 58], [-5, 18822]]. This might be because a gene_name, which belongs to a certain GO Term (obtained via web-download), isn't found in the GO Annotations File.",
+                        "num_terms_product_process": 8,
+                        "num_terms_all_process": 66,
+                        "num_terms_product_general": 3,
+                        "fold_enrichment": null,
+                        "pvalue": null,
+                        "odds_ratio": null
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 349.6296296296296,
+                        "pvalue": 1.058890687958551e-05,
+                        "odds_ratio": 1108.5882352941176,
+                        "pvalue_corr": 0.0008527080262430097
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.0017478813559322032,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.011758474576271185,
+                        "fold_enrichment": 170.09009009009011,
+                        "pvalue": 4.53368521089994e-05,
+                        "odds_ratio": 522.4444444444445,
+                        "pvalue_corr": 0.0028207253878048777
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.005561440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:3073",
+                "RGD:2913",
+                "RGD:3544",
+                "RGD:3544",
+                "RGD:3073",
+                "RGD:2913",
+                "RGD:2913",
+                "RGD:3544",
+                "RGD:3073"
+            ],
+            "genename": "ABLIM3",
+            "description": "actin binding LIM protein family member 3",
+            "uniprot_id": "O94929",
+            "ensg_id": "ENSG00000173210",
+            "enst_id": "ENST00000309868",
+            "refseq_nt_id": "NM_014945.5",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 8.0,
+                "nterms": {
+                    "diabetes+": 3,
+                    "diabetes-": 1,
+                    "diabetes0": 0,
+                    "angio+": 0,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 2,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 3,
+                        "expected": 0.02076271186440678,
+                        "fold_enrichment": 144.48979591836735,
+                        "pvalue": 1.317300282927568e-06,
+                        "risk_ratio": 144.48979591836735,
+                        "pvalue_corr": 2.5635437190635254e-05
+                    },
+                    "diabetes-": {
+                        "num": 1,
+                        "expected": 0.048940677966101694,
+                        "fold_enrichment": 20.432900432900432,
+                        "pvalue": 0.04777967040632835,
+                        "risk_ratio": 20.432900432900432,
+                        "pvalue_corr": 0.2950439052588301
+                    },
+                    "angio+": {
+                        "num": 0,
+                        "expected": 0.02669491525423729,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.008156779661016949,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 2,
+                        "expected": 0.054872881355932206,
+                        "fold_enrichment": 36.447876447876446,
+                        "pvalue": 0.0014333390589210317,
+                        "risk_ratio": 36.447876447876446,
+                        "pvalue_corr": 0.01867270780225009
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.025953389830508475,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 28,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "expected": 0.02076271186440678,
+                        "fold_enrichment": 144.48979591836735,
+                        "pvalue": 1.0494225359954e-06,
+                        "odds_ratio": 205.6909090909091,
+                        "pvalue_corr": 0.00012697485337536302
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 66,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.048940677966101694,
+                        "fold_enrichment": 20.432900432900432,
+                        "pvalue": 0.047825460009119435,
+                        "odds_ratio": 22.266272189349113,
+                        "pvalue_corr": 0.3869426835012022
+                    },
+                    "angio+": {
+                        "n_prod_process": 0,
+                        "n_all_process": 36,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.02669491525423729,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.008156779661016949,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.054872881355932206,
+                        "fold_enrichment": 36.447876447876446,
+                        "pvalue": 0.0013357754154038454,
+                        "odds_ratio": 43.53703703703704,
+                        "pvalue_corr": 0.038797105491066096
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.025953389830508475,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:97569",
+                "Xenbase:XB-GENE-960454",
+                "RGD:1560766",
+                "UniProtKB:Q7Z2X4",
+                "MGI:2138391",
+                "MGI:98496",
+                "MGI:97568",
+                "ZFIN:ZDB-GENE-050320-72",
+                "ZFIN:ZDB-GENE-050320-72",
+                "Xenbase:XB-GENE-960454",
+                "RGD:1560766",
+                "UniProtKB:Q7Z2X4",
+                "MGI:98496",
+                "MGI:97569",
+                "MGI:2138391",
+                "MGI:97568",
+                "Xenbase:XB-GENE-960454",
+                "MGI:2138391",
+                "MGI:97569",
+                "MGI:97568",
+                "MGI:98496",
+                "ZFIN:ZDB-GENE-050320-72",
+                "RGD:1560766",
+                "UniProtKB:Q7Z2X4"
+            ],
+            "genename": "PID1",
+            "description": "phosphotyrosine interaction domain containing 1",
+            "uniprot_id": "Q7Z2X4",
+            "ensg_id": "ENSG00000153823",
+            "enst_id": "ENST00000392055",
+            "refseq_nt_id": "NM_001100818.2",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 10.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 0,
+                    "diabetes0": 0,
+                    "angio+": 1,
+                    "angio-": 1,
+                    "angio0": 0,
+                    "obesity+": 3,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.03411016949152543,
+                        "fold_enrichment": 58.6335403726708,
+                        "pvalue": 0.0005492637700116193,
+                        "risk_ratio": 58.6335403726708,
+                        "pvalue_corr": 0.007876742742843163
+                    },
+                    "diabetes-": {
+                        "num": 0,
+                        "expected": 0.08040254237288136,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "num": 1,
+                        "expected": 0.04385593220338983,
+                        "fold_enrichment": 22.801932367149757,
+                        "pvalue": 0.04293375367274439,
+                        "risk_ratio": 22.801932367149757,
+                        "pvalue_corr": 0.2749638313802262
+                    },
+                    "angio-": {
+                        "num": 1,
+                        "expected": 0.01340042372881356,
+                        "fold_enrichment": 74.62450592885375,
+                        "pvalue": 0.013319097965212684,
+                        "risk_ratio": 74.62450592885375,
+                        "pvalue_corr": 0.12738379223698665
+                    },
+                    "obesity+": {
+                        "num": 3,
+                        "expected": 0.09014830508474576,
+                        "fold_enrichment": 33.27849588719154,
+                        "pvalue": 0.00010984698820672072,
+                        "risk_ratio": 33.27849588719154,
+                        "pvalue_corr": 0.0017800301525235786
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.042637711864406784,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.03411016949152543,
+                        "fold_enrichment": 58.6335403726708,
+                        "pvalue": 0.0005251006360157696,
+                        "odds_ratio": 69.06227106227107,
+                        "pvalue_corr": 0.01921456594225338
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 66,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.08040254237288136,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 36,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.04385593220338983,
+                        "fold_enrichment": 22.801932367149757,
+                        "pvalue": 0.04292152765440455,
+                        "odds_ratio": 24.474025974025974,
+                        "pvalue_corr": 0.36518181726599036
+                    },
+                    "angio-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 11,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.01340042372881356,
+                        "fold_enrichment": 74.62450592885375,
+                        "pvalue": 0.013306489243417235,
+                        "odds_ratio": 85.77272727272727,
+                        "pvalue_corr": 0.20899781343966095
+                    },
+                    "obesity+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 74,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "expected": 0.09014830508474576,
+                        "fold_enrichment": 33.27849588719154,
+                        "pvalue": 9.640730544351799e-05,
+                        "odds_ratio": 39.73732394366197,
+                        "pvalue_corr": 0.0051930539160380896
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.042637711864406784,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        }
+    ],
+    "angio+:obesity+": [
+        {
+            "id_synonyms": [
+                "MGI:95479",
+                "MGI:95520",
+                "MGI:95485",
+                "MGI:95490",
+                "MGI:95455",
+                "MGI:95489",
+                "MGI:95485",
+                "MGI:95455",
+                "MGI:95489",
+                "MGI:95479",
+                "MGI:95490",
+                "MGI:95520",
+                "MGI:95520",
+                "MGI:95489",
+                "MGI:95490",
+                "MGI:95479",
+                "MGI:95455",
+                "MGI:95485"
+            ],
+            "genename": "TFDP2",
+            "description": "transcription factor Dp-2",
+            "uniprot_id": "Q14188",
+            "ensg_id": "ENSG00000114126",
+            "enst_id": "ENST00000489671",
+            "refseq_nt_id": "NM_001178139.2",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 12.0,
+                "nterms": {
+                    "diabetes+": 1,
+                    "diabetes-": 1,
+                    "diabetes0": 0,
+                    "angio+": 3,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 3,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 1,
+                        "expected": 0.025211864406779663,
+                        "fold_enrichment": 39.66386554621848,
+                        "pvalue": 0.024907774211590086,
+                        "risk_ratio": 39.66386554621848,
+                        "pvalue_corr": 0.19582502972096832
+                    },
+                    "diabetes-": {
+                        "num": 1,
+                        "expected": 0.059427966101694915,
+                        "fold_enrichment": 16.8270944741533,
+                        "pvalue": 0.05772181736510606,
+                        "risk_ratio": 16.8270944741533,
+                        "pvalue_corr": 0.3351512116412499
+                    },
+                    "angio+": {
+                        "num": 3,
+                        "expected": 0.03241525423728814,
+                        "fold_enrichment": 92.54901960784314,
+                        "pvalue": 5.097582514270188e-06,
+                        "risk_ratio": 92.54901960784314,
+                        "pvalue_corr": 9.48760701214722e-05
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.009904661016949153,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 3,
+                        "expected": 0.06663135593220339,
+                        "fold_enrichment": 45.02384737678855,
+                        "pvalue": 4.511066128697854e-05,
+                        "risk_ratio": 45.02384737678855,
+                        "pvalue_corr": 0.00076859044149438
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.031514830508474576,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 28,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.025211864406779663,
+                        "fold_enrichment": 39.66386554621848,
+                        "pvalue": 0.024903218047819906,
+                        "odds_ratio": 43.6412037037037,
+                        "pvalue_corr": 0.2856692158910946
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 66,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.059427966101694915,
+                        "fold_enrichment": 16.8270944741533,
+                        "pvalue": 0.057767925392882266,
+                        "odds_ratio": 18.091346153846153,
+                        "pvalue_corr": 0.43023077872249277
+                    },
+                    "angio+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 36,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "expected": 0.03241525423728814,
+                        "fold_enrichment": 92.54901960784314,
+                        "pvalue": 4.239174239507402e-06,
+                        "odds_ratio": 122.38311688311688,
+                        "pvalue_corr": 0.0004050430053129334
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.009904661016949153,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 74,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "expected": 0.06663135593220339,
+                        "fold_enrichment": 45.02384737678855,
+                        "pvalue": 3.768275111222882e-05,
+                        "odds_ratio": 56.767605633802816,
+                        "pvalue_corr": 0.002406698358833543
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 17,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.031514830508474576,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:87920",
+                "MGI:1921394",
+                "UniProtKB:Q8WZ75",
+                "RGD:6494870",
+                "ZFIN:ZDB-GENE-020809-1",
+                "UniProtKB:Q8WZ75",
+                "RGD:6494870",
+                "MGI:1921394",
+                "MGI:87920",
+                "ZFIN:ZDB-GENE-020809-1",
+                "ZFIN:ZDB-GENE-020809-1",
+                "UniProtKB:Q8WZ75",
+                "MGI:1921394",
+                "MGI:87920",
+                "RGD:6494870"
+            ],
+            "genename": "ROBO4",
+            "description": "roundabout guidance receptor 4",
+            "uniprot_id": "Q8WZ75",
+            "ensg_id": "ENSG00000154133",
+            "enst_id": "ENST00000306534",
+            "refseq_nt_id": "NM_019055.6",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 6.0,
+                "nterms": {
+                    "diabetes+": 1,
+                    "diabetes-": 0,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 1,
+                    "angio0": 0,
+                    "obesity+": 2,
+                    "obesity-": 1,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 1,
+                        "expected": 0.019279661016949154,
+                        "fold_enrichment": 51.86813186813186,
+                        "pvalue": 0.019101510828820178,
+                        "risk_ratio": 51.86813186813187,
+                        "pvalue_corr": 0.16518346349290855
+                    },
+                    "diabetes-": {
+                        "num": 0,
+                        "expected": 0.045444915254237286,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.024788135593220337,
+                        "fold_enrichment": 80.6837606837607,
+                        "pvalue": 0.00029406948693608227,
+                        "risk_ratio": 80.68376068376068,
+                        "pvalue_corr": 0.0044236904540169795
+                    },
+                    "angio-": {
+                        "num": 1,
+                        "expected": 0.007574152542372882,
+                        "fold_enrichment": 132.02797202797203,
+                        "pvalue": 0.007548130066737378,
+                        "risk_ratio": 132.02797202797203,
+                        "pvalue_corr": 0.08139332160379173
+                    },
+                    "obesity+": {
+                        "num": 2,
+                        "expected": 0.050953389830508476,
+                        "fold_enrichment": 39.25155925155925,
+                        "pvalue": 0.0012390234915890866,
+                        "risk_ratio": 39.25155925155926,
+                        "pvalue_corr": 0.0163271007667171
+                    },
+                    "obesity-": {
+                        "num": 1,
+                        "expected": 0.02409957627118644,
+                        "fold_enrichment": 41.494505494505496,
+                        "pvalue": 0.02381960340901749,
+                        "risk_ratio": 41.494505494505496,
+                        "pvalue_corr": 0.1918826785175555
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 28,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.019279661016949154,
+                        "fold_enrichment": 51.86813186813186,
+                        "pvalue": 0.019102015484009784,
+                        "odds_ratio": 58.18827160493827,
+                        "pvalue_corr": 0.2541095739359048
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 66,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.045444915254237286,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.024788135593220337,
+                        "fold_enrichment": 80.6837606837607,
+                        "pvalue": 0.0002717402519814584,
+                        "odds_ratio": 100.7807486631016,
+                        "pvalue_corr": 0.011499054107573911
+                    },
+                    "angio-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 11,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.007574152542372882,
+                        "fold_enrichment": 132.02797202797203,
+                        "pvalue": 0.007544944266437094,
+                        "odds_ratio": 157.25,
+                        "pvalue_corr": 0.14671233754671373
+                    },
+                    "obesity+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.050953389830508476,
+                        "fold_enrichment": 39.25155925155925,
+                        "pvalue": 0.0011479776272201696,
+                        "odds_ratio": 47.494949494949495,
+                        "pvalue_corr": 0.03433665255677918
+                    },
+                    "obesity-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 35,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.02409957627118644,
+                        "fold_enrichment": 41.494505494505496,
+                        "pvalue": 0.02382459885423633,
+                        "odds_ratio": 46.19117647058823,
+                        "pvalue_corr": 0.28328330430237153
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963",
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963",
+                "RGD:3443",
+                "RGD:3447",
+                "RGD:3963"
+            ],
+            "genename": "AADACL2",
+            "description": "arylacetamide deacetylase like 2",
+            "uniprot_id": "Q6P093",
+            "ensg_id": "ENSG00000197953",
+            "enst_id": "ENST00000356517",
+            "refseq_nt_id": "NM_207365.4",
+            "mRNA": null,
+            "scores": {
+                "adv_score": -4.0,
+                "nterms": {
+                    "diabetes+": 2,
+                    "diabetes-": 8,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 0,
+                    "angio0": 0,
+                    "obesity+": 2,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 2,
+                        "expected": 0.004449152542372881,
+                        "fold_enrichment": 449.5238095238096,
+                        "pvalue": 9.51775045744598e-06,
+                        "risk_ratio": 449.5238095238095,
+                        "pvalue_corr": 0.00017342691173618282
+                    },
+                    "diabetes-": {
+                        "num": 8,
+                        "expected": 0.01048728813559322,
+                        "fold_enrichment": 762.8282828282829,
+                        "pvalue": 2.3151457914145205e-21,
+                        "risk_ratio": 762.8282828282829,
+                        "pvalue_corr": 5.333943396102512e-20
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 349.6296296296296,
+                        "pvalue": 1.5849484511364298e-05,
+                        "risk_ratio": 349.6296296296296,
+                        "pvalue_corr": 0.00028146806697121
+                    },
+                    "angio-": {
+                        "num": 0,
+                        "expected": 0.0017478813559322032,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "num": 2,
+                        "expected": 0.011758474576271185,
+                        "fold_enrichment": 170.09009009009011,
+                        "pvalue": 6.767871135713404e-05,
+                        "risk_ratio": 170.09009009009011,
+                        "pvalue_corr": 0.0011286657678114898
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.005561440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 28,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.004449152542372881,
+                        "fold_enrichment": 449.5238095238096,
+                        "pvalue": 6.355140919727338e-06,
+                        "odds_ratio": 1450.3076923076924,
+                        "pvalue_corr": 0.0005709667278552046
+                    },
+                    "diabetes-": {
+                        "error": "StatisticsError: Element of contingency table in class fisher_exact_test is negative. All elements must be non-negative. Contingency table: [[8, 58], [-5, 18822]]. This might be because a gene_name, which belongs to a certain GO Term (obtained via web-download), isn't found in the GO Annotations File.",
+                        "num_terms_product_process": 8,
+                        "num_terms_all_process": 66,
+                        "num_terms_product_general": 3,
+                        "fold_enrichment": null,
+                        "pvalue": null,
+                        "odds_ratio": null
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 349.6296296296296,
+                        "pvalue": 1.058890687958551e-05,
+                        "odds_ratio": 1108.5882352941176,
+                        "pvalue_corr": 0.0008527080262430097
+                    },
+                    "angio-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 11,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.0017478813559322032,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "obesity+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.011758474576271185,
+                        "fold_enrichment": 170.09009009009011,
+                        "pvalue": 4.53368521089994e-05,
+                        "odds_ratio": 522.4444444444445,
+                        "pvalue_corr": 0.0028207253878048777
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 3,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.005561440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:107899",
+                "MGI:88276",
+                "MGI:88276",
+                "MGI:107899",
+                "MGI:88276",
+                "MGI:107899"
+            ],
+            "genename": "FTH1P19",
+            "description": "ferritin heavy chain 1 pseudogene 19",
+            "uniprot_id": "",
+            "ensg_id": "ENSG00000219186",
+            "enst_id": "ENST00000402402",
+            "refseq_nt_id": null,
+            "mRNA": null,
+            "scores": {
+                "adv_score": 8.0,
+                "nterms": {
+                    "diabetes+": 0,
+                    "diabetes-": 1,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 1,
+                    "angio0": 0,
+                    "obesity+": 4,
+                    "obesity-": 0,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 0,
+                        "expected": 0.007415254237288136,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "diabetes-": {
+                        "num": 1,
+                        "expected": 0.017478813559322032,
+                        "fold_enrichment": 57.21212121212122,
+                        "pvalue": 0.017329219969074293,
+                        "risk_ratio": 57.21212121212121,
+                        "pvalue_corr": 0.15463657592531144
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.009533898305084746,
+                        "fold_enrichment": 209.77777777777777,
+                        "pvalue": 4.392080630225557e-05,
+                        "risk_ratio": 209.77777777777777,
+                        "pvalue_corr": 0.0007508579391061777
+                    },
+                    "angio-": {
+                        "num": 1,
+                        "expected": 0.002913135593220339,
+                        "fold_enrichment": 343.27272727272725,
+                        "pvalue": 0.002909281220395783,
+                        "risk_ratio": 343.2727272727273,
+                        "pvalue_corr": 0.03508693471839397
+                    },
+                    "obesity+": {
+                        "num": 4,
+                        "expected": 0.019597457627118644,
+                        "fold_enrichment": 204.1081081081081,
+                        "pvalue": 5.576564308809779e-09,
+                        "risk_ratio": 204.10810810810813,
+                        "pvalue_corr": 1.1880629646738398e-07
+                    },
+                    "obesity-": {
+                        "num": 0,
+                        "expected": 0.009269067796610169,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 0,
+                        "n_all_process": 28,
+                        "n_prod_general": 5,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.007415254237288136,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 66,
+                        "n_prod_general": 5,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.017478813559322032,
+                        "fold_enrichment": 57.21212121212122,
+                        "pvalue": 0.017354298246212846,
+                        "odds_ratio": 72.36538461538461,
+                        "pvalue_corr": 0.24322281325512976
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 5,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.009533898305084746,
+                        "fold_enrichment": 209.77777777777777,
+                        "pvalue": 3.5204230037215924e-05,
+                        "odds_ratio": 369.52941176470586,
+                        "pvalue_corr": 0.0023096660785724386
+                    },
+                    "angio-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 11,
+                        "n_prod_general": 5,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.002913135593220339,
+                        "fold_enrichment": 343.27272727272725,
+                        "pvalue": 0.002909281301915743,
+                        "odds_ratio": 471.75,
+                        "pvalue_corr": 0.07047251024902139
+                    },
+                    "obesity+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 74,
+                        "n_prod_general": 5,
+                        "n_all_general": 18880,
+                        "num": 4,
+                        "expected": 0.019597457627118644,
+                        "fold_enrichment": 204.1081081081081,
+                        "pvalue": 1.082668383714468e-09,
+                        "odds_ratio": 1074.857142857143,
+                        "pvalue_corr": 3.475798579076928e-07
+                    },
+                    "obesity-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 35,
+                        "n_prod_general": 5,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "expected": 0.009269067796610169,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:708383",
+                "RGD:3876",
+                "RGD:3852",
+                "MGI:2385289",
+                "UniProtKB:Q08AH3",
+                "MGI:2385289",
+                "RGD:3852",
+                "RGD:708383",
+                "UniProtKB:Q08AH3",
+                "RGD:3876",
+                "RGD:3876",
+                "MGI:2385289",
+                "RGD:708383",
+                "RGD:3852",
+                "UniProtKB:Q08AH3"
+            ],
+            "genename": "ACSM2A",
+            "description": "acyl-CoA synthetase medium chain family member 2A",
+            "uniprot_id": "Q08AH3",
+            "ensg_id": "ENSG00000183747",
+            "enst_id": "ENST00000573854",
+            "refseq_nt_id": "NM_001308172.2",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 6.0,
+                "nterms": {
+                    "diabetes+": 1,
+                    "diabetes-": 1,
+                    "diabetes0": 0,
+                    "angio+": 2,
+                    "angio-": 1,
+                    "angio0": 0,
+                    "obesity+": 3,
+                    "obesity-": 1,
+                    "obesity0": 0
+                },
+                "binomial_test": {
+                    "diabetes+": {
+                        "num": 1,
+                        "expected": 0.02076271186440678,
+                        "fold_enrichment": 48.163265306122454,
+                        "pvalue": 0.02055619437352259,
+                        "risk_ratio": 48.16326530612245,
+                        "pvalue_corr": 0.17306478473262268
+                    },
+                    "diabetes-": {
+                        "num": 1,
+                        "expected": 0.048940677966101694,
+                        "fold_enrichment": 20.432900432900432,
+                        "pvalue": 0.04777967040632835,
+                        "risk_ratio": 20.432900432900432,
+                        "pvalue_corr": 0.2950439052588301
+                    },
+                    "angio+": {
+                        "num": 2,
+                        "expected": 0.02669491525423729,
+                        "fold_enrichment": 74.92063492063491,
+                        "pvalue": 0.00034064240590778454,
+                        "risk_ratio": 74.92063492063491,
+                        "pvalue_corr": 0.00504591592092343
+                    },
+                    "angio-": {
+                        "num": 1,
+                        "expected": 0.008156779661016949,
+                        "fold_enrichment": 122.5974025974026,
+                        "pvalue": 0.008126604540171632,
+                        "risk_ratio": 122.59740259740259,
+                        "pvalue_corr": 0.08631132666832647
+                    },
+                    "obesity+": {
+                        "num": 3,
+                        "expected": 0.054872881355932206,
+                        "fold_enrichment": 54.67181467181467,
+                        "pvalue": 2.540872558301196e-05,
+                        "risk_ratio": 54.67181467181467,
+                        "pvalue_corr": 0.00044371881250444324
+                    },
+                    "obesity-": {
+                        "num": 1,
+                        "expected": 0.025953389830508475,
+                        "fold_enrichment": 38.53061224489796,
+                        "pvalue": 0.02562887602599581,
+                        "risk_ratio": 38.53061224489796,
+                        "pvalue_corr": 0.20055511376215865
+                    }
+                },
+                "fisher_test": {
+                    "diabetes+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 28,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.02076271186440678,
+                        "fold_enrichment": 48.163265306122454,
+                        "pvalue": 0.02055565915747478,
+                        "odds_ratio": 53.712250712250714,
+                        "pvalue_corr": 0.26083416512080704
+                    },
+                    "diabetes-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 66,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.048940677966101694,
+                        "fold_enrichment": 20.432900432900432,
+                        "pvalue": 0.047825460009119435,
+                        "odds_ratio": 22.266272189349113,
+                        "pvalue_corr": 0.3869426835012022
+                    },
+                    "angio+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 36,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "expected": 0.02669491525423729,
+                        "fold_enrichment": 74.92063492063491,
+                        "pvalue": 0.0003166170864093814,
+                        "odds_ratio": 92.38235294117646,
+                        "pvalue_corr": 0.01281261547321863
+                    },
+                    "angio-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 11,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.008156779661016949,
+                        "fold_enrichment": 122.5974025974026,
+                        "pvalue": 0.008122747040496012,
+                        "odds_ratio": 145.15384615384616,
+                        "pvalue_corr": 0.15412096394094799
+                    },
+                    "obesity+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 74,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "expected": 0.054872881355932206,
+                        "fold_enrichment": 54.67181467181467,
+                        "pvalue": 2.0352158528181824e-05,
+                        "odds_ratio": 72.24967989756722,
+                        "pvalue_corr": 0.0014671834522202456
+                    },
+                    "obesity-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 35,
+                        "n_prod_general": 14,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "expected": 0.025953389830508475,
+                        "fold_enrichment": 38.53061224489796,
+                        "pvalue": 0.025632905144069178,
+                        "odds_ratio": 42.63800904977376,
+                        "pvalue_corr": 0.29181517260467976
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        }
+    ]
+}
