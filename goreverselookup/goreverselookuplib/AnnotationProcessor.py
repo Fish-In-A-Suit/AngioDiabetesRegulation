@@ -905,6 +905,15 @@ class EnsemblAPI:
         return ortholog
 
     async def get_human_ortholog_async(self, id, session: aiohttp.ClientSession):      
+        """
+        Given a source ID, detect organism and returns the corresponding human ortholog using the Ensembl API.
+        Example source IDs are: UniProtKB:P21709, RGD:6494870, ZFIN:ZDB-GENE-040426-1432, Xenbase:XB-GENE-479318 and MGI:95537
+        
+        Parameters:
+          - (str) id
+        
+        This function uses request caching. It will use previously saved url request responses instead of performing new (the same as before) connections
+        """
         ensembl_data_key = f"[{self.__class__.__name__}][{self.get_human_ortholog_async.__name__}][id={id}]"
         previous_result = Cacher.get_data("ensembl", ensembl_data_key)
         if previous_result != None:
@@ -956,8 +965,7 @@ class EnsemblAPI:
             response_json = response_json["data"][0]["homologies"]
             if response_json == []: # if there are no homologies, return None
                 return None
-            
-            
+        
             max_perc_id = 0.0
             ortholog = ""
             for ortholog_dict in response_json:
@@ -1195,6 +1203,8 @@ class EnsemblAPI:
             endpoint = f"symbol/{species}{id_}"
 
         try:
+            # TODO: 19.08.2023: the below link doesn't work for any other {species} in endpoint other than human. Ie.
+            # zebrafish, xenbase, mgi, rgd don't work !!!
             url = f"https://rest.ensembl.org/lookup/{endpoint}?mane=1;expand=1"
             # previous_response = ConnectionCacher.get_url_response(url)
             previous_response = Cacher.get_data("url", url)
@@ -1214,23 +1224,33 @@ class EnsemblAPI:
         except (requests.exceptions.RequestException, TimeoutError, asyncio.CancelledError, asyncio.exceptions.TimeoutError, aiohttp.ClientResponseError):
             # If the request fails, try the xrefs URL instead
             try:
-                url = f"https://rest.ensembl.org/xrefs/{endpoint}?"
-                previous_response = Cacher.get_data("url", url)
-                if previous_response != None:
-                    response_json = previous_response
+                # TODO: 19.08.2023: the below link doesn't work for any other {species} in endpoint other than human. Ie.
+                # zebrafish, xenbase, mgi, rgd don't work !!!
+                # The xrefs link is supposed to work for parameter 'id's which are not ENSG
+            
+                ensembl_id = ""
+                if "ENS" not in id:
+                    # parameter id is not ensembl, attempt to find ensembl id
+                    url = f"https://rest.ensembl.org/xrefs/{endpoint}?" # cross references
+                    previous_response = Cacher.get_data("url", url)
+                    if previous_response != None:
+                        response_json = previous_response
+                    else:
+                        response = await session.get(
+                            url,
+                            headers={"Content-Type": "application/json"},
+                            timeout=5
+                        )
+                        # response.raise_for_status()
+                        response_json = await response.json()
+                        Cacher.store_data("url", url, response_json)
+                        await asyncio.sleep(self.async_request_sleep_delay)
+                    # Use the first ENS ID in the xrefs response to make a new lookup request
+                    ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
                 else:
-                    response = await session.get(
-                        f"https://rest.ensembl.org/xrefs/{endpoint}?",
-                        headers={"Content-Type": "application/json"},
-                        timeout=5
-                    )
-                    # response.raise_for_status()
-                    response_json = await response.json()
-                    Cacher.store_data("url", url, response_json)
-                    await asyncio.sleep(self.async_request_sleep_delay)
+                    # ensembl id is already supplied in the parameter id
+                    ensembl_id = id
 
-                # Use the first ENS ID in the xrefs response to make a new lookup request
-                ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
                 if ensembl_id:
                     url = f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1"
                     previous_response = Cacher.get_data("url", url)
