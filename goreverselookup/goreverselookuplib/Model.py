@@ -153,6 +153,18 @@ class Product:
                                 self._d_offline_online_ortholog_mismatch_values = f"[{self.id_synonyms[0]}]: online = {human_ortholog_gene_id}, offline = {self.genename}, type = ensembl query"
                         else:
                             self.genename = enst_dict.get("genename")
+                            # update 19.08.2023: attempt to obtain as many values as possible for this Product already from
+                            # the ortholog fetch to avoid duplicating requests with (EnsemblAPI).get_info
+                            if self.ensg_id == "" or self.ensg_id == None:
+                                self.ensg_id = enst_dict.get("ensg_id")
+                            if self.description == "" or self.description == None:
+                                self.description = enst_dict.get("description")
+                            if self.enst_id == "" or self.enst_id == None:
+                                self.enst_id = enst_dict.get("enst_id")
+                            if self.refseq_nt_id == "" or self.refseq_nt_id == None:
+                                self.refseq_nt_id == enst_dict.get("refseq_nt_id")
+                            if self.uniprot_id == "" or self.uniprot_id == None:
+                                self.uniprot_id = enst_dict.get("uniprot_id")
                 else:
                     if _d_compare_goaf == True:
                         if self.genename != human_ortholog_gene_id: # with the current workflow, these will always be the same
@@ -190,8 +202,19 @@ class Product:
                 if human_ortholog_gene_ensg_id is not None:
                     enst_dict = await ensembl_api.get_info_async(human_ortholog_gene_ensg_id, session)
                     self.genename = enst_dict.get("genename")
-                # else: # this is obsolete
-                    # return # search was unsuccessful
+
+                    # update 19.08.2023: attempt to obtain as many values as possible for this Product already from
+                    # the ortholog fetch to avoid duplicating requests with (EnsemblAPI).get_info
+                    if self.ensg_id == "" or self.ensg_id == None:
+                        self.ensg_id = enst_dict.get("ensg_id")
+                    if self.description == "" or self.description == None:
+                        self.description = enst_dict.get("description")
+                    if self.enst_id == "" or self.enst_id == None:
+                        self.enst_id = enst_dict.get("enst_id")
+                    if self.refseq_nt_id == "" or self.refseq_nt_id == None:
+                        self.refseq_nt_id == enst_dict.get("refseq_nt_id")
+                    if self.uniprot_id == "" or self.uniprot_id == None:
+                        self.uniprot_id = enst_dict.get("uniprot_id")
             else:
                 self.genename = human_ortholog_gene_id
         
