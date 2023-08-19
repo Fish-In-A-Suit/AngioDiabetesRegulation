@@ -682,7 +682,115 @@ class UniProtAPI:
         Parameters:
           - (str) uniprot_id
         
+        If the query is successful, returns the following dictionary:
+            {
+                "genename": name, 
+                "description": description, 
+                "ensg_id": ensg_id, 
+                "enst_id": enst_id, 
+                "refseq_nt_id": refseq_nt_id
+            }
+
         This function automatically uses request caching. It will use previously saved url request responses instead of performing new (the same as before) connections
+
+        Algorithm:
+        This function constructs a uniprot url (https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name)
+        and queries the response. A query response example: https://pastebin.com/qrWck3QG. The structure of the query response is:
+        {
+            "results":[
+                {
+                    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+                    "primaryAccession": "Q9NY91",
+                    "organism": {
+                        "scientificName": "Homo Sapiens",
+                        "commonName": "Human",
+                        "taxonId": 9606
+                        "lineage": [...]
+                    },
+                    "proteinDescription": {
+                        "recommendedName": {
+                            "fullName": {
+                                "value": "Probable glucose sensor protein SLC5A4"
+                                "evidences": [...]
+                            }
+                        },
+                        "alternativeNames": {
+                            "fullName": {
+                                ...
+                            }
+                        }
+                    },
+                    "genes": [
+                        {
+                            "genename": {
+                                "value": "SLC5A4",
+                                "evidences": [...]
+                            },
+                            "synonyms": [
+                                {
+                                    "value": "SAAT1"
+                                },
+                                {
+                                    "value": "SGLT3"
+                                    "evidences": [...]
+                                }
+                            ]
+                        }
+                    ],
+                    "uniProtKBCrossReferences": [
+                        {
+                            "database": "RefSeq",
+                            "id": "NP_055042.1",
+                            "properties": [
+                                {
+                                    "key": "NucleotideSequenceId",
+                                    "value": "NM_014227.2"
+                                },
+                                {
+                                    "database": "Ensembl",
+                                    "id": "ENST00000266086.6",
+                                    "properties": [
+                                        {
+                                            "key": "ProteinId",
+                                            "value": "ENSP00000266086.3"
+                                        },
+                                        {
+                                            "key": "GeneId",
+                                            "value": "ENSG00000100191.6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "database": "MANE-Select",
+                                    "id": "ENST00000266086.6",
+                                    "properties": [
+                                        {
+                                            "key": "ProteinId",
+                                            "value": "ENSP00000266086.3"
+                                        },
+                                        {
+                                            "key": "RefSeqNucleotideId",
+                                            "value": "NM_014227.3"
+                                        },
+                                        {
+                                            "key": "RefSeqProteinId",
+                                            "value": "NP_055042.1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                # repeat above structure for more results
+                }
+            ]
+        }
+        
+        This function then passes the response results (response_json["results"]) to
+        _process_uniprot_info_query_results(response_results, uniprot_id), which returns
+        the final dictionary with the processed values.
         """
         # Extract UniProt ID if given in "database:identifier" format
         if ":" in uniprot_id:
@@ -713,6 +821,9 @@ class UniProtAPI:
                 logger.warning(f"Failed to fetch UniProt data for {uniprot_id}")
                 return {}
         
+        # TODO: delete this debug!
+        logger.debug(f"url = {url}")
+        logger.debug(f"response_json = {response_json}")
         results = response_json["results"]
         return_value = self._process_uniprot_info_query_results(results, uniprot_id)
         
@@ -724,9 +835,65 @@ class UniProtAPI:
     def _return_mane_select_values_from_uniprot_query(self, result: dict) -> tuple:
         """
         Given the UniProt search result dictionary, return Ensembl gene ID, Ensembl transcript ID, and RefSeq nucleotide ID for the MANE-select transcript.
+
+        Usage:
+        (1) get the uniprot id in question UniProtKB:Q9NY91 -> uniprot_id = Q9NY91
+        (2) query info using https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name
+        (3) query_result = response_json["results"][0]
+        (4) enst_id, refseq_nt_id, ensg_id = _return_mane_select_values_from_uniprot_query(query_result)
+
+        This function is used in the (UniprotAPI).get_info -> _process_uniprot_info_query_results(...) function.
         """
+        # uniProtKBCrossReferences structure:
+        # "uniProtKBCrossReferences": [
+        #        {
+        #           "database": "RefSeq",
+        #           "id": "NP_055042.1",
+        #           "properties": [
+        #                {
+        #                    "key": "NucleotideSequenceId",
+        #                    "value": "NM_014227.2"
+        #                }
+        #            ]
+        #        },
+        #        {
+        #            "database": "Ensembl",
+        #            "id": "ENST00000266086.6",
+        #            "properties": [
+        #                {
+        #                    "key": "ProteinId",
+        #                    "value": "ENSP00000266086.3"
+        #                },
+        #                {
+        #                    "key": "GeneId",
+        #                    "value": "ENSG00000100191.6"
+        #                }
+        #            ]
+        #        },
+        #        {
+        #            "database": "MANE-Select",
+        #            "id": "ENST00000266086.6",
+        #            "properties": [
+        #                {
+        #                    "key": "ProteinId",
+        #                    "value": "ENSP00000266086.3"
+        #                },
+        #                {
+        #                    "key": "RefSeqNucleotideId",
+        #                    "value": "NM_014227.3"
+        #                },
+        #                {
+        #                    "key": "RefSeqProteinId",
+        #                    "value": "NP_055042.1"
+        #                }
+        #            ]
+        #        }
+        #    ]
+        #}
+        
+        # inside uniProtKBCrossReferences dictionary, find the index of the MANE-Select element. In the above example, the MANE-Select element is the third in array, hence it has index 2 -> [2]
         mane_indices = [index for (index, d) in enumerate(result["uniProtKBCrossReferences"]) if d["database"] == "MANE-Select"]
-        if len(mane_indices) == 1:
+        if len(mane_indices) == 1: # only one MANE-Select element in uniProtKBCrossReferences
             i = mane_indices[0]
             enst_id = result["uniProtKBCrossReferences"][i]["id"]
             refseq_nt_id = next((entry["value"] for entry in result["uniProtKBCrossReferences"][i]["properties"] if entry["key"] == "RefSeqNucleotideId"), None)
@@ -738,13 +905,24 @@ class UniProtAPI:
     def _process_uniprot_info_query_results(self, results:str, uniprot_id:str) -> dict:
         """
         Processes the results obtained from the get_uniprot_info query.
+
+        Returns the following dictionary:
+            {
+                "genename": name, 
+                "description": description, 
+                "ensg_id": ensg_id, 
+                "enst_id": enst_id, 
+                "refseq_nt_id": refseq_nt_id
+            }
+
+        See the JSON structure in the comment of the get_uniprot_info function.
         """
         if len(results) == 0:
             return {}
         else:
             # Get values from the UniProt search result
-            result = next((entry for entry in results if entry["primaryAccession"] == uniprot_id), None)
-            name = result["genes"][0]["geneName"]["value"]
+            result = next((entry for entry in results if entry["primaryAccession"] == uniprot_id), None) 
+            name = result["genes"][0]["geneName"]["value"] # gene name
             if "proteinDescription" in result and "recommendedName" in result["proteinDescription"] and "fullName" in result["proteinDescription"]["recommendedName"] and "value" in result["proteinDescription"]["recommendedName"]["fullName"]:
                 description = result["proteinDescription"]["recommendedName"]["fullName"]["value"]
             elif "submissionNames" in result["proteinDescription"]:
@@ -766,6 +944,118 @@ class UniProtAPI:
             return {"genename": name, "description": description, "ensg_id": ensg_id, "enst_id": enst_id, "refseq_nt_id": refseq_nt_id}
     
     async def get_uniprot_info_async(self, uniprot_id: str, session: aiohttp.ClientSession) -> dict:
+        """
+        Given a UniProt ID, returns a dictionary containing various information about the corresponding protein using the UniProt API.
+        
+        Parameters:
+          - (str) uniprot_id
+        
+        If the query is successful, returns the following dictionary:
+            {
+                "genename": name, 
+                "description": description, 
+                "ensg_id": ensg_id, 
+                "enst_id": enst_id, 
+                "refseq_nt_id": refseq_nt_id
+            }
+
+        This function automatically uses request caching. It will use previously saved url request responses instead of performing new (the same as before) connections
+
+        Algorithm:
+        This function constructs a uniprot url (https://rest.uniprot.org/uniprotkb/search?query={uniprot_id}+AND+organism_id:9606&format=json&fields=accession,gene_names,organism_name,reviewed,xref_ensembl,xref_refseq,xref_mane-select,protein_name)
+        and queries the response. A query response example: https://pastebin.com/qrWck3QG. The structure of the query response is:
+        {
+            "results":[
+                {
+                    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+                    "primaryAccession": "Q9NY91",
+                    "organism": {
+                        "scientificName": "Homo Sapiens",
+                        "commonName": "Human",
+                        "taxonId": 9606
+                        "lineage": [...]
+                    },
+                    "proteinDescription": {
+                        "recommendedName": {
+                            "fullName": {
+                                "value": "Probable glucose sensor protein SLC5A4"
+                                "evidences": [...]
+                            }
+                        },
+                        "alternativeNames": {
+                            "fullName": {
+                                ...
+                            }
+                        }
+                    },
+                    "genes": [
+                        {
+                            "genename": {
+                                "value": "SLC5A4",
+                                "evidences": [...]
+                            },
+                            "synonyms": [
+                                {
+                                    "value": "SAAT1"
+                                },
+                                {
+                                    "value": "SGLT3"
+                                    "evidences": [...]
+                                }
+                            ]
+                        }
+                    ],
+                    "uniProtKBCrossReferences": [
+                        {
+                            "database": "RefSeq",
+                            "id": "NP_055042.1",
+                            "properties": [
+                                {
+                                    "key": "NucleotideSequenceId",
+                                    "value": "NM_014227.2"
+                                },
+                                {
+                                    "database": "Ensembl",
+                                    "id": "ENST00000266086.6",
+                                    "properties": [
+                                        {
+                                            "key": "ProteinId",
+                                            "value": "ENSP00000266086.3"
+                                        },
+                                        {
+                                            "key": "GeneId",
+                                            "value": "ENSG00000100191.6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "database": "MANE-Select",
+                                    "id": "ENST00000266086.6",
+                                    "properties": [
+                                        {
+                                            "key": "ProteinId",
+                                            "value": "ENSP00000266086.3"
+                                        },
+                                        {
+                                            "key": "RefSeqNucleotideId",
+                                            "value": "NM_014227.3"
+                                        },
+                                        {
+                                            "key": "RefSeqProteinId",
+                                            "value": "NP_055042.1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                # repeat above structure for more results
+                }
+            ]
+        }
+        """
         # Extract UniProt ID if given in "database:identifier" format
         if ":" in uniprot_id:
             uniprot_id = uniprot_id.split(":")[1]

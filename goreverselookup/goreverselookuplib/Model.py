@@ -58,6 +58,8 @@ class Product:
     def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, goaf: Optional[GOAnnotiationsFile] = None, prefer_goaf = False, _d_compare_goaf = False) -> None:
         """
         Fetches the ortholog for this product. If the ortholog query was successful, then self.genename is updated to the correct human ortholog gene name.
+        Additionally, during the course of fetch_ortholog, ensembl_api.get_info may be called - if this happens, then the values description, ensg_id, enst_id, refseq_nt_id, uniprot_id are
+        also filled out for this Product from the ensembl_api.get_info return value.
 
         Parameters:
           - (HumanOrthologFinder) human_ortholog_finder
@@ -918,7 +920,7 @@ class ReverseLookup:
                         # if any(attr is None for attr in [product.genename, product.description, product.enst_id, product.ensg_id, product.refseq_nt_id]) and (product.uniprot_id or product.genename or product.ensg_id): # some were still uninitialised, despite calling fetch_product_infos
                         if product.had_fetch_info_computed == False or refetch == True:
                             # If it doesn't, fetch UniProt data for the Product object.
-                            product.fetch_info(uniprot_api, ensembl_api)
+                            product.fetch_info(uniprot_api, ensembl_api, required_keys=required_keys)
                             product.had_fetch_info_computed = True
                             if product.had_fetch_info_computed == False:
                                 logger.warning(f"had_fetch_info_computed IS FALSE despite being called for {product.id_synonyms}, genename = {product.genename}")
