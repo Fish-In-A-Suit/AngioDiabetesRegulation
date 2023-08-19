@@ -227,7 +227,22 @@ class Product:
 
     def fetch_info(self, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]) -> None:
         """
-        includes description, ensg_id, enst_id and refseq_nt_id
+        Fetches additional information about this product. Additional information can be fetched if the Product has one of the four identifiers:
+          - uniprot_id -> fetch info using uniprot_api.get_uniprot_info(self.uniprot_id) or ensembl_api.get_info(self.uniprot_id)
+          - ensg_id -> fetch info using ensembl_api.get_info(self.ensg_id)
+          - genename -> fetch info using ensembl_api.get_info(self.genename)
+        
+        The code checks the values for each Product's attribute from 'required_keys'. If any attributes are None, then
+        the algorithm will attempt to find that information using queries in the following order:
+          - uniprot_api.get_uniprot_info(self.uniprot_id) if uniprot_id != None
+          - ensembl_api.get_info(self.ensg_id) if ensg_id != None
+          - ensembl_api.get_info(self.genename) if genename != None
+          - ensembl_api.get_info(self.uniprot_id) if uniprot_id != None
+        
+        After each query above, the returned dictionaries are processed and the attributes are set using
+        setattr(self, key, value).
+
+        Ideally, this function updates the following attributes: "genename", "description", "ensg_id", "enst_id", "refseq_nt_id"
         """
         self.had_fetch_info_computed = True
         if not (self.uniprot_id or self.genename or self.ensg_id):
@@ -239,23 +254,23 @@ class Product:
             ensembl_api = EnsemblAPI()
 
         # required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]
-        # [TODO] Is uniprot really necessary. If it is faster, perhaps get uniprotID from genename and then first try to get info from uniprot
-        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
+        # [TODO] Is uniprot really necessary? If it is faster, perhaps get uniprotID from genename and then first try to get info from uniprot
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             for key, value in info_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-        if any(getattr(self, key) is None for key in required_keys) and self.ensg_id:
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.ensg_id:
             enst_dict = ensembl_api.get_info(self.ensg_id)
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-        if any(getattr(self, key) is None for key in required_keys) and self.genename:
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.genename:
             enst_dict = ensembl_api.get_info(self.genename)
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             enst_dict = ensembl_api.get_info(self.uniprot_id)
             for key, value in enst_dict.items():
                 if value is not None:
@@ -277,22 +292,22 @@ class Product:
         if not ensembl_api:
             ensembl_api = EnsemblAPI()
 
-        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session=client_session)
             for key, value in info_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-        if any(getattr(self, key) is None for key in required_keys) and self.ensg_id:
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.ensg_id:
             enst_dict = await ensembl_api.get_info_async(self.ensg_id, session=client_session)
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-        if any(getattr(self, key) is None for key in required_keys) and self.genename:
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.genename:
             enst_dict = await ensembl_api.get_info_async(self.genename, session=client_session)
             for key, value in enst_dict.items():
                 if value is not None:
                     setattr(self, key, value)
-        if any(getattr(self, key) is None for key in required_keys) and self.uniprot_id:
+        if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             enst_dict = await ensembl_api.get_info_async(self.uniprot_id, session=client_session)
             for key, value in enst_dict.items():
                 if value is not None:
