@@ -1063,25 +1063,27 @@ class EnsemblAPI:
         except requests.exceptions.RequestException:
             # If the request fails, try the xrefs URL instead
             try:
-                url = f"https://rest.ensembl.org/xrefs/{endpoint}?"
-                # Check if the url is cached
-                # previous_response = ConnectionCacher.get_url_response(url)
-                previous_response = Cacher.get_data("url", url)
-                if previous_response != None:
-                    response_json = previous_response
-                else: 
-                    response = self.s.get(
-                        url,
-                        headers={"Content-Type": "application/json"},
-                        timeout=5,
-                        )
-                    response.raise_for_status()
-                    response_json = response.json()
-                    # ConnectionCacher.store_url(url, response_json)
-                    Cacher.store_data("url", url, response_json)
-
-                # Use the first ENS ID in the xrefs response to make a new lookup request
-                ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
+                if "ENS" not in id: # id is not an ensembl id, attempt to find a cross-reference
+                    url = f"https://rest.ensembl.org/xrefs/{endpoint}?"
+                    # Check if the url is cached
+                    previous_response = Cacher.get_data("url", url)
+                    if previous_response != None:
+                        response_json = previous_response
+                    else: 
+                        response = self.s.get(
+                            url,
+                            headers={"Content-Type": "application/json"},
+                            timeout=5,
+                            )
+                        response.raise_for_status()
+                        response_json = response.json()
+                        Cacher.store_data("url", url, response_json)
+                    # Use the first ENS ID in the xrefs response to make a new lookup request
+                    ensembl_id = next((xref["id"] for xref in response_json if "ENS" in xref["id"]), None)
+                else:
+                    # id is an ensembl id
+                    ensembl_id = id
+                
                 if ensembl_id:
                     url = f"https://rest.ensembl.org/lookup/id/{ensembl_id}?mane=1;expand=1"
                     # Check if the url is cached
