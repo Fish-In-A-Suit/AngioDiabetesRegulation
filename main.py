@@ -1,12 +1,8 @@
-# Testing file
-
+# The main class
 from goreverselookuplib import ReverseLookup
-from goreverselookuplib.GOTerm import GOTerm
 from goreverselookuplib.AnnotationProcessor import GOAnnotiationsFile
 from goreverselookuplib.Workflows import WorkflowOne, WorkflowTwo
 from goreverselookuplib.AnnotationProcessor import GOApi
-import asyncio
-import aiohttp
 from goreverselookuplib.JsonUtil import SimpleNamespaceUtil, JsonToClass
 from goreverselookuplib.AnnotationProcessor import HumanOrthologFinder, UniProtAPI, EnsemblAPI, GOAnnotiationsFile
 from goreverselookuplib.CacheUtils import ConnectionCacher, Cacher
@@ -24,21 +20,7 @@ file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(logging.Formatter('%(asctime)s [%(filename)s:%(lineno)s] - [%(funcName)s] %(message)s'))
 logger = logging.getLogger(__name__)
 
-# *** test fetch info with non-ensembl values ***
-# Cacher.init()
-#model = ReverseLookup.load_model("diabetes_angio_4/model_async_scored.json")
-#products_shortened = model.products[0:10]
-#for product in products_shortened:
-#    product.enst_id = ""
-#    product.refseq_nt_id = ""
-#    product.had_fetch_info_computed = ""
-#    product.had_orthologs_computed = True
-#    product.fetch_info()
-#t = ""
-
-
-
-
-
-
+Cacher.init()
+workflow = WorkflowTwo(input_file_fpath="chronic_infl_cancer_1/input.txt", save_folder_dir="chronic_infl_cancer_1")
+workflow.run_workflow()
 

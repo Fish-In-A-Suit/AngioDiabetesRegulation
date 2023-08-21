@@ -187,8 +187,12 @@ class GOTerm:
             if assoc['object']['id'] == self.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
                 product_id = assoc['subject']['id']
                 products_set.add(product_id)
-
+        
         products = list(products_set)
+        if products == []:
+            logger.warning(f"Found no products for GO Term {self.id} (name = {self.name})!")
+            logger.debug(f"Response json: {data}")
+
         self.products = products
         logger.info(f"Fetched products for GO term {self.id}")
         return products

@@ -259,24 +259,28 @@ class Product:
         # [TODO] Is uniprot really necessary? If it is faster, perhaps get uniprotID from genename and then first try to get info from uniprot
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
-            for key, value in info_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if info_dict != None:
+                for key, value in info_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.ensg_id:
             enst_dict = ensembl_api.get_info(self.ensg_id)
-            for key, value in enst_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if enst_dict != None:
+                for key, value in enst_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.genename:
             enst_dict = ensembl_api.get_info(self.genename)
-            for key, value in enst_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if enst_dict != None:
+                for key, value in enst_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             enst_dict = ensembl_api.get_info(self.uniprot_id)
-            for key, value in enst_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if enst_dict != None:
+                for key, value in enst_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
         
         #TODO: logger output which values are still missing
 
@@ -296,24 +300,28 @@ class Product:
 
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session=client_session)
-            for key, value in info_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if info_dict != None:
+                for key, value in info_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.ensg_id:
             enst_dict = await ensembl_api.get_info_async(self.ensg_id, session=client_session)
-            for key, value in enst_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if enst_dict != None:
+                for key, value in enst_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.genename:
             enst_dict = await ensembl_api.get_info_async(self.genename, session=client_session)
-            for key, value in enst_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if enst_dict != None:
+                for key, value in enst_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             enst_dict = await ensembl_api.get_info_async(self.uniprot_id, session=client_session)
-            for key, value in enst_dict.items():
-                if value is not None:
-                    setattr(self, key, value)
+            if enst_dict != None:
+                for key, value in enst_dict.items():
+                    if value is not None:
+                        setattr(self, key, value)
     
     async def fetch_info_async_semaphore(self, session: aiohttp.ClientSession, semaphore: asyncio.Semaphore, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]):
         async with semaphore:
@@ -1665,6 +1673,7 @@ class ReverseLookup:
                 section = ""  # what is the current section i am reading
                 for line in read_lines:
                     line = process_comment(line)
+                    line = line.strip()
                     if line == "":
                         continue
                     if "settings" in line:

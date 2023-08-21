@@ -1,0 +1,1 @@
+This folder contains files regarding the search for genes impacting both chronic inflammation and the development of cancer.

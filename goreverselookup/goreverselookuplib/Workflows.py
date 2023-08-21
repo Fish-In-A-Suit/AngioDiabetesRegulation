@@ -52,7 +52,7 @@ class Workflow:
         self.input_file_fpath = input_file_fpath
         self.save_folder_dir = save_folder_dir
         self.model_save_filepath = os.path.join(save_folder_dir, "data.json")
-        self.model_statistically_relevant_products_filepath = os.path.join(save_folder_dir, "statistically_relevant_data.json")
+        self.model_statistically_relevant_products_filepath = os.path.join(save_folder_dir, "statistically_relevant_genes.json")
         self.name = name
 
         if model == None:
@@ -225,9 +225,6 @@ class WorkflowOne(Workflow):
 
         # Generate report #
         self.add_function(self.generate_report, product_scoring_algorithm = adv_product_score, miRNA_scoring_algorithm = basic_mirna_score)
-
-    #def run_workflow(self):
-    #    self.run_workflow()
 
 class WorkflowTwo(Workflow):
     def __init__(self, input_file_fpath: str = "", save_folder_dir: str = "", model: ReverseLookup = None, name: str = "", debug: bool = False):

@@ -1,0 +1,425 @@
+{
+    "target_processes": [],
+    "miRNA_overlap_treshold": 0.6,
+    "execution_times": {
+        "fetch_all_go_term_names_descriptions": "0:00:01",
+        "fetch_all_go_term_products": "0:00:07"
+    },
+    "statistically_relevant_products": {},
+    "goterms": [
+        {
+            "id": "GO:0002698",
+            "processes": [],
+            "name": "negative regulation of immune effector process",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate, or extent of an immune effector process.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0002699",
+            "processes": [],
+            "name": "positive regulation of immune effector process",
+            "description": "Any process that activates or increases the frequency, rate, or extent of an immune effector process.",
+            "weight": 1.0,
+            "products": [
+                "MGI:104511"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0032833",
+            "processes": [],
+            "name": "negative regulation of CD4-positive, CD25-positive, alpha-beta regulatory T cell differentiation involved in immune response",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate or extent of differentiation of CD4-positive, CD25-positive, alpha-beta regulatory T cells as part of an immune response.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0032834",
+            "processes": [],
+            "name": "positive regulation of CD4-positive, CD25-positive, alpha-beta regulatory T cell differentiation involved in immune response",
+            "description": "Any process that activates or increases the frequency, rate or extent of differentiation of CD4-positive, CD25-positive, alpha-beta regulatory T cells as part of an immune response.",
+            "weight": 1.0,
+            "products": [
+                "RGD:3005",
+                "RGD:2866",
+                "UniProtKB:O00182",
+                "MGI:107656",
+                "UniProtKB:P01579"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:1905450",
+            "processes": [],
+            "name": "negative regulation of Fc-gamma receptor signaling pathway involved in phagocytosis",
+            "description": "Any process that stops, prevents or reduces the frequency, rate or extent of Fc-gamma receptor signaling pathway involved in phagocytosis.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:Q9UKG1",
+                "UniProtKB:Q08722",
+                "RGD:61995",
+                "RGD:1309388",
+                "MGI:109583",
+                "MGI:96617",
+                "RGD:2308",
+                "MGI:1920243"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:1905451",
+            "processes": [],
+            "name": "positive regulation of Fc-gamma receptor signaling pathway involved in phagocytosis",
+            "description": "Any process that activates or increases the frequency, rate or extent of Fc-gamma receptor signaling pathway involved in phagocytosis.",
+            "weight": 1.0,
+            "products": [
+                "MGI:97852",
+                "RGD:1563028",
+                "RGD:3454",
+                "RGD:3451",
+                "UniProtKB:Q8NEU8",
+                "MGI:104574",
+                "UniProtKB:Q12913",
+                "RGD:1359694",
+                "RGD:619793",
+                "UniProtKB:P08575",
+                "MGI:2384914",
+                "MGI:104580",
+                "MGI:97810"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:2001189",
+            "processes": [],
+            "name": "negative regulation of T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell",
+            "description": "Any process that stops, prevents or reduces the frequency, rate or extent of T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:P17931",
+                "MGI:2159682",
+                "UniProtKB:Q8NHL6",
+                "RGD:1305233",
+                "RGD:69356",
+                "MGI:96778",
+                "UniProtKB:Q8TDQ0"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:2001190",
+            "processes": [],
+            "name": "positive regulation of T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell",
+            "description": "Any process that activates or increases the frequency, rate or extent of T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell.",
+            "weight": 1.0,
+            "products": [
+                "RGD:3005",
+                "MGI:1096398",
+                "UniProtKB:P60033",
+                "MGI:95923",
+                "UniProtKB:P28068",
+                "UniProtKB:O00182",
+                "RGD:2315",
+                "RGD:735096",
+                "MGI:95922"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0045623",
+            "processes": [],
+            "name": "negative regulation of T-helper cell differentiation",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate or extent of T-helper cell differentiation.",
+            "weight": 1.0,
+            "products": [
+                "RGD:1563512",
+                "UniProtKB:Q5TC82",
+                "MGI:2685397"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0045624",
+            "processes": [],
+            "name": "positive regulation of T-helper cell differentiation",
+            "description": "Any process that activates or increases the frequency, rate or extent of T-helper cell differentiation.",
+            "weight": 1.0,
+            "products": [
+                "RGD:1565350",
+                "MGI:98294",
+                "UniProtKB:Q15464"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0045916",
+            "processes": [],
+            "name": "negative regulation of complement activation",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate or extent of complement activation.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:P08174",
+                "MGI:109177",
+                "MGI:1888996",
+                "MGI:88492",
+                "RGD:2399",
+                "MGI:104850",
+                "UniProtKB:P17927",
+                "RGD:620651",
+                "MGI:88513",
+                "RGD:2311",
+                "MGI:104849",
+                "RGD:620213"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0045917",
+            "processes": [],
+            "name": "positive regulation of complement activation",
+            "description": "Any process that activates or increases the frequency, rate or extent of complement activation.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:P01584",
+                "RGD:67380",
+                "RGD:2891",
+                "MGI:96924",
+                "MGI:96543",
+                "RGD:3322",
+                "MGI:88233",
+                "MGI:97572",
+                "UniProtKB:P35232",
+                "RGD:2238"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:2001192",
+            "processes": [],
+            "name": "negative regulation of gamma-delta T cell activation involved in immune response",
+            "description": "Any process that stops, prevents or reduces the frequency, rate or extent of gamma-delta T cell activation involved in immune response.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:2001193",
+            "processes": [],
+            "name": "positive regulation of gamma-delta T cell activation involved in immune response",
+            "description": "Any process that activates or increases the frequency, rate or extent of gamma-delta T cell activation involved in immune response.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:Q8NHL6"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0002632",
+            "processes": [],
+            "name": "negative regulation of granuloma formation",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate, or extent of granuloma formation.",
+            "weight": 1.0,
+            "products": [
+                "MGI:1196377"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0002633",
+            "processes": [],
+            "name": "positive regulation of granuloma formation",
+            "description": "Any process that activates or increases the frequency, rate, or extent of granuloma formation.",
+            "weight": 1.0,
+            "products": [
+                "ZFIN:ZDB-GENE-040426-2132"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0043301",
+            "processes": [],
+            "name": "negative regulation of leukocyte degranulation",
+            "description": "Any process that stops, prevents, or reduces the rate of leukocyte degranulation.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0043302",
+            "processes": [],
+            "name": "positive regulation of leukocyte degranulation",
+            "description": "Any process that activates or increases the frequency, rate or extent of leukocyte degranulation.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0002704",
+            "processes": [],
+            "name": "negative regulation of leukocyte mediated immunity",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate, or extent of leukocyte mediated immunity.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0002705",
+            "processes": [],
+            "name": "positive regulation of leukocyte mediated immunity",
+            "description": "Any process that activates or increases the frequency, rate, or extent of leukocyte mediated immunity.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0033007",
+            "processes": [],
+            "name": "negative regulation of mast cell activation involved in immune response",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate, or extent of mast cell activation as part of an immune response.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:Q9UGN4",
+                "RGD:1306273",
+                "RGD:1583719",
+                "MGI:96055",
+                "MGI:2143702",
+                "MGI:2443411",
+                "RGD:708511",
+                "UniProtKB:P16591",
+                "MGI:102701",
+                "RGD:620660",
+                "UniProtKB:O14638",
+                "MGI:105917",
+                "UniProtKB:P29350"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0033008",
+            "processes": [],
+            "name": "positive regulation of mast cell activation involved in immune response",
+            "description": "Any process that activates or increases the frequency, rate, or extent of mast cell activation as part of an immune response.",
+            "weight": 1.0,
+            "products": [
+                "RGD:1307757",
+                "UniProtKB:Q9NRA0",
+                "MGI:1861380"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0043381",
+            "processes": [],
+            "name": "negative regulation of memory T cell differentiation",
+            "description": "Any process that stops, prevents, or reduces the rate of memory T cell differentiation.",
+            "weight": 1.0,
+            "products": [
+                "RGD:620170",
+                "RGD:6493686",
+                "UniProtKB:Q14314",
+                "MGI:103266",
+                "UniProtKB:Q8IU54"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0043382",
+            "processes": [],
+            "name": "positive regulation of memory T cell differentiation",
+            "description": "Any process that activates or increases the frequency, rate or extent of memory T cell differentiation.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:P23510",
+                "RGD:1593282",
+                "RGD:620873",
+                "RGD:1593283",
+                "RGD:3267",
+                "UniProtKB:P35558",
+                "UniProtKB:P01911",
+                "UniProtKB:Q9NPF7",
+                "RGD:3061",
+                "UniProtKB:P15529",
+                "RGD:619816",
+                "MGI:1932410",
+                "MGI:1203290",
+                "MGI:95900",
+                "UniProtKB:P29460",
+                "MGI:97501",
+                "UniProtKB:P42701",
+                "MGI:104511",
+                "UniProtKB:Q5VWK5",
+                "UniProtKB:P01903"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0032827",
+            "processes": [],
+            "name": "negative regulation of natural killer cell differentiation involved in immune response",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate or extent of natural killer cell differentiation as part of an immune response.",
+            "weight": 1.0,
+            "products": [
+                "UniProtKB:Q96LB9",
+                "UniProtKB:O75594",
+                "MGI:1928099",
+                "UniProtKB:Q96PD5",
+                "RGD:1593164",
+                "MGI:2686324",
+                "RGD:1308520",
+                "RGD:621429",
+                "MGI:1345092",
+                "MGI:2685266",
+                "RGD:1359183"
+            ],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0032828",
+            "processes": [],
+            "name": "positive regulation of natural killer cell differentiation involved in immune response",
+            "description": "Any process that activates or increases the frequency, rate or extent of natural killer cell differentiation as part of an immune response.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0032821",
+            "processes": [],
+            "name": "negative regulation of natural killer cell proliferation involved in immune response",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate or extent of natural killer cell proliferation as part of an immune response.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0032822",
+            "processes": [],
+            "name": "positive regulation of natural killer cell proliferation involved in immune response",
+            "description": "Any process that activates or increases the frequency, rate or extent of natural killer cell proliferation as part of an immune response.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0002701",
+            "processes": [],
+            "name": "negative regulation of production of molecular mediator of immune response",
+            "description": "Any process that stops, prevents, or reduces the frequency, rate, or extent of the production of molecular mediator of immune response.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        },
+        {
+            "id": "GO:0002702",
+            "processes": [],
+            "name": "positive regulation of production of molecular mediator of immune response",
+            "description": "Any process that activates or increases the frequency, rate, or extent of the production of molecular mediator of immune response.",
+            "weight": 1.0,
+            "products": [],
+            "http_error_codes": {}
+        }
+    ]
+}
