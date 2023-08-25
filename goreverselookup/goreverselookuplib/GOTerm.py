@@ -148,7 +148,7 @@ class GOTerm:
                 error_report = products
                 self.http_error_codes["products"] = error_report
     
-    async def fetch_products_async_v3(self, session:aiohttp.ClientSession, request_params = {"rows":20000}, req_delay=0.5):
+    async def fetch_products_async_v3(self, session:aiohttp.ClientSession, request_params = {"rows":20000}, req_delay=0.5, max_retries = 3):
         """
         A better variant of get_products_async. Doesn't include timeout in the url request, no retries.
         Doesn't create own ClientSession, but relies on external ClientSession, hence doesn't overload the server as does the get_products_async_notimeout function.
@@ -175,27 +175,37 @@ class GOTerm:
         url = f"http://api.geneontology.org/api/bioentity/function/{self.id}/genes"
         params = request_params # 10k rows resulted in 56 mismatches for querying products for 200 goterms (compared to reference model, loaded from synchronous query data)
         
-        await asyncio.sleep(req_delay)
-        response = await session.get(url, params=params)
-        if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
-            logger.warning(f"HTTP Error when parsing {self.id}. Response status = {response.status}")
-            return f"HTTP Error: status = {response.status}, reason = {response.reason}"
+        retries = 0
+        for _ in range(max_retries):
+            possible_http_error_text = ""
+            if retries == (max_retries-1):
+                logger.warning(f"Exceeded max retries when parsing {self.id}")
+                raise Exception(f"Exceeded max retries when parsing {self.id}. HTTP error text = {possible_http_error_text}")
+            retries +=1
+            await asyncio.sleep(req_delay)
+            response = await session.get(url, params=params)
+            if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
+                possible_http_error_text = f"HTTP Error when parsing {self.id}. Response status = {response.status}"
+                logger.warning(possible_http_error_text)
+                # return f"HTTP Error: status = {response.status}, reason = {response.reason}"
+                continue
         
-        data = await response.json()
-        products_set = set()
-        for assoc in data['associations']:
-            if assoc['object']['id'] == self.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
-                product_id = assoc['subject']['id']
-                products_set.add(product_id)
+            data = await response.json()
+            products_set = set()
+            for assoc in data['associations']:
+                if assoc['object']['id'] == self.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                    product_id = assoc['subject']['id']
+                    products_set.add(product_id)
         
-        products = list(products_set)
-        if products == []:
-            logger.warning(f"Found no products for GO Term {self.id} (name = {self.name})!")
-            logger.debug(f"Response json: {data}")
+            products = list(products_set)
+            if products == []:
+                logger.warning(f"Found no products for GO Term {self.id} (name = {self.name})!")
+                if len(data) < 500:
+                    logger.debug(f"Response json: {data}")
 
-        self.products = products
-        logger.info(f"Fetched products for GO term {self.id}")
-        return products
+            self.products = products
+            logger.info(f"Fetched products for GO term {self.id}")
+            return products
     
     """
     async def fetch_products_async(self, source):

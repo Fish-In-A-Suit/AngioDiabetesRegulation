@@ -21,6 +21,6 @@ file_handler.setFormatter(logging.Formatter('%(asctime)s [%(filename)s:%(lineno)
 logger = logging.getLogger(__name__)
 
 Cacher.init()
-workflow = WorkflowTwo(input_file_fpath="chronic_infl_cancer_1/input.txt", save_folder_dir="chronic_infl_cancer_1")
+workflow = WorkflowTwo(input_file_fpath="chronic_infl_cancer_1/input_v1.txt", save_folder_dir="chronic_infl_cancer_1")
 workflow.run_workflow()
 

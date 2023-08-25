@@ -1,0 +1,1285 @@
+{
+    "chronic_inflammation+:cancer+": [
+        {
+            "id_synonyms": [
+                "RGD:620573"
+            ],
+            "genename": "CCDC184",
+            "description": "coiled-coil domain containing 184",
+            "uniprot_id": "Q52MB2",
+            "ensg_id": "ENSG00000177875",
+            "enst_id": "ENST00000316554",
+            "refseq_nt_id": "NM_001013635.4",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 16.0,
+                "nterms": {
+                    "chronic_inflammation+": 2,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 1,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 2,
+                        "expected": 0.005614406779661017,
+                        "fold_enrichment": 356.22641509433964,
+                        "pvalue": 1.5407824492546522e-05,
+                        "risk_ratio": 356.22641509433964,
+                        "pvalue_corr": 0.0003554626753199382
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.0049788135593220335,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 1,
+                        "expected": 0.0013771186440677966,
+                        "fold_enrichment": 726.1538461538462,
+                        "pvalue": 0.001376243696681407,
+                        "risk_ratio": 726.1538461538462,
+                        "pvalue_corr": 0.017745643798901044
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.001271186440677966,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 53,
+                        "n_prod_general": 2,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.005614406779661017,
+                        "fold_enrichment": 356.22641509433964,
+                        "pvalue": 7.730475848767679e-06,
+                        "odds_ratio": Infinity,
+                        "pvalue_corr": 0.0006426339452041507
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 2,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.0049788135593220335,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 13,
+                        "n_prod_general": 2,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.0013771186440677966,
+                        "fold_enrichment": 726.1538461538462,
+                        "pvalue": 0.0013765352042027354,
+                        "odds_ratio": 1572.3333333333333,
+                        "pvalue_corr": 0.027677712698095776
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 2,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.001271186440677966,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:96113"
+            ],
+            "genename": "PRELID3B",
+            "description": "PRELI domain containing 3B",
+            "uniprot_id": "Q9Y3B1",
+            "ensg_id": "ENSG00000101166",
+            "enst_id": "ENST00000355937",
+            "refseq_nt_id": "NM_016045.3",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 8.0,
+                "nterms": {
+                    "chronic_inflammation+": 4,
+                    "chronic_inflammation-": 1,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 1,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 4,
+                        "expected": 0.011228813559322034,
+                        "fold_enrichment": 356.22641509433964,
+                        "pvalue": 5.851047329095737e-10,
+                        "risk_ratio": 356.22641509433964,
+                        "pvalue_corr": 1.925882005186165e-08
+                    },
+                    "chronic_inflammation-": {
+                        "num": 1,
+                        "expected": 0.009957627118644067,
+                        "fold_enrichment": 100.42553191489363,
+                        "pvalue": 0.00990925862672977,
+                        "risk_ratio": 100.42553191489361,
+                        "pvalue_corr": 0.07164209342554939
+                    },
+                    "cancer+": {
+                        "num": 1,
+                        "expected": 0.002754237288135593,
+                        "fold_enrichment": 363.0769230769231,
+                        "pvalue": 0.002750738857419685,
+                        "risk_ratio": 363.0769230769231,
+                        "pvalue_corr": 0.03181613399313609
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.002542372881355932,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 53,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 4,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.011228813559322034,
+                        "fold_enrichment": 356.22641509433964,
+                        "pvalue": 5.528170425429698e-11,
+                        "odds_ratio": Infinity,
+                        "pvalue_corr": 8.261584439825532e-08
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 47,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.009957627118644067,
+                        "fold_enrichment": 100.42553191489363,
+                        "pvalue": 0.00991919740067355,
+                        "odds_ratio": 136.47826086956522,
+                        "pvalue_corr": 0.0884141225167595
+                    },
+                    "cancer+": {
+                        "n_prod_process": 1,
+                        "n_all_process": 13,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.002754237288135593,
+                        "fold_enrichment": 363.0769230769231,
+                        "pvalue": 0.002751030017677391,
+                        "odds_ratio": 524.1111111111111,
+                        "pvalue_corr": 0.04669986202139243
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.002542372881355932,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:104663"
+            ],
+            "genename": "SNRPA",
+            "description": "small nuclear ribonucleoprotein polypeptide A",
+            "uniprot_id": "P09012",
+            "ensg_id": "ENSG00000077312",
+            "enst_id": "ENST00000243563",
+            "refseq_nt_id": "NM_004596.5",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 18.0,
+                "nterms": {
+                    "chronic_inflammation+": 2,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 2,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 2,
+                        "expected": 0.03649364406779661,
+                        "fold_enrichment": 54.80406386066764,
+                        "pvalue": 0.0006382296154235517,
+                        "risk_ratio": 54.80406386066763,
+                        "pvalue_corr": 0.009151054866610477
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.03236228813559322,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 2,
+                        "expected": 0.008951271186440677,
+                        "fold_enrichment": 223.4319526627219,
+                        "pvalue": 3.67946360949306e-05,
+                        "risk_ratio": 223.4319526627219,
+                        "pvalue_corr": 0.0007610961559927163
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.00826271186440678,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 53,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.03649364406779661,
+                        "fold_enrichment": 54.80406386066764,
+                        "pvalue": 0.0005904690679751859,
+                        "odds_ratio": 67.12655971479501,
+                        "pvalue_corr": 0.014557874283054878
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.03236228813559322,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 13,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.008951271186440677,
+                        "fold_enrichment": 223.4319526627219,
+                        "pvalue": 3.394576311348983e-05,
+                        "odds_ratio": 311.88429752066116,
+                        "pvalue_corr": 0.0017502491802830898
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 13,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.00826271186440678,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:2802"
+            ],
+            "genename": "ATP6V1C2",
+            "description": "ATPase H+ transporting V1 subunit C2",
+            "uniprot_id": "Q8NEY4",
+            "ensg_id": "ENSG00000143882",
+            "enst_id": "ENST00000272238",
+            "refseq_nt_id": "NM_001039362.2",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 10.0,
+                "nterms": {
+                    "chronic_inflammation+": 4,
+                    "chronic_inflammation-": 1,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 2,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 4,
+                        "expected": 0.025264830508474577,
+                        "fold_enrichment": 158.32285115303984,
+                        "pvalue": 1.4840767630370582e-08,
+                        "risk_ratio": 158.3228511530398,
+                        "pvalue_corr": 4.680324845794703e-07
+                    },
+                    "chronic_inflammation-": {
+                        "num": 1,
+                        "expected": 0.022404661016949153,
+                        "fold_enrichment": 44.63356973995272,
+                        "pvalue": 0.02216076398167621,
+                        "risk_ratio": 44.63356973995272,
+                        "pvalue_corr": 0.1093854850496363
+                    },
+                    "cancer+": {
+                        "num": 2,
+                        "expected": 0.006197033898305085,
+                        "fold_enrichment": 322.7350427350427,
+                        "pvalue": 1.7662717047472188e-05,
+                        "risk_ratio": 322.7350427350427,
+                        "pvalue_corr": 0.0003974576960910965
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 53,
+                        "n_prod_general": 9,
+                        "n_all_general": 18880,
+                        "num": 4,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.025264830508474577,
+                        "fold_enrichment": 158.32285115303984,
+                        "pvalue": 6.886211558745088e-09,
+                        "odds_ratio": 307.44489795918366,
+                        "pvalue_corr": 2.950622925136775e-06
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 47,
+                        "n_prod_general": 9,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.022404661016949153,
+                        "fold_enrichment": 44.63356973995272,
+                        "pvalue": 0.02217704045533314,
+                        "odds_ratio": 51.17934782608695,
+                        "pvalue_corr": 0.12427656692201808
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 13,
+                        "n_prod_general": 9,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.006197033898305085,
+                        "fold_enrichment": 322.7350427350427,
+                        "pvalue": 1.569826237610027e-05,
+                        "odds_ratio": 490.1038961038961,
+                        "pvalue_corr": 0.0010375883419437336
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 9,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.0057203389830508475,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:2154",
+                "RGD:3000"
+            ],
+            "genename": "A3GALT2",
+            "description": "alpha 1,3-galactosyltransferase 2",
+            "uniprot_id": "U3KPV4",
+            "ensg_id": "ENSG00000184389",
+            "enst_id": "ENST00000442999",
+            "refseq_nt_id": "NM_001080438.1",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 18.0,
+                "nterms": {
+                    "chronic_inflammation+": 2,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 2,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 2,
+                        "expected": 0.030879237288135596,
+                        "fold_enrichment": 64.76843910806174,
+                        "pvalue": 0.0004586023980135127,
+                        "risk_ratio": 64.76843910806174,
+                        "pvalue_corr": 0.006973806537013084
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.02738347457627119,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 2,
+                        "expected": 0.007574152542372882,
+                        "fold_enrichment": 264.05594405594405,
+                        "pvalue": 2.6364559372727127e-05,
+                        "risk_ratio": 264.05594405594405,
+                        "pvalue_corr": 0.0005731270258207099
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.006991525423728814,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 53,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.030879237288135596,
+                        "fold_enrichment": 64.76843910806174,
+                        "pvalue": 0.0004179442669540912,
+                        "odds_ratio": 82.04357298474946,
+                        "pvalue_corr": 0.011339247731815584
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.02738347457627119,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 13,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.007574152542372882,
+                        "fold_enrichment": 264.05594405594405,
+                        "pvalue": 2.3959771615352046e-05,
+                        "odds_ratio": 381.19191919191917,
+                        "pvalue_corr": 0.001386522379489814
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 11,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.006991525423728814,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:108088",
+                "MGI:98495",
+                "MGI:108068",
+                "MGI:108072"
+            ],
+            "genename": "EHMT1",
+            "description": "euchromatic histone lysine methyltransferase 1",
+            "uniprot_id": "Q9H9B1",
+            "ensg_id": "ENSG00000181090",
+            "enst_id": "ENST00000460843",
+            "refseq_nt_id": "NM_024757.5",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 26.0,
+                "nterms": {
+                    "chronic_inflammation+": 5,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 3,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 5,
+                        "expected": 0.0701800847457627,
+                        "fold_enrichment": 71.24528301886794,
+                        "pvalue": 1.1079645704836734e-08,
+                        "risk_ratio": 71.24528301886794,
+                        "pvalue_corr": 3.537750214581784e-07
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.062235169491525424,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 3,
+                        "expected": 0.017213983050847457,
+                        "fold_enrichment": 174.27692307692308,
+                        "pvalue": 6.574552435018387e-07,
+                        "risk_ratio": 174.27692307692308,
+                        "pvalue_corr": 1.874845643162036e-05
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.015889830508474576,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 5,
+                        "n_all_process": 53,
+                        "n_prod_general": 25,
+                        "n_all_general": 18880,
+                        "num": 5,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.0701800847457627,
+                        "fold_enrichment": 71.24528301886794,
+                        "pvalue": 7.266110822376805e-09,
+                        "odds_ratio": 98.08333333333333,
+                        "pvalue_corr": 3.0096231026284727e-06
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 25,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.062235169491525424,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 13,
+                        "n_prod_general": 25,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.017213983050847457,
+                        "fold_enrichment": 174.27692307692308,
+                        "pvalue": 5.791506573431039e-07,
+                        "odds_ratio": 257.3181818181818,
+                        "pvalue_corr": 9.595368090860544e-05
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 25,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.015889830508474576,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:2145420",
+                "UniProtKB:P42330",
+                "RGD:3329",
+                "RGD:708428",
+                "RGD:2888"
+            ],
+            "genename": "AKR1C3",
+            "description": "aldo-keto reductase family 1 member C3",
+            "uniprot_id": "",
+            "ensg_id": "ENSG00000196139",
+            "enst_id": "ENST00000380554",
+            "refseq_nt_id": "NM_003739.6",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 22.0,
+                "nterms": {
+                    "chronic_inflammation+": 4,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 2,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 4,
+                        "expected": 0.16281779661016949,
+                        "fold_enrichment": 24.567338972023425,
+                        "pvalue": 2.312483651050069e-05,
+                        "risk_ratio": 24.56733897202342,
+                        "pvalue_corr": 0.0005078737678909963
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.144385593220339,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 2,
+                        "expected": 0.039936440677966104,
+                        "fold_enrichment": 50.07957559681697,
+                        "pvalue": 0.0007197228212772552,
+                        "risk_ratio": 50.07957559681698,
+                        "pvalue_corr": 0.010115621299268908
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.03686440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 53,
+                        "n_prod_general": 58,
+                        "n_all_general": 18880,
+                        "num": 4,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.16281779661016949,
+                        "fold_enrichment": 24.567338972023425,
+                        "pvalue": 2.073551631720586e-05,
+                        "odds_ratio": 28.467120181405896,
+                        "pvalue_corr": 0.0012507743968815533
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 58,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.144385593220339,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 13,
+                        "n_prod_general": 58,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.039936440677966104,
+                        "fold_enrichment": 50.07957559681697,
+                        "pvalue": 0.0007036133747558293,
+                        "odds_ratio": 61.26298701298701,
+                        "pvalue_corr": 0.01628137764379131
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 58,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.03686440677966102,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:88237",
+                "MGI:88244",
+                "MGI:88236",
+                "MGI:88232",
+                "MGI:88252",
+                "MGI:88258"
+            ],
+            "genename": "PIWIL1",
+            "description": "piwi like RNA-mediated gene silencing 1",
+            "uniprot_id": "Q96J94",
+            "ensg_id": "ENSG00000125207",
+            "enst_id": "ENST00000245255",
+            "refseq_nt_id": "NM_004764.5",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 18.0,
+                "nterms": {
+                    "chronic_inflammation+": 2,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 2,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 2,
+                        "expected": 0.0645656779661017,
+                        "fold_enrichment": 30.97621000820344,
+                        "pvalue": 0.0019622357914502514,
+                        "risk_ratio": 30.97621000820344,
+                        "pvalue_corr": 0.02413493474901923
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.05725635593220339,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 2,
+                        "expected": 0.01583686440677966,
+                        "fold_enrichment": 126.2876254180602,
+                        "pvalue": 0.00011472732613702674,
+                        "risk_ratio": 126.2876254180602,
+                        "pvalue_corr": 0.002034582664623948
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.014618644067796612,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 53,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.0645656779661017,
+                        "fold_enrichment": 30.97621000820344,
+                        "pvalue": 0.0018791925718817238,
+                        "odds_ratio": 35.16153127917834,
+                        "pvalue_corr": 0.0356567489730146
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.05725635593220339,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 13,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.01583686440677966,
+                        "fold_enrichment": 126.2876254180602,
+                        "pvalue": 0.00010956396647564575,
+                        "odds_ratio": 163.36796536796535,
+                        "pvalue_corr": 0.003969218214071061
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 23,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.014618644067796612,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "UniProtKB:P40763",
+                "MGI:103038"
+            ],
+            "genename": "STAT3",
+            "description": "signal transducer and activator of transcription 3",
+            "uniprot_id": "",
+            "ensg_id": "ENSG00000168610",
+            "enst_id": "ENST00000264657",
+            "refseq_nt_id": "NM_139276.3",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 22.0,
+                "nterms": {
+                    "chronic_inflammation+": 8,
+                    "chronic_inflammation-": 1,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 5,
+                    "cancer-": 1,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 8,
+                        "expected": 0.28352754237288136,
+                        "fold_enrichment": 28.215953670838783,
+                        "pvalue": 4.798634465234423e-10,
+                        "risk_ratio": 28.215953670838783,
+                        "pvalue_corr": 1.5876412323736835e-08
+                    },
+                    "chronic_inflammation-": {
+                        "num": 1,
+                        "expected": 0.2514300847457627,
+                        "fold_enrichment": 3.977248788708658,
+                        "pvalue": 0.22283688007185065,
+                        "risk_ratio": 3.9772487887086583,
+                        "pvalue_corr": 0.6930297334078154
+                    },
+                    "cancer+": {
+                        "num": 5,
+                        "expected": 0.06954449152542373,
+                        "fold_enrichment": 71.89642041127189,
+                        "pvalue": 5.440755485965365e-09,
+                        "risk_ratio": 71.8964204112719,
+                        "pvalue_corr": 1.745950707827081e-07
+                    },
+                    "cancer-": {
+                        "num": 1,
+                        "expected": 0.06419491525423729,
+                        "fold_enrichment": 15.577557755775578,
+                        "pvalue": 0.06233940820753837,
+                        "risk_ratio": 15.577557755775578,
+                        "pvalue_corr": 0.2223281764599726
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 8,
+                        "n_all_process": 53,
+                        "n_prod_general": 101,
+                        "n_all_general": 18880,
+                        "num": 8,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.28352754237288136,
+                        "fold_enrichment": 28.215953670838783,
+                        "pvalue": 3.527237070055015e-10,
+                        "odds_ratio": 36.00477897252091,
+                        "pvalue_corr": 2.1914723916251808e-07
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 47,
+                        "n_prod_general": 101,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.2514300847457627,
+                        "fold_enrichment": 3.977248788708658,
+                        "pvalue": 0.2220282905723744,
+                        "odds_ratio": 4.094347826086956,
+                        "pvalue_corr": 0.7378773839669228
+                    },
+                    "cancer+": {
+                        "n_prod_process": 5,
+                        "n_all_process": 13,
+                        "n_prod_general": 101,
+                        "n_all_general": 18880,
+                        "num": 5,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.06954449152542373,
+                        "fold_enrichment": 71.89642041127189,
+                        "pvalue": 4.8027710918700494e-09,
+                        "odds_ratio": 122.86458333333333,
+                        "pvalue_corr": 2.2953551379837397e-06
+                    },
+                    "cancer-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 12,
+                        "n_prod_general": 101,
+                        "n_all_general": 18880,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.06419491525423729,
+                        "fold_enrichment": 15.577557755775578,
+                        "pvalue": 0.06203479567173432,
+                        "odds_ratio": 17.153636363636362,
+                        "pvalue_corr": 0.24073840444002828
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:1337995",
+                "MGI:1337994"
+            ],
+            "genename": "NHLRC2",
+            "description": "NHL repeat containing 2",
+            "uniprot_id": "Q8NBF2",
+            "ensg_id": "ENSG00000196865",
+            "enst_id": "ENST00000369301",
+            "refseq_nt_id": "NM_198514.4",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 18.0,
+                "nterms": {
+                    "chronic_inflammation+": 2,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 2,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 2,
+                        "expected": 0.011228813559322034,
+                        "fold_enrichment": 178.11320754716982,
+                        "pvalue": 6.14098432371688e-05,
+                        "risk_ratio": 178.11320754716982,
+                        "pvalue_corr": 0.0012004452409293273
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.009957627118644067,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 2,
+                        "expected": 0.002754237288135593,
+                        "fold_enrichment": 726.1538461538462,
+                        "pvalue": 3.4957137762129515e-06,
+                        "risk_ratio": 726.1538461538462,
+                        "pvalue_corr": 9.38346314268986e-05
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.002542372881355932,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 53,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.011228813559322034,
+                        "fold_enrichment": 178.11320754716982,
+                        "pvalue": 4.62061925860293e-05,
+                        "odds_ratio": 369.19607843137254,
+                        "pvalue_corr": 0.002174841473765152
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.009957627118644067,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 13,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.002754237288135593,
+                        "fold_enrichment": 726.1538461538462,
+                        "pvalue": 2.6228500347806367e-06,
+                        "odds_ratio": 1715.3636363636363,
+                        "pvalue_corr": 0.0003325666788998387
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 4,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.002542372881355932,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "MGI:103262",
+                "UniProtKB:Q9HC23"
+            ],
+            "genename": "PROK2",
+            "description": "prokineticin 2",
+            "uniprot_id": "Q9HC23",
+            "ensg_id": "ENSG00000163421",
+            "enst_id": "ENST00000295619",
+            "refseq_nt_id": "NM_001126128.2",
+            "mRNA": null,
+            "scores": {
+                "adv_score": 20.0,
+                "nterms": {
+                    "chronic_inflammation+": 2,
+                    "chronic_inflammation-": 0,
+                    "chronic_inflammation0": 0,
+                    "cancer+": 3,
+                    "cancer-": 0,
+                    "cancer0": 0
+                },
+                "binomial_test": {
+                    "chronic_inflammation+": {
+                        "num": 2,
+                        "expected": 0.04210805084745763,
+                        "fold_enrichment": 47.496855345911946,
+                        "pvalue": 0.0008466670295704932,
+                        "risk_ratio": 47.496855345911946,
+                        "pvalue_corr": 0.011593571066641075
+                    },
+                    "chronic_inflammation-": {
+                        "num": 0,
+                        "expected": 0.03734110169491526,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "num": 3,
+                        "expected": 0.010328389830508475,
+                        "fold_enrichment": 290.46153846153845,
+                        "pvalue": 1.4257576410622003e-07,
+                        "risk_ratio": 290.46153846153845,
+                        "pvalue_corr": 4.346524008609622e-06
+                    },
+                    "cancer-": {
+                        "num": 0,
+                        "expected": 0.009533898305084746,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "risk_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                },
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 53,
+                        "n_prod_general": 15,
+                        "n_all_general": 18880,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.04210805084745763,
+                        "fold_enrichment": 47.496855345911946,
+                        "pvalue": 0.0007918440173513834,
+                        "odds_ratio": 56.79939668174962,
+                        "pvalue_corr": 0.01779286394142548
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 47,
+                        "n_prod_general": 15,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.03734110169491526,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 13,
+                        "n_prod_general": 15,
+                        "n_all_general": 18880,
+                        "num": 3,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.010328389830508475,
+                        "fold_enrichment": 290.46153846153845,
+                        "pvalue": 1.1520926670130766e-07,
+                        "odds_ratio": 471.75,
+                        "pvalue_corr": 3.112152930500976e-05
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 12,
+                        "n_prod_general": 15,
+                        "n_all_general": 18880,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.009533898305084746,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        }
+    ]
+}

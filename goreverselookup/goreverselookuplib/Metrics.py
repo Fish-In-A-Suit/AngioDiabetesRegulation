@@ -9,6 +9,9 @@ import math
 
 from scipy.stats import binomtest, combine_pvalues, fisher_exact
 import statistics
+import logging
+
+logger = logging.getLogger(__name__)
 
 class Metrics:
     """
@@ -445,10 +448,11 @@ class fisher_exact_test(Metrics):
         self._num_all_goterms = 0
     
     def metric(self, product: Product) -> Dict:
-        
+        D_DEBUG_CALCULATE_DESIRED_N_PROD_PROCESS = True # TODO: delete this # calculates num_goterms_product_process which would be sufficient for the product's statistical importance (p < 0.05)
+
         if self._num_all_goterms == 0:
             self._num_all_goterms = len(self.goaf.get_all_terms())
-        
+
         results_dict = {}
         
         for process in self.reverse_lookup.target_processes:
@@ -481,17 +485,41 @@ class fisher_exact_test(Metrics):
                             "num_terms_product_general": num_goterms_product_general,
                             "fold_enrichment" : None,
                             "pvalue" : None,
-                            "odds_ratio" : None                            
+                            "odds_ratio" : None,                      
                             }
                             should_continue_current_loop = True
-                if should_continue_current_loop:
+                if should_continue_current_loop: # TODO: check the logic of should_continue_current_loop
                     continue
 
                 fisher = fisher_exact(cont_table)
-
                 fisher_pvalue = fisher.pvalue
-                
                 odds_ratio = fisher.statistic
+
+                # calculate what amount of num_goterms_product_process would make this product statistically significant
+                required_n_prod_process_for_stat_relevance = -1
+                if D_DEBUG_CALCULATE_DESIRED_N_PROD_PROCESS and fisher_pvalue > 0.05:
+                    previous_pvalue = fisher_pvalue
+                    new_num_goterms_product_process = num_goterms_product_process
+                    success = True # if a pvalue less than 0.05 was found
+                    while previous_pvalue > 0.05:
+                        new_num_goterms_product_process += 1
+                        new_cont_table = [[new_num_goterms_product_process, num_goterms_all_process-new_num_goterms_product_process],
+                              [num_goterms_product_general-new_num_goterms_product_process, num_goterms_all_general-(num_goterms_all_process-new_num_goterms_product_process)]]
+                        all_non_negative = all(value >= 0 for row in new_cont_table for value in row)
+                        if all_non_negative == False:
+                            # logger.warning("Values in cont. table are negative.")
+                            success = False
+                            break
+                        new_fisher = fisher_exact(new_cont_table)
+                        new_pvalue = new_fisher.pvalue
+                        if new_pvalue > previous_pvalue:
+                            logger.warning(f"Newly calculated pvalue is greater! prev_pvalue = {previous_pvalue}, new_pvalue = {new_pvalue}")
+                            success = False
+                            break
+                        else:
+                            previous_pvalue = new_pvalue
+                    if success:
+                        required_n_prod_process_for_stat_relevance = new_num_goterms_product_process
 
                 #if odds_ratio == "NaN":
                 #    odds_ratio = None
@@ -501,9 +529,9 @@ class fisher_exact_test(Metrics):
                 #    fisher_pvalue = None
                 #    odds_ratio = None
 
-                folder_enrichment_score = 0
+                fold_enrichment_score = 0
                 if num_goterms_all_process != 0 and num_goterms_product_general != 0 and num_goterms_all_general != 0:
-                    folder_enrichment_score = num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general))
+                    fold_enrichment_score = num_goterms_product_process / (num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general))
 
                 results_dict[f"{process['process']}{direction}"] = {
                     "n_prod_process" : num_goterms_product_process,
@@ -511,8 +539,9 @@ class fisher_exact_test(Metrics):
                     "n_prod_general" : num_goterms_product_general,
                     "n_all_general" : num_goterms_all_general,
                     "num" : num_goterms_product_process,
+                    "required_n_prod_process_for_statistical_relevance": required_n_prod_process_for_stat_relevance,
                     "expected" : num_goterms_all_process * (num_goterms_product_general / num_goterms_all_general if num_goterms_all_general != 0 else 0),
-                    "fold_enrichment" : folder_enrichment_score, # BUGFIX: ZeroDivisionError
+                    "fold_enrichment" : fold_enrichment_score, # BUGFIX: ZeroDivisionError
                     "pvalue" : fisher_pvalue,
                     "odds_ratio" : odds_ratio,
                 }

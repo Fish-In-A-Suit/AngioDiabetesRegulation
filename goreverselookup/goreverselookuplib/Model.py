@@ -991,6 +991,7 @@ class ReverseLookup:
 
         if not isinstance(score_classes, list):
             score_classes = [score_classes]
+
         # redirect the tqdm logging output to the logging module to avoid interfering with the normal output
         with logging_redirect_tqdm():
             # iterate over each Product object in self.products and score them using the Scoring object
@@ -1005,8 +1006,6 @@ class ReverseLookup:
                     if isinstance(_score_class, basic_mirna_score):
                         # just continue, see explanation above
                         continue
-
-                    pass
 
                     if _score_class.name in product.scores and recalculate == True: # if score already exists and recalculate is set to True
                         product.scores[_score_class.name] = _score_class.metric(product) # create a dictionary between the scoring algorithm name and it's score for current product
@@ -1029,15 +1028,16 @@ class ReverseLookup:
                                 continue
                             p_values.append(product.scores[_score_class.name][f"{process['process']}{direction}"]["pvalue"])
                 # apply Benjamini-Hochberg FDR correction
-                from statsmodels.stats.multitest import multipletests
-                reject, p_corrected, _, _ = multipletests(p_values, alpha=0.05, method='fdr_bh')
-                for product in self.products:
-                    for process in self.target_processes:
-                        for direction in ['+', '-']:
-                            if "error" in product.scores[_score_class.name][f"{process['process']}{direction}"]: # check if there is "error" key
-                                continue
-                            product.scores[_score_class.name][f"{process['process']}{direction}"]["pvalue_corr"] = p_corrected[i]
-                            i += 1
+                if len(p_values) > 0:
+                    from statsmodels.stats.multitest import multipletests
+                    reject, p_corrected, _, _ = multipletests(p_values, alpha=0.05, method='fdr_bh')
+                    for product in self.products:
+                        for process in self.target_processes:
+                            for direction in ['+', '-']:
+                                if "error" in product.scores[_score_class.name][f"{process['process']}{direction}"]: # check if there is "error" key
+                                    continue
+                                product.scores[_score_class.name][f"{process['process']}{direction}"]["pvalue_corr"] = p_corrected[i]
+                                i += 1
         
         if "score_products" not in self.execution_times:
             self.execution_times["score_products"] = self.timer.get_elapsed_time()

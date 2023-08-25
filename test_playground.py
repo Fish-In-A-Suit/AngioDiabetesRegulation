@@ -36,6 +36,12 @@ logger = logging.getLogger(__name__)
 #    product.fetch_info()
 #t = ""
 
+model = ReverseLookup.load_model("chronic_infl_cancer_1/data.json")
+goaf = GOAnnotiationsFile()
+fisher_test = fisher_exact_test(model, goaf)
+model.score_products([fisher_test])
+model.save_model("chronic_infl_cancer_1/data_v1.json")
+
 
 
 
