@@ -21,6 +21,14 @@ file_handler.setFormatter(logging.Formatter('%(asctime)s [%(filename)s:%(lineno)
 logger = logging.getLogger(__name__)
 
 Cacher.init()
-workflow = WorkflowTwo(input_file_fpath="chronic_infl_cancer_1/input_v1.txt", save_folder_dir="chronic_infl_cancer_1")
+workflow = WorkflowTwo(input_file_fpath="chronic_infl_cancer_1/input_01-09-2023.txt", save_folder_dir="chronic_infl_cancer_1")
 workflow.run_workflow()
+
+#model = ReverseLookup.load_model("chronic_infl_cancer_1/data_31-08-2023.json")
+#goaf = GOAnnotiationsFile()
+#fisher_test = fisher_exact_test(model, goaf)
+#model.score_products([fisher_test])
+#model.perform_statistical_analysis(filepath="chronic_infl_cancer_1/statistically_relevant_genes_31-08-2023(1).json")
+#model.save_model("chronic_infl_cancer_1/data_31-08-2023(1).json")
+
 

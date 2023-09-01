@@ -1,6 +1,7 @@
 import logging
 from typing import TYPE_CHECKING, Set, List, Dict, Optional
 from .AnnotationProcessor import GOApi, GOAnnotiationsFile
+from .CacheUtils import Cacher
 import aiohttp, asyncio
 
 logger = logging.getLogger(__name__)
@@ -166,6 +167,14 @@ class GOTerm:
         #            response = await session.get(url)
         #            # Process the response
         """
+        # data key is in the format [class_name][function_name][function_params]
+        data_key = f"[{self.__class__.__name__}][{self.fetch_products_async_v3.__name__}][go_id={self.id}]"
+        previous_data = Cacher.get_data("go", data_key)
+        if previous_data != None:
+            logger.debug(f"Cached previous product fetch data for {self.id}")
+            self.products = previous_data
+            return products
+
         APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["ZFIN", ["NCBITaxon:7955"]],
                       #["RNAcentral", ["NCBITaxon:9606"]],
@@ -176,36 +185,48 @@ class GOTerm:
         params = request_params # 10k rows resulted in 56 mismatches for querying products for 200 goterms (compared to reference model, loaded from synchronous query data)
         
         retries = 0
+        data = None
         for _ in range(max_retries):
             possible_http_error_text = ""
             if retries == (max_retries-1):
                 logger.warning(f"Exceeded max retries when parsing {self.id}")
                 raise Exception(f"Exceeded max retries when parsing {self.id}. HTTP error text = {possible_http_error_text}")
             retries +=1
-            await asyncio.sleep(req_delay)
-            response = await session.get(url, params=params)
-            if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
-                possible_http_error_text = f"HTTP Error when parsing {self.id}. Response status = {response.status}"
-                logger.warning(possible_http_error_text)
-                # return f"HTTP Error: status = {response.status}, reason = {response.reason}"
-                continue
-        
-            data = await response.json()
-            products_set = set()
-            for assoc in data['associations']:
-                if assoc['object']['id'] == self.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
-                    product_id = assoc['subject']['id']
-                    products_set.add(product_id)
-        
-            products = list(products_set)
-            if products == []:
-                logger.warning(f"Found no products for GO Term {self.id} (name = {self.name})!")
-                if len(data) < 500:
-                    logger.debug(f"Response json: {data}")
 
-            self.products = products
-            logger.info(f"Fetched products for GO term {self.id}")
-            return products
+            previous_response = Cacher.get_data("url", url)
+            if previous_response != None:
+                data = previous_response
+                break # previous response json was cached, break the loop
+            else:
+                await asyncio.sleep(req_delay)
+                response = await session.get(url, params=params)
+                if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
+                    possible_http_error_text = f"HTTP Error when parsing {self.id}. Response status = {response.status}"
+                    logger.warning(possible_http_error_text)
+                    # return f"HTTP Error: status = {response.status}, reason = {response.reason}"
+                    continue
+                data = await response.json()
+                if data != None:
+                    Cacher.store_data("url", url, data)
+                    logger.debug(f"Cached async product fetch data for {self.id}")
+                    break # reponse json was obtained, break the loop
+            
+        products_set = set()
+        for assoc in data['associations']:
+            if assoc['object']['id'] == self.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
+                product_id = assoc['subject']['id']
+                products_set.add(product_id)
+        
+        products = list(products_set)
+        if products == []:
+            logger.warning(f"Found no products for GO Term {self.id} (name = {self.name})!")
+            #if len(data) < 500:
+            #    logger.debug(f"Response json: {data}")
+
+        self.products = products
+        logger.info(f"Fetched products for GO term {self.id}")
+        Cacher.store_data("go", data_key, products)
+        return products
     
     """
     async def fetch_products_async(self, source):

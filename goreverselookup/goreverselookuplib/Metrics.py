@@ -387,6 +387,8 @@ class fisher_exact_test(Metrics):
     (angio+, diab+) and p>0.05 for all inhibitory processes (angio-,diab-). 
     Because we calculate 2*n_processes (each process has + or - direction) p values 
     for each gene, we need to calculate the final overall p value using BH correction.
+    Note that BH correction is calculated in (ReverseLookup).score_products after all products have
+    been scored.
 
     Example: consider process “angiogenesis+”. Let there exist 100 GO terms, which 
     stimulate angiogenesis. The gene in question is SOX2, which is associated in 10 
@@ -455,13 +457,29 @@ class fisher_exact_test(Metrics):
 
         results_dict = {}
         
-        for process in self.reverse_lookup.target_processes:
+        for process in self.reverse_lookup.target_processes: # example self.reverse_lookup.target_processes: [0]: {'process': 'chronic_inflammation', 'direction': '+'}, [1]: {{'process': 'cancer', 'direction': '+'}}
             process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"]) # all GO Term ids associated with a specific process (eg. angio, diabetes, obesity) for the current MODEL
             num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename)) # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
             num_goterms_all_general = self._num_all_goterms # number of all GO Terms from the GO Annotations File (currently 18880)
             for direction in ['+', '-']:
-                num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(goterm_process['direction'] == direction for goterm_process in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
-                num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(goterm_process['direction'] == direction for goterm_process in goterm.processes))
+                # num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(goterm_process['direction'] == direction for goterm_process in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
+                # the above line is a single-line implementation of the below nested for loops
+                num_goterms_product_process = 0 # all GO Terms which are associated with the current 'process' and the current 'direction' of regulation and are also associated with the current gene (product)
+                goterms_product_process = []
+                for goterm in process_goterms_list: # iterate through each GO Term associated with the current pathophysiological process
+                    for goterm_process in goterm.processes: # goterm.processes holds which pathophysiological processes (eg. {'process': "cancer", 'direction': "-"}) the GO Term is associated with (this is determined by the user in the input.txt file)
+                        if goterm_process['direction'] == direction:
+                            if product.genename in goterm.products: # attemp genename search first
+                                num_goterms_product_process += 1
+                                goterms_product_process.append(f"{goterm.id}: {goterm.name}")
+                                break
+                            for product_id in product.id_synonyms: # if genename is not found, also look into product.id_synonyms
+                                if product_id in goterm.products:
+                                    num_goterms_product_process += 1
+                                    goterms_product_process.append(f"{goterm.id}: {goterm.name}")
+                                    break
+                        
+                num_goterms_all_process = sum(1 for goterm in process_goterms_list if any(goterm_process['direction'] == direction for goterm_process in goterm.processes)) # all of the GO Terms from input.txt file associated with the current process (and the process' regulation direction)
                 
                 #time for Binomial test and "risk ratio"
                 cont_table = [[num_goterms_product_process, num_goterms_all_process-num_goterms_product_process],
@@ -521,9 +539,6 @@ class fisher_exact_test(Metrics):
                     if success:
                         required_n_prod_process_for_stat_relevance = new_num_goterms_product_process
 
-                #if odds_ratio == "NaN":
-                #    odds_ratio = None
-
                 # TODO: NaN is necessary for further calculations! Do a json postproccess. START FROM HERE.
                 # if math.isnan(odds_ratio) or math.isnan(fisher_pvalue):
                 #    fisher_pvalue = None
@@ -544,6 +559,7 @@ class fisher_exact_test(Metrics):
                     "fold_enrichment" : fold_enrichment_score, # BUGFIX: ZeroDivisionError
                     "pvalue" : fisher_pvalue,
                     "odds_ratio" : odds_ratio,
+                    "goterms_prod_process": goterms_product_process
                 }
         
         #all_target_pvalues = [results_dict[f"{process['process']}{process['direction']}"]['pvalue'] for process in self.reverse_lookup.target_processes]

@@ -992,7 +992,7 @@ class ReverseLookup:
         if not isinstance(score_classes, list):
             score_classes = [score_classes]
 
-        # redirect the tqdm logging output to the logging module to avoid interfering with the normal output
+        # perform scoring of each product (gene)
         with logging_redirect_tqdm():
             # iterate over each Product object in self.products and score them using the Scoring object
             for product in tqdm(self.products, "Scoring products"): # each Product has a field scores - a dictionary between a name of the scoring algorithm and it's corresponding score
@@ -1012,6 +1012,7 @@ class ReverseLookup:
                     elif _score_class.name not in product.scores: # if score doesn't exist yet
                         product.scores[_score_class.name] = _score_class.metric(product)
 
+        # calculate Benjamini-Hochberg FDR correction
         for _score_class in score_classes:
             if isinstance(_score_class, basic_mirna_score):
                 # score miRNAs holistically here, see # NOTE

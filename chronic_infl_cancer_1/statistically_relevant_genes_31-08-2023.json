@@ -67,6 +67,14 @@
                         "fold_enrichment": 269.7142857142857,
                         "pvalue": 5.549527132192317e-15,
                         "odds_ratio": 2091.777777777778,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 1.6024259594205315e-11
                     },
                     "chronic_inflammation-": {
@@ -80,6 +88,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -93,6 +102,13 @@
                         "fold_enrichment": 561.9047619047619,
                         "pvalue": 4.4516062455054045e-14,
                         "odds_ratio": 2481.7105263157896,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0001938: positive regulation of endothelial cell proliferation",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 8.569342022597904e-11
                     },
                     "cancer-": {
@@ -106,6 +122,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -182,6 +199,10 @@
                         "fold_enrichment": 26.222222222222225,
                         "pvalue": 0.0026140122308802756,
                         "odds_ratio": 29.50156739811912,
+                        "goterms_prod_process": [
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032755: positive regulation of interleukin-6 production"
+                        ],
                         "pvalue_corr": 0.03312930643745485
                     },
                     "chronic_inflammation-": {
@@ -195,6 +216,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -208,6 +230,10 @@
                         "fold_enrichment": 65.55555555555556,
                         "pvalue": 0.00041913285041680914,
                         "odds_ratio": 77.92561983471074,
+                        "goterms_prod_process": [
+                            "GO:0051781: positive regulation of cell division",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.007824867061930193
                     },
                     "cancer-": {
@@ -221,6 +247,9 @@
                         "fold_enrichment": 37.46031746031746,
                         "pvalue": 0.026339008604373985,
                         "odds_ratio": 41.0,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.14316024885254186
                     }
                 }
@@ -297,6 +326,11 @@
                         "fold_enrichment": 17.481481481481485,
                         "pvalue": 0.0006688973825120932,
                         "odds_ratio": 19.42518059855521,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032755: positive regulation of interleukin-6 production"
+                        ],
                         "pvalue_corr": 0.011164399953778435
                     },
                     "chronic_inflammation-": {
@@ -310,6 +344,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -323,6 +358,12 @@
                         "fold_enrichment": 58.27160493827161,
                         "pvalue": 6.017495413685971e-07,
                         "odds_ratio": 75.44,
+                        "goterms_prod_process": [
+                            "GO:0051781: positive regulation of cell division",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0046330: positive regulation of JNK cascade",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 4.70463561566939e-05
                     },
                     "cancer-": {
@@ -336,6 +377,9 @@
                         "fold_enrichment": 16.649029982363313,
                         "pvalue": 0.058244481243238104,
                         "odds_ratio": 17.79245283018868,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.22667760849618648
                     }
                 }
@@ -412,6 +456,9 @@
                         "fold_enrichment": 314.6666666666667,
                         "pvalue": 0.0031777977861342085,
                         "odds_ratio": Infinity,
+                        "goterms_prod_process": [
+                            "GO:0032755: positive regulation of interleukin-6 production"
+                        ],
                         "pvalue_corr": 0.03921320986095097
                     },
                     "chronic_inflammation-": {
@@ -425,6 +472,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -438,6 +486,9 @@
                         "fold_enrichment": 786.6666666666667,
                         "pvalue": 0.0012711191144536835,
                         "odds_ratio": Infinity,
+                        "goterms_prod_process": [
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.01844400222605533
                     },
                     "cancer-": {
@@ -451,6 +502,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -527,6 +579,10 @@
                         "fold_enrichment": 209.7777777777778,
                         "pvalue": 2.972454534583884e-05,
                         "odds_ratio": 649.0344827586207,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production"
+                        ],
                         "pvalue_corr": 0.0011170883907085853
                     },
                     "chronic_inflammation-": {
@@ -540,6 +596,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -553,6 +610,9 @@
                         "fold_enrichment": 262.22222222222223,
                         "pvalue": 0.0038083107286755896,
                         "odds_ratio": 409.9347826086956,
+                        "goterms_prod_process": [
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.044792249405502096
                     },
                     "cancer-": {
@@ -566,6 +626,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -642,6 +703,10 @@
                         "fold_enrichment": 314.6666666666667,
                         "pvalue": 9.929566220840921e-06,
                         "odds_ratio": Infinity,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032755: positive regulation of interleukin-6 production"
+                        ],
                         "pvalue_corr": 0.00045874595940285055
                     },
                     "chronic_inflammation-": {
@@ -655,6 +720,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -668,6 +734,10 @@
                         "fold_enrichment": 786.6666666666667,
                         "pvalue": 1.5483391395209573e-06,
                         "odds_ratio": Infinity,
+                        "goterms_prod_process": [
+                            "GO:0030307: positive regulation of cell growth",
+                            "GO:0001938: positive regulation of endothelial cell proliferation"
+                        ],
                         "pvalue_corr": 9.77740386780909e-05
                     },
                     "cancer-": {
@@ -681,6 +751,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -757,6 +828,11 @@
                         "fold_enrichment": 157.33333333333334,
                         "pvalue": 6.055606016128566e-07,
                         "odds_ratio": 330.2280701754386,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032755: positive regulation of interleukin-6 production"
+                        ],
                         "pvalue_corr": 4.70463561566939e-05
                     },
                     "chronic_inflammation-": {
@@ -770,6 +846,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -783,6 +860,12 @@
                         "fold_enrichment": 524.4444444444445,
                         "pvalue": 3.002714376503951e-11,
                         "odds_ratio": 1886.0,
+                        "goterms_prod_process": [
+                            "GO:0051781: positive regulation of cell division",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0046330: positive regulation of JNK cascade",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 1.2098145714635107e-08
                     },
                     "cancer-": {
@@ -796,6 +879,9 @@
                         "fold_enrichment": 149.84126984126985,
                         "pvalue": 0.006653968501333437,
                         "odds_ratio": 188.6,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.06923723981117225
                     }
                 }
@@ -872,6 +958,10 @@
                         "fold_enrichment": 69.92592592592592,
                         "pvalue": 0.00035211513753651355,
                         "odds_ratio": 92.7192118226601,
+                        "goterms_prod_process": [
+                            "GO:2000147: positive regulation of cell motility",
+                            "GO:0001774: microglial cell activation"
+                        ],
                         "pvalue_corr": 0.006800886017636675
                     },
                     "chronic_inflammation-": {
@@ -885,6 +975,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -898,6 +989,10 @@
                         "fold_enrichment": 174.8148148148148,
                         "pvalue": 5.539688871993211e-05,
                         "odds_ratio": 244.9090909090909,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.0017318644460794573
                     },
                     "cancer-": {
@@ -911,6 +1006,9 @@
                         "fold_enrichment": 99.8941798941799,
                         "pvalue": 0.009963543230703852,
                         "odds_ratio": 117.875,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.09133486520065724
                     }
                 }
@@ -987,6 +1085,11 @@
                         "fold_enrichment": 55.529411764705884,
                         "pvalue": 2.004784568385252e-05,
                         "odds_ratio": 70.76315789473684,
+                        "goterms_prod_process": [
+                            "GO:2000147: positive regulation of cell motility",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.0008211085732216191
                     },
                     "chronic_inflammation-": {
@@ -1000,6 +1103,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -1013,6 +1117,10 @@
                         "fold_enrichment": 92.54901960784314,
                         "pvalue": 0.00020780629559775615,
                         "odds_ratio": 114.2909090909091,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045596: negative regulation of cell differentiation"
+                        ],
                         "pvalue_corr": 0.004592148050039701
                     },
                     "cancer-": {
@@ -1026,6 +1134,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -1102,6 +1211,10 @@
                         "fold_enrichment": 314.6666666666667,
                         "pvalue": 9.929566220840921e-06,
                         "odds_ratio": Infinity,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.00045874595940285055
                     },
                     "chronic_inflammation-": {
@@ -1115,6 +1228,9 @@
                         "fold_enrichment": 181.53846153846155,
                         "pvalue": 0.005500452353450528,
                         "odds_ratio": 369.19607843137254,
+                        "goterms_prod_process": [
+                            "GO:1900038: negative regulation of cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.06037852797441604
                     },
                     "cancer+": {
@@ -1128,6 +1244,9 @@
                         "fold_enrichment": 393.33333333333337,
                         "pvalue": 0.002540555251581801,
                         "odds_ratio": 819.8695652173913,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis"
+                        ],
                         "pvalue_corr": 0.03238787324036402
                     },
                     "cancer-": {
@@ -1141,6 +1260,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -1217,6 +1337,10 @@
                         "fold_enrichment": 314.6666666666667,
                         "pvalue": 9.929566220840921e-06,
                         "odds_ratio": Infinity,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.00045874595940285055
                     },
                     "chronic_inflammation-": {
@@ -1230,6 +1354,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -1243,6 +1368,9 @@
                         "fold_enrichment": 393.33333333333337,
                         "pvalue": 0.002540555251581801,
                         "odds_ratio": 819.8695652173913,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.03238787324036402
                     },
                     "cancer-": {
@@ -1256,6 +1384,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -1332,6 +1461,11 @@
                         "fold_enrichment": 236.00000000000003,
                         "pvalue": 1.2170091194422067e-07,
                         "odds_ratio": 990.6842105263158,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032757: positive regulation of interleukin-8 production"
+                        ],
                         "pvalue_corr": 1.2512007016266218e-05
                     },
                     "chronic_inflammation-": {
@@ -1345,6 +1479,9 @@
                         "fold_enrichment": 90.76923076923077,
                         "pvalue": 0.010970071166952734,
                         "odds_ratio": 123.06535947712419,
+                        "goterms_prod_process": [
+                            "GO:0001818: negative regulation of cytokine production"
+                        ],
                         "pvalue_corr": 0.09707185627537758
                     },
                     "cancer+": {
@@ -1358,6 +1495,10 @@
                         "fold_enrichment": 393.33333333333337,
                         "pvalue": 9.27364401240108e-06,
                         "odds_ratio": 857.1818181818181,
+                        "goterms_prod_process": [
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0007254: JNK cascade"
+                        ],
                         "pvalue_corr": 0.00043540889570419704
                     },
                     "cancer-": {
@@ -1371,6 +1512,9 @@
                         "fold_enrichment": 224.76190476190476,
                         "pvalue": 0.00444114785706508,
                         "odds_ratio": 314.3333333333333,
+                        "goterms_prod_process": [
+                            "GO:0045785: positive regulation of cell adhesion"
+                        ],
                         "pvalue_corr": 0.050854518588005625
                     }
                 }
@@ -1447,6 +1591,10 @@
                         "fold_enrichment": 48.41025641025641,
                         "pvalue": 0.0007563824170984737,
                         "odds_ratio": 59.00313479623824,
+                        "goterms_prod_process": [
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production"
+                        ],
                         "pvalue_corr": 0.012316095278412648
                     },
                     "chronic_inflammation-": {
@@ -1460,6 +1608,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -1473,6 +1622,10 @@
                         "fold_enrichment": 121.02564102564102,
                         "pvalue": 0.00011960393678479755,
                         "odds_ratio": 155.8512396694215,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.0030835389952330616
                     },
                     "cancer-": {
@@ -1486,6 +1639,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -1562,6 +1716,10 @@
                         "fold_enrichment": 24.205128205128204,
                         "pvalue": 0.003064942652571964,
                         "odds_ratio": 27.04310344827586,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production"
+                        ],
                         "pvalue_corr": 0.03803734344972011
                     },
                     "chronic_inflammation-": {
@@ -1575,6 +1733,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -1588,6 +1747,12 @@
                         "fold_enrichment": 121.02564102564102,
                         "pvalue": 2.930014103518311e-08,
                         "odds_ratio": 171.45454545454547,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:1904707: positive regulation of vascular associated smooth muscle cell proliferation",
+                            "GO:1903589: positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis"
+                        ],
                         "pvalue_corr": 3.935077080887965e-06
                     },
                     "cancer-": {
@@ -1601,6 +1766,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -1677,6 +1843,13 @@
                         "fold_enrichment": 174.8148148148148,
                         "pvalue": 3.402738020690809e-11,
                         "odds_ratio": 427.84090909090907,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0002281: macrophage activation involved in immune response"
+                        ],
                         "pvalue_corr": 1.3100541379659616e-08
                     },
                     "chronic_inflammation-": {
@@ -1690,6 +1863,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -1703,6 +1877,10 @@
                         "fold_enrichment": 174.8148148148148,
                         "pvalue": 5.539688871993211e-05,
                         "odds_ratio": 244.9090909090909,
+                        "goterms_prod_process": [
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.0017318644460794573
                     },
                     "cancer-": {
@@ -1716,6 +1894,9 @@
                         "fold_enrichment": 99.8941798941799,
                         "pvalue": 0.009963543230703852,
                         "odds_ratio": 117.875,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.09133486520065724
                     }
                 }
@@ -1792,6 +1973,10 @@
                         "fold_enrichment": 23.308641975308642,
                         "pvalue": 0.0033030623736110764,
                         "odds_ratio": 25.961379310344828,
+                        "goterms_prod_process": [
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.04023748244497796
                     },
                     "chronic_inflammation-": {
@@ -1805,6 +1990,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -1818,6 +2004,13 @@
                         "fold_enrichment": 145.679012345679,
                         "pvalue": 1.6739947955066295e-10,
                         "odds_ratio": 225.61004784688996,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0010573: vascular endothelial growth factor production",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 5.577299967721607e-08
                     },
                     "cancer-": {
@@ -1831,6 +2024,9 @@
                         "fold_enrichment": 33.298059964726626,
                         "pvalue": 0.029579912717345083,
                         "odds_ratio": 36.26923076923077,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.15243069239381427
                     }
                 }
@@ -1907,6 +2103,10 @@
                         "fold_enrichment": 52.44444444444445,
                         "pvalue": 0.0006413929249298869,
                         "odds_ratio": 64.90344827586208,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.010851691820713175
                     },
                     "chronic_inflammation-": {
@@ -1920,6 +2120,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -1933,6 +2134,10 @@
                         "fold_enrichment": 131.11111111111111,
                         "pvalue": 0.0001012926006255538,
                         "odds_ratio": 171.43636363636364,
+                        "goterms_prod_process": [
+                            "GO:0060252: positive regulation of glial cell proliferation",
+                            "GO:0001938: positive regulation of endothelial cell proliferation"
+                        ],
                         "pvalue_corr": 0.0027123559595637085
                     },
                     "cancer-": {
@@ -1946,6 +2151,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -2022,6 +2228,10 @@
                         "fold_enrichment": 125.86666666666667,
                         "pvalue": 9.865570734884022e-05,
                         "odds_ratio": 216.3448275862069,
+                        "goterms_prod_process": [
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production"
+                        ],
                         "pvalue_corr": 0.0026916694957774124
                     },
                     "chronic_inflammation-": {
@@ -2035,6 +2245,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2048,6 +2259,11 @@
                         "fold_enrichment": 471.99999999999994,
                         "pvalue": 1.8003418325598396e-08,
                         "odds_ratio": 1347.0714285714287,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 2.597824266373905e-06
                     },
                     "cancer-": {
@@ -2061,6 +2277,9 @@
                         "fold_enrichment": 179.80952380952382,
                         "pvalue": 0.005548202974618779,
                         "odds_ratio": 235.75,
+                        "goterms_prod_process": [
+                            "GO:0045597: positive regulation of cell differentiation"
+                        ],
                         "pvalue_corr": 0.06037852797441604
                     }
                 }
@@ -2137,6 +2356,14 @@
                         "fold_enrichment": 19.463917525773198,
                         "pvalue": 6.111551378151057e-07,
                         "odds_ratio": 22.986568986568987,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 4.726903019038708e-05
                     },
                     "chronic_inflammation-": {
@@ -2150,6 +2377,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2163,6 +2391,13 @@
                         "fold_enrichment": 40.549828178694156,
                         "pvalue": 1.237391656514484e-07,
                         "odds_ratio": 53.95022883295194,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation",
+                            "GO:0010573: vascular endothelial growth factor production",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 1.2610476734772608e-05
                     },
                     "cancer-": {
@@ -2176,6 +2411,10 @@
                         "fold_enrichment": 18.537064310260188,
                         "pvalue": 0.005097264924224201,
                         "odds_ratio": 20.898614958448753,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process",
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.05664535908414643
                     }
                 }
@@ -2256,6 +2495,11 @@
                         "fold_enrichment": 31.466666666666665,
                         "pvalue": 0.00011599687933997635,
                         "odds_ratio": 36.69200779727095,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0002523: leukocyte migration involved in inflammatory response",
+                            "GO:0002687: positive regulation of leukocyte migration"
+                        ],
                         "pvalue_corr": 0.0030403115500228293
                     },
                     "chronic_inflammation-": {
@@ -2269,6 +2513,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2282,6 +2527,10 @@
                         "fold_enrichment": 52.44444444444444,
                         "pvalue": 0.0006571120034038143,
                         "odds_ratio": 61.22727272727273,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis"
+                        ],
                         "pvalue_corr": 0.010999483535237761
                     },
                     "cancer-": {
@@ -2295,6 +2544,9 @@
                         "fold_enrichment": 29.96825396825397,
                         "pvalue": 0.032809517332794566,
                         "odds_ratio": 32.51724137931034,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.1592672703252076
                     }
                 }
@@ -2376,6 +2628,12 @@
                         "fold_enrichment": 54.72463768115942,
                         "pvalue": 7.761323186052945e-07,
                         "odds_ratio": 70.76691729323308,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001774: microglial cell activation",
+                            "GO:0050778: positive regulation of immune response",
+                            "GO:0002523: leukocyte migration involved in inflammatory response"
+                        ],
                         "pvalue_corr": 5.697666279591833e-05
                     },
                     "chronic_inflammation-": {
@@ -2389,6 +2647,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2402,6 +2661,12 @@
                         "fold_enrichment": 136.81159420289853,
                         "pvalue": 1.7409856227287238e-08,
                         "odds_ratio": 198.52631578947367,
+                        "goterms_prod_process": [
+                            "GO:0045787: positive regulation of cell cycle",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 2.597824266373905e-06
                     },
                     "cancer-": {
@@ -2415,6 +2680,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -2496,6 +2762,10 @@
                         "fold_enrichment": 48.41025641025641,
                         "pvalue": 0.0007563824170984737,
                         "odds_ratio": 59.00313479623824,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0002523: leukocyte migration involved in inflammatory response"
+                        ],
                         "pvalue_corr": 0.012316095278412648
                     },
                     "chronic_inflammation-": {
@@ -2509,6 +2779,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2522,6 +2793,11 @@
                         "fold_enrichment": 181.53846153846155,
                         "pvalue": 5.108244225636654e-07,
                         "odds_ratio": 269.4142857142857,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 4.0972375559794e-05
                     },
                     "cancer-": {
@@ -2535,6 +2811,9 @@
                         "fold_enrichment": 69.15750915750917,
                         "pvalue": 0.014358350309324776,
                         "odds_ratio": 78.58333333333333,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.10881820608444959
                     }
                 }
@@ -2615,6 +2894,14 @@
                         "fold_enrichment": 59.00000000000001,
                         "pvalue": 6.703790084652409e-10,
                         "odds_ratio": 80.45299145299145,
+                        "goterms_prod_process": [
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0002281: macrophage activation involved in immune response",
+                            "GO:0050778: positive regulation of immune response",
+                            "GO:0002696: positive regulation of leukocyte activation"
+                        ],
                         "pvalue_corr": 1.7597448972212572e-07
                     },
                     "chronic_inflammation-": {
@@ -2628,6 +2915,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2641,6 +2929,10 @@
                         "fold_enrichment": 49.16666666666667,
                         "pvalue": 0.0007479423455335068,
                         "odds_ratio": 57.14545454545455,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:1903589: positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis"
+                        ],
                         "pvalue_corr": 0.012259319901956486
                     },
                     "cancer-": {
@@ -2654,6 +2946,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -2734,6 +3027,10 @@
                         "fold_enrichment": 52.44444444444445,
                         "pvalue": 0.0006413929249298869,
                         "odds_ratio": 64.90344827586208,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.010851691820713175
                     },
                     "chronic_inflammation-": {
@@ -2747,6 +3044,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2760,6 +3058,11 @@
                         "fold_enrichment": 196.66666666666669,
                         "pvalue": 3.933320227721451e-07,
                         "odds_ratio": 299.3492063492063,
+                        "goterms_prod_process": [
+                            "GO:0001569: branching involved in blood vessel morphogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:1904707: positive regulation of vascular associated smooth muscle cell proliferation"
+                        ],
                         "pvalue_corr": 3.29201801667991e-05
                     },
                     "cancer-": {
@@ -2773,6 +3076,9 @@
                         "fold_enrichment": 74.92063492063492,
                         "pvalue": 0.013261568058185296,
                         "odds_ratio": 85.72727272727273,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.10491171991235627
                     }
                 }
@@ -2853,6 +3159,12 @@
                         "fold_enrichment": 10.069333333333333,
                         "pvalue": 0.0006542420784100133,
                         "odds_ratio": 11.112160566706022,
+                        "goterms_prod_process": [
+                            "GO:1905604: negative regulation of blood-brain barrier permeability",
+                            "GO:0071456: cellular response to hypoxia",
+                            "GO:1903141: negative regulation of establishment of endothelial barrier",
+                            "GO:0002687: positive regulation of leukocyte migration"
+                        ],
                         "pvalue_corr": 0.010999483535237761
                     },
                     "chronic_inflammation-": {
@@ -2866,6 +3178,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2879,6 +3192,17 @@
                         "fold_enrichment": 56.64,
                         "pvalue": 2.0688729026389625e-14,
                         "odds_ratio": 97.57758620689656,
+                        "goterms_prod_process": [
+                            "GO:1903392: negative regulation of adherens junction organization",
+                            "GO:0051781: positive regulation of cell division",
+                            "GO:0043069: negative regulation of programmed cell death",
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0001569: branching involved in blood vessel morphogenesis",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0001938: positive regulation of endothelial cell proliferation",
+                            "GO:1903589: positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis"
+                        ],
                         "pvalue_corr": 5.120460434031432e-11
                     },
                     "cancer-": {
@@ -2892,6 +3216,9 @@
                         "fold_enrichment": 7.192380952380952,
                         "pvalue": 0.12946819731325135,
                         "odds_ratio": 7.604838709677419,
+                        "goterms_prod_process": [
+                            "GO:0045785: positive regulation of cell adhesion"
+                        ],
                         "pvalue_corr": 0.42401446473574284
                     }
                 }
@@ -2973,6 +3300,11 @@
                         "fold_enrichment": 24.842105263157894,
                         "pvalue": 0.00023641885166154002,
                         "odds_ratio": 28.305263157894736,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production"
+                        ],
                         "pvalue_corr": 0.005100817689957884
                     },
                     "chronic_inflammation-": {
@@ -2986,6 +3318,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -2999,6 +3332,10 @@
                         "fold_enrichment": 41.40350877192982,
                         "pvalue": 0.0010545132892645405,
                         "odds_ratio": 47.621212121212125,
+                        "goterms_prod_process": [
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.015983764423891655
                     },
                     "cancer-": {
@@ -3012,6 +3349,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -3092,6 +3430,11 @@
                         "fold_enrichment": 36.30769230769231,
                         "pvalue": 7.500430536753909e-05,
                         "odds_ratio": 43.07322654462243,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032757: positive regulation of interleukin-8 production"
+                        ],
                         "pvalue_corr": 0.002172992626241831
                     },
                     "chronic_inflammation-": {
@@ -3105,6 +3448,9 @@
                         "fold_enrichment": 13.964497041420119,
                         "pvalue": 0.06915050006509173,
                         "odds_ratio": 14.767843137254902,
+                        "goterms_prod_process": [
+                            "GO:0001818: negative regulation of cytokine production"
+                        ],
                         "pvalue_corr": 0.2550633199122236
                     },
                     "cancer+": {
@@ -3118,6 +3464,10 @@
                         "fold_enrichment": 60.51282051282051,
                         "pvalue": 0.0004926762092084793,
                         "odds_ratio": 71.43181818181819,
+                        "goterms_prod_process": [
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0007254: JNK cascade"
+                        ],
                         "pvalue_corr": 0.008754477255935285
                     },
                     "cancer-": {
@@ -3131,6 +3481,9 @@
                         "fold_enrichment": 34.578754578754584,
                         "pvalue": 0.028500868884191666,
                         "odds_ratio": 37.72,
+                        "goterms_prod_process": [
+                            "GO:0045785: positive regulation of cell adhesion"
+                        ],
                         "pvalue_corr": 0.1495842330865255
                     }
                 }
@@ -3209,6 +3562,10 @@
                         "fold_enrichment": 69.92592592592592,
                         "pvalue": 0.00035211513753651355,
                         "odds_ratio": 92.7192118226601,
+                        "goterms_prod_process": [
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.006800886017636675
                     },
                     "chronic_inflammation-": {
@@ -3222,6 +3579,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -3235,6 +3593,10 @@
                         "fold_enrichment": 174.8148148148148,
                         "pvalue": 5.539688871993211e-05,
                         "odds_ratio": 244.9090909090909,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.0017318644460794573
                     },
                     "cancer-": {
@@ -3248,6 +3610,9 @@
                         "fold_enrichment": 99.8941798941799,
                         "pvalue": 0.009963543230703852,
                         "odds_ratio": 117.875,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.09133486520065724
                     }
                 }
@@ -3327,6 +3692,12 @@
                         "fold_enrichment": 17.24200913242009,
                         "pvalue": 8.389513905342338e-05,
                         "odds_ratio": 19.48654244306418,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.0023494415422916897
                     },
                     "chronic_inflammation-": {
@@ -3340,6 +3711,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -3353,6 +3725,10 @@
                         "fold_enrichment": 21.552511415525114,
                         "pvalue": 0.0038230211027307126,
                         "odds_ratio": 24.14596670934699,
+                        "goterms_prod_process": [
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.04481315331854506
                     },
                     "cancer-": {
@@ -3366,6 +3742,9 @@
                         "fold_enrichment": 12.315720808871493,
                         "pvalue": 0.07788315580821985,
                         "odds_ratio": 13.097222222222221,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.27798221557012953
                     }
                 }
@@ -3444,6 +3823,10 @@
                         "fold_enrichment": 27.36231884057971,
                         "pvalue": 0.002401315708849388,
                         "odds_ratio": 30.9064039408867,
+                        "goterms_prod_process": [
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.031093391562468778
                     },
                     "chronic_inflammation-": {
@@ -3457,6 +3840,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -3470,6 +3854,11 @@
                         "fold_enrichment": 102.60869565217389,
                         "pvalue": 3.1319636089866464e-06,
                         "odds_ratio": 134.70714285714286,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:1904707: positive regulation of vascular associated smooth muscle cell proliferation"
+                        ],
                         "pvalue_corr": 0.00017225799849426556
                     },
                     "cancer-": {
@@ -3483,6 +3872,9 @@
                         "fold_enrichment": 39.08902691511387,
                         "pvalue": 0.02525618909373965,
                         "odds_ratio": 42.86363636363637,
+                        "goterms_prod_process": [
+                            "GO:0060355: positive regulation of cell adhesion molecule production"
+                        ],
                         "pvalue_corr": 0.1395736765706665
                     }
                 }
@@ -3561,6 +3953,11 @@
                         "fold_enrichment": 22.476190476190474,
                         "pvalue": 0.0003186436446603266,
                         "odds_ratio": 25.402159244264507,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032757: positive regulation of interleukin-8 production"
+                        ],
                         "pvalue_corr": 0.006360101059877194
                     },
                     "chronic_inflammation-": {
@@ -3574,6 +3971,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -3587,6 +3985,10 @@
                         "fold_enrichment": 37.460317460317455,
                         "pvalue": 0.0012869881813803961,
                         "odds_ratio": 42.85909090909091,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.01856542068477549
                     },
                     "cancer-": {
@@ -3600,6 +4002,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -3683,6 +4086,10 @@
                         "fold_enrichment": 24.205128205128204,
                         "pvalue": 0.003064942652571964,
                         "odds_ratio": 27.04310344827586,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production"
+                        ],
                         "pvalue_corr": 0.03803734344972011
                     },
                     "chronic_inflammation-": {
@@ -3696,6 +4103,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -3709,6 +4117,10 @@
                         "fold_enrichment": 60.51282051282051,
                         "pvalue": 0.0004926762092084793,
                         "odds_ratio": 71.43181818181819,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.008754477255935285
                     },
                     "cancer-": {
@@ -3722,6 +4134,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -3800,6 +4213,10 @@
                         "fold_enrichment": 39.333333333333336,
                         "pvalue": 0.0011561910135559406,
                         "odds_ratio": 46.35960591133005,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.017135166218867983
                     },
                     "chronic_inflammation-": {
@@ -3813,6 +4230,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -3826,6 +4244,10 @@
                         "fold_enrichment": 98.33333333333334,
                         "pvalue": 0.00018352013577930198,
                         "odds_ratio": 122.45454545454545,
+                        "goterms_prod_process": [
+                            "GO:0030307: positive regulation of cell growth",
+                            "GO:0043066: negative regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.004194573024243281
                     },
                     "cancer-": {
@@ -3839,6 +4261,9 @@
                         "fold_enrichment": 56.19047619047619,
                         "pvalue": 0.017641040779848037,
                         "odds_ratio": 62.86666666666667,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.11815661286372824
                     }
                 }
@@ -3918,6 +4343,16 @@
                         "fold_enrichment": 109.44927536231884,
                         "pvalue": 2.9953035326636154e-15,
                         "odds_ratio": 193.1076923076923,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1903974: positive regulation of cellular response to macrophage colony-stimulating factor stimulus",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity",
+                            "GO:0001774: microglial cell activation"
+                        ],
                         "pvalue_corr": 1.0378726740679428e-11
                     },
                     "chronic_inflammation-": {
@@ -3931,6 +4366,9 @@
                         "fold_enrichment": 15.785953177257525,
                         "pvalue": 0.061426879791118,
                         "odds_ratio": 16.781639928698752,
+                        "goterms_prod_process": [
+                            "GO:0032715: negative regulation of interleukin-6 production"
+                        ],
                         "pvalue_corr": 0.2344609661324265
                     },
                     "cancer+": {
@@ -3944,6 +4382,11 @@
                         "fold_enrichment": 102.60869565217389,
                         "pvalue": 3.1319636089866464e-06,
                         "odds_ratio": 134.70714285714286,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.00017225799849426556
                     },
                     "cancer-": {
@@ -3957,6 +4400,9 @@
                         "fold_enrichment": 39.08902691511387,
                         "pvalue": 0.02525618909373965,
                         "odds_ratio": 42.86363636363637,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.1395736765706665
                     }
                 }
@@ -4037,6 +4483,13 @@
                         "fold_enrichment": 15.577557755775578,
                         "pvalue": 1.6718617502475343e-05,
                         "odds_ratio": 17.826704545454547,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.0007223193222702875
                     },
                     "chronic_inflammation-": {
@@ -4050,6 +4503,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -4063,6 +4517,11 @@
                         "fold_enrichment": 23.366336633663366,
                         "pvalue": 0.0002728763288596562,
                         "odds_ratio": 27.49125364431487,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 0.005675369024602094
                     },
                     "cancer-": {
@@ -4076,6 +4535,9 @@
                         "fold_enrichment": 8.901461574728902,
                         "pvalue": 0.10604595530219461,
                         "odds_ratio": 9.43,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.35633168650320435
                     }
                 }
@@ -4153,6 +4615,10 @@
                         "fold_enrichment": 31.46666666666667,
                         "pvalue": 0.001814991983424199,
                         "odds_ratio": 36.05747126436781,
+                        "goterms_prod_process": [
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0002281: macrophage activation involved in immune response"
+                        ],
                         "pvalue_corr": 0.02443880313360913
                     },
                     "chronic_inflammation-": {
@@ -4166,6 +4632,9 @@
                         "fold_enrichment": 18.153846153846153,
                         "pvalue": 0.05363793079761112,
                         "odds_ratio": 19.431372549019606,
+                        "goterms_prod_process": [
+                            "GO:1903979: negative regulation of microglial cell activation"
+                        ],
                         "pvalue_corr": 0.2144650706366519
                     },
                     "cancer+": {
@@ -4179,6 +4648,11 @@
                         "fold_enrichment": 117.99999999999999,
                         "pvalue": 2.0220633024759636e-06,
                         "odds_ratio": 158.47899159663865,
+                        "goterms_prod_process": [
+                            "GO:0043069: negative regulation of programmed cell death",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.00012121884676607636
                     },
                     "cancer-": {
@@ -4192,6 +4666,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -4269,6 +4744,11 @@
                         "fold_enrichment": 118.00000000000001,
                         "pvalue": 1.6873698313138118e-06,
                         "odds_ratio": 198.13684210526316,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.00010515713067450283
                     },
                     "chronic_inflammation-": {
@@ -4282,6 +4762,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -4295,6 +4776,10 @@
                         "fold_enrichment": 196.66666666666669,
                         "pvalue": 4.312449761612595e-05,
                         "odds_ratio": 285.72727272727275,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.0014340343976955508
                     },
                     "cancer-": {
@@ -4308,6 +4793,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -4385,6 +4871,11 @@
                         "fold_enrichment": 13.485714285714284,
                         "pvalue": 0.0014206614948017672,
                         "odds_ratio": 14.786331500392773,
+                        "goterms_prod_process": [
+                            "GO:2000147: positive regulation of cell motility",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.020075824141468693
                     },
                     "chronic_inflammation-": {
@@ -4398,6 +4889,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -4411,6 +4903,11 @@
                         "fold_enrichment": 33.714285714285715,
                         "pvalue": 9.241033628675747e-05,
                         "odds_ratio": 40.211087420042645,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0045596: negative regulation of cell differentiation"
+                        ],
                         "pvalue_corr": 0.002533242209126698
                     },
                     "cancer-": {
@@ -4424,6 +4921,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -4504,6 +5002,13 @@
                         "fold_enrichment": 27.126436781609193,
                         "pvalue": 1.0848411220560563e-06,
                         "odds_ratio": 32.289879931389365,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0002687: positive regulation of leukocyte migration"
+                        ],
                         "pvalue_corr": 7.399556078591014e-05
                     },
                     "chronic_inflammation-": {
@@ -4517,6 +5022,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -4530,6 +5036,11 @@
                         "fold_enrichment": 40.689655172413794,
                         "pvalue": 5.2710665858793784e-05,
                         "odds_ratio": 48.984415584415586,
+                        "goterms_prod_process": [
+                            "GO:0007162: negative regulation of cell adhesion",
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.001694271402604086
                     },
                     "cancer-": {
@@ -4543,6 +5054,9 @@
                         "fold_enrichment": 15.500821018062396,
                         "pvalue": 0.0624150496941332,
                         "odds_ratio": 16.54385964912281,
+                        "goterms_prod_process": [
+                            "GO:1903348: positive regulation of bicellular tight junction assembly"
+                        ],
                         "pvalue_corr": 0.23729223962055251
                     }
                 }
@@ -4622,6 +5136,12 @@
                         "fold_enrichment": 22.884848484848483,
                         "pvalue": 2.7529790881731575e-05,
                         "odds_ratio": 26.364145658263304,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0071456: cellular response to hypoxia",
+                            "GO:0050778: positive regulation of immune response"
+                        ],
                         "pvalue_corr": 0.0010459509364605254
                     },
                     "chronic_inflammation-": {
@@ -4635,6 +5155,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -4648,6 +5169,10 @@
                         "fold_enrichment": 28.606060606060602,
                         "pvalue": 0.0021945572270337587,
                         "odds_ratio": 32.34648370497427,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.028849361758037935
                     },
                     "cancer-": {
@@ -4661,6 +5186,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -4739,6 +5265,14 @@
                         "fold_enrichment": 38.53061224489796,
                         "pvalue": 9.870326930346658e-09,
                         "odds_ratio": 48.645994832041346,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity",
+                            "GO:0002606: positive regulation of dendritic cell antigen processing and presentation"
+                        ],
                         "pvalue_corr": 1.8587327616114765e-06
                     },
                     "chronic_inflammation-": {
@@ -4752,6 +5286,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -4765,6 +5300,10 @@
                         "fold_enrichment": 32.10884353741497,
                         "pvalue": 0.0017470753046094614,
                         "odds_ratio": 36.475822050290134,
+                        "goterms_prod_process": [
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.023739670315575622
                     },
                     "cancer-": {
@@ -4778,6 +5317,9 @@
                         "fold_enrichment": 18.347910592808553,
                         "pvalue": 0.05300392341070797,
                         "odds_ratio": 19.645833333333332,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.21256781784502676
                     }
                 }
@@ -4855,6 +5397,13 @@
                         "fold_enrichment": 262.22222222222223,
                         "pvalue": 1.6335029051736255e-12,
                         "odds_ratio": 1711.3636363636363,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production"
+                        ],
                         "pvalue_corr": 1.1524910534167542e-09
                     },
                     "chronic_inflammation-": {
@@ -4868,6 +5417,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -4881,6 +5431,11 @@
                         "fold_enrichment": 393.33333333333337,
                         "pvalue": 3.597109308299014e-08,
                         "odds_ratio": 898.047619047619,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production"
+                        ],
                         "pvalue_corr": 4.548899180020468e-06
                     },
                     "cancer-": {
@@ -4894,6 +5449,9 @@
                         "fold_enrichment": 149.84126984126985,
                         "pvalue": 0.006653968501333437,
                         "odds_ratio": 188.6,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.06923723981117225
                     }
                 }
@@ -4972,6 +5530,15 @@
                         "fold_enrichment": 21.385113268608414,
                         "pvalue": 3.436273723957777e-08,
                         "odds_ratio": 25.90192610062893,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity",
+                            "GO:0002606: positive regulation of dendritic cell antigen processing and presentation"
+                        ],
                         "pvalue_corr": 4.4427941990722755e-06
                     },
                     "chronic_inflammation-": {
@@ -4985,6 +5552,10 @@
                         "fold_enrichment": 7.050037341299477,
                         "pvalue": 0.03242546233162416,
                         "odds_ratio": 7.457425742574258,
+                        "goterms_prod_process": [
+                            "GO:0032701: negative regulation of interleukin-18 production",
+                            "GO:0032088: negative regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.15886725939835655
                     },
                     "cancer+": {
@@ -4998,6 +5569,11 @@
                         "fold_enrichment": 22.9126213592233,
                         "pvalue": 0.0002890110405449961,
                         "odds_ratio": 26.94142857142857,
+                        "goterms_prod_process": [
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.005936660616011204
                     },
                     "cancer-": {
@@ -5011,6 +5587,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -5091,6 +5668,11 @@
                         "fold_enrichment": 37.760000000000005,
                         "pvalue": 6.65103703572358e-05,
                         "odds_ratio": 45.0311004784689,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.0020109810932619726
                     },
                     "chronic_inflammation-": {
@@ -5104,6 +5686,9 @@
                         "fold_enrichment": 14.523076923076923,
                         "pvalue": 0.06658318416413625,
                         "odds_ratio": 15.383169934640524,
+                        "goterms_prod_process": [
+                            "GO:0001818: negative regulation of cytokine production"
+                        ],
                         "pvalue_corr": 0.24807605712766892
                     },
                     "cancer+": {
@@ -5117,6 +5702,13 @@
                         "fold_enrichment": 157.33333333333334,
                         "pvalue": 1.1041196347158231e-10,
                         "odds_ratio": 248.17105263157896,
+                        "goterms_prod_process": [
+                            "GO:0045787: positive regulation of cell cycle",
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0007254: JNK cascade"
+                        ],
                         "pvalue_corr": 3.9038515656023746e-08
                     },
                     "cancer-": {
@@ -5130,6 +5722,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -5208,6 +5801,11 @@
                         "fold_enrichment": 16.0,
                         "pvalue": 0.0008662268547449343,
                         "odds_ratio": 17.69078947368421,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:2000147: positive regulation of cell motility",
+                            "GO:0001774: microglial cell activation"
+                        ],
                         "pvalue_corr": 0.013705370099046564
                     },
                     "chronic_inflammation-": {
@@ -5221,6 +5819,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -5234,6 +5833,10 @@
                         "fold_enrichment": 26.666666666666664,
                         "pvalue": 0.0025197012523958326,
                         "odds_ratio": 30.076555023923444,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.032336166072413186
                     },
                     "cancer-": {
@@ -5247,6 +5850,9 @@
                         "fold_enrichment": 15.238095238095237,
                         "pvalue": 0.06345466551104133,
                         "odds_ratio": 16.25862068965517,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.240295536607386
                     }
                 }
@@ -5326,6 +5932,14 @@
                         "fold_enrichment": 29.046153846153846,
                         "pvalue": 5.578515063879533e-08,
                         "odds_ratio": 35.453860640301315,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity",
+                            "GO:0001774: microglial cell activation"
+                        ],
                         "pvalue_corr": 6.574678468143735e-06
                     },
                     "chronic_inflammation-": {
@@ -5339,6 +5953,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -5352,6 +5967,11 @@
                         "fold_enrichment": 36.30769230769231,
                         "pvalue": 7.41038094981711e-05,
                         "odds_ratio": 43.453917050691246,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.0021541082207312315
                     },
                     "cancer-": {
@@ -5365,6 +5985,9 @@
                         "fold_enrichment": 13.83150183150183,
                         "pvalue": 0.06966705250920589,
                         "odds_ratio": 14.734375,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.25653170769861683
                     }
                 }
@@ -5442,6 +6065,11 @@
                         "fold_enrichment": 85.81818181818181,
                         "pvalue": 4.935711537286993e-06,
                         "odds_ratio": 123.83552631578948,
+                        "goterms_prod_process": [
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production"
+                        ],
                         "pvalue_corr": 0.0002493037970364349
                     },
                     "chronic_inflammation-": {
@@ -5455,6 +6083,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -5468,6 +6097,10 @@
                         "fold_enrichment": 143.030303030303,
                         "pvalue": 8.448496859149915e-05,
                         "odds_ratio": 190.4848484848485,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.0023494415422916897
                     },
                     "cancer-": {
@@ -5481,6 +6114,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -5561,6 +6195,10 @@
                         "fold_enrichment": 41.95555555555555,
                         "pvalue": 0.00101384176513737,
                         "odds_ratio": 49.92572944297082,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
                         "pvalue_corr": 0.015475602274013161
                     },
                     "chronic_inflammation-": {
@@ -5574,6 +6212,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -5587,6 +6226,10 @@
                         "fold_enrichment": 104.88888888888889,
                         "pvalue": 0.00016072169950022473,
                         "odds_ratio": 131.87412587412587,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.0037987768674507412
                     },
                     "cancer-": {
@@ -5600,6 +6243,9 @@
                         "fold_enrichment": 59.93650793650794,
                         "pvalue": 0.01654808511660973,
                         "odds_ratio": 67.35714285714286,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.11500023050351528
                     }
                 }
@@ -5678,6 +6324,12 @@
                         "fold_enrichment": 30.699186991869915,
                         "pvalue": 8.47395987805798e-06,
                         "odds_ratio": 36.33976833976834,
+                        "goterms_prod_process": [
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.0004066796534275748
                     },
                     "chronic_inflammation-": {
@@ -5691,6 +6343,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -5704,6 +6357,10 @@
                         "fold_enrichment": 38.3739837398374,
                         "pvalue": 0.001226779484381978,
                         "odds_ratio": 43.95804195804196,
+                        "goterms_prod_process": [
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.01798113947644689
                     },
                     "cancer-": {
@@ -5717,6 +6374,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -5794,6 +6452,14 @@
                         "fold_enrichment": 10.727272727272727,
                         "pvalue": 1.8873134653917855e-05,
                         "odds_ratio": 12.304575163398694,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 0.000782241765261069
                     },
                     "chronic_inflammation-": {
@@ -5807,6 +6473,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -5820,6 +6487,13 @@
                         "fold_enrichment": 22.348484848484844,
                         "pvalue": 2.3405438661506816e-06,
                         "odds_ratio": 29.0258541089566,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0001938: positive regulation of endothelial cell proliferation",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
                         "pvalue_corr": 0.00013533304053976665
                     },
                     "cancer-": {
@@ -5833,6 +6507,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -5911,6 +6586,11 @@
                         "fold_enrichment": 17.163636363636364,
                         "pvalue": 0.0007057915557578887,
                         "odds_ratio": 19.05161943319838,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0001774: microglial cell activation"
+                        ],
                         "pvalue_corr": 0.011623420820822643
                     },
                     "chronic_inflammation-": {
@@ -5924,6 +6604,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -5937,6 +6618,10 @@
                         "fold_enrichment": 28.606060606060602,
                         "pvalue": 0.0021945572270337587,
                         "odds_ratio": 32.34648370497427,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.028849361758037935
                     },
                     "cancer-": {
@@ -5950,6 +6635,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -6027,6 +6713,10 @@
                         "fold_enrichment": 28.606060606060602,
                         "pvalue": 0.0021972082415293065,
                         "odds_ratio": 32.45172413793104,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0002876: positive regulation of chronic inflammatory response to antigenic stimulus"
+                        ],
                         "pvalue_corr": 0.02886022197459836
                     },
                     "chronic_inflammation-": {
@@ -6040,6 +6730,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -6053,6 +6744,10 @@
                         "fold_enrichment": 71.5151515151515,
                         "pvalue": 0.00035141412802685597,
                         "odds_ratio": 85.71818181818182,
+                        "goterms_prod_process": [
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation"
+                        ],
                         "pvalue_corr": 0.006800886017636675
                     },
                     "cancer-": {
@@ -6066,6 +6761,9 @@
                         "fold_enrichment": 40.865800865800864,
                         "pvalue": 0.024172107956729187,
                         "odds_ratio": 44.904761904761905,
+                        "goterms_prod_process": [
+                            "GO:0043065: positive regulation of apoptotic process"
+                        ],
                         "pvalue_corr": 0.1377118613450619
                     }
                 }
@@ -6143,6 +6841,10 @@
                         "fold_enrichment": 33.12280701754386,
                         "pvalue": 0.001636999672486578,
                         "odds_ratio": 38.17849898580122,
+                        "goterms_prod_process": [
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity",
+                            "GO:0002523: leukocyte migration involved in inflammatory response"
+                        ],
                         "pvalue_corr": 0.02249089557956381
                     },
                     "chronic_inflammation-": {
@@ -6156,6 +6858,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -6169,6 +6872,10 @@
                         "fold_enrichment": 82.80701754385964,
                         "pvalue": 0.0002608258960913458,
                         "odds_ratio": 100.84491978609626,
+                        "goterms_prod_process": [
+                            "GO:0043066: negative regulation of apoptotic process",
+                            "GO:0045766: positive regulation of angiogenesis"
+                        ],
                         "pvalue_corr": 0.005510742255832397
                     },
                     "cancer-": {
@@ -6182,6 +6889,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     }
                 }
@@ -6260,6 +6968,14 @@
                         "fold_enrichment": 18.693069306930695,
                         "pvalue": 7.752518007104537e-07,
                         "odds_ratio": 22.0187134502924,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity"
+                        ],
                         "pvalue_corr": 5.697666279591833e-05
                     },
                     "chronic_inflammation-": {
@@ -6273,6 +6989,7 @@
                         "fold_enrichment": 0.0,
                         "pvalue": 1.0,
                         "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
                         "pvalue_corr": 1.0
                     },
                     "cancer+": {
@@ -6286,6 +7003,11 @@
                         "fold_enrichment": 23.366336633663366,
                         "pvalue": 0.0002728763288596562,
                         "odds_ratio": 27.49125364431487,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation"
+                        ],
                         "pvalue_corr": 0.005675369024602094
                     },
                     "cancer-": {
@@ -6299,6 +7021,9 @@
                         "fold_enrichment": 8.901461574728902,
                         "pvalue": 0.10604595530219461,
                         "odds_ratio": 9.43,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
                         "pvalue_corr": 0.35633168650320435
                     }
                 }

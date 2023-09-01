@@ -178,8 +178,6 @@ class GOApi:
             else: # warn of the error; # TODO: implement error logging to file as in 'get_products' function
                 logger.error(f"Couldn't fetch products for {term_id}")
         """
-        #i=0
-        # TODO: PRODUCT REQUESTS START TO CAUSE TIMEOUT ERRORS AFTER ~15 ASYNC REQUESTS -> BATCH? DIFFERENT IPS?
         # as per: https://stackoverflow.com/questions/51248714/aiohttp-client-exception-serverdisconnectederror-is-this-the-api-servers-issu
         connector = aiohttp.TCPConnector(limit=20) # default limit is 100
         async with aiohttp.ClientSession(connector=connector) as session:

@@ -15,9 +15,11 @@ class Cacher():
     CACHE_FILEPATH_URLS = "" # filepath to the file containing online url queries and the URL RESPONSES
     CACHE_FILEPATH_UNIPROT = "" # filepath to the file containing uniprot api queries and their final results (after processing of the url responses)
     CACHE_FILEPATH_ENSEMBL = "" # filepath to the file containing ensembl api queries and their final results (after processing of the url responses)
+    CACHE_FILEPATH_GENEONTOLOGY = "" # filepath to the file containing gene ontology api queries and their final results (after processing of the url responses)
     cached_urls = {}
     cached_uniprot = {}
     cached_ensembl = {}
+    cached_geneontology = {}
     
     @classmethod
     def init(cls, store_data_atexit:bool = True):
@@ -40,14 +42,17 @@ class Cacher():
         cls.CACHE_FILEPATH_URLS = "cache/connection_cache.json"
         cls.CACHE_FILEPATH_UNIPROT = "cache/uniprot_cache.json"
         cls.CACHE_FILEPATH_ENSEMBL = "cache/ensembl_cache.json"
+        cls.CACHE_FILEPATH_GENEONTOLOGY = "cache/geneontology_cache.json"
         cls.cached_urls = JsonUtil.load_json(cls.CACHE_FILEPATH_URLS)
         cls.cached_uniprot = JsonUtil.load_json(cls.CACHE_FILEPATH_UNIPROT)
         cls.cached_ensembl = JsonUtil.load_json(cls.CACHE_FILEPATH_ENSEMBL)
+        cls.cached_geneontology = JsonUtil.load_json(cls.CACHE_FILEPATH_GENEONTOLOGY)
         
         logger.info(f"Cacher load dictionary response counts:")
         logger.info(f"  - urls: {len(cls.cached_urls)}")
         logger.info(f"  - uniprot: {len(cls.cached_uniprot)}")
         logger.info(f"  - ensembl: {len(cls.cached_ensembl)}")
+        logger.info(f"  - geneontology: {len(cls.cached_geneontology)}")
 
         if store_data_atexit: # register the save_data function to be called on program exit
             logger.info(f"Register at exit save data for Cacher.")
@@ -68,6 +73,14 @@ class Cacher():
           - "url": -> filepath = cache/connection_cache.json
           - "uniprot" -> filepath = cache/uniprot_cache.json
           - "ensembl" -> filepath = cache/ensembl_cache.json
+          - "go" -> filepath = cache/geneontology_cache.json
+        
+        Params:
+          - (str) data_location: either 'url', 'uniprot', 'ensembl' or 'go'
+          - (str) data_key: the key under which the data will be stored. The keys for function return values should be stored
+                            in the format [class_name][function_name][custom_function_parameter_values]
+          - (any) data_value: the value of the data being stored at data_key. Can be a whole JSON https response, or a list of processed values after function parsing of the json response etc.
+          - (str) timestamp: optional, timestamps are automatically calculated inside this function if not provided
         
         Url storage is intended for intermediate url query responses. Consider the following url query: f"https://rest.ensembl.org/homology/symbol/{species}/{id_url}?target_species=human;type=orthologues;sequence=none":
         Without request caching, this is the code algorithm:
@@ -113,6 +126,8 @@ class Cacher():
                 cached_data = cls.cached_uniprot
             case "ensembl":
                 cached_data = cls.cached_ensembl
+            case "go":
+                cached_data = cls.cached_geneontology
 
         # calculate current time
         if timestamp == "":
@@ -145,6 +160,9 @@ class Cacher():
                 case "ensembl":
                     cls.cached_ensembl = cached_data
                     JsonUtil.save_json(cls.cached_ensembl, cls.CACHE_FILEPATH_ENSEMBL)
+                case "go":
+                    cls.cached_geneontology = cached_data
+                    JsonUtil.save_json(cls.cached_geneontology, cls.CACHE_FILEPATH_GENEONTOLOGY)
     
     @classmethod
     def get_data(cls, data_location:str, data_key:str):
@@ -157,6 +175,8 @@ class Cacher():
                 cached_data = cls.cached_uniprot
             case "ensembl":
                 cached_data = cls.cached_ensembl
+            case "go":
+                cached_data = cls.cached_geneontology
         
         if cached_data != {}:
             if data_key in cached_data:
@@ -184,7 +204,8 @@ class Cacher():
         JsonUtil.save_json(cls.cached_urls, cls.CACHE_FILEPATH_URLS)
         JsonUtil.save_json(cls.cached_uniprot, cls.CACHE_FILEPATH_UNIPROT)
         JsonUtil.save_json(cls.cached_ensembl, cls.CACHE_FILEPATH_ENSEMBL)
-        logger.info(f"Successfully saved url, uniprot and ensembl cache.")
+        JsonUtil.save_json(cls.cached_geneontology, cls.CACHE_FILEPATH_GENEONTOLOGY)
+        logger.info(f"Successfully saved url, uniprot, ensembl and geneontology cache.")
 
 
 class ConnectionCacher(Cacher):
