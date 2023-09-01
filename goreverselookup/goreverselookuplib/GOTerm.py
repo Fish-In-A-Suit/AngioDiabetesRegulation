@@ -173,7 +173,7 @@ class GOTerm:
         if previous_data != None:
             logger.debug(f"Cached previous product fetch data for {self.id}")
             self.products = previous_data
-            return products
+            return previous_data
 
         APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
                       ["ZFIN", ["NCBITaxon:7955"]],
