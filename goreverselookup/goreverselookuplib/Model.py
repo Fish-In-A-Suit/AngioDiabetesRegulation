@@ -1510,8 +1510,22 @@ class ReverseLookup:
                                         "angio+:obesity+": [...]
             }                           }
 
+        The genes (products) for each process pair are sorted according to the sum of the p-values, with products with the lowest pvalues (highest
+        statistical probabilities) appearing first in the sorted dictionary.
+
         TODO: implement binomial score, maybe even adv_score and nterms for backwards compatibility
         """
+        def sorting_key(product):
+            """
+            Sorting key used for the sorting of JSON data based on ascending pvalues.
+            Fisher test MUST be calculated for this to work.
+            """
+            pvalue_sum = 0
+            for process in self.target_processes:
+                pvalue_process = product["scores"]["fisher_test"][f"{process['process']}{process['direction']}"]['pvalue_corr']
+                pvalue_sum += pvalue_process
+            return pvalue_sum
+
         statistically_relevant_products = [] # a list of lists; each member is [product, "process1_name_direction:process2_name_direction"]
         for product in self.products:
             # given three process: diabetes, angio, obesity, this code iterates through each 2-member combination possible
@@ -1558,33 +1572,22 @@ class ReverseLookup:
             process_pair_code = element[1]
             statistically_relevant_products_final[process_pair_code].append(prod.__dict__)
         
+        # sort the genes based on the ascending sum of pvalues (lowest pvalues first)
+        statistically_relevant_products_final_sorted = {}
+        for i in range(len(self.target_processes)-1):
+            for j in range(i+1, len(self.target_processes)):
+                process1 = self.target_processes[i]
+                process2 = self.target_processes[j]
+                pair_code = f"{process1['process']}{process1['direction']}:{process2['process']}{process2['direction']}"
+                statistically_relevant_products_for_process_pair = statistically_relevant_products_final[pair_code]
+                statistically_relevant_products_for_process_pair_sorted = sorted(statistically_relevant_products_for_process_pair, key=lambda gene: sorting_key(gene))
+                statistically_relevant_products_final_sorted[pair_code] = statistically_relevant_products_for_process_pair_sorted
+        # statistically_relevant_products_final_sorted = sorted(statistically_relevant_products_final, key=lambda gene: sorting_key(gene)); bugfix above - need to compute sorting for each process pair
+        
         # TODO: save statistical analysis as a part of the model's json and load it up on startup
-        self.statistically_relevant_products = statistically_relevant_products_final
-        
+        self.statistically_relevant_products = statistically_relevant_products_final_sorted
         logger.info(f"Finished with product statistical analysis. Found {len(statistically_relevant_products)} statistically relevant products.")
-        
-        # write to file if it is supplied as a parameter
-        if filepath != "":
-            data = statistically_relevant_products_final
-            try: # this works on mac, not on windows
-                current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
-                os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True) # Create directory for the report file, if it does not exist
-                with open(os.path.join(current_dir, filepath), 'w') as f:
-                    json.dump(data, f, indent=4)
-            except OSError:
-                # pass the error on the first attempt
-                pass
-
-            try: # if first attempt fails, try using current_dir = os.getcwd(), this works on windows
-                windows_filepath = FileUtil.find_win_abs_filepath(filepath)
-                os.makedirs(os.path.dirname(windows_filepath), exist_ok=True) # Create directory for the report file, if it does not exist
-                with open(windows_filepath, 'w') as f:
-                    json.dump(data, f, indent=4)
-                #current_dir = os.getcwd()
-                #os.makedirs(os.path.dirname(os.path.join(current_dir, filepath)), exist_ok=True)
-            except OSError:
-                logger.info(f"ERROR creating filepath {filepath} at {os.getcwd()}")
-
+        JsonUtil.save_json(data_dictionary=statistically_relevant_products_final_sorted, filepath=filepath)
         return statistically_relevant_products_final
                         
     def change_products_member_field(self, member_field_name: str, value):
