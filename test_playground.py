@@ -10,9 +10,11 @@ import aiohttp
 from goreverselookuplib.JsonUtil import SimpleNamespaceUtil, JsonToClass, JsonUtil
 from goreverselookuplib.AnnotationProcessor import HumanOrthologFinder, UniProtAPI, EnsemblAPI, GOAnnotiationsFile
 from goreverselookuplib.CacheUtils import ConnectionCacher, Cacher
+from goreverselookuplib.FileUtil import FileUtil
 from goreverselookuplib.Metrics import fisher_exact_test, adv_product_score, nterms, binomial_test
 
 import logging
+import requests
 
 from math import log10
 
@@ -41,7 +43,6 @@ logger = logging.getLogger(__name__)
 #fisher_test = fisher_exact_test(model, goaf)
 #model.score_products([fisher_test])
 #model.save_model("chronic_infl_cancer_1/data_v1.json")
-
 
 
 

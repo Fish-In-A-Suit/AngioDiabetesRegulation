@@ -62,7 +62,7 @@ class GOApi:
 
     def get_products(self, term_id, get_url_only=False, request_params = {"rows": 10000000}): 
         """
-        Fetches product IDs associated with a given term ID from the Gene Ontology API. The product IDs can be of any of the following
+        Fetches product IDs (gene ids) associated with a given term ID from the Gene Ontology API. The product IDs can be of any of the following
         databases: UniProt, ZFIN, Xenbase, MGI, RGD [TODO: enable the user to specify databases himself]
 
         The request uses this link: http://api.geneontology.org/api/bioentity/function/{term_id}/genes
@@ -277,54 +277,45 @@ class GOApi:
             products = list(products_set)
             logger.info(f"Fetched products for GO term {term_id}")
             return products
-        
-    """ THIS CAUSED CIRCULAR IMPORT DUE TO GOTerm -> was moved into the GOTerm class
-    async def get_products_async_v3(self, goterm:GOTerm, session:aiohttp.ClientSession, request_params = {"rows":20000}, req_delay=0.5):
-        
-        #A testing variant of get_products_async. Doesn't include timeout in the url request, no retries.
-        #Doesn't create own ClientSession, but relies on external ClientSession, hence doesn't overload the server as does the get_products_async_notimeout function.
-        
-        # Previous algorithm created one aiohttp.ClientSession FOR EACH GOTERM. Therefore, each ClientSession only had one connection,
-        # and the checks for connection limiting weren't enforeced. During runtime, there could be as many as 200 (as many as there are goterms)
-        # active ClientSessions, each with only one request. You should code in the following manner:
-        #
-        # async def make_requests():
-        #    connector = aiohttp.TCPConnector(limit=20, limit_per_host=20)
-        #    async with aiohttp.ClientSession(connector=connector) as session:
-        #        urls = [...]  # List of URLs to request
-        #        for url in urls:
-        #            await asyncio.sleep(1)  # Introduce a 1-second delay between requests
-        #            response = await session.get(url)
-        #            # Process the response
-        
-        APPROVED_DATABASES = [["UniProtKB", ["NCBITaxon:9606"]],
-                      ["ZFIN", ["NCBITaxon:7955"]],
-                      #["RNAcentral", ["NCBITaxon:9606"]],
-                      ["Xenbase", ["NCBITaxon:8364"]],
-                      ["MGI", ["NCBITaxon:10090"]],
-                      ["RGD", ["NCBITaxon:10116"]]]
-        url = f"http://api.geneontology.org/api/bioentity/function/{goterm.id}/genes"
-        params = request_params # 10k rows resulted in 56 mismatches for querying products for 200 goterms (compared to reference model, loaded from synchronous query data)
-        
-        asyncio.sleep(req_delay)
-        response = await session.get(url, params=params)
-        if response.status != 200: # return HTTP Error if status is not 200 (not ok), parse it into goterm.http_errors -> TODO: recalculate products for goterms with http errors
-            logger.warning(f"HTTP Error when parsing {goterm.id}. Response status = {response.status}")
-            return f"HTTP Error: status = {response.status}, reason = {response.reason}"
-        
-        data = await response.json()
-        products_set = set()
-        for assoc in data['associations']:
-            if assoc['object']['id'] == goterm.id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
-                product_id = assoc['subject']['id']
-                products_set.add(product_id)
+    
+    def get_goterms(self, gene_id:str, homosapiens_only:bool=True, go_categories:list = ['molecular_activity', 'biological_process', 'cellular_component'], request_params={"rows": 10000000}):
+        """
+        Gets all GO Terms associated with 'gene_id' in the form of a list.
 
-        products = list(products_set)
-        goterm.products = products
-        logger.info(f"Fetched products for GO term {goterm.id}")
-        return products      
-    """      
+        Parameters:
+          - (str) gene_id: The full gene id (eg. UniProtKB:P15692)
+          - (bool) homosapiens_only: if True, will return only associations for the Homo Sapiens taxon
+          - (list) go_categories: a list of valid categories. All possible categories are 'molecular_activity', 'biological_process', 'cellular_component'.
+                                  All categories are accepted by default.
+          - () request_params: leave it be. Shortening may cause incomplete JSON objects to be returned.
 
+        To carry out the query request, the following url is used:
+            http://api.geneontology.org/api/bioentity/gene/{gene_id}/function
+        """
+        url = f'http://api.geneontology.org/api/bioentity/gene/{gene_id}/function'
+        response = requests.get(url, params=request_params)
+        result_go_terms = []
+
+        if response.status_code == 200:
+            response_json = response.json()
+            for assoc in response_json['associations']:
+                if homosapiens_only == True:
+                    if assoc['subject']['taxon']['id'] == "NCBITaxon:9606": # NCBITaxon:9606 corresponds to Homo Sapiens
+                        if assoc['object']['category'][0] in go_categories:
+                            go_id = assoc['object']['id']
+                            if go_id != None:
+                                result_go_terms.append(go_id)
+                else:
+                    # don't check homo sapiens taxon
+                    if assoc['object']['category'][0] in go_categories:
+                        go_id = assoc['object']['id']
+                        if go_id != None:
+                            result_go_terms.append(go_id)
+            return result_go_terms
+        else:
+            logger.warning(f"Response error when querying GO Terms for {gene_id}!")
+            return None
+        
 class GOAnnotiationsFile:
     def __init__(self, filepath:str="") -> None:
         """
