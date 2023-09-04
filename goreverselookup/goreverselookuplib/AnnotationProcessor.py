@@ -151,33 +151,7 @@ class GOApi:
 
         global request_iterations
         request_iterations = 0 # global variable request_iterations to keep track of the amount of requests submitted to the server (maximum is MAX_RETRIES); a harsh bugfix
-        
-        # create a request object with the base url and params
-        #request = requests.Request("GET", url, params=params)
-        # prepare the request
-        #prepared_request = self.s.prepare_request(request)
-        # get the fully constructed url with parameters
-        #url = prepared_request.url
 
-        """ # this code caused timeout errors
-        async with aiohttp.ClientSession() as session:            
-            response = await session.get(url, params=params, timeout=5)
-            # DEBUG: if the above doesn't work, uncomment the request pre-process lines above and use session.get(url) only
-            if response.status == 200:
-                data = await response.json()
-                products_set = set()
-
-                for assoc in data['associations']:
-                    if assoc['object']['id'] == term_id and any((database[0] in assoc['subject']['id'] and any(taxon in assoc['subject']['taxon']['id'] for taxon in database[1])) for database in APPROVED_DATABASES):
-                        product_id = assoc['subject']['id']
-                        products_set.add(product_id)
-
-                products = list(products_set)
-                logger.info(f"Fetched products for GO term {term_id}")
-                return products
-            else: # warn of the error; # TODO: implement error logging to file as in 'get_products' function
-                logger.error(f"Couldn't fetch products for {term_id}")
-        """
         # as per: https://stackoverflow.com/questions/51248714/aiohttp-client-exception-serverdisconnectederror-is-this-the-api-servers-issu
         connector = aiohttp.TCPConnector(limit=20) # default limit is 100
         async with aiohttp.ClientSession(connector=connector) as session:
@@ -605,7 +579,6 @@ class GOAnnotiationsFile:
             # if gene_name is still not found, return None
             
             return None
-
         
 class UniProtAPI:
     """
@@ -1201,6 +1174,7 @@ class EnsemblAPI:
             logger.debug(f"Returning cached ortholog for id {id}: {previous_result}")
             return previous_result
 
+        full_id = id
         if "ZFIN" in id:
             species = "zebrafish"
             id_url = id.split(":")[1]
@@ -1251,7 +1225,7 @@ class EnsemblAPI:
         # ortholog = best_ortholog_dict["target"].get("id")
         
         Cacher.store_data("ensembl", ensembl_data_key, ortholog)
-        logger.info(f"Received ortholog for id {id} -> {ortholog}")
+        logger.info(f"Received ortholog for id {full_id} -> {ortholog}")
         return ortholog
 
     async def get_human_ortholog_async(self, id, session: aiohttp.ClientSession):      
