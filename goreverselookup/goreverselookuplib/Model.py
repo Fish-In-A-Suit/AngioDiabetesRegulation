@@ -401,7 +401,7 @@ class TargetProcess:
 from .miRNAprediction import miRDB60predictor
 
 class ReverseLookup:
-    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, execution_times: dict = {}, statistically_relevant_products = {}):
+    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, execution_times: dict = {}, statistically_relevant_products = {}, go_categories:List[str] = ["biological_process", "molecular_activity", "cellular_component"], model_settings:ModelSettings = None):
         """
         A class representing a reverse lookup for gene products and their associated Gene Ontology terms.
 
@@ -409,6 +409,14 @@ class ReverseLookup:
             goterms (set): A set of GOTerm objects.
             target_processes (list): A list of dictionaries containing process names and directions.
             products (set, optional): A set of Product objects. Defaults to an empty set.
+            miRNAs
+            miRNA_overlap_threshold
+            execution_times: a dictionary of function execution times, no use to the user. Used during model saving and loadup.
+            statistically_relevant_products: TODO - load and save the model after perform_statistical_analysis is computed
+            go_categories: When querying GO Term data, which GO categories should be allowed. By default, all three categories are allowed ("biological_process", "molecular_activity", "cellular_component").
+                        Choosing the correct categories affects primarily the Fisher scoring, when GO Terms are queried for each product either from the GOAF or from the web. Excluding some GO categories (such as cellular_component)
+                        when researching only GO Terms connected to biological processes and/or molecular activities helps to produce more accurate statistical scores.
+            model_settings: used for saving and loading model settings
         """
         self.goterms = goterms
         self.products = products
@@ -422,7 +430,12 @@ class ReverseLookup:
         # placeholder to populate after perform_statistical_analysis is called
         self.statistically_relevant_products = statistically_relevant_products
 
-        self.model_settings = ModelSettings()
+        # GO categories - determines which categories of GO terms are chosen during the Fisher score computation (either from the GO Annotations File or from a gene id to GO Terms API query)
+        self.go_categories = go_categories
+
+        self.model_settings = model_settings
+
+        self.go_api = GOApi() # this enables us to use go_api inside Metrics.py, as importing GOApi inside Metrics.py creates circular imports.
     
     def set_model_settings(self, model_settings: ModelSettings):
         """
@@ -440,7 +453,6 @@ class ReverseLookup:
         else:
             logger.warning(f"ModelSettings object has no attribute {setting}!")
 
-    
     def fetch_all_go_term_names_descriptions(self, run_async = True, req_delay=0.1):
         """
         Iterates over all GOTerm objects in the go_term set and calls the fetch_name_description method for each object.
@@ -1245,9 +1257,9 @@ class ReverseLookup:
 
     def save_model(self, filepath: str) -> None:
         data = {}
-        # TODO: save options - currently not used
-
         data['target_processes'] = self.target_processes
+        data['go_categories'] = self.go_categories
+        data['model_settings'] = self.model_settings.to_json()
         data['miRNA_overlap_treshold'] = self.miRNA_overlap_treshold
         data['execution_times'] = self.execution_times
         data['statistically_relevant_products'] = self.statistically_relevant_products
@@ -1477,8 +1489,6 @@ class ReverseLookup:
             # merge both dictionaries
             return {**goterms_diff, **products_diff}
             
-
-
     def perform_statistical_analysis(self, test_name = "fisher_test", filepath=""):
         """
         Finds the statistically relevant products, saves them to 'filepath' (if it is provided) and returns a JSON object with the results.
@@ -1582,7 +1592,6 @@ class ReverseLookup:
                 statistically_relevant_products_for_process_pair = statistically_relevant_products_final[pair_code]
                 statistically_relevant_products_for_process_pair_sorted = sorted(statistically_relevant_products_for_process_pair, key=lambda gene: sorting_key(gene))
                 statistically_relevant_products_final_sorted[pair_code] = statistically_relevant_products_for_process_pair_sorted
-        # statistically_relevant_products_final_sorted = sorted(statistically_relevant_products_final, key=lambda gene: sorting_key(gene)); bugfix above - need to compute sorting for each process pair
         
         # TODO: save statistical analysis as a part of the model's json and load it up on startup
         self.statistically_relevant_products = statistically_relevant_products_final_sorted
@@ -1603,7 +1612,6 @@ class ReverseLookup:
             if hasattr(product, member_field_name):
                 setattr(product, member_field_name, value)
 
-
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
         data = JsonUtil.load_json(filepath)
@@ -1618,6 +1626,16 @@ class ReverseLookup:
             statistically_relevant_products = data['statistically_relevant_products']
         else:
             statistically_relevant_products = {}
+        
+        if "go_categories" in data:
+            go_categories = data['go_categories']
+        else:
+            go_categories = ["biological_process", "molecular_activity", "cellular_component"]
+        
+        if "model_settings" in data:
+            settings = ModelSettings.from_json(data['model_settings'])
+        else:
+            settings = ModelSettings()
 
         goterms = []
         for goterm_dict in data['goterms']:
@@ -1631,7 +1649,7 @@ class ReverseLookup:
         for miRNAs_dict in data.get('miRNAs', []):
             miRNAs.append(miRNA.from_dict(miRNAs_dict))
 
-        return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, execution_times=execution_times, statistically_relevant_products=statistically_relevant_products)
+        return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, execution_times=execution_times, statistically_relevant_products=statistically_relevant_products, go_categories=go_categories, model_settings=settings)
 
     @classmethod
     def from_input_file(cls, filepath: str) -> 'ReverseLookup':
@@ -1650,7 +1668,9 @@ class ReverseLookup:
         LOGIC_LINE_DELIMITER = "###"  # Special set of characters to denote a "logic line"
 
         target_processes = []
+        go_categories = []
         go_terms = []
+        settings = ModelSettings()
 
         def process_comment(line):
             """
@@ -1686,15 +1706,29 @@ class ReverseLookup:
                     elif "processes" in line:
                         section = "process"
                         continue
+                    elif "categories" in line:
+                        section = "categories"
+                        continue
                     elif "GO_terms" in line:
                         section = "GO"
                         continue
                     if section == "settings":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
-                        # TODO WARNING: NO LOGIC HERE TO PROCESS HOMO SAPIENS ONLY !?!?!?
+                        setting_value = chunks[1] # is string now
+                        if setting_value == "True":
+                            setting_value = True
+                        else:
+                            setting_value = False
+                        settings.set_setting(setting_name=chunks[0], setting_value=setting_value)
                     elif section == "process":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
                         target_processes.append({"process": chunks[0], "direction": chunks[1]})
+                    elif section == "categories":
+                        chunks = line.split(LINE_ELEMENT_DELIMITER)
+                        category = chunks[0]
+                        category_value = chunks[1]
+                        if category_value == "True":
+                            go_categories.append(category)
                     elif section == "GO":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
                         if len(chunks) == 5:
@@ -1710,7 +1744,6 @@ class ReverseLookup:
         if not os.path.isabs(filepath): # this process with traceback.extract_stack works correctly on mac, but not on windows.
             current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
             mac_filepath = os.path.join(current_dir, filepath) 
-        
         try:
             os.makedirs(os.path.dirname(mac_filepath), exist_ok=True) # this approach works on a mac computer
             process_file(mac_filepath)
@@ -1718,7 +1751,7 @@ class ReverseLookup:
             # # first pass is allowed, on Windows 10 this tries to create a file at 
             # 'C:\\Program Files\\Python310\\lib\\diabetes_angio_1/general.txt'
             # which raises a permission error.
-        # fallback if the above fails
+            # fallback if the above fails
             try:
                 win_filepath = FileUtil.find_win_abs_filepath(filepath)
                 os.makedirs(os.path.dirname(win_filepath), exist_ok=True)
@@ -1727,8 +1760,7 @@ class ReverseLookup:
                 logger.error(f"ERROR while opening win filepath {win_filepath}")
                 return
     
-        
-        return cls(go_terms, target_processes)
+        return cls(go_terms, target_processes, go_categories=go_categories, model_settings=settings)
 
     @classmethod
     def from_dict(cls, data: Dict[str, List[Dict]]) -> 'ReverseLookup':
@@ -1741,10 +1773,18 @@ class ReverseLookup:
         Returns:
             ReverseLookup: A ReverseLookup object.
         """
-
         goterms = [GOTerm.from_dict(d) for d in data['goterms']]
         target_processes = data['target_processes']
-        return cls(goterms, target_processes)
+        if "go_categories" in data:
+            go_categories = data['go_categories']
+        else:
+            go_categories = ["biological_process", "molecular_activity", "cellular_component"]
+        if "model_settings" in data:
+            settings = ModelSettings.from_json(data['model_settings'])
+        else:
+            settings = ModelSettings()
+
+        return cls(goterms, target_processes, go_categories=go_categories, model_settings=settings)
     
     def _debug_shorten_GO_terms(self,count):
         """
@@ -1760,6 +1800,32 @@ class ModelSettings:
     def __init__(self) -> ModelSettings:
         self.homosapiens_only = False
         self.require_product_evidence_codes = False
+        self.fisher_test_use_online_query = False
+    
+    @classmethod
+    def from_json(cls, json_data) -> ModelSettings:
+        """
+        Constructs ModelSettings from a JSON representation. This is used during (ReverseLookup).load_model, when model loading
+        is performed from the saved json file.
+        """
+        instance = cls() # create an instance of the class
+        for attr_name in dir(instance): # iterate through class variables (ie settings in ModelSettings)
+            if not callable(getattr(instance, attr_name)) and not attr_name.startswith("__"):
+                if attr_name in json_data: # check if attribute exists in json data
+                    setattr(instance, attr_name, json_data[f'{attr_name}']) # set the attribute
+                else:
+                    logger.warning(f"Attribute {attr_name} doesn't exist in json_data for ModelSettings!")
+        return instance
+
+    def to_json(self):
+        """
+        Constructs a JSON representation of this class. This is used during (ReverseLookup).save_model to save the ModelSettings
+        """
+        json_data = {}
+        for attr_name, attr_value in vars(self).items():
+            if not callable(attr_value) and not attr_name.startswith("__"):
+                json_data[attr_name] = attr_value
+        return json_data
     
     def set_setting(self, setting_name:str, setting_value:bool):
         if hasattr(self, setting_name):
@@ -1767,7 +1833,9 @@ class ModelSettings:
         else:
             logger.warning(f"ModelSettings has no attribute {setting_name}! Make sure to programmatically define the attribute.")
 
-
+    def get_setting(self, setting_name:str):
+        if hasattr(self, setting_name):
+            return getattr(self, setting_name)
 
 
                         

@@ -4,7 +4,7 @@ from goreverselookuplib import ReverseLookup
 from goreverselookuplib.GOTerm import GOTerm
 from goreverselookuplib.AnnotationProcessor import GOAnnotiationsFile
 from goreverselookuplib.Workflows import WorkflowOne, WorkflowTwo
-from goreverselookuplib.AnnotationProcessor import GOApi
+# from goreverselookuplib.AnnotationProcessor import GOApi
 import asyncio
 import aiohttp
 from goreverselookuplib.JsonUtil import SimpleNamespaceUtil, JsonToClass, JsonUtil
@@ -38,11 +38,12 @@ logger = logging.getLogger(__name__)
 #    product.fetch_info()
 #t = ""
 
-#model = ReverseLookup.load_model("chronic_infl_cancer_1/data.json")
-#goaf = GOAnnotiationsFile()
-#fisher_test = fisher_exact_test(model, goaf)
-#model.score_products([fisher_test])
-#model.save_model("chronic_infl_cancer_1/data_v1.json")
+model = ReverseLookup.load_model("chronic_infl_cancer_1/data.json")
+goaf = GOAnnotiationsFile(go_categories=model.go_categories)
+fisher_test = fisher_exact_test(model, goaf)
+model.score_products([fisher_test])
+model.save_model("chronic_infl_cancer_1/data_v1.json")
+
 
 
 

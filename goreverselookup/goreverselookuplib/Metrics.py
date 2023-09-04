@@ -375,9 +375,22 @@ class binomial_test(Metrics):
             
 class fisher_exact_test(Metrics):
     """
+    Fisher exact test.
+
+    Parameters:
+      - (ReverseLookup) model: an instance of the ReverseLookup model
+      - (GOAnnotationsFile) goaf: an instance of the GOAnnotationsFile
+    
+    Note: If the setting reverse_lookup.model_settings.fisher_test_use_online_query is True (inside ModelSettings in ReverseLookup),
+    then num_goterms_product_general will be determined via an https query. Otherwise, num_goterms_product_general will be determined from
+    the GOAF.
+
     Each process can have 2 sets of GO terms - one set includes GO terms, which promote, 
     and the other set includes GO terms which inhibit the process. The “general” set 
-    contains all GO terms in existence (found in the GOAF).
+    contains all GO terms in existence (found in the GOAF). Note that when supplying a ReverseLookup
+    and a GOAnnotationsFile instances to the constructor, ideally they should match in their go_categories.
+    If ReverseLookup and GOAF don't match in go_categories, then GOAF will be recalculated using ReverseLookup's
+    go_categories.
 
     For each gene, we construct a contingency table and calculate the p values according 
     to Fischer’s exact test.
@@ -448,6 +461,14 @@ class fisher_exact_test(Metrics):
         self.goaf = goaf
         self.name = "fisher_test"
         self._num_all_goterms = 0
+        if self.reverse_lookup.model_settings.fisher_test_use_online_query == True:
+            self.online_query_api = self.reverse_lookup.go_api
+        if self.goaf.go_categories != self.reverse_lookup.go_categories:
+            logger.warning(f"GOAF categories don't match ReverseLookup model GO categories!")
+            logger.warning(f"  - GOAF GO categories: {self.goaf.go_categories}")
+            logger.warning(f"  - ReverseLookup GO categories: {self.reverse_lookup.go_categories}")
+            logger.info(f"GOAF will be recalculated using the ReverseLookup's GO categories: {self.reverse_lookup.go_categories}")
+            self.goaf = GOAnnotiationsFile(go_categories=self.reverse_lookup.go_categories)
     
     def metric(self, product: Product) -> Dict:
         D_DEBUG_CALCULATE_DESIRED_N_PROD_PROCESS = True # TODO: delete this # calculates num_goterms_product_process which would be sufficient for the product's statistical importance (p < 0.05)
@@ -459,7 +480,17 @@ class fisher_exact_test(Metrics):
         
         for process in self.reverse_lookup.target_processes: # example self.reverse_lookup.target_processes: [0]: {'process': 'chronic_inflammation', 'direction': '+'}, [1]: {{'process': 'cancer', 'direction': '+'}}
             process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"]) # all GO Term ids associated with a specific process (eg. angio, diabetes, obesity) for the current MODEL
-            num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename)) # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
+            if self.reverse_lookup.model_settings.fisher_test_use_online_query == True:
+                goterms_product_general = self.online_query_api.get_goterms(product.uniprot_id, go_categories=self.reverse_lookup.go_categories)
+                if goterms_product_general != None:
+                    num_goterms_product_general = len(goterms_product_general)
+                else:
+                    # skip iteration, there was an error with querying goterms associated with a product
+                    continue
+                # num_goterms_product_general = len(self.online_query_api.get_goterms(product.uniprot_id, go_categories=self.reverse_lookup.go_categories))
+                logger.debug(f"Fisher test online num_goterms_product_general query: {num_goterms_product_general}")
+            else:           
+                num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename)) # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
             num_goterms_all_general = self._num_all_goterms # number of all GO Terms from the GO Annotations File (currently 18880)
             for direction in ['+', '-']:
                 # num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(goterm_process['direction'] == direction for goterm_process in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))

@@ -13,8 +13,6 @@ logger = logging.getLogger(__name__)
 
 gene_id = "UniProtKB:P15692"
 goapi = GOApi()
-goterms_associated_with_geneid = goapi.get_goterms(
-	gene_id, go_categories=['molecular_activity', 'biological_process', 'cellular_component']
-	)
+goterms_associated_with_geneid = goapi.get_goterms(gene_id, go_categories=['molecular_activity', 'biological_process', 'cellular_component'])
 logger.info(f"len goterms = {len(goterms_associated_with_geneid)}")
 logger.info(f"goterms = {goterms_associated_with_geneid}")

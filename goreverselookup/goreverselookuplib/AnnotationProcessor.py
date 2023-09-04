@@ -317,7 +317,7 @@ class GOApi:
             return None
         
 class GOAnnotiationsFile:
-    def __init__(self, filepath:str="") -> None:
+    def __init__(self, filepath:str="", go_categories:list = ["biological_process", "molecular_activity", "cellular_component"]) -> None:
         """
         This class provides access to a Gene Ontology Annotations File, which stores the relations between each GO Term and it's products (genes),
         along with an evidence code, confirming the truth of the interaction. A GO Annotation comprises of a) GO Term, b) gene / gene product c) evidence code.
@@ -325,11 +325,15 @@ class GOAnnotiationsFile:
         Parameters:
           - (str) filepath: the filepath to the GO Annotations File downloaded file from http://current.geneontology.org/products/pages/downloads.html -> Homo Sapiens (EBI Gene Ontology Database) - protein = goa_human.gaf; link = http://geneontology.org/gene-associations/goa_human.gaf.gz
                             if left to default value, self._filepath will be set to 'src_data_files/goa_human.gaf'. The file should reside in root/src_data_files/ and the parameter filepath should be the file name of the downloaded file inside src_data_files/
+          - (list) go_categories: determines which GO categories are valid. Default is that all three GO categories are valid. Setting GO categories determines which products
+                                  or terms are returned from goaf.get_all_products_for_goterm and goaf.get_all_terms_for_product functions. The algorithm excludes any associations whose category doesn't match go_categories already in 
+                                  the GOAF file read phase - lines not containing a desired category (from go_categories) won't be read.
 
         See also:
           - http://geneontology.org/docs/download-go-annotations/ 
           - http://current.geneontology.org/products/pages/downloads.html
         """
+        self.go_categories = go_categories
         if filepath == "":
             self._filepath = "src_data_files/goa_human.gaf"
         else:
@@ -345,7 +349,10 @@ class GOAnnotiationsFile:
                 self._readlines = []
                 for line in temp_content:
                     if not line.startswith('!') and not line.strip() == '':
-                        self._readlines.append(line.strip())
+                        line = line.strip()
+                        line_category = self._get_go_category_from_line(line)
+                        if line_category in go_categories:
+                            self._readlines.append(line)
         self.terms_dict = None
         self.products_dict = None
             
@@ -370,10 +377,71 @@ class GOAnnotiationsFile:
             return True
         else:
             return False
+    
+    def _get_go_category_from_line(self, line:str):
+        """
+        Expects a line similar to:
+            UniProtKB	A0A075B6H8	IGKV1D-42	involved_in	GO:0002250	GO_REF:0000043	IEA	UniProtKB-KW:KW-1064	P	Probable non-functional immunoglobulin kappa variable 1D-42	IGKV1D-42	protein	taxon:9606	20230306	UniProt		
+        and returns the GO aspect (GO category) of a line, which can be either:
+            - P --> biological_process
+            - F --> molecular_activity
+            - C --> cellular_component
+        
+        A word about the search algorithm:
+        Line elements in the GOAF are in the following order:
+          - [0] DB
+          - [1] DB Object Id
+          - [2] Db Object Symbol
+          - [3] Qualifier (optional)
+          - [4] GO Id
+          - [5] DB:Reference
+          - [6] Evidence code
+          - [7] With (or) From (optional)
+          - [8] Aspect
+          - [9] DB Object Name
+          - [10] DB Object Synonym
+          - [11] DB Object Type
+          - [12] Taxon
+          - [13] Date
+          - [14] Assigned by
+          - [15] Annotation extension
+          - [16] Gene product form id
+        Since two line elements (qualifier) and (with or from) are optional (before the Aspect element), the array element at index 8
+        will be checked if it contains only one letter. If not, elements at index 7 and 6 will be checked if they contain only one letter (corresponding to Aspect),
+        since one of these elements must have the Aspect. In other words, Aspect can be at indices:
+          - 6: if both "qualifier" and "with or from" elements are missing
+          - 7: if only one ("qualifier" or "with or from") is missing
+          - 8: if "qualifier" and "with or from" elements are supplied.
+        """
+        line_split = []
+        if isinstance(line, list):
+            line_split = line
+        else:
+            # line is not split, split on tab
+            line_split = line.split("\t")
+        
+        # aspect is the same as go_category
+        aspect = ""
+        start_index = 8 # expected Aspect index if line
+        for i in range(3): # will go: 0,1,2
+            aspect_index = start_index - i # will go: 8,7,6
+            aspect = line_split[aspect_index] # query line elements 8, 7 and 6 (possible line locations for Aspect)
+            if len(aspect) == 1: # if length of Aspect string is 1, then Aspect is truly P, C or F
+                break
+
+        match aspect:
+            case "P":
+                return "biological_process"
+            case "F": # molecular function in https requests when querying GO Terms associated with gene ids is returned as molecular_activity
+                return "molecular_activity"
+            case "C":
+                return "cellular_component"
+        return None
 
     def get_all_products_for_goterm(self, goterm_id: str) -> List[str]:
         """
-        This method returns all unique products associated with the GO term id
+        This method returns all unique products associated with the GO term id.
+        The return of this function is influenced by the go_categories supplied to the constructor of the GOAF!
 
         Args:
             goterm_id (str): a GO Term identifier, eg. GO:0003723
@@ -420,6 +488,7 @@ class GOAnnotiationsFile:
     def get_all_terms_for_product(self, product: str) -> List[str]:
         """
         Gets all GO Terms associated to a product gene name.
+        The return of this function is influenced by the go_categories supplied to the constructor of the GOAF!
 
         Args:
           - (str) product: must be a gene name corresponding to a specific gene/gene product, eg. NUDT4B
@@ -439,6 +508,8 @@ class GOAnnotiationsFile:
         """
         Returns a List of all unique GO Terms read from the GO Annotations file.
         In the current (27_04_2023) GO Annotation File, there are 18880 unique GO Terms.
+
+        The return of this function is influenced by the go_categories supplied to the constructor of the GOAF!
         """
         if not self.terms_dict:
             self.populate_terms_dict()
