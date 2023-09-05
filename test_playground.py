@@ -12,6 +12,7 @@ from goreverselookuplib.AnnotationProcessor import HumanOrthologFinder, UniProtA
 from goreverselookuplib.CacheUtils import ConnectionCacher, Cacher
 from goreverselookuplib.FileUtil import FileUtil
 from goreverselookuplib.Metrics import fisher_exact_test, adv_product_score, nterms, binomial_test
+from goreverselookuplib.OboParser import OboParser
 
 import logging
 import requests
@@ -38,11 +39,13 @@ logger = logging.getLogger(__name__)
 #    product.fetch_info()
 #t = ""
 
-model = ReverseLookup.load_model("chronic_infl_cancer_1/data.json")
-goaf = GOAnnotiationsFile(go_categories=model.go_categories)
-fisher_test = fisher_exact_test(model, goaf)
-model.score_products([fisher_test])
-model.save_model("chronic_infl_cancer_1/data_v1.json")
+#model = ReverseLookup.load_model("chronic_infl_cancer_1/data.json")
+#goaf = GOAnnotiationsFile(go_categories=model.go_categories)
+#fisher_test = fisher_exact_test(model, goaf)
+#model.score_products([fisher_test])
+#model.save_model("chronic_infl_cancer_1/data_v1.json")
+
+
 
 
 

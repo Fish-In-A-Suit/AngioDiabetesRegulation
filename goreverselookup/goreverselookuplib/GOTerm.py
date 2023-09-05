@@ -7,19 +7,20 @@ import aiohttp, asyncio
 logger = logging.getLogger(__name__)
 
 class GOTerm:
-    def __init__(self, id: str, processes: List[Dict], name: Optional[str] = None, description: Optional[str] = None, category: Optional[str] = None, parent_term_ids: Optional[List[str]] = None, weight: float = 1.0, products: List[str] = [], http_error_codes:dict={}):
+    def __init__(self, id: str, processes: List[Dict] = None, name: Optional[str] = None, description: Optional[str] = None, category: Optional[str] = None, parent_term_ids: Optional[List[str]] = None, is_obsolete:bool = False, weight: float = 1.0, products: List[str] = [], http_error_codes:dict={}):
         """
         A class representing a Gene Ontology term.
 
         Args:
             id (str): The ID of the GO term.
-            process (List[Dict]): [{"process" : "angio", "direction" : "+"}]
+            processes (List[Dict]): [{"process" : "angio", "direction" : "+"}]
             name (str): Name (optional).
             description (str): A description of the GO term (optional).
             weight (float): The weight of the GO term.
             products (list): Products associated with the term (optional).
             category (str): biological_process, molecular_activity or cellular_component
             parent_term_ids (list[str]): GO ids of the parent terms (parsed from .obo)
+            is_obsolete (bool): if the term is labelled as obsolete in the .obo file
         """
         self.id = id
         self.processes = processes if isinstance(processes, list) else [processes]
@@ -30,6 +31,7 @@ class GOTerm:
         self.http_error_codes = {} # used for errors happening during server querying; for example, a dict pair 'products': "HTTP Error ..." signifies an http error when querying for GO Term's products
         self.category = category
         self.parent_term_ids = parent_term_ids
+        self.is_obsolete = is_obsolete
 
     def copy(self):
         """

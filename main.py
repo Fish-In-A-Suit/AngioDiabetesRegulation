@@ -21,7 +21,7 @@ file_handler.setFormatter(logging.Formatter('%(asctime)s [%(filename)s:%(lineno)
 logger = logging.getLogger(__name__)
 
 Cacher.init()
-workflow = WorkflowTwo(input_file_fpath="chronic_infl_cancer_1/input_01-09-2023.txt", save_folder_dir="chronic_infl_cancer_1")
+workflow = WorkflowTwo(input_file_fpath="chronic_infl_cancer_1/input_03-09-2023.txt", save_folder_dir="chronic_infl_cancer_1")
 workflow.run_workflow()
 
 #model = ReverseLookup.load_model("chronic_infl_cancer_1/data_31-08-2023.json")
