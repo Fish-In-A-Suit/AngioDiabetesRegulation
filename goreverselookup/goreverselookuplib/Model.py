@@ -1641,8 +1641,6 @@ class ReverseLookup:
         
         if "model_settings" in data:
             settings = ModelSettings.from_json(data['model_settings'])
-            # TODO: FOR DEBUG ONLY, DELETE LINE BELOW !!!
-            settings.include_all_goterm_parents = True
         else:
             settings = ModelSettings()
 
