@@ -480,7 +480,12 @@ class fisher_exact_test(Metrics):
         
         for process in self.reverse_lookup.target_processes: # example self.reverse_lookup.target_processes: [0]: {'process': 'chronic_inflammation', 'direction': '+'}, [1]: {{'process': 'cancer', 'direction': '+'}}
             process_goterms_list = self.reverse_lookup.get_all_goterms_for_process(process["process"]) # all GO Term ids associated with a specific process (eg. angio, diabetes, obesity) for the current MODEL
-            if self.reverse_lookup.model_settings.fisher_test_use_online_query == True:
+            num_goterms_all_general = self._num_all_goterms # number of all GO Terms from the GO Annotations File (currently 18880)
+
+            # num_goterms_product_general ... # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
+            #   - can be queried either via online or offline pathway (determined by model_settings.fisher_test_use_online_query)
+            #   - can have all parent terms (indirectly associated terms) added to the count (besides only directly associated GO terms) - determined by model_settings.include_all_goterm_parents
+            if self.reverse_lookup.model_settings.fisher_test_use_online_query == True: # online pathway: get goterms associated with this product via a web query
                 goterms_product_general = self.online_query_api.get_goterms(product.uniprot_id, go_categories=self.reverse_lookup.go_categories)
                 if goterms_product_general != None:
                     num_goterms_product_general = len(goterms_product_general)
@@ -489,9 +494,19 @@ class fisher_exact_test(Metrics):
                     continue
                 # num_goterms_product_general = len(self.online_query_api.get_goterms(product.uniprot_id, go_categories=self.reverse_lookup.go_categories))
                 logger.debug(f"Fisher test online num_goterms_product_general query: {num_goterms_product_general}")
-            else:           
-                num_goterms_product_general = len(self.goaf.get_all_terms_for_product(product.genename)) # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
-            num_goterms_all_general = self._num_all_goterms # number of all GO Terms from the GO Annotations File (currently 18880)
+            else: # offline pathway: get goterms from GOAF      
+                goterms_product_general = self.goaf.get_all_terms_for_product(product.genename)
+                num_goterms_product_general = len(goterms_product_general) # all GO Terms associated with the current input Product instance (genename) from the GO Annotation File
+            
+            # determine number of parents:
+            if self.reverse_lookup.model_settings.include_all_goterm_parents == True:
+                # include all parent goterms in the scoring
+                directly_associated_goterms = list(goterms_product_general) # to create two different entities !
+                for directly_associated_goterm in directly_associated_goterms: # WARNING: don't iterate over goterms_product_general, since this list is being updated in the for loop !!
+                    parent_goterms = self.reverse_lookup.obo_parser.get_parent_terms(directly_associated_goterm) # indirectly associated goterms
+                    goterms_product_general+=parent_goterms # expand goterms_product_general by the parent goterms
+                num_goterms_product_general = len(goterms_product_general) # calculate new num_goterms_product_general
+
             for direction in ['+', '-']:
                 # num_goterms_product_process = sum(1 for goterm in process_goterms_list if (any(goterm_process['direction'] == direction for goterm_process in goterm.processes) and (any(product_id in goterm.products for product_id in product.id_synonyms) or product.genename in goterm.products)))
                 # the above line is a single-line implementation of the below nested for loops

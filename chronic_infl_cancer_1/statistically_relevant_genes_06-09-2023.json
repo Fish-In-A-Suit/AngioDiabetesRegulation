@@ -1,0 +1,1011 @@
+{
+    "chronic_inflammation+:cancer+": [
+        {
+            "id_synonyms": [
+                "RGD:2891"
+            ],
+            "genename": "ACBD6",
+            "description": "acyl-CoA binding domain containing 6",
+            "uniprot_id": "Q9BR61",
+            "ensg_id": "ENSG00000230124",
+            "enst_id": "ENST00000367595",
+            "refseq_nt_id": "NM_032360.4",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 9,
+                        "n_all_process": 74,
+                        "n_prod_general": 24,
+                        "n_all_general": 17093,
+                        "num": 9,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.1039021821798397,
+                        "fold_enrichment": 86.61993243243244,
+                        "pvalue": 3.9574108046500777e-16,
+                        "odds_ratio": 157.18153846153845,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0071222: cellular response to lipopolysaccharide",
+                            "GO:0032496: response to lipopolysaccharide",
+                            "GO:0045917: positive regulation of complement activation",
+                            "GO:0002439: chronic inflammatory response to antigenic stimulus",
+                            "GO:0097398: cellular response to interleukin-17"
+                        ],
+                        "pvalue_corr": 4.097701017674923e-12
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 24,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.07441642777745276,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 9,
+                        "n_all_process": 32,
+                        "n_prod_general": 142,
+                        "n_all_general": 17093,
+                        "num": 9,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.26583981746913943,
+                        "fold_enrichment": 33.854973591549296,
+                        "pvalue": 3.2337722797811152e-12,
+                        "odds_ratio": 50.22229486760379,
+                        "goterms_prod_process": [
+                            "GO:0051781: positive regulation of cell division",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0010573: vascular endothelial growth factor production",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation",
+                            "GO:0030335: positive regulation of cell migration",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
+                        "pvalue_corr": 1.3393638028397423e-08
+                    },
+                    "cancer-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 23,
+                        "n_prod_general": 142,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.19107236880594397,
+                        "fold_enrichment": 5.2336191059399875,
+                        "pvalue": 0.1733758215525261,
+                        "odds_ratio": 5.503223726627982,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
+                        "pvalue_corr": 0.968609145184138
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:3066",
+                "RGD:3850",
+                "RGD:2294",
+                "MGI:1276116"
+            ],
+            "genename": "AADACL4",
+            "description": "arylacetamide deacetylase like 4",
+            "uniprot_id": "Q5VUY2",
+            "ensg_id": "ENSG00000204518",
+            "enst_id": "ENST00000376221",
+            "refseq_nt_id": "NM_001013630.2",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 74,
+                        "n_prod_general": 5,
+                        "n_all_general": 17093,
+                        "num": 4,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.02164628795413327,
+                        "fold_enrichment": 184.78918918918922,
+                        "pvalue": 1.6108737513777241e-09,
+                        "odds_ratio": 972.7428571428571,
+                        "goterms_prod_process": [
+                            "GO:1900039: positive regulation of cellular response to hypoxia",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity",
+                            "GO:0006508: proteolysis",
+                            "GO:0034097: response to cytokine"
+                        ],
+                        "pvalue_corr": 1.9623285010165466e-06
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 5,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.015503422453635991,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 32,
+                        "n_prod_general": 15,
+                        "n_all_general": 17093,
+                        "num": 4,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.028081670859416135,
+                        "fold_enrichment": 142.44166666666666,
+                        "pvalue": 1.3559965357192322e-08,
+                        "odds_ratio": 221.62337662337663,
+                        "goterms_prod_process": [
+                            "GO:0030307: positive regulation of cell growth",
+                            "GO:0043069: negative regulation of programmed cell death",
+                            "GO:0022617: extracellular matrix disassembly",
+                            "GO:0008284: positive regulation of cell population proliferation"
+                        ],
+                        "pvalue_corr": 1.220927489487373e-05
+                    },
+                    "cancer-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 23,
+                        "n_prod_general": 15,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.020183700930205346,
+                        "fold_enrichment": 49.54492753623189,
+                        "pvalue": 0.019985428913907238,
+                        "odds_ratio": 55.425324675324674,
+                        "goterms_prod_process": [
+                            "GO:0045597: positive regulation of cell differentiation"
+                        ],
+                        "pvalue_corr": 0.3715244590467729
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:2551",
+                "RGD:3825",
+                "RGD:2543"
+            ],
+            "genename": "ANKFN1",
+            "description": "ankyrin repeat and fibronectin type III domain containing 1",
+            "uniprot_id": null,
+            "ensg_id": "ENSG00000153930",
+            "enst_id": "ENST00000682825",
+            "refseq_nt_id": "NM_001370326.1",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 5,
+                        "n_all_process": 74,
+                        "n_prod_general": 28,
+                        "n_all_general": 17093,
+                        "num": 5,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.12121921254314633,
+                        "fold_enrichment": 41.24758687258687,
+                        "pvalue": 1.1959718054611425e-07,
+                        "odds_ratio": 53.635790800252046,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0070141: response to UV-A",
+                            "GO:0034614: cellular response to reactive oxygen species",
+                            "GO:0071222: cellular response to lipopolysaccharide",
+                            "GO:0032496: response to lipopolysaccharide"
+                        ],
+                        "pvalue_corr": 6.517731610340737e-05
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 28,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.08681916574036155,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 7,
+                        "n_all_process": 32,
+                        "n_prod_general": 174,
+                        "n_all_general": 17093,
+                        "num": 7,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.32574738196922715,
+                        "fold_enrichment": 21.489044540229887,
+                        "pvalue": 2.544807956951861e-08,
+                        "odds_ratio": 28.61700598802395,
+                        "goterms_prod_process": [
+                            "GO:0030307: positive regulation of cell growth",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0038134: ERBB2-EGFR signaling pathway",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation",
+                            "GO:0030335: positive regulation of cell migration",
+                            "GO:0090263: positive regulation of canonical Wnt signaling pathway"
+                        ],
+                        "pvalue_corr": 2.026939537712157e-05
+                    },
+                    "cancer-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 23,
+                        "n_prod_general": 174,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.234130930790382,
+                        "fold_enrichment": 4.271114442778611,
+                        "pvalue": 0.20792291371941068,
+                        "odds_ratio": 4.485286389910668,
+                        "goterms_prod_process": [
+                            "GO:0090090: negative regulation of canonical Wnt signaling pathway"
+                        ],
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:619991"
+            ],
+            "genename": "GGNBP1",
+            "description": "gametogenetin binding protein 1 (pseudogene)",
+            "uniprot_id": "",
+            "ensg_id": "ENSG00000204188",
+            "enst_id": "ENST00000613113",
+            "refseq_nt_id": null,
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 74,
+                        "n_prod_general": 13,
+                        "n_all_general": 17093,
+                        "num": 3,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.0562803486807465,
+                        "fold_enrichment": 53.304573804573806,
+                        "pvalue": 2.1545221272573413e-05,
+                        "odds_ratio": 71.92394366197183,
+                        "goterms_prod_process": [
+                            "GO:1905604: negative regulation of blood-brain barrier permeability",
+                            "GO:0071456: cellular response to hypoxia",
+                            "GO:1903141: negative regulation of establishment of endothelial barrier"
+                        ],
+                        "pvalue_corr": 0.0037785247810394277
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 13,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.040308898379453575,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 7,
+                        "n_all_process": 32,
+                        "n_prod_general": 43,
+                        "n_all_general": 17093,
+                        "num": 7,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.08050078979699292,
+                        "fold_enrichment": 86.95566860465117,
+                        "pvalue": 1.2047108836755534e-12,
+                        "odds_ratio": 132.7511111111111,
+                        "goterms_prod_process": [
+                            "GO:1903392: negative regulation of adherens junction organization",
+                            "GO:0051781: positive regulation of cell division",
+                            "GO:0043069: negative regulation of programmed cell death",
+                            "GO:0001569: branching involved in blood vessel morphogenesis",
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0030335: positive regulation of cell migration"
+                        ],
+                        "pvalue_corr": 6.237089422509259e-09
+                    },
+                    "cancer-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 23,
+                        "n_prod_general": 43,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.057859942666588664,
+                        "fold_enrichment": 17.283114256825076,
+                        "pvalue": 0.056184390709418705,
+                        "odds_ratio": 18.475108225108226,
+                        "goterms_prod_process": [
+                            "GO:0045785: positive regulation of cell adhesion"
+                        ],
+                        "pvalue_corr": 0.6320057290610277
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:3852",
+                "RGD:3876"
+            ],
+            "genename": "ACSM2A",
+            "description": "acyl-CoA synthetase medium chain family member 2A",
+            "uniprot_id": "Q08AH3",
+            "ensg_id": "ENSG00000183747",
+            "enst_id": "ENST00000573854",
+            "refseq_nt_id": "NM_001308172.2",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 17,
+                        "n_all_process": 74,
+                        "n_prod_general": 164,
+                        "n_all_general": 17093,
+                        "num": 17,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.7099982448955713,
+                        "fold_enrichment": 23.943721160184573,
+                        "pvalue": 2.5995860743865585e-19,
+                        "odds_ratio": 34.564029120420095,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0001819: positive regulation of cytokine production",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0032741: positive regulation of interleukin-18 production",
+                            "GO:0150129: positive regulation of interleukin-33 production",
+                            "GO:0051092: positive regulation of NF-kappaB transcription factor activity",
+                            "GO:0001774: microglial cell activation",
+                            "GO:0002281: macrophage activation involved in immune response",
+                            "GO:1904999: positive regulation of leukocyte adhesion to arterial endothelial cell",
+                            "GO:0071222: cellular response to lipopolysaccharide",
+                            "GO:0032496: response to lipopolysaccharide",
+                            "GO:0002523: leukocyte migration involved in inflammatory response",
+                            "GO:0002439: chronic inflammatory response to antigenic stimulus",
+                            "GO:0002876: positive regulation of chronic inflammatory response to antigenic stimulus"
+                        ],
+                        "pvalue_corr": 5.383482801447124e-15
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 53,
+                        "n_prod_general": 164,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": 3,
+                        "expected": 0.5085122564792606,
+                        "fold_enrichment": 1.9665209387942935,
+                        "pvalue": 0.39761347867228347,
+                        "odds_ratio": 2.0105002359603588,
+                        "goterms_prod_process": [
+                            "GO:0032715: negative regulation of interleukin-6 production"
+                        ],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 10,
+                        "n_all_process": 32,
+                        "n_prod_general": 1237,
+                        "n_all_general": 17093,
+                        "num": 10,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 2.315801790206517,
+                        "fold_enrichment": 4.31815885206144,
+                        "pvalue": 3.0913498732324746e-05,
+                        "odds_ratio": 6.323997925464918,
+                        "goterms_prod_process": [
+                            "GO:1903347: negative regulation of bicellular tight junction assembly",
+                            "GO:0030307: positive regulation of cell growth",
+                            "GO:0010573: vascular endothelial growth factor production",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:1901647: positive regulation of synoviocyte proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation",
+                            "GO:1904707: positive regulation of vascular associated smooth muscle cell proliferation",
+                            "GO:0030335: positive regulation of cell migration",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
+                        "pvalue_corr": 0.00515601153680263
+                    },
+                    "cancer-": {
+                        "n_prod_process": 2,
+                        "n_all_process": 23,
+                        "n_prod_general": 1237,
+                        "n_all_general": 17093,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": 5,
+                        "expected": 1.6644825367109342,
+                        "fold_enrichment": 1.201574637095357,
+                        "pvalue": 0.6661983822059039,
+                        "odds_ratio": 1.3165220744168113,
+                        "goterms_prod_process": [
+                            "GO:0045785: positive regulation of cell adhesion",
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:2153",
+                "RGD:3772"
+            ],
+            "genename": "ACAP3",
+            "description": "ArfGAP with coiled-coil, ankyrin repeat and PH domains 3",
+            "uniprot_id": "Q96P50",
+            "ensg_id": "ENSG00000131584",
+            "enst_id": "ENST00000354700",
+            "refseq_nt_id": "NM_030649.3",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 7,
+                        "n_all_process": 74,
+                        "n_prod_general": 27,
+                        "n_all_general": 17093,
+                        "num": 7,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.11688995495231967,
+                        "fold_enrichment": 59.88538538538538,
+                        "pvalue": 1.7467451725375864e-11,
+                        "odds_ratio": 88.94179104477612,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:1900017: positive regulation of cytokine production involved in inflammatory response",
+                            "GO:0032731: positive regulation of interleukin-1 beta production",
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032757: positive regulation of interleukin-8 production",
+                            "GO:0034097: response to cytokine",
+                            "GO:0097398: cellular response to interleukin-17"
+                        ],
+                        "pvalue_corr": 5.167620825440125e-08
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 27,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.08371848124963435,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 32,
+                        "n_prod_general": 105,
+                        "n_all_general": 17093,
+                        "num": 4,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.19657169601591296,
+                        "fold_enrichment": 20.34880952380952,
+                        "pvalue": 4.135771777539936e-05,
+                        "odds_ratio": 24.13719943422914,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0010575: positive regulation of vascular endothelial growth factor production",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0030335: positive regulation of cell migration"
+                        ],
+                        "pvalue_corr": 0.006031528009934827
+                    },
+                    "cancer-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 23,
+                        "n_prod_general": 105,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.14128590651143744,
+                        "fold_enrichment": 7.077846790890269,
+                        "pvalue": 0.1314622011421741,
+                        "odds_ratio": 7.461101398601398,
+                        "goterms_prod_process": [
+                            "GO:0008285: negative regulation of cell population proliferation"
+                        ],
+                        "pvalue_corr": 0.8850620037234342
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:3054",
+                "RGD:2897",
+                "RGD:3020"
+            ],
+            "genename": "AAMDC",
+            "description": "adipogenesis associated Mth938 domain containing",
+            "uniprot_id": "Q9H7C9",
+            "ensg_id": "ENSG00000087884",
+            "enst_id": "ENST00000393427",
+            "refseq_nt_id": "NM_024684.4",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 74,
+                        "n_prod_general": 15,
+                        "n_all_general": 17093,
+                        "num": 3,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.06493886386239982,
+                        "fold_enrichment": 46.1972972972973,
+                        "pvalue": 3.405194756478548e-05,
+                        "odds_ratio": 59.936619718309856,
+                        "goterms_prod_process": [
+                            "GO:0032755: positive regulation of interleukin-6 production",
+                            "GO:0032496: response to lipopolysaccharide",
+                            "GO:0002876: positive regulation of chronic inflammatory response to antigenic stimulus"
+                        ],
+                        "pvalue_corr": 0.005509232672805802
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 15,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.04651026736090797,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 4,
+                        "n_all_process": 32,
+                        "n_prod_general": 71,
+                        "n_all_general": 17093,
+                        "num": 4,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.13291990873456971,
+                        "fold_enrichment": 30.093309859154928,
+                        "pvalue": 8.855479703327563e-06,
+                        "odds_ratio": 36.38592750533049,
+                        "goterms_prod_process": [
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation",
+                            "GO:0007254: JNK cascade",
+                            "GO:0046330: positive regulation of JNK cascade"
+                        ],
+                        "pvalue_corr": 0.0022898169228382473
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 23,
+                        "n_prod_general": 71,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.09553618440297199,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:2163",
+                "UniProtKB:Q16570",
+                "RGD:1596198",
+                "MGI:1097689",
+                "RGD:2532",
+                "RGD:621633"
+            ],
+            "genename": "ACKR1",
+            "description": "atypical chemokine receptor 1 (Duffy blood group)",
+            "uniprot_id": "Q16570",
+            "ensg_id": "ENSG00000213088",
+            "enst_id": "ENST00000368122",
+            "refseq_nt_id": "NM_002036.4",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 5,
+                        "n_all_process": 74,
+                        "n_prod_general": 57,
+                        "n_all_general": 17093,
+                        "num": 5,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.24676768267711927,
+                        "fold_enrichment": 20.261972498814607,
+                        "pvalue": 4.584756716339345e-06,
+                        "odds_ratio": 23.723522853957636,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0071456: cellular response to hypoxia",
+                            "GO:0071222: cellular response to lipopolysaccharide",
+                            "GO:0032496: response to lipopolysaccharide",
+                            "GO:0071347: cellular response to interleukin-1"
+                        ],
+                        "pvalue_corr": 0.001376025026647413
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 57,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.17673901597145028,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 5,
+                        "n_all_process": 32,
+                        "n_prod_general": 234,
+                        "n_all_general": 17093,
+                        "num": 5,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.4380740654068917,
+                        "fold_enrichment": 11.413595085470085,
+                        "pvalue": 6.435901521116734e-05,
+                        "odds_ratio": 13.800743975416465,
+                        "goterms_prod_process": [
+                            "GO:0001569: branching involved in blood vessel morphogenesis",
+                            "GO:0071356: cellular response to tumor necrosis factor",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:1904707: positive regulation of vascular associated smooth muscle cell proliferation",
+                            "GO:0030335: positive regulation of cell migration"
+                        ],
+                        "pvalue_corr": 0.008278328236074934
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 23,
+                        "n_prod_general": 234,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 2,
+                        "expected": 0.3148657345112034,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:620360"
+            ],
+            "genename": "FDCSP",
+            "description": "follicular dendritic cell secreted protein",
+            "uniprot_id": "Q8NFU4",
+            "ensg_id": "ENSG00000181617",
+            "enst_id": "ENST00000317987",
+            "refseq_nt_id": "NM_152997.4",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 3,
+                        "n_all_general": 17093,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.012987772772479962,
+                        "fold_enrichment": 153.990990990991,
+                        "pvalue": 5.529565473767842e-05,
+                        "odds_ratio": 472.80555555555554,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0071456: cellular response to hypoxia"
+                        ],
+                        "pvalue_corr": 0.00724758046811761
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 53,
+                        "n_prod_general": 3,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.009302053472181595,
+                        "fold_enrichment": 107.50314465408805,
+                        "pvalue": 0.0092721590313805,
+                        "odds_ratio": 163.85576923076923,
+                        "goterms_prod_process": [
+                            "GO:1900038: negative regulation of cellular response to hypoxia"
+                        ],
+                        "pvalue_corr": 0.23882729027469995
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 32,
+                        "n_prod_general": 6,
+                        "n_all_general": 17093,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.011232668343766454,
+                        "fold_enrichment": 178.05208333333334,
+                        "pvalue": 5.0658681965235085e-05,
+                        "odds_ratio": 284.3833333333333,
+                        "goterms_prod_process": [
+                            "GO:0045766: positive regulation of angiogenesis",
+                            "GO:0071356: cellular response to tumor necrosis factor"
+                        ],
+                        "pvalue_corr": 0.006856801600117996
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 23,
+                        "n_prod_general": 6,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.008073480372082139,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:620573"
+            ],
+            "genename": "CCDC184",
+            "description": "coiled-coil domain containing 184",
+            "uniprot_id": "Q52MB2",
+            "ensg_id": "ENSG00000177875",
+            "enst_id": "ENST00000316554",
+            "refseq_nt_id": "NM_001013635.4",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 3,
+                        "n_all_general": 17093,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.012987772772479962,
+                        "fold_enrichment": 153.990990990991,
+                        "pvalue": 5.529565473767842e-05,
+                        "odds_ratio": 472.80555555555554,
+                        "goterms_prod_process": [
+                            "GO:0006954: inflammatory response",
+                            "GO:0032755: positive regulation of interleukin-6 production"
+                        ],
+                        "pvalue_corr": 0.00724758046811761
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 3,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.009302053472181595,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 32,
+                        "n_prod_general": 6,
+                        "n_all_general": 17093,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.011232668343766454,
+                        "fold_enrichment": 178.05208333333334,
+                        "pvalue": 5.0658681965235085e-05,
+                        "odds_ratio": 284.3833333333333,
+                        "goterms_prod_process": [
+                            "GO:0030307: positive regulation of cell growth",
+                            "GO:0071356: cellular response to tumor necrosis factor"
+                        ],
+                        "pvalue_corr": 0.006856801600117996
+                    },
+                    "cancer-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 23,
+                        "n_prod_general": 6,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.008073480372082139,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        },
+        {
+            "id_synonyms": [
+                "RGD:3130"
+            ],
+            "genename": "ADAMTSL3",
+            "description": "ADAMTS like 3",
+            "uniprot_id": "P82987",
+            "ensg_id": "ENSG00000156218",
+            "enst_id": "ENST00000286744",
+            "refseq_nt_id": "NM_207517.3",
+            "mRNA": null,
+            "scores": {
+                "fisher_test": {
+                    "chronic_inflammation+": {
+                        "n_prod_process": 2,
+                        "n_all_process": 74,
+                        "n_prod_general": 10,
+                        "n_all_general": 17093,
+                        "num": 2,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.04329257590826654,
+                        "fold_enrichment": 46.197297297297304,
+                        "pvalue": 0.0008126297890638276,
+                        "odds_ratio": 59.10069444444444,
+                        "goterms_prod_process": [
+                            "GO:0071456: cellular response to hypoxia",
+                            "GO:0071347: cellular response to interleukin-1"
+                        ],
+                        "pvalue_corr": 0.04920687222725966
+                    },
+                    "chronic_inflammation-": {
+                        "n_prod_process": 0,
+                        "n_all_process": 53,
+                        "n_prod_general": 10,
+                        "n_all_general": 17093,
+                        "num": 0,
+                        "required_n_prod_process_for_statistical_relevance": 1,
+                        "expected": 0.031006844907271982,
+                        "fold_enrichment": 0.0,
+                        "pvalue": 1.0,
+                        "odds_ratio": 0.0,
+                        "goterms_prod_process": [],
+                        "pvalue_corr": 1.0
+                    },
+                    "cancer+": {
+                        "n_prod_process": 3,
+                        "n_all_process": 32,
+                        "n_prod_general": 33,
+                        "n_all_general": 17093,
+                        "num": 3,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.0617796758907155,
+                        "fold_enrichment": 48.559659090909086,
+                        "pvalue": 3.112180414797087e-05,
+                        "odds_ratio": 58.84137931034483,
+                        "goterms_prod_process": [
+                            "GO:0045787: positive regulation of cell cycle",
+                            "GO:0008284: positive regulation of cell population proliferation",
+                            "GO:0060252: positive regulation of glial cell proliferation"
+                        ],
+                        "pvalue_corr": 0.00515601153680263
+                    },
+                    "cancer-": {
+                        "n_prod_process": 1,
+                        "n_all_process": 23,
+                        "n_prod_general": 33,
+                        "n_all_general": 17093,
+                        "num": 1,
+                        "required_n_prod_process_for_statistical_relevance": -1,
+                        "expected": 0.04440414204645177,
+                        "fold_enrichment": 22.52042160737813,
+                        "pvalue": 0.04341906626681151,
+                        "odds_ratio": 24.248579545454547,
+                        "goterms_prod_process": [
+                            "GO:0051782: negative regulation of cell division"
+                        ],
+                        "pvalue_corr": 0.5485940463931976
+                    }
+                }
+            },
+            "had_orthologs_computed": true,
+            "had_fetch_info_computed": true,
+            "_d_offline_online_ortholog_mismatch": false,
+            "_d_offline_online_ortholog_mismatch_values": ""
+        }
+    ]
+}

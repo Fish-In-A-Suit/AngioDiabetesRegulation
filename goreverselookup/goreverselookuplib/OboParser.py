@@ -94,6 +94,7 @@ class OboParser:
 
         self.dag = dag
         self.all_goterms = all_goterms
+        self.previously_computed_parents_cache = {} # cache dictionary between already computed goterms and their parents
 
     def get_parent_terms(self, term_id:str, return_as_class:bool = False, ordered:bool = True):
         """
@@ -107,6 +108,10 @@ class OboParser:
         
         Returns: A list of parent GO Terms (either ids or classes)
         """
+        # attempt to cache old data
+        if term_id in self.previously_computed_parents_cache:
+            return self.previously_computed_parents_cache[term_id]
+        
         parents = [] # WARNRING!! Using set() DESTROYS THE ORDER OF PARENTS !!!
         ancestors = nx.ancestors(self.dag, term_id)
 
@@ -115,7 +120,6 @@ class OboParser:
             distances = {ancestor: nx.shortest_path_length(self.dag, source=ancestor, target=term_id) for ancestor in ancestors}
             # Sort ancestors by distance in ascending order
             sorted_distances = dict(sorted(distances.items(), key=lambda item: item[1]))
-            logger.debug(f"sorted_distances: {sorted_distances}")
             ancestors = sorted_distances.keys()
 
         for parent_id in ancestors:
@@ -124,8 +128,7 @@ class OboParser:
             else:
                 parents.append(parent_id)
         
+        # cache
+        self.previously_computed_parents_cache[term_id] = parents
+        
         return parents
-
-        # Find all parent terms for GO:0001938 (positive regulation of endothelial cell proliferation)
-        #term_id_to_find = 'GO:0001938'
-        #parent_terms = get_parent_terms(dag, term_id_to_find)
