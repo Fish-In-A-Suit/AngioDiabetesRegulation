@@ -993,37 +993,6 @@ class ReverseLookup:
         else:
             return -1,[]
     
-
-    def perform_statistical_analysis(self, test_name = "fisher"):
-        """
-        Finds the statistically relevant products.
-
-        Parameters:
-          - (str) test_name: The name of the statistical test to use for product analysis. It must be either 'fisher' (the results of the fisher's test are then used)
-          or 'binomial' (the results of the binom test are used).
-        
-        Warning: Binomial test scoring is not yet implemented. 
-        Warning: Products in this model must be scored with the aforementioned statistical tests prior to calling this function.
-
-        Usage example:
-            model = ReverseLookup.load_model("diabetes_angio_2/data.json")
-            goaf = GOAnnotiationsFile()
-            binom_score = binomial_test(model, goaf)
-            fisher_score = fisher_exact_test(model, goaf)
-            model.score_products([binom_score, fisher_score])
-            model.perform_statistical_analysis("fisher")
-
-        TODO: implement binomial score, maybe even adv_score and nterms for backwards compatibility
-        """
-        for product in self.products:
-            for i in range(len(self.target_processes) - 1):
-                for j in range(i+1, len(self.target_processes)):
-                    process1 = self.target_processes[i]
-                    process2 = self.target_processes[j]
-
-                    logger.info(f"cross-sections: {process1['process']} - {process2['process']}")
-                    # TODO: this was ported to goreverselookuplib->Model.py
-    
     def save_model(self, filepath: str = "") -> None:
         """
         Saves the model as a JSON. If input filepath is not provided, model is saved to self.save_path_root, else the model

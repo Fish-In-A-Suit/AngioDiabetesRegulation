@@ -26,6 +26,8 @@ class GOTerm:
         self.processes = processes if isinstance(processes, list) else [processes]
         self.name = name
         self.description = description
+        if weight == None: #bugfix for any mistakes
+            weight = 1.0
         self.weight = float(weight)
         self.products = products
         self.http_error_codes = {} # used for errors happening during server querying; for example, a dict pair 'products': "HTTP Error ..." signifies an http error when querying for GO Term's products
@@ -33,6 +35,36 @@ class GOTerm:
         self.parent_term_ids = parent_term_ids
         self.is_obsolete = is_obsolete
 
+    def update(self, goterm, overwrite_existing:bool = False):
+        """
+        Updates the member values of this GOTerm instance with the member values of the parameter 'goterm' GOTerm instance.
+        This function will automatically check that the ids of this GOTerm and the parameter 'goterm' match before performing any functionality.
+        If the ids don't match, en Error will be raised.
+        
+        Params:
+          - goterm: should be a GOTerm instance
+          - overwrite_existing: if True, will overwrite EVERY value of the current GOTerm instance with the parameter 'goterm' values.
+                                if False, will only overwrite values of the current GOTerm instance which are None or "" (empty strings)
+        """
+        def overwrite_attributes(goterm):
+            assert isinstance(goterm,GOTerm)
+            for attr_name in dir(goterm): # loop through all class attributes of input goterm
+                if not callable(getattr(goterm,attr_name)) and not attr_name.startswith("__"):
+                    if hasattr(self, attr_name): # check if the same attribute exists in self
+                        if overwrite_existing == True:
+                            setattr(self, getattr(goterm,attr_name)) # update self attribute with goterm's attribute
+                        else: # overwrite_existing == False
+                            attr_value_self = getattr(self, attr_name)
+                            if attr_value_self == None or attr_value_self == False:
+                                setattr(self, getattr(goterm,attr_name)) # update self attribute with goterm's attribute only if self attribute is None or False
+
+
+        assert isinstance(goterm, GOTerm)
+        if self.id == goterm.id: # perform update only if ids match
+            overwrite_attributes(goterm=goterm)
+        else:
+            raise Exception(f"Input GOTerm id {goterm.id} doesn't match with current instance GOTerm id {self.id}")
+        
     def copy(self):
         """
         Creates a copy of self.
@@ -291,6 +323,18 @@ class GOTerm:
         Returns:
             A new instance of the GOTerm class.
         """
-        goterm = cls(d['id'], d['processes'], d.get('name'), d.get(
-            'description'), d.get('weight', 1.0), d.get('products', []))
+        # TODO: loop over variables instead of this hardcoded way !!!! using dir(self)
+
+        goterm = cls(
+            d['id'], 
+            d['processes'], 
+            d.get('name'), 
+            d.get('description'), 
+            d.get('weight', 1.0), 
+            d.get('products', []),
+            d.get('http_error_codes', {}),
+            d.get('category',None),
+            d.get('parent_term_ids', None),
+            d.get('is_obsolete', False)
+            )
         return goterm

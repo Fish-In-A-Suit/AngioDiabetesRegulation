@@ -21,6 +21,7 @@ from types import SimpleNamespace
 from .GOTerm import GOTerm # to avoid circular imports, as AnnotationProcessor now uses GOTerm.
 from .CacheUtils import ConnectionCacher
 from contextlib import asynccontextmanager
+from .OboParser import OboParser
 
 logger = logging.getLogger(__name__)
 
@@ -401,7 +402,7 @@ class TargetProcess:
 from .miRNAprediction import miRDB60predictor
 
 class ReverseLookup:
-    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, execution_times: dict = {}, statistically_relevant_products = {}, go_categories:List[str] = ["biological_process", "molecular_activity", "cellular_component"], model_settings:ModelSettings = None):
+    def __init__(self, goterms: List[GOTerm], target_processes: List[Dict[str, str]], products: List[Product] = [], miRNAs: List[miRNA] = [], miRNA_overlap_treshold: float = 0.6, execution_times: dict = {}, statistically_relevant_products = {}, go_categories:List[str] = ["biological_process", "molecular_activity", "cellular_component"], model_settings:ModelSettings = None, obo_parser:OboParser = None):
         """
         A class representing a reverse lookup for gene products and their associated Gene Ontology terms.
 
@@ -417,6 +418,7 @@ class ReverseLookup:
                         Choosing the correct categories affects primarily the Fisher scoring, when GO Terms are queried for each product either from the GOAF or from the web. Excluding some GO categories (such as cellular_component)
                         when researching only GO Terms connected to biological processes and/or molecular activities helps to produce more accurate statistical scores.
             model_settings: used for saving and loading model settings
+            obo_parser: Used for parsing the Gene Ontology's .obo file. If it isn't supplied, it will be automatically created
         """
         self.goterms = goterms
         self.products = products
@@ -436,7 +438,8 @@ class ReverseLookup:
         self.model_settings = model_settings
 
         self.go_api = GOApi() # this enables us to use go_api inside Metrics.py, as importing GOApi inside Metrics.py creates circular imports.
-    
+        self.obo_parser = obo_parser if obo_parser != None else OboParser(obo_filepath="src_data_files/go.obo")
+
     def set_model_settings(self, model_settings: ModelSettings):
         """
         Sets self.model_settings to the model settings supplied in the parameter.
@@ -798,7 +801,6 @@ class ReverseLookup:
                 product.fetch_ortholog(human_ortholog_finder, uniprot_api, ensembl_api)
         
         """
-        # TODO: START FROM HERE !!! Implement request caching.
         logger.info(f"Started fetching ortholog products.")
         self.timer.set_start_time()
 
@@ -1614,6 +1616,11 @@ class ReverseLookup:
 
     @classmethod
     def load_model(cls, filepath: str) -> 'ReverseLookup':
+        """
+        # TODO: method explanation
+
+        This method also parses GO Term parents for GO Terms, if setting include_all_goterm_parents is True.
+        """
         data = JsonUtil.load_json(filepath)
         target_processes = data['target_processes']
         miRNA_overlap_treshold = data['miRNA_overlap_treshold']
@@ -1640,6 +1647,18 @@ class ReverseLookup:
         goterms = []
         for goterm_dict in data['goterms']:
             goterms.append(GOTerm.from_dict(goterm_dict))
+        
+        obo_parser = None
+        if settings.include_all_goterm_parents == True:
+            obo_parser = OboParser()
+            for goterm in goterms:
+                assert isinstance(goterm, GOTerm)
+                if goterm.parent_term_ids == [] or goterm.parent_term_ids == None:
+                    goterm_obo = obo_parser.all_goterms[goterm.id] # obo representation of this goterm
+                    goterm.update(goterm_obo) # update current goterm with information from .obo file
+
+                    goterm_parent_ids = obo_parser.get_parent_terms(goterm.id) # calculate parent term ids for this goterm
+                    goterm.parent_term_ids = goterm_parent_ids # update parent term ids
 
         products = []
         for product_dict in data.get('products', []):
@@ -1649,7 +1668,7 @@ class ReverseLookup:
         for miRNAs_dict in data.get('miRNAs', []):
             miRNAs.append(miRNA.from_dict(miRNAs_dict))
 
-        return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, execution_times=execution_times, statistically_relevant_products=statistically_relevant_products, go_categories=go_categories, model_settings=settings)
+        return cls(goterms, target_processes, products, miRNAs, miRNA_overlap_treshold, execution_times=execution_times, statistically_relevant_products=statistically_relevant_products, go_categories=go_categories, model_settings=settings, obo_parser=obo_parser)
 
     @classmethod
     def from_input_file(cls, filepath: str) -> 'ReverseLookup':
@@ -1732,7 +1751,7 @@ class ReverseLookup:
                     elif section == "GO":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
                         if len(chunks) == 5:
-                            d = {"id": chunks[0], "processes":{"process": chunks[1], "direction": chunks[2]},"weight": chunks[3], "description": chunks[4]}
+                            d = {"id": chunks[0], "processes":{"process": chunks[1], "direction": chunks[2]},"weight": chunks[3], "name": chunks[4]}
                         else:
                             d = {"id": chunks[0], "processes": {"process": chunks[1], "direction": chunks[2]}, "weight": chunks[3]}
                         if not any(d["id"] == goterm.id for goterm in go_terms): # TODO: check this !!!!!
@@ -1740,7 +1759,7 @@ class ReverseLookup:
                         else: # TODO: check this !!!!!
                             next(goterm for goterm in go_terms if d["id"] == goterm.id).add_process({"process": chunks[1], "direction": chunks[2]})
 
-
+        # PROCESS INPUT FILE
         if not os.path.isabs(filepath): # this process with traceback.extract_stack works correctly on mac, but not on windows.
             current_dir = os.path.dirname(os.path.abspath(traceback.extract_stack()[0].filename))
             mac_filepath = os.path.join(current_dir, filepath) 
@@ -1759,8 +1778,22 @@ class ReverseLookup:
             except OSError:
                 logger.error(f"ERROR while opening win filepath {win_filepath}")
                 return
+        
+        obo_parser = None
+        if settings.include_all_goterm_parents:
+            # update goterms to include all parents
+            logger.info(f"Starting OboParser to find all GO Term parents.")
+            obo_parser = OboParser()
+            for goterm in go_terms:
+                assert isinstance(goterm, GOTerm)
+                if goterm.parent_term_ids == [] or goterm.parent_term_ids == None:
+                    goterm_obo = obo_parser.all_goterms[goterm.id] # obo representation of this goterm
+                    goterm.update(goterm_obo) # update current goterm with information from .obo file
+
+                    goterm_parent_ids = obo_parser.get_parent_terms(goterm.id) # calculate parent term ids for this goterm
+                    goterm.parent_term_ids = goterm_parent_ids # update parent term ids
     
-        return cls(go_terms, target_processes, go_categories=go_categories, model_settings=settings)
+        return cls(go_terms, target_processes=target_processes, go_categories=go_categories, model_settings=settings, obo_parser=obo_parser)
 
     @classmethod
     def from_dict(cls, data: Dict[str, List[Dict]]) -> 'ReverseLookup':
@@ -1796,11 +1829,23 @@ class ReverseLookup:
 class ModelSettings:
     """
     Represents user-defined settings, which can be set for the model, to change the course of data processing.
+
+      - homosapiens_only: if only homosapiens products should be queried from uniprot and ensembl # TODO: currently, this is hardcoded into requests. change this.
+      - require_product_evidence_codes: # TODO implement logic
+      - fisher_test_use_online_query: If True, will query the products of GO Terms (for the num_goterms_products_general inside fisher test) via an online pathway (GOApi.get_goterms).
+                                      If False, fisher test will compute num_goterms_products_general (= the number of goterms associated with a product) via an offline pathway using GOAF parsing.
+      - include_all_goterm_parents: If True, each GO Term relevant to the analysis will hold a list of it's parents from the go.obo (Gene Ontology .obo) file. Also, the parents of GO Terms will be taken into
+                                    account when performing the fisher exact test. This is because genes are annotated directly only to specific GO Terms, but they are also INDIRECTLY connected to all of the
+                                    parent GO Terms, despite not being annoted directly to the parent GO Terms. The increased amount of GO Term parents indirectly associated with a gene will influence the fisher
+                                    scoring for that gene - specifically, it will increate num_goterms_product_general.
+                                    If False, each GO Term relevant to the analysis won't have it's parents computed. During fisher analysis of genes, genes will be scored only using the GO Terms that are
+                                    directly annotated to the gene and not all of the indirectly associated parent GO terms.
     """
     def __init__(self) -> ModelSettings:
         self.homosapiens_only = False
         self.require_product_evidence_codes = False
         self.fisher_test_use_online_query = False
+        self.include_all_goterm_parents = False
     
     @classmethod
     def from_json(cls, json_data) -> ModelSettings:

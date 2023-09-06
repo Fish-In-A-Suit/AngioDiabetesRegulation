@@ -197,7 +197,7 @@ class WorkflowOne(Workflow):
     def create_worklfow(self, debug:bool = False):
         # Pull GO data #
         # note: model = ReverseLookup.load_model(...) or ReverseLookup.load_from_file(...) is already handled in the Workflow constructor
-        if debug:
+        if debug: # TODO: remove debug
             self.add_function(self.model._debug_shorten_GO_terms, 5) # in debug mode, shorten the amount of GO Terms to 5
 
         self.add_function(self.model.fetch_all_go_term_names_descriptions)
