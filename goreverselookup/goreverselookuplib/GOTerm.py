@@ -56,8 +56,7 @@ class GOTerm:
                         else: # overwrite_existing == False
                             attr_value_self = getattr(self, attr_name)
                             if attr_value_self == None or attr_value_self == False:
-                                setattr(self, getattr(goterm,attr_name)) # update self attribute with goterm's attribute only if self attribute is None or False
-
+                                setattr(self, attr_name, getattr(goterm,attr_name)) # update self attribute with goterm's attribute only if self attribute is None or False
 
         assert isinstance(goterm, GOTerm)
         if self.id == goterm.id: # perform update only if ids match
@@ -309,7 +308,7 @@ class GOTerm:
             return self.compare_products_to_list(products_comparison_list = goterm_comparison.products)
 
     def add_process(self, process: Dict):
-        if not process in self.processes:
+        if not process['process'] in self.processes:
             self.processes.append(process)
 
     @classmethod
@@ -319,22 +318,33 @@ class GOTerm:
 
         Args:
             d (dict): A dictionary containing the GO term data.
-
+        
         Returns:
             A new instance of the GOTerm class.
         """
         # TODO: loop over variables instead of this hardcoded way !!!! using dir(self)
 
-        goterm = cls(
-            d['id'], 
-            d['processes'], 
-            d.get('name'), 
-            d.get('description'), 
-            d.get('weight', 1.0), 
-            d.get('products', []),
-            d.get('http_error_codes', {}),
-            d.get('category',None),
-            d.get('parent_term_ids', None),
-            d.get('is_obsolete', False)
-            )
+        goterm = GOTerm(id="")
+        for attr_name,attr_value in d.items():
+            if hasattr(goterm, attr_name):
+                # processes must be a list!
+                if attr_name == 'processes' and isinstance(attr_value,dict):
+                    attr_value = [attr_value]
+                setattr(goterm, attr_name, attr_value)
+            else:
+                logger.warning(f"GO Term class has no attribute name {attr_name}!")
         return goterm
+        # old:
+        #goterm = cls(
+        #    id=d['id'], 
+        #    processes=d['processes'], 
+        #    name=d.get('name'), 
+        #    description=d.get('description'), 
+        #    weight=d.get('weight', 1.0), 
+        #    products=d.get('products', []),
+        #    http_error_codes=d.get('http_error_codes', {}),
+        #    category=d.get('category',None),
+        #    parent_term_ids=d.get('parent_term_ids', None),
+        #    is_obsolete=d.get('is_obsolete', False)
+        #    )
+        #return goterm
