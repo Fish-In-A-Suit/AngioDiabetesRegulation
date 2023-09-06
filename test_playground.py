@@ -45,8 +45,7 @@ logger = logging.getLogger(__name__)
 #model.score_products([fisher_test])
 #model.save_model("chronic_infl_cancer_1/data_v1.json")
 
-# model = ReverseLookup.from_input_file("chronic_infl_cancer_1/input_06-09-2023.txt")
-model = ReverseLookup.load_model("chronic_infl_cancer_1/data_03-09-2023.json")
+model = ReverseLookup.from_input_file("chronic_infl_cancer_1/input_06-09-2023.txt")
 i = 0
 
 

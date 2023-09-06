@@ -1751,9 +1751,9 @@ class ReverseLookup:
                     elif section == "GO":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
                         if len(chunks) == 5:
-                            d = {"id": chunks[0], "processes":{"process": chunks[1], "direction": chunks[2]},"weight": chunks[3], "name": chunks[4]}
+                            d = {"id": chunks[0], "processes":{"process": chunks[1], "direction": chunks[2]},"weight": int(chunks[3]), "name": chunks[4]}
                         else:
-                            d = {"id": chunks[0], "processes": {"process": chunks[1], "direction": chunks[2]}, "weight": chunks[3]}
+                            d = {"id": chunks[0], "processes": {"process": chunks[1], "direction": chunks[2]}, "weight": int(chunks[3])}
                         if not any(d["id"] == goterm.id for goterm in go_terms): # TODO: check this !!!!!
                             go_terms.append(GOTerm.from_dict(d))
                         else: # TODO: check this !!!!!

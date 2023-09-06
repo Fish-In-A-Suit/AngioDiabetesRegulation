@@ -330,6 +330,10 @@ class GOTerm:
                 # processes must be a list!
                 if attr_name == 'processes' and isinstance(attr_value,dict):
                     attr_value = [attr_value]
+                # check that weight is not passed as string
+                if attr_name == 'weight' and isinstance(attr_value,str):
+                    attr_value = int(attr_value)
+                # set the attribute
                 setattr(goterm, attr_name, attr_value)
             else:
                 logger.warning(f"GO Term class has no attribute name {attr_name}!")
