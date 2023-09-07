@@ -229,7 +229,7 @@ class Product:
             if self.uniprot_id == None or self.uniprot_id == "":
                 # 14.08.2023: replaced online uniprot info query with goaf.get_uniprotkb_genename, as it is more successful and does the same as the uniprot query
                 if model_settings != None and model_settings.uniprotkb_genename_online_query == True:
-                    info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session) # bugfix
+                    info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session)
                 else:
                     info_dict = {"genename": goaf.get_uniprotkb_genename(self.id_synonyms[0])}
             else:

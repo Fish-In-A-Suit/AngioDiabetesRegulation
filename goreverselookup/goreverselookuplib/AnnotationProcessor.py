@@ -252,16 +252,20 @@ class GOApi:
             logger.info(f"Fetched products for GO term {term_id}")
             return products
     
-    def get_goterms(self, gene_id:str, homosapiens_only:bool=True, go_categories:list = ['molecular_activity', 'biological_process', 'cellular_component'], request_params={"rows": 10000000}):
+    def get_goterms(self, gene_id:str, go_categories:list = ['molecular_activity', 'biological_process', 'cellular_component'], approved_taxa=["NCBITaxon:9696"], request_params={"rows": 10000000}):
         """
         Gets all GO Terms associated with 'gene_id' in the form of a list.
 
         Parameters:
           - (str) gene_id: The full gene id (eg. UniProtKB:P15692)
-          - (bool) homosapiens_only: if True, will return only associations for the Homo Sapiens taxon
           - (list) go_categories: a list of valid categories. All possible categories are 'molecular_activity', 'biological_process', 'cellular_component'.
                                   All categories are accepted by default.
           - () request_params: leave it be. Shortening may cause incomplete JSON objects to be returned.
+          - (list) approved_taxa: All the taxa that can be returned. If get_goterms is used inside fisher_exact_test for Fisher scoring (ModelSettings.fisher_test_use_online_query == True),
+                                  then the value of this parameter greatly determines the amount of GO Terms (associated to a gene) that are returned. Specifically, this parameter determines the
+                                  num_goterms_product_general value of the Fisher exact test contingency table. Only include the taxon (or taxa) which is (are) part of the research. If you are interested
+                                  in statistically significant genes for Homo Sapiens, then only include the Homo Sapiens NCBI Taxon.
+                                  The taxon (taxa) should be in the form of a list, each taxon should be a full NCBITaxon, such as: ["NCBITaxon:9696"]
 
         To carry out the query request, the following url is used:
             http://api.geneontology.org/api/bioentity/gene/{gene_id}/function
@@ -273,18 +277,11 @@ class GOApi:
         if response.status_code == 200:
             response_json = response.json()
             for assoc in response_json['associations']:
-                if homosapiens_only == True:
-                    if assoc['subject']['taxon']['id'] == "NCBITaxon:9606": # NCBITaxon:9606 corresponds to Homo Sapiens
+                    if assoc['subject']['taxon']['id'] in approved_taxa:
                         if assoc['object']['category'][0] in go_categories:
                             go_id = assoc['object']['id']
                             if go_id != None:
                                 result_go_terms.append(go_id)
-                else:
-                    # don't check homo sapiens taxon
-                    if assoc['object']['category'][0] in go_categories:
-                        go_id = assoc['object']['id']
-                        if go_id != None:
-                            result_go_terms.append(go_id)
             return result_go_terms
         else:
             logger.warning(f"Response error when querying GO Terms for {gene_id}!")
