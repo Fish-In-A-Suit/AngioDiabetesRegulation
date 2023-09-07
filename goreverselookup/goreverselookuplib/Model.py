@@ -56,6 +56,11 @@ class Product:
         self._d_offline_online_ortholog_mismatch = False # if fetch_ortholog is queried with _d_compare_goaf set to True, this variable will be set to True if there is a mismatch in the gene names returned from the online and offline query algorithms.
         self._d_offline_online_ortholog_mismatch_values = ""
 
+        # see if UniProtKB id is already in id_synonyms:
+        for id_syn in self.id_synonyms:
+            if "UniProt" in id_syn:
+                self.uniprot_id = id_syn
+
     def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, goaf: Optional[GOAnnotiationsFile] = None, prefer_goaf = False, _d_compare_goaf = False) -> None:
         """
         Fetches the ortholog for this product. If the ortholog query was successful, then self.genename is updated to the correct human ortholog gene name.
@@ -167,7 +172,9 @@ class Product:
                             if self.refseq_nt_id == "" or self.refseq_nt_id == None:
                                 self.refseq_nt_id == enst_dict.get("refseq_nt_id")
                             if self.uniprot_id == "" or self.uniprot_id == None:
-                                self.uniprot_id = enst_dict.get("uniprot_id")
+                                uniprot_id = enst_dict.get("uniprot_id")
+                                if uniprot_id != None and uniprot_id != "":
+                                    self.uniprot_id = enst_dict.get("uniprot_id")
                 else:
                     if _d_compare_goaf == True:
                         if self.genename != human_ortholog_gene_id: # with the current workflow, these will always be the same
@@ -188,7 +195,7 @@ class Product:
             ensembl_api = EnsemblAPI()
         
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
-            if self.uniprot_id == None:
+            if self.uniprot_id == None or self.uniprot_id == "":
                 # 14.08.2023: replaced online uniprot info query with goaf.get_uniprotkb_genename, as it is more successful and does the same as the uniprot query
                 # info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session) # bugfix
                 info_dict = {"genename": goaf.get_uniprotkb_genename(self.id_synonyms[0])}
@@ -217,7 +224,9 @@ class Product:
                     if self.refseq_nt_id == "" or self.refseq_nt_id == None:
                         self.refseq_nt_id == enst_dict.get("refseq_nt_id")
                     if self.uniprot_id == "" or self.uniprot_id == None:
-                        self.uniprot_id = enst_dict.get("uniprot_id")
+                        uniprot_id = enst_dict.get("uniprot_id")
+                        if uniprot_id != None and uniprot_id != "":
+                            self.uniprot_id = enst_dict.get("uniprot_id")
             else:
                 self.genename = human_ortholog_gene_id
         
@@ -262,26 +271,34 @@ class Product:
             info_dict = uniprot_api.get_uniprot_info(self.uniprot_id)
             if info_dict != None:
                 for key, value in info_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.ensg_id:
             enst_dict = ensembl_api.get_info(self.ensg_id)
             if enst_dict != None:
                 for key, value in enst_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.genename:
             enst_dict = ensembl_api.get_info(self.genename)
             if enst_dict != None:
                 for key, value in enst_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             enst_dict = ensembl_api.get_info(self.uniprot_id)
             if enst_dict != None:
                 for key, value in enst_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
         
         #TODO: logger output which values are still missing
 
@@ -303,26 +320,34 @@ class Product:
             info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session=client_session)
             if info_dict != None:
                 for key, value in info_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.ensg_id:
             enst_dict = await ensembl_api.get_info_async(self.ensg_id, session=client_session)
             if enst_dict != None:
                 for key, value in enst_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.genename:
             enst_dict = await ensembl_api.get_info_async(self.genename, session=client_session)
             if enst_dict != None:
                 for key, value in enst_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
         if (any(getattr(self, key) is None for key in required_keys) or any(getattr(self, key) == "" for key in required_keys)) and self.uniprot_id:
             enst_dict = await ensembl_api.get_info_async(self.uniprot_id, session=client_session)
             if enst_dict != None:
                 for key, value in enst_dict.items():
-                    if value is not None:
-                        setattr(self, key, value)
+                    if value is not None and value != "" and value != []:
+                        current_attr_value = getattr(self, key)
+                        if current_attr_value == None or current_attr_value == "" or current_attr_value == []:
+                            setattr(self, key, value)
     
     async def fetch_info_async_semaphore(self, session: aiohttp.ClientSession, semaphore: asyncio.Semaphore, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, required_keys = ["genename", "description", "ensg_id", "enst_id", "refseq_nt_id"]):
         async with semaphore:
@@ -351,9 +376,19 @@ class Product:
         Returns:
             Product: A new Product instance created from the input dictionary.
         """
-        return cls(d.get('id_synonyms'), d.get('genename'), d.get('uniprot_id'), d.get('description'), d.get('ensg_id'), d.get('enst_id'), d.get('refseq_nt_id'), d.get('mRNA'), d.get('scores') if "scores" in d else None,
-                   d.get('had_orthologs_computed') if "had_orthologs_computed" in d else False, 
-                   d.get('had_fetch_info_computed') if "had_fetch_info_computed" in d else False)
+        return cls(
+            d.get('id_synonyms'), 
+            d.get('genename'), 
+            d.get('uniprot_id'), 
+            d.get('description'), 
+            d.get('ensg_id'), 
+            d.get('enst_id'), 
+            d.get('refseq_nt_id'), 
+            d.get('mRNA'), 
+            d.get('scores') if "scores" in d else None,
+            d.get('had_orthologs_computed') if "had_orthologs_computed" in d else False, 
+            d.get('had_fetch_info_computed') if "had_fetch_info_computed" in d else False
+        )
 
 class miRNA:
     def __init__(self, id: str, sequence: str = None, mRNA_overlaps: Dict[str, float] = None, scores: Dict[str, float] = None) -> None:
@@ -1250,6 +1285,7 @@ class ReverseLookup:
         """
         goterm = next(obj for obj in self.goterms if any(getattr(obj, attr) == identifier for attr in ["id", "name", "description"]))
         return goterm
+    
     def get_product(self, identifier) -> Product:
         """
         Return GOTerm based on any id

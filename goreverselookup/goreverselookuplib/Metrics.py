@@ -433,7 +433,7 @@ class fisher_exact_test(Metrics):
     set of GOt for angio+           | num_goterms_product_process   | num_goterms_all_process - num_goterms_product_process     |  num_goterms_all_process
     -------------------------------------------------------------------------------------------------------------------------------------------------------
     general set of GOt (all)        | num_goterms_product_general - | num_goterms_all_general -                                 | 
-    MINUS set of GOt for angio+     | num_goterms_product_process   | (num_goterms_all_process - num_goterms_product_process)   | num_goterms_all_general
+    MINUS set of GOt for angio+     | num_goterms_product_process   | (num_goterms_all_process - num_goterms_product_process)   | 
     -------------------------------------------------------------------------------------------------------------------------------------------------------
     total                           | num_goterms_product_general   | num_goterms_all_general                                   |
 

@@ -1,9 +1,10 @@
 # --- Input file for Term Enrichment System --- #
-#[name] is the start of new secretion and includes description of data, data is space delimited
+#[name] is the start of new section and includes description of data, data is space delimited
 ###settings
 homosapiens_only	True
 require_product_evidence_codes	False
 fisher_test_use_online_query	False
+include_all_goterm_parents	False
 ###processes [proces name] [to be expressed + or suppressed -]
 chronic_inflammation	+
 cancer	+
@@ -232,16 +233,4 @@ GO:0046329	cancer	-	1	negative regulation of JNK cascade
 # Wnt cascade; # ... leading to actin cytoskeleton rearrangement. In addition, Dvl activates Rac and finally JNK (c-Jun-N-terminal-kinase) thereby modulating cell migration. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5853106/; doi: 10.1016/j.critrevonc.2015.12.005)
 GO:0090263	cancer	+	1	positive regulation of canonical Wnt signaling pathway	
 GO:0090090	cancer	-	1	negative regulation of canonical Wnt signaling pathway
-
-# TODO: debate actin role in cancer
-#GO:0051126	cancer	-	1	negative regulation of actin nucleation	
-#GO:0051127	cancer	+	1	positive regulation of actin nucleation
-#GO:1904617	cancer	-	1	negative regulation of actin binding
-#GO:1904618	cancer	+	1	positive regulation of actin binding
-#GO:1904530	cancer	-	1	negative regulation of actin filament binding
-#GO:1904531	cancer	+	1	positive regulation of actin filament binding
-#GO:1903919	cancer	+	1	negative regulation of actin filament severing
-#GO:1903920	cancer	-	1	positive regulation of actin filament severing
-#GO:0030837	cancer	-	1	negative regulation of actin filament polymerization
-#GO:0030838	cancer	+	1	positive regulation of actin filament polymerization
 
