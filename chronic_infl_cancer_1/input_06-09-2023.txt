@@ -25,6 +25,17 @@
 #        	scoring for that gene - specifically, it will increate num_goterms_product_general.
 #			If False, each GO Term relevant to the analysis won't have it's parents computed. During fisher analysis of genes, genes will be scored only using the GO Terms that are
 #           directly annotated to the gene and not all of the indirectly associated parent GO terms.
+#	- uniprotkb_genename_online_query:
+#			When querying all genes associated to a GO Term, Gene Ontology returns UniProtKB identified genes (amongst others, such as ZFIN, Xenbase, MGI, RGD).
+#			During the algorithm, gene name has to be determined from the UniProtKB id, which is done in (Product).fetch_ortholog_async function.
+#			The gene name can be obtained via two pathways:
+#				a) online pathway, using: info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session)
+#				b) offline pathway, using the GO Annotations File: info_dict = {"genename": goaf.get_uniprotkb_genename(self.id_synonyms[0])}
+#			During testing which pathway is more accurate in querying a gene name from a UniProtKB identifier, it was found that querying using the offline pathway (GOAF)
+#			resulted in obtaining more valid gene names that an online query to the uniprotkb servers themselves. Therefore, if using the latest GOAF, it is advisable to set
+#			this setting to False. If using an older GOAF, then have this setting set to True.
+#			If True, will query genename from a UniProtKB id via an online server request.
+#			If False, will query genename from a UniProtKB id via the GO Annotations File.
 #
 # *** Processes section ***
 # It contains the pathophysiological processes in question to the researcher and the direction of regulation of these processes. For example, if
@@ -103,6 +114,7 @@ homosapiens_only	True
 require_product_evidence_codes	False
 fisher_test_use_online_query	False
 include_all_goterm_parents	True
+uniprotkb_genename_online_query	True
 ###processes [proces name] [to be expressed + or suppressed -]
 chronic_inflammation	+
 cancer	+

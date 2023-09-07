@@ -61,7 +61,7 @@ class Product:
             if "UniProt" in id_syn:
                 self.uniprot_id = id_syn
 
-    def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, goaf: Optional[GOAnnotiationsFile] = None, prefer_goaf = False, _d_compare_goaf = False) -> None:
+    def fetch_ortholog(self, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, goaf: Optional[GOAnnotiationsFile] = None, prefer_goaf = False, _d_compare_goaf = False, model_settings:Optional[ModelSettings] = None) -> None:
         """
         Fetches the ortholog for this product. If the ortholog query was successful, then self.genename is updated to the correct human ortholog gene name.
         Additionally, during the course of fetch_ortholog, ensembl_api.get_info may be called - if this happens, then the values description, ensg_id, enst_id, refseq_nt_id, uniprot_id are
@@ -74,6 +74,7 @@ class Product:
           - (GOAnnotationsFile) goaf
           - (bool) prefer_goaf: see explanation in the Algorithm section
           - (bool) _d_compare_goaf: if true, will attempt ortholog search both from offline and online algorithms and report if the results are the same
+          - (ModelSettings) model_settings: isn't implemented, as this function is outdated. Use this function to check _d_compare_goaf!
 
         Algorithm:
             If there is only one id_synonym (eg. UniProtKB:Q9NTG7) and that id_synonym is of type UniProtKB, then
@@ -184,7 +185,37 @@ class Product:
         
         self.had_orthologs_computed = True
                 
-    async def fetch_ortholog_async(self, session: aiohttp.ClientSession, goaf: GOAnnotiationsFile, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None) -> None:
+    async def fetch_ortholog_async(self, session: aiohttp.ClientSession, goaf: GOAnnotiationsFile, human_ortholog_finder: Optional[HumanOrthologFinder] = None, uniprot_api: Optional[UniProtAPI] = None, ensembl_api: Optional[EnsemblAPI] = None, model_settings:Optional[ModelSettings] = None) -> None:
+        """
+        Fetches the ortholog for this product. If the ortholog query was successful, then self.genename is updated to the correct human ortholog gene name.
+        Additionally, during the course of fetch_ortholog, ensembl_api.get_info may be called - if this happens, then the values description, ensg_id, enst_id, refseq_nt_id, uniprot_id are
+        also filled out for this Product from the ensembl_api.get_info return value.
+
+        Parameters:
+          - (HumanOrthologFinder) human_ortholog_finder
+          - (UniProtAPI) uniprot_api
+          - (EnsemblAPI) ensembl_api
+          - (GOAnnotationsFile) goaf
+          - (bool) prefer_goaf: see explanation in the Algorithm section
+          - (bool) _d_compare_goaf: if true, will attempt ortholog search both from offline and online algorithms and report if the results are the same
+          - (ModelSettings) model_settings: the settings of the model. Currently, model_settings.uniprotkb_genename_online_query is used, which determines if gene name querying from a UniProtKB id is done via a web request or via GOAF
+
+        Algorithm:
+            If there is only one id_synonym (eg. UniProtKB:Q9NTG7) and that id_synonym is of type UniProtKB, then
+            UniProtAPI is used to obtained information about this gene. A successful query returns a dictionary, which also
+            contains the genename field (which updates self.genename to the queried genename)
+
+            If there is only one id_synonym and it is not of type UniProtKB, then HumanOrthologFinder is used to attempt a file-based
+            search for the ortholog (files from all the third party databases are used). 
+            
+            The user also has an option to supply a GO Annotations File and direct the program to first browse the GOAF and the 3rd party
+            database files for orthologs ("offline" approach) using the prefer_goaf parameter. By default, if a GOAF is provided, it will be preferably used.
+
+            If the file-based search doesn't work, then EnsemblAPI is used as a final attempt to find a human ortholog. The first call (ensembl_api.get_human_ortholog)
+            returns an ensg_id, which is then used in another call to ensembl_api.get_info in order to obtain the gene name from the ensg_id.
+        
+            TODO: If there are multiple id_synonym(s), currently only the first is browsed. Implement logic for many id_synonyms / check if there are any products with multiple id synonyms.
+        """
         logger.info(f"Async fetch orthologs for: {self.id_synonyms}")
         
         if not human_ortholog_finder:
@@ -197,11 +228,15 @@ class Product:
         if len(self.id_synonyms) == 1 and 'UniProtKB' in self.id_synonyms[0]:
             if self.uniprot_id == None or self.uniprot_id == "":
                 # 14.08.2023: replaced online uniprot info query with goaf.get_uniprotkb_genename, as it is more successful and does the same as the uniprot query
-                # info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session) # bugfix
-                info_dict = {"genename": goaf.get_uniprotkb_genename(self.id_synonyms[0])}
+                if model_settings != None and model_settings.uniprotkb_genename_online_query == True:
+                    info_dict = await uniprot_api.get_uniprot_info_async(self.id_synonyms[0], session) # bugfix
+                else:
+                    info_dict = {"genename": goaf.get_uniprotkb_genename(self.id_synonyms[0])}
             else:
-                # info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session)
-                info_dict = {"genename": goaf.get_uniprotkb_genename(self.uniprot_id)}
+                if model_settings != None and model_settings.uniprotkb_genename_online_query == True:
+                    info_dict = await uniprot_api.get_uniprot_info_async(self.uniprot_id, session)
+                else:
+                    info_dict = {"genename": goaf.get_uniprotkb_genename(self.uniprot_id)}
             if info_dict != None:
                 self.genename = info_dict.get("genename")
         elif len(self.id_synonyms) == 1:
@@ -1882,6 +1917,7 @@ class ModelSettings:
         self.require_product_evidence_codes = False
         self.fisher_test_use_online_query = False
         self.include_all_goterm_parents = False
+        self.uniprotkb_genename_online_query = False
     
     @classmethod
     def from_json(cls, json_data) -> ModelSettings:
