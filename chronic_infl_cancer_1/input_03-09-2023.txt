@@ -5,6 +5,7 @@ homosapiens_only	True
 require_product_evidence_codes	False
 fisher_test_use_online_query	False
 include_all_goterm_parents	False
+uniprotkb_genename_online_query	False
 ###processes [proces name] [to be expressed + or suppressed -]
 chronic_inflammation	+
 cancer	+
