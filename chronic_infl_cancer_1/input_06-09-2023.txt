@@ -36,6 +36,10 @@
 #			this setting to False. If using an older GOAF, then have this setting set to True.
 #			If True, will query genename from a UniProtKB id via an online server request.
 #			If False, will query genename from a UniProtKB id via the GO Annotations File.
+#	- pvalue:
+#			Represents the p-value against which the genes will be scored to determine if they are statistically significant. For example, if the VEGFA gene has pvalues smaller than
+#			the set pvalue (default is 0.05) for all the processes of interest of the user (eg. cancer+, inflammation+) AND also higher pvalues than the set pvalue for opposite processes
+#			(eg. cancer-, inflammation-), then the VEGFA gene is said to be statistically important in the event of coexistance of inflammation and cancer.
 #
 # *** Processes section ***
 # It contains the pathophysiological processes in question to the researcher and the direction of regulation of these processes. For example, if
@@ -114,7 +118,8 @@ homosapiens_only	True
 require_product_evidence_codes	False
 fisher_test_use_online_query	False
 include_all_goterm_parents	True
-uniprotkb_genename_online_query	True
+uniprotkb_genename_online_query	False
+p_value	0.05
 ###processes [proces name] [to be expressed + or suppressed -]
 chronic_inflammation	+
 cancer	+

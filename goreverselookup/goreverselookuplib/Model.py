@@ -1630,9 +1630,9 @@ class ReverseLookup:
                     pair = [process1, process2]
 
                     if (
-                        all(float(product.scores[test_name][f"{process['process']}{process['direction']}"].get("pvalue_corr",1)) < 0.05 for process in pair)
+                        all(float(product.scores[test_name][f"{process['process']}{process['direction']}"].get("pvalue_corr",1)) < self.model_settings.pvalue for process in pair)
                         and
-                        all(float(product.scores[test_name][f"{process['process']}{'+' if process['direction'] == '-' else '-'}"].get("pvalue_corr",1)) >= 0.05 for process in pair)
+                        all(float(product.scores[test_name][f"{process['process']}{'+' if process['direction'] == '-' else '-'}"].get("pvalue_corr",1)) >= self.model_settings.pvalue for process in pair)
                        ):
                         statistically_relevant_products.append([product, f"{process1['process']}{process1['direction']}:{process2['process']}{process2['direction']}"])
         
@@ -1804,12 +1804,15 @@ class ReverseLookup:
                         continue
                     if section == "settings":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
+                        setting_name = chunks[0]
                         setting_value = chunks[1] # is string now
-                        if setting_value == "True":
+                        if setting_value == "True" or setting_value == "true":
                             setting_value = True
-                        else:
+                        if setting_value == "False" or setting_value == "false":
                             setting_value = False
-                        settings.set_setting(setting_name=chunks[0], setting_value=setting_value)
+                        if setting_name == "pvalue":
+                            setting_value = float(chunks[1])
+                        settings.set_setting(setting_name=setting_name, setting_value=setting_value)
                     elif section == "process":
                         chunks = line.split(LINE_ELEMENT_DELIMITER)
                         target_processes.append({"process": chunks[0], "direction": chunks[1]})
@@ -1918,6 +1921,7 @@ class ModelSettings:
         self.fisher_test_use_online_query = False
         self.include_all_goterm_parents = False
         self.uniprotkb_genename_online_query = False
+        self.pvalue = 0.05
     
     @classmethod
     def from_json(cls, json_data) -> ModelSettings:
